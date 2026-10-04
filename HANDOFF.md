@@ -1,4 +1,4 @@
-**Last updated: 2026-10-04** — setup committed locally (340f6d0 project block, dfc1e31 tools, 0795af0 flags/glossary/prompt); `git push` refused 403; calibration translator dispatched on NO4_BAR.p01.
+**Last updated: 2026-10-04** — GitHub write access restored; setup pushed to `main` (6819a8e); calibration translator on NO4_BAR.p01 still working.
 
 ## Integration branch: `main`. Not configurable.
 Every PR bases on `main`; the reviewer merges into `main`; a wave is closed only when `origin/main` is
@@ -6,13 +6,11 @@ at the close commit (`CLAUDE.md` Rule 3). A fresh container may clone shallow wi
 preflight is `git fetch origin main && git checkout main && git reset --hard origin/main`.
 
 ## NEXT ACTION — always current, always a literal instruction
-> **Setup in progress (attended, no watchdog).** Blocked on GitHub write access: `git push origin
-> main` returns 403 ("Claude doesn't have GitHub access to DanaCrysalis/AbyssBoatTranslation"). The
-> human gives the Claude GitHub App write access to the repo. Then: push local `main` (the three
-> setup commits and this one), push `tl/script-NO4_BAR.p01`, open its PR, run the reviewer on it,
-> fill PROJECT.md §4 tiers and `translation_prompt.md` §0.2/§5 from it, commit `setup:
-> calibration`, ask the human for the go-ahead (setup SKILL §6).
-> **If this container was lost:** the setup commits were never pushed — re-run `/translate`.
+> **Setup in progress (attended, no watchdog).** The calibration translator is working on
+> script NO4_BAR.p01. When it returns with its PR: push HANDOFF, run the `reviewer` on the PR in the
+> foreground, `git pull --ff-only`, then fill PROJECT.md §4 tiers and `translation_prompt.md`
+> §0.2/§5 from the unit, commit `setup: calibration`, and ask the human for the go-ahead (setup
+> SKILL §6). If the translator is lost (`ListAgents`), re-dispatch it per SKILL.md §3.
 
 ## Progress
 | Store | Done | Total | |
@@ -26,7 +24,7 @@ Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEA
 ## In flight
 | Unit | Branch | Agent | Round | PR | Last event | Next |
 |---|---|---|---|---|---|---|
-| script NO4_BAR.p01 (calibration) | `tl/script-NO4_BAR.p01` (local; push blocked) | translator | 0 | no PR yet | dispatched 2026-10-04 | translator commits locally → runner pushes and opens the PR → reviewer |
+| script NO4_BAR.p01 (calibration) | `tl/script-NO4_BAR.p01` | translator | 0 | no PR yet | dispatched 2026-10-04; told push works again | translator opens the PR → reviewer |
 
 ## Next up
 Wave 1, if the calibration merges: script NO4_BAR.p02 (1,405 chars), NO4_BAR.p03 (1,307),
@@ -45,12 +43,9 @@ NO4_BAR_T.p01 (1426), p02 (1251), p03 (1270), p04 (1189), NO4_T.b01 (607), b02 (
 Scene (one per wave, waves 2–4): SCN038 (655), SCN041-SCN046 (773), SCN047-EPILOG (793).
 
 ## Blocked — needs a human
-1. **GitHub write access** — `git push` → 403. Give the Claude GitHub App access to
-   DanaCrysalis/AbyssBoatTranslation (https://github.com/apps/claude/installations/select_target),
-   or reconnect GitHub at https://claude.ai/connect-github. Nothing can merge until then.
-2. **System store** (5 units, 188 rows) — exe slots too short for English; you chose to wait for an
+1. **System store** (5 units, 188 rows) — exe slots too short for English; you chose to wait for an
    exe patch that repoints the tables · F-006.
-3. In-game checks: first built patch (F-001), subtitle width (F-002), choice width (F-003), box
+2. In-game checks: first built patch (F-001), subtitle width (F-002), choice width (F-003), box
    chains past 4 rows (F-010). Optional: font hack (F-004), text in images (F-005).
 
 ## Decisions this run
