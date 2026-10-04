@@ -1,0 +1,16 @@
+{
+  "model": "opus",
+  "effortLevel": "max",
+  "env": {
+    "CLAUDE_CODE_EFFORT_LEVEL": "max"
+  },
+  "permissions": {
+    "allow": [
+      "Bash(python3:*)",
+      "Bash(git:*)",
+      "Bash(gh:*)",
+      "Edit",
+      "Write"
+    ]
+  }
+}
