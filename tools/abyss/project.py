@@ -23,7 +23,7 @@ SCENE_ROWS = 4
 CHOICE_COLS = 28         # choice options: assumed until tested in game (FLAGS)
 SCR_MAX_BYTES = 0xFFFF   # every offset in a script header is u16
 SCR_MAX_TOKENS = 1499    # token pages 1..250, FB..FF x 250
-UNIT_MAX_MESSAGES = 60   # script files longer than this are split into parts
+UNIT_MAX_MESSAGES = 60   # a unit holds at most this many messages (script) or subtitles (scene)
 
 STORES = ('script', 'scene', 'system')
 DUMP_FILE = {s: path('dumps', '%s.tsv' % s) for s in STORES}
@@ -98,6 +98,47 @@ SYSTEM_UNITS = OrderedDict([
 ])
 SCENE_GROUP = re.compile(r'^(SCN\d+|EPILOG|OP)')
 
+# Dispatch order (PROJECT.md section 2).  The ship is capsized and the party works its way
+# down from the bar on deck 4.  A file's deck is its prefix (NO4_BAR -> NO4); the '_T' files
+# are prototype/test scripts (FLAGS F-008) and form a deck of their own, dispatched last.
+DECK_ORDER = ('NO4', 'NO5', 'NO6', 'NO3', 'NO2', 'NO1', 'SPACESHIP', 'NO4_T')
+
+
+def deck_of(f):
+    return f.split('_')[0] + ('_T' if f.endswith('_T') else '')
+
+
+def scene_order(group):
+    """Story order of a scene group: OP, SCNnnn by number, EPILOG."""
+    if group == 'OP':
+        return (0, 0, '')
+    if group.startswith('SCN'):
+        return (1, int(group[3:]), '')
+    if group == 'EPILOG':
+        return (2, 0, '')
+    return (3, 0, group)
+
+
+def _messages(rows):
+    return sum(1 for r in rows if r.ctx.startswith('msg'))
+
+
+def _bundle(groups, size):
+    """Pack whole groups (lists of rows) into bundles of <= UNIT_MAX_MESSAGES by `size`,
+    as few as the cap allows and filled to about the same size.  -> list of lists of groups."""
+    total = sum(size(g) for g in groups)
+    target = -(-total // max(1, -(-total // UNIT_MAX_MESSAGES)))
+    out, cur, n = [], [], 0
+    for g in groups:
+        if cur and (n + size(g) > UNIT_MAX_MESSAGES or n >= target):
+            out.append(cur)
+            cur, n = [], 0
+        cur.append(g)
+        n += size(g)
+    if cur:
+        out.append(cur)
+    return out
+
 
 def _split_parts(rows):
     """Split one script file's rows into parts of <= UNIT_MAX_MESSAGES messages,
@@ -120,24 +161,44 @@ def _split_parts(rows):
 
 
 def units(store, rows=None):
-    """OrderedDict unit_name -> rows, in dump order."""
+    """OrderedDict unit_name -> rows, in dispatch order (PROJECT.md section 2).
+
+    script: per deck (DECK_ORDER), first every file over UNIT_MAX_MESSAGES messages as
+            parts <FILE>.pNN, then the deck's other files packed whole, in dump order, into
+            bundles <DECK>.bNN of <= UNIT_MAX_MESSAGES messages.
+    scene:  cutscene groups (SCN038 = SCN038A, B, D, _5C1, _5C2) in story order, packed
+            whole into bundles of <= UNIT_MAX_MESSAGES subtitles, named by their span
+            (OP-SCN034) or by the group when it is alone.
+    system: one unit per table group (SYSTEM_UNITS)."""
     rows = read_dump(store) if rows is None else rows
     out = OrderedDict()
     if store == 'script':
-        byfile = OrderedDict()
+        decks = OrderedDict((d, OrderedDict()) for d in DECK_ORDER)
         for r in rows:
-            byfile.setdefault(r.file, []).append(r)
-        for f, rs in byfile.items():
-            parts = _split_parts(rs)
-            if len(parts) == 1:
-                out[f] = rs
-            else:
-                for k, p in enumerate(parts, 1):
-                    out['%s.p%02d' % (f, k)] = p
+            decks.setdefault(deck_of(r.file), OrderedDict()).setdefault(r.file, []).append(r)
+        for deck, files in decks.items():
+            small = []
+            for f, rs in files.items():
+                if _messages(rs) > UNIT_MAX_MESSAGES:
+                    for k, p in enumerate(_split_parts(rs), 1):
+                        out['%s.p%02d' % (f, k)] = p
+                else:
+                    small.append(rs)
+            for k, b in enumerate(_bundle(small, _messages), 1):
+                out['%s.b%02d' % (deck, k)] = [r for rs in b for r in rs]
     elif store == 'scene':
+        groups = OrderedDict()
         for r in rows:
             m = SCENE_GROUP.match(r.file)
-            out.setdefault(m.group(1) if m else r.file, []).append(r)
+            groups.setdefault(m.group(1) if m else r.file, []).append(r)
+        names = sorted(groups, key=scene_order)
+        for b in _bundle([groups[g] for g in names], len):
+            first, last = b[0][0].file, b[-1][0].file
+            gf = SCENE_GROUP.match(first)
+            gl = SCENE_GROUP.match(last)
+            first = gf.group(1) if gf else first
+            last = gl.group(1) if gl else last
+            out[first if first == last else '%s-%s' % (first, last)] = [r for g in b for r in g]
     else:
         table_unit = {t: u for u, ts in SYSTEM_UNITS.items() for t in ts}
         for u in SYSTEM_UNITS:
@@ -208,7 +269,9 @@ def translations():
 
 def read_project_numbers():
     """Parse PROJECT.md section 4.  Returns dict with keys present (floats), missing keys
-    absent.  Recognised: slack_floor, reserve, floor, tiers {name: (lo, hi)}."""
+    absent.  Recognised: slack_floor, reserve, floor, tiers {name: (lo, hi)},
+    blocked_stores {store: reason} (the "Stores blocked whole" row: every unit of the
+    store is blocked whatever its ratio, e.g. pending an engine patch)."""
     out = {'tiers': {}}
     try:
         text = open(path('PROJECT.md'), encoding='utf-8').read()
@@ -233,6 +296,10 @@ def read_project_numbers():
             out['reserve'] = num(cells[1])
         elif 'measured floor' in key:
             out['floor'] = num(cells[1])
+        elif 'stores blocked whole' in key:
+            flag = re.search(r'F-\d+', cells[1])
+            out['blocked_stores'] = {s: flag.group(0) if flag else 'see PROJECT.md section 4'
+                                     for s in STORES if re.search(r'\b%s\b' % s, cells[1])}
         elif key in ('blocked', 'a', 'b', 'c', 'd'):
             nums = re.findall(r'\d+(?:\.\d+)?', cells[1].replace('«FILL»', ''))
             if nums:

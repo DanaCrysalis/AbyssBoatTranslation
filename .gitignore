@@ -5,6 +5,7 @@ original/
 # negations for those (e.g. !build/*_merged.txt). Translator branches never commit build/ either way.
 build/*
 !build/.gitkeep
+!build/abyss_boat_script.ods
 
 # python
 __pycache__/

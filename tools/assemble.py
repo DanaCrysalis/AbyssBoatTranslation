@@ -15,6 +15,7 @@ Nothing here reads pending/.
 import hashlib
 import json
 import os
+import re
 import sys
 from collections import Counter, defaultdict
 
@@ -203,21 +204,43 @@ def run_check(verbose=True):
                     if u['tokens'] > SCR_MAX_TOKENS:
                         err('%s.SCR' % name, 'dictionary over budget: %d tokens, limit %d'
                             % (u['tokens'], SCR_MAX_TOKENS))
-    # duplicates: identical source -> identical target, per store
+    # duplicates, across files and stores: identical source -> identical target; and sources
+    # that differ only in their {p}/{w}/{br} tags -> targets that differ only in those tags
+    counts['duplicate pairs compared'] += 0
+    counts['tag-variant pairs compared'] += 0
+    exact = defaultdict(set)
+    loose = defaultdict(set)
     for store in STORES:
-        by_src = defaultdict(set)
         for r in dumps[store]:
             t = tl.get((store, r.id))
-            if t is not None:
-                by_src[r.src].add((t, r.id))
-        for src, ts in by_src.items():
-            if len(ts) > 1:
-                counts['duplicate pairs compared'] += len(ts) - 1
-                if len(set(t for t, _ in ts)) > 1:
-                    ids = sorted(i for _, i in ts)
-                    err(line_of.get((store, ids[0]), store),
-                        'same source, different targets: %s' % ', '.join(ids))
+            if t is None:
+                continue
+            exact[r.src].add((t, store, r.id))
+            loose[untagged(r.src, '')].add((r.src, untagged(t, ' '), store, r.id))
+    for src, ts in exact.items():
+        if len(ts) > 1:
+            counts['duplicate pairs compared'] += len(ts) - 1
+            if len(set(t for t, _, _ in ts)) > 1:
+                keys = sorted((s, i) for _, s, i in ts)
+                err(line_of.get(keys[0], keys[0][0]), 'same source, different targets: %s'
+                    % ', '.join('%s %s' % k for k in keys))
+    for text, ms in loose.items():
+        by_src = defaultdict(set)
+        for src, t, s, i in ms:
+            by_src[src].add(t)
+        if len(by_src) < 2 or any(len(v) > 1 for v in by_src.values()):
+            continue        # exact duplicates only, or exact duplicates that disagree (reported above)
+        counts['tag-variant pairs compared'] += len(by_src) - 1
+        if len(set(next(iter(v)) for v in by_src.values())) > 1:
+            keys = sorted((s, i) for _, _, s, i in ms)
+            err(line_of.get(keys[0], keys[0][0]), 'same text with different tags, different '
+                'target text: %s' % ', '.join('%s %s' % k for k in keys))
     return problems, counts
+
+
+def untagged(s, sep):
+    """s without {p} {w} {br} (replaced by sep, whitespace collapsed): the text a reader sees."""
+    return ' '.join(re.sub(r'\{(?:p|w|br)\}', sep, s).split()) if sep else re.sub(r'\{(?:p|w|br)\}', '', s)
 
 
 def cmd_check():
@@ -239,6 +262,14 @@ def cmd_check():
 def cmd_status():
     tl = translations()
     layout = load_layout()
+    free = {}           # script file -> free bytes; system id -> free bytes in its slot
+    if any(k[0] == 'script' for k in tl):
+        for name, finals in pipeline.all_finals('script', tl).items():
+            if any(f.translated for f in finals):
+                u = pipeline.container_usage(name, finals, layout)
+                free[name] = u['limit'] - u['bytes']
+    for f in pipeline.all_finals('system', tl)['*']:
+        free[f.row.id] = pipeline.ctx_max(f.row.ctx) - len(pipeline.encode_final('system', f))
     for store in STORES:
         us = units(store)
         done_units = 0
@@ -246,18 +277,24 @@ def cmd_status():
         lines = []
         for u, rows in us.items():
             n = sum(1 for r in rows if (store, r.id) in tl)
-            c = sum(len(r.src) for r in rows)
-            cd = sum(len(r.src) for r in rows if (store, r.id) in tl)
+            c = sum(codec.char_count(r.src) for r in rows)
+            cd = sum(codec.char_count(r.src) for r in rows if (store, r.id) in tl)
             rows_done += n
             rows_total += len(rows)
             ch_done += cd
             ch_total += c
             if n == len(rows):
                 done_units += 1
-                lines.append('  done  %-24s rows %4d  source chars %6d' % (u, len(rows), c))
+                if store == 'script':
+                    slack = 'container free %d' % min(free[r.file] for r in rows)
+                elif store == 'system':
+                    slack = 'tightest slot free %d' % min(free[r.id] for r in rows)
+                else:
+                    slack = 'no byte container'
+                lines.append('  done  %-24s rows %4d  source chars %6d  %s' % (u, len(rows), c, slack))
             elif n:
                 lines.append('  part  %-24s rows %4d/%-4d' % (u, n, len(rows)))
-        print('%s: units %d/%d, rows %d/%d, source characters %d/%d'
+        print('%s: units %d/%d, rows %d/%d, source characters (tags excluded) %d/%d'
               % (store, done_units, len(us), rows_done, rows_total, ch_done, ch_total))
         for x in lines:
             print(x)
@@ -325,14 +362,14 @@ def cmd_extract(arg, force=False):
         for r in rows:
             f.write('%s\t%s\t%s\t\n' % (r.id, r.ctx, r.src))
     print('wrote %s (%d rows, %d source characters)' % (rel(p), len(rows),
-                                                        sum(len(r.src) for r in rows)))
+                                                        sum(codec.char_count(r.src) for r in rows)))
     return 0
 
 
 def cmd_units(store=None):
     for s in ([store] if store else STORES):
         for u, rows in units(s).items():
-            print('%s/%s\t%d rows\t%d chars' % (s, u, len(rows), sum(len(r.src) for r in rows)))
+            print('%s/%s\t%d rows\t%d chars' % (s, u, len(rows), sum(codec.char_count(r.src) for r in rows)))
     return 0
 
 

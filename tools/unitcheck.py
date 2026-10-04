@@ -58,6 +58,8 @@ def report(store, rows_with_lines, tl):
                 continue
             width = SCENE_COLS if store == 'scene' else (BOX_COLS if kind == 'msg' else CHOICE_COLS)
             pages = pipeline.engine_pages(f.text, width, f.start_col)
+            if pipeline.ending(f.text) in pipeline.PAGE_TAGS:
+                pages = pages[:-1]      # the empty page after the final click is not a page
             print('%s  pages %d  rows/page %s  cols/line %s' % (
                 where, len(pages), [len(p) for p in pages], [p for p in pages]))
             for pg in pages:

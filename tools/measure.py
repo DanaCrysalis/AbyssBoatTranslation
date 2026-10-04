@@ -7,7 +7,7 @@ Containers:
   script  one per *.SCR: rebuilt size (limit 65,535 bytes, every header offset is u16)
           and dictionary tokens (limit 1,499).  Sized with the encoder BUILD uses, so
           the figure is exact.  Untouched files are listed with their rebuilt size too.
-  system  one per exe table: the tightest slot (fewest free characters/bytes left).
+  system  one per exe string slot: size, used, free, for every slot.
   scene   subtitles have no byte container (the block is rebuilt); listed for completeness.
 Every container is printed; there is no summary line that hides rows.  The warning
 threshold is PROJECT.md section 4 "Reserve kept per container" when it is filled in.
@@ -46,20 +46,17 @@ def main():
     for alias, real in sorted(layout.get('aliases', {}).items()):
         print('%-26s (identical copy of %s; built from it)' % (alias + '.SCR', real + '.SCR'))
     print()
-    print('SYSTEM TABLES (tightest slot: free bytes; full-width text costs 2 per character)')
-    finals = pipeline.all_finals('system', tl)['*']
-    tables = {}
-    for f in finals:
-        t = f.row.id.split('/')[0]
+    print('SYSTEM SLOTS (every slot is its own container; full-width text costs 2 bytes per')
+    print('character and 1 per {br}; ascii slots 1 per character)')
+    print('%-16s %-6s %5s %5s %5s  %s' % ('slot', 'kind', 'size', 'used', 'free', 'state'))
+    for f in pipeline.all_finals('system', tl)['*']:
         mx = pipeline.ctx_max(f.row.ctx)
-        free = mx - len(pipeline.encode_final('system', f))
-        cur = tables.get(t)
-        if cur is None or free < cur[0]:
-            tables[t] = (free, f.row.id, sum(1 for g in finals if g.row.id.startswith(t + '/')))
-    for t, (free, rid, n) in tables.items():
+        used = len(pipeline.encode_final('system', f))
+        free = mx - used
         mark = '  NEGATIVE' if free < 0 else ''
         neg += free < 0
-        print('%-10s entries %4d  tightest %-14s free %d%s' % (t, n, rid, free, mark))
+        print('%-16s %-6s %5d %5d %5d  %s%s' % (f.row.id, pipeline.ctx_kind(f.row.ctx), mx, used, free,
+                                              'translated' if f.translated else 'source', mark))
     print()
     print('SCENE FILES (no byte limit; subtitle block is rebuilt)')
     for name, finals in pipeline.all_finals('scene', tl).items():

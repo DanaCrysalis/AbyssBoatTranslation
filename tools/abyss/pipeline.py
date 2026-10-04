@@ -13,6 +13,7 @@ from .project import (BOX_COLS, BOX_ROWS, SCENE_COLS, SCENE_ROWS, CHOICE_COLS,
                       SCR_MAX_BYTES, SCR_MAX_TOKENS, read_dump, load_layout, translations)
 
 KINSOKU = set('、。，．…？！゛゜ヽヾゝゞ々ー）］｝」』‼⁉')
+PAGE_TAGS = ('{p}', '{w}')
 
 
 def ctx_kind(ctx):
@@ -110,6 +111,8 @@ def page_groups(finals):
         if ctx_kind(f.row.ctx) != 'msg':
             continue
         pages = engine_pages(f.text, BOX_COLS, f.start_col)
+        if ending(f.text) in PAGE_TAGS:
+            pages = pages[:-1]      # the empty page after the final click is not a page
         if not is_cont(f.row.ctx) or cur_first is None:
             if cur_first is not None:
                 out.append((cur_first, cur_rows))
