@@ -92,17 +92,17 @@ bite only on the system store, which is blocked.
 
 | Tier | Ratio | What it demands of the first draft |
 |---|---|---|
-| blocked | < «FILL» | no faithful translation fits; needs an engine change; never dispatched |
-| A | «FILL» – «FILL» | terse from the start, contractions mandatory, expect two re-cut passes |
-| B | «FILL» – «FILL» | write tight from the first draft, expect one re-cut pass |
-| C | «FILL» – «FILL» | translate literally; bytes rarely bind |
-| D | > «FILL» | bytes never bind; geometry is the only constraint — do not relax |
+| blocked | < 2.05 | no faithful translation fits; needs an engine change; never dispatched |
+| A | 2.05 – 2.16 | terse from the start, contractions mandatory, expect two re-cut passes |
+| B | 2.16 – 2.51 | write tight from the first draft, expect one re-cut pass |
+| C | 2.51 – 5.02 | translate literally; bytes rarely bind |
+| D | > 5.02 | bytes never bind; geometry is the only constraint — do not relax |
 
 | Measurement | Value |
 |---|---|
-| Natural literal draft ratio (unit, date) | «FILL» |
-| Disciplined draft ratio (unit, date) | «FILL» |
-| **Measured floor** — lowest ratio at which a faithful unit has fit | «FILL» |
+| Natural literal draft ratio (unit, date) | 2.51 — script NO4_BAR.p01, 2026-10-04 (4,525 target ÷ 1,803 source characters, tags excluded; 20 pages over 4 rows) |
+| Disciplined draft ratio (unit, date) | 2.16 — script NO4_BAR.p01, 2026-10-04 (3,886 ÷ 1,803; shipped 3,882, 2.15) |
+| **Measured floor** — lowest ratio at which a faithful unit has fit | 2.05 — provisional: the disciplined ratio less 5%. No unit has been byte-bound yet (script and scene are tier D); replace it the first time a unit ships below it |
 
 ## 5. Format
 

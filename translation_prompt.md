@@ -41,9 +41,11 @@ dump line with every `{…}` tag stripped. Bytes per character are `PROJECT.md` 
 written in a double-byte encoding, every target character costs as much as a source character and
 the budget is far tighter than the free space suggests.**
 
-The tiers, and what each demands of your first draft, are `PROJECT.md` §4. Measured on this project:
-a natural literal draft runs about **«FILL»×** the source count; a disciplined one (contractions, no
-filler, merged short lines) about **«FILL»×**. <!-- setup fills these from the calibration unit; never guess -->
+The tiers, and what each demands of your first draft, are `PROJECT.md` §4. Measured on this project
+(NO4_BAR.p01): a natural literal draft runs about **2.5×** the source count; a disciplined one
+(contractions, no filler, merged short lines) about **2.2×**. Script containers absorb either (≈ 1
+byte per character after the dictionary). What binds is the 4-row page: the literal draft overran 4
+rows on 20 pages, the disciplined one on none.
 
 **Above the top tier the byte budget stops mattering and the box geometry takes over.** Do not relax
 at a high ratio: draft straight to the geometry, count columns per segment as you write, and spend
@@ -207,29 +209,64 @@ reasoning behind a term lives in **`rulings.md`**, grepped on demand. Rules:
 
 ## 5. WORKED EXAMPLES
 
-<!-- Setup adds four to six from the calibration unit, each demonstrating one rule, in the form
-below; the reviewer may add more as rulings accrue. Good
-picks: two source lines merged into one because the source was split for a narrower box; an insert
-moved for word order with the tag count unchanged; a page break preserved under compression; a tic
-rendered under the source's own punctuation; two near-identical lines kept distinct by adding a
-break; and one WRONG example annotated. Keep them current — an example that contradicts a later
-ruling is worse than none. -->
+<!-- From the calibration unit, script NO4_BAR.p01 (PR #1), each demonstrating one rule; the
+reviewer may add more as rulings accrue. Keep them current — an example that contradicts a later
+ruling is worse than none. Row counts were measured with the tools, not by eye. -->
 
-**Source**
+**1. Merge short lines** (§2.1 step 2) — `NO4_BAR/0041`
 ```
-«FILL»
+知っておるのか？{br}お嬢さん。
+You know of it, young lady?
 ```
-**Correct**
-```
-«FILL»
-```
-«which rule this shows; what changed in the tag stream; bytes saved or spent»
+The source gives the vocative a line of its own; English folds it into the question. `{br}`
+removed (flagged), 2 rows → 1, one byte saved.
 
-**Wrong, and why**
+**2. Add `{p}` at a clause boundary when a page overflows** — `NO4_BAR/0060` (a `+` message)
 ```
-«FILL»
+ならばわしも見てみようと足を進めたとたん、ガクンと強い揺れが起こった。{br}
+Thinking I'd have a look too, I stepped forward,{p}and that very instant, there was a strong jolt.{br}
 ```
-«the violations, one per clause»
+Without the `{p}` the page opened by 0059's `{w}{br}` runs to 7 rows. The click goes at the comma
+before the jolt, so it lands as a beat; the ending `{br}` stays. One byte spent, flagged.
+
+**3. Keep `{w}` and hold the line to its row** — `NO4_BAR/0055` (a `+` message)
+```
+わしは奇妙な物音で目を覚ました。{w}{br}
+I awoke to a strange noise.{w}{br}
+```
+`{w}{br}` stays exactly where it is. UNITCHECK counts the page that 0053's `{w}{br}` opens at one
+row, and 0054 takes two, so this line must fit one: "I was woken up by a strange noise." wraps and
+makes the page 5 rows.
+
+**4. Name the speaker from content, not from `spk=N`** — `NO4_BAR/0016`, `0017`
+```
+最終的に助からなかったら意味ないね。   (spk=6)
+まったく、なんという言いぐさじゃ。     (spk=6)
+Means nothing if we're not saved in the end.
+Really, what a thing to say.
+```
+One `spk` value, two speakers (F-009): William, blunt, subject dropped; then Rob Collison,
+old-fashioned diction with no dialect spelling.
+
+**5. Glyph counts follow the source** — `NO4_BAR/0005`
+```
+なんとっ⁉{br}それはいったい誰が…。
+What⁉{br}Who on earth did that…
+```
+`⁉` stays one glyph (never `!?`), one `…` stays one `…`, and the 。 after `…` is absorbed.
+
+**Wrong, and why** — `NO4_BAR/0024`
+```
+虫の居所？{br}そうじゃない。気に入らねえんだよ。{br}こんな非常識な場所にノコノコやってくる連中がよ。
+WRONG:   Foul mood?{br}That's not it. I just don't like 'em.{br}People who come waltzing into an insane place like this.
+CORRECT: Foul mood? That's not it.{br}I just don't like them.{br}Guys who come waltzing into a crazy place like this.
+```
+- Keeping the source's first `{br}` after "Foul mood?" makes the page 6 rows: CHECK fails it.
+- `'em` after a space is drawn as an opening quote, `‘em`, and CHECK does not catch it (PROJECT.md
+  §7). Write "them", or type `’` yourself.
+- "People … an insane place" wraps to three rows where William's "Guys … a crazy place" takes two.
+
+The correct version keeps both `{br}`, the first moved one sentence later (flagged), in 4 rows.
 
 ---
 

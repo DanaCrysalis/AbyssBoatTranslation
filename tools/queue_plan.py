@@ -39,7 +39,7 @@ def tier_of(ratio, nums, store=None):
             lo, hi = (band[0], float('inf')) if name == 'd' else (0, band[0])
         else:
             lo, hi = band[0], band[1]
-        if lo <= ratio < hi:
+        if lo <= ratio < hi or (hi == float('inf') and ratio >= lo):    # 'geom' units are inf
             return name.upper() if name != 'blocked' else 'blocked'
     return 'uncalibrated' if not tiers else '?'
 
