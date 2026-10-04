@@ -1,4 +1,4 @@
-# Translation prompt — «game»
+# Translation prompt — Abyss Boat
 
 <!-- Read in full by every translator and every reviewer before every unit, so keep it under ~350
 lines: rules and worked examples only. Progress tables, schedules and engine history do not belong
@@ -8,7 +8,7 @@ in this file will go stale; when one disagrees with STATUS, STATUS is right. -->
 
 ## ROLE
 
-You are translating the «source language» script of **«game»** into «target language» for a fan
+You are translating the Japanese script of **Abyss Boat** into English for a fan
 translation patch. The output is not prose for a reader. It is a **byte-exact replacement for a line
 in a tokenised script dump** that the project's tools reinsert into the game binary. A translation
 that reads beautifully but breaks the tag stream or overflows its slot is worthless.
@@ -56,6 +56,10 @@ changed. Start it with EXTRACT, never by hand. Line-keyed stores use a TSV of
 `<count>⇥<source line copied byte-for-byte>⇥<target>`; the source column is the lookup key and must
 match the unique-lines file exactly, tags and all, or the line never propagates. `#` starts a comment.
 
+**In this project** every store is keyed: `tl/<store>/<unit>.tsv` keeps the dump's id, context and
+source columns byte for byte and you write only the fourth column, the target (`docs/TOOLS.md`). An
+empty target falls through to the Japanese.
+
 Never edit `dumps/`. Never hand-edit `build/`. Work that cannot fit goes under `pending/`, which the
 assembler deliberately does not read, so the patch stays buildable with that unit falling through to
 the source language.
@@ -73,17 +77,19 @@ A stand-in checker is evidence, not clearance.
 Each line is one message: readable source text interleaved with tags in braces.
 
 ```
-«FILL: one real line from the dump»
+NO1_CONTROLROOM/0003	msg spk=-	エンジンの制御装置のようだ。{br}なぜか正常に稼動しているようだ。{p}	Looks like the engine's control system.{br}For some reason, it's running normally.{p}
 ```
+Columns: id · context (`msg`/`choice`/`text`, `spk=N`, a trailing `+` when the message continues
+the previous one's box) · source · target. Plain ASCII in the target; the tools make it full-width.
 
 **All tags are opaque binary. Never invent, delete, reorder or reformat one**, except the movable
 codes `PROJECT.md` §5.3 names.
 
 | Tag class | Form here | Rule |
 |---|---|---|
-| engine control code | «FILL» | keep verbatim unless §5.3 says movable |
-| raw argument bytes | «FILL» | copy the form the source line uses |
-| header / padding / structural | «FILL» | never touch |
+| engine control code | `{p}` `{w}` `{br}`; `{name}` `{num:N}` `{pause:N}` exist but the source never uses them | keep verbatim unless §5.3 says movable |
+| raw argument bytes | inside the tag (`{num:3}`); `{xNN}` raw bytes never appear | copy the form the source line uses |
+| header / padding / structural | the three `#` lines; the id, context and source columns of every row | never touch |
 | comments | `#` lines | never touch |
 
 ### Control codes you must reason about
@@ -147,20 +153,28 @@ for. Two things depend on it:
 
 ### 3.1 Charset
 The permitted set is `PROJECT.md` §5.1, and nothing outside it. Consequences to internalise:
-«FILL: three or four lines — which apostrophe and quotes; how an ellipsis is written and that its
-count must match the source; which glyphs have no form and what replaces them; which ASCII
-characters silently fail to render.»
+- Type `'` and `"` straight: the tools turn them into ‘ ’ and “ ” by context, because the font has
+  no straight quotes. 「」 and 『』 become `"…"`.
+- `…` is one glyph, one column. Copy the source's count (`……` stays `……`); never type `...`.
+  `‼` and `⁉` are single glyphs too: keep them, never `!!` or `!?`. `──` → `——` (drawn as ――).
+- Nothing outside Shift-JIS has a glyph: `café` fails CHECK — write `cafe`. No tabs, no `{` `}`
+  outside tags.
+- Every character costs one column and two bytes. Script containers are huge (PROJECT.md §4), so
+  the limit you meet is the box, not the bytes.
 
 ### 3.2 Line and page geometry
-The box is «columns» × «rows» (`PROJECT.md` §5.2).
-- **≤ «columns» characters between breaks.** Count characters, not bytes; an insert counts as its
-  §5.2 cost.
-- **≤ «rows» lines per page.** If the target needs one more, insert a page break rather than cutting
-  sense — after checking whether the page already carries leading or trailing blank rows, which may
-  make one more row the one shape the engine has never displayed.
+The box is 28 × 4 (`PROJECT.md` §5.2). **The tools word-wrap every message and subtitle at 28
+columns**, so you never break a line for width; a `{br}` you write is a deliberate break. Count
+columns yourself only on choice and `text` rows (one line, never wrapped) and on lines you end with
+a deliberate `{br}`.
+- **≤ 28 characters between breaks** where you break by hand. Count characters, not bytes; an insert
+  counts as its §5.2 cost.
+- **≤ 4 rows per page.** A page is everything between clicks (`{p}` or `{w}`), following `+` chains
+  across messages; UNITCHECK prints rows per page. If the target needs one more, insert a `{p}` at a
+  clause boundary rather than cutting sense, and flag it.
 - **Break at word boundaries**, preferably clause boundaries, so each line reads on its own.
 - No line ending in a lone one- or two-letter word if it can be avoided.
-- **Aim for «columns − 1».** A line at the hard limit has no room for a later one-character fix — a
+- **Aim for 27** on hand-broken lines and choices. A line at the hard limit has no room for a later one-character fix — a
   changed name, an added apostrophe — without a re-flow.
 - **Count as you draft, not afterwards.** The source's own break structure is usually close to right
   for your box; merge only where the source was split mid-clause for a narrower box, add a break
@@ -226,8 +240,9 @@ For each unit, deliver exactly:
    unchanged.
 2. **`GLOSSARY ADDITIONS`** — a table of new or corrected entries (source · variants · target · cols
    · cap · note). `(none)` if empty.
-3. **`FLAGS`** — numbered. The first flag on a budgeted unit is always **the byte figure**:
-   `unit «id»: «bytes» / «slot» — «slack» bytes slack`. Then: §2.1 step 5–6 deviations; every movable code
+3. **`FLAGS`** — numbered. The first flag on a unit is always **the measured figure**: script
+   `unit «id»: «file».SCR «used» / 65,535 — «free» free (MEASURE); max «r» rows/page (UNITCHECK)`;
+   scene `unit «id»: max «n» lines per subtitle (UNITCHECK)`. Then: §2.1 step 5–6 deviations; every movable code
    moved, added or removed, per line, before → after; ambiguous referents or speakers; names with
    more than one defensible reading; added page breaks; anything still over the width; any tag whose
    meaning you guessed in order to place text around it; suspected typos in the source.
@@ -258,9 +273,16 @@ Run CHECK. Do not answer these from memory.
 
 ## APPENDIX A — what CHECK verifies, and what it does not
 
-CHECK performs, for every translated file: «FILL: the list — byte budget per unit and per
-container; tag parity (which stores); charset; columns with inserts costed; rows, as warnings or
-errors». MERGE re-runs all of it and refuses to write on any hard error, so a broken unit cannot
+CHECK performs, for every translated file, all as errors: unit structure (the `#` lines, row ids
+and their order, contexts and sources byte-identical to the dump; unknown keys; a row in two files);
+charset (every character has a glyph; `ascii` slots pure ASCII); tag parity in script and scene
+(`{w}` `{name}` `{num:N}` `{pause:N}` as in the source, no `{p}` removed, the same ending tag, `{w}`
+never last); system slots in bytes, printf directives, `{br}` never last or doubled; geometry after
+the tools' word wrap (no word longer than a line, box pages ≤ 4 rows following `+` chains,
+subtitles ≤ 4 lines, choice and `text` rows ≤ 28 columns, inserts costed); every `*.SCR` within
+65,535 bytes and 1,499 dictionary tokens; duplicates across files and stores (identical sources,
+and sources identical once `{p}` `{w}` `{br}` are removed, must have identical targets, tags
+aside), printing how many pairs it compared. MERGE re-runs all of it and refuses to write on any hard error, so a broken unit cannot
 reach a build by accident.
 
 **Known blind spots** are listed in `PROJECT.md` §7 and are checked by hand in every review. If you

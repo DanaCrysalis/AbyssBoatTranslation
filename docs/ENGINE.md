@@ -60,9 +60,10 @@ parse to the exact end of their code; all 81 rebuild from their own text with ev
 message, label target, inline string and `E9` target identical, and the predicted size
 equals the built size.
 
-Speaker: statement `0xA9` (5 arguments) precedes most lines; its first argument is the
-speaker's slot in that scene. The dumps carry it as `spk=N`. Slots are per file, not
-global (in `NO4_BAR`: 6 = Oakland, 2 = Rob Collison, 7 = William).
+Speaker: statement `0xA9` (5 arguments) precedes most lines; the dumps carry its first
+argument as `spk=N`. It is **not** a character id: in `NO4_BAR`/0014–0018 one value carries
+different speakers (2 = William, then 6 = William and Rob Collison in turn, 7 = Collison).
+It is more likely a portrait or camera position. Identify speakers from content (FLAGS F-009).
 
 ## 4. Cutscenes (`*.SCE`)
 
@@ -109,7 +110,7 @@ unconditionally).
 
 | Box | Columns × rows | Status |
 |---|---|---|
-| Message box | **28 × 4** — the renderer wraps at 0x38 bytes (one closing punctuation mark may hang into column 29); the 4th line break fills the box (0x41F6A0) | verified in code; source never exceeds 4 rows per message |
+| Message box | **28 × 4** — the renderer wraps at 0x38 bytes (one closing punctuation mark may hang into column 29); the 4th line break fills the box (0x41F6A0) | verified in code; no source message exceeds 4 rows, but two `+` chains (`NO4_BAR`/0090–0095, `NO4_TOOL_ROOM`/0044) and 15 in the `_T` test scripts reach 5–7 rows between clicks when `{w}` counts as a page end — what the engine does there is untested (FLAGS F-010) |
 | Subtitles | 28 × 4 assumed | **assumed** — the source has a few lines of 30–51 columns |
 | Choice options, inline lines | 28 assumed | **assumed** |
 | System strings | per-slot bytes, see the `slot=` context | verified (fixed-stride arrays) |
