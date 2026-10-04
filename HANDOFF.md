@@ -24,7 +24,7 @@ Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEA
 ## In flight
 | Unit | Branch | Agent | Round | PR | Last event | Next |
 |---|---|---|---|---|---|---|
-| script NO4_BAR.p01 (calibration) | `tl/script-NO4_BAR.p01` | translator | 0 | no PR yet | dispatched 2026-10-04; told push works again | translator opens the PR → reviewer |
+| script NO4_BAR.p01 (calibration) | `tl/script-NO4_BAR.p01` | reviewer done | 1 | #1 | 2026-10-04: round 0 CHANGES (three one-word last rows); round 1 head 3bffa43 MERGE decided. 2026-10-05: **merged** (PR #1, squash b1bba74). NO4_BAR.SCR 25,770 / 65,535, 39,765 free; max 4 rows/page; 22 duplicate pairs. Integration commit on `main` (rulings R §1) | runner: calibration commit (PROJECT.md §4, translation_prompt.md §0.2/§5), then setup's go-ahead question |
 
 ## Next up
 Wave 1, if the calibration merges: script NO4_BAR.p02 (1,405 chars), NO4_BAR.p03 (1,307),

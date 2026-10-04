@@ -174,6 +174,10 @@ commit); never remove one without a tool PR that closes it.
 - Pages are modelled with `{w}` starting a new page; the real engine behaviour past 4 rows is untested (F-010).
 - Duplicate pairing needs identical text once `{p}` `{w}` `{br}` are removed; spelling variants and source typos are not paired — census them by the glossary Variants.
 - A tag-only row left empty counts as untranslated (STATUS shows `part`), not as an error.
+- A word-initial apostrophe after a space or at a segment start ('em, 'cause, 'til, '70s) is curled into an opening quote ‘ by the codec, and CHECK passes it. Avoid the form, or type ’ (U+2019) directly (F-011, rulings R §1.13).
+- UNITCHECK's `codes:` lines diff the wrapped text, so every wrap break the tools insert shows as an added `{br}`. Check the PR's Flags against a diff of the authored target's `{br}`/`{p}`/`{w}` sequence with the source's, plus the sentence each `{br}` follows, which catches a `{br}` moved within an unchanged sequence (F-011).
+- Message lines ended by an authored `{br}` or by `{w}` are held to 28 by the wrap, not the preferred 27; measure them by hand (F-011).
+- Wrap points are not checked for sense. A one-word last row, a line ending in a lone "a" or "I", or a courtesy title split from its name ("Mr. | Collison") passes CHECK and UNITCHECK, which prints column counts but not text. Read the wrapped lines in `build/script_merged.tsv` after MERGE (F-011, rulings R §1.12).
 
 **Line-numbering convention for findings:** the unit file's line number as printed by `grep -n` on
 `tl/<store>/<unit>.tsv`, with the row id beside it (`tl/script/NO4_BAR.p01.tsv:12 NO4_BAR/0009`).

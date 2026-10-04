@@ -58,6 +58,10 @@ chain at `NO4_TOOL_ROOM`/0044 (5); also 15 chains in the `_T` test scripts (5–
 engine scrolls, clears or overflows there is unknown, so CHECK holds every page to 4 rows and
 translators add `{p}` · in game, play the bar conversation where Collison tells how the survivors
 ran out of food and report whether a fifth line ever shows in one box · `docs/ENGINE.md` §7.
+Also `NO4_BAR`/0053–0057, where Collison's story opens (shipped in NO4_BAR.p01, PR #1): it shows 5
+rows between `{p}` clicks across two `{w}` in the source and 7 in the English, though each
+`{w}`-page fits 4 as the tools model it. Check in the same session that the box scrolls or clears
+there (rulings R §1.12).
 
 
 ## Open
@@ -76,6 +80,11 @@ The six `*_T` room scripts are prototypes or tests, probably never shown: `NO4_R
 with `【Name】` speaker prefixes · units `NO4_BAR_T.p01`–`p04`, `NO4_T.b01`–`b03`, dispatched
 last · resolved by a human checking whether any script or the exe references these names
 (needs `original/`); if none does, they may be dropped from the queue.
+`NO4_BAR_T`/0012–0089 draft the scene shipped in NO4_BAR.p01 (PR #1). CHECK pairs only its
+identical rows (0078, 0079, 0082, 0084, 0085) and tag variants (0086, 0087, 0089). If these units
+are kept, the `【Name】`-prefixed near-duplicates must reuse NO4_BAR.p01's wording too: T/0050 ↔
+0032 "Old man, I have a question.", T/0063–0064 ↔ 0043, 虫の居所 "Foul mood?", 一匹 "a single
+beast", 分身 "part of him" (PR #1 Flags 7; rulings R §1.5, §1.9).
 
 ### F-009 · 2026-10-04 · speaker · OPEN
 `spk=N` (first argument of statement 0xA9) is not a character id: `NO4_BAR`/0014–0018 put
@@ -83,6 +92,20 @@ William and Rob Collison on the same value, and Oakland is on it at 0002. `docs/
 claimed a fixed slot per character and was corrected in setup. Every translator and reviewer
 names speakers from content and register (PROJECT.md §5.3) · would resolve by identifying the
 argument's real meaning in the exe (0x42BE28 handler table).
+
+### F-011 · 2026-10-04 · tools · OPEN
+PR #1 (NO4_BAR.p01) found four things CHECK and UNITCHECK do not verify. Each was confirmed by a
+plant in a scratch copy of the tree, which passed both (rulings R §1.13):
+(a) a word-initial `'` after a space or at a segment start curls into an opening quote ‘
+(`like 'em.` → `ｌｉｋｅ　‘ｅｍ．`);
+(b) UNITCHECK's `codes:` lines diff the wrapped text, so wrap breaks the tools insert show as added
+`{br}`;
+(c) message lines ended by an authored `{br}` or `{w}` are held to 28, not the preferred 27;
+(d) wrap points are not checked for sense: one-word last rows, a line ending in a lone "a" or "I",
+a courtesy title split from its name.
+All four are listed in PROJECT.md §7 and checked by hand in every review · would close with a tool
+PR: map a word-initial `'` to ’ or reject it; add a `codes:` line on the authored text; warn at 28
+on those lines; have UNITCHECK print the wrapped text and flag the three patterns in (d).
 
 
 ## CHECK positive controls

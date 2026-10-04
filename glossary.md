@@ -17,18 +17,35 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 ## 1. People
 | Source | Variants | Target | Cols | Cap | Note | Ruling |
 |---|---|---|---|---|---|---|
+| ジュディ | ジュディ・アルセラ | Judy; full name Judy Arsela | 4; 11 | — | アルセラ occurs only in the full name | R §1.1 |
+| ロブ・コリスン | コリスン | Rob Collison; コリスン alone: Collison | 12; 8 | — | ロブ occurs only in the full name | R §1.1 |
+| ビル・オークランド | オークランド · ビル | Bill Oakland; オークランド alone: Oakland; ビル alone: Bill | 12; 7; 4 | — | ビル alone once, SCN046A2/01 | R §1.1 |
+| ウィリアム | — | William | 7 | — | | R §1.1 |
+| ジャック・ウォルグ | ウォルグ | Jack Wolg; ウォルグ alone: Wolg | 9; 4 | — | ジャック occurs only in the full name | R §1.1 |
+| レベッカ・ミラー | ミラー | Rebecca Miller; ミラー alone: Miller | 14; 6 | — | レベッカ occurs only in the full name | R §1.1 |
+| コリスンさん | コリスンさんたち | Mr. Collison; たち: Mr. Collison and the others (in address: your group, Mr. Collison) | 12; 27 (24) | — | surname + さん → title + surname; never split from the name at a wrap | R §1.2 |
+| オークランドさん | — | Mr. Oakland | 11 | — | as コリスンさん | R §1.2 |
+| ミラーさん | — | Miss Miller | 11 | — | Collison's form (the only speaker of it) | R §1.2 |
 
 ## 2. Factions, places, ranks
 | Source | Variants | Target | Cols | Cap | Note | Ruling |
 |---|---|---|---|---|---|---|
+| サルベージャー | サルベージ | salvagers (sg. salvager) | 9 (8) | — | サルベージ, the work: "salvage" | R §1.9 |
+| 沈没船引き揚げ業者 | 沈没船のサルベージ業者 · 沈没船を引き上げる業者 | shipwreck salvage firm | 22 | — | other phrasings in context, with "shipwreck salvage" | R §1.9 |
+| 責任者 | — | the one in charge | 17 | — | keeps William's echo, 0022 | R §1.9 |
+| 学者 | 学者さん | scientist | 9 | — | さん dropped, carried by tone (R §1.2) | R §1.9 |
+| 海洋生物学者 | — | marine biologist | 16 | — | | R §1.9 |
+| フィラデルフィア | — | Philadelphia | 12 | — | | R §1.9 |
 
 ## 3. Items, currency, mechanics
 | Source | Variants | Target | Cols | Cap | Note | Ruling |
 |---|---|---|---|---|---|---|
+| 潜水装備 | — | diving gear | 11 | — | | R §1.9 |
 
 ## 4. Classes, units, system terms
 | Source | Variants | Target | Cols | Cap | Note | Ruling |
 |---|---|---|---|---|---|---|
+| セーブする · セーブしない | — | Save · Don't save | 4 · 10 | 27 | the save choice pair (choice rows, §8) | R §1.9 |
 
 ## 5. Verbal tics — decided, never mix
 <!-- What is fixed is the word; punctuation follows the source line. -->
@@ -38,10 +55,24 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 ## 6. Stock phrases and interjections
 | Source | Variants | Target | Cols | Note | Ruling |
 |---|---|---|---|---|---|
+| ヤツ | — | he / him / his | 2 / 3 / 3 | the monster or the killer only, never "it"; a type of person (〜なヤツ) in context | R §1.7 |
+| 化け物 | 怪物 | monster | 7 | synonyms, one target; NO4_BAR/0083 has both: repeat "monster" | R §1.8 |
+| じいさん | 爺さん | old man | 7 | "Old man," at a sentence start | R §1.9 |
+| お嬢さん | — | young lady | 10 | Collison to Miller | R §1.9 |
+| 虫の居所が悪い | 虫の居所 | in a foul mood; the echo: "Foul mood?" | 14; 10 | | R §1.9 |
+| 一匹 | １匹 | a single beast | 14 | only where the line turns on the animal counter (0033–0034); else a plain "one" | R §1.5 |
+| 分身 | — | part of him | 11 | the young as pieces of the monster itself | R §1.9 |
+| 部屋 | — | room | 4 | every kind of room, passenger cabins too; "cabin" is キャビン | R §1.6 |
 
 ## 7. Register per character
 | Character | Register | Contractions? | Markers | Ruling |
 |---|---|---|---|---|
+| Rob Collison | elderly retiree; courteous, old-fashioned diction; じゃ/わし/おる carried by word choice, no dialect spelling | yes, moderate | "of late", "Just so.", "a most reliable fellow", "You've friends…", "Now listen", "By all means."; Miller is "young lady" / "Miss Miller" | R §1.10 |
+| Bill Oakland | salvage boss; formal and measured with strangers (我々/私, plain だ); his わし to his crew stays plain, never folksy | yes | "We're salvagers.", "No doubt about it.", "I don't quite follow.", "Quite right." | R §1.10 |
+| William | hostile survivor; rough, blunt, drops subjects (ぜ/ねえ/よ) | yes, heavy; standard contractions only, no eye dialect ('em, ain't, gonna) | "You'd better not…", "Means nothing if…", "Are you an idiot or what⁉", "Isn't that nice." | R §1.10 |
+| Jack Wolg | salvager, ex-policeman (NO3_NO4); direct, terse, serious (俺) | yes | calls Collison "old man"; "Old man, I'm being serious.", "Tell me the truth." | R §1.10 |
+| Rebecca Miller | marine biologist; articulate, assertive; わ/かしら/のよ carried by modal softening and firmness, never by markers | yes | "Might it be…?", "Just so you know", "Suit yourself!" | R §1.10 |
+| Heming (name still §9) | older salvager; calm, mildly old-fashioned politeness (ませんかな) | yes | "might we hear…", "Believe what you will", "Don't get so heated." | R §1.10 |
 
 ## 8. Fixed-width caps
 <!-- tables in the game whose entries have a hard width: unit names, class names, item names, the player name -->
@@ -62,24 +93,11 @@ so; the reviewer moves the row up into its section in the integration commit. --
 | Source | Variants | Proposed | Alternatives | Where seen | Wave |
 |---|---|---|---|---|---|
 | ジョン | — | John | — | 95 lines; the player | setup |
-| ジュディ | ジュディ・アルセラ | Judy; full name Judy Arsela | Alsera, Arcella | NO4_BAR/0027 (full name); 47 | setup |
-| ロブ・コリスン | コリスン | Rob Collison | — | NO4_BAR/0019; 43 | setup |
-| ビル・オークランド | オークランド · ビル | Bill Oakland | — | NO4_BAR/0021; 56 | setup |
-| ウィリアム | — | William | — | NO4_BAR/0015; 34 | setup |
-| ジャック・ウォルグ | ウォルグ | Jack Wolg | Walg, Volg | NO4_BAR/0032; 66 | setup |
-| レベッカ・ミラー | ミラー | Rebecca Miller | — | NO4_BAR/0042; 51 | setup |
-| ヘイミング | — | Heming | Hayming, Haming | NO3_CHAPEL/0036; 35 (not in NO4_BAR.p01) | setup |
-| サルベージャー | サルベージ | salvager(s) | salvage crew | NO4_BAR/0002; 3 | setup |
+| ヘイミング | — | Heming | Hayming, Haming | NO3_CHAPEL/0036; 35 (his lines NO4_BAR/0049, 0051 do not name him) | setup |
 | 社長 | — | the boss (Oakland, as his crew calls him) | the president | 13 (not in NO4_BAR.p01) | setup |
-| 責任者 | — | the one in charge | the leader | NO4_BAR/0021–0022; 3 | setup |
-| ヤツ | — | him (the killer) | that guy, it | 50 | setup |
-| 殺人鬼 | — | the killer | murderer | 7 | setup |
-| 化け物 | 怪物 | monster | creature, thing | 59 + 21 | setup |
-| じいさん | 爺さん | old man | gramps | NO4_BAR/0014; 10 | setup |
-| セーブする · セーブしない | — | Save · Don't save | — | choice pairs; 84 "セーブ" | setup |
+| 殺人鬼 | — | the killer | murderer | 7; the same creature as the monster in the salvagers' early account (R §1.7) | setup |
 | 第Nデッキ | — | Deck N | the Nth deck | every deck | setup |
 | 右舷 · 左舷 | — | starboard · port | — | room names, dialogue | setup |
-| フィラデルフィア | — | Philadelphia | — | NO4_BAR/0054 | setup |
 
 ## 10. Open questions
 <!-- one line each, with the FLAGS id. A closed question is deleted here; its answer stays in rulings.md. -->
