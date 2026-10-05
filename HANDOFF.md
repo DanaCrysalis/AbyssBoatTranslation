@@ -1,4 +1,4 @@
-**Last updated: 2026-10-05** — setup complete: PR #1 merged (squash b1bba74, integration 25f1b7e), calibration and wave-1 seeds on `main`; the human gave the go-ahead; the runner opens the wave 1 session.
+**Last updated: 2026-10-05** — wave 1 dispatched by its coordinator (session `Abyss Boat — wave 1`): four translators working in parallel; review waits for the wave barrier.
 
 ## Integration branch: `main`. Not configurable.
 Every PR bases on `main`; the reviewer merges into `main`; a wave is closed only when `origin/main` is
@@ -6,12 +6,13 @@ at the close commit (`CLAUDE.md` Rule 3). A fresh container may clone shallow wi
 preflight is `git fetch origin main && git checkout main && git reset --hard origin/main`.
 
 ## NEXT ACTION — always current, always a literal instruction
-> **Open the wave 1 session** (runner; CLAUDE.md Rule 1, SKILL.md §6a): `create_session` titled
-> `Abyss Boat — wave 1`, tags `["abyssboat-translation", "wave-1"]`, `source_url`
-> https://github.com/DanaCrysalis/AbyssBoatTranslation, `source_revision` `main`, seed = SKILL.md
-> §6a with UNITS = Next up. First check `list_sessions` (tag `wave-1`): if one exists, do not open
-> a second — reconcile it instead. Then the runner stays out of the repo and keeps its 12-minute
-> `send_later` watchdog armed. The wave 1 coordinator overwrites this block at its first dispatch.
+> **Wave 1 coordinator: wait for the wave barrier** (CLAUDE.md §4 step 4). Four translators run in
+> the background (In flight). Each time one returns, re-check all four: every unit with an open PR →
+> run the `reviewer` subagent in the foreground, one PR at a time, in unit order p02 → p03 → p04 →
+> OP-SCN034, pushing HANDOFF before each and `git pull --ff-only` after. A unit whose translator
+> returned without a PR → fresh translator, same dispatch (2 re-dispatches, then park). A resumer
+> finding no live coordinator: `ListAgents`, reconcile open PRs with In flight, re-dispatch what is
+> lost from the template in `.claude/skills/translate/SKILL.md` §3.
 
 ## Progress
 | Store | Done | Total | |
@@ -23,7 +24,12 @@ preflight is `git fetch origin main && git checkout main && git reset --hard ori
 Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-05; tightest `NO4_BAR.SCR` 39,765 free).
 
 ## In flight
-Nothing.
+| Unit | Branch | Round | State | Next |
+|---|---|---|---|---|
+| script NO4_BAR.p02 (0062–0119, 58 rows, 1,405 chars) | `tl/script-NO4_BAR.p02` | dispatch 1 | translator working | translator opens PR → coordinator |
+| script NO4_BAR.p03 (0120–0177, 58 rows, 1,307 chars) | `tl/script-NO4_BAR.p03` | dispatch 1 | translator working | translator opens PR → coordinator |
+| script NO4_BAR.p04 (0178–0235, 58 rows, 1,466 chars) | `tl/script-NO4_BAR.p04` | dispatch 1 | translator working | translator opens PR → coordinator |
+| scene OP-SCN034 (OP2/01 … SCN034/02, 39 rows, 794 chars) | `tl/scene-OP-SCN034` | dispatch 1 | translator working | translator opens PR → coordinator |
 
 ## Next up
 Wave 1 (QUEUE 2026-10-05): script NO4_BAR.p02 (58 rows, 1,405 chars, ratio 15.15), NO4_BAR.p03 (58,
