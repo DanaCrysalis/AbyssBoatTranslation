@@ -200,13 +200,13 @@ CHECK and UNITCHECK print the same numbering. Never cite `dumps/*.tsv` lines or 
 
 | Question | Answer |
 |---|---|
-| Is `gh` installed? | Installed, but its token is invalid: every GitHub action uses the GitHub MCP tools with §1's owner/repo |
+| Is `gh` installed? | Installed, but its token is invalid: every GitHub action uses the GitHub MCP tools with §1's owner/repo. GitHub access has dropped mid-run before (2026-10-04, 403 on git and MCP): a 403 is a §8 stop, recorded in HANDOFF, never retried in a loop |
 | Is the claude-code-remote MCP available (`create_session`, `send_later`, `ListAgents`)? | yes |
 | If not — fallback for the wave chain | an `orchestrator` subagent per wave, `run_in_background: true`; the run is then **attended** — a human restarts it when the session dies, and HANDOFF → NEXT ACTION says so |
 | If not — fallback for the watchdog | none exists; write `NO WATCHDOG — attended run` into NEXT ACTION every turn |
 | Is the scratchpad shared between parallel subagents? | assume yes; namespace scratch files regardless |
-| Does GitHub accept APPROVE / REQUEST_CHANGES from the bot account on its own PRs? | assumed no (the same account opens and reviews): the reviewer posts a COMMENT review whose first line is `DECISION:` |
-| Does branch deletion succeed after merge? | unknown until the first merge; a 403 is not a merge signal — `merged: true` plus the squash SHA is |
+| Does GitHub accept APPROVE / REQUEST_CHANGES from the bot account on its own PRs? | no — "Can not approve your own pull request" (PR #1, 2026-10-05): the reviewer posts a COMMENT review whose first line is `DECISION:` |
+| Does branch deletion succeed after merge? | no — `git push origin --delete` returns 403 (PR #1, 2026-10-05); merged branches stay on origin. A 403 is not a merge signal — `merged: true` plus the squash SHA is |
 | Are the game files in the repo (split archives with pinned hashes) or human-only? | human-only: `original/` is git-ignored; hashes pinned in `dumps/originals.json` |
 | Worktree location for subagents | `.claude/worktrees/` (gitignored) |
 
