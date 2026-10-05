@@ -98,6 +98,15 @@ so; the reviewer moves the row up into its section in the integration commit. --
 | 殺人鬼 | — | the killer | murderer | 7; the same creature as the monster in the salvagers' early account (R §1.7) | setup |
 | 第Nデッキ | — | Deck N | the Nth deck | every deck | setup |
 | 右舷 · 左舷 | — | starboard · port | — | room names, dialogue | setup |
+| 食料庫 | — | the food storeroom | the food store, the pantry | NO4_BAR/0094, 0103, 0183, 0188; 13 in all; also a room (NO3_FOODSTORAGE, rooms/044) | 1 |
+| 下層 | — | the lower decks | the lower levels | NO4_BAR/0094, 0096: the ship's own lower decks, which lie above the party now that the ship is capsized | 1 |
+| 上の連中 | — | the people up top | the team topside | NO4_BAR/0151, 0177; SCN011/05: the salvagers' surface crew | 1 |
+| 海上 | — | the surface | topside | NO4_BAR/0152 | 1 |
+| 超音波 | — | ultrasound | ultrasonic waves | NO4_BAR/0156–0157; 5 in all | 1 |
+| 長波 | — | longwave | long waves | NO4_BAR/0160–0161 (0161 asks what it is) | 1 |
+| 電波 | — | radio waves | signal | NO4_BAR/0153, 0162 | 1 |
+| フロア | フロアー | floor | level | NO4_BAR/0094, 0220; 22 in all | 1 |
+| ホール | エントランスホール | hall; entrance hall | lobby | NO4_BAR/0067, 0088; 14 in all | 1 |
 
 ## 10. Open questions
 <!-- one line each, with the FLAGS id. A closed question is deleted here; its answer stays in rulings.md. -->
