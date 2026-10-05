@@ -1,4 +1,4 @@
-**Last updated: 2026-10-04** — GitHub write access restored; setup pushed to `main` (6819a8e); calibration translator on NO4_BAR.p01 still working.
+**Last updated: 2026-10-05** — setup complete: PR #1 merged (squash b1bba74, integration 25f1b7e), calibration and wave-1 seeds on `main`; the human gave the go-ahead; the runner opens the wave 1 session.
 
 ## Integration branch: `main`. Not configurable.
 Every PR bases on `main`; the reviewer merges into `main`; a wave is closed only when `origin/main` is
@@ -6,31 +6,33 @@ at the close commit (`CLAUDE.md` Rule 3). A fresh container may clone shallow wi
 preflight is `git fetch origin main && git checkout main && git reset --hard origin/main`.
 
 ## NEXT ACTION — always current, always a literal instruction
-> **Setup in progress (attended, no watchdog).** The calibration translator is working on
-> script NO4_BAR.p01. When it returns with its PR: push HANDOFF, run the `reviewer` on the PR in the
-> foreground, `git pull --ff-only`, then fill PROJECT.md §4 tiers and `translation_prompt.md`
-> §0.2/§5 from the unit, commit `setup: calibration`, and ask the human for the go-ahead (setup
-> SKILL §6). If the translator is lost (`ListAgents`), re-dispatch it per SKILL.md §3.
+> **Open the wave 1 session** (runner; CLAUDE.md Rule 1, SKILL.md §6a): `create_session` titled
+> `Abyss Boat — wave 1`, tags `["abyssboat-translation", "wave-1"]`, `source_url`
+> https://github.com/DanaCrysalis/AbyssBoatTranslation, `source_revision` `main`, seed = SKILL.md
+> §6a with UNITS = Next up. First check `list_sessions` (tag `wave-1`): if one exists, do not open
+> a second — reconcile it instead. Then the runner stays out of the repo and keeps its 12-minute
+> `send_later` watchdog armed. The wave 1 coordinator overwrites this block at its first dispatch.
 
 ## Progress
 | Store | Done | Total | |
 |---|---|---|---|
-| script | 0 | 38 units · 1,709 rows | from STATUS |
+| script | 1 unit · 85 rows | 38 units · 1,709 rows | from STATUS 2026-10-05 |
 | scene | 0 | 4 units · 190 rows | from STATUS |
 | system | 0 | 5 units · 188 rows | blocked whole (F-006) |
 
-Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-04; tightest `NO4_BAR.SCR` 42,096 free).
+Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-05; tightest `NO4_BAR.SCR` 39,765 free).
 
 ## In flight
-| Unit | Branch | Agent | Round | PR | Last event | Next |
-|---|---|---|---|---|---|---|
-| script NO4_BAR.p01 (calibration) | `tl/script-NO4_BAR.p01` | reviewer done | 1 | #1 | 2026-10-04: round 0 CHANGES (three one-word last rows); round 1 head 3bffa43 MERGE decided. 2026-10-05: **merged** (PR #1, squash b1bba74). NO4_BAR.SCR 25,770 / 65,535, 39,765 free; max 4 rows/page; 22 duplicate pairs. Integration commit on `main` (rulings R §1) | runner: calibration commit (PROJECT.md §4, translation_prompt.md §0.2/§5), then setup's go-ahead question |
+Nothing.
 
 ## Next up
-Wave 1, if the calibration merges: script NO4_BAR.p02 (1,405 chars), NO4_BAR.p03 (1,307),
-NO4_BAR.p04 (1,466) — all `NO4_BAR.SCR`, 42,096 free, tier D — plus scene OP-SCN034 (794 chars,
-geom). Related shipped work: NO4_BAR.p01. NO4_BAR_T.p01 is a draft of the same scene with
-`【Name】` speaker labels — use it to name speakers (F-009).
+Wave 1 (QUEUE 2026-10-05): script NO4_BAR.p02 (58 rows, 1,405 chars, ratio 15.15), NO4_BAR.p03 (58,
+1,307, 16.21), NO4_BAR.p04 (58, 1,466, 14.56) — all `NO4_BAR.SCR`, 39,765 free, tier D — plus scene
+OP-SCN034 (39 rows, 794 chars, geom, tier D). Glossary seeds: §9 rows of wave 1 and the setup rows
+still provisional (John, Heming, 社長, 殺人鬼, Deck N). Related shipped work: NO4_BAR.p01 — the same
+conversation; read it first (voices in glossary §7, conventions in rulings R §1). NO4_BAR_T drafts
+the bar scenes with `【Name】` speaker labels: use them to name speakers (F-009); its identical and
+tag-variant rows must reuse the shipped wording (F-008).
 
 ## Remaining
 QUEUE order, generated 2026-10-04 (source characters, tags excluded). Script: NO4_BAR.p05 (1208),
@@ -55,10 +57,15 @@ Scene (one per wave, waves 2–4): SCN038 (655), SCN041-SCN046 (773), SCN047-EPI
 - `spk=N` is not a speaker id; name speakers from content — PROJECT.md §5.3, F-009.
 - `build/abyss_boat_script.ods` regenerated and committed at every wave close — PROJECT.md §2.
 - Unattended, waves of 4 (3 script + 1 scene while scenes last) — PROJECT.md §10.
+- Calibration (NO4_BAR.p01): さん → "Mr."/"Miss"; `…。`/`──。` absorb the 。; numbers spelled out, dates in digits; no one-word last rows where a faithful rewording exists — rulings R §1.2–§1.12; four CHECK blind spots — PROJECT.md §7, F-011.
+- Tiers: literal 2.51, disciplined 2.16, provisional floor 2.05; every script and scene unit is tier D — PROJECT.md §4.
+- GitHub refused this repo 2026-10-04 → 05 (403); PR #1 was decided offline and merged when access returned. APPROVE is refused on the account's own PRs (COMMENT reviews) and branch deletion returns 403 — PROJECT.md §9.
+- Go-ahead for the unattended run given by the human, 2026-10-05.
 
 ## Wave history
 | Wave | Units | Merged | Parked | Progress after |
 |---|---|---|---|---|
+| setup (calibration) | script NO4_BAR.p01 | 1 — PR #1, squash b1bba74 (round 0 CHANGES, round 1 MERGE) | 0 | script 1/38, scene 0/4, system blocked |
 
 ## How to resume
 1. Preflight per `CLAUDE.md` §4 step 0. CHECK must pass. A fill marker left in `PROJECT.md` means
