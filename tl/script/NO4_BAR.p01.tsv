@@ -1,0 +1,88 @@
+# unit: script/NO4_BAR.p01
+# rows: 85
+# columns: id <TAB> context <TAB> source <TAB> target (empty target = untranslated)
+NO4_BAR/0001	msg spk=-	ジュディ、もどったか…。{br}外へ出るなと何度も──{br}で、お前たちは誰じゃ…⁉	Judy, you're back…{br}I've told you time and again not to go out——{br}And who are you people…⁉
+NO4_BAR/0002	msg spk=6	我々はサルベージャーだ。{br}調査でこの船に乗り込んだのだが──	We're salvagers.{br}We boarded this ship to survey it, but——
+NO4_BAR/0003	msg spk=2	外の人間か？{br}助けに来てくれたのじゃな⁉	You're from outside?{br}You've come to rescue us⁉
+NO4_BAR/0004	msg spk=6	そうしたいところだったのだが、何者かが我々の潜水装備を破壊してしまったのだ。	We'd have liked to, but someone has destroyed our diving gear.
+NO4_BAR/0005	msg spk=2	なんとっ⁉{br}それはいったい誰が…。	What⁉{br}Who on earth did that…
+NO4_BAR/0006	msg spk=6	こっちが知りたいことだ。	That's what we want to know.
+NO4_BAR/0007	msg spk=2	なんじゃ、わしらを疑っておるのか？{br}壊すヒマがあったら、奪って脱出するじゃろう。	What, you suspect us?{br}If we'd had time to wreck it, we'd have stolen it and made our escape.
+NO4_BAR/0008	msg spk=6	それはそうだが──。	That's true, but——
+NO4_BAR/0009	msg spk=2	海上にも仲間がいるんじゃろ？{br}救助にはいつ来るんじゃ？	You've friends up on the surface too, surely?{br}When will they come to rescue us?
+NO4_BAR/0010	msg spk=2	１時間たって戻らなければ、我々の事故に気付く。{p}	If we don't return within the hour, they'll know we've had an accident.{p}
+NO4_BAR/0011	msg spk=2	準備に時間がかかったとして、この船に救助の者が乗り込んで来るにはさらに１時間は必要だろう。{p}	Allowing time to prepare, rescuers will likely need at least another hour to board this ship.{p}
+NO4_BAR/0012	msg spk=2	２時間じゃな？{br}２時間で助けが来るんじゃな？	Two hours, is it?{br}Help will come in two hours?
+NO4_BAR/0013	msg spk=6	まちがいない。	No doubt about it.
+NO4_BAR/0014	msg spk=2	あてにしない方がいいぜ、じいさん。	You'd better not count on it, old man.
+NO4_BAR/0015	msg spk=7	ウィリアム、彼らはわしたちを助けてくれるんじゃぞ？	William, they're going to rescue us, you know?
+NO4_BAR/0016	msg spk=6	最終的に助からなかったら意味ないね。	Means nothing if we're not saved in the end.
+NO4_BAR/0017	msg spk=6	まったく、なんという言いぐさじゃ。	Really, what a thing to say.
+NO4_BAR/0018	msg spk=6	いや、すまない。{br}彼はウィリアムといってな、これでなかなか頼りになる男なのじゃが──。{p}	Ah, forgive me.{br}His name's William. Believe it or not, he's a most reliable fellow, but——{p}
+NO4_BAR/0019	msg spk=6	そうそう、自己紹介がまだじゃったな。{br}わしはロブ・コリスン。定年後の余生を楽しむ身じゃ。{br}	Ah, yes, I've yet to introduce myself.{p}I'm Rob Collison, a retiree enjoying his golden years.{br}
+NO4_BAR/0020	msg spk=6 +	…それがまったく、ついとらん。{p}	…But as it turns out, I've had no luck at all.{p}
+NO4_BAR/0021	msg spk=6	こちらも挨拶が遅れてしまった。{br}私はビル・オークランド。{br}沈没船引き揚げ業者の責任者だ。	We've been slow to introduce ourselves, too.{p}I'm Bill Oakland.{br}I'm the one in charge of our shipwreck salvage firm.
+NO4_BAR/0022	msg spk=2	責任者？{br}責任者が真っ先に乗り込んでくるかよ。{br}馬鹿じゃねえのか⁉	The one in charge?{br}As if the one in charge would come aboard first.{br}Are you an idiot or what⁉
+NO4_BAR/0023	msg spk=6	まあ待て。{br}大変申し訳ないオークランドさん、どうも彼は虫の居所が悪いらしいの。	Now, hold on.{br}Mr. Oakland, my deepest apologies. It seems he's in a foul mood.
+NO4_BAR/0024	msg spk=6	虫の居所？{br}そうじゃない。気に入らねえんだよ。{br}こんな非常識な場所にノコノコやってくる連中がよ。	Foul mood? That's not it.{br}I just don't like them.{br}Guys who come waltzing into a crazy place like this.
+NO4_BAR/0025	msg spk=7	悪いが、こっちも好きでこうなったわけじゃないんだ。	Sorry, but we didn't end up like this by choice either.
+NO4_BAR/0026	msg spk=4	結構なこった。	Isn't that nice.
+NO4_BAR/0027	msg spk=7	どうか気にせんで欲しい。{br}そして、ここを案内したこの子がジュディ・アルセラじゃ。	Please, pay him no mind.{br}And the girl who brought you here is Judy Arsela.
+NO4_BAR/0028	msg spk=1	見たところ３人だけのようだが、他の乗客たちは？	It looks like there are only three of you. What about the other passengers?
+NO4_BAR/0029	msg spk=2	ここには３人きりじゃ。{br}まだどこかに何人かはいるじゃろうが、ここのところ姿を見ておらん。	Just the three of us here.{br}There are likely a few more somewhere, but we've not seen them of late.
+NO4_BAR/0030	msg spk=6	要領を得ないが、コリスンさんたちとは別行動という意味か？	I don't quite follow. You mean they've split off from your group, Mr. Collison?
+NO4_BAR/0031	msg spk=2	そうじゃ。{br}成り行きでいくつかの集団ができたらしい。	Just so.{br}It seems several groups formed as things played out.
+NO4_BAR/0032	msg spk=6	俺はジャック・ウォルグ。{br}じいさん、知りたいことがある。{br}相手は何人いるんだ？	I'm Jack Wolg.{br}Old man, I have a question.{br}How many of them are there?
+NO4_BAR/0033	msg spk=4	相手？{br}ヤツはたった一匹じゃ。	Them?{br}He's but a single beast.
+NO4_BAR/0034	msg spk=6	一匹？{br}どういう意味だ？	A single beast?{br}What do you mean?
+NO4_BAR/0035	msg spk=4	そうじゃな、よそ者のあんたらは知らんのじゃな。{br}…わしらを襲ったのは人間じゃない。{br}怪物じゃよ。	Of course. You outsiders wouldn't know.{br}…Our attacker wasn't human.{br}It's a monster.
+NO4_BAR/0036	msg spk=6	じいさん、俺はまじめな話をしているんだ。	Old man, I'm being serious.
+NO4_BAR/0037	msg spk=4	気持ちはわかる。{br}アレを自分の目で見るまでは誰も信じようとはせん。	I understand how you feel.{br}Until they see that thing with their own eyes, no one will believe it.
+NO4_BAR/0038	msg spk=6	じいさん、俺たちの安全に関わる情報だ。{br}本当のことを話してくれ。	Old man, this information affects our safety.{br}Tell me the truth.
+NO4_BAR/0039	msg spk=4	もう話しておる。{br}あんたが信用しないだけじゃ。	I've already told you.{br}You just don't believe me.
+NO4_BAR/0040	msg spk=6	コリスンさん、その怪物はどんな生き物なの？{br}クモのような形なのかしら？	Mr. Collison, what kind of creature is this monster?{br}Might it be spider-shaped?
+NO4_BAR/0041	msg spk=3	知っておるのか？{br}お嬢さん。	You know of it, young lady?
+NO4_BAR/0042	msg spk=6	ここに来るあいだに一匹見かけたわ。{br}一応名乗っておくけど私はレベッカ・ミラー。{br}海洋生物学者よ。	I saw one on my way here.{br}Just so you know, I'm Rebecca Miller.{br}A marine biologist.
+NO4_BAR/0043	msg spk=3	学者さんか、頼りになりそうじゃ。{br}いいかね、おそらくミラーさんが見たのはヤツの子供じゃ。	A scientist, eh? You'll be most helpful.{br}Now listen, Miss Miller, you most likely saw his young.
+NO4_BAR/0044	msg spk=6	子供？{br}成長するとどうなるの？	His young?{br}What do they grow into?
+NO4_BAR/0045	msg spk=3	わからん。{br}成長すると親と同じになるのかもわからん。{br}ことによると、分身かもしれんな。	I don't know.{br}Nor whether they'll grow up to be like the parent.{br}Perhaps they're part of him.
+NO4_BAR/0046	msg spk=6	………。{br}私はコリスンさんの言うことを信じるわ。{br}この船には怪物がいるのよ。	………{br}I believe Mr. Collison.{br}There is a monster aboard this ship.
+NO4_BAR/0047	msg spk=3	バカを言うな！怪物だぞ⁉{br}信じろと言う方がどうかしてる！	Don't be stupid! A monster⁉{br}You're crazy to ask anyone to believe that!
+NO4_BAR/0048	msg spk=4	あなたに信じろとは言ってないわ。{br}勝手にすればいいでしょ！	I'm not telling you to believe it.{br}Suit yourself!
+NO4_BAR/0049	msg spk=3	そうかっかするな。{br}なにを信じるかは個人の自由だが、仲間割れは困る。{br}お互いに足を引っ張り合うことになるぞ。	Don't get so heated.{br}Believe what you will, but infighting won't do.{br}We'll trip each other up.
+NO4_BAR/0050	msg spk=5	まったくだ。{br}そのせいでとばっちりを食うのはわしらだぞ？	Quite right.{br}And it's us who'll be caught in the crossfire, you know?
+NO4_BAR/0051	msg spk=2	怪物もいいが、コリスンさん、この船でいったいなにが起こったのか聞かせてもらえませんかな？	The monster is all very well, Mr. Collison, but might we hear what on earth happened on this ship?
+NO4_BAR/0052	msg spk=5	かまわんよ。	By all means.
+NO4_BAR/0053	msg spk=6	７月２５日の夜じゃった。{w}{br}	It was the night of July 25.{w}{br}
+NO4_BAR/0054	msg spk=6 +	フィラデルフィアを発って二日目の夜じゃ。{br}	It was our second night out of Philadelphia.{br}
+NO4_BAR/0055	msg spk=6 +	わしは奇妙な物音で目を覚ました。{w}{br}	I awoke to a strange noise.{w}{br}
+NO4_BAR/0056	msg spk=6 +	辺りに低い、モーターのうなるような音が聞こえる。{br}	I could hear a low droning all around, like a motor.{br}
+NO4_BAR/0057	msg spk=6 +	気になったわしは部屋の外に出た。{p}	Curious, I left my room.{p}
+NO4_BAR/0058	msg spk=6	ドアを開けると、廊下はあわただしかった。{br}	When I opened the door, the corridor was in a tumult.{br}
+NO4_BAR/0059	msg spk=6 +	通りがかりの者に声を掛け問いただすと、外になにかおかしなモノが見えるのだという。{w}{br}	I hailed a passerby and asked what was happening.{p}Something strange could be seen outside, I was told.{w}{br}
+NO4_BAR/0060	msg spk=6 +	ならばわしも見てみようと足を進めたとたん、ガクンと強い揺れが起こった。{br}	Thinking I'd have a look too, I stepped forward,{p}and that very instant, there was a strong jolt.{br}
+NO4_BAR/0061	msg spk=6 +	もんどり打ってわしは壁に頭を打ち付けた。{p}	I went head over heels and struck my head on the wall.{p}
+NO4_BAR/s24	choice	セーブする	Save
+NO4_BAR/s25	choice	セーブしない	Don't save
+NO4_BAR/s27	choice	セーブする	Save
+NO4_BAR/s28	choice	セーブしない	Don't save
+NO4_BAR/s29	choice	セーブする	Save
+NO4_BAR/s30	choice	セーブしない	Don't save
+NO4_BAR/s31	choice	セーブする	Save
+NO4_BAR/s32	choice	セーブしない	Don't save
+NO4_BAR/s39	choice	セーブする	Save
+NO4_BAR/s40	choice	セーブしない	Don't save
+NO4_BAR/s41	choice	セーブする	Save
+NO4_BAR/s42	choice	セーブしない	Don't save
+NO4_BAR/s44	choice	セーブする	Save
+NO4_BAR/s45	choice	セーブしない	Don't save
+NO4_BAR/s46	choice	セーブする	Save
+NO4_BAR/s47	choice	セーブしない	Don't save
+NO4_BAR/s50	choice	セーブする	Save
+NO4_BAR/s51	choice	セーブしない	Don't save
+NO4_BAR/s52	choice	セーブする	Save
+NO4_BAR/s53	choice	セーブしない	Don't save
+NO4_BAR/s54	choice	セーブする	Save
+NO4_BAR/s55	choice	セーブしない	Don't save
+NO4_BAR/s56	choice	セーブする	Save
+NO4_BAR/s57	choice	セーブしない	Don't save
