@@ -1,0 +1,42 @@
+# unit: scene/OP-SCN034
+# rows: 39
+# columns: id <TAB> context <TAB> source <TAB> target (empty target = untranslated)
+OP2/01	sub 209-272	待って、ジョン！{br}捕まえて！	Wait, John!{br}Catch it!
+SCN001/01	sub 25-120	どうすればいいんだ。	What are we to do?
+SCN001/02	sub 168-260	まず安全な場所を確保するんだ。どうするのかはそこで考えよう。	First, we secure a safe place. Let's figure out what to do from there.
+SCN002/01	sub 51-90	しかし、安全な場所なんてあるのか？	But is there any such thing as a safe place?
+SCN002/02	sub 131-180	わからん。だが、こんな通路をウロウロするよりもどこかの部屋に腰を落ち着けた方が安全なはずだ。	I don't know. But rather than wandering these corridors, settling in some room should be safer.
+SCN002/03	sub 181-230	賛成だな。下手に動かずに隠れていた方が安全だ。	I agree with that. It's safer to stay hidden than to move rashly.
+SCN002/04	sub 281-320	隠れるって、いつまで隠れるのよ⁉	Hide? How long are we meant to hide⁉
+SCN002/05	sub 341-380	１時間で戻らなければ上も異常に気付く。	If we're not back within the hour, the people up top will notice something's wrong.
+SCN002/06	sub 411-460	それまで殺人鬼に見つからなければ、助かるのね。	So if the killer doesn't find us before then, we'll be saved.
+SCN002/07	sub 461-510	見つかってもむざむざやられんよ。	Even if found, we're not going down easily.
+SCN002/08	sub 541-580	さあ、移動を始めるぞ。	All right, let's get moving.
+SCN002A/01	sub 51-140	しかし、安全な場所なんてあるのか？	But is there any such thing as a safe place?
+SCN002A/02	sub 171-400	わからん。{br}だが、こんな通路をウロウロするよりもどこかの部屋に腰を落ち着けた方が安全なはずだ。	I don't know.{br}But rather than wandering these corridors, settling in some room should be safer.
+SCN002A/03	sub 401-510	賛成だな。{br}下手に動かずに隠れていた方が安全だ。	I agree with that.{br}It's safer to stay hidden than to move rashly.
+SCN002A/04	sub 541-750	待つ……ですって？{br}いつまで待つつもり⁉{br}こんな得体の知れない船の中にいつまでいるつもり⁉	Wait…… you say?{br}How long do we wait⁉{br}How long do we stay inside this strange ship⁉
+SCN002A/05	sub 751-855	１時間で戻らなければ上も異常に気付く。	If we're not back within the hour, the people up top will notice something's wrong.
+SCN002A/06	sub 856-950	異常に気付かなかったら、どうするのよ！	If they don't notice anything's wrong, what then!
+SCN002A/07	sub 956-987	愚痴を言っても始まらん。	There's no use complaining.
+SCN002A/08	sub 1011-1069	さあ、移動を始めるぞ。	All right, let's get moving.
+SCN002OLD/01	sub 51-90	【オークランド】しかし、安全な場所なんてあるのか？	【Oakland】But is there any such thing as a safe place?
+SCN002OLD/02	sub 131-180	【ウォルグ】わからん。だが、こんな通路をウロウロするよりもどこかの部屋に腰を落ち着けた方が安全なはずだ	【Wolg】I don't know. But rather than wandering these corridors, settling in some room should be safer
+SCN002OLD/03	sub 181-230	【ヘイミング】賛成だな。下手に動かずに隠れていた方が安全だ	【Heming】I agree with that. It's safer to stay hidden than to move rashly
+SCN002OLD/04	sub 281-320	【ミラー】隠れるって、いつまで隠れるのよ！？	【Miller】Hide? How long are we meant to hide!?
+SCN002OLD/05	sub 341-380	【オークランド】１時間で戻らなければ上も異常に気付く	【Oakland】If we're not back within the hour, the people up top will notice something's wrong
+SCN002OLD/06	sub 411-460	【ミラー】それまで殺人鬼に見つからなければ、助かるのね	【Miller】So if the killer doesn't find us before then, we'll be saved
+SCN002OLD/07	sub 461-510	【ウォルグ】見つかってもむざむざやられんよ	【Wolg】Even if found, we're not going down easily
+SCN002OLD/08	sub 541-580	【オークランド】さあ、移動を始めるぞ	【Oakland】All right, let's get moving
+SCN011/01	sub 11-170	こいつは、行けるかもしれないぞ。	This might just work.
+SCN011/02	sub 316-345	くそ！	Damn!
+SCN011/03	sub 346-435	どだい無理な話だ。	It was never going to work.
+SCN011/04	sub 436-500	地上用の設備をそのまま水中で使う事自体、バカげてる。	Using land-based equipment underwater, unmodified, is ridiculous in itself.
+SCN011/05	sub 501-590	ああ。今は大人しく上の連中が手を打ってくれることを願うしかないな。	Yes. For now, we can only sit tight and hope the people up top do something.
+SCN011/06	sub 631-690	さあ、戻ろう。	All right, let's head back.
+SCN021/01	sub 311-375	た、助けてく──！	H-help m——!
+SCN029/01	sub 121-181	こ、こいつはいったい⁉	Wh-what on earth is this⁉
+SCN029/02	sub 400-500	くっ、弾切れか⁉	Ngh, out of ammo⁉
+SCN029/03	sub 510-555	ジ、ジョン…。	J-John…
+SCN034/01	sub 1-50	…ジョン、扉ちゃんと閉めてないわね？	…John, you didn't close the door properly, did you?
+SCN034/02	sub 50-95	きゃああああああああああっ‼	Aaaaaaaaaaah‼
