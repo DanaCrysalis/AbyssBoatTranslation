@@ -1,4 +1,4 @@
-**Last updated: 2026-10-06** — wave 1 resumed after the weekly usage limit (stopped 2026-10-05 22:42 UTC, reset 04:00 UTC): OP-SCN034 has PR #2; the p02, p03 and p04 translators resumed with their worktree drafts.
+**Last updated: 2026-10-06 09:05 UTC** — wave 1 resumed after the second usage-limit stop (5-hour limit, 07:41 → 09:00 UTC): OP-SCN034 has PR #2; the p02, p03 and p04 translators resumed again with their worktree drafts.
 
 ## Integration branch: `main`. Not configurable.
 Every PR bases on `main`; the reviewer merges into `main`; a wave is closed only when `origin/main` is
@@ -67,7 +67,7 @@ Scene (one per wave, waves 2–4): SCN038 (655), SCN041-SCN046 (773), SCN047-EPI
 - Tiers: literal 2.51, disciplined 2.16, provisional floor 2.05; every script and scene unit is tier D — PROJECT.md §4.
 - GitHub refused this repo 2026-10-04 → 05 (403); PR #1 was decided offline and merged when access returned. APPROVE is refused on the account's own PRs (COMMENT reviews) and branch deletion returns 403 — PROJECT.md §9.
 - Go-ahead for the unattended run given by the human, 2026-10-05.
-- Wave 1 stopped on the account's weekly usage limit 2026-10-05 22:42 UTC (all four translators, HTTP 429) and resumed 2026-10-06 07:27 UTC. The three without a PR were resumed by `SendMessage` (same agent, context and worktree intact), not re-dispatched: not counted against PROJECT.md §10's 2 re-dispatches.
+- Wave 1 stopped on the account's weekly usage limit 2026-10-05 22:42 UTC (all four translators, HTTP 429) and resumed 2026-10-06 07:27 UTC; stopped again on the 5-hour session limit at 07:41 UTC and resumed 09:05 UTC. The three without a PR were resumed by `SendMessage` (same agent, context and worktree intact), not re-dispatched: not counted against PROJECT.md §10's 2 re-dispatches.
 - Effort lowered from `max` to `high` for every role, and a usage limit (session or weekly) is a stop that nothing resumes by itself — human, 2026-10-06 — PROJECT.md §1, §10.
 
 ## Wave history
