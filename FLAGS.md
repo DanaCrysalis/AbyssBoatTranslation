@@ -19,12 +19,18 @@ First in-game test of a built patch: does full-width English display correctly i
 box, and does a rebuilt room script load and run? · any unit · BUILD with one translated room
 (e.g. `script/NO1_CONTROLROOM`), copy `build/game/SCRIPT.PAK` and `build/game/AbyssBoat.exe`
 over the installed game (back up first), open that room, examine things · `docs/ENGINE.md` §5.
+In the same session, watch the OP2 movie: OP-SCN034 (PR #2) renders OP2/01 待って、ジョン！捕まえて！ as
+"Wait, John! Catch it!" because 捕まえて has no object. If what is being chased is a person, the
+target becomes "him" or "her" (`tl/scene/OP-SCN034.tsv:4`; rulings R §4.3).
 
 ### F-002 · 2026-10-04 · geometry · HUMAN
 Subtitle box size is assumed 28 columns × 4 rows (`tools/abyss/project.py` SCENE_COLS/ROWS);
 the Japanese source has a few subtitle lines of 30–51 columns, so the real box may be wider ·
 scene store · watch a translated cutscene (SCN001 is short) and report how many full-width
 columns fit on a line · `docs/ENGINE.md` §7.
+Also reading time: SCN002's subtitles last 40–50 frames (1.3–1.7 s) and the English runs about
+twice the source's characters (SCN002/02: 95 characters in 50 frames, 4 lines). Report whether
+SCN002 can be read at playback speed (OP-SCN034, PR #2 Flag 12).
 
 ### F-003 · 2026-10-04 · geometry · HUMAN
 Choice options and inline lines (`choice`/`text` rows) are assumed to fit 28 columns
@@ -76,6 +82,9 @@ when the other store is translated, a container approaching its threshold -->
 `SCN002OLD.SCE` looks like an unused older version of SCN002/SCN002A (its lines largely
 repeat theirs). Since setup bundled the scene groups it sits in unit `OP-SCN034` beside
 SCN002/SCN002A, where the duplicate gate keeps its repeated lines identical.
+Shipped in OP-SCN034 (PR #2, 2026-10-06) with its `【Name】` labels translated and the words of
+SCN002 after them. CHECK does not pair the labelled rows with SCN002/SCN002A (F-013); the review
+checked all 8 by hand (rulings R §4.4).
 
 ### F-008 · 2026-10-04 · script · OPEN
 The six `*_T` room scripts are prototypes or tests, probably never shown: `NO4_ROOM01_T` opens
@@ -96,6 +105,11 @@ matches (rulings R §2.5).
 `NO4_BAR_T`/0155–0168 draft NO4_BAR.p03 (PR #3) 0120–0134, all `【Name】`-prefixed, so CHECK
 pairs none of them: reuse p03's wording by hand (T/0158 has 事故 for トラブル, T/0159 joins
 0123–0124, T/0166 is reworded, T/0167 ふん → "Hmph,") (rulings R §3.6).
+`NO4_HWR_BACK_T`/0001–0008 copy SCN002OLD/01–08 (OP-SCN034, PR #2): 0001–0003 and 0005–0008
+are tag-variants CHECK pairs (reuse the target with `{p}` appended); 0004 has ⁉ for ！？ and is not
+paired: `【Miller】Hide? How long are we meant to hide⁉{p}`. `NO4_MACHINE_T`/s06–s08 are
+labelled `text` copies of SCN001/01–02: s06 `【Oakland】What are we to do?` (27); s07–s08 need
+their own cut within one line (rulings R §4.5).
 
 ### F-009 · 2026-10-04 · speaker · OPEN
 `spk=N` (first argument of statement 0xA9) is not a character id: `NO4_BAR`/0014–0018 put
@@ -130,6 +144,17 @@ NO5_ENTRANCEL/0005; NO6_BRIDGE/0002. Translators open the `+` target with `{br}`
 listed in PROJECT.md §7 and checked by hand · would close with a tool PR: CHECK errors when a
 translated `+` target starts with text and the previous row's target ends in text, not a tag
 (rulings R §2.3).
+
+
+### F-013 · 2026-10-06 · tools · OPEN
+CHECK's duplicate gate does not strip a leading `【Name】` label or equate `！？` with `⁉`, so
+labelled copies of unlabelled rows are never compared: SCN002OLD ↔ SCN002/SCN002A,
+NO4_MACHINE_T/s06–s08 ↔ SCN001/01–02, NO4_HWR_BACK_T/0004 ↔ SCN002OLD/04, and every `【Name】`
+row of the `_T` scripts against its shipped room (F-008). Found by PR #2 (Flag 13), confirmed in
+its review by a plant: a divergent target on SCN002OLD/01 passed CHECK (`All checks passed`).
+Listed in PROJECT.md §7 and censused by hand · would close with a tool PR: a third pairing pass on
+sources with the label stripped and final 。！？⁉ normalised, reported as warnings with a pair count
+(rulings R §4.4).
 
 
 ## CHECK positive controls

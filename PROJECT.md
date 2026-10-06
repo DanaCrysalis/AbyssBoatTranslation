@@ -173,6 +173,7 @@ commit); never remove one without a tool PR that closes it.
 - CHECK does not know whether an added `{p}` or a moved `{br}` was flagged; compare UNITCHECK's `codes:` lines with the PR's Flags.
 - Pages are modelled with `{w}` starting a new page; the real engine behaviour past 4 rows is untested (F-010).
 - Duplicate pairing needs identical text once `{p}` `{w}` `{br}` are removed; spelling variants and source typos are not paired — census them by the glossary Variants.
+- Duplicate pairing does not strip a leading `【Name】` label or equate `！？` with `⁉`, so labelled copies of unlabelled rows (SCN002OLD ↔ SCN002/SCN002A; NO4_MACHINE_T/s06–s08 ↔ SCN001/01–02; the `_T` scripts ↔ their shipped rooms) and `！？`/`⁉` twins (SCN002OLD/04 ↔ NO4_HWR_BACK_T/0004) are never compared. Census them by hand, label stripped and final punctuation normalised (F-013, rulings R §4.4).
 - A tag-only row left empty counts as untranslated (STATUS shows `part`), not as an error.
 - A word-initial apostrophe after a space or at a segment start ('em, 'cause, 'til, '70s) is curled into an opening quote ‘ by the codec, and CHECK passes it. Avoid the form, or type ’ (U+2019) directly (F-011, rulings R §1.13).
 - UNITCHECK's `codes:` lines diff the wrapped text, so every wrap break the tools insert shows as an added `{br}`. Check the PR's Flags against a diff of the authored target's `{br}`/`{p}`/`{w}` sequence with the source's, plus the sentence each `{br}` follows, which catches a `{br}` moved within an unchanged sequence (F-011).

@@ -379,3 +379,47 @@ Census counts are rows per store (script / scene / system), from the reviewer's 
 - `:14 0130` drops the hedge in 味方では無いだろう; "they're hardly on our side" would keep it.
 - `:50 0166` `……Then, someone come along.`: the comma is optional, and "come with me" would sit closer to 付き合ってくれ.
 - None of these is a fidelity error.
+
+---
+
+## Unit scene OP-SCN034 (PR #2, MERGED, 2026-10-06)
+
+The first scene unit: OP2, SCN001, SCN002 / SCN002A / SCN002OLD (one exchange in three layouts), SCN011 (Heming's radio attempt, the counterpart of NO4_BAR/0175), SCN021, SCN029, SCN034. Reviewed in one round: MERGE, squash 131288b.
+
+Figures:
+- 39 subtitles, every one 1 page, at most 4 lines (UNITCHECK, 0 violations). 1,900 target characters ÷ 794 source = 2.39. No byte container (scene); script containers unchanged (NO4_BAR.SCR 37,487 free).
+- CHECK compared 26 duplicate pairs (main's 23 + SCN002/01, /05, /08 = SCN002A) and 2 tag-variant pairs (SCN002/02, /03 ~ SCN002A). The reviewer's source-side script made 162,708 comparisons (exact and tag-variant, then label-stripped with final 。！？⁉ normalised): no recurrence in shipped `tl/` or in open PR #4.
+
+Census counts are rows per store (script / scene / system), from the reviewer's grep of `dumps/` on 2026-10-06. Line citations use PROJECT.md §7's numbering in `tl/scene/OP-SCN034.tsv` (line = row index + 3).
+
+### 4.1 Terms promoted or added
+- **殺人鬼** 5 / 2 / 0 → `the killer` (10). Promoted from §9 (R §1.7). Rows: SCN002/06, SCN002OLD/06, NO3_NO4/0018 and 0024 (いかれた殺人鬼, Wolg's police story: "a crazed killer"), NO4_BAR_T/0164, NO4_HWR_BACK_T/0006 (copy of SCN002OLD/06), NO4_HWR_FRONT_UP_T/0004 (殺人鬼？…たしかに鬼ね, a pun on 鬼, rendered in context). Binds `:12 SCN002/06`, `:28 SCN002OLD/06`. Glossary: §6 row, §9 row removed.
+- **弾切れ** 0 / 2 / 1 → `out of ammo` (11). New. SCN029/02, SCN046A1/07 (弾切れ⁉), items/000 (system, blocked; 弾切れに注意 in context). Binds `:39 SCN029/02`. Glossary: §3 row.
+- **くっ** 1 / 1 / 0 → `Ngh` (3). New. SCN029/02 くっ、 and NO4_BAR_T/0072 【ウォルグ】くっ…！ → "Ngh…!". Binds `:39`. Glossary: §6 row.
+- **くそ** 0 / 4 / 0 as the curse (the 1 script hit, NO4_BAR/0305 ともかくそんな, is not it): SCN011/02 くそ！, SCN038A/02 くそおおおっ‼, SCN046A1/03 くそっ‼, SCN047B3/01 くそっ…. Not proposed by the PR; added by the reviewer from `:32 SCN011/02` "Damn!" so the three later scene rows reuse the word. Elongation stretches the vowel, in context. Glossary: §6 row.
+- **きゃあ…っ** 0 / 1 / 0 (the 3 script hits for きゃ are なきゃ / やらなきゃ): SCN034/02 きゃ + あ×10 + っ‼ → `Aaaaaaaaaaah‼` (13). A one-off, kept as a §6 treatment because it gives the rule (A for きゃ, one a per あ, h for っ) a later scream reuses. Binds `:42`.
+- **ジョン**, **ヘイミング**: already promoted in R §3.1; this unit agrees (`:4`, `:40`, `:41`; 【Heming】 at `:25`).
+- Not given rows: 安全な場所 "a safe place" (SCN001/02, SCN002/01; NO4_HWR_FRONT_DOWN_T/0003, NO4_MACHINER90/0107 near-parallels), 得体の知れない "strange" (SCN002A/04), さあ → "All right," (SCN002/08, SCN011/06). Context words; later units should reuse where the line matches (PR Flag 9).
+
+### 4.2 上 alone → "the people up top" (PR Flag 6)
+- Source: １時間で戻らなければ上も異常に気付く — SCN002/05, SCN002A/05, SCN002OLD/05, NO4_HWR_BACK_T/0005 (0 / 3 / 0 plus the T copy). 上 alone is a common word and not a Variant; here its referent is the surface crew of 上の連中 (R §3.2).
+- Target: "If we're not back within the hour, the people up top will notice something's wrong." も dropped ("too" has nothing to attach to). Not identical to NO4_BAR/0010 (１時間たって戻らなければ、我々の事故に気付く → "If we don't return within the hour, …"); different source, no pairing.
+- Binds `:11`, `:19`, `:27`. Glossary: §2 上の連中 row note extended (scope note, no target change, no shipped line changes).
+
+### 4.3 Speakers and readings (PR Flags 3–5, 7, 10)
+- SCN002 / SCN002A named from the SCN002OLD labels: 01 Oakland, 02 Wolg, 03 Heming, 04 Miller, 05 Oakland, 06 Miller, 07 Wolg, 08 Oakland; SCN002A/04, /06 Miller by content; SCN002A/07 unlabelled, rendered speaker-neutral. SCN001/01 Oakland, /02 Wolg (NO4_MACHINE_T/s06–s08). SCN011/01–06 Heming (NO4_BAR/0158–0175). SCN021, SCN029 unnamed (SCN029 probably Wolg, armed); SCN034/01 a woman (わね), Miller or Judy. Every line is worded so a corrected attribution changes no text.
+- `:4 OP2/01` 捕まえて has no object: "Catch it!" held until someone watches the OP2 movie (FLAGS F-001).
+- Punctuation: `:5 SCN001/01` 。 → `?` (English question); `:20 SCN002A/06` keeps ！ ("what then!"); SCN002OLD/02, 03, 05–08 have no final 。 in the source and no final period in English; `:26 SCN002OLD/04` ！？ (two glyphs) → `!?` (two glyphs), SCN002/04's ⁉ stays ⁉.
+- Stutters take the English hyphen on the first English word (`H-help`, `Wh-what`, `J-John`); `:37 SCN021/01` た、助けてく──！ → "H-help m——!" mirrors the cut-off.
+- Accepted, non-blocking: `:13 SCN002/07` やられん → "we're" (could be "I'm"); `:20` "what then!" as the source's exclamation.
+
+### 4.4 New CHECK blind spot: labelled copies (PR Flag 13)
+- CHECK groups rows by source and by source with `{p}` `{w}` `{br}` removed (`tools/assemble.py`, duplicates block); it never strips a leading `【Name】` and never equates `！？` with `⁉`.
+- Evidence: a planted divergent target on SCN002OLD/01 (`【Oakland】Is anywhere safe at all?`) in the review checkout passed CHECK (`All checks passed`).
+- Affected now: SCN002OLD ↔ SCN002 / SCN002A (8 rows, checked by hand: identical words after the label), NO4_MACHINE_T/s06–s08 ↔ SCN001/01–02, NO4_HWR_BACK_T/0004 ↔ SCN002OLD/04, and every `【Name】` row of the `_T` scripts against its shipped room (F-008).
+- Ruling: added to PROJECT.md §7 in this commit; FLAGS F-013 records it for a tool PR.
+
+### 4.5 Recurrences left for NO4_T (PR Flag 8)
+- NO4_HWR_BACK_T/0001–0003, 0005–0008 (NO4_T.b01) are tag-variants of SCN002OLD/01–03, 05–08: CHECK pairs them. Reuse each SCN002OLD target with `{p}` appended.
+- NO4_HWR_BACK_T/0004 (⁉, not ！？) is not paired: `【Miller】Hide? How long are we meant to hide⁉{p}`.
+- NO4_MACHINE_T/s06 `【Oakland】What are we to do?` (27 columns, one `text` line); s07–s08 split SCN001/02 and need their own cut within 28 (27 preferred), keeping its words where they fit.

@@ -1,4 +1,4 @@
-**Last updated: 2026-10-06** — wave 1 review 2 of 4 done: PR #3 (p03) MERGED, squash 185beb6; next review PR #4 (p04).
+**Last updated: 2026-10-06** — wave 1 review 4 of 4 done: PR #2 (OP-SCN034) MERGED, squash 131288b; #4 (p04) in rework round 1, then its re-review.
 
 ## Integration branch: `main`. Not configurable.
 Every PR bases on `main`; the reviewer merges into `main`; a wave is closed only when `origin/main` is
@@ -6,16 +6,15 @@ at the close commit (`CLAUDE.md` Rule 3). A fresh container may clone shallow wi
 preflight is `git fetch origin main && git checkout main && git reset --hard origin/main`.
 
 ## NEXT ACTION — always current, always a literal instruction
-> **Wave 1 review.** #5 and #3 MERGED. #4 (p04) CHANGES round 1: its translator fixes 0223/0232 ("Hmph, …")
-> and pushes; then the `reviewer` re-reviews #4. Meanwhile the reviewer runs on #2 (OP-SCN034), one
-> reviewer at a time. `git pull --ff-only` after each. All merged or parked → wave close
-> (orchestrator.md step 6), then open the wave 2 session.
+> **Wave 1 review.** #5, #3 and #2 MERGED. #4 (p04) CHANGES round 1: its translator fixes 0223/0232
+> ("Hmph, …") and pushes; then the `reviewer` re-reviews #4, the only open PR. `git pull --ff-only`
+> after it. All merged or parked → wave close (orchestrator.md step 6), then open the wave 2 session.
 
 ## Progress
 | Store | Done | Total | |
 |---|---|---|---|
 | script | 3 units · 201 rows | 38 units · 1,709 rows | from STATUS 2026-10-06 |
-| scene | 0 | 4 units · 190 rows | from STATUS |
+| scene | 1 unit · 39 rows | 4 units · 190 rows | from STATUS 2026-10-06 |
 | system | 0 | 5 units · 188 rows | blocked whole (F-006) |
 
 Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-06; tightest `NO4_BAR.SCR` 37,487 free with p01–p03).
@@ -26,7 +25,7 @@ Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEA
 | script NO4_BAR.p02 (0062–0119, 58 rows, 1,405 chars) | `tl/script-NO4_BAR.p02` at 14c6a42 | round 0 | **MERGED** PR #5, squash c7e2986; max 4 rows/page, NO4_BAR.SCR 38,625 free, 2.11; dupes grep + CHECK 22 pairs (control 23 + 1); new blind spot F-012 (`+` glue) in PROJECT.md §7; rulings R §2 | done — nothing left on the unit |
 | script NO4_BAR.p03 (0120–0177, 58 rows, 1,307 chars) | `tl/script-NO4_BAR.p03` at aee58f8 | round 0 | **MERGED** PR #3, squash 185beb6; max 4 rows/page, NO4_BAR.SCR 37,487 free (p01–p03), 2.37; dupes grep 8,294 pairs + CHECK 23; save prompt canonical (21 rows); cross-PR forms ふん, 地上用の設備, 上の連中 fixed; rulings R §3 | done — nothing left on the unit |
 | script NO4_BAR.p04 (0178–0235, 58 rows, 1,466 chars) | `tl/script-NO4_BAR.p04` at 5b9254c | review 1: **CHANGES** | PR #4: all gates pass; gate 7 fails on ふん → "Hmph, …" (R §3.2) at 0223, 0232 + PR body ふん row (3 findings); rework round 1 sent to the same translator | translator pushes → reviewer re-reviews |
-| scene OP-SCN034 (OP2/01 … SCN034/02, 39 rows, 794 chars) | `tl/scene-OP-SCN034` at 1862852 | dispatch 1 | **PR #2 open**, template filled; 39/39, max 4 lines, 1,900 ÷ 794 = 2.39 | **reviewer now** (review 4 of 4, while p04 reworks) |
+| scene OP-SCN034 (OP2/01 … SCN034/02, 39 rows, 794 chars) | `tl/scene-OP-SCN034` at 1862852 | round 0 | **MERGED** PR #2, squash 131288b; max 4 lines, 2.39; dupes grep 162,708 source-side comparisons + CHECK 26 exact / 2 tag-variant pairs; new blind spot F-013 (`【Name】` copies unpaired) in PROJECT.md §7; 殺人鬼 promoted; 弾切れ, くっ, くそ, scream rows; rulings R §4 | done — nothing left on the unit |
 
 ## Next up
 Wave 1 (QUEUE 2026-10-05): script NO4_BAR.p02 (58 rows, 1,405 chars, ratio 15.15), NO4_BAR.p03 (58,
