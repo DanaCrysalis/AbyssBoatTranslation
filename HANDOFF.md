@@ -1,4 +1,4 @@
-**Last updated: 2026-10-06** — wave 1 closed: NO4_BAR.p02, p03, p04 and OP-SCN034 merged (PRs #5, #3, #4, #2), none parked; the wave 1 coordinator opens the wave 2 session.
+**Last updated: 2026-10-06** — wave 2 dispatched: NO4_BAR.p05, p06, p07 and SCN038 (glossary seeds 9797991); coordinator session_018sADRqUwzYCcf65e1pUc63.
 
 ## Integration branch: `main`. Not configurable.
 Every PR bases on `main`; the reviewer merges into `main`; a wave is closed only when `origin/main` is
@@ -6,11 +6,11 @@ at the close commit (`CLAUDE.md` Rule 3). A fresh container may clone shallow wi
 preflight is `git fetch origin main && git checkout main && git reset --hard origin/main`.
 
 ## NEXT ACTION — always current, always a literal instruction
-> **Open the wave 2 session** (wave 1 coordinator; CLAUDE.md Rule 1, orchestrator.md §7): `create_session`
-> titled `Abyss Boat — wave 2`, tags `["abyssboat-translation", "wave-2"]`, `source_url`
-> https://github.com/DanaCrysalis/AbyssBoatTranslation, `source_revision` `main`, seed = SKILL.md §6a
-> with UNITS = Next up. First check `list_sessions` (tag `wave-2`): if one exists, do not open a second.
-> The wave 2 coordinator seeds the glossary for its units, then dispatches.
+> **Wave 2 coordinator (session_018sADRqUwzYCcf65e1pUc63): wait for the four translators, then review
+> behind the wave barrier** — every unit in In flight has an open PR → reviewer subagent, one PR at a
+> time, in unit order p05, p06, p07, SCN038. A unit with no PR whose translator is gone (`ListAgents`)
+> → resume it by `SendMessage` if it stopped on an API error, else a fresh translator (2 re-dispatches,
+> PROJECT.md §10). Watchdog: 12-minute `send_later` in that session.
 
 ## Progress
 | Store | Done | Total | |
@@ -22,12 +22,17 @@ preflight is `git fetch origin main && git checkout main && git reset --hard ori
 Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-06; tightest `NO4_BAR.SCR` 36,894 free with p01–p04).
 
 ## In flight
-Nothing. Wave 1's four units are merged; see Wave history and rulings R §2–§5.
+| Unit | Branch | PR | State | Next |
+|---|---|---|---|---|
+| script NO4_BAR.p05 | `tl/script-NO4_BAR.p05` | — | translator dispatched 2026-10-06 | translator opens PR |
+| script NO4_BAR.p06 | `tl/script-NO4_BAR.p06` | — | translator dispatched 2026-10-06 | translator opens PR |
+| script NO4_BAR.p07 | `tl/script-NO4_BAR.p07` | — | translator dispatched 2026-10-06 | translator opens PR |
+| scene SCN038 | `tl/scene-SCN038` | — | translator dispatched 2026-10-06 | translator opens PR |
 
 ## Next up
 Wave 2 (QUEUE 2026-10-06): script NO4_BAR.p05 (58 rows, 1,208 chars, ratio 16.27), NO4_BAR.p06 (58,
 1,384, 14.33), NO4_BAR.p07 (58, 1,556, 12.86) — all `NO4_BAR.SCR`, 36,894 free, tier D — plus scene
-SCN038 (59 rows, 655 chars, geom, tier D). Glossary seeds: not yet — the wave 2 coordinator's step 2.
+SCN038 (59 rows, 655 chars, geom, tier D). Glossary seeds: §9, wave 2 rows (9797991). Dispatched — see In flight.
 Related shipped work: NO4_BAR.p01–p04, the same bar conversation (voices glossary §7; rulings R §1–§3,
 §5); the save prompt is canonical (glossary §6, 19 later rows incl. 0239, 0242, 0341, 0377, 0397);
 ふん → "Hmph, …". NO4_BAR_T drafts name speakers (F-009). CHECK blind spots F-012 (`+` glue) and
