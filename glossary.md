@@ -36,6 +36,11 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | 学者 | 学者さん | scientist | 9 | — | さん dropped, carried by tone (R §1.2) | R §1.9 |
 | 海洋生物学者 | — | marine biologist | 16 | — | | R §1.9 |
 | フィラデルフィア | — | Philadelphia | 12 | — | | R §1.9 |
+| 食料庫 | — | the food storeroom | 18 | — | lowercase in dialogue; the room name (rooms/044) is decided with the system store | R §2.1 |
+| 下層 | — | the lower decks | 15 | — | the ship's own lower decks, above the party now the ship is capsized | R §2.1 |
+| フロア | フロアー | floor | 5 | — | 下層のフロア → "a floor on the lower decks" | R §2.1 |
+| ホール | — | the hall | 8 | — | lowercase in dialogue; エントランスホール is its own row (§9) | R §2.1 |
+| 甲板 | — | deck ("on deck") | 4 | — | the ship's open deck; never デッキ (第Nデッキ → "Deck N") | R §2.1 |
 
 ## 3. Items, currency, mechanics
 | Source | Variants | Target | Cols | Cap | Note | Ruling |
@@ -63,6 +68,7 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | 一匹 | １匹 | a single beast | 14 | only where the line turns on the animal counter (0033–0034); else a plain "one" | R §1.5 |
 | 分身 | — | part of him | 11 | the young as pieces of the monster itself | R §1.9 |
 | 部屋 | — | room | 4 | every kind of room, passenger cabins too; "cabin" is キャビン | R §1.6 |
+| 大部屋 | — | large room | 10 | as 部屋; the shared rooms groups held out in (0089) | R §2.1 |
 
 ## 7. Register per character
 | Character | Register | Contractions? | Markers | Ruling |
@@ -98,15 +104,12 @@ so; the reviewer moves the row up into its section in the integration commit. --
 | 殺人鬼 | — | the killer | murderer | 7; the same creature as the monster in the salvagers' early account (R §1.7) | setup |
 | 第Nデッキ | — | Deck N | the Nth deck | every deck | setup |
 | 右舷 · 左舷 | — | starboard · port | — | room names, dialogue | setup |
-| 食料庫 | — | the food storeroom | the food store, the pantry | NO4_BAR/0094, 0103, 0183, 0188; 13 in all; also a room (NO3_FOODSTORAGE, rooms/044) | 1 |
-| 下層 | — | the lower decks | the lower levels | NO4_BAR/0094, 0096: the ship's own lower decks, which lie above the party now that the ship is capsized | 1 |
 | 上の連中 | — | the people up top | the team topside | NO4_BAR/0151, 0177; SCN011/05: the salvagers' surface crew | 1 |
 | 海上 | — | the surface | topside | NO4_BAR/0152 | 1 |
 | 超音波 | — | ultrasound | ultrasonic waves | NO4_BAR/0156–0157; 5 in all | 1 |
 | 長波 | — | longwave | long waves | NO4_BAR/0160–0161 (0161 asks what it is) | 1 |
 | 電波 | — | radio waves | signal | NO4_BAR/0153, 0162 | 1 |
-| フロア | フロアー | floor | level | NO4_BAR/0094, 0220; 22 in all | 1 |
-| ホール | エントランスホール | hall; entrance hall | lobby | NO4_BAR/0067, 0088; 14 in all | 1 |
+| エントランスホール | — | entrance hall | lobby | NO4_4102/0001, NO4_HWL_BACK/0017, NO4_HWR_FRONT/0100 …; 6 / 0 / 2 rows (rooms/066, 084); ホール alone is fixed in §2 (R §2.1) | 1 |
 
 ## 10. Open questions
 <!-- one line each, with the FLAGS id. A closed question is deleted here; its answer stays in rulings.md. -->

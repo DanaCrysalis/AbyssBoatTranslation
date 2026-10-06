@@ -1,4 +1,4 @@
-**Last updated: 2026-10-06** — wave 1 barrier met: four PRs open (#2–#5); review in unit order begins with PR #5 (p02).
+**Last updated: 2026-10-06** — wave 1 review 1 of 4 done: PR #5 (p02) MERGED, squash c7e2986; next review PR #3 (p03).
 
 ## Integration branch: `main`. Not configurable.
 Every PR bases on `main`; the reviewer merges into `main`; a wave is closed only when `origin/main` is
@@ -6,15 +6,15 @@ at the close commit (`CLAUDE.md` Rule 3). A fresh container may clone shallow wi
 preflight is `git fetch origin main && git checkout main && git reset --hard origin/main`.
 
 ## NEXT ACTION — always current, always a literal instruction
-> **Wave 1 barrier met** (PRs #5 p02, #3 p03, #4 p04, #2 OP-SCN034). Coordinator runs the `reviewer`
-> subagent in the foreground, one PR at a time, in unit order: #5 → #3 → #4 → #2; `git pull --ff-only`
-> after each. CHANGES → findings verbatim to the same translator (SendMessage), then review again.
+> **Wave 1 barrier met** (PRs #5 p02, #3 p03, #4 p04, #2 OP-SCN034). #5 MERGED (review 1 of 4). Coordinator
+> `git pull --ff-only`, then runs the `reviewer` subagent in the foreground on **PR #3**, then #4 → #2,
+> `git pull --ff-only` after each. PRs #3 and #4 were based before #5 merged: their reviews merge main in. CHANGES → findings verbatim to the same translator (SendMessage), then review again.
 > All merged or parked → wave close (orchestrator.md step 6), then open the wave 2 session.
 
 ## Progress
 | Store | Done | Total | |
 |---|---|---|---|
-| script | 1 unit · 85 rows | 38 units · 1,709 rows | from STATUS 2026-10-05 |
+| script | 2 units · 143 rows | 38 units · 1,709 rows | from STATUS 2026-10-06 |
 | scene | 0 | 4 units · 190 rows | from STATUS |
 | system | 0 | 5 units · 188 rows | blocked whole (F-006) |
 
@@ -23,7 +23,7 @@ Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEA
 ## In flight
 | Unit | Branch | Round | State | Next |
 |---|---|---|---|---|
-| script NO4_BAR.p02 (0062–0119, 58 rows, 1,405 chars) | `tl/script-NO4_BAR.p02` at 14c6a42 | dispatch 1, resumed | **PR #5 open**; max 4 rows/page, NO4_BAR.SCR 38,625 free, 2,970 ÷ 1,405 = 2.11; 9 `{p}` and 2 `{br}` added (Flags 2–3) | **reviewer now** (review 1 of 4) |
+| script NO4_BAR.p02 (0062–0119, 58 rows, 1,405 chars) | `tl/script-NO4_BAR.p02` at 14c6a42 | round 0 | **MERGED** PR #5, squash c7e2986; max 4 rows/page, NO4_BAR.SCR 38,625 free, 2.11; dupes grep + CHECK 22 pairs (control 23 + 1); new blind spot F-012 (`+` glue) in PROJECT.md §7; rulings R §2 | done — nothing left on the unit |
 | script NO4_BAR.p03 (0120–0177, 58 rows, 1,307 chars) | `tl/script-NO4_BAR.p03` at aee58f8 | dispatch 1, resumed | **PR #3 open**; max 4 rows/page, NO4_BAR.SCR 38,312 free, 3,104 ÷ 1,307 = 2.37; save prompt set (21 rows); new CHECK blind spot proposed (`+` boundary glue, Flag 3) | reviewer, after the barrier |
 | script NO4_BAR.p04 (0178–0235, 58 rows, 1,466 chars) | `tl/script-NO4_BAR.p04` at 5b9254c | dispatch 1, resumed | **PR #4 open**; max 4 rows/page, NO4_BAR.SCR 38,684 free, 3,023 ÷ 1,466 = 2.06; ふん → "Hmph." overlaps p03 0133 (Flag 10) | reviewer, after the barrier |
 | scene OP-SCN034 (OP2/01 … SCN034/02, 39 rows, 794 chars) | `tl/scene-OP-SCN034` at 1862852 | dispatch 1 | **PR #2 open**, template filled; 39/39, max 4 lines, 1,900 ÷ 794 = 2.39 | reviewer, after the barrier |

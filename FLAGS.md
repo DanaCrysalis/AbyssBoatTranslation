@@ -62,6 +62,10 @@ Also `NO4_BAR`/0053–0057, where Collison's story opens (shipped in NO4_BAR.p01
 rows between `{p}` clicks across two `{w}` in the source and 7 in the English, though each
 `{w}`-page fits 4 as the tools model it. Check in the same session that the box scrolls or clears
 there (rulings R §1.12).
+NO4_BAR.p02 (PR #5, 2026-10-06) adds 9 `{p}` so every page of 0062–0119 fits 4 rows as the tools
+model it, including the 5-row page from 0092 named above. Four of them open a `+` row straight
+after a row ending in `{br}` (0066, 0083, 0089, 0099); the source never has `{br}` followed by `{p}`.
+Check in the same session that the box clears cleanly there, with no blank first row (rulings R §2.4).
 
 
 ## Open
@@ -85,6 +89,10 @@ identical rows (0078, 0079, 0082, 0084, 0085) and tag variants (0086, 0087, 0089
 are kept, the `【Name】`-prefixed near-duplicates must reuse NO4_BAR.p01's wording too: T/0050 ↔
 0032 "Old man, I have a question.", T/0063–0064 ↔ 0043, 虫の居所 "Foul mood?", 一匹 "a single
 beast", 分身 "part of him" (PR #1 Flags 7; rulings R §1.5, §1.9).
+`NO4_BAR_T`/0090–0148 likewise draft NO4_BAR.p02 (PR #5): 18 identical and 13 tag-variant rows,
+which CHECK will pair; the exact ones carry p02's added `{p}` (T/0094, 0132, 0135, 0137). Its
+rewritten or `【Name】` rows (e.g. T/0130, 0145–0154) reuse p02's wording by hand where the text
+matches (rulings R §2.5).
 
 ### F-009 · 2026-10-04 · speaker · OPEN
 `spk=N` (first argument of statement 0xA9) is not a character id: `NO4_BAR`/0014–0018 put
@@ -106,6 +114,19 @@ a courtesy title split from its name.
 All four are listed in PROJECT.md §7 and checked by hand in every review · would close with a tool
 PR: map a word-initial `'` to ’ or reject it; add a `codes:` line on the authored text; warn at 28
 on those lines; have UNITCHECK print the wrapped text and flag the three patterns in (d).
+
+
+### F-012 · 2026-10-06 · tools · OPEN
+A `+` message that follows a message with no ending tag continues on the same row with no
+separator: Japanese needs none, English glues ("all along.She can't"). Found by PR #3 (Flag 3),
+confirmed in PR #5's review by a plant in NO4_BAR.p02 (0113 without its leading `{br}`): CHECK
+`All checks passed`, UNITCHECK 0 violations (0113's first line counted at 10 + 9 columns), MERGE
+writes the glued text. 25 boundaries in the script dump: NO4_BAR 0113, 0115, 0149, 0315, 0338;
+NO4_BAR_T 14; NO4_HWR_FRONT/0077; NO4_HWR_FRONT_DOWN_T/0005; NO4_HWR_FRONT_UP_T/0026, 0027;
+NO5_ENTRANCEL/0005; NO6_BRIDGE/0002. Translators open the `+` target with `{br}` (flagged);
+listed in PROJECT.md §7 and checked by hand · would close with a tool PR: CHECK errors when a
+translated `+` target starts with text and the previous row's target ends in text, not a tag
+(rulings R §2.3).
 
 
 ## CHECK positive controls

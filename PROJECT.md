@@ -178,6 +178,7 @@ commit); never remove one without a tool PR that closes it.
 - UNITCHECK's `codes:` lines diff the wrapped text, so every wrap break the tools insert shows as an added `{br}`. Check the PR's Flags against a diff of the authored target's `{br}`/`{p}`/`{w}` sequence with the source's, plus the sentence each `{br}` follows, which catches a `{br}` moved within an unchanged sequence (F-011).
 - Message lines ended by an authored `{br}` or by `{w}` are held to 28 by the wrap, not the preferred 27; measure them by hand (F-011).
 - Wrap points are not checked for sense. A one-word last row, a line ending in a lone "a" or "I", or a courtesy title split from its name ("Mr. | Collison") passes CHECK and UNITCHECK, which prints column counts but not text. Read the wrapped lines in `build/script_merged.tsv` after MERGE (F-011, rulings R §1.12).
+- A `+` message after a message with no ending tag continues on the same row with no separator, so the English words glue across the boundary ("all along.She can't"); CHECK and UNITCHECK pass it (UNITCHECK just adds the columns). A translator opens such a `+` target with `{br}` (trailing or leading spaces fail CHECK), placed at a sentence or phrase boundary; the reviewer checks every such boundary in the unit by hand — 25 in the script dump, none in scene (F-012, rulings R §2.3).
 
 **Line-numbering convention for findings:** the unit file's line number as printed by `grep -n` on
 `tl/<store>/<unit>.tsv`, with the row id beside it (`tl/script/NO4_BAR.p01.tsv:12 NO4_BAR/0009`).

@@ -209,3 +209,70 @@ Characters are counted with tags excluded (`codec.char_count`); the reviewer ver
 | Shipped | 3,882 / 1,803 | **2.15** | 3,714 / 1,671 = 2.22 | |
 
 Bytes: the unit costs +2,331 in NO4_BAR.SCR (42,096 → 39,765 free), about 1.29 bytes per source character after the dictionary. No unit has been byte-bound, so the measured floor is n/a.
+
+---
+
+## Unit script NO4_BAR.p02 (PR #5, MERGED, 2026-10-06)
+
+Collison's account of the sinking and the siege, then Wolg, Judy, Oakland and Collison reply. It continues NO4_BAR.p01 directly. Reviewed in one round: MERGE, squash c7e2986.
+
+Figures:
+- NO4_BAR.SCR 26,910 / 65,535 bytes, 38,625 free: +1,140 bytes over p01's 39,765 free. Tokens 814 / 1,499.
+- At most 4 rows per page (UNITCHECK, 43 pages). 2,970 target characters ÷ 1,405 source = 2.11 (disciplined level).
+- CHECK compared 22 duplicate pairs and 0 tag-variant pairs. The reviewer's positive control (NO4_BAR_T.p02 planted in scratch) gave 23 and 1, and failed on divergent targets.
+
+Census counts are rows per store (script / scene / system), from the reviewer's grep of `dumps/` on 2026-10-06. Line citations use PROJECT.md §7's numbering in `tl/script/NO4_BAR.p02.tsv` (line = row number − 58).
+
+### 2.1 Terms promoted or added
+- **食料庫** 11 / 0 / 2 → `the food storeroom` (18). Promoted from §9. NO4_BAR/0418–0446 send the party there, so the phrase recurs heavily in this room; the room name (rooms/044) waits for the system store. Binds `:36 NO4_BAR/0094`, `:45 0103`.
+- **下層** 4 / 0 / 0 → `the lower decks` (15). Promoted from §9. The ship's own lower decks, which lie above the party now the ship is capsized. Binds `:36 0094`, `:38 0096`.
+- **フロア** 22 / 0 / 0, including variant **フロアー** 5 / 0 / 0 → `floor` (5). Promoted from §9. 下層のフロア → "a floor on the lower decks". Binds `:36 0094`.
+- **ホール** 6 / 0 / 0 alone → `the hall` (8), lowercase per PROJECT.md §6. Promoted from §9. **エントランスホール** (6 / 0 / 2) is a separate compound, not a spelling variant; it is not rendered here, so it stays in §9 as its own row with "entrance hall" proposed. Binds `:9 0067`, `:30 0088`.
+- **甲板** 3 / 0 / 0 → `deck`, "on deck" (4). New. It means the ship's open deck. Keep it apart from デッキ (25 / 0 / 31), whose 第Nデッキ → "Deck N" is still in §9. NO4_BAR/0366 (甲板より上、つまりここから下のデッキ) puts both in one sentence, so the distinction matters. Binds `:14 0072`.
+- **大部屋** 2 / 0 / 0 → `large room` (10). New. 部屋 → room per R §1.6. Recurs inside the merged T/0130. Binds `:31 0089`.
+- Not given rows: **怪音** (2 / 0 / 0, "that strange noise", echoing p01 0055's 物音 "a strange noise"), **悪魔** (2 / 0 / 0, "a devil") and **狩り場** (2 / 0 / 0, `"hunting ground"`). Each occurs in one line here, and the line's only recurrence is its NO4_BAR_T copy (T/0100, T/0126, T/0137). That copy is an exact or tag-variant duplicate, which CHECK binds byte for byte. A glossary row would add nothing, so the glossary stays short.
+- Glossary: added §2 rows 食料庫, 下層, フロア, ホール, 甲板 and the §6 row 大部屋. §9 drops 食料庫, 下層 and フロア, and splits ホール so that エントランスホール keeps its own provisional row. PR #4 (p04) proposes the same forms for 食料庫 and フロア.
+
+### 2.2 Speakers (PR Flag 7)
+- `spk=N` is ignored (F-009). Speakers come from the NO4_BAR_T `【Name】` labels:
+  - 0108 Wolg (T/0149)
+  - 0109–0110 Collison (T/0150)
+  - 0111 Judy (T/0151)
+  - 0114–0115 Oakland (T/0152)
+  - 0116–0117 Collison (T/0153)
+  - 0118–0119 Oakland (T/0154)
+- 0112–0113 have no prototype line. They are Collison by じゃ and by この子, his word for Judy in 0109.
+- F-009 again: spk=6 carries Collison (0062–0107), Wolg (0108), Judy (0111) and Oakland (0114, 0118); spk=1 carries Collison (0112).
+- Binds `:50`–`:61`.
+- Glossary: none.
+
+### 2.3 `+` after a message with no ending tag: open the target with `{br}` (PR Flag 3; new CHECK blind spot)
+- Source: there are 25 such boundaries in the script dump and none in scene. Japanese needs no separator; English glues the last word of one message to the first of the next.
+- Target: the `+` target opens with `{br}`, at a sentence or phrase boundary. Trailing or leading spaces fail CHECK, so `{br}` is the only separator available. Flag each one as an added `{br}`.
+- Evidence: the reviewer removed the leading `{br}` from 0113 in a scratch state. CHECK still printed `All checks passed`, and UNITCHECK reported 0 violations, counting 0113's first row as 10 + 9 columns. MERGE wrote "all along." followed directly by "She can't". This is now listed in PROJECT.md §7, with F-012 open for a tool fix.
+- How p02 handles each boundary:
+  - 0112→0113: 皆と moves into 0113 ("with others"), so the `{br}` falls between two sentences. Accepted as a step-6 reorder, as flagged.
+  - 0114→0115: the subject "this monster you speak of" ends 0114 and the predicate opens 0115, as in the source. The source's internal `{br}` in 0115 now opens the row, and a `{p}` takes its place at the sentence boundary, because the page would otherwise run to 5 rows.
+- Binds `:55 NO4_BAR/0113`, `:57 0115`.
+- Glossary: none.
+
+### 2.4 Leading `{p}` on a `+` row after a `{br}`-ended row (PR Flag 11)
+- Rows 0066, 0083, 0089 and 0099. Without the `{p}`, their pages run to 7, 5, 5 and 6 rows in the tool model.
+- Each `{p}` sits at a sentence boundary. The alternative, `{p}` before the previous row's ending `{br}`, would open the next page on a blank row.
+- The tool counts the `{br}` cursor row on the earlier page. That page then holds 4, 3, 4 and 3 rows, so the conservative count costs nothing.
+- The source has no `{br}` directly followed by `{p}` (0 rows), so the in-game check joins F-010.
+- The other five `{p}` (0091, 0094, 0096, 0112, 0115) are mid-row at a sentence end. Each is needed by the same count. The `{p}` in 0094 also clears the source's own 5-row page from 0092 (F-010). The PR credited 0096 with this, but 0096 had no such page in the source.
+- Binds `:8`, `:25`, `:31`, `:41`, `:33`, `:36`, `:38`, `:54`, `:57`.
+- Glossary: none.
+
+### 2.5 Recurrences left for NO4_BAR_T (PR Flag 9)
+- The reviewer's census matched the PR's: 18 exact recurrences and 13 tag variants, all in NO4_BAR_T/0090–0148. There are none in shipped work or in sibling PRs #3 and #4.
+- The exact ones must copy p02's target byte for byte, including the `{p}` added at 0066, 0091, 0094 and 0096 (T/0094, 0132, 0135, 0137).
+- Recorded under F-008.
+
+### 2.6 Accepted readings (non-blocking review notes)
+- `:10 0068`: the conjectural ろう is dropped ("no one could be at ease"), as flagged. The reading is accepted as the idiomatic equivalent of narrative ろう. "surely no one was at ease" also fits two rows if a later edit wants the hedge.
+- `:13 0071` and `:27 0085` each must fit one row, on the pages from 0069 and 0084. "in vain" carries どこにも見あたらない, and "We saw many killed." carries 目の前で何人も殺された.
+- `:52 0110` is read in the third person ("She's merely been lucky…"), keeping 0109's topic.
+- `:47 0105` お蔭で → "thanks to them", meaning the men who went.
+- `:58 0116` "kidding you" is a shade casual for Collison; "pulling your leg" would sit closer to glossary §7. Not a fidelity error.
