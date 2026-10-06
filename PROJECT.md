@@ -20,7 +20,7 @@ filled example is `docs/PROJECT.example.md`.
 | Source language → target language | Japanese → English |
 | GitHub owner / repo | DanaCrysalis / AbyssBoatTranslation |
 | Integration branch | `main` — **not configurable** (CLAUDE.md Rule 3) |
-| Model alias and effort | `opus` at `max` <!-- set in .claude/settings.json and in the frontmatter of the skill and the three agents; change all five together --> |
+| Model alias and effort | `opus` at `high` — lowered from `max` by the human on 2026-10-06 to save usage <!-- set in .claude/settings.json and in the frontmatter of the two skills and the three agents; change them together --> |
 | What the human expects | Fully unattended, waves of 4; reads `HANDOFF.md` when they like. Wants `build/abyss_boat_script.ods` (every row, Japanese beside English) regenerated and committed at every wave close. Does in-game checks when HANDOFF → Blocked asks (F-001–F-003, F-010). The system store waits for an exe patch (F-006). |
 
 ## 2. Stores and units
@@ -217,5 +217,6 @@ CHECK and UNITCHECK print the same numbering. Never cite `dumps/*.tsv` lines or 
 | Wave size and mix | 4: three script units in QUEUE order plus one scene unit while scene units remain, then four script units; the system store is never dispatched while blocked |
 | Re-dispatches per unit before parking | 2 |
 | Rework rounds before PARK or a fresh translator | 3 |
-| Watchdog interval | 12 minutes |
+| Watchdog interval | 12 minutes for a wave coordinator; 30 minutes for the runner's backstop |
+| Usage limits (human, 2026-10-06) | A session (5-hour) or weekly usage limit is a stop, like CLAUDE.md §8's "the human said stop". Whoever hits it records it in HANDOFF → NEXT ACTION with the reset time, deletes its own pending `send_later` watchdogs (`list_triggers` → `delete_trigger`), opens no session and stops. Nothing resumes by itself after the reset: the human restarts the run by telling the runner to continue. |
 | HANDOFF line budget | 150 |

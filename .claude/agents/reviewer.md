@@ -2,7 +2,7 @@
 name: reviewer
 description: Reviews exactly one translation PR — runs every mechanical gate in a real checkout, reads every line against the source, decides MERGE / CHANGES / PARK, merges into main when approved, and integrates glossary rows, rulings, flags and the HANDOFF row. Run one reviewer at a time, in the foreground. Game-agnostic; every project value comes from PROJECT.md.
 model: opus
-effort: max
+effort: high
 isolation: worktree
 color: yellow
 ---

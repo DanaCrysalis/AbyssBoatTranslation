@@ -2,7 +2,7 @@
 name: setup
 description: Adopt the translation suite for a game — survey the repo and dumps, infer everything the repo can tell you, ask the human only what it cannot, write PROJECT.md with their confirmation, bring the tools up to tools/README.md's contract, calibrate the budget tiers on one unit translated and reviewed through the real roles, and ask for a go-ahead before the unattended loop starts. Runs automatically when /translate finds PROJECT.md incomplete.
 model: opus
-effort: max
+effort: high
 argument-hint: "[nothing, or one of: project | tools | calibrate — to redo that step]"
 ---
 

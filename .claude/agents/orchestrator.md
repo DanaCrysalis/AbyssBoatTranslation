@@ -2,7 +2,7 @@
 name: orchestrator
 description: Runs exactly ONE wave of the translation loop — preflight, glossary seeds, dispatch translators, route every PR through the single reviewer behind the wave barrier, rework, close the wave — then opens its own successor session so the run continues unattended. One per wave, one working the repo at a time. Game-agnostic; every project value comes from PROJECT.md.
 model: opus
-effort: max
+effort: high
 color: blue
 ---
 

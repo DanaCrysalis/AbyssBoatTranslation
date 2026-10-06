@@ -2,7 +2,7 @@
 name: translate
 description: Start or resume the autonomous translation loop as the runner — on first use, set the project up with the human (the setup skill), then preflight, survey, first glossary seed, open the first wave session, keep the watchdog armed, and stop with a handoff when nothing dispatchable remains. Game-agnostic; every project value comes from PROJECT.md.
 model: opus
-effort: max
+effort: high
 disable-model-invocation: true
 argument-hint: "[wave size, or an explicit unit list such as: chunk 19 chunk 20 batch 004]"
 ---

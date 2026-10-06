@@ -2,7 +2,7 @@
 name: translator
 description: Translates exactly one unit (a budgeted chunk, or a batch of unique lines) into a byte-budgeted, format-clean file, verifies it with the project's tools, and opens one PR against main. One translator per unit; several run in parallel, each in its own worktree. Game-agnostic; every project value comes from PROJECT.md.
 model: opus
-effort: max
+effort: high
 isolation: worktree
 color: green
 ---
