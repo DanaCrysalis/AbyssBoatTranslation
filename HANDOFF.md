@@ -27,7 +27,7 @@ Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEA
 | Unit | Branch | Round | State | Next |
 |---|---|---|---|---|
 | script NO4_BAR.p02 (0062–0119, 58 rows, 1,405 chars) | `tl/script-NO4_BAR.p02` (not yet pushed) | dispatch 1, resumed | stopped on the usage limit with all 58 rows drafted, uncommitted, CHECK and UNITCHECK green; same translator resumed 2026-10-06 | translator: MERGE, MEASURE, commit, push, PR |
-| script NO4_BAR.p03 (0120–0177, 58 rows, 1,307 chars) | `tl/script-NO4_BAR.p03` at bb831a6, plus an uncommitted revision | dispatch 1, resumed | stopped mid gate re-run; no PR; same translator resumed 2026-10-06 | translator: re-run gates, push, PR |
+| script NO4_BAR.p03 (0120–0177, 58 rows, 1,307 chars) | `tl/script-NO4_BAR.p03` at aee58f8 | dispatch 1, resumed | **PR #3 open**; max 4 rows/page, NO4_BAR.SCR 38,312 free, 3,104 ÷ 1,307 = 2.37; save prompt set (21 rows); new CHECK blind spot proposed (`+` boundary glue, Flag 3) | reviewer, after the barrier |
 | script NO4_BAR.p04 (0178–0235, 58 rows, 1,466 chars) | `tl/script-NO4_BAR.p04` at 5b9254c | dispatch 1, resumed | **PR #4 open**; max 4 rows/page, NO4_BAR.SCR 38,684 free, 3,023 ÷ 1,466 = 2.06; ふん → "Hmph." overlaps p03 0133 (Flag 10) | reviewer, after the barrier |
 | scene OP-SCN034 (OP2/01 … SCN034/02, 39 rows, 794 chars) | `tl/scene-OP-SCN034` at 1862852 | dispatch 1 | **PR #2 open**, template filled; 39/39, max 4 lines, 1,900 ÷ 794 = 2.39 | reviewer, after the barrier |
 
