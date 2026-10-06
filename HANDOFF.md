@@ -27,7 +27,7 @@ Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEA
 | script NO4_BAR.p05 | `tl/script-NO4_BAR.p05` | #6 | PR open, d7386be; NO4_BAR.SCR 36,376 free, ratio 2.22 | reviewer, behind the barrier |
 | script NO4_BAR.p06 | `tl/script-NO4_BAR.p06` | — | translator dispatched 2026-10-06 | translator opens PR |
 | script NO4_BAR.p07 | `tl/script-NO4_BAR.p07` | — | translator dispatched 2026-10-06 | translator opens PR |
-| scene SCN038 | `tl/scene-SCN038` | — | translator dispatched 2026-10-06 | translator opens PR |
+| scene SCN038 | `tl/scene-SCN038` | #7 | PR open; max 3 lines/subtitle, ratio 2.05 | reviewer, behind the barrier |
 
 ## Next up
 Wave 2 (QUEUE 2026-10-06): script NO4_BAR.p05 (58 rows, 1,208 chars, ratio 16.27), NO4_BAR.p06 (58,
