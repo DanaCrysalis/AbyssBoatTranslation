@@ -423,3 +423,100 @@ Census counts are rows per store (script / scene / system), from the reviewer's 
 - NO4_HWR_BACK_T/0001–0003, 0005–0008 (NO4_T.b01) are tag-variants of SCN002OLD/01–03, 05–08: CHECK pairs them. Reuse each SCN002OLD target with `{p}` appended.
 - NO4_HWR_BACK_T/0004 (⁉, not ！？) is not paired: `【Miller】Hide? How long are we meant to hide⁉{p}`.
 - NO4_MACHINE_T/s06 `【Oakland】What are we to do?` (27 columns, one `text` line); s07–s08 split SCN001/02 and need their own cut within 28 (27 preferred), keeping its words where they fit.
+
+---
+
+## Unit script NO4_BAR.p04 (PR #4, MERGED, 2026-10-06)
+
+The bar conversation after the radio attempt. The survivors argue about food and the monster, then Wolg forms the search teams and sends them out. It continues NO4_BAR.p03 directly. Reviewed in two rounds:
+- **Round 0** (5b9254c): CHANGES. Every mechanical gate passed; the three findings were all ふん (§5.2).
+- **Round 1** (86d0b84): MERGE, squash 42d2db9. Only 0223 and 0232 changed.
+
+Figures:
+- With p01–p04 merged: NO4_BAR.SCR 28,641 / 65,535 bytes, 36,894 free; tokens 788 / 1,499 (MEASURE). p04 costs +593 bytes over p03's 37,487.
+- At most 4 rows per page (UNITCHECK, 52 pages, 0 violations). About 3,023 target characters ÷ 1,466 source = 2.06.
+- CHECK compared 26 duplicate pairs and 2 tag-variant pairs, the same as main without p04: no source in the unit recurs in a translated row.
+- The reviewer's grep made 110,084 source-side comparisons (58 rows × 1,898 other script and scene dump rows) at three levels: exact; `{p}{w}{br}` stripped; `【Name】` stripped with punctuation normalised. The only recurrence is 0201 (§5.6).
+
+Census counts are rows per store (script / scene / system), from the reviewer's grep of `dumps/` on 2026-10-06. Line citations use PROJECT.md §7's numbering in `tl/script/NO4_BAR.p04.tsv` (line = row number − 174).
+
+### 5.1 Terms promoted or added
+- **第Nデッキ** → `Deck N` (6), e.g. "Deck 4". 15 / 0 / 29 rows, decks ２–６ only. Promoted from §9.
+  - Capitalised, with an Arabic numeral, like a name.
+  - デッキ alone (このデッキ, 下のデッキ; 25 script rows contain デッキ) is not fixed: lowercase "deck" in context.
+  - The system deck-name cap of 10 (F-006) applies when that store unblocks.
+  - Binds `:58 0232`. Glossary: §2 row added; §9 row removed.
+- **ウォルグさん** → `Mr. Wolg` (8). 1 / 0 / 0. New. Surname + さん → title + surname, as コリスンさん (R §1.2). Collison is the speaker. Never split from the name at a wrap: 0195 wraps "Let us pray Mr. Wolg brings | him down…".
+  - Binds `:21 0195`. Glossary: §1 row added.
+- **元警官** → `ex-policeman` (12). 3 / 0 / 0: NO4_BAR/0190, NO3_NO4/0014, NO3_CHAPEL/0089. New. It matches glossary §7's Wolg row.
+  - 警官 (5 / 0 / 0, including the 3 元警官 rows) is not fixed on its own. 0231 renders it "cop" (Miller's sarcasm: 警官続けてれば → "if you'd stayed a cop").
+  - Binds `:16 0190`. Glossary: §2 row added.
+- **生き残り** → `survivor(s)` (8 / 9); **生き残りグループ** → `survivor group` (14). 22 / 0 / 0, including 1 グループ row. New.
+  - Binds `:37 0211` ("other survivors") and `:59 0233` ("another survivor group"). Glossary: §2 row added.
+- **薬品** → `medicine` (8). 2 / 0 / 0: NO4_BAR/0226, NO3_MEDICALROOM/0002. New.
+  - Binds `:52 0226`. Glossary: §3 row added.
+- **ヘイミングたち** → in context. 1 / 1 / 0: NO4_BAR/0232 "Heming's team" (Heming paired with Miller at 0224), and SCN038A/07 射軸にヘイミングたちがいる, untranslated.
+  - The ヘイミング row gains the Variant and a scope note; its target "Heming" is unchanged and no shipped line changes.
+  - Binds `:58 0232`. Glossary: §1 ヘイミング row, Variants extended, Ruling column → R §3.1, §5.1.
+- Conforming, already fixed:
+  - ヤツ → he/him (0185–0187, 0195, 0197–0199, 0204, 0206, 0208)
+  - 化け物 → monster (0186, 0198)
+  - 食料庫 → the food storeroom (0183, 0188)
+  - コリスンさん → Mr. Collison (0189)
+  - じいさん → old man (0205)
+  - 社長 → "boss" in address (0209), "the boss" otherwise (0218)
+  - フロア → floor (0220)
+  - 部屋 → room (0196)
+  - 学者 → scientist (0225)
+  - 装備 → "whoever destroyed our gear" (0212), as p03 0129
+- PR #4 also proposed 食料庫, フロア, ジョン, ヘイミング and 社長 as promotions; R §2.1 and R §3.1 had already promoted them.
+
+### 5.2 ふん applied (round-0 findings 1–3; R §3.2)
+- Round 0 rendered 0223 and 0232 as "Hmph." against the §6 row (ふん、 → "Hmph,"). Round 1 shipped `:49 0223` `Hmph, then you can command.` (27) and `:58 0232` `Hmph, talk all you like.{br}…` (first line 24).
+- With 0133 in p03, three of the five interjection rows are now shipped. NO4_BAR/0247 (p05) and NO4_BAR_T/0167 remain, both ふん、 → "Hmph,".
+- The PR's "Hmph." glossary proposal was withdrawn. Glossary: none.
+
+### 5.3 Speakers (PR Flag 5)
+- NO4_BAR_T ends at T/0181 and has no draft of this scene, so every speaker comes from content (F-009).
+- Oakland: 0189–0190, 0196, 0210, 0213, 0215, 0217, 0219, 0222, 0235.
+- Collison: 0183, 0185, 0187–0188, 0191, 0195, 0197, 0199, 0201, 0204, 0206, 0208.
+- Wolg: 0182, 0184, 0186, 0192–0194, 0198, 0200, 0202–0203, 0205, 0207, 0209, 0211–0212, 0214, 0216, 0218, 0220–0221, 0223–0224, 0226–0227, 0229–0230, 0232–0234.
+- Miller: 0225, 0228, 0231.
+- Uncertain:
+  - 0178 is Oakland, Heming or Collison.
+  - 0179–0180 are probably Wolg.
+  - 0181 is perhaps William.
+  - All four are rendered speaker-neutral, so a corrected attribution changes no text.
+- F-009 again: spk=6 carries a salvager (0182, 0184, 0186) and Collison (0187–0188).
+
+### 5.4 Movable codes and geometry (PR Flag 2)
+- `:16 0190`, a `+` message: the source `{br}` → `{p}` at the sentence boundary. Without it, the page that 0189 opens runs to 5–6 rows; with it, the pages are 3 and 2 rows. This is the only change to the authored `{br}`/`{p}`/`{w}` sequence.
+- 39 lines end at an authored `{br}`. Measured with `len()` on the wrapped build row, the longest is 27 (0218, 0229, 0231, 0233).
+- No `+` row follows an untagged message, so there is no F-012 glue.
+
+### 5.5 Suspected source typo: 0218 一斑 → 一班 (PR Flag 7)
+- Source: `二人ずつの二班に分かれる。{br}俺とジョン、もう一斑は社長とヘイミングだ。` 一斑 ("a spot, a fleck") occurs only here, 1 / 0 / 0; 一班 has 0 rows. 班 alone appears in the same row's 二班 and in NO4_HWR_FRONT/0068 and 0074. The intended word is 一班, "the other team".
+- Target: `John and me; the other pair is the boss and Heming.` ("pair" follows 二人ずつ). Binds `:44 0218`.
+- FLAGS F-014. Glossary: none.
+
+### 5.6 Recurrences (PR Flag 8)
+- 0201 `………。` → `………`, the same form as p01 `:49 0046` (R §1.3). It recurs untranslated:
+  - 8 exact rows: NO3_NO4/0007, 0061; NO4_BAR/0265, 0430; NO4_HWR_FRONT/0057, 0092; SCN038_5C1/10, SCN046B1/01.
+  - 3 tag-variant rows: NO4_MACHINER90/0108, NO4_TOOL_ROOM/0025, 0060.
+  - CHECK pairs all 11 once they are translated.
+- Echoes for later units (PR Flag 9):
+  - 0212 "whoever destroyed our gear" (also NO4_BAR/0254, 0298).
+  - 0217 "That's true, but…" (= p01 0008).
+  - 0227 and 0230: 長居する可能性が高い → "A long stay here is likely" / "…gets even more likely".
+  - 0225 私は学者よ → "I'm a scientist" (recurs at NO4_BAR/0368).
+
+### 5.7 Accepted readings (non-blocking review notes)
+- `:59 0233`: 発見しても → the question-form conditional "Find another survivor group? Don't rush to make contact." It adds a `?` the source lacks. This is a §2.1 step-6 reordering, flagged: it keeps 生き残り and グループ in a 4-row page without a second `{p}`.
+- `:16 0190`: このウォルグ → "Wolg", dropping the deictic "here" to avoid a lone "an" at a wrap and a one-word last row. A §2.1 step-3 gloss drop, flagged.
+- `:53 0227` and `:59 0233` drop からな's "since". Both pages are already 4 rows.
+- `:31 0205` "the old man's stories" reads as a dismissive third person. "your stories, old man" would sit closer, if a later edit wants it.
+- `:57 0231`: 警官 → "cop" (§5.1).
+- Stutters take a hyphen on the first English word: `:36 0210` "Y-yes.", `:45 0219` "Wh-what…⁉", `:51 0225` "M-me⁉". The same treatment as p03 0163 "R-right" and R §4.3.
+- `:12 0186` puts the mentioned pronoun in quotation marks (`"he,"` → “he,”).
+- `:48 0222` keeps the source's 。 and renders the rhetorical question as a statement.
+- None of these is a fidelity error.

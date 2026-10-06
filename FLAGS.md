@@ -117,6 +117,9 @@ William and Rob Collison on the same value, and Oakland is on it at 0002. `docs/
 claimed a fixed slot per character and was corrected in setup. Every translator and reviewer
 names speakers from content and register (PROJECT.md §5.3) · would resolve by identifying the
 argument's real meaning in the exe (0x42BE28 handler table).
+NO4_BAR.p04 (PR #4): NO4_BAR_T has no draft past T/0181, so 0178–0235 are named from content;
+0178 (Oakland, Heming or Collison), 0179–0180 (probably Wolg) and 0181 (perhaps William) stay
+uncertain and are rendered speaker-neutral; spk=6 carries a salvager and Collison (rulings R §5.3).
 
 ### F-011 · 2026-10-04 · tools · OPEN
 PR #1 (NO4_BAR.p01) found four things CHECK and UNITCHECK do not verify. Each was confirmed by a
@@ -155,6 +158,13 @@ its review by a plant: a divergent target on SCN002OLD/01 passed CHECK (`All che
 Listed in PROJECT.md §7 and censused by hand · would close with a tool PR: a third pairing pass on
 sources with the label stripped and final 。！？⁉ normalised, reported as warnings with a pair count
 (rulings R §4.4).
+
+
+### F-014 · 2026-10-06 · script · OPEN
+Suspected source typo: `NO4_BAR/0218` もう一斑は社長とヘイミングだ has 一斑 ("a fleck"; 1 / 0 / 0,
+only here) where the sense, after 二人ずつの二班, is 一班 ("the other team"; 0 rows). Shipped as
+"the other pair" (`tl/script/NO4_BAR.p04.tsv:44 NO4_BAR/0218`, PR #4 Flag 7). Harmless; nothing
+to change unless a later script or the `_T` drafts show a different reading · rulings R §5.5.
 
 
 ## CHECK positive controls

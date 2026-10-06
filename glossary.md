@@ -27,7 +27,8 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | オークランドさん | — | Mr. Oakland | 11 | — | as コリスンさん | R §1.2 |
 | ミラーさん | — | Miss Miller | 11 | — | Collison's form (the only speaker of it) | R §1.2 |
 | ジョン | — | John | 4 | — | the player, Oakland's son; `{name}` is unused, the source spells the name out | R §3.1 |
-| ヘイミング | — | Heming | 6 | — | older salvager | R §3.1 |
+| ヘイミング | ヘイミングたち | Heming; たち: in context ("Heming's team", NO4_BAR/0232) | 6; 13 | — | older salvager; たち 1 / 1 / 0 (SCN038A/07 open) | R §3.1, §5.1 |
+| ウォルグさん | — | Mr. Wolg | 8 | — | as コリスンさん; never split from the name at a wrap; Collison's form | R §5.1 |
 
 ## 2. Factions, places, ranks
 | Source | Variants | Target | Cols | Cap | Note | Ruling |
@@ -46,6 +47,9 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | 社長 | — | the boss | 8 | — | Oakland, as his crew calls him; in direct address "boss" | R §3.1 |
 | 上の連中 | — | the people up top | 17 | — | the salvagers' surface crew; 上 alone for the same crew takes the same words (SCN002/05); 下の連中 is not fixed | R §3.2, §4.2 |
 | 海上 | — | the surface | 11 | — | "up on the surface" in p01 0009 | R §3.1 |
+| 第Nデッキ | 第２デッキ … 第６デッキ (full-width digit) | Deck N ("Deck 4") | 6 | 10 (deck names, F-006) | capitalised with an Arabic numeral; デッキ alone (このデッキ, 下のデッキ) is lowercase "deck" in context | R §5.1 |
+| 元警官 | — | ex-policeman | 12 | — | Wolg's past; 警官 alone in context (Miller's sarcastic "cop", NO4_BAR/0231) | R §5.1 |
+| 生き残り | 生き残りグループ | survivor(s); 生き残りグループ: survivor group | 8 (9); 14 | — | the people still alive aboard | R §5.1 |
 
 ## 3. Items, currency, mechanics
 | Source | Variants | Target | Cols | Cap | Note | Ruling |
@@ -59,6 +63,7 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | 地上用の設備 | — | land-based equipment | 20 | — | NO4_BAR/0175 and SCN011/04 | R §3.2 |
 | 回転 (the ship) | — | roll over (noun: roll) | 9 (4) | — | the capsized ship turning on its long axis | R §3.1 |
 | 弾切れ | — | out of ammo | 11 | — | SCN029/02, SCN046A1/07; items/000 (blocked) in context | R §4.1 |
+| 薬品 | — | medicine | 8 | — | NO4_BAR/0226, NO3_MEDICALROOM/0002 | R §5.1 |
 
 ## 4. Classes, units, system terms
 | Source | Variants | Target | Cols | Cap | Note | Ruling |
@@ -117,7 +122,6 @@ NOT decisions. The first translator to render one promotes it in the PR's Glossa
 so; the reviewer moves the row up into its section in the integration commit. -->
 | Source | Variants | Proposed | Alternatives | Where seen | Wave |
 |---|---|---|---|---|---|
-| 第Nデッキ | — | Deck N | the Nth deck | every deck | setup |
 | 右舷 · 左舷 | — | starboard · port | — | room names, dialogue | setup |
 | 無線機 | — | the radio | the radio set | NO4_HWR_FRONT/0103 (near-duplicate of NO4_BAR/0171, R §3.6); 1 / 0 / 0 | 1 |
 | 無線室 | — | the radio room | — | NO6_BRIDGE/0001, 0006; rooms/107, items/011, hints/001–002 (cap 14 as a room name); 2 / 0 / 4 | 1 |
