@@ -26,6 +26,8 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | コリスンさん | コリスンさんたち | Mr. Collison; たち: Mr. Collison and the others (in address: your group, Mr. Collison) | 12; 27 (24) | — | surname + さん → title + surname; never split from the name at a wrap | R §1.2 |
 | オークランドさん | — | Mr. Oakland | 11 | — | as コリスンさん | R §1.2 |
 | ミラーさん | — | Miss Miller | 11 | — | Collison's form (the only speaker of it) | R §1.2 |
+| ジョン | — | John | 4 | — | the player, Oakland's son; `{name}` is unused, the source spells the name out | R §3.1 |
+| ヘイミング | — | Heming | 6 | — | older salvager | R §3.1 |
 
 ## 2. Factions, places, ranks
 | Source | Variants | Target | Cols | Cap | Note | Ruling |
@@ -41,11 +43,21 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | フロア | フロアー | floor | 5 | — | 下層のフロア → "a floor on the lower decks" | R §2.1 |
 | ホール | — | the hall | 8 | — | lowercase in dialogue; エントランスホール is its own row (§9) | R §2.1 |
 | 甲板 | — | deck ("on deck") | 4 | — | the ship's open deck; never デッキ (第Nデッキ → "Deck N") | R §2.1 |
+| 社長 | — | the boss | 8 | — | Oakland, as his crew calls him; in direct address "boss" | R §3.1 |
+| 上の連中 | — | the people up top | 17 | — | the salvagers' surface crew; 下の連中 is not fixed (context) | R §3.2 |
+| 海上 | — | the surface | 11 | — | "up on the surface" in p01 0009 | R §3.1 |
 
 ## 3. Items, currency, mechanics
 | Source | Variants | Target | Cols | Cap | Note | Ruling |
 |---|---|---|---|---|---|---|
 | 潜水装備 | — | diving gear | 11 | — | | R §1.9 |
+| 電波 | — | radio waves | 11 | — | ＶＬＦ帯の電波 → "VLF-band radio waves" | R §3.1 |
+| 超音波 | — | ultrasound | 10 | — | | R §3.1 |
+| 長波 | — | longwave | 8 | — | | R §3.1 |
+| 無線装置 | — | radio equipment | 15 | — | 無線機 and 無線室 are §9 rows; 装置 and 設備 alone are not fixed | R §3.1 |
+| 潜水艇 | — | submersible | 11 | — | never "submarine" (潜水艦, 0 rows) | R §3.1 |
+| 地上用の設備 | — | land-based equipment | 20 | — | NO4_BAR/0175 and SCN011/04 | R §3.2 |
+| 回転 (the ship) | — | roll over (noun: roll) | 9 (4) | — | the capsized ship turning on its long axis | R §3.1 |
 
 ## 4. Classes, units, system terms
 | Source | Variants | Target | Cols | Cap | Note | Ruling |
@@ -62,7 +74,9 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 |---|---|---|---|---|---|
 | ヤツ | — | he / him / his | 2 / 3 / 3 | the monster or the killer only, never "it"; a type of person (〜なヤツ) in context | R §1.7 |
 | 化け物 | 怪物 | monster | 7 | synonyms, one target; NO4_BAR/0083 has both: repeat "monster" | R §1.8 |
-| じいさん | 爺さん | old man | 7 | "Old man," at a sentence start | R §1.9 |
+| じいさん | 爺さん · 爺 · じじい | old man | 7 | "Old man," at a sentence start; 爺 and じじい (pejorative) added 2026-10-06 | R §1.9, §3.3 |
+| ふん | — | Hmph | 4 | the interjection only (not 踏んで); punctuation per source: ふん、 → "Hmph," | R §3.2 |
+| ここまでの状況をセーブできます。セーブしますか？ | — | You can save your progress so far. Do you want to save? | 55 | the save prompt, 21 rows; wraps 26 + 28 | R §3.4 |
 | お嬢さん | — | young lady | 10 | Collison to Miller | R §1.9 |
 | 虫の居所が悪い | 虫の居所 | in a foul mood; the echo: "Foul mood?" | 14; 10 | | R §1.9 |
 | 一匹 | １匹 | a single beast | 14 | only where the line turns on the animal counter (0033–0034); else a plain "one" | R §1.5 |
@@ -78,7 +92,7 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | William | hostile survivor; rough, blunt, drops subjects (ぜ/ねえ/よ) | yes, heavy; standard contractions only, no eye dialect ('em, ain't, gonna) | "You'd better not…", "Means nothing if…", "Are you an idiot or what⁉", "Isn't that nice." | R §1.10 |
 | Jack Wolg | salvager, ex-policeman (NO3_NO4); direct, terse, serious (俺) | yes | calls Collison "old man"; "Old man, I'm being serious.", "Tell me the truth." | R §1.10 |
 | Rebecca Miller | marine biologist; articulate, assertive; わ/かしら/のよ carried by modal softening and firmness, never by markers | yes | "Might it be…?", "Just so you know", "Suit yourself!" | R §1.10 |
-| Heming (name still §9) | older salvager; calm, mildly old-fashioned politeness (ませんかな) | yes | "might we hear…", "Believe what you will", "Don't get so heated." | R §1.10 |
+| Heming | older salvager; calm, mildly old-fashioned politeness (ませんかな) | yes | "might we hear…", "Believe what you will", "Don't get so heated." | R §1.10 |
 
 ## 8. Fixed-width caps
 <!-- tables in the game whose entries have a hard width: unit names, class names, item names, the player name -->
@@ -98,17 +112,11 @@ NOT decisions. The first translator to render one promotes it in the PR's Glossa
 so; the reviewer moves the row up into its section in the integration commit. -->
 | Source | Variants | Proposed | Alternatives | Where seen | Wave |
 |---|---|---|---|---|---|
-| ジョン | — | John | — | 95 lines; the player | setup |
-| ヘイミング | — | Heming | Hayming, Haming | NO3_CHAPEL/0036; 35 (his lines NO4_BAR/0049, 0051 do not name him) | setup |
-| 社長 | — | the boss (Oakland, as his crew calls him) | the president | 13 (not in NO4_BAR.p01) | setup |
 | 殺人鬼 | — | the killer | murderer | 7; the same creature as the monster in the salvagers' early account (R §1.7) | setup |
 | 第Nデッキ | — | Deck N | the Nth deck | every deck | setup |
 | 右舷 · 左舷 | — | starboard · port | — | room names, dialogue | setup |
-| 上の連中 | — | the people up top | the team topside | NO4_BAR/0151, 0177; SCN011/05: the salvagers' surface crew | 1 |
-| 海上 | — | the surface | topside | NO4_BAR/0152 | 1 |
-| 超音波 | — | ultrasound | ultrasonic waves | NO4_BAR/0156–0157; 5 in all | 1 |
-| 長波 | — | longwave | long waves | NO4_BAR/0160–0161 (0161 asks what it is) | 1 |
-| 電波 | — | radio waves | signal | NO4_BAR/0153, 0162 | 1 |
+| 無線機 | — | the radio | the radio set | NO4_HWR_FRONT/0103 (near-duplicate of NO4_BAR/0171, R §3.6); 1 / 0 / 0 | 1 |
+| 無線室 | — | the radio room | — | NO6_BRIDGE/0001, 0006; rooms/107, items/011, hints/001–002 (cap 14 as a room name); 2 / 0 / 4 | 1 |
 | エントランスホール | — | entrance hall | lobby | NO4_4102/0001, NO4_HWL_BACK/0017, NO4_HWR_FRONT/0100 …; 6 / 0 / 2 rows (rooms/066, 084); ホール alone is fixed in §2 (R §2.1) | 1 |
 
 ## 10. Open questions

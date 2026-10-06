@@ -276,3 +276,106 @@ Census counts are rows per store (script / scene / system), from the reviewer's 
 - `:52 0110` is read in the third person ("She's merely been lucky…"), keeping 0109's topic.
 - `:47 0105` お蔭で → "thanks to them", meaning the men who went.
 - `:58 0116` "kidding you" is a shade casual for Collison; "pulling your leg" would sit closer to glossary §7. Not a fidelity error.
+
+---
+
+## Unit script NO4_BAR.p03 (PR #3, MERGED, 2026-10-06)
+
+The end of the bar conversation, the surface crew's card game, the longwave radio attempt and the first two save prompts. It continues NO4_BAR.p02 directly. Reviewed in one round: MERGE, squash 185beb6.
+
+Figures:
+- With p01, p02 and p03 merged: NO4_BAR.SCR 28,048 / 65,535 bytes, 37,487 free. p03 costs +1,138 bytes over p02's 38,625. Tokens 803 / 1,499.
+- At most 4 rows per page (UNITCHECK, 56 pages). 3,104 target characters ÷ 1,307 source = 2.37.
+- CHECK compared 23 duplicate pairs (22 + 0170/0173) and 0 tag-variant pairs. The reviewer's grep compared 8,294 pairs against `tl/` (0 hits) and made 117,682 source-side comparisons against the dumps.
+
+Census counts are rows per store (script / scene / system), from the reviewer's grep of `dumps/` on 2026-10-06. Line citations use PROJECT.md §7's numbering in `tl/script/NO4_BAR.p03.tsv` (line = row number − 116).
+
+### 3.1 Terms promoted or added
+- **ジョン** 86 / 8 / 1 → `John` (4). Promoted from §9. The player and Oakland's son (NO3_NO4/0043, NO6_BRIDGE/0008). PRs #2 and #4 agree. Binds `:52 0168`, `:55 0171`.
+- **ヘイミング** 33 / 2 / 0 → `Heming` (6). Promoted from §9; glossary §7 drops "(name still §9)". PRs #2 and #4 agree. Binds `:56 0172`.
+- **社長** 12 / 1 / 0 → `the boss` (8); "boss" in direct address (PR #4 0209). Promoted from §9. Binds `:24 0140`.
+- **海上** 3 / 0 / 0 → `the surface` (11). Promoted from §9. p01's 0009 "up on the surface" agrees. Binds `:36 0152`.
+- **電波** 2 / 0 / 0 → `radio waves` (11). Promoted from §9. ＶＬＦ帯の電波 → "VLF-band radio waves". Binds `:37 0153`, `:46 0162`.
+- **超音波** 3 / 0 / 0 → `ultrasound` (10). Promoted from §9. It recurs at NO4_HWR_FRONT/0070. Binds `:40 0156`, `:41 0157`.
+- **長波** 2 / 0 / 0 → `longwave` (8). Promoted from §9. Binds `:44 0160`, `:45 0161`.
+- **無線装置** 3 / 0 / 0 → `radio equipment` (15). New. Its relatives are not rendered here, so they go to §9 as proposals:
+  - 無線機 (1 / 0 / 0, NO4_HWR_FRONT/0103) → "the radio" (9)
+  - 無線室 (2 / 0 / 4, including rooms/107) → "the radio room" (14, inside the room-name cap)
+  - 装置 (10 / 0 / 0) and 設備 (3 / 1 / 0) on their own are **not** fixed. Their senses vary: 制御装置 "control system", 0158 装置 "device", 0155 通信設備 "communications equipment", 0162 船の設備 "this ship's equipment".
+  - Binds `:55 0171`.
+- **潜水艇** 2 / 0 / 0 → `submersible` (11). New. 潜水艦 "submarine" has 0 rows. It recurs at NO4_BAR_T/0108. Binds `:42 0158`.
+- **回転** 5 / 0 / 0 → `roll over`, noun `roll`. New. Every row is the capsized ship turning on its long axis: NO4_HWL_BACK/0007, NO4_HWL_BACK2/0005, NO4_SHOP/0005, NO6_TOOLROOM/0003. Binds `:8 0124`.
+- Not given rows:
+  - 二重遭難 (2 / 0 / 0; its other row, T/0159, is a draft of 0123–0124) → "the rescuers could become victims too".
+  - 下の連中 (2 / 0 / 0): the divers at 0138, the lower-deck survivors at NO4_BAR/0421.
+  - 使用人 → "hired hands" and スタッフ → "staff" (2 / 0 / 0 each; the other rows are T copies).
+- Glossary: added §1 ジョン, ヘイミング; §2 社長, 上の連中 (§3.2), 海上; §3 電波, 超音波, 長波, 無線装置, 潜水艇, 地上用の設備 (§3.2), 回転. §9 drops the promoted rows and gains 無線機 and 無線室.
+
+### 3.2 Cross-PR decisions (binding on the reviews of PR #4 and PR #2)
+- **ふん** — 5 / 0 / 0 as an interjection, every one `ふん、`: NO4_BAR/0133, 0223, 0232, 0247 and T/0167. The sixth grep hit, NO4_TOOL_ROOM/0070 段階をふんで, is the verb 踏む, not the interjection.
+  - Target: `Hmph` (4). Punctuation follows the source (PROJECT.md §6: 、 → `,`), so the form is "Hmph, …".
+  - The shipped form is p03's `:17 0133` "Hmph, if such a thing really shows up, …".
+  - **PR #4 renders 0223 and 0232 as "Hmph." and must change both to "Hmph, …"** in its review.
+  - Glossary: added §6 row.
+- **地上用の設備** — 1 / 1 / 0: NO4_BAR/0175 and SCN011/04.
+  - Target: `land-based equipment` (20).
+  - PR #2's SCN011/04 already reads "Using land-based equipment underwater, unmodified, …"; its review holds it.
+  - Binds `:59 0175`. Glossary: added §3 row.
+- **上の連中** — 4 / 1 / 0: NO3_CHAPEL/0017, NO4_BAR/0151, 0177, 0289 and SCN011/05.
+  - Target: `the people up top` (17).
+  - PR #2's SCN011/05 already reads "the people up top"; its review holds it.
+  - Binds `:35 0151`, `:61 0177`. Glossary: added §2 row, promoted from §9.
+
+### 3.3 じいさん row: Variants extended (PR Flag 8)
+- Source:
+  - 爺 not followed by さん: 1 / 0 / 0, NO4_BAR/0142 強欲爺 (a surface crewman about Oakland).
+  - じじい: 1 / 0 / 0, NO4_BAR/0259 (p05, William to Collison, うるせえ、じじいっ！).
+  - ジジイ: 0.
+- Target: `old man`, as the row already says. The pejorative edge is carried by the words around it ("greedy old man").
+- This changes the row: its Variants grow from 爺さん to 爺さん · 爺 · じじい. No shipped line changes. The rows already bound by R §1.9 (p01 :17, :35, :39, :41) are じいさん and keep their text. The new binding is `:26 0142` "What's the greedy old man putting on airs for?"
+- Glossary: §6 じいさん row, Variants extended, Ruling column → R §1.9, §3.3.
+
+### 3.4 The save prompt (PR Flag 5)
+- Source: ここまでの状況をセーブできます。セーブしますか？ — 21 / 0 / 0, every row a standalone `msg` with no `+` and no tags:
+  - NO3_CHAPEL 0039 0049 0070 0079 0111 0114 0129 0130
+  - NO4_BAR 0170 0173 0239 0242 0341 0377 0397 0401 0440 0443 0460 0461
+  - NO4_MACHINE/0001
+- Target: `You can save your progress so far. Do you want to save?` (55). It wraps 26 + 28 in 2 rows, so it fits every occurrence. It is followed by the §4 choice pair Save · Don't save.
+- CHECK pairs every later occurrence byte for byte.
+- Binds `:54 0170`, `:57 0173`. Glossary: added §6 row.
+
+### 3.5 Speakers (PR Flag 4)
+- `spk=N` is ignored (F-009). From the NO4_BAR_T labels:
+  - Collison: 0120 (T/0155)
+  - Oakland: 0121–0122, 0125, 0127, 0131, 0133 (T/0156, 0158, 0160, 0162, 0165, 0167)
+  - Heming: 0123–0124, 0126, 0128 (T/0159, 0161, 0163)
+  - Wolg: 0129–0130, 0132, 0134 (T/0164, 0166, 0168)
+- From content:
+  - the surface crew, two or three unnamed men: 0135–0147
+  - Oakland, the impatient boss: 0148–0149, 0151–0152, 0154, 0157, 0159, 0161, 0163, 0171–0172, 0174, 0176
+  - Wolg (俺): 0150, 0167
+  - Heming, who goes to test the radio (0172): 0153, 0155, 0158, 0160, 0162, 0164, 0166, 0169, 0175
+  - Miller: 0156, 0177
+  - Collison: 0165
+- 0168 is Heming by the flow: he asks for company at 0166, and 0169 answers John's assent. The text ("Right.{br}John, will you lend a hand?") works for Wolg as well, so a later correction changes no text.
+- F-009 again: spk=5 carries Heming, Oakland, Collison, Wolg, Miller and the save prompt.
+- Binds `:4`–`:61`. Glossary: none.
+
+### 3.6 Recurrences and near-duplicates (PR Flags 5–6)
+- **Exact recurrences, untranslated; CHECK will pair them:**
+  - 0139 さあな。 "Who knows." ↔ NO4_MACHINER90/0021
+  - 0164 わかった。 "All right." ↔ NO3_CHAPEL/0104
+- **Near-duplicate, reused by hand:** 0171 "Are you done checking the radio equipment?" ↔ NO4_HWR_FRONT/0103 (無線機の調査は済んだのか) and 0145 (無線装置の調査).
+- **NO4_BAR_T copies:** T/0155–0168 draft 0120–0134 with `【Name】` prefixes, so CHECK does not pair them. If kept, they reuse p03's wording (F-008):
+  - T/0158 has 事故 for トラブル.
+  - T/0159 joins 0123–0124.
+  - T/0166 is reworded.
+  - T/0167 ふん is "Hmph,".
+
+### 3.7 Accepted readings (non-blocking review notes)
+- `:8 0124` "rolls over again" and `:46 0162` "They carry well underwater.": §2.1 step-5 implications, flagged and accepted.
+- `:33 0149`: the leading `{br}` separates the `+` row from 0148 at a sentence boundary (R §2.3, F-012). The page is 4 rows.
+- `:9 0125` 言ったつもりだぞ → "I'm sure I told them".
+- `:14 0130` drops the hedge in 味方では無いだろう; "they're hardly on our side" would keep it.
+- `:50 0166` `……Then, someone come along.`: the comma is optional, and "come with me" would sit closer to 付き合ってくれ.
+- None of these is a fidelity error.

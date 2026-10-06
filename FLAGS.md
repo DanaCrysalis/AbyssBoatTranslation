@@ -93,6 +93,9 @@ beast", 分身 "part of him" (PR #1 Flags 7; rulings R §1.5, §1.9).
 which CHECK will pair; the exact ones carry p02's added `{p}` (T/0094, 0132, 0135, 0137). Its
 rewritten or `【Name】` rows (e.g. T/0130, 0145–0154) reuse p02's wording by hand where the text
 matches (rulings R §2.5).
+`NO4_BAR_T`/0155–0168 draft NO4_BAR.p03 (PR #3) 0120–0134, all `【Name】`-prefixed, so CHECK
+pairs none of them: reuse p03's wording by hand (T/0158 has 事故 for トラブル, T/0159 joins
+0123–0124, T/0166 is reworded, T/0167 ふん → "Hmph,") (rulings R §3.6).
 
 ### F-009 · 2026-10-04 · speaker · OPEN
 `spk=N` (first argument of statement 0xA9) is not a character id: `NO4_BAR`/0014–0018 put
