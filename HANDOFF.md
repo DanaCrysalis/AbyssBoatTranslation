@@ -1,4 +1,4 @@
-**Last updated: 2026-10-06** — wave 1 reviews complete: PR #4 (p04) MERGED in round 1, squash 42d2db9; all four wave-1 units merged.
+**Last updated: 2026-10-06** — wave 1 closed: NO4_BAR.p02, p03, p04 and OP-SCN034 merged (PRs #5, #3, #4, #2), none parked; the wave 1 coordinator opens the wave 2 session.
 
 ## Integration branch: `main`. Not configurable.
 Every PR bases on `main`; the reviewer merges into `main`; a wave is closed only when `origin/main` is
@@ -6,9 +6,11 @@ at the close commit (`CLAUDE.md` Rule 3). A fresh container may clone shallow wi
 preflight is `git fetch origin main && git checkout main && git reset --hard origin/main`.
 
 ## NEXT ACTION — always current, always a literal instruction
-> **Wave 1 close.** All four units MERGED (#5, #3, #2, #4); no open PR. Coordinator: `git pull --ff-only`,
-> then wave close (orchestrator.md step 6: CHECK, ODS export committed, README status, prune worktrees,
-> HANDOFF line budget, `handoff: wave 1 closed` with the Rule 3 proof), then open the wave 2 session.
+> **Open the wave 2 session** (wave 1 coordinator; CLAUDE.md Rule 1, orchestrator.md §7): `create_session`
+> titled `Abyss Boat — wave 2`, tags `["abyssboat-translation", "wave-2"]`, `source_url`
+> https://github.com/DanaCrysalis/AbyssBoatTranslation, `source_revision` `main`, seed = SKILL.md §6a
+> with UNITS = Next up. First check `list_sessions` (tag `wave-2`): if one exists, do not open a second.
+> The wave 2 coordinator seeds the glossary for its units, then dispatches.
 
 ## Progress
 | Store | Done | Total | |
@@ -20,31 +22,26 @@ preflight is `git fetch origin main && git checkout main && git reset --hard ori
 Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-06; tightest `NO4_BAR.SCR` 36,894 free with p01–p04).
 
 ## In flight
-| Unit | Branch | Round | State | Next |
-|---|---|---|---|---|
-| script NO4_BAR.p02 (0062–0119, 58 rows, 1,405 chars) | `tl/script-NO4_BAR.p02` at 14c6a42 | round 0 | **MERGED** PR #5, squash c7e2986; max 4 rows/page, NO4_BAR.SCR 38,625 free, 2.11; dupes grep + CHECK 22 pairs (control 23 + 1); new blind spot F-012 (`+` glue) in PROJECT.md §7; rulings R §2 | done — nothing left on the unit |
-| script NO4_BAR.p03 (0120–0177, 58 rows, 1,307 chars) | `tl/script-NO4_BAR.p03` at aee58f8 | round 0 | **MERGED** PR #3, squash 185beb6; max 4 rows/page, NO4_BAR.SCR 37,487 free (p01–p03), 2.37; dupes grep 8,294 pairs + CHECK 23; save prompt canonical (21 rows); cross-PR forms ふん, 地上用の設備, 上の連中 fixed; rulings R §3 | done — nothing left on the unit |
-| script NO4_BAR.p04 (0178–0235, 58 rows, 1,466 chars) | `tl/script-NO4_BAR.p04` at 86d0b84 | round 1 | **MERGED** PR #4, squash 42d2db9 (round 0 CHANGES ふん; round 1 MERGE); max 4 rows/page, NO4_BAR.SCR 36,894 free (p01–p04), 2.06; dupes grep 110,084 source-side pairs + CHECK 26 / 2 (p04 adds 0); new rows Deck N (promoted), Mr. Wolg, ex-policeman, survivor(s), medicine; F-014 (0218 一斑 typo); rulings R §5 | done — nothing left on the unit |
-| scene OP-SCN034 (OP2/01 … SCN034/02, 39 rows, 794 chars) | `tl/scene-OP-SCN034` at 1862852 | round 0 | **MERGED** PR #2, squash 131288b; max 4 lines, 2.39; dupes grep 162,708 source-side comparisons + CHECK 26 exact / 2 tag-variant pairs; new blind spot F-013 (`【Name】` copies unpaired) in PROJECT.md §7; 殺人鬼 promoted; 弾切れ, くっ, くそ, scream rows; rulings R §4 | done — nothing left on the unit |
+Nothing. Wave 1's four units are merged; see Wave history and rulings R §2–§5.
 
 ## Next up
-Wave 1 (QUEUE 2026-10-05): script NO4_BAR.p02 (58 rows, 1,405 chars, ratio 15.15), NO4_BAR.p03 (58,
-1,307, 16.21), NO4_BAR.p04 (58, 1,466, 14.56) — all `NO4_BAR.SCR`, 39,765 free, tier D — plus scene
-OP-SCN034 (39 rows, 794 chars, geom, tier D). Glossary seeds: §9 rows of wave 1 and the setup rows
-still provisional (John, Heming, 社長, 殺人鬼, Deck N). Related shipped work: NO4_BAR.p01 — the same
-conversation; read it first (voices in glossary §7, conventions in rulings R §1). NO4_BAR_T drafts
-the bar scenes with `【Name】` speaker labels: use them to name speakers (F-009); its identical and
-tag-variant rows must reuse the shipped wording (F-008).
+Wave 2 (QUEUE 2026-10-06): script NO4_BAR.p05 (58 rows, 1,208 chars, ratio 16.27), NO4_BAR.p06 (58,
+1,384, 14.33), NO4_BAR.p07 (58, 1,556, 12.86) — all `NO4_BAR.SCR`, 36,894 free, tier D — plus scene
+SCN038 (59 rows, 655 chars, geom, tier D). Glossary seeds: not yet — the wave 2 coordinator's step 2.
+Related shipped work: NO4_BAR.p01–p04, the same bar conversation (voices glossary §7; rulings R §1–§3,
+§5); the save prompt is canonical (glossary §6, 19 later rows incl. 0239, 0242, 0341, 0377, 0397);
+ふん → "Hmph, …". NO4_BAR_T drafts name speakers (F-009). CHECK blind spots F-012 (`+` glue) and
+F-013 (`【Name】` copies unpaired) are new — PROJECT.md §7.
 
 ## Remaining
-QUEUE order, generated 2026-10-04 (source characters, tags excluded). Script: NO4_BAR.p05 (1208),
-p06 (1384), p07 (1556), p08 (1125), NO4_HWR_FRONT.p01 (1088), p02 (1018), p03 (759),
+QUEUE order, generated 2026-10-06 (source characters, tags excluded). Script: NO4_BAR.p08 (1125),
+NO4_HWR_FRONT.p01 (1088), p02 (1018), p03 (759),
 NO4_MACHINER90.p01 (1080), p02 (962), NO4_TOOL_ROOM.p01 (766), p02 (555), NO4.b01 (931),
 NO4.b02 (1215), NO5.b01 (1144), NO6.b01 (839), NO6.b02 (495), NO3_CHAPEL.p01 (1068), p02 (1070),
 p03 (1039), NO3_NO4.p01 (633), p02 (597), NO3.b01 (1105), NO3.b02 (502), NO2.b01 (1021),
 NO2.b02 (829), NO1.b01 (151), SPACESHIP.b01 (159), then the `_T` test scripts (F-008):
 NO4_BAR_T.p01 (1426), p02 (1251), p03 (1270), p04 (1189), NO4_T.b01 (607), b02 (735), b03 (414).
-Scene (one per wave, waves 2–4): SCN038 (655), SCN041-SCN046 (773), SCN047-EPILOG (793).
+Scene (one per wave, waves 3–4): SCN041-SCN046 (773), SCN047-EPILOG (793).
 
 ## Blocked — needs a human
 1. **System store** (5 units, 188 rows) — exe slots too short for English; you chose to wait for an
@@ -70,6 +67,7 @@ Scene (one per wave, waves 2–4): SCN038 (655), SCN041-SCN046 (773), SCN047-EPI
 | Wave | Units | Merged | Parked | Progress after |
 |---|---|---|---|---|
 | setup (calibration) | script NO4_BAR.p01 | 1 — PR #1, squash b1bba74 (round 0 CHANGES, round 1 MERGE) | 0 | script 1/38, scene 0/4, system blocked |
+| 1 | script NO4_BAR.p02, p03, p04; scene OP-SCN034 | 4 — #5 c7e2986, #3 185beb6, #2 131288b (round 0); #4 42d2db9 (round 0 CHANGES ふん, round 1 MERGE) | 0 | script 4/38 (259 rows), scene 1/4 (39), system blocked; NO4_BAR.SCR 36,894 free. Two usage-limit stops (weekly, then 5-hour), resumed |
 
 ## How to resume
 1. Preflight per `CLAUDE.md` §4 step 0. CHECK must pass. A fill marker left in `PROJECT.md` means
