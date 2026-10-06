@@ -1,4 +1,4 @@
-**Last updated: 2026-10-06** — wave 2 review: PR #6 (NO4_BAR.p05) MERGED, squash c6858ea; reviewer integration commit on `main`. Coordinator session_018sADRqUwzYCcf65e1pUc63.
+**Last updated: 2026-10-06 ~14:40 UTC** — wave 2 STOPPED by the human mid-review: p05 merged; p06 and p07 in rework; SCN038 not yet reviewed.
 
 ## Integration branch: `main`. Not configurable.
 Every PR bases on `main`; the reviewer merges into `main`; a wave is closed only when `origin/main` is
@@ -6,9 +6,11 @@ at the close commit (`CLAUDE.md` Rule 3). A fresh container may clone shallow wi
 preflight is `git fetch origin main && git checkout main && git reset --hard origin/main`.
 
 ## NEXT ACTION — always current, always a literal instruction
-> **Wave 2 review, one reviewer at a time:** #6 p05 MERGED; #9 p06 round 0 CHANGES, rework with its
-> translator; **review PR #8 (p07) now**, then #7 (SCN038), then re-review #9 when its round 1 is pushed.
-> `git pull --ff-only` after each reviewer. Coordinator session_018sADRqUwzYCcf65e1pUc63; 12-minute watchdog.
+> **STOPPED — the human said "stop for now" (2026-10-06 ~14:40 UTC; CLAUDE.md §8).** Nothing resumes by
+> itself; the coordinator's watchdog is deleted and the runner's backstop disabled. On restart (the human
+> tells the runner or this session, session_018sADRqUwzYCcf65e1pUc63, to continue): preflight, then
+> (1) send PR #8's round 0 findings to the p07 translator; (2) reviewer on #7 (SCN038); (3) re-review #9
+> round 1 (3471e2d); (4) re-review #8 after its round 1; (5) close wave 2 and open wave 3 (orchestrator.md §6–§7).
 
 ## Progress
 | Store | Done | Total | |
@@ -23,9 +25,9 @@ Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEA
 | Unit | Branch | PR | State | Next |
 |---|---|---|---|---|
 | script NO4_BAR.p05 | `tl/script-NO4_BAR.p05` | #6 | **MERGED** round 0, squash c6858ea; NO4_BAR.SCR 36,376 free, 58 rows, max 4 rows/page, ratio 2.22, 29 dup pairs; 客船 便所 ソナー 死体 見張り promoted (R §6) | nobody — merged |
-| script NO4_BAR.p06 | `tl/script-NO4_BAR.p06` | #9 | round 0 CHANGES (5 rows: lone-"a" wraps 0298, 0312, 0330, 0335; 怪物 dropped 0351; restate figures after merging main) — findings sent to the same translator | translator pushes round 1, then re-review |
-| script NO4_BAR.p07 | `tl/script-NO4_BAR.p07` | #8 | PR open; NO4_BAR.SCR 36,253 free (alone), ratio 2.20 | reviewer, behind the barrier |
-| scene SCN038 | `tl/scene-SCN038` | #7 | PR open; max 3 lines/subtitle, ratio 2.05 | reviewer, behind the barrier |
+| script NO4_BAR.p06 | `tl/script-NO4_BAR.p06` | #9 | round 0 CHANGES (5 rows); round 1 pushed by the same translator, head 3471e2d (main merged in; 36,174 free) | reviewer: re-review round 1 |
+| script NO4_BAR.p07 | `tl/script-NO4_BAR.p07` | #8 | round 0 CHANGES, head 7977ba8 — findings 1–3 in the PR #8 review (lone "a" 0383, one-word row 0378, merge main + restate figures); **not yet sent to the translator** | coordinator: send findings verbatim to the p07 translator (SendMessage if alive, else a fresh translator with the review), then re-review |
+| scene SCN038 | `tl/scene-SCN038` | #7 | PR open; max 3 lines/subtitle, ratio 2.05; not yet reviewed | reviewer |
 
 ## Next up
 Wave 2 (QUEUE 2026-10-06): script NO4_BAR.p05 (58 rows, 1,208 chars, ratio 16.27), NO4_BAR.p06 (58,
