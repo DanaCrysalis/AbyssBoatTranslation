@@ -1,4 +1,4 @@
-**Last updated: 2026-10-05** — wave 1 dispatched by its coordinator (session `Abyss Boat — wave 1`): four translators working in parallel; review waits for the wave barrier.
+**Last updated: 2026-10-06** — wave 1 resumed after the weekly usage limit (stopped 2026-10-05 22:42 UTC, reset 04:00 UTC): OP-SCN034 has PR #2; the p02, p03 and p04 translators resumed with their worktree drafts.
 
 ## Integration branch: `main`. Not configurable.
 Every PR bases on `main`; the reviewer merges into `main`; a wave is closed only when `origin/main` is
@@ -26,10 +26,10 @@ Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEA
 ## In flight
 | Unit | Branch | Round | State | Next |
 |---|---|---|---|---|
-| script NO4_BAR.p02 (0062–0119, 58 rows, 1,405 chars) | `tl/script-NO4_BAR.p02` | dispatch 1 | translator working | translator opens PR → coordinator |
-| script NO4_BAR.p03 (0120–0177, 58 rows, 1,307 chars) | `tl/script-NO4_BAR.p03` | dispatch 1 | translator working | translator opens PR → coordinator |
-| script NO4_BAR.p04 (0178–0235, 58 rows, 1,466 chars) | `tl/script-NO4_BAR.p04` | dispatch 1 | translator working | translator opens PR → coordinator |
-| scene OP-SCN034 (OP2/01 … SCN034/02, 39 rows, 794 chars) | `tl/scene-OP-SCN034` | dispatch 1 | translator working | translator opens PR → coordinator |
+| script NO4_BAR.p02 (0062–0119, 58 rows, 1,405 chars) | `tl/script-NO4_BAR.p02` (not yet pushed) | dispatch 1, resumed | stopped on the usage limit with all 58 rows drafted, uncommitted, CHECK and UNITCHECK green; same translator resumed 2026-10-06 | translator: MERGE, MEASURE, commit, push, PR |
+| script NO4_BAR.p03 (0120–0177, 58 rows, 1,307 chars) | `tl/script-NO4_BAR.p03` at bb831a6, plus an uncommitted revision | dispatch 1, resumed | stopped mid gate re-run; no PR; same translator resumed 2026-10-06 | translator: re-run gates, push, PR |
+| script NO4_BAR.p04 (0178–0235, 58 rows, 1,466 chars) | `tl/script-NO4_BAR.p04` (not yet pushed) | dispatch 1, resumed | stopped mid-census with all 58 rows drafted, uncommitted; same translator resumed 2026-10-06 | translator: gates, push, PR |
+| scene OP-SCN034 (OP2/01 … SCN034/02, 39 rows, 794 chars) | `tl/scene-OP-SCN034` at 1862852 | dispatch 1 | **PR #2 open**, template filled; 39/39, max 4 lines, 1,900 ÷ 794 = 2.39 | reviewer, after the barrier |
 
 ## Next up
 Wave 1 (QUEUE 2026-10-05): script NO4_BAR.p02 (58 rows, 1,405 chars, ratio 15.15), NO4_BAR.p03 (58,
@@ -67,6 +67,7 @@ Scene (one per wave, waves 2–4): SCN038 (655), SCN041-SCN046 (773), SCN047-EPI
 - Tiers: literal 2.51, disciplined 2.16, provisional floor 2.05; every script and scene unit is tier D — PROJECT.md §4.
 - GitHub refused this repo 2026-10-04 → 05 (403); PR #1 was decided offline and merged when access returned. APPROVE is refused on the account's own PRs (COMMENT reviews) and branch deletion returns 403 — PROJECT.md §9.
 - Go-ahead for the unattended run given by the human, 2026-10-05.
+- Wave 1 stopped on the account's weekly usage limit 2026-10-05 22:42 UTC (all four translators, HTTP 429) and resumed 2026-10-06 07:27 UTC. The three without a PR were resumed by `SendMessage` (same agent, context and worktree intact), not re-dispatched: not counted against PROJECT.md §10's 2 re-dispatches.
 
 ## Wave history
 | Wave | Units | Merged | Parked | Progress after |
