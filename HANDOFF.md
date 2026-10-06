@@ -6,11 +6,9 @@ at the close commit (`CLAUDE.md` Rule 3). A fresh container may clone shallow wi
 preflight is `git fetch origin main && git checkout main && git reset --hard origin/main`.
 
 ## NEXT ACTION — always current, always a literal instruction
-> **Wave 2 coordinator (session_018sADRqUwzYCcf65e1pUc63): wait for the four translators, then review
-> behind the wave barrier** — every unit in In flight has an open PR → reviewer subagent, one PR at a
-> time, in unit order p05, p06, p07, SCN038. A unit with no PR whose translator is gone (`ListAgents`)
-> → resume it by `SendMessage` if it stopped on an API error, else a fresh translator (2 re-dispatches,
-> PROJECT.md §10). Watchdog: 12-minute `send_later` in that session.
+> **Wave 2 barrier met (PRs #6 p05, #9 p06, #8 p07, #7 SCN038). Review in unit order, one reviewer
+> at a time, foreground:** PR #6 (p05) now, then #9 (p06), #8 (p07), #7 (SCN038). `git pull --ff-only`
+> after each reviewer. Coordinator session_018sADRqUwzYCcf65e1pUc63; 12-minute watchdog armed there.
 
 ## Progress
 | Store | Done | Total | |
@@ -25,7 +23,7 @@ Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEA
 | Unit | Branch | PR | State | Next |
 |---|---|---|---|---|
 | script NO4_BAR.p05 | `tl/script-NO4_BAR.p05` | #6 | PR open, d7386be; NO4_BAR.SCR 36,376 free, ratio 2.22 | reviewer, behind the barrier |
-| script NO4_BAR.p06 | `tl/script-NO4_BAR.p06` | — | translator dispatched 2026-10-06 | translator opens PR |
+| script NO4_BAR.p06 | `tl/script-NO4_BAR.p06` | #9 | PR open, 3e49f41; NO4_BAR.SCR 36,314 free (alone), ratio 2.16 | reviewer, behind the barrier |
 | script NO4_BAR.p07 | `tl/script-NO4_BAR.p07` | #8 | PR open; NO4_BAR.SCR 36,253 free (alone), ratio 2.20 | reviewer, behind the barrier |
 | scene SCN038 | `tl/scene-SCN038` | #7 | PR open; max 3 lines/subtitle, ratio 2.05 | reviewer, behind the barrier |
 
