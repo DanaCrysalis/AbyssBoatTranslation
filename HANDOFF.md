@@ -6,12 +6,10 @@ at the close commit (`CLAUDE.md` Rule 3). A fresh container may clone shallow wi
 preflight is `git fetch origin main && git checkout main && git reset --hard origin/main`.
 
 ## NEXT ACTION — always current, always a literal instruction
-> **Wave 1 barrier met** (PRs #5 p02, #3 p03, #4 p04, #2 OP-SCN034). #5 and #3 MERGED (reviews 1–2 of 4). Coordinator
-> `git pull --ff-only`, then runs the `reviewer` subagent in the foreground on **PR #4**, then #2,
-> `git pull --ff-only` after each. PR #4 was based before #5 and #3 merged: its review merges main in.
-> Cross-PR forms fixed in the p03 review (rulings R §3.2): PR #4 0223/0232 ふん must read "Hmph, …" (not "Hmph.");
-> PR #2 keeps "land-based equipment" (SCN011/04) and "the people up top" (SCN011/05). CHANGES → findings verbatim to the same translator (SendMessage), then review again.
-> All merged or parked → wave close (orchestrator.md step 6), then open the wave 2 session.
+> **Wave 1 review.** #5 and #3 MERGED. #4 (p04) CHANGES round 1: its translator fixes 0223/0232 ("Hmph, …")
+> and pushes; then the `reviewer` re-reviews #4. Meanwhile the reviewer runs on #2 (OP-SCN034), one
+> reviewer at a time. `git pull --ff-only` after each. All merged or parked → wave close
+> (orchestrator.md step 6), then open the wave 2 session.
 
 ## Progress
 | Store | Done | Total | |
@@ -27,8 +25,8 @@ Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEA
 |---|---|---|---|---|
 | script NO4_BAR.p02 (0062–0119, 58 rows, 1,405 chars) | `tl/script-NO4_BAR.p02` at 14c6a42 | round 0 | **MERGED** PR #5, squash c7e2986; max 4 rows/page, NO4_BAR.SCR 38,625 free, 2.11; dupes grep + CHECK 22 pairs (control 23 + 1); new blind spot F-012 (`+` glue) in PROJECT.md §7; rulings R §2 | done — nothing left on the unit |
 | script NO4_BAR.p03 (0120–0177, 58 rows, 1,307 chars) | `tl/script-NO4_BAR.p03` at aee58f8 | round 0 | **MERGED** PR #3, squash 185beb6; max 4 rows/page, NO4_BAR.SCR 37,487 free (p01–p03), 2.37; dupes grep 8,294 pairs + CHECK 23; save prompt canonical (21 rows); cross-PR forms ふん, 地上用の設備, 上の連中 fixed; rulings R §3 | done — nothing left on the unit |
-| script NO4_BAR.p04 (0178–0235, 58 rows, 1,466 chars) | `tl/script-NO4_BAR.p04` at 5b9254c | dispatch 1, resumed | **PR #4 open**; max 4 rows/page, NO4_BAR.SCR 38,684 free, 3,023 ÷ 1,466 = 2.06; ふん → "Hmph." overlaps p03 0133 (Flag 10): ruled "Hmph," (R §3.2) | reviewer, next |
-| scene OP-SCN034 (OP2/01 … SCN034/02, 39 rows, 794 chars) | `tl/scene-OP-SCN034` at 1862852 | dispatch 1 | **PR #2 open**, template filled; 39/39, max 4 lines, 1,900 ÷ 794 = 2.39 | reviewer, after the barrier |
+| script NO4_BAR.p04 (0178–0235, 58 rows, 1,466 chars) | `tl/script-NO4_BAR.p04` at 5b9254c | review 1: **CHANGES** | PR #4: all gates pass; gate 7 fails on ふん → "Hmph, …" (R §3.2) at 0223, 0232 + PR body ふん row (3 findings); rework round 1 sent to the same translator | translator pushes → reviewer re-reviews |
+| scene OP-SCN034 (OP2/01 … SCN034/02, 39 rows, 794 chars) | `tl/scene-OP-SCN034` at 1862852 | dispatch 1 | **PR #2 open**, template filled; 39/39, max 4 lines, 1,900 ÷ 794 = 2.39 | **reviewer now** (review 4 of 4, while p04 reworks) |
 
 ## Next up
 Wave 1 (QUEUE 2026-10-05): script NO4_BAR.p02 (58 rows, 1,405 chars, ratio 15.15), NO4_BAR.p03 (58,
