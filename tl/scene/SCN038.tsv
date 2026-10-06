@@ -1,0 +1,62 @@
+# unit: scene/SCN038
+# rows: 59
+# columns: id <TAB> context <TAB> source <TAB> target (empty target = untranslated)
+SCN038A/01	sub 174-212	行き止まりか⁉	A dead end⁉
+SCN038A/02	sub 213-242	くそおおおっ‼	Daaaamn‼
+SCN038A/03	sub 492-520	何だこれは⁉	What is this⁉
+SCN038A/04	sub 581-685	これがコリスンとミラーを殺した化け物なのか…。	So this is the monster that killed Collison and Miller…
+SCN038A/05	sub 686-758	ウォルグ、撃てっ！早くしろ‼	Wolg, shoot! Hurry up‼
+SCN038A/06	sub 764-781	ダメだ。	I can't.
+SCN038A/07	sub 790-851	射軸にヘイミングたちがいる。	Heming and the others are in the line of fire.
+SCN038A/08	sub 857-918	お前なら外さない距離だろっ。	You of all people won't miss at this range.
+SCN038A/09	sub 920-981	貫通しない保証はないんだ！	There's no guarantee it won't go right through!
+SCN038B/01	sub 1-38	下がるんだ、ジョン！	Get back, John!
+SCN038B/02	sub 61-118	このままじゃ……全員死ぬわ。	At this rate…… we all die.
+SCN038B/03	sub 121-151	方法はあるぜ。	There's a way.
+SCN038B/04	sub 159-178	……？	……?
+SCN038B/05	sub 179-241	全員生き延びる方法があるんだ。	There's a way for all of us to survive.
+SCN038B/06	sub 242-262	本当か⁉	Really⁉
+SCN038B/07	sub 263-363	いいか、俺が合図したらウォルグたちの方へ走れ。	Listen, when I give the signal, run toward Wolg and the others.
+SCN038B/08	sub 364-402	なにを始める気だ？	What are you going to do?
+SCN038B/09	sub 403-446	いいから、用意しろ。	Never mind, just get ready.
+SCN038B/10	sub 467-604	うおおおおおおおおおおおっ‼	Raaaaaaaaaaaah‼
+SCN038B/11	sub 621-659	いまだ！{br}行け～～～っ。	Now!{br}Goooo.
+SCN038B/12	sub 660-680	……⁉	……⁉
+SCN038B/13	sub 690-734	なんてことを…⁉	What have you done…⁉
+SCN038B/14	sub 735-769	早く行けよっ！	Hurry up and go!
+SCN038B/15	sub 770-808	どうしてなの…？	Why…?
+SCN038B/16	sub 809-838	早く行けって――。	Hurry up and go——
+SCN038B/17	sub 839-875	早く行けって――グフッ‼	Hurry up and go——Guh‼
+SCN038B/18	sub 902-929	言ってるだろ。	I'm telling you.
+SCN038B/19	sub 930-958	ウィリアム…。	William…
+SCN038B/20	sub 959-1021	行けって言ってるだろっ‼	Go, I'm telling you‼
+SCN038B/21	sub 1038-1071	さあ、行くんだ。	Come on, go.
+SCN038D/01	sub 1-78	俺のことはいいから行ってくれ‼	Never mind me, just go‼
+SCN038D/02	sub 94-122	…よく言った。	…Well said.
+SCN038D/03	sub 123-157	見捨てるの…？	You're abandoning him…?
+SCN038D/04	sub 183-247	…ウィリアムは助からない。	…William can't be saved.
+SCN038D/05	sub 248-344	このまま、ここにいると俺たちも危ない‼	If we stay here like this, we'll be in danger too‼
+SCN038D/06	sub 345-411	まだ…ウィリアムは生きてるわ。	William is… still alive.
+SCN038D/07	sub 412-541	これ以上死人を出すわけにはいかない。{br}ジュディ、走れ‼	We can't lose anyone else.{br}Judy, run‼
+SCN038D/08	sub 558-640	あいつが生命を賭けて守った命だぞ！	He risked his life to protect yours!
+SCN038D/09	sub 641-670	行くんだ‼	Go‼
+SCN038D/10	sub 681-725	ウィリアムが…。	William is…
+SCN038D/11	sub 725-760	は、早くしろっ‼	H-hurry up‼
+SCN038D/12	sub 776-800	すまん…。	Sorry…
+SCN038D/13	sub 976-1030	ま、まだだっ‼	N-not yet‼
+SCN038D/14	sub 1059-1097	ウィリアムっ‼	William‼
+SCN038D/15	sub 1099-1157	いいさ、これで…帰れる…。	It's fine, now…{br}I can go back…
+SCN038D/16	sub 1158-1187	ウィリアム！	William!
+SCN038D/17	sub 1188-1222	妹のところへ…。	To my sister…
+SCN038_5C1/01	sub 280-380	あなた…誰？{br}なぜ私を狙うの？	You… who are you?{br}Why are you after me?
+SCN038_5C1/02	sub 402-437	クッ	Heh
+SCN038_5C1/03	sub 438-487	ククッ	Heh-heh
+SCN038_5C1/04	sub 488-562	クカカカカカカッ。	Kahahahahaha.
+SCN038_5C1/05	sub 563-647	やっと見付けたぜ。	Found you at last.
+SCN038_5C1/06	sub 648-707	俺様の……。	My very own……
+SCN038_5C1/07	sub 709-797	何を言ってるの？	What are you talking about?
+SCN038_5C1/08	sub 798-894	いやいや、失礼。{br}つい興奮してしまった。	No, no, my apologies.{br}I got a bit carried away.
+SCN038_5C1/09	sub 895-1052	まさかこんなところでお目にかかれるとは、思っても見なかったのでね。	You see, I never dreamed I'd have the pleasure of meeting you in a place like this.
+SCN038_5C1/10	sub 1053-1109	………。	………
+SCN038_5C2/01	sub 21-170	ほう……まさかもう一匹……？{br}何だ、こっちはただの……。	Oho…… don't tell me there's another one……?{br}What, this one's just a……
+SCN038_5C2/02	sub 200-249	クッ、ククッ、また遊んでやるよ‼{br}クッ、ククッ、クカカカカカカッ。	Heh, heh-heh, I'll play with you again‼{br}Heh, heh-heh, kahahahahaha.
