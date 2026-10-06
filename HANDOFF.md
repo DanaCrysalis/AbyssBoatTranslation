@@ -1,4 +1,4 @@
-**Last updated: 2026-10-06** — wave 2 dispatched: NO4_BAR.p05, p06, p07 and SCN038 (glossary seeds 9797991); coordinator session_018sADRqUwzYCcf65e1pUc63.
+**Last updated: 2026-10-06** — wave 2 review: PR #6 (NO4_BAR.p05) MERGED, squash c6858ea; reviewer integration commit on `main`. Coordinator session_018sADRqUwzYCcf65e1pUc63.
 
 ## Integration branch: `main`. Not configurable.
 Every PR bases on `main`; the reviewer merges into `main`; a wave is closed only when `origin/main` is
@@ -7,22 +7,22 @@ preflight is `git fetch origin main && git checkout main && git reset --hard ori
 
 ## NEXT ACTION — always current, always a literal instruction
 > **Wave 2 barrier met (PRs #6 p05, #9 p06, #8 p07, #7 SCN038). Review in unit order, one reviewer
-> at a time, foreground:** PR #6 (p05) now, then #9 (p06), #8 (p07), #7 (SCN038). `git pull --ff-only`
+> at a time, foreground:** PR #6 (p05) merged — **review PR #9 (p06) next**, then #8 (p07), #7 (SCN038). `git pull --ff-only`
 > after each reviewer. Coordinator session_018sADRqUwzYCcf65e1pUc63; 12-minute watchdog armed there.
 
 ## Progress
 | Store | Done | Total | |
 |---|---|---|---|
-| script | 4 units · 259 rows | 38 units · 1,709 rows | from STATUS 2026-10-06 |
+| script | 5 units · 317 rows | 38 units · 1,709 rows | p01–p05; UNITCHECK whole store 2026-10-06 |
 | scene | 1 unit · 39 rows | 4 units · 190 rows | from STATUS 2026-10-06 |
 | system | 0 | 5 units · 188 rows | blocked whole (F-006) |
 
-Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-06; tightest `NO4_BAR.SCR` 36,894 free with p01–p04).
+Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-06; tightest `NO4_BAR.SCR` 36,376 free with p01–p05).
 
 ## In flight
 | Unit | Branch | PR | State | Next |
 |---|---|---|---|---|
-| script NO4_BAR.p05 | `tl/script-NO4_BAR.p05` | #6 | PR open, d7386be; NO4_BAR.SCR 36,376 free, ratio 2.22 | reviewer, behind the barrier |
+| script NO4_BAR.p05 | `tl/script-NO4_BAR.p05` | #6 | **MERGED** round 0, squash c6858ea; NO4_BAR.SCR 36,376 free, 58 rows, max 4 rows/page, ratio 2.22, 29 dup pairs; 客船 便所 ソナー 死体 見張り promoted (R §6) | nobody — merged |
 | script NO4_BAR.p06 | `tl/script-NO4_BAR.p06` | #9 | PR open, 3e49f41; NO4_BAR.SCR 36,314 free (alone), ratio 2.16 | reviewer, behind the barrier |
 | script NO4_BAR.p07 | `tl/script-NO4_BAR.p07` | #8 | PR open; NO4_BAR.SCR 36,253 free (alone), ratio 2.20 | reviewer, behind the barrier |
 | scene SCN038 | `tl/scene-SCN038` | #7 | PR open; max 3 lines/subtitle, ratio 2.05 | reviewer, behind the barrier |

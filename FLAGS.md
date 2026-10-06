@@ -120,6 +120,9 @@ argument's real meaning in the exe (0x42BE28 handler table).
 NO4_BAR.p04 (PR #4): NO4_BAR_T has no draft past T/0181, so 0178–0235 are named from content;
 0178 (Oakland, Heming or Collison), 0179–0180 (probably Wolg) and 0181 (perhaps William) stay
 uncertain and are rendered speaker-neutral; spk=6 carries a salvager and Collison (rulings R §5.3).
+NO4_BAR.p05 (PR #6): 0236–0293 likewise from content; 0245, 0247, 0248, 0253, 0254, 0264, 0265,
+0270, 0289 and 0290 stay uncertain (Oakland, William, Wolg, Heming or Miller) and are rendered
+speaker-neutral; spk=4 carries Wolg (0249–0250), Miller (0251) and William (0255) (rulings R §6.2).
 
 ### F-011 · 2026-10-04 · tools · OPEN
 PR #1 (NO4_BAR.p01) found four things CHECK and UNITCHECK do not verify. Each was confirmed by a
