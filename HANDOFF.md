@@ -23,10 +23,10 @@ Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEA
 Wave 4, dispatched 2026-10-25 — translator round 1 each; branch `tl/<store>-<id>`; no PR yet:
 | Unit | Branch | PR | State | Next |
 |---|---|---|---|---|
-| script NO4_HWR_FRONT.p03 | tl/script-NO4_HWR_FRONT.p03 | — | translating | translator opens PR |
-| script NO4_MACHINER90.p01 | tl/script-NO4_MACHINER90.p01 | — | translating | translator opens PR |
-| script NO4_MACHINER90.p02 | tl/script-NO4_MACHINER90.p02 | — | translating | translator opens PR |
-| scene SCN047-EPILOG | tl/scene-SCN047-EPILOG | — | translating | translator opens PR |
+| script NO4_HWR_FRONT.p03 | tl/script-NO4_HWR_FRONT.p03 | — | translating (agent af5978371ed6bd35d) | translator opens PR |
+| script NO4_MACHINER90.p01 | tl/script-NO4_MACHINER90.p01 | — | translating (agent a96acb0b4138cf690) | translator opens PR |
+| script NO4_MACHINER90.p02 | tl/script-NO4_MACHINER90.p02 | — | translating (agent a6c058ae7cfa40cfd) | translator opens PR |
+| scene SCN047-EPILOG | tl/scene-SCN047-EPILOG | — | translating (agent a197ccbb3deb8d732) | translator opens PR |
 
 ## Next up
 Wave 4 (QUEUE 2026-10-25): script NO4_HWR_FRONT.p03 (46 rows, 759 chars, ratio 36.92, `NO4_HWR_FRONT.SCR`
