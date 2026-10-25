@@ -30,6 +30,8 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | ヘイミング | ヘイミングたち | Heming; たち: Heming and the others (NO4_BAR/0232 "Heming's team" stands in context) | 6; 21 (13) | — | older salvager; たち 1 / 1 / 0, per the «Name»たち row | R §3.1, §5.1, §9.1 |
 | ウォルグさん | — | Mr. Wolg | 8 | — | as コリスンさん; never split from the name at a wrap; Collison's form | R §5.1 |
 | «Name»たち | ウォルグたち · ヘイミングたち · ジョンたち | «Name» and the others ("Wolg and the others") | 19 (Wolg, John); 21 (Heming) | — | default for a name + たち; in context where a line wants it (0232); コリスンさんたち is its own row | R §9.1 |
+| クライド | — | Clyde | 5 | — | Heming's given name, Oakland's address to him (SCN046A2/02); 0 / 1 / 0 | R §13.1 |
+| ジェイク・ノーマン | — | Jake Norman | 11 | — | the killer's name (Wolg, SCN046B1/03); ジェイク, ノーマン occur only in the full name; 0 / 1 / 0 | R §13.1 |
 
 ## 2. Factions, places, ranks
 | Source | Variants | Target | Cols | Cap | Note | Ruling |
@@ -81,12 +83,13 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | 薬品 | — | medicine | 8 | — | NO4_BAR/0226, NO3_MEDICALROOM/0002 | R §5.1 |
 | ソナー | — | the sonar | 9 | — | ソナーの反応 → "the contact" … on/from the sonar (0272); ソナーに反応が無い in context | R §6.1 |
 | ハンドガン | — | handgun | 7 | — | never "pistol"; ハンドガン程度 → "a mere handgun" (0343); equip/000, items/000 (blocked) take the same word | R §7.1 |
-| 鞄 | カバン · 旅行鞄 | bag; 旅行鞄: suitcase | 3; 8 | — | 鞄 and カバン one word (NO4_TOOL_ROOM/0003 カバンごと in context); plural as the line needs | R §8.1 |
+| 鞄 | カバン · バッグ · 旅行鞄 | bag; 旅行鞄: suitcase | 3; 8 | — | 鞄, カバン, バッグ one word (NO4_TOOL_ROOM/0003 カバンごと in context); plural as the line needs; バッグ 1 / 1 / 0 | R §8.1, §13.1 |
 | マガジン | — | magazine; 予備のマガジン · マガジンの予備 → "spare magazine(s)" | 8 | — | the gun's magazine, never "clip"; NO3_NO4/0010 takes "spare magazine" | R §10.1 |
 | バリケード | — | barricade (verb "barricade(d)" where the line wants it) | 9 | — | 5 / 0 / 0; 撤去 → "clear" (0444; NO4_HWL_KAIDAN/0006 takes the same verb) | R §11.1 |
 | チェーンカッター | — | chain cutter | 12 | 39 (hints/006, blocked) | never "bolt cutters"; NO6_TOOLROOM/0001, hints/006 take the same words; 2 / 0 / 1 | R §11.1 |
 | 工具 | — | tools | 5 | — | 2 / 0 / 0; 道具 is not fixed ("a tool", 0441; NO4_HWL_KAIDAN/0006 in context) | R §11.1 |
 | 刃物 | 鋭利な刃物 | blade; 鋭利な刃物: a sharp blade | 5; 13 | — | 3 / 0 / 0 (NO4_BAR/0439 "every blade"; NO4_4102/0001, NO6_BRIDGE/0020) | R §11.1 |
+| シャッター | 防水シャッター | shutter; 防水シャッター: watertight shutter | 7; 18 | 39 (hints/011, blocked) | lowercase; 31 / 1 / 1 (防水シャッター 3 / 0 / 0, the control panels NO3_MACHINE/0002, 0004, NO6_BRIDGE/0012) | R §13.1 |
 
 ## 4. Classes, units, system terms
 | Source | Variants | Target | Cols | Cap | Note | Ruling |
@@ -130,13 +133,19 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | フッ | — | Heh | 3 | Wolg's wry scoff; punctuation per source (フッ… → "Heh…", フッ、 → "Heh,"); not グフッ (SCN038B/17, a grunt) | R §7.1 |
 | クッ · ククッ · クカカカカカカッ | クッ、ククッ、クカカカカカカッ。 · クッ、ククッ。 · ククッ、クカカカカカカッ | Heh · Heh-heh · Kahahahahaha; run together: "Heh, heh-heh, kahahahahaha." | 3 · 7 · 12; 27 | the killer's laugh, 6 / 7 / 0 rows; one syllable per カ; punctuation per source; not くっ (Ngh) | R §9.1 |
 | うおおおっ (battle cry) | — | "R" for う, one "a" per お, "h" for っ | — | SCN038B/10 う+お×11+っ‼ → "Raaaaaaaaaaah‼" (14); the きゃあ…っ pattern; ‼ ⁉ as the source | R §9.1 |
-| ～ (long-vowel mark) | — | repeat the vowel once per ～; a final っ after a word is dropped | — | SCN038B/11 行け～～～っ。 → "Goooo." (Go + 3 o); SCN046A3/01 in context; 0 / 2 / 0 | R §9.1 |
+| ～ (long-vowel mark) | — | repeat the vowel once per ～; a final っ after a word is dropped | — | SCN038B/11 行け～～～っ。 → "Goooo." (Go + 3 o); after ン the syllable's vowel: SCN046A3/01 → "Hemiiiiiiiing‼" (Hemi + 7 i); 0 / 2 / 0 | R §9.1, §13.1 |
 | グフッ | — | Guh | 3 | grunt as he is struck, SCN038B/17 only ("——Guh‼"); not フッ | R §9.1 |
 | 俺様 | — | no fixed word: the killer's swagger is carried by register | — | 俺様の…… → "My very own……" (SCN038_5C1/06); 俺様の女神 → "my very own goddess" (NO2_MAINSTORAGE/0003); 3 / 4 / 0 | R §9.1 |
 | 妹 | 妹さん | sister: "my sister" / "his sister"; the echo 妹？ → "Sister?" | 6 | William's dead sister; 妹さん drops さん (R §1.2) → "his sister" (NO4_HWR_FRONT/0075, 0080); SCN038D/17 "To my sister…" | R §10.1 |
 | 親玉 | — | the big one | 11 | the parent monster, NO4_BAR/0438 only; never "boss" (社長) | R §11.1 |
 | 巣 | 化け物の巣 | nest; 化け物の巣: the monster's nest ("a monster's nest" at 0368) | 4; 18 | 4 / 0 / 0; 蜘蛛の巣 (NO5_BANK/0006) is a web, in context | R §11.1 |
 | と書かれている | — | it reads: `"«text»," it reads.`; ending a multi-row sign: `«last entry», it reads.` | 8 | 7 / 0 / 0; NO5_HW_R/0011 (alone on its row, after the sign) in context | R §12.1 |
+| ウスノロ | — | dimwit (pl. dimwits) | 6 | the killer's word for his victims: 親愛なるウスノロ → "my dear dimwit", てめえらウスノロ → "you dimwits", そのウスノロ → "those dimwits"; 0 / 3 / 0 | R §13.1 |
+| メス | — | bitch (あのメス → "that bitch") | 5 | the killer on Judy, SCN046B1/10–11; article in context; 0 / 2 / 0 | R §13.1 |
+| 売女 | — | whore (お前の売女 → "your whore") | 5 | the killer on Wolg's murdered wife, SCN046B2/07; 0 / 1 / 0 | R §13.1 |
+| 神 | — | god, lowercase ("a god", "that god of yours") | 3 | SCN046B2/02–05; 女神 is the 俺様 row's "goddess"; NO4_BAR_T/0144 神は──主は in context; 1 / 4 / 0 (女神 3 / 0 / 0) | R §13.1 |
+| 生肝 | — | raw liver | 9 | SCN046B2/04 only (アレの生肝 → "that thing's raw liver"); 0 / 1 / 0 | R §13.1 |
+| ゲームオーバー | — | game over ("it's game over") | 9 | in dialogue, SCN046A2/01 only (Heming to Oakland); 0 / 1 / 0 | R §13.1 |
 
 ## 7. Register per character
 | Character | Register | Contractions? | Markers | Ruling |
@@ -168,11 +177,6 @@ so; the reviewer moves the row up into its section in the integration commit. --
 |---|---|---|---|---|---|
 | 無線機 | — | the radio | the radio set | NO4_HWR_FRONT/0103 (near-duplicate of NO4_BAR/0171, R §3.6); 1 / 0 / 0 | 1 |
 | 無線室 | — | the radio room | — | NO6_BRIDGE/0001, 0006; rooms/107, items/011, hints/001–002 (cap 14 as a room name); 2 / 0 / 4 | 1 |
-| クライド | — | Clyde | — | SCN046A2/02, Oakland to the one who betrays him (likely Heming's given name); 0 / 1 / 0 | 3 |
-| ジェイク・ノーマン | — | Jake Norman | — | SCN046B1/03, Wolg naming the killer; 0 / 1 / 0 | 3 |
-| ウスノロ | — | dimwit ("my dear dimwit") | slowpoke | SCN046B1/02, B2/06, B2/07, the killer's word for his victims; 0 / 3 / 0 | 3 |
-| メス · 売女 | — | the bitch · whore | that female | SCN046B1/10–11 (the killer on Judy), B2/07; 0 / 2 / 0 · 0 / 1 / 0 | 3 |
-| 神 · 生肝 | — | god · raw liver | — | SCN046B2/02–04; 女神 is in the 俺様 row (§6); 4 / 4 / 0 · 0 / 1 / 0 | 3 |
 
 ## 10. Open questions
 <!-- one line each, with the FLAGS id. A closed question is deleted here; its answer stays in rulings.md. -->

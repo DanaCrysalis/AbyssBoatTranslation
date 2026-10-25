@@ -31,6 +31,9 @@ columns fit on a line · `docs/ENGINE.md` §7.
 Also reading time: SCN002's subtitles last 40–50 frames (1.3–1.7 s) and the English runs about
 twice the source's characters (SCN002/02: 95 characters in 50 frames, 4 lines). Report whether
 SCN002 can be read at playback speed (OP-SCN034, PR #2 Flag 12).
+SCN041-SCN046 (PR #11) fills all 4 assumed lines at SCN046B1/11 and SCN046B2/05; if the box holds
+fewer rows, those two need a re-cut. SCN046_VALVE/01 `It・will・not・stop……` uses ・ (0x8145) between
+words for the halting voice: check it draws legibly (`tl/scene/SCN041-SCN046.tsv:44, :49, :55`; R §13.3).
 
 ### F-003 · 2026-10-04 · geometry · HUMAN
 Choice options and inline lines (`choice`/`text` rows) are assumed to fit 28 columns
@@ -146,6 +149,11 @@ NO4_HWR_FRONT.p01 (PR #13): no `_T` draft exists, so speakers are named from con
 is not Oakland, whose 42 labelled rows use わし and never 俺, while the partner says 俺. He is Heming
 (0004 on age, うむ, わっはっは) or Wolg (俺). Rendered speaker-neutral. 0023 is the partner's or John's.
 spk=0/1/2 each carry the partner (rulings R §10.2).
+SCN041-SCN046 (PR #11): subtitles, named from content. The vote prompts (SCN046, AMO1, AMO2, B) are
+Wolg's (NO3_CHAPEL/0120–0122). SCN041/01 (Judy or John), SCN046A1/01–11 (Oakland, Wolg or Heming:
+only 04 "Go! Wolg!" and 05 "The boss is going to die⁉" constrain it), B1/01, B3/01–02 (probably
+Wolg) and SCN046_VALVE/01 (a female voice, probably Judy) stay uncertain and are rendered
+speaker-neutral (rulings R §13.2).
 
 ### F-011 · 2026-10-04 · tools · OPEN
 PR #1 (NO4_BAR.p01) found four things CHECK and UNITCHECK do not verify. Each was confirmed by a

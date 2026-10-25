@@ -1176,3 +1176,129 @@ Census counts are rows per store (script / scene / system), from the reviewer's 
   - NO5_HW_R/0009 starts with `Entrance Hall` and uses unspaced `/` like this sign.
   - The other normalised hits are the labelled `_T` rows and tag variants, as R §5.6 and §11.5 list them.
 - Glossary: none.
+
+## Unit scene SCN041-SCN046 (PR #11, MERGED, 2026-10-25)
+
+The third scene unit:
+- SCN041 / SCN041_B: Judy, hurt shielding John, puzzles over why she did it.
+- SCN046 / AMO1 / AMO2 / B: Wolg's vote prompts.
+- SCN046A1–A3: Oakland's sacrifice, and Heming ("Clyde") turning on him.
+- SCN046B1–B3: Wolg faces the killer, Jake Norman.
+- SCN046_VALVE: the fuel valve.
+
+Reviewed once:
+- **Round 0** (fb26b1b, merged with `origin/main` 2f4949e for review): MERGE, squash f8e7b3a. Every gate passed, and there were no must-change findings.
+
+Figures:
+- **Subtitles.** 52, every one 1 page, at most 4 lines (`:44 SCN046B1/11`, `:49 SCN046B2/05`; UNITCHECK, 0 violations). The scene store has 150 rows, 0 violations.
+- **Ratio.** 1,642 target characters ÷ 773 source = 2.12 (tags excluded).
+- **Containers.** No byte container (scene). Script containers are unchanged: NO4_BAR.SCR 37,378 free, NO4_HWR_FRONT.SCR 54,522.
+- **Duplicates.** CHECK compared 54 duplicate pairs (main's 46 + 8) and 2 tag-variant pairs. The +8 are 3 + 3 in the two vote-prompt groups, 1 in `すまん…。` and 1 in `………。`.
+  - The reviewer's source-side census made 108,472 comparisons: 52 rows × every other script, scene and system dump row.
+  - It ran at three levels: exact; `{p}{w}{br}` stripped; `【Name】` stripped, with ！？ → ⁉ and final punctuation normalised.
+  - It found 46 hits, 32 of them translated pairs, with 0 divergences (§13.4).
+- **F-011 wrap scan.** The reviewer's own scan of `build/scene_merged.tsv` examined 52 subtitles and 84 wrapped lines. It was proved first on four planted violations.
+  - It reported one problem: `:15 SCN046A1/04` "Go! | Wolg!". That row follows the source's authored 行けっ！{br}ウォルグ！, as SCN038B/11 does.
+  - Lines ended by an authored `{br}` are ≤ 27 (`len()`).
+
+Census counts are rows per store (script / scene / system), from the reviewer's grep of `dumps/` on 2026-10-25. Line citations use PROJECT.md §7's numbering in `tl/scene/SCN041-SCN046.tsv` (line = row index + 3).
+
+### 13.1 Terms promoted from §9, added, and one row extended
+- **クライド** → `Clyde` (5).
+  - Census: 0 / 1 / 0. Oakland says it to the man who betrays him (`:24 SCN046A2/02` "Clyde, you…"), and Heming answers as "Bill" (`:23`).
+  - It is read as Heming's given name, by content. No row names Heming's given name otherwise.
+  - Binds `:24`.
+  - Glossary: §1 row added; §9 row removed.
+- **ジェイク・ノーマン** → `Jake Norman` (11).
+  - Census: 0 / 1 / 0. ジェイク and ノーマン occur only in the full name. Wolg names the killer at `:36 SCN046B1/03` "Jake Norman‼".
+  - Binds `:36`.
+  - Glossary: §1 row added; §9 row removed.
+- **ウスノロ** → `dimwit` (6).
+  - Census: 0 / 3 / 0. Rows: `:35` 親愛なるウスノロ "my dear dimwit", `:50` てめえらウスノロ "you dimwits", `:51` そのウスノロ "those dimwits".
+  - "slowpoke" (the §9 alternative) loses the insult.
+  - Glossary: §6 row added; §9 row removed.
+- **メス** → `bitch` (5). The article is in context (あのメス → "that bitch").
+  - Census: 0 / 2 / 0 (`:43`, `:44`). The killer means Judy.
+  - "female" (the §9 alternative) keeps the animal sense but not the crude register (てめぇ, ねえ, やがる) of these lines.
+  - Glossary: §6 row added; §9 row removed.
+- **売女** → `whore` (5).
+  - Census: 0 / 1 / 0 (`:51` "Your whore, too‼"). The killer means Wolg's murdered wife (NO3_NO4/0030–0037).
+  - Glossary: §6 row added; §9 row removed.
+- **神** → `god`, lowercase (3).
+  - Census: 1 / 4 / 0 for 神 outside 女神. The scene rows are `:46`, `:47`, `:48`, `:49`. The script row is NO4_BAR_T/0144 神は──主は, a test-script line, in context. 女神 is 3 / 0 / 0 and stays the 俺様 row's "goddess".
+  - Glossary: §6 row added; §9 row removed.
+- **生肝** → `raw liver` (9). Census: 0 / 1 / 0 (`:48`). Glossary: §6 row added; §9 row removed.
+- **シャッター** (variant 防水シャッター) → `shutter`; `watertight shutter` (7; 18). New.
+  - Census: 31 / 1 / 1. 防水シャッター is 3 / 0 / 0 (the control panels NO3_MACHINE/0002, 0004, NO6_BRIDGE/0012); hints/011 is blocked, cap 39.
+  - Lowercase. Binds `:4 SCN041/01`.
+  - Glossary: §3 row added.
+- **ゲームオーバー** → `game over` (9). New.
+  - Census: 0 / 1 / 0. It occurs in dialogue only, `:23` "Bill… it's game over."; the system store has no ゲームオーバー row.
+  - Glossary: §6 row added.
+- **バッグ** joins the §3 鞄 · カバン row as a Variant, with the same target `bag`.
+  - Census: 1 / 1 / 0. Rows: NO4_BAR/0454 "What's that bag, boss?" (shipped, #12) and `:12 SCN046A1/01` "The bag‼". It is the same bag, Oakland's, holding the carcass (NO4_BAR/0455).
+  - The row's Variants and Note are extended. The target does not change, and no shipped line changes.
+- **～ row note** (R §9.1). It read "SCN046A3/01 in context". It now records the decided form.
+  - Rule: after ン, the stretched syllable's vowel is repeated once per ～: `:27` ヘイミン～～～～～～～グ‼ → `Hemiiiiiiiing‼` (Hemi + 7 i, 14).
+  - The literal-nasal alternative `Heminnnnnnnng‼` is rejected. The row says "repeat the vowel", ン has none, and English stretches a shouted name on its vowel.
+  - Only this row is affected, and it is the row's only open case. No shipped line changes.
+- **Elongation, checked.** `:21` 行けえええええええっ‼ (7 え) → `Goooooooo‼` (G + 8 o = Go + 7). This follows the ～ row and the くそおおおっ → Daaaamn precedent (R §4.1, §9.1).
+- **Applied, unchanged:** the killer's laugh (R §9.1: `:35`, `:52` "Heh, heh-heh, kahahahahaha."; `:37` "Heh, heh-heh."; `:39` "Heh-heh, kahahahahaha."); くそっ → `Damn‼`; 弾切れ → out of ammo; 社長 → the boss; ビル alone → Bill; ウォルグ → Wolg.
+
+### 13.2 Speakers (PR Flag 4)
+- Subtitles carry no speaker code, so every speaker is named from content (F-009).
+- **The vote prompts** (`:10`/`:11` and their copies) are Wolg's. NO3_CHAPEL/0120–0122 (spk=2, 俺) has him set up the vote: hold a round in your right hand if you are for stopping the engine. "AMO" is ammo.
+- **SCN041/02, SCN041_B** are Judy (わ, かしら). SCN041/01 is Judy or John.
+- **SCN046B1–B2:**
+  - The killer: B1/02, 04, 06, 07, 09–11 and B2/03, 04, 06–08.
+  - Wolg: B1/03, 05, 08 and B2/01, 02, 05.
+  - B1/01 and B3/01–02 are probably Wolg.
+- **The killer's register in SCN046 is crude** (てめぇ, ねえ, しらねー, やがる), unlike the mock courtesy he uses with Judy in SCN038_5C1. R §9.1's note that later killer units "should keep" the courtesy is superseded for SCN046 by the source's own register. NO2_MAINSTORAGE is still to be judged from its source.
+- **SCN046A1–A2** speakers stay partly uncertain (F-009). Every line is speaker-neutral in English, so a corrected attribution changes no text.
+- **SCN046_VALVE** is a female voice (わよ), probably Judy.
+- Glossary: none.
+
+### 13.3 Movable codes and readings (PR Flags 2, 3, 5–8)
+- **Authored codes.** The reviewer's diff of the authored `{br}`/`{p}`/`{w}` sequence against the source, over 52 rows, finds 3 differences, matching Flag 2 exactly.
+  - `:44` `{br}{br}{br}` → `{br}{br}`: the removed `{br}` split 消えていく{br}姿.
+  - `:49` the same: it split 殺したと{br}思ってる.
+  - `:50` `{br}{br}` → `{br}`: it split なんて、{br}数えてる.
+  - Each removed `{br}` fell mid-clause, and keeping it gives 5 lines or a broken clause.
+  - No `{p}` or `{w}`. `…`, `‼`, `⁉` and `──` counts match on all 52 rows. ・ and ～ are not counted glyphs: the name ジェイク・ノーマン drops its ・, and the ～ are rendered as an elongation.
+- **`:40 SCN046B1/07`** 見つけた / いやがった with no object → "found it" / "The damn thing's for real".
+  - Accepted over "her". The source withholds the referent: Wolg asks 何を言っている at `:41`, and the killer later calls her アレ (`:48`) and "not human" (`:44`).
+  - "damn" carries やがる. "her" first appears at `:42`, where the killer starts to explain.
+- **`:55 SCN046_VALVE/01`** ト・マ・ラ・ナ・イ・ワ・ヨ…… → `It・will・not・stop……` (18). Accepted.
+  - ・ is in the font, and CHECK passes it.
+  - It keeps the halting, mora-by-mora delivery as word-by-word. "will not", uncontracted, carries わよ.
+  - "It" is the engine at the fuel valve (NO3_CHAPEL/0126). The `……` count is kept.
+  - In-game appearance noted under F-002.
+- **`:8 SCN041_B/03`** "I wonder why I shielded you?" Accepted.
+  - The ？ follows the source's かしら？ (PROJECT.md §6: punctuation follows the source).
+  - The reorder (step 6, flagged) avoids "wonder?" alone on a line. It is 28 on one wrapped line.
+- **`:23 SCN046A2/01`** "Bill… it's game over." conforms to R §11.3: 、 is absorbed after `…`, with a lowercase continuation.
+- **`:37 SCN046B1/04`** echoes SCN038_5C1/09's frame ("I never dreamed I'd … meet you in a place like this"), crude here, and "either" carries 俺も (R §9.4).
+- **Step-5/6 departures, flagged and accepted:**
+  - `:46` お得意の神 → "that god of yours".
+  - `:48` となる → "I become".
+  - `:36` 逃がさん → "You'll never escape again" (an agency shift; "I won't let you get away again" is 30 on an authored-`{br}` line).
+  - `:54` やるべきこと → "work to do".
+  - `:35` 久しぶりだな。 → "Long time,".
+- **Non-blocking:** each of these carries register by word choice (translation_prompt.md §2), and none changes sense.
+  - `:44` "with my own eyes" carries 俺様は…んだよ.
+  - `:39` "Pure chance" carries だよ.
+  - `:49` drops と思ってるんだ, which is idiomatic in the accusation and needed to hold 4 lines.
+- Glossary: the ～ row note (§13.1).
+
+### 13.4 Recurrences (PR Flag 9)
+- **Translated, identical:**
+  - The vote prompts ×4 are byte-identical: `When you're ready, raise your right hand.` / `Open your hand.`
+  - `:22` すまん…。 = SCN038D/12 `Sorry…`.
+  - `:34` `………。` → `………` = NO4_BAR/0201, 0265, 0430, NO4_HWR_FRONT/0057, 0092, SCN038_5C1/10. NO4_HWR_FRONT/0033 `………` matches at the normalised level, with the same target.
+- **Untranslated twins**, which CHECK pairs once translated:
+  - `………。`: NO3_NO4/0007, 0061 (exact); NO4_MACHINER90/0108, NO4_TOOL_ROOM/0025, 0060 (tag variants).
+  - The labelled `_T` hits are covered by R §5.6 and §6.4.
+- **For later units:**
+  - NO3_CHAPEL/0122 右手に握れ should match the prompt's "right hand" wording.
+  - NO2_MAINSTORAGE/0003, 0009, 0012 女神 → "goddess" (俺様 row).
+- Glossary: none.
