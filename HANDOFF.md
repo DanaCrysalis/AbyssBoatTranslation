@@ -23,7 +23,7 @@ Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEA
 Wave 4, dispatched 2026-10-25 — translator round 1 each; branch `tl/<store>-<id>`; no PR yet:
 | Unit | Branch | PR | State | Next |
 |---|---|---|---|---|
-| script NO4_HWR_FRONT.p03 | tl/script-NO4_HWR_FRONT.p03 | — | translating (agent af5978371ed6bd35d) | translator opens PR |
+| script NO4_HWR_FRONT.p03 | tl/script-NO4_HWR_FRONT.p03 | #14 | PR open, e424309; SCR 54,355 free, max 4 rows/page (agent af5978371ed6bd35d) | review behind the barrier |
 | script NO4_MACHINER90.p01 | tl/script-NO4_MACHINER90.p01 | — | translating (agent a96acb0b4138cf690) | translator opens PR |
 | script NO4_MACHINER90.p02 | tl/script-NO4_MACHINER90.p02 | — | translating (agent a6c058ae7cfa40cfd) | translator opens PR |
 | scene SCN047-EPILOG | tl/scene-SCN047-EPILOG | — | translating (agent a197ccbb3deb8d732) | translator opens PR |
