@@ -195,6 +195,19 @@ so; the reviewer moves the row up into its section in the integration commit. --
 | Source | Variants | Proposed | Alternatives | Where seen | Wave |
 |---|---|---|---|---|---|
 | 無線室 | — | the radio room | — | NO6_BRIDGE/0001, 0006; rooms/107, items/011, hints/001–002 (cap 14 as a room name); 2 / 0 / 4 | 1 |
+| ワイヤーリフト | — | the wire lift | the winch line | NO4_ENTRANCE/0004, 0005; 2 / 0 / 0 | 5 |
+| カードキー | — | card key | keycard | NO4_SHOP/0001; items/010 (item name, F-006); 1 / 0 / 1 | 5 |
+| 売店 | 売店のカウンター | the shop; 売店のカウンター: the shop counter | the kiosk | NO4_HWL_BACK/0018 = NO4_HWL_BACK2/0014 (byte-identical sources, one target); 2 / 0 / 0 | 5 |
+| 両替所 | 両替所のカウンター | the currency exchange; …のカウンター: the exchange counter | the exchange desk | NO4_P_OFFICE/0012 (same frame as the 売店 row: keep the wording parallel); 1 / 0 / 0 | 5 |
+| 哺乳類 | — | mammal(s) | — | NO4_TOOL_ROOM/0017, 0019, 0022, 0029, 0031, 0033, 0034, 0037, 0064 — p01 and p02 must agree; 9 / 0 / 0 | 5 |
+| 感覚器官 | — | sensory organs | sense organs | NO4_TOOL_ROOM/0035, 0037; 2 / 0 / 0 | 5 |
+| 幼生体 · サナギ | — | larva · pupa | larval form · chrysalis | NO4_TOOL_ROOM/0072 (Judy's taxonomy register); 1 / 0 / 0 | 5 |
+| クローン羊 | — | the cloned sheep | Dolly the sheep (adds a name: avoid) | NO4_TOOL_ROOM/0053; 1 / 0 / 0 | 5 |
+| 生存者 | — | survivor(s) — same word as 生き残り (§2) | — | NO4_HWL_FRONT/0008; 1 / 0 / 0 | 5 |
+| 乗組員 | — | crew member(s); the crew | — | NO4_STORAGE/0004; 1 / 0 / 0 | 5 |
+| ロッカー | — | locker | — | NO4_TOOL_ROOM/0080, NO5_LOCKERROOM/0004–0007, NO2_MAINSTORAGE/0029–0030; rooms/086; 7 / 0 / 1 | 5 |
+| 懐中電灯 | — | flashlight | torch | NO4_SHOP/0005; items/006 (item name, F-006); 1 / 0 / 1 | 5 |
+| 解剖 | — | dissect / dissection | autopsy (human bodies only) | NO4_HWL_FRONT/0001, NO4_TOOL_ROOM/0011 — b02 and p01 must agree; 2 / 0 / 0 | 5 |
 
 ## 10. Open questions
 <!-- one line each, with the FLAGS id. A closed question is deleted here; its answer stays in rulings.md. -->
