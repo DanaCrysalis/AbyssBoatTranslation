@@ -1055,3 +1055,124 @@ Census counts are rows per store (script / scene / system), from the reviewer's 
 - 0447 opens with なんだと⁉ → "What⁉", as 0245; not a duplicate row (0447 continues).
 - In context, not duplicates: NO4_HWL_KAIDAN/0005–0006 バリケード, NO6_TOOLROOM/0001 チェーンカッター.
 - Glossary: none.
+
+## Unit script NO4_HWR_FRONT.p02 (PR #10, MERGED, 2026-10-25)
+
+The starboard front corridor after Miller's death. Judy comforts John. A man tells Judy that John blames himself and will draw his gun next time ("the sanctity of life"). The surface crew is still searching for the ship on sonar. Judy tells John about William's sister. Wolg gives the marching order, and the starboard search begins at the deck sign. Reviewed once:
+- **Round 0** (968ac4c, merged with main 964d3c5 for review): MERGE, squash c755736. Every gate passed, and there were no must-change findings.
+
+Figures:
+- **Container.** With p01 and p02 merged: NO4_HWR_FRONT.SCR 11,013 / 65,535 bytes, 54,522 free; tokens 291 / 1,499 (MEASURE).
+  - p02 costs 489 bytes over p01's 55,011 free.
+  - The PR measured 1,004 bytes without p01. The dictionary rebuilds over both parts.
+  - 104 / 150 rows are translated; p03 (0101–0150) is wave 4.
+- **Pages.** At most 4 rows per page (UNITCHECK, 51 rows, 0 violations). The whole store: 589 rows, 0 violations.
+- **Ratio.** 2,281 target ÷ 1,018 source characters = 2.24 (`codec.char_count`).
+- **Duplicates.** CHECK compared 46 duplicate pairs (main's 44 + 0057, 0092) and 2 tag-variant pairs.
+  - The reviewer's census made 106,386 source-side comparisons: 51 rows × every other script, scene and system dump row.
+  - It ran at three levels: exact; `{p}{w}{br}` stripped; `【Name】` stripped, with ！？ → ⁉ and final punctuation normalised.
+  - It found 51 hits, 12 of them translated pairs, with 0 divergences (§12.4).
+- **F-011 wrap scan.** The reviewer's own scan of `build/script_merged.tsv` aligned the wrapped text token for token with the authored target, and examined 106 lines.
+  - No lone "a", "I" or "an"; no split title; no wrap-made one-word row; no word-initial apostrophe.
+  - Three lines end in "the" (0062, 0077, 0085), which is allowed (R §1.12 rule 2).
+  - Lines ended by an authored `{br}` are 27 at most (`len()`).
+
+Census counts are rows per store (script / scene / system), from the reviewer's grep of `dumps/` on 2026-10-25. Line citations use PROJECT.md §7's numbering in `tl/script/NO4_HWR_FRONT.p02.tsv` (line = row number − 46).
+
+### 12.1 Terms promoted from §9, the deck sign, and one stock phrase
+- **右舷 · 左舷** → `starboard` · `port` (9 · 4), lowercase in dialogue.
+  - Census: 右舷 1 / 0 / 9, 左舷 1 / 0 / 5. The one script row is NO4_HWR_FRONT/0096.
+  - The system rows are the corridor room names 第Nデッキ右舷廊下 / 左舷廊下 (rooms/000, 020, 028, 043, 046, 060, 067, 070, 081, 087, 100, 101, 103 …).
+  - "Deck 4 Starboard Corridor" is 25 characters. Even "Deck 4" + "Starboard" is 16, over the 14-character room cap, so the system translator needs an abbreviation (F-021).
+  - Binds `:50 0096` "We search port once we've finished with starboard.".
+  - Glossary: §2 row added; §9 row removed.
+- **エントランスホール** → `entrance hall` (13).
+  - It is lowercase in dialogue and narration (NO4_4102/0001, NO4_STORAGE/0002), and capitalised `Entrance Hall` on a sign (0100, NO4_HWL_BACK/0017, NO4_HWL_BACK2/0013, NO5_HW_R/0009) and as a room name (rooms/066, 084; 13 ≤ 14).
+  - Census: 6 / 0 / 2. "lobby" was the alternative; it is rejected because the source names a hall.
+  - Binds `:54 0100`.
+  - Glossary: §2 row added; §9 row removed.
+  - The §2 ホール row's pointer "(§9)" now reads "(§2)". This is a pointer change only: no target changes, and no shipped line is affected.
+- **The deck sign** 『フロアーインフォメーション』 / パーサーオフィス／メインダイニング / ラウンジ／ビアー＆ラガーズ／キャビン / エントランスホール.
+  - Source: NO4_HWR_FRONT/0097–0100 = NO4_HWL_BACK/0014–0017 = NO4_HWL_BACK2/0010–0013, byte-identical in the source column. NO4_HWR_FRONT/0097 = NO5_HW_R/0008, whose sign then lists different entries (0009–0011).
+  - Census: フロアーインフォメーション 4 / 0 / 0; パーサー 3 / 0 / 1 (rooms/065); メインダイニング, ラウンジ 3 / 0 / 0 each; ビアー＆ラガーズ 4 / 0 / 0 (with NO4_HWR_FRONT/0102); キャビン 3 / 0 / 15 (room names, R §1.6).
+  - Target, as shipped:
+    ```
+    "Floor Information"{br}
+    Purser's Office/Main Dining{br}
+    Lounge/Beer & Lagers/Cabins{br}
+    Entrance Hall, it reads.{p}
+    ```
+    - Measured with `len()`, the rows are 19, 27, 27 and 24. The page is 4 rows.
+  - Reasoning:
+    - 『』 → `"…"` (PROJECT.md §5.1).
+    - The entries are capitalised, as signage.
+    - The source's ／ is unspaced, and so is the `/`. Spaced, the first entry row is 31 and wraps.
+    - キャビン → "Cabins" keeps "cabin" for キャビン (R §1.6).
+    - The leading full-width indent of rows 2–4 is dropped. `assemble.py` rejects a target where `tgt != tgt.strip()`, and Python's `strip()` removes U+3000, so the indent cannot be authored. This is a tool limit recorded in F-022, not a blind spot.
+  - The three copies are bound byte for byte, and CHECK pairs them when NO4_HWL_BACK and NO4_HWL_BACK2 are translated.
+  - "Purser's Office" (15) is over the rooms/065 cap of 14 (F-021). The sign keeps it, and the room name is decided with the system store.
+  - Binds `:51 0097` – `:54 0100`.
+  - Glossary: §2 rows added for フロアーインフォメーション, パーサーオフィス, メインダイニング, ラウンジ, ビアー＆ラガーズ and キャビン; §9 row removed.
+- **と書かれている** → `it reads` (8).
+  - Census: 7 / 0 / 0: NO4_HWL_BACK/0017, NO4_HWL_BACK2/0013, NO4_HWR_FRONT/0100, 0102, NO4_SHOP/0006, NO5_BANK/0005, NO5_HW_R/0011.
+  - Pattern: `"«text»," it reads.` for a quoted 『』 text (0102 `"Beer & Lagers," it reads.`; NO4_SHOP/0006 and NO5_BANK/0005 `『本日の船内イベント案内』と書かれている`). After the last entry of a multi-row sign: `«last entry», it reads.` (0100).
+  - NO5_HW_R/0011 has the phrase alone on its row after a sign, and is rendered in context.
+  - Binds `:54 0100`.
+  - Glossary: §6 row added.
+- **妹 · 妹さん** (R §10.1): 0075 "His sister…", 0080 "his sister's death" and 0082 "his sister's death" conform to the row promoted by #13. No change.
+
+### 12.2 Speakers (PR Flag 4; points decided in review)
+- There is no `_T` draft of this scene, so speakers are named from content (F-009).
+  - Judy: 0050–0054, 0057, 0061, 0063, 0075–0086 (the よ/わ endings), 0095.
+  - Wolg: 0087–0089, 0091, 0093.
+  - William: 0090 (かよ). 0092 is probably William.
+  - Narration: 0097–0100.
+- **0055–0056, 0058–0060, 0062**, the man who tells Judy about John:
+  - He uses **no first-person pronoun**, so #13's 俺-against-わし test (R §10.2) cannot be applied.
+  - His one marked form, 君 (0056), occurs in 1 script row, this one. It appears in 0 of Oakland's 42 labelled rows and 0 of Wolg's 29.
+  - His knowledge of John's inner state fits Oakland, John's father, but the evidence cannot settle it: Oakland or Wolg.
+- **0064–0074**: the surface crew. A sonar operator, a crewman, and a superior who orders the dives.
+  - 見失ってからもう何日経ってる counts the days since they lost the ship, so this may be the present, not a flashback. The English tenses read either way.
+- **0094 まっ、待つんだ、ウォルグ！**: William or Oakland. **0096**: Oakland or Wolg.
+- Every uncertain line is speaker-neutral, so a corrected attribution changes no text. Recorded in F-009.
+- **F-018.** 0082 ミラーの時 and 0052–0054 (あの人の油断が招いた結果, 彼女は戻らない) establish that Miller has died and that John blames himself. This agrees with F-018's reading of NO4_BAR/0402, and nothing shipped changes.
+- Glossary: none.
+
+### 12.3 Movable codes and readings (PR Flags 2, 3, 6)
+- **Authored codes.** The authored `{br}`/`{p}`/`{w}` diff against the source matches Flag 2 exactly:
+  - `:31 0077` `{p}` → `{br} {p}`: a leading `{br}` on the unit's only F-012 boundary (after the untagged 0076), at a sentence boundary.
+  - `:32 0078` `{br} {br}` → `{p} {br}`: an added `{p}`. Without it, the page 0078 + 0079 is 5 rows. The source's page there is 3 rows, so the overflow is not inherited.
+    - The click follows "She hadn't long to live……". The English makes the から clause its own sentence, and the causal link is carried by juxtaposition.
+  - Every other `{br}` follows the same sentence as in the source. There is no `{w}`.
+- **Glyphs.** `…` `‼` `⁉` `──` `！？` counts match on all 51 rows. The unit has no `…、`, so R §11.3 does not apply.
+  - Mid-sentence `…` continues in lowercase (0056, 0058, 0075, 0084).
+  - 0086 ごめんなさい…行きましょう is two sentences, so "Let's" keeps its capital.
+- **Step-5/6 departures and readings (PR Flag 6), accepted:**
+  - 0052 招いた結果 → "brought it on".
+  - 0062 / 0063 生命の尊さ → "the sanctity of life". The halting echo "The sanctity, of life…?" moves the pause from after 生命の to after "sanctity". It still reads as halting.
+  - 0061 the noun echo of 0058.
+  - 0068 午後一番 → "first thing this afternoon"; numbers spelled out (R §1.4).
+  - 0070 潮目 → "a current boundary", 目視 → "by eye".
+  - 0074 救護班 → "the rescue team", フロート → "floats".
+  - 0075 殺された → "was murdered, they say".
+  - 0078 って → "he said".
+  - 0087 一定間隔をとって → "at intervals", meaning spaced.
+  - 0089 かまわず → "don't stop for anything".
+  - 0091 いくらか → "somewhat".
+- **Non-blocking:**
+  - 0067 じゃあ、どうしろってんだ‼ → "Then what should we do‼" loses the retort in って. "Then what do you want us to do‼" would be closer.
+  - 0082 "Just as you felt it, when Miller died……" could be smoother as "just as you did when Miller died".
+  - Neither change is required.
+- Glossary: none.
+
+### 12.4 Recurrences (PR Flag 7)
+- **Translated, identical:** 0057 = 0092 `………` = NO4_BAR/0201, 0265, 0430, SCN038_5C1/10. NO4_HWR_FRONT/0033 matches at the normalised level. Sibling PR #11's head renders SCN046B1/01 `………`, the same.
+- **Untranslated exact twins, which CHECK pairs once translated:**
+  - 0057 / 0092 = NO3_NO4/0007, 0061.
+  - The sign 0097–0100 = NO4_HWL_BACK/0014–0017 = NO4_HWL_BACK2/0010–0013.
+  - 0097 = NO5_HW_R/0008.
+- **For later units:**
+  - NO4_HWR_FRONT/0102 (p03, wave 4) `『ビアー＆ラガーズ』と書かれている。{p}` → `"Beer & Lagers," it reads.{p}`.
+  - NO5_HW_R/0009 starts with `Entrance Hall` and uses unspaced `/` like this sign.
+  - The other normalised hits are the labelled `_T` rows and tag variants, as R §5.6 and §11.5 list them.
+- Glossary: none.

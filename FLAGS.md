@@ -138,6 +138,9 @@ uncertain and are rendered speaker-neutral:
 - B/01 (William or Heming), B/04 and B/13 (Judy or Heming), B/06, B/08 and B/21 (probably Heming).
 - D/02, 04, 05, 07–09 (Wolg or Oakland), D/12 (Wolg, Oakland or Heming).
 The 5C1/5C2 speaker is the killer, except 5C1/01, 07 and 10 (Judy) (rulings R §9.2).
+NO4_HWR_FRONT.p02 (PR #10): 0055–0056, 0058–0060, 0062 (Oakland or Wolg: no first-person pronoun;
+his 君 at 0056 is in 0 labelled rows), 0094 (William or Oakland) and 0096 (Oakland or Wolg) stay
+uncertain and are rendered speaker-neutral (rulings R §12.2).
 NO4_HWR_FRONT.p01 (PR #13): no `_T` draft exists, so speakers are named from content. Collison
 (0011–0013) and William (0025, 0027, 0029, 0031, 0033, 0035, 0038–0039, 0042, 0044, 0046, 0048) are certain. John's partner (every other message row)
 is not Oakland, whose 42 labelled rows use わし and never 俺, while the partner says 俺. He is Heming
@@ -223,6 +226,9 @@ shipped depends on it. The translator of NO4_BAR.p08 and later units confirms fr
 names the victim, no p07 text changes · rulings R §8.2.
 NO4_BAR.p08 (PR #12): no line in 0410–0461 names the victim and Miller has none; nothing changes
 (rulings R §11.2).
+NO4_HWR_FRONT.p02 (PR #10): 0082 ミラーの時、あなたが感じた様に and 0052–0054 (あの人の油断, 彼女は戻らない)
+establish that Miller has died with John blaming himself, which agrees with the reading above;
+nothing shipped changes (rulings R §12.2).
 
 
 ### F-019 · 2026-10-25 · script · OPEN
@@ -238,6 +244,23 @@ The 倉庫 row's form for the room names `rooms/053`, `069`, `105` (第３/第�
 bytes). The system translator needs a shorter form (e.g. "Deck 3 Store", 12) once F-006 unblocks the
 store; items/013 【第３デッキ倉庫の鍵】 has its own 43-character cap · PR #12 Flag 9 · rulings R §11.1.
 
+
+### F-021 · 2026-10-25 · system · OPEN
+Room names over the 14-character cap (glossary §8) in the forms the script fixes: `rooms/065`
+パーサーオフィス "Purser's Office" (15; the deck sign, NO4_HWR_FRONT/0098, keeps it), and the corridor
+names 第Nデッキ右舷廊下 / 左舷廊下 (`rooms/000`, `020`, `028`, `043`, `046`, `060`, `067`, `070`, `081`, `087`,
+`100`, `101`, `103` …; 9 + 5 rows), where "Deck 4" + "Starboard" alone is 16. The system translator
+needs short forms (e.g. "Purser Office" 13) once F-006 unblocks the store · PR #10 Flag 5 · rulings
+R §12.1.
+
+### F-022 · 2026-10-25 · tools · OPEN
+A leading full-width indent cannot be authored: `assemble.py` CHECK rejects a target with
+`tgt != tgt.strip()`, and Python's `strip()` removes U+3000. 12 script source rows open with 　
+(NO3_NO2/0002; the deck-sign copies NO4_HWR_FRONT/0098–0100, NO4_HWL_BACK/0015–0017,
+NO4_HWL_BACK2/0011–0013; NO5_HW_R/0009–0010), so their targets ship flush left
+(`tl/script/NO4_HWR_FRONT.p02.tsv:52`–`:54`, PR #10 Flag 3). Harmless as shipped; a tool PR that
+allows a leading U+3000 (or a typed indent tag) would restore the layout, a human decision ·
+rulings R §12.1.
 
 ## CHECK positive controls
 <!-- One entry per kind of violation deliberately planted and caught by CHECK (tools/README.md rule 3).

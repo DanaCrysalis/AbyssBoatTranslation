@@ -43,7 +43,7 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | 食料庫 | — | the food storeroom | 18 | — | lowercase in dialogue; the room name (rooms/044) is decided with the system store | R §2.1 |
 | 下層 | — | the lower decks | 15 | — | the ship's own lower decks, above the party now the ship is capsized | R §2.1 |
 | フロア | フロアー | floor | 5 | — | 下層のフロア → "a floor on the lower decks" | R §2.1 |
-| ホール | — | the hall | 8 | — | lowercase in dialogue; エントランスホール is its own row (§9) | R §2.1 |
+| ホール | — | the hall | 8 | — | lowercase in dialogue; エントランスホール is its own row (§2) | R §2.1 |
 | 甲板 | — | deck ("on deck") | 4 | — | the ship's open deck; never デッキ (第Nデッキ → "Deck N") | R §2.1 |
 | 社長 | — | the boss | 8 | — | Oakland, as his crew calls him; in direct address "boss" | R §3.1 |
 | 上の連中 | — | the people up top | 17 | — | the salvagers' surface crew; 上 alone for the same crew takes the same words (SCN002/05); 下の連中 is not fixed | R §3.2, §4.2 |
@@ -57,6 +57,14 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | 中央ダクト | — | the central duct | 16 | — | lowercase; NO4_BAR/0302 only | R §7.1 |
 | 操舵室 | 操舵室のデッキ | the wheelhouse; 操舵室のデッキ: the wheelhouse deck | 14; 19 | — | lowercase in dialogue; never "the bridge" (ブリッジ, rooms/108); 2 / 0 / 0 | R §11.1 |
 | 倉庫 | 第Nデッキ倉庫 | storeroom ("the storeroom"; "the Deck 3 storeroom") | 9 | 14 (room names, F-006) | lowercase in dialogue; 食料庫 stays "the food storeroom"; "Deck 3 Storeroom" (16) is over the room cap (F-020) | R §11.1 |
+| 右舷 · 左舷 | — | starboard · port | 9 · 4 | — | lowercase in dialogue (NO4_HWR_FRONT/0096); 1 / 0 / 9 · 1 / 0 / 5; room names (第Nデッキ右舷廊下 …) over cap 14 in any full form (F-021) | R §12.1 |
+| エントランスホール | — | entrance hall; on a sign or as a room name: Entrance Hall | 13 | 14 (rooms/066, 084) | lowercase in dialogue and narration (NO4_4102/0001, NO4_STORAGE/0002); 6 / 0 / 2 | R §12.1 |
+| フロアーインフォメーション | 『フロアーインフォメーション』 | "Floor Information" (the deck-sign title) | 19 | — | 4 / 0 / 0; sign entries joined by unspaced "/", ≤ 27 per `{br}` row, indent dropped (F-022) | R §12.1 |
+| パーサーオフィス | — | Purser's Office | 15 | 14 (rooms/065, F-021) | capitalised, a sign entry; 3 / 0 / 1 | R §12.1 |
+| メインダイニング | — | Main Dining | 11 | — | capitalised, a sign entry; 3 / 0 / 0 | R §12.1 |
+| ラウンジ | — | Lounge | 6 | — | capitalised, a sign entry; 3 / 0 / 0 | R §12.1 |
+| ビアー＆ラガーズ | 『ビアー＆ラガーズ』 | Beer & Lagers | 13 | — | the bar's name, capitalised; 4 / 0 / 0 (NO4_HWR_FRONT/0102 `"Beer & Lagers," it reads.`) | R §12.1 |
+| キャビン | キャビンＮＮＮＮ (rooms/*) | cabin; on the sign: Cabins; room names: Cabin NNNN | 5; 6; 10 | 14 (room names) | 部屋 stays "room" (R §1.6); 3 / 0 / 15 | R §1.6, §12.1 |
 
 ## 3. Items, currency, mechanics
 | Source | Variants | Target | Cols | Cap | Note | Ruling |
@@ -128,6 +136,7 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | 妹 | 妹さん | sister: "my sister" / "his sister"; the echo 妹？ → "Sister?" | 6 | William's dead sister; 妹さん drops さん (R §1.2) → "his sister" (NO4_HWR_FRONT/0075, 0080); SCN038D/17 "To my sister…" | R §10.1 |
 | 親玉 | — | the big one | 11 | the parent monster, NO4_BAR/0438 only; never "boss" (社長) | R §11.1 |
 | 巣 | 化け物の巣 | nest; 化け物の巣: the monster's nest ("a monster's nest" at 0368) | 4; 18 | 4 / 0 / 0; 蜘蛛の巣 (NO5_BANK/0006) is a web, in context | R §11.1 |
+| と書かれている | — | it reads: `"«text»," it reads.`; ending a multi-row sign: `«last entry», it reads.` | 8 | 7 / 0 / 0; NO5_HW_R/0011 (alone on its row, after the sign) in context | R §12.1 |
 
 ## 7. Register per character
 | Character | Register | Contractions? | Markers | Ruling |
@@ -157,11 +166,8 @@ NOT decisions. The first translator to render one promotes it in the PR's Glossa
 so; the reviewer moves the row up into its section in the integration commit. -->
 | Source | Variants | Proposed | Alternatives | Where seen | Wave |
 |---|---|---|---|---|---|
-| 右舷 · 左舷 | — | starboard · port | — | room names, dialogue | setup |
 | 無線機 | — | the radio | the radio set | NO4_HWR_FRONT/0103 (near-duplicate of NO4_BAR/0171, R §3.6); 1 / 0 / 0 | 1 |
 | 無線室 | — | the radio room | — | NO6_BRIDGE/0001, 0006; rooms/107, items/011, hints/001–002 (cap 14 as a room name); 2 / 0 / 4 | 1 |
-| エントランスホール | — | entrance hall | lobby | NO4_4102/0001, NO4_HWL_BACK/0017, NO4_HWR_FRONT/0100 …; 6 / 0 / 2 rows (rooms/066, 084); ホール alone is fixed in §2 (R §2.1) | 1 |
-| 『フロアーインフォメーション』 · パーサーオフィス · メインダイニング · ラウンジ · ビアー＆ラガーズ · キャビン | — | "Floor Information" · Purser's Office · Main Dining · Lounge · Beer & Lagers · Cabins | Purser · Dining | the deck sign NO4_HWR_FRONT/0097–0100 = NO4_HWL_BACK/0014–0017 = NO4_HWL_BACK2/0010–0013, byte-identical; `{br}`-ended lines, 27 cols with the leading space; 3 / 0 / 1 | 3 |
 | クライド | — | Clyde | — | SCN046A2/02, Oakland to the one who betrays him (likely Heming's given name); 0 / 1 / 0 | 3 |
 | ジェイク・ノーマン | — | Jake Norman | — | SCN046B1/03, Wolg naming the killer; 0 / 1 / 0 | 3 |
 | ウスノロ | — | dimwit ("my dear dimwit") | slowpoke | SCN046B1/02, B2/06, B2/07, the killer's word for his victims; 0 / 3 / 0 | 3 |

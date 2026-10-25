@@ -24,7 +24,7 @@ Wave 3, dispatched 2026-10-25, glossary seeds 1c36061 (§9, 15 rows). Base `main
 |---|---|---|---|---|
 | script NO4_BAR.p08 | `tl/script-NO4_BAR.p08` | #12 | **MERGED** — squash c39677d (round 0 CHANGES: 0441 なくていい as prohibition, 0424 `…、` ruling; round 1 MERGE); 52 rows, max 4 rows/page; NO4_BAR.SCR 37,378 free (485/485); CHECK 44 dup pairs; integration: this commit (glossary §2/§3/§6 +8 rows, rulings §11, F-019, F-020) | coordinator: wave close |
 | script NO4_HWR_FRONT.p01 | `tl/script-NO4_HWR_FRONT.p01` | #13 | **MERGED** round 0, squash 28d44a9; 53 rows, max 4 rows/page, NO4_HWR_FRONT.SCR 55,011 free (p02 not merged), ratio 2.13; CHECK 38 + 2 pairs; 4 §9 seeds promoted (R §10); wave 4 p03 copies 0013's target at 0144 (R §10.4) | coordinator: wave close |
-| script NO4_HWR_FRONT.p02 | `tl/script-NO4_HWR_FRONT.p02` | #10 | PR open, round 0; NO4_HWR_FRONT.SCR 55,181 free (p01 not merged) | reviewer, behind the barrier |
+| script NO4_HWR_FRONT.p02 | `tl/script-NO4_HWR_FRONT.p02` | #10 | **MERGED** round 0, squash c755736; 51 rows, max 4 rows/page; NO4_HWR_FRONT.SCR 54,522 free with p01 (104/150), ratio 2.24; CHECK 46 + 2 pairs; integration: this commit (glossary §2 +8 rows, §6 と書かれている; rulings §12; F-021 room caps, F-022 indent; F-009/F-018 notes); p03 0102 takes `"Beer & Lagers," it reads.` (R §12.4) | coordinator: review #11, then wave close |
 | scene SCN041-SCN046 | `tl/scene-SCN041-SCN046` | #11 | PR open, round 0; 52 subtitles, max 4 lines | reviewer, behind the barrier |
 
 ## Next up
