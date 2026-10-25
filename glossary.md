@@ -177,6 +177,18 @@ so; the reviewer moves the row up into its section in the integration commit. --
 |---|---|---|---|---|---|
 | 無線機 | — | the radio | the radio set | NO4_HWR_FRONT/0103 (near-duplicate of NO4_BAR/0171, R §3.6); 1 / 0 / 0 | 1 |
 | 無線室 | — | the radio room | — | NO6_BRIDGE/0001, 0006; rooms/107, items/011, hints/001–002 (cap 14 as a room name); 2 / 0 / 4 | 1 |
+| ボンベ | — | air tank(s) | the tanks · oxygen tanks | NO4_HWR_FRONT/0124, NO4_MACHINE/0002, NO4_MACHINE_T/0001 (the diving tanks someone smashed); 3 / 0 / 0 | 4 |
+| 【女】 (label in a message) | — | 【Woman】, brackets kept as in the `_T` files | 【Girl】 | NO4_HWR_FRONT/0123, 0129 (Judy, unnamed yet); 14 more in `_T`; 16 / 0 / 0 | 4 |
+| ブリッジ | — | the bridge (lowercase in dialogue); room name: Bridge | — | NO4_MACHINER90/0019, 0020, 0028, 0029; NO6_BRIDGE/0017; rooms/108; 操舵室 stays "the wheelhouse"; 5 / 0 / 1 | 4 |
+| 船体 | — | the hull | the ship | NO4_MACHINER90/0022, 0098; NO4_HWL_BACK/0007, NO4_SHOP/0005, NO4_BAR_T/0180; SCN047C1/05 (the alien vessel, in context); 5 / 1 / 0 | 4 |
+| 雇い主 | — | employer | — | as shipped NO4_BAR/0127; NO4_MACHINER90/0036; 3 / 0 / 0 | 4 |
+| 乗客 | — | passenger(s) | — | as shipped NO4_BAR/0028, 0094; NO4_HWR_FRONT/0122; 15 / 0 / 0 | 4 |
+| 生き物 | — | creature | — | as shipped NO4_BAR/0040; NO4_MACHINER90/0064, 0072; NO4_TOOL_ROOM ×5; 9 / 0 / 0 | 4 |
+| 虫 | — | bug | insect (that is 昆虫) | NO4_MACHINER90/0050, 0052 …; not 虫の居所 (§6); 24 / 0 / 0 | 4 |
+| 装備 | — | gear | equipment | as shipped NO4_BAR/0129, 0212, 0305; NO4_MACHINER90/0016, 0084; 潜水装備 stays "diving gear"; 16 / 0 / 6 | 4 |
+| 人間 | — | human(s); "people" where the line is general | — | as shipped NO4_BAR/0132, 0246, NO4_HWR_FRONT/0003; SCN046B2/01; SCN047C2/04–05 ("human"); 21 / 5 / 0 | 4 |
+| 実験 · 検体 · フェーズ２ | — | experiment · specimen · Phase 2 | test subject (検体) | SCN047A/01, 03, SCN047C1/03, EPILOG/03; 0 / 3 / 0 · 0 / 1 / 0 · 0 / 1 / 0 | 4 |
+| 処分 | — | dispose of (SCN047A/03, C1/05); NO4_MACHINER90/0036 それなりの処分 in context ("face the consequences") | — | 1 / 2 / 0 | 4 |
 
 ## 10. Open questions
 <!-- one line each, with the FLAGS id. A closed question is deleted here; its answer stays in rulings.md. -->
