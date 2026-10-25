@@ -25,7 +25,7 @@ Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEA
 | script NO4_BAR.p05 | `tl/script-NO4_BAR.p05` | #6 | **MERGED** round 0, squash c6858ea; NO4_BAR.SCR 36,376 free, 58 rows, max 4 rows/page, ratio 2.22, 29 dup pairs; 客船 便所 ソナー 死体 見張り promoted (R §6) | nobody — merged |
 | script NO4_BAR.p06 | `tl/script-NO4_BAR.p06` | #9 | **MERGED** round 1 (round 0 CHANGES: 4 lone-"a" wraps, 怪物 at 0351), squash 1541592; NO4_BAR.SCR 36,174 free, 58 rows, max 4 rows/page, ratio 2.16, 30 dup pairs; 通風孔 中央ダクト 遺体 ハンドガン 蜘蛛/クモ 昆虫 promoted, フッ added (R §7); F-015 (0321 typo) | nobody — merged |
 | script NO4_BAR.p07 | `tl/script-NO4_BAR.p07` | #8 | round 0 CHANGES (0378 one-word row, 0383 lone "a", restate figures); round 1 pushed by the same translator, head 860c462 (main merged in; 36,053 free) | reviewer: re-review round 1 |
-| scene SCN038 | `tl/scene-SCN038` | #7 | round 0 CHANGES (B/10 battle cry one "a" too many; restate figures after merging main); open questions all accepted; findings sent to the same translator | translator pushes round 1, then re-review |
+| scene SCN038 | `tl/scene-SCN038` | #7 | round 0 CHANGES (B/10 battle cry one "a" too many; restate figures); round 1 pushed by the same translator, head 103d60b (main merged in) | reviewer: re-review round 1, after #8 |
 
 ## Next up
 Wave 2 (QUEUE 2026-10-06): script NO4_BAR.p05 (58 rows, 1,208 chars, ratio 16.27), NO4_BAR.p06 (58,
