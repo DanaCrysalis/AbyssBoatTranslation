@@ -32,6 +32,7 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | «Name»たち | ウォルグたち · ヘイミングたち · ジョンたち | «Name» and the others ("Wolg and the others") | 19 (Wolg, John); 21 (Heming) | — | default for a name + たち; in context where a line wants it (0232); コリスンさんたち is its own row | R §9.1 |
 | クライド | — | Clyde | 5 | — | Heming's given name, Oakland's address to him (SCN046A2/02); 0 / 1 / 0 | R §13.1 |
 | ジェイク・ノーマン | — | Jake Norman | 11 | — | the killer's name (Wolg, SCN046B1/03); ジェイク, ノーマン occur only in the full name; 0 / 1 / 0 | R §13.1 |
+| 【女】 (label in a message) | — | 【Woman】 | 7 | — | brackets kept, in shipped rooms too (NO4_HWR_FRONT/0123, 0129) and in the `_T` files; Judy before she is named; 16 / 0 / 0 | R §14.1 |
 
 ## 2. Factions, places, ranks
 | Source | Variants | Target | Cols | Cap | Note | Ruling |
@@ -53,6 +54,7 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | 第Nデッキ | 第２デッキ … 第６デッキ (full-width digit) | Deck N ("Deck 4") | 6 | 10 (deck names, F-006) | capitalised with an Arabic numeral; デッキ alone (このデッキ, 下のデッキ) is lowercase "deck" in context | R §5.1 |
 | 元警官 | — | ex-policeman | 12 | — | Wolg's past; 警官 alone in context (Miller's sarcastic "cop", NO4_BAR/0231) | R §5.1 |
 | 生き残り | 生き残りグループ | survivor(s); 生き残りグループ: survivor group | 8 (9); 14 | — | the people still alive aboard | R §5.1 |
+| 乗客 | — | passenger(s) | 10 (9) | — | as shipped NO4_BAR/0028, 0094, 0191, 0198, 0393; NO4_HWR_FRONT/0122 "a passenger on board this ship"; 15 / 0 / 0 | R §14.1 |
 | 客船 | — | passenger ship | 14 | — | this ship; 例の客船 → "that passenger ship" (0279) | R §6.1 |
 | 便所 | — | the toilet | 10 | — | lowercase; Collison's word (0292, NO4_HWR_FRONT/0011) | R §6.1 |
 | 通風孔 | — | air vent; "the vent" / "vent(s)" after first mention | 8; 8 | — | lowercase; "the air vent" at a scene's first mention (NO4_BAR/0294), then "vent" | R §7.1 |
@@ -75,7 +77,9 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | 電波 | — | radio waves | 11 | — | ＶＬＦ帯の電波 → "VLF-band radio waves" | R §3.1 |
 | 超音波 | — | ultrasound | 10 | — | | R §3.1 |
 | 長波 | — | longwave | 8 | — | | R §3.1 |
-| 無線装置 | — | radio equipment | 15 | — | 無線機 and 無線室 are §9 rows; 装置 and 設備 alone are not fixed | R §3.1 |
+| 無線装置 | — | radio equipment | 15 | — | 無線機 is its own row; 無線室 is a §9 row; 装置 and 設備 alone are not fixed | R §3.1, §14.1 |
+| 無線機 | — | the radio | 9 | — | NO4_HWR_FRONT/0103 only (1 / 0 / 0); 無線装置 stays "radio equipment" | R §14.1 |
+| ボンベ | — | air tank(s) | 9 (8) | — | the diving tanks someone smashed: NO4_HWR_FRONT/0124, NO4_MACHINE/0002, NO4_MACHINE_T/0001; 3 / 0 / 0 | R §14.1 |
 | 潜水艇 | — | submersible | 11 | — | never "submarine" (潜水艦, 0 rows) | R §3.1 |
 | 地上用の設備 | — | land-based equipment | 20 | — | NO4_BAR/0175 and SCN011/04 | R §3.2 |
 | 回転 (the ship) | — | roll over (noun: roll) | 9 (4) | — | the capsized ship turning on its long axis | R §3.1 |
@@ -146,6 +150,7 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | 神 | — | god, lowercase ("a god", "that god of yours") | 3 | SCN046B2/02–05; 女神 is the 俺様 row's "goddess"; NO4_BAR_T/0144 神は──主は in context; 1 / 4 / 0 (女神 3 / 0 / 0) | R §13.1 |
 | 生肝 | — | raw liver | 9 | SCN046B2/04 only (アレの生肝 → "that thing's raw liver"); 0 / 1 / 0 | R §13.1 |
 | ゲームオーバー | — | game over ("it's game over") | 9 | in dialogue, SCN046A2/01 only (Heming to Oakland); 0 / 1 / 0 | R §13.1 |
+| 船内イベント | 『本日の船内イベント案内』 | shipboard events | 16 | the schedule notice, 5 identical rows (NO4_HWR_FRONT/0101, NO4_HWL_FRONT/0011, NO6_HW_1/0003, NO6_HW_2/0006, 0010) + NO4_SHOP/0006, NO5_BANK/0005; 7 / 0 / 0 | R §14.1 |
 
 ## 7. Register per character
 | Character | Register | Contractions? | Markers | Ruling |
@@ -175,14 +180,10 @@ NOT decisions. The first translator to render one promotes it in the PR's Glossa
 so; the reviewer moves the row up into its section in the integration commit. -->
 | Source | Variants | Proposed | Alternatives | Where seen | Wave |
 |---|---|---|---|---|---|
-| 無線機 | — | the radio | the radio set | NO4_HWR_FRONT/0103 (near-duplicate of NO4_BAR/0171, R §3.6); 1 / 0 / 0 | 1 |
 | 無線室 | — | the radio room | — | NO6_BRIDGE/0001, 0006; rooms/107, items/011, hints/001–002 (cap 14 as a room name); 2 / 0 / 4 | 1 |
-| ボンベ | — | air tank(s) | the tanks · oxygen tanks | NO4_HWR_FRONT/0124, NO4_MACHINE/0002, NO4_MACHINE_T/0001 (the diving tanks someone smashed); 3 / 0 / 0 | 4 |
-| 【女】 (label in a message) | — | 【Woman】, brackets kept as in the `_T` files | 【Girl】 | NO4_HWR_FRONT/0123, 0129 (Judy, unnamed yet); 14 more in `_T`; 16 / 0 / 0 | 4 |
 | ブリッジ | — | the bridge (lowercase in dialogue); room name: Bridge | — | NO4_MACHINER90/0019, 0020, 0028, 0029; NO6_BRIDGE/0017; rooms/108; 操舵室 stays "the wheelhouse"; 5 / 0 / 1 | 4 |
 | 船体 | — | the hull | the ship | NO4_MACHINER90/0022, 0098; NO4_HWL_BACK/0007, NO4_SHOP/0005, NO4_BAR_T/0180; SCN047C1/05 (the alien vessel, in context); 5 / 1 / 0 | 4 |
 | 雇い主 | — | employer | — | as shipped NO4_BAR/0127; NO4_MACHINER90/0036; 3 / 0 / 0 | 4 |
-| 乗客 | — | passenger(s) | — | as shipped NO4_BAR/0028, 0094; NO4_HWR_FRONT/0122; 15 / 0 / 0 | 4 |
 | 生き物 | — | creature | — | as shipped NO4_BAR/0040; NO4_MACHINER90/0064, 0072; NO4_TOOL_ROOM ×5; 9 / 0 / 0 | 4 |
 | 虫 | — | bug | insect (that is 昆虫) | NO4_MACHINER90/0050, 0052 …; not 虫の居所 (§6); 24 / 0 / 0 | 4 |
 | 装備 | — | gear | equipment | as shipped NO4_BAR/0129, 0212, 0305; NO4_MACHINER90/0016, 0084; 潜水装備 stays "diving gear"; 16 / 0 / 6 | 4 |

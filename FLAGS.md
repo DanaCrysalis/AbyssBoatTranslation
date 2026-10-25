@@ -113,6 +113,9 @@ are tag-variants CHECK pairs (reuse the target with `{p}` appended); 0004 has �
 paired: `【Miller】Hide? How long are we meant to hide⁉{p}`. `NO4_MACHINE_T`/s06–s08 are
 labelled `text` copies of SCN001/01–02: s06 `【Oakland】What are we to do?` (27); s07–s08 need
 their own cut within one line (rulings R §4.5).
+`NO4_HWR_FRONT_UP_T`/0016–0037 draft NO4_HWR_FRONT.p03 (PR #14) 0118–0138, all `【Name】`-prefixed,
+so CHECK pairs none of them: reuse p03's wording by hand; 【女】 → `【Woman】` (glossary §1), and
+T/0022, 0024, 0028 `【女】………{p}` take `【Woman】………{p}` (rulings R §14.1, §14.4).
 
 ### F-009 · 2026-10-04 · speaker · OPEN
 `spk=N` (first argument of statement 0xA9) is not a character id: `NO4_BAR`/0014–0018 put
@@ -154,6 +157,10 @@ Wolg's (NO3_CHAPEL/0120–0122). SCN041/01 (Judy or John), SCN046A1/01–11 (Oak
 only 04 "Go! Wolg!" and 05 "The boss is going to die⁉" constrain it), B1/01, B3/01–02 (probably
 Wolg) and SCN046_VALVE/01 (a female voice, probably Judy) stay uncertain and are rendered
 speaker-neutral (rulings R §13.2).
+NO4_HWR_FRONT.p03 (PR #14): named from the UP_T draft where it covers the scene (Oakland, Wolg,
+Heming, Miller, the woman). 0117 (Wolg or William), 0124 (an accuser, probably William or Wolg;
+the shipped scene rewrites T/0023 here), 0125 (Oakland or Wolg), 0139–0143 and 0146 (0143 and 0146
+say 俺, so not Oakland) stay uncertain and are rendered speaker-neutral (rulings R §14.2).
 
 ### F-011 · 2026-10-04 · tools · OPEN
 PR #1 (NO4_BAR.p01) found four things CHECK and UNITCHECK do not verify. Each was confirmed by a

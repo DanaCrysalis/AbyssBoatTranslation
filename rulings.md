@@ -1302,3 +1302,73 @@ Census counts are rows per store (script / scene / system), from the reviewer's 
   - NO3_CHAPEL/0122 右手に握れ should match the prompt's "right hand" wording.
   - NO2_MAINSTORAGE/0003, 0009, 0012 女神 → "goddess" (俺様 row).
 - Glossary: none.
+
+## Unit script NO4_HWR_FRONT.p03 (PR #14, MERGED, 2026-10-25)
+
+The starboard front corridor before Miller's death: the schedule board and the bar sign, Oakland sending John after Heming, the unnamed woman (Judy) questioning John, the party finding her, Miller introducing the salvagers, and the patrol and escort lines (0139–0146). Reviewed once:
+- **Round 0** (e424309, merged with main f54819c for review): MERGE, squash d7e9398. Every gate passed, and there were no must-change findings.
+
+Figures:
+- **Container.** NO4_HWR_FRONT.SCR 11,180 / 65,535 bytes, 54,355 free; tokens 136 / 1,499 (MEASURE). p03 costs 167 bytes over p02's 54,522. The room is complete, 150 / 150.
+- **Pages.** At most 4 rows per page (UNITCHECK, 46 rows, 0 violations). The whole store: 635 rows, 0 violations.
+- **Ratio.** 1,838 target ÷ 759 source characters = 2.42 (PR figure, `codec.char_count`).
+- **Duplicates.** CHECK compared 56 duplicate pairs (main's 54 + 0123 = 0129, 0144 = 0013) and 2 tag-variant pairs.
+  - The reviewer's census made 95,956 source-side comparisons: 46 rows × every other script, scene and system dump row, at three levels (exact; `{p}{w}{br}` stripped; `【Name】` stripped, ！？ → ⁉, final 。！？ dropped).
+  - It found 60 hits, 19 of them translated pairs, with 0 divergences. The label-stripped `………` hits (0123/0129 ↔ NO4_BAR/0201, 0265, 0430, NO4_HWR_FRONT/0033, 0057, 0092, SCN038_5C1/10, SCN046B1/01) agree once 【Woman】 is stripped; sibling heads #17 NO4_MACHINER90/0010 and #15 0108 render `………{p}` too.
+- **F-011 wrap scan.** The reviewer's script over `build/script_merged.tsv` aligned every wrapped line with its authored segment, after a planted copy proved it catches a lone "a", a split "Mr. | Oakland", a wrap-made one-word row, `'em`, an authored-`{br}` line over 27 and a glued `+` boundary. Result: 46 rows, 86 wrapped lines, 0 problems. 0139 wraps "shows | up" (a phrasal verb across a row), which reads.
+- **F-012.** The one `+` row, 0128, follows 0127 ending `{br}`; nothing glued. None of the dump's 25 boundaries is in this unit.
+
+Census counts are rows per store (script / scene / system), from the reviewer's grep of `dumps/` on 2026-10-25. Line citations use PROJECT.md §7's numbering in `tl/script/NO4_HWR_FRONT.p03.tsv` (line = row number − 97).
+
+### 14.1 Terms promoted from §9, and one added
+- **【女】 (label in a message)** → `【Woman】` (7).
+  - Census: 16 / 0 / 0. Two are in a shipped room, NO4_HWR_FRONT/0123 and 0129 (`【女】………。{p}`); the other 14 are in the `_T` drafts (UP_T/0001–0008, 0022, 0024, 0028, 0030, 0035, 0037).
+  - The translator's question, whether the label stays in a non-`_T` message, is ruled **yes**: the shipped source prints the label inside the message, so dropping it would delete source text (CLAUDE.md §3). It is translated and bracketed as PROJECT.md §6 does for the `_T` files.
+  - "Woman", not "Girl" (the §9 alternative): 0121 女じゃないか → "Why, it's a woman." uses the same word for the same person. Miller's この子 (0126) is carried by "she".
+  - `【Woman】………{p}` and the unlabelled `………` rows differ by the label only; that is not a divergence.
+  - Binds `:26 0123`, `:32 0129`; UP_T/0022, 0024, 0028 (`【女】………{p}`) take `【Woman】………{p}`.
+  - Glossary: §1 row added; §9 row removed.
+- **乗客** → `passenger(s)` (10 (9)).
+  - Census: 15 / 0 / 0. Shipped as "passenger(s)" at NO4_BAR/0028, 0094, 0191, 0198, 0393; no other rendering exists.
+  - Binds `:25 0122` "Are you a passenger on board this ship?" (UP_T/0021 is its labelled copy).
+  - Glossary: §2 row added; §9 row removed.
+- **無線機** → `the radio` (9).
+  - Census: 1 / 0 / 0, 0103 only. 無線装置 (3 / 0 / 0) stays "radio equipment" (`:48 0145`, NO4_BAR/0171). "the radio set" was the alternative; "the radio" keeps 0103 parallel to NO4_BAR/0171 (R §3.6) where the source agrees.
+  - Binds `:6 0103` "What is it, John? Are you done checking the radio?".
+  - Glossary: §3 row added; §9 row removed. The §3 無線装置 row's Note now reads "無線機 is its own row; 無線室 is a §9 row" — a pointer change only, no target changes, no shipped line affected.
+- **ボンベ** → `air tank(s)` (9 (8)).
+  - Census: 3 / 0 / 0: NO4_HWR_FRONT/0124, NO4_MACHINE/0002 (何者かによって破壊されたボンベ), NO4_MACHINE_T/0001 (壊れたボンベの破片). All are the party's diving tanks someone smashed. "oxygen tanks" is rejected: the source does not name the gas.
+  - Binds `:27 0124` "You're the one who wrecked the air tanks, aren't you⁉".
+  - Glossary: §3 row added; §9 row removed.
+- **船内イベント** → `shipboard events` (16), new.
+  - Census: 7 / 0 / 0. Five identical rows もう起こることの無い、船内イベントのスケジュール表が張ってある。{p} (NO4_HWR_FRONT/0101, NO4_HWL_FRONT/0011, NO6_HW_1/0003, NO6_HW_2/0006, 0010), which CHECK pairs once translated, and 『本日の船内イベント案内』と書かれている (NO4_SHOP/0006, NO5_BANK/0005), which takes the と書かれている pattern (R §12.1).
+  - Binds `:4 0101` "A schedule of shipboard events that will never take place now is posted here.{p}".
+  - Glossary: §6 row added.
+- The other wave-4 §9 rows (ブリッジ, 船体, 装備, 虫, 生き物, 雇い主, 人間, 実験…, 処分) are left for the sibling reviews (#15, #16, #17).
+
+### 14.2 Speakers (PR Flag 3)
+- Checked against the `NO4_HWR_FRONT_UP_T` draft (F-009):
+  - Oakland: 0113–0114 (T/0011), 0118 (T/0016), 0121 (T/0020), 0130 (T/0029), 0132 (T/0031), 0134 (T/0033), 0137 (T/0036); 0103–0104 by the NO4_BAR/0171–0172 parallel.
+  - Wolg: 0119–0120 (T/0017, 0019), 0122 (T/0021), 0133 (T/0032), 0135 (T/0034). Heming: 0115 (T/0013). Miller: 0116 (T/0012), 0126–0128 (T/0025–0027).
+  - The woman (Judy): 0105–0112, 0123, 0129, 0131, 0136, 0138.
+  - Collison: 0144 (おって), a different scene; the text is bound to 0013.
+- The shipped scene rewrites the draft at 0124–0125: T/0023 他の乗客はどうした (Oakland) becomes ボンベを壊したのはお前だな⁉ and 待て。その話は後回しだ, and Miller's 待って二人とも becomes そうよ. So 0124 is an accuser (probably William, or Wolg) and 0125 the man who defers it (Oakland or Wolg). Uncertain, speaker-neutral.
+- 0117 (Wolg or William), 0139–0143 and 0146 (0143 and 0146 say 俺, so not Oakland) stay uncertain and are rendered speaker-neutral. Recorded in F-009.
+- Registers fit: Oakland's 我々 → "In any case, we want to know how things stand on board."; Wolg terse ("Depends on the situation. Right, Mr. Oakland?").
+- Glossary: none.
+
+### 14.3 Movable codes and readings (PR Flags 2, 4–6, 8)
+- **Authored codes.** The authored `{br}`/`{p}`/`{w}` sequence equals the source's on all 46 rows; no `{p}` added; no `{w}` in the unit. Glyph counts (`…` `‼` `⁉` `──`/`——` `【】`) match on all 46 rows (reviewer's script).
+- **Modality** (the wave-3 lesson): the unit has no permissive or prohibitive construction. 0140 うろうろしてないで → "Quit wandering around", 0143 大人しくしておけ → "sit tight" and 0109 調べることなんかない → "there's anything to look into" are literal.
+- **Step-5/6 departures, flagged and accepted:** 0117 って言うんだ → "Where'd you say they were⁉"; 0122 "on board this ship"; 0127 発見した → "came across"; 0134 現状 / この船 → "how things stand on board"; 0140 くれよ → "already"; 0104 サポートに行ってやれ → "go back him up"; 0118 "they"; 0131 "us" supplied; 0128 あなたは？ → "What about you?" (also fits its tag-variant twin NO2_MAINSTORAGE/0023).
+- **？ for 。** (R §10.3): 0103 (as p01 0014 どうした、ジョン？ "What is it, John?"), 0126, 0145. Accepted.
+- **Punctuation:** `【女】………。` and `それは──。` absorb the 。 (R §1.3); 0134 "Mm… Y-yes" (うむ a standalone interjection); 0141 "but… let's" continues in lowercase (mid-sentence `…`). No `…、` in the unit.
+- **Non-blocking:** 0104 "Hurry and go back him up." is idiomatic (go + bare verb) though "go back" can garden-path; 0141 "anyway, just in case" carries 一応 twice ("let's check it, just in case" would be tighter); 0134 そ、そうだな → "Th-that's right." would mirror the stutter more exactly. None is a fidelity error.
+- Glossary: none.
+
+### 14.4 Recurrences (PR Flag 7)
+- **Translated, identical:** 0144 = NO4_HWR_FRONT/0013 byte for byte (R §10.4); 0123 = 0129 `【Woman】………{p}`; 0102 = `"Beer & Lagers," it reads.{p}` (R §12.4).
+- **Near-duplicate, aligned by hand:** 0103 ↔ NO4_BAR/0171 ("What is it, John… Are you done checking the radio…"); the `{br}`, ⁉ and 無線装置 of 0171 are not in 0103's source. 0145 keeps "checking the radio equipment".
+- **Untranslated twins, which CHECK pairs once translated:** 0101 = NO4_HWL_FRONT/0011, NO6_HW_1/0003, NO6_HW_2/0006, 0010; 0128 (tag variant) = NO2_MAINSTORAGE/0023.
+- **For later units, by hand:** NO5_ENTRANCEL/0005 寄り道せずについて来いよ (ついて for 付いて) reuses 0142's "Follow me, and no detours."; UP_T/0016–0037 are labelled copies of 0118–0138 (F-008, F-013) and reuse this unit's wording.
+- Glossary: none.

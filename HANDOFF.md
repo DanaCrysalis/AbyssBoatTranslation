@@ -1,4 +1,4 @@
-**Last updated: 2026-10-25** — wave 4 barrier met (PRs #14–#17); reviews in unit order.
+**Last updated: 2026-10-25** — wave 4: #14 merged (d7e9398); #17, #15, #16 to review in that order.
 
 ## Integration branch: `main`. Not configurable.
 Every PR bases on `main`; the reviewer merges into `main`; a wave is closed only when `origin/main` is
@@ -6,23 +6,23 @@ at the close commit (`CLAUDE.md` Rule 3). A fresh container may clone shallow wi
 preflight is `git fetch origin main && git checkout main && git reset --hard origin/main`.
 
 ## NEXT ACTION — always current, always a literal instruction
-> **Wave 4 coordinator: review PR #14 (NO4_HWR_FRONT.p03)** with the reviewer subagent (foreground), then
-> #17 (NO4_MACHINER90.p01), #15 (p02), #16 (SCN047-EPILOG), one at a time; `git pull --ff-only` after each.
+> **Wave 4 coordinator: review PR #17 (NO4_MACHINER90.p01)** with the reviewer subagent (foreground), then
+> #15 (p02), #16 (SCN047-EPILOG), one at a time; `git pull --ff-only` after each.
 
 ## Progress
 | Store | Done | Total | |
 |---|---|---|---|
-| script | 10 units · 589 rows | 38 units · 1,709 rows | NO4_BAR p01–p08 (room complete), NO4_HWR_FRONT p01–p02; STATUS 2026-10-25 |
+| script | 11 units · 635 rows | 38 units · 1,709 rows | NO4_BAR p01–p08 (room complete), NO4_HWR_FRONT p01–p03 (room complete); STATUS 2026-10-25 |
 | scene | 3 units · 150 rows | 4 units · 190 rows | OP-SCN034, SCN038, SCN041-SCN046; STATUS 2026-10-25 |
 | system | 0 | 5 units · 188 rows | blocked whole (F-006) |
 
-Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-25; `NO4_BAR.SCR` 37,378 free, 485/485; `NO4_HWR_FRONT.SCR` 54,522 free, 104/150).
+Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-25; `NO4_BAR.SCR` 37,378 free, 485/485; `NO4_HWR_FRONT.SCR` 54,355 free, 150/150).
 
 ## In flight
 Wave 4, dispatched 2026-10-25 — translator round 1 each; **barrier met** (4/4 PRs); review order #14, #17, #15, #16:
 | Unit | Branch | PR | State | Next |
 |---|---|---|---|---|
-| script NO4_HWR_FRONT.p03 | tl/script-NO4_HWR_FRONT.p03 | #14 | PR open, e424309; SCR 54,355 free, max 4 rows/page (agent af5978371ed6bd35d) | review behind the barrier |
+| script NO4_HWR_FRONT.p03 | tl/script-NO4_HWR_FRONT.p03 | #14 | **MERGED** round 0, squash d7e9398; SCR 54,355 free (room 150/150), max 4 rows/page; CHECK 56 + 2 pairs; glossary 【女】, 乗客, 無線機, ボンベ promoted, 船内イベント added (rulings R §14) | done — nothing left on this unit |
 | script NO4_MACHINER90.p01 | tl/script-NO4_MACHINER90.p01 | #17 | PR open; SCR 58,358 free, max 4 rows/page; Flag 5 無茶を言うな "absurd" vs shipped "ask the impossible" (agent a96acb0b4138cf690) | review behind the barrier |
 | script NO4_MACHINER90.p02 | tl/script-NO4_MACHINER90.p02 | #15 | PR open; SCR 58,308 free, max 4 rows/page; flags 潜入/装備 agreement with p01 (agent a6c058ae7cfa40cfd) | review behind the barrier |
 | scene SCN047-EPILOG | tl/scene-SCN047-EPILOG | #16 | PR open, 210d59b; 40 subtitles, max 4 lines; scene store 4/4 (agent a197ccbb3deb8d732) | review behind the barrier |
