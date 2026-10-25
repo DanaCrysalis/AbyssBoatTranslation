@@ -6,7 +6,7 @@ at the close commit (`CLAUDE.md` Rule 3). A fresh container may clone shallow wi
 preflight is `git fetch origin main && git checkout main && git reset --hard origin/main`.
 
 ## NEXT ACTION — always current, always a literal instruction
-> **Wave 3 barrier met.** #13 merged. Review #12 round 1 (head 280748e) now, then #10, #11 — one `reviewer` at a time. Session limit hit 2026-10-25 ~02:00, reset 06:00 UTC, resumed 06:50 on "continue".
+> **Wave 3 barrier met.** #13, #12 merged. Review #10 (NO4_HWR_FRONT.p02) now, then #11 — one `reviewer` at a time. Session limit hit 2026-10-25 ~02:00, reset 06:00 UTC, resumed 06:50 on "continue".
 > Translators that stop are resumed by `SendMessage` (same agent, worktree intact). Watchdog: 12-minute `send_later`.
 
 ## Progress
