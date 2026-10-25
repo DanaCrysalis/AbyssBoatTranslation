@@ -1563,3 +1563,114 @@ Census counts are rows per store (script / scene / system), from the reviewer's 
 - **Labelled twins (F-013), by hand:** NO4_BAR_T/0010, 0068, 0151, NO4_HWR_FRONT_UP_T/0022, 0024, 0028 → `………` after the translated label (R §14.4, §15.4).
 - **Near-parallels, not paired:** NO4_BAR/0049 仲間割れは困る "infighting" (0011 "Falling out", a different sentence); 保証 → "guarantee", as NO4_BAR/0132.
 - Glossary: none.
+
+## Unit scene SCN047-EPILOG (PR #16, MERGED, 2026-10-25)
+
+The last scene unit. Its scenes, with speakers named from content (F-009):
+- SCN047A: the alien command ends the experiment, and Judy, who now knows what she is, sends John away.
+- SCN047B2–B3: the dying Wolg holds the aliens off so that John can go after Judy.
+- SCN047C1: the alien voice explains the experiment.
+- SCN047C2: Judy declares herself human.
+- EPILOG, EPILOG0: the survivors' afterword and the aliens' "Phase 2".
+
+Reviewed twice:
+- **Round 0** (210d59b, merged with main b3a9fc2): CHANGES, one finding. `:31 C1/03` "is beyond our senses" was a step-5 departure the geometry did not force. In English it reads as "imperceptible", and it dropped 理解できない.
+- **Round 1** (8bc8f6a, merged with main bcb6360): MERGE, squash 1e66f3c. `git diff 210d59b 8bc8f6a` is that one line, now "makes no sense to us".
+
+Figures:
+- **Subtitles.** 40, every one 1 page, at most 4 lines (`:4`, `:31`, `:33`, `:43`; UNITCHECK, 0 violations). The scene store is complete: 190 / 190 rows, 0 violations.
+- **Ratio.** 1,589 target ÷ 793 source characters = 2.00 (PR figure).
+- **Containers.** None for scene. MEASURE: 0 containers negative and 0 under the reserve.
+- **Duplicates.** CHECK compared 58 duplicate pairs and 6 tag-variant pairs.
+  - The reviewer's census made 83,440 comparisons: 40 rows × every other dump row, at three levels (exact; `{p}{w}{br}` stripped; `【Name】` stripped, ！？ → ⁉, final 。！？ dropped).
+  - It found 2 hits, the ハイ。 pair A/02 ↔ A/04 in each direction, both `Yes.`, with 0 divergences.
+- **F-011 wrap scan.** 78 wrapped lines: no lone a/an/I, no apostrophe, and glyph counts match on all 40 rows. One wrap-made one-word last row, `:28` (§17.3). Every authored-`{br}` line is ≤ 27.
+- **F-012.** There are no `+` rows in the unit.
+
+Census counts are rows per store (script / scene / system), from the reviewer's grep of `dumps/` on 2026-10-25. Line citations use PROJECT.md §7's numbering in `tl/scene/SCN047-EPILOG.tsv` (line = row index + 3).
+
+### 17.1 Terms promoted from §9, added, and one note corrected
+- **人間** → `human(s)`; `people` where the line is general (5 (6)).
+  - Census: 21 / 5 / 0.
+  - "human(s)" is shipped at NO4_BAR/0035, 0132, 0199 ("us humans"), 0246, 0333, NO4_HWR_FRONT/0003, 0005, SCN046B1/11 and B2/01. "people" is shipped at NO4_BAR/0310 and NO4_HWR_FRONT/0004 (人間、歳をとると, a general statement). 外の人間 (NO4_BAR/0003, "from outside") is in context.
+  - Binds `:28` (elongated, `humaaaaaaaaaaaans`), `:38`, `:39`.
+  - Glossary: §6 row added; §9 row removed.
+- **実験 · 検体 · フェーズ２** → `experiment` · `specimen` · `Phase 2` (10 · 8 · 7).
+  - Census: 0 / 3 / 0 · 0 / 1 / 0 · 0 / 1 / 0.
+  - "specimen" is preferred to "test subject" (the §9 alternative): the aliens speak of John as material, and the word is shorter.
+  - フェーズ２ takes an Arabic digit, as a label.
+  - Binds `:4`, `:6`, `:31`, `:42`.
+  - Glossary: §6 row added; §9 row removed.
+- **処分** conforms to the §6 row #17's integration wrote (R §16.1): `:6` "Dispose of the specimen.", `:33` "must be disposed of". No second row is added; the row's Note now says the #16 lines are shipped.
+- **自己犠牲** → `self-sacrifice` (14), new. Census: 0 / 1 / 0. Binds `:31`. Glossary: §6 row added.
+- **ハイ** (katakana) → `Yes` (3), new.
+  - Census: 0 / 2 / 0. `:5` and `:7` are byte-identical `Yes.`, and CHECK pairs them.
+  - Hiragana はい in dialogue stays in context (EPILOG/03 "Yes…… understood."). The choice row is §4.
+  - Glossary: §6 row added.
+- **うう** → `Uuh` (3), new: one "u" per う, with an "h" closing it, as in the きゃあ…っ pattern.
+  - Census: 0 / 1 / 0 for うう proper. The one script hit is NO3_CHAPEL/0119 ううむ, another word, in context.
+  - Binds `:8` うう…。 → "Uuh…".
+  - Glossary: §6 row added.
+- **船体, a note correction** (the §2 row, R §15.1). The target is unchanged and no shipped line changes.
+  - The note read "SCN047C1/05 (the alien vessel) in context". It now reads "SCN047C1/05 'the vessel' in context, referent left open".
+  - At `:33`, 使った道具は処分する…いまから船体は軌道上で分解、投棄する may mean the alien ship. It may also mean the passenger ship, as the experiment's "tool". The source does not say which.
+  - "the vessel" covers both readings. "the hull" would favour the second.
+  - Binds `:33`.
+  - Glossary: §2 row note corrected; Ruling column now R §15.1, §17.1.
+
+### 17.2 Speakers (PR Flag 6)
+- Subtitles carry no speaker code. Every speaker is named from content, and every line is speaker-neutral in English.
+- **SCN047A:**
+  - 01 and 03 are the alien command.
+  - 02 and 04 (ハイ) are probably Judy taking the orders: `:15` "I was told to kill you". An alien subordinate is possible.
+  - 05–15 are Judy.
+- **SCN047B2–B3** are the dying Wolg.
+- **SCN047C1:**
+  - `:29` C1/01 "John, why……" is Judy: it echoes A/15 "Goodbye…… John". The dispatch had named the alien voice.
+  - 02–06 are the alien voice.
+- **SCN047C2:**
+  - 01, 02, 04 and 05 are Judy (わ, のよ).
+  - `:37` C2/03 ば、馬鹿な‼ → "A-absurd‼" is the alien, reacting to C2/02. The stutter is hyphenated on the first English word (R §4.3), and the cold register suits "absurd" over "impossible".
+- **EPILOG and EPILOG0:**
+  - EPILOG/01–02 and EPILOG0 are a survivor's inner thoughts in （ ）, probably John's.
+  - EPILOG/03 is an unidentified agent reporting to the aliens.
+- Recorded under F-009.
+- Glossary: none.
+
+### 17.3 Movable codes, wraps and readings (PR Flags 2–5, 7, 8)
+- **Authored codes.** The reviewer's diff over 40 rows finds exactly one difference, `:31` `{br} {br}` → `{br}` (Flag 2).
+  - Keeping both `{br}`s needs 5 or more lines.
+  - Round 1's line 31 wraps 28 / 26 / 26 / 27.
+  - The unit has no `{p}` or `{w}`.
+- **`:31`, losses accepted.**
+  - 今回の実験も同じ結果だった → "This experiment ended the same.": も is carried by "the same". Every "too" variant measured 29 or more on the authored-`{br}` line, or added lines.
+  - 理解不能なデータの蓄積に終わった → "More data we cannot fathom.": 蓄積 is carried by "More", and 終わった by the preceding "ended".
+- **`:28` elongation** 人間をなめんなああああああぁぁぁぁぁっ！ → `Don't underestimate humaaaaaaaaaaaans!`
+  - The word has a×12 = 1 + あ×6 + ぁ×5; small ぁ counts like あ. The final っ is dropped and the single ！ kept.
+  - This follows the ～ row and R §13.1 (`Goooooooo`, `Daaaamn`): the stretch moves to the English last word's vowel.
+  - "underestimate" is the literal sense of なめる ("take lightly"). "mess with" (provoke) changes the sense, and Wolg's register (glossary §7) is serious, not crude.
+  - The one-word last row cannot be avoided: an 18-column word leaves 10 columns, and "Don't mess with | humaaaaaaaaaaaans!" orphans too. It stands, flagged under R §1.12 rule 1, like SCN046A1/04 "Go! | Wolg!".
+- **`:27` B3/01** "draw them off… you get Judy…" conforms to R §11.3.
+- **Step-4/5/6 departures, flagged and accepted:**
+  - `:43` 助かった → "lived": the reviewer measured "survived" at 5 lines with a lone "a".
+  - `:19` ここ → "this".
+  - `:21` reordered "So this is… what he… meant…".
+  - `:25` "You're determined… to go?".
+  - `:4` "we" supplied.
+- **Readings accepted:**
+  - あいつら `:19` → "those people" (the aliens look human).
+  - あいつ `:21` → "he" (the killer, SCN046B1/11).
+  - C2/04–05 なんだって continue C2/01's 気が付いた ("That …").
+  - こそ → "above all".
+  - EPILOG0 keeps the source's missing final 。.
+  - Numbers: １月 → "a month", ２人 → "the two of us", フェーズ２ → "Phase 2".
+- **Modality** (the wave-3 lesson) is literal: さわらないで, 殺したくない, 死なせたくない.
+- Glossary: none.
+
+### 17.4 Recurrences (PR Flag 9)
+- **Translated, identical:** ハイ。 A/02 = A/04 `Yes.`
+- **Echoes, not duplicates:**
+  - SPACESHIP_HW/0001 今戻るのは危険すぎる… (untranslated) shares 危険すぎる with `:24` "…It's too dangerous."; reuse "too dangerous".
+  - NO3_NO4/0053 バカな、閉じ込めたはず‼ is a different line (馬鹿な here is the alien's).
+  - NO4_MACHINER90/0081 これはいったい⁉ "What on earth is this⁉" agrees with `:19`.
+- Glossary: none.

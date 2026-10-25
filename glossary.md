@@ -57,7 +57,7 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | 生き残り | 生き残りグループ | survivor(s); 生き残りグループ: survivor group | 8 (9); 14 | — | the people still alive aboard | R §5.1 |
 | 乗客 | — | passenger(s) | 10 (9) | — | as shipped NO4_BAR/0028, 0094, 0191, 0198, 0393; NO4_HWR_FRONT/0122 "a passenger on board this ship"; 15 / 0 / 0 | R §14.1 |
 | 客船 | — | passenger ship | 14 | — | this ship; 例の客船 → "that passenger ship" (0279) | R §6.1 |
-| 船体 | — | the hull | 8 | — | lowercase; 船 alone stays "the ship"; a repeat in one sentence may take "it" (NO4_MACHINER90/0098); SCN047C1/05 (the alien vessel) in context; 5 / 1 / 0 | R §15.1 |
+| 船体 | — | the hull | 8 | — | lowercase; 船 alone stays "the ship"; a repeat in one sentence may take "it" (NO4_MACHINER90/0098); SCN047C1/05 "the vessel" in context, referent left open (alien ship or the passenger ship); 5 / 1 / 0 | R §15.1, §17.1 |
 | 便所 | — | the toilet | 10 | — | lowercase; Collison's word (0292, NO4_HWR_FRONT/0011) | R §6.1 |
 | 通風孔 | — | air vent; "the vent" / "vent(s)" after first mention | 8; 8 | — | lowercase; "the air vent" at a scene's first mention (NO4_BAR/0294), then "vent" | R §7.1 |
 | 中央ダクト | — | the central duct | 16 | — | lowercase; NO4_BAR/0302 only | R §7.1 |
@@ -159,7 +159,12 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | ゲームオーバー | — | game over ("it's game over") | 9 | in dialogue, SCN046A2/01 only (Heming to Oakland); 0 / 1 / 0 | R §13.1 |
 | 船内イベント | 『本日の船内イベント案内』 | shipboard events | 16 | the schedule notice, 5 identical rows (NO4_HWR_FRONT/0101, NO4_HWL_FRONT/0011, NO6_HW_1/0003, NO6_HW_2/0006, 0010) + NO4_SHOP/0006, NO5_BANK/0005; 7 / 0 / 0 | R §14.1 |
 | 無茶を言う | 無茶を言うな · 無茶を言わないで · 無茶を言ってる | in context: "ask the impossible" answering a request; "be absurd" answering a stance | 18; 9 | request: NO4_BAR/0155, 0352, 0389; stance: NO4_MACHINER90/0024, 0031, echo 0032 "being absurd"; 無茶 alone, 無茶苦茶 not fixed; 6 / 0 / 0 | R §16.1 |
-| 処分 | — | dispose of; それなりの処分 (NO4_MACHINER90/0036) in context: "the consequences" | 10 | SCN047A/03 "Dispose of the specimen.", C1/05 "must be disposed of" (#16); 1 / 2 / 0 | R §16.1 |
+| 処分 | — | dispose of; それなりの処分 (NO4_MACHINER90/0036) in context: "the consequences" | 10 | SCN047A/03 "Dispose of the specimen.", C1/05 "must be disposed of" (#16, shipped); 1 / 2 / 0 | R §16.1, §17.1 |
+| 人間 | — | human(s); "people" where the line is general | 5 (6) | as shipped NO4_BAR/0035, 0132, 0246, 0333, NO4_HWR_FRONT/0003, 0005, SCN046B1/11, B2/01, SCN047B3/02, C2/04–05; "people" NO4_BAR/0310, NO4_HWR_FRONT/0004; 外の人間 (NO4_BAR/0003) in context; 21 / 5 / 0 | R §17.1 |
+| 実験 · 検体 · フェーズ２ | — | experiment · specimen · Phase 2 | 10 · 8 · 7 | the aliens' terms: SCN047A/01, C1/03, EPILOG/03 · SCN047A/03 · EPILOG/03 (Arabic digit); 0 / 3 / 0 · 0 / 1 / 0 · 0 / 1 / 0 | R §17.1 |
+| 自己犠牲 | — | self-sacrifice | 14 | SCN047C1/03 only (自己犠牲という習性 → "habit of self-sacrifice"); 0 / 1 / 0 | R §17.1 |
+| ハイ (katakana) | — | Yes | 3 | SCN047A/02, 04 `Yes.` (a duplicate pair); はい in dialogue stays in context (EPILOG/03 "Yes……"), はい choice is §4; 0 / 2 / 0 | R §17.1 |
+| うう | — | Uuh (one "u" per う, "h" closing) | 3 | SCN047A/05 うう…。 → "Uuh…"; ううむ (NO3_CHAPEL/0119) is another word; 0 / 1 / 0 | R §17.1 |
 
 ## 7. Register per character
 | Character | Register | Contractions? | Markers | Ruling |
@@ -190,8 +195,6 @@ so; the reviewer moves the row up into its section in the integration commit. --
 | Source | Variants | Proposed | Alternatives | Where seen | Wave |
 |---|---|---|---|---|---|
 | 無線室 | — | the radio room | — | NO6_BRIDGE/0001, 0006; rooms/107, items/011, hints/001–002 (cap 14 as a room name); 2 / 0 / 4 | 1 |
-| 人間 | — | human(s); "people" where the line is general | — | as shipped NO4_BAR/0132, 0246, NO4_HWR_FRONT/0003; SCN046B2/01; SCN047C2/04–05 ("human"); 21 / 5 / 0 | 4 |
-| 実験 · 検体 · フェーズ２ | — | experiment · specimen · Phase 2 | test subject (検体) | SCN047A/01, 03, SCN047C1/03, EPILOG/03; 0 / 3 / 0 · 0 / 1 / 0 · 0 / 1 / 0 | 4 |
 
 ## 10. Open questions
 <!-- one line each, with the FLAGS id. A closed question is deleted here; its answer stays in rulings.md. -->

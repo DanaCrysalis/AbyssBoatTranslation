@@ -1,4 +1,4 @@
-**Last updated: 2026-10-25** — wave 4: #14 merged (d7e9398), #15 merged (40c6491), #17 merged (8237cd9); #16 round 0 CHANGES (1 finding, translator reworking).
+**Last updated: 2026-10-25** — wave 4: #14 merged (d7e9398), #15 merged (40c6491), #17 merged (8237cd9), #16 merged (1e66f3c); all four units merged, scene store 4/4 — wave 4 to close.
 
 ## Integration branch: `main`. Not configurable.
 Every PR bases on `main`; the reviewer merges into `main`; a wave is closed only when `origin/main` is
@@ -6,16 +6,15 @@ at the close commit (`CLAUDE.md` Rule 3). A fresh container may clone shallow wi
 preflight is `git fetch origin main && git checkout main && git reset --hard origin/main`.
 
 ## NEXT ACTION — always current, always a literal instruction
-> **Wave 4 coordinator: re-review PR #16 round 1 (SCN047-EPILOG) when its translator has pushed; then close wave 4.**
-> PR #16's head moved from 210d59b to 8bc8f6a; confirm with the translator (agent a197ccbb3deb8d732) that round 1 is complete.
-> At #16's merge, its reviewer conforms to the §6 処分 row now on `main` (R §16.1).
-> The reviewer runs in the foreground; `git pull --ff-only` after it.
+> **Wave 4 coordinator: close wave 4** (`CLAUDE.md` §4 step 6). All four units are merged: #14 d7e9398, #15 40c6491,
+> #17 8237cd9, #16 1e66f3c. Regenerate `build/abyss_boat_script.ods`, refresh the README status table, then open the
+> wave 5 session (four script units, PROJECT.md §10; no scene units remain).
 
 ## Progress
 | Store | Done | Total | |
 |---|---|---|---|
 | script | 13 units · 743 rows | 38 units · 1,709 rows | NO4_BAR p01–p08 (room complete), NO4_HWR_FRONT p01–p03 (room complete), NO4_MACHINER90 p01–p02 (room complete); STATUS 2026-10-25 |
-| scene | 3 units · 150 rows | 4 units · 190 rows | OP-SCN034, SCN038, SCN041-SCN046; STATUS 2026-10-25 |
+| scene | 4 units · 190 rows | 4 units · 190 rows | OP-SCN034, SCN038, SCN041-SCN046, SCN047-EPILOG (store complete); STATUS 2026-10-25 |
 | system | 0 | 5 units · 188 rows | blocked whole (F-006) |
 
 Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-25; `NO4_BAR.SCR` 37,378 free, 485/485; `NO4_HWR_FRONT.SCR` 54,355 free, 150/150; `NO4_MACHINER90.SCR` 57,820 free, 108/108).
@@ -27,7 +26,7 @@ Wave 4, dispatched 2026-10-25 — translator round 1 each; **barrier met** (4/4 
 | script NO4_HWR_FRONT.p03 | tl/script-NO4_HWR_FRONT.p03 | #14 | **MERGED** round 0, squash d7e9398; SCR 54,355 free (room 150/150), max 4 rows/page; CHECK 56 + 2 pairs; glossary 【女】, 乗客, 無線機, ボンベ promoted, 船内イベント added (rulings R §14) | done — nothing left on this unit |
 | script NO4_MACHINER90.p01 | tl/script-NO4_MACHINER90.p01 | #17 | **MERGED** round 1 (round 0 CHANGES: a lone-"an" wrap at 0025, a 28-column authored line at 0045, 潜入 at 0011), squash 8237cd9; SCR 57,820 free (room 108/108), max 4 rows/page; CHECK 57 + 6 pairs; census 16 translated pairs, 0 divergences; glossary ブリッジ, 雇い主, 虫, 処分 promoted, 無茶を言う added (rulings R §16) | done — nothing left on this unit |
 | script NO4_MACHINER90.p02 | tl/script-NO4_MACHINER90.p02 | #15 | **MERGED** round 0, squash 40c6491; SCR 58,308 free (54/108), max 4 rows/page; CHECK 56 + 4 pairs; census 13 translated pairs, 0 divergences; glossary 生き物, 船体, 装備 promoted, 潜入 "come aboard" added (rulings R §15) | done — nothing left on this unit |
-| scene SCN047-EPILOG | tl/scene-SCN047-EPILOG | #16 | **CHANGES round 1 — translator reworking.** Round 0 (210d59b): every gate passed (CHECK 57 + 4 pairs; UNITCHECK 40 rows, max 4 lines, 0 violations; census 83,440 comparisons, 2 hits = the ハイ。 pair, 0 divergences; wrap scan 78 lines, 1 accepted orphan `:28`). Finding 1: `:31 C1/03` "is beyond our senses" → "makes no sense to us" (same 4 lines). The review's rulings bind round 1: `:28` elongation and "underestimate" stand; speakers C1/01 Judy, C2/03 the alien; 船体 "the vessel" stands (§2 note made referent-neutral at MERGE); promotions 実験 · 検体 · フェーズ２, 処分, 人間 and new rows 自己犠牲, ハイ, うう accepted, integrated at MERGE (agent a197ccbb3deb8d732) | translator round 1, then reviewer round 1 |
+| scene SCN047-EPILOG | tl/scene-SCN047-EPILOG | #16 | **MERGED** round 1 (round 0 CHANGES: `:31 C1/03` "is beyond our senses" → "makes no sense to us"), squash 1e66f3c; 40 subtitles, max 4 lines; scene store 4/4 (190/190); CHECK 58 + 6 pairs; census 83,440 comparisons, 2 hits (the ハイ。 pair), 0 divergences; glossary 人間, 実験 · 検体 · フェーズ２ promoted, 自己犠牲, ハイ, うう added, 処分 conformed, 船体 note made referent-neutral (rulings R §17) | done — nothing left on this unit |
 
 ## Next up
 Wave 4 (QUEUE 2026-10-25): script NO4_HWR_FRONT.p03 (46 rows, 759 chars, ratio 36.92, `NO4_HWR_FRONT.SCR`

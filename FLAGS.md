@@ -176,6 +176,10 @@ NO4_MACHINER90.p01 (PR #17): named from content; spk=4 carries Wolg and Miller, 
 men, spk=5 Heming and Miller (0047), spk=2 Oakland and Miller (0044). 0001 (Wolg or Oakland), 0011
 (Heming or Oakland), 0021, 0024, 0028 (Oakland or Wolg) and 0010 stay uncertain and are rendered
 speaker-neutral (rulings R §16.2).
+SCN047-EPILOG (PR #16): subtitles, named from content. C1/01 "John, why……" is Judy; C2/03 ば、馬鹿な‼
+is the alien voice. SCN047A/02, 04 ハイ (probably Judy taking orders, or an alien subordinate), the
+EPILOG/EPILOG0 inner thoughts (probably John) and EPILOG/03 (an unidentified agent reporting to the
+aliens) stay uncertain and are rendered speaker-neutral (rulings R §17.2).
 
 ### F-011 · 2026-10-04 · tools · OPEN
 PR #1 (NO4_BAR.p01) found four things CHECK and UNITCHECK do not verify. Each was confirmed by a
