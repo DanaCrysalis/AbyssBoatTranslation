@@ -149,6 +149,21 @@ so; the reviewer moves the row up into its section in the integration commit. --
 | 無線機 | — | the radio | the radio set | NO4_HWR_FRONT/0103 (near-duplicate of NO4_BAR/0171, R §3.6); 1 / 0 / 0 | 1 |
 | 無線室 | — | the radio room | — | NO6_BRIDGE/0001, 0006; rooms/107, items/011, hints/001–002 (cap 14 as a room name); 2 / 0 / 4 | 1 |
 | エントランスホール | — | entrance hall | lobby | NO4_4102/0001, NO4_HWL_BACK/0017, NO4_HWR_FRONT/0100 …; 6 / 0 / 2 rows (rooms/066, 084); ホール alone is fixed in §2 (R §2.1) | 1 |
+| 操舵室 | — | the wheelhouse (操舵室のデッキ → "the wheelhouse deck") | the helm | NO4_BAR/0428, 0437; ブリッジ is "the bridge" (rooms/108); 2 / 0 / 0 | 3 |
+| バリケード | — | barricade | — | NO4_BAR/0421–0444, NO4_HWL_KAIDAN/0005–0006; 5 / 0 / 0 | 3 |
+| チェーンカッター | — | chain cutter | bolt cutters | NO4_BAR/0444, NO6_TOOLROOM/0001, hints/006; 2 / 0 / 1 | 3 |
+| 倉庫 | 第Nデッキ倉庫 | storeroom ("the Deck 3 storeroom") | storage room | NO4_BAR/0424; rooms/053, 069, 105, items/013; 1 / 0 / 4 | 3 |
+| 工具 | — | tools | — | NO4_BAR/0423–0424; 道具 (NO4_HWL_KAIDAN/0006) in context; 2 / 0 / 0 | 3 |
+| マガジン | — | magazine ("spare magazine") | clip | NO4_HWR_FRONT/0020, NO3_NO4/0010; 2 / 0 / 0 | 3 |
+| Ｒｅｔｒｙ？ | — | Retry? (the source's own English, kept) | — | NO4_HWR_FRONT/0036, NO2_MAINSTORAGE/0007; 2 / 0 / 0 | 3 |
+| はい · いいえ (choice) | — | Yes · No | — | choice rows, NO4_HWR_FRONT/s11 s12 s17 s18 …; 8 / 0 / 0 each as choices | 3 |
+| 妹 | 妹さん | sister (William's; "my sister", "his sister") | little sister | NO4_HWR_FRONT/0031–0032, 0075–0082; R §8 "To my sister"; 5 / 1 / 0 | 3 |
+| 『フロアーインフォメーション』 · パーサーオフィス · メインダイニング · ラウンジ · ビアー＆ラガーズ · キャビン | — | "Floor Information" · Purser's Office · Main Dining · Lounge · Beer & Lagers · Cabins | Purser · Dining | the deck sign NO4_HWR_FRONT/0097–0100 = NO4_HWL_BACK/0014–0017 = NO4_HWL_BACK2/0010–0013, byte-identical; `{br}`-ended lines, 27 cols with the leading space; 3 / 0 / 1 | 3 |
+| クライド | — | Clyde | — | SCN046A2/02, Oakland to the one who betrays him (likely Heming's given name); 0 / 1 / 0 | 3 |
+| ジェイク・ノーマン | — | Jake Norman | — | SCN046B1/03, Wolg naming the killer; 0 / 1 / 0 | 3 |
+| ウスノロ | — | dimwit ("my dear dimwit") | slowpoke | SCN046B1/02, B2/06, B2/07, the killer's word for his victims; 0 / 3 / 0 | 3 |
+| メス · 売女 | — | the bitch · whore | that female | SCN046B1/10–11 (the killer on Judy), B2/07; 0 / 2 / 0 · 0 / 1 / 0 | 3 |
+| 神 · 生肝 | — | god · raw liver | — | SCN046B2/02–04; 女神 is in the 俺様 row (§6); 4 / 4 / 0 · 0 / 1 / 0 | 3 |
 
 ## 10. Open questions
 <!-- one line each, with the FLAGS id. A closed question is deleted here; its answer stays in rulings.md. -->
