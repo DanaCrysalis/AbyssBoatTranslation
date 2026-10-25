@@ -6,10 +6,9 @@ at the close commit (`CLAUDE.md` Rule 3). A fresh container may clone shallow wi
 preflight is `git fetch origin main && git checkout main && git reset --hard origin/main`.
 
 ## NEXT ACTION — always current, always a literal instruction
-> **Wave 2 resumed 2026-10-25 01:05 UTC (human: "continue") — coordinator session_018sADRqUwzYCcf65e1pUc63,
-> 12-minute watchdog.** In order, one reviewer at a time: (1) PR #8's round 0 findings sent to the p07
-> translator; (2) reviewer on #7 (SCN038) now; (3) re-review #9 round 1 (3471e2d); (4) re-review #8
-> after its round 1; (5) close wave 2 and open wave 3 (orchestrator.md §6–§7).
+> **Wave 2, resumed 2026-10-25 — coordinator session_018sADRqUwzYCcf65e1pUc63, 12-minute watchdog.**
+> One reviewer at a time: **re-review #9 p06 round 1 (3471e2d) now**, then #8 p07 round 1 (860c462),
+> then #7 SCN038 once its round 1 is pushed; then close wave 2 and open wave 3 (orchestrator.md §6–§7).
 
 ## Progress
 | Store | Done | Total | |
@@ -25,8 +24,8 @@ Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEA
 |---|---|---|---|---|
 | script NO4_BAR.p05 | `tl/script-NO4_BAR.p05` | #6 | **MERGED** round 0, squash c6858ea; NO4_BAR.SCR 36,376 free, 58 rows, max 4 rows/page, ratio 2.22, 29 dup pairs; 客船 便所 ソナー 死体 見張り promoted (R §6) | nobody — merged |
 | script NO4_BAR.p06 | `tl/script-NO4_BAR.p06` | #9 | round 0 CHANGES (5 rows); round 1 pushed by the same translator, head 3471e2d (main merged in; 36,174 free) | reviewer: re-review round 1 |
-| script NO4_BAR.p07 | `tl/script-NO4_BAR.p07` | #8 | round 0 CHANGES, head 7977ba8 — findings 1–3 in the PR #8 review (lone "a" 0383, one-word row 0378, merge main + restate figures); **not yet sent to the translator** | coordinator: send findings verbatim to the p07 translator (SendMessage if alive, else a fresh translator with the review), then re-review |
-| scene SCN038 | `tl/scene-SCN038` | #7 | PR open; max 3 lines/subtitle, ratio 2.05; not yet reviewed | reviewer |
+| script NO4_BAR.p07 | `tl/script-NO4_BAR.p07` | #8 | round 0 CHANGES (0378 one-word row, 0383 lone "a", restate figures); round 1 pushed by the same translator, head 860c462 (main merged in; 36,053 free) | reviewer: re-review round 1 |
+| scene SCN038 | `tl/scene-SCN038` | #7 | round 0 CHANGES (B/10 battle cry one "a" too many; restate figures after merging main); open questions all accepted; findings sent to the same translator | translator pushes round 1, then re-review |
 
 ## Next up
 Wave 2 (QUEUE 2026-10-06): script NO4_BAR.p05 (58 rows, 1,208 chars, ratio 16.27), NO4_BAR.p06 (58,
