@@ -132,6 +132,12 @@ NO4_BAR.p07 (PR #8): 0352–0409 likewise from content; 0365, 0378–0380, 0383,
 0391, 0402, 0405, 0408 and 0409 stay uncertain and are rendered speaker-neutral; 0370, 0404, 0406
 (probably Wolg), 0381, 0407 (probably Oakland) and 0403 (probably Heming) are likely but unconfirmed
 (rulings R §8.2).
+SCN038 (PR #7): scene subtitles carry no speaker code, so all 59 are named from content. These stay
+uncertain and are rendered speaker-neutral:
+- SCN038A/01–04 (Wolg / Oakland), A/05 and A/08 (Oakland or William).
+- B/01 (William or Heming), B/04 and B/13 (Judy or Heming), B/06, B/08 and B/21 (probably Heming).
+- D/02, 04, 05, 07–09 (Wolg or Oakland), D/12 (Wolg, Oakland or Heming).
+The 5C1/5C2 speaker is the killer, except 5C1/01, 07 and 10 (Judy) (rulings R §9.2).
 
 ### F-011 · 2026-10-04 · tools · OPEN
 PR #1 (NO4_BAR.p01) found four things CHECK and UNITCHECK do not verify. Each was confirmed by a

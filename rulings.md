@@ -741,3 +741,102 @@ Census counts are rows per store (script / scene / system), from the reviewer's 
 - `:12 0360` "enough to go on to talk big" is slightly clumsy. "Right now I just lack the material to talk big." was offered and not required.
 - `:6 0354` "the creature" could be "him" (the he/him used at 0353 and 0355). This was not required.
 - None of these is a fidelity error.
+
+## Unit scene SCN038 (PR #7, MERGED, 2026-10-25)
+
+The second scene unit covers five groups:
+- SCN038A, SCN038B, SCN038D: the monster in the corridor, and William's sacrifice and death.
+- SCN038_5C1, SCN038_5C2: the killer's first encounter with Judy.
+
+Reviewed twice:
+- **Round 0** (f6853ac): CHANGES.
+  - `:22 SCN038B/10` had 12 "a" for the source's 11 お.
+  - The PR body's figures were taken before p05 merged.
+- **Round 1** (103d60b, with `origin/main` 38fe648 merged in): MERGE, squash 8ffabc0.
+  - `git diff f6853ac 103d60b -- tl/` changes exactly one row, line 22.
+  - The reviewer re-ran every gate on 103d60b merged with `origin/main` 3b33b87 (p06 and p07 in).
+
+Figures:
+- **Subtitles**: 59, every one 1 page, at most 3 lines (UNITCHECK, 0 violations).
+- **Ratio**: 1,344 target characters ÷ 655 source = 2.05 (tags excluded).
+- **Containers**: no byte container (scene). Script containers are unchanged: NO4_BAR.SCR 36,357 free.
+- **Duplicates**: CHECK compared 34 duplicate pairs (main's 33, plus SCN038_5C1/10 in the `………。` group) and 2 tag-variant pairs.
+  - The reviewer's source-side census made 369,196 comparisons: 59 rows × every other script, scene and system dump row.
+  - It ran at three levels: exact; `{p}{w}{br}` stripped; `【Name】` stripped, with ！？ → ⁉ and final punctuation normalised.
+  - It found 35 hits. Two are translated true duplicates, both byte-identical. There are 0 divergences. See §9.4.
+
+Census counts are rows per store (script / scene / system), from the reviewer's grep of `dumps/` on 2026-10-25. Line citations use PROJECT.md §7's numbering in `tl/scene/SCN038.tsv` (line = row index + 3).
+
+### 9.1 Terms promoted or added
+- **The killer's laugh: クッ · ククッ · クカカカカカカッ** → `Heh` · `Heh-heh` · `Kahahahahaha` (3 · 7 · 12). Run together it is `Heh, heh-heh, kahahahahaha.` (27). Punctuation follows the source.
+  - Census: rows with クッ 6 / 7 / 0; ククッ 6 / 6 / 0; クカカカカカカッ 4 / 5 / 0.
+  - Every クカ…ッ in the dumps has exactly 6 カ. "Kahahahahaha" gives one syllable per カ (Ka + ha × 5).
+  - Rows: NO2_MAINSTORAGE/0001, 0002, 0004, 0005, 0008, 0012; SCN038_5C1/02–04, SCN038_5C2/02, SCN046B1/02, 04, 06, SCN046B2/08.
+  - SCN046B2/08 クッ、ククッ、クカカカカカカッ。 should read exactly `Heh, heh-heh, kahahahahaha.`, like `:62` line 2.
+  - It is distinct from くっ (`Ngh`, R §4.1). It is also distinct from Wolg's scoff フッ (`Heh`, R §7.1): the two words coincide in English, the speakers do not.
+  - Binds `:52`, `:53`, `:54`, `:62`.
+  - Glossary: §6 row added.
+- **うおおおっ (battle cry)** → "R" for う, one "a" per お, "h" for っ.
+  - Census: 0 / 1 / 0 (おおおっ 0 / 2 / 0: the other row is SCN038A/02 くそおおおっ‼, the くそ row's elongation).
+  - SCN038B/10 う + お × 11 + っ‼ → `Raaaaaaaaaaah‼` (14; `.count('a')` = 11). This follows the きゃあ…っ pattern of R §4.1.
+  - Binds `:22`.
+  - Glossary: §6 row added.
+- **～ (long-vowel mark)** → repeat the vowel once per ～; a final っ after a word is dropped (as in `Daaaamn‼`, `:5`).
+  - Census: 0 / 2 / 0. SCN038B/11 いまだ！{br}行け～～～っ。 → `Now!{br}Goooo.` (Go + 3 o). SCN046A3/01 ヘイミン～～～～～～～グ‼ is in context: the stretch falls inside the name.
+  - Binds `:23`.
+  - Glossary: §6 row added.
+- **グフッ** → `Guh` (3).
+  - Census: 0 / 1 / 0. SCN038B/17 早く行けって――グフッ‼ → `Hurry up and go——Guh‼` is William struck mid-sentence. It is not フッ.
+  - Binds `:29`.
+  - Glossary: §6 row added.
+- **«Name»たち** → "«Name» and the others".
+  - Census of katakana name + たち: ウォルグたち 0 / 1 / 0 (SCN038B/07); ヘイミングたち 1 / 1 / 0 (NO4_BAR/0232, SCN038A/07); ジョンたち 2 / 0 / 0 (NO3_CHAPEL/0050, NO4_BAR/0444, untranslated). コリスンさんたち 3 / 0 / 0 keeps its own §1 row (R §1.2).
+  - Binds `:10 SCN038A/07` "Heming and the others are in the line of fire." and `:19 SCN038B/07` "…run toward Wolg and the others."
+  - NO4_BAR/0232 "Heming's team" (p04, `tl/script/NO4_BAR.p04.tsv:58`) stands in its context: Wolg is assigning teams. No shipped line changes.
+  - Glossary: new §1 row.
+  - The §1 ヘイミング row's たち target was "in context". It now reads "Heming and the others", with 0232's "Heming's team" in context, and its note's "SCN038A/07 open" is closed. The open question is answered here, and no shipped target changes.
+- **俺様** → no fixed word: the killer's swagger is carried by register. Promoted from §9 as proposed.
+  - Census: 3 / 4 / 0. Rows: NO2_MAINSTORAGE/0002–0004, SCN038_5C1/06, SCN046B1/11, SCN046B2/03, 04.
+  - SCN038_5C1/06 俺様の……。 → `My very own……` (13). 。 is absorbed after `……` (R §1.3).
+  - NO2_MAINSTORAGE/0003 その俺様の女神 should echo it as "my very own goddess".
+  - The killer's voice in this unit is mock courtesy: "No, no, my apologies.", "have the pleasure of meeting you". Later killer units (NO2_MAINSTORAGE, SCN046B1/B2) should keep it.
+  - Binds `:56`.
+  - Glossary: §6 row added; §9 row removed.
+
+### 9.2 Speakers (PR Flag 4)
+- Every speaker is named from content (F-009): scene subtitles carry no speaker code at all.
+  - A: 01–04 are the lead pair (Wolg / Oakland); 05 and 08 Oakland (or William); 06, 07 and 09 Wolg.
+  - B: 03, 05, 07, 09–11, 14, 16–18 and 20 are William; 02, 12, 15 and 19 Judy; 06, 08 and 21 probably Heming; 01 William or Heming; 04 and 13 Judy or Heming.
+  - D: 01, 11, 13, 15 and 17 are William; 03, 06, 10, 14 and 16 Judy; 02, 04, 05 and 07–09 Wolg or Oakland; 12 Wolg, Oakland or Heming.
+  - 5C1/01, 07 and 10 are Judy. The rest of 5C1, and 5C2, is the killer.
+- Geography: Wolg and the man urging him to shoot are on one side of the monster. Heming, William, Judy and John are on the other (A/07, B/07).
+- Every line is speaker-neutral in English, so a corrected attribution changes no text.
+- William's 帰れる…妹のところへ (`:48`, `:50`) → "I can go back… / To my sister…" points to his dead sister (NO4_HWR_FRONT/0075–0082).
+- Glossary: none.
+
+### 9.3 Movable codes and readings (PR Flags 2, 3, 5)
+- **Authored codes.** Diffing the authored `{br}`/`{p}`/`{w}` sequence against the source over 59 rows gives one difference: `:48 SCN038D/15` gains `{br}` ("It's fine, now…{br}I can go back…", 15 + 14). Without it the wrap leaves a one-word last row, `back…`.
+- Lines ended by an authored `{br}` are all ≤ 27 (`len()`): `:23` 4, `:40` 26, `:48` 15, `:51` 17, `:58` 21, `:61` 14, `:62` 10.
+- **F-011 scan** over every wrapped line: 0 lone "a"/"I", 0 split titles, 0 word-initial apostrophes. The one one-word row, `:23` "Goooo.", follows the source's own `{br}`.
+- **Step-6 reorder, flagged.** `:59 SCN038_5C1/09` moves のでね ("You see,") to the front. In final position the wrap left "…meeting you in a | place…".
+- **Readings, accepted:**
+  - `:33` さあ、行くんだ → "Come on, go." さあ stays a context word: "All right," where it opens a "let's" (R §4.1); "Come on," to a reluctant listener.
+  - `:28–32` the 早く行け near-repeats are kept consistent ("Hurry up and go", "Go, I'm telling you‼").
+  - `:41` 命 → "yours".
+  - `:61` もう一匹 → "another one" (R §1.5) and ただの…… → "just a……".
+  - `:39` and `:43` place the ellipsis by English word order, with the count kept.
+  - `:5` くそおおおっ‼ → `Daaaamn‼` (the §6 くそ row, 1 + 3 a).
+  - `:14` "At this rate…… we all die." keeps one row; "we'll all die" would orphan "die.".
+- Stutters are hyphenated per R §4.3 (`:44` "H-hurry up‼", `:46` "N-not yet‼").
+- Glossary: none.
+
+### 9.4 Recurrences (PR Flag 7)
+- **Translated, identical**: `:60 SCN038_5C1/10` `………。` → `………` = NO4_BAR/0201 (p04) and NO4_BAR/0265 (p05). CHECK pairs them.
+- **Untranslated exact repeats**, for the next translators:
+  - D/12 すまん…。 = SCN046A1/11 → `Sorry…`.
+  - D/14 ウィリアムっ‼ = NO4_HWR_FRONT/0023 → `William‼`.
+  - B/04 ……？ = NO4_HWR_FRONT/0034 (exact) and NO4_MACHINER90/0093 (tag-variant) → `……?`.
+  - 5C1/10 `………。` = the R §5.6 list. The labelled `_T` `【Name】………` rows are covered by R §6.4.
+- **Not duplicates**: B/04 ……？ and B/12 ……⁉ match NO4_BAR/0391 ……。 only once final punctuation is normalised (R §8.4).
+- **Echo**: SCN046B1/04 俺もまさか、こんな場所でお前に会えるとは思ってなかったぜ echoes `:59`, and can reuse its wording.
+- Glossary: none.
