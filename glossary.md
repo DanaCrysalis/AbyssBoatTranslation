@@ -56,6 +56,7 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | 生き残り | 生き残りグループ | survivor(s); 生き残りグループ: survivor group | 8 (9); 14 | — | the people still alive aboard | R §5.1 |
 | 乗客 | — | passenger(s) | 10 (9) | — | as shipped NO4_BAR/0028, 0094, 0191, 0198, 0393; NO4_HWR_FRONT/0122 "a passenger on board this ship"; 15 / 0 / 0 | R §14.1 |
 | 客船 | — | passenger ship | 14 | — | this ship; 例の客船 → "that passenger ship" (0279) | R §6.1 |
+| 船体 | — | the hull | 8 | — | lowercase; 船 alone stays "the ship"; a repeat in one sentence may take "it" (NO4_MACHINER90/0098); SCN047C1/05 (the alien vessel) in context; 5 / 1 / 0 | R §15.1 |
 | 便所 | — | the toilet | 10 | — | lowercase; Collison's word (0292, NO4_HWR_FRONT/0011) | R §6.1 |
 | 通風孔 | — | air vent; "the vent" / "vent(s)" after first mention | 8; 8 | — | lowercase; "the air vent" at a scene's first mention (NO4_BAR/0294), then "vent" | R §7.1 |
 | 中央ダクト | — | the central duct | 16 | — | lowercase; NO4_BAR/0302 only | R §7.1 |
@@ -74,6 +75,7 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | Source | Variants | Target | Cols | Cap | Note | Ruling |
 |---|---|---|---|---|---|---|
 | 潜水装備 | — | diving gear | 11 | — | | R §1.9 |
+| 装備 | — | gear ("our gear") | 4 | — | the party's equipment (NO4_BAR/0129, 0212, 0254, 0305; NO4_MACHINER90/0016, 0084); 装備する in equip/*, camp/001 (blocked) in context; 潜水装備 is its own row; 16 / 0 / 6 incl. 潜水装備 ×3 | R §15.1 |
 | 電波 | — | radio waves | 11 | — | ＶＬＦ帯の電波 → "VLF-band radio waves" | R §3.1 |
 | 超音波 | — | ultrasound | 10 | — | | R §3.1 |
 | 長波 | — | longwave | 8 | — | | R §3.1 |
@@ -133,6 +135,8 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | 蜘蛛 | クモ | spider | 6 | both spellings, one word; クモのような形 → "spider-shaped" (0040); 蜘蛛の巣 (NO5_BANK/0006) in context | R §7.1 |
 | 昆虫 | — | insect | 6 | 昆虫採集 is its own row ("bug collecting") | R §7.1, §8.1 |
 | 昆虫採集 | — | bug collecting | 14 | NO4_BAR/0389 only ("No time for bug collecting.") | R §8.1 |
+| 生き物 | — | creature | 8 | as shipped NO4_BAR/0040; NO4_MACHINER90/0064, 0072; NO4_TOOL_ROOM ×5; 9 / 0 / 0 | R §15.1 |
+| 潜入 (する) | — | come aboard ("the moment we come aboard", "did we even need to come aboard?") | 11 | the salvagers entering the wreck: NO4_MACHINER90/0011, 0089; 2 / 0 / 0 | R §15.1 |
 | 節足動物門鋏角亜門 | — | phylum Arthropoda, subphylum Chelicerata | 40 | Miller's taxonomy, NO4_BAR/0352 only; lowercase ranks, capitalised taxa | R §8.1 |
 | フッ | — | Heh | 3 | Wolg's wry scoff; punctuation per source (フッ… → "Heh…", フッ、 → "Heh,"); not グフッ (SCN038B/17, a grunt) | R §7.1 |
 | クッ · ククッ · クカカカカカカッ | クッ、ククッ、クカカカカカカッ。 · クッ、ククッ。 · ククッ、クカカカカカカッ | Heh · Heh-heh · Kahahahahaha; run together: "Heh, heh-heh, kahahahahaha." | 3 · 7 · 12; 27 | the killer's laugh, 6 / 7 / 0 rows; one syllable per カ; punctuation per source; not くっ (Ngh) | R §9.1 |
@@ -182,11 +186,8 @@ so; the reviewer moves the row up into its section in the integration commit. --
 |---|---|---|---|---|---|
 | 無線室 | — | the radio room | — | NO6_BRIDGE/0001, 0006; rooms/107, items/011, hints/001–002 (cap 14 as a room name); 2 / 0 / 4 | 1 |
 | ブリッジ | — | the bridge (lowercase in dialogue); room name: Bridge | — | NO4_MACHINER90/0019, 0020, 0028, 0029; NO6_BRIDGE/0017; rooms/108; 操舵室 stays "the wheelhouse"; 5 / 0 / 1 | 4 |
-| 船体 | — | the hull | the ship | NO4_MACHINER90/0022, 0098; NO4_HWL_BACK/0007, NO4_SHOP/0005, NO4_BAR_T/0180; SCN047C1/05 (the alien vessel, in context); 5 / 1 / 0 | 4 |
 | 雇い主 | — | employer | — | as shipped NO4_BAR/0127; NO4_MACHINER90/0036; 3 / 0 / 0 | 4 |
-| 生き物 | — | creature | — | as shipped NO4_BAR/0040; NO4_MACHINER90/0064, 0072; NO4_TOOL_ROOM ×5; 9 / 0 / 0 | 4 |
 | 虫 | — | bug | insect (that is 昆虫) | NO4_MACHINER90/0050, 0052 …; not 虫の居所 (§6); 24 / 0 / 0 | 4 |
-| 装備 | — | gear | equipment | as shipped NO4_BAR/0129, 0212, 0305; NO4_MACHINER90/0016, 0084; 潜水装備 stays "diving gear"; 16 / 0 / 6 | 4 |
 | 人間 | — | human(s); "people" where the line is general | — | as shipped NO4_BAR/0132, 0246, NO4_HWR_FRONT/0003; SCN046B2/01; SCN047C2/04–05 ("human"); 21 / 5 / 0 | 4 |
 | 実験 · 検体 · フェーズ２ | — | experiment · specimen · Phase 2 | test subject (検体) | SCN047A/01, 03, SCN047C1/03, EPILOG/03; 0 / 3 / 0 · 0 / 1 / 0 · 0 / 1 / 0 | 4 |
 | 処分 | — | dispose of (SCN047A/03, C1/05); NO4_MACHINER90/0036 それなりの処分 in context ("face the consequences") | — | 1 / 2 / 0 | 4 |

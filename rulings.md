@@ -1372,3 +1372,99 @@ Census counts are rows per store (script / scene / system), from the reviewer's 
 - **Untranslated twins, which CHECK pairs once translated:** 0101 = NO4_HWL_FRONT/0011, NO6_HW_1/0003, NO6_HW_2/0006, 0010; 0128 (tag variant) = NO2_MAINSTORAGE/0023.
 - **For later units, by hand:** NO5_ENTRANCEL/0005 寄り道せずについて来いよ (ついて for 付いて) reuses 0142's "Follow me, and no detours."; UP_T/0016–0037 are labelled copies of 0118–0138 (F-008, F-013) and reuse this unit's wording.
 - Glossary: none.
+
+## Unit script NO4_MACHINER90.p02 (PR #15, MERGED, 2026-10-25)
+
+The salvagers' first entry into the ship, told in flashback: Wolg feels eyes on them in the hall, Miller wants to take the creature back, they find their gear smashed, the hull lurches, Miller faints, and they look for somewhere safe. Reviewed once:
+- **Round 0** (93a0d5a, merged with main 8f330ba for review): MERGE, squash 40c6491. Every gate passed, and there were no must-change findings.
+
+Figures:
+- **Container.** NO4_MACHINER90.SCR 7,227 / 65,535 bytes, 58,308 free; tokens 271 / 1,499 (MEASURE). That is 54 / 108 rows; p01 (#17) shares the container and is in rework.
+- **Pages.** At most 4 rows per page (UNITCHECK, 54 rows, 0 violations). The whole store: 689 rows, 0 violations.
+- **Ratio.** 2,288 target ÷ 962 source characters = 2.38 (PR figure).
+- **Duplicates.** CHECK compared 56 duplicate pairs and 4 tag-variant pairs.
+  - The reviewer's census made 112,644 comparisons (54 rows × every other dump row, at three levels: exact; `{p}{w}{br}` stripped; `【Name】` stripped, ！？ → ⁉, final 。！？ dropped).
+  - It found 27 hits, 13 of them translated pairs, with 0 divergences: 0093 `……?` and 0108 `………` (§15.4).
+- **F-011 wrap scan.** 112 wrapped lines: no lone "a"/"I"/"an", no split title, and every authored-`{br}` line ≤ 27. One wrap-made one-word last row (0096, §15.3).
+- **F-012.** Both `+` rows (0061, 0086) follow `{br}`-ended rows; nothing glued.
+
+Census counts are rows per store (script / scene / system), from the reviewer's grep of `dumps/` on 2026-10-25. Line citations use PROJECT.md §7's numbering in `tl/script/NO4_MACHINER90.p02.tsv` (line = row number − 51).
+
+### 15.1 Terms promoted from §9, and one added
+- **生き物** → `creature` (8).
+  - Census: 9 / 0 / 0, with no variant. Shipped as "creature" at NO4_BAR/0040.
+  - Binds `:13 0064` "It's odd, this creature……", `:21 0072` "this creature's value"; NO4_TOOL_ROOM ×5 follow.
+  - Glossary: §6 row added (beside 昆虫); §9 row removed.
+- **船体** → `the hull` (8).
+  - Census: 5 / 1 / 0. Sibling p01 0022 船体の中央 → "the middle of the hull" agrees.
+  - 0098 repeats 船体 in one sentence (船体が動き始めてる……船体の角度が変わるぞ‼). The second is "it": "the hull's going to tilt" wraps to 5 rows with an orphaned "tilt‼".
+  - NO4_BAR_T/0180, the `_T` draft of this moment, has 船が──船体が傾いているぞっ (傾く, "tilt"), which supports 0098's verb.
+  - SCN047C1/05 (the alien vessel) is rendered in context. 船 alone stays "the ship".
+  - Binds `:47 0098`; p01 `:25 0022` (#17).
+  - Glossary: §2 row added; §9 row removed.
+- **装備** → `gear` (4).
+  - Census: 16 / 0 / 6, including 3 rows of 潜水装備, which is its own row ("diving gear").
+  - Shipped as "gear" at NO4_BAR/0129, 0212, 0254, 0305. "equipment" (the §9 alternative) is rejected because it would split the four shipped rows.
+  - The system rows (equip/000–003 を装備しました, camp/001, items/000 標準装備) use the verb or a compound, and are rendered in context once F-006 unblocks them.
+  - Binds `:33 0084` "Our gear's been destroyed‼"; p01 `:19 0016` "this cumbersome gear" (#17).
+  - Glossary: §3 row added; §9 row removed.
+- **潜入 (する)** → `come aboard` (11), new.
+  - Census: 2 / 0 / 0 (NO4_MACHINER90/0011, 0089). Both are the salvagers entering the wreck.
+  - "infiltrate" and "sneak in" are rejected: the party is not hiding from anyone it knows of.
+  - The binding from #17's round-0 review: p01 0011 changes to "come aboard".
+  - Binds `:38 0089` "did we even need to come aboard?"; p01 `:14 0011` (#17 round 1).
+  - Glossary: §6 row added.
+- Left for the sibling merges: ブリッジ, 雇い主, 虫, 処分, 無茶を言う (#17); 人間, 実験 · 検体 · フェーズ２ (#16).
+
+### 15.2 Speakers (PR Flag 5)
+- These are named from content, ignoring spk=N (F-009). In this scene spk=2 mostly carries Oakland, spk=3 Miller, spk=4 Wolg and spk=5 Heming, with borrowings: Miller on spk=2 (0062, 0088) and spk=4 (0068), Oakland on spk=4 (0082), Wolg on spk=3 (0090).
+  - Heming: 0069, 0073–0074, 0076, 0078, 0096, 0098, 0102–0103. 0097 "Heming, what's gotten into you" confirms 0096.
+  - Wolg: 0055, 0057, 0059, 0081, 0083–0084, 0090, 0092, 0100 (社長 address), 0104, 0106.
+  - Oakland: 0056, 0082 ("What is it, Wolg!"), 0079 (answering Heming's そうだろ？), 0097, 0101 (answering 0100).
+  - Miller: 0062, 0064, 0068, 0070, 0072, 0075, 0077, 0080, 0085–0086, 0088–0089, 0091, 0107.
+- 0063 is Oakland, by its labelled twin NO4_HWR_FRONT_DOWN_T/0001 【オークランド】なんだ？.
+- These are probable, not confirmed: the spk=2 rows 0058, 0060–0061, 0065–0067, 0071, 0094–0095 and 0105 (Oakland); 0099 (Wolg or Oakland); 0093 and 0108 (unattributed).
+- **0087 ミラー、少し黙れ (spk=3)** is uncertain. Two points favour Oakland:
+  - Miller's 0086 (連れて来といて, "you dragged me here") is addressed to her employer.
+  - So is 0089 (潜入する必要があったの？, "did we even need to come aboard?").
+  - Wolg is also possible, being terse and taking 0090 静かにしろ‼.
+  - All of these are speaker-neutral and recorded in F-009.
+- Registers fit:
+  - Oakland is plain and measured ("Quit joking.", "Of course. Let's get a move on.").
+  - Heming is calm, mildly old-fashioned ("Not that I can't understand how you feel, but I'm afraid that's not possible.").
+  - Miller is assertive, with かしら carried by "could" (0107).
+- Glossary: none.
+
+### 15.3 Movable codes, wraps and readings (PR Flags 2–4)
+- **Authored codes.** Only two rows differ from the source, and both are in Flag 2:
+  - `:8 0059` `{br} {br} {p}` → `{br} {p} {p}`, at the sentence boundary after 何か危険な感じがする。 The pages are 4 rows, then 2.
+  - `:35 0086` gains a leading `{p}` on the `+` row after 0085's `{br}` (R §2.4). The pages are 4 (3 rows plus the cursor row), then 4. Added to F-010's in-game check.
+  - The unit has no `{w}`. Glyph counts match on all 54 rows.
+- **0096 one-word last row** (R §1.12 rule 1). The reviewer measured each candidate with `len()` and `codec.wrap(…, 28)`:
+  - "Everyone, grab onto something‼" 30, "…hold onto something‼" 30, "…hold on to something‼" 31, "…grab hold of something‼" 33: each orphans "something‼".
+  - "Grab onto something, all of you‼" 32 orphans "you‼".
+  - "Grab onto something, everyone‼" 30 orphans "everyone‼".
+  - Within 28, "Everyone, grab something‼" (25) loses つかまる's hold-on-for-support sense (it reads as つかむ, and can mean "pick something up"). "…hold on tight‼" (24) drops 何かに. "…brace yourselves‼" (27) is an idiom swap.
+  - None of these is equally faithful, so the literal stands, flagged (rule 1, last sentence).
+- **0078 "Right?"** is the source's own そうだろ？ line after an authored `{br}`, a whole sentence and not a wrap orphan, so it stands.
+- **Readings accepted (Flag 3):**
+  - 0098 角度が変わる → "tilt": a one-verb synonym (step 4; see 船体, §15.1). It is not 回転 "roll over".
+  - 0058 でもそれなら → "So": the literal "But then why don't they come out?" orphans "out?".
+  - 0072 それ以上 → "even more".
+  - 0076 無茶苦茶言うやつ → "You say the wildest things." and 0103 世話の焼けるヤツ → "What a handful she is.": type-of-person readings (R §1.7). 無茶苦茶 is not 無茶を言う (#17's row).
+  - 0088 黙れですって？ → "Shut up, you say?": the SCN002A/04 precedent "Wait…… you say?".
+  - 0107 得体の知れない → "strange", as SCN002A/04.
+- **Modality** (the wave-3 lesson) is literal: 0073 わからんでもない, 0075 できればやってる, 0089 必要があったの.
+- Glossary: none.
+
+### 15.4 Recurrences (PR Flag 6)
+- **Translated, identical:**
+  - 0093 `……?` = NO4_HWR_FRONT/0034, SCN038B/04.
+  - 0108 `………` = NO4_BAR/0201, 0265, 0430, NO4_HWR_FRONT/0033, 0057, 0092, SCN038_5C1/10, SCN046B1/01, and 0123/0129 once the label is stripped. Sibling p01 0010 `………{p}` (#17) agrees.
+- **Untranslated twins, which CHECK pairs once translated:** 0108 = NO3_NO4/0007, 0061, NO4_TOOL_ROOM/0025 (`………。{p}`), 0060 (`………。{w}{br}`).
+- **Labelled twins, which CHECK does not pair (F-008, F-013); reuse by hand:**
+  - 0063 なんだ？{p} = NO4_HWR_FRONT_DOWN_T/0001 【オークランド】なんだ？{p} → `【Oakland】What is it?{p}`. This also confirms 0063's speaker.
+  - 0108 = NO4_BAR_T/0010 【男】, 0068 【ミラー】, 0151 【ジュディ】, NO4_HWR_FRONT_UP_T/0022, 0024, 0028 【女】 (R §14.4): `………`, with the translated label.
+- **Near-duplicate for a later unit, by hand:** NO4_HWL_BACK/0007 みんな何かにつかまれ！{br}船が、船体が回転し始めるぞ！ The first sentence reuses 0096's words with the source's `!`: "Everyone, grab onto something!". 船体 → "the hull", and 回転 → "roll over" (glossary §3).
+- **Agreement:** 0068 ちょっと待って！ "Wait a minute!" agrees with NO4_BAR/0368 ちょっと待ってよ！.
+- Glossary: none.

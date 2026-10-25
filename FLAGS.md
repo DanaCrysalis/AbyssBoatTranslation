@@ -75,6 +75,8 @@ NO4_BAR.p02 (PR #5, 2026-10-06) adds 9 `{p}` so every page of 0062–0119 fits 4
 model it, including the 5-row page from 0092 named above. Four of them open a `+` row straight
 after a row ending in `{br}` (0066, 0083, 0089, 0099); the source never has `{br}` followed by `{p}`.
 Check in the same session that the box clears cleanly there, with no blank first row (rulings R §2.4).
+NO4_MACHINER90.p02 (PR #15) does the same at 0086, after 0085's `{br}` (Miller: "…What are you
+going to do about this?" then "You dragged me all the way here…"); check it with the others (R §15.3).
 
 
 ## Open
@@ -116,6 +118,9 @@ their own cut within one line (rulings R §4.5).
 `NO4_HWR_FRONT_UP_T`/0016–0037 draft NO4_HWR_FRONT.p03 (PR #14) 0118–0138, all `【Name】`-prefixed,
 so CHECK pairs none of them: reuse p03's wording by hand; 【女】 → `【Woman】` (glossary §1), and
 T/0022, 0024, 0028 `【女】………{p}` take `【Woman】………{p}` (rulings R §14.1, §14.4).
+`NO4_HWR_FRONT_DOWN_T`/0001 【オークランド】なんだ？{p} copies NO4_MACHINER90/0063 (PR #15): reuse
+`【Oakland】What is it?{p}` by hand; NO4_BAR_T/0010, 0068, 0151 (labelled `………`) take `………` after
+the label (rulings R §15.4).
 
 ### F-009 · 2026-10-04 · speaker · OPEN
 `spk=N` (first argument of statement 0xA9) is not a character id: `NO4_BAR`/0014–0018 put
@@ -161,6 +166,10 @@ NO4_HWR_FRONT.p03 (PR #14): named from the UP_T draft where it covers the scene 
 Heming, Miller, the woman). 0117 (Wolg or William), 0124 (an accuser, probably William or Wolg;
 the shipped scene rewrites T/0023 here), 0125 (Oakland or Wolg), 0139–0143 and 0146 (0143 and 0146
 say 俺, so not Oakland) stay uncertain and are rendered speaker-neutral (rulings R §14.2).
+NO4_MACHINER90.p02 (PR #15): named from content (spk=2 mostly Oakland, 3 Miller, 4 Wolg, 5 Heming,
+with borrowings at 0062, 0068, 0082, 0088, 0090); 0063 is Oakland by its labelled twin
+NO4_HWR_FRONT_DOWN_T/0001. 0087 ミラー、少し黙れ (Oakland or Wolg), 0099 (Wolg or Oakland), and
+0093, 0108 stay uncertain and are rendered speaker-neutral (rulings R §15.2).
 
 ### F-011 · 2026-10-04 · tools · OPEN
 PR #1 (NO4_BAR.p01) found four things CHECK and UNITCHECK do not verify. Each was confirmed by a
