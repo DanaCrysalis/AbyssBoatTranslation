@@ -1,0 +1,55 @@
+# unit: scene/SCN041-SCN046
+# rows: 52
+# columns: id <TAB> context <TAB> source <TAB> target (empty target = untranslated)
+SCN041/01	sub 1-81	これで、シャッターが開いたはず…。	With this, the shutter should be open…
+SCN041/02	sub 381-445	たいしたことはないわ。	It's nothing serious.
+SCN041_B/01	sub 20-60	ありがとう……。	Thank you……
+SCN041_B/02	sub 100-150	でも、わからない。	But I don't understand.
+SCN041_B/03	sub 170-270	私、なぜあなたをかばったのかしら？	I wonder why I shielded you?
+SCN041_B/04	sub 450-649	助け合い？生きる？{br}私にはわからないの……。	Helping each other? Living?{br}I just don't understand……
+SCN046/01	sub 1-90	準備ができたら、右手をあげろ。	When you're ready, raise your right hand.
+SCN046/02	sub 230-270	手を開け。	Open your hand.
+SCN046A1/01	sub 1-40	バッグが‼	The bag‼
+SCN046A1/02	sub 56-100	かまうな！	Leave it!
+SCN046A1/03	sub 112-149	くそっ‼	Damn‼
+SCN046A1/04	sub 239-286	行けっ！{br}ウォルグ！	Go!{br}Wolg!
+SCN046A1/05	sub 287-400	そんな場合かっ⁉{br}社長が死ぬぞ⁉	Is this the time for that⁉{br}The boss is going to die⁉
+SCN046A1/06	sub 414-460	もう手遅れだ！	It's already too late!
+SCN046A1/07	sub 461-500	弾切れ⁉{br}こんな時に‼	Out of ammo⁉{br}At a time like this‼
+SCN046A1/08	sub 501-586	こいつでならやれる…。	With this, I can do it…
+SCN046A1/09	sub 587-654	お前、死ぬ気か…⁉	You intend to die…⁉
+SCN046A1/10	sub 655-700	行けえええええええっ‼	Goooooooo‼
+SCN046A1/11	sub 711-756	すまん…。	Sorry…
+SCN046A2/01	sub 1-90	ビル…、ゲームオーバーだ。	Bill… it's game over.
+SCN046A2/02	sub 91-200	クライド、お前…。	Clyde, you…
+SCN046A2/03	sub 201-290	悪夢もこれで覚める…	Now the nightmare ends too…
+SCN046A2/04	sub 301-389	や、やめろっ！	S-stop it!
+SCN046A3/01	sub 171-231	ヘイミン～～～～～～～グ‼	Hemiiiiiiiing‼
+SCN046AMO1/01	sub 1-90	準備ができたら、右手をあげろ。	When you're ready, raise your right hand.
+SCN046AMO1/02	sub 230-270	手を開け。	Open your hand.
+SCN046AMO2/01	sub 1-90	準備ができたら、右手をあげろ。	When you're ready, raise your right hand.
+SCN046AMO2/02	sub 230-270	手を開け。	Open your hand.
+SCN046B/01	sub 1-90	準備ができたら、右手をあげろ。	When you're ready, raise your right hand.
+SCN046B/02	sub 230-270	手を開け。	Open your hand.
+SCN046B1/01	sub 1-60	………。	………
+SCN046B1/02	sub 61-210	クッ、ククッ、クカカカカカカッ。{br}久しぶりだな。親愛なるウスノロ。	Heh, heh-heh, kahahahahaha.{br}Long time, my dear dimwit.
+SCN046B1/03	sub 211-350	お前はもう、二度と逃がさん。{br}ジェイク・ノーマンっ‼	You'll never escape again.{br}Jake Norman‼
+SCN046B1/04	sub 431-620	クッ、ククッ。{br}俺もまさか、こんな場所でお前に会えるとは思ってなかったぜ。	Heh, heh-heh.{br}I never dreamed I'd meet you in a place like this either.
+SCN046B1/05	sub 621-680	なぜこの船に乗った…？	Why'd you board this ship…?
+SCN046B1/06	sub 681-768	偶然だよ。{br}ククッ、クカカカカカカッ。	Pure chance.{br}Heh-heh, kahahahahaha.
+SCN046B1/07	sub 769-900	でもついに見つけたぜ。{br}マジでいやがったよ。	But I've finally found it.{br}The damn thing's for real.
+SCN046B1/08	sub 901-960	何を言っている？	What are you talking about?
+SCN046B1/09	sub 961-1033	なんだぁ？{br}てめぇは一緒にいて分かってねえのか？	Huh?{br}You've been with her and you still don't get it?
+SCN046B1/10	sub 1034-1091	あのメスのことだよ。	I mean that bitch.
+SCN046B1/11	sub 1092-1298	俺様は見たんだよ！{br}あのメスが青白い光に包まれ消えていく{br}姿をなぁ……。{br}ありゃ人間じゃねえぜ‼	I saw it with my own eyes!{br}That bitch, wrapped in pale blue light, fading away……{br}That's not human‼
+SCN046B2/01	sub 1-54	…人間じゃない？	…Not human?
+SCN046B2/02	sub 55-201	笑わせるな。{br}お前、お得意の神とでも言うのか‼	Don't make me laugh.{br}Are you going to tell me she's that god of yours‼
+SCN046B2/03	sub 202-321	そうだ。{br}俺様に新たな命をもたらす神だ‼	That's right.{br}A god to bring me new life‼
+SCN046B2/04	sub 322-441	アレの生肝を食らえば俺様は神となる。	Once I devour that thing's raw liver, I become a god.
+SCN046B2/05	sub 442-660	ふざけるなっ！{br}神だと！新たな命だと！{br}きさま、そんなことのために何人殺したと{br}思ってるんだ⁉	Don't give me that!{br}A god, you say! New life!{br}You bastard, how many people have you killed for that⁉
+SCN046B2/06	sub 661-860	しらねーよ。{br}てめえらウスノロを何人殺したかなんて、{br}数えてるわけねーだろうが！	Hell if I know.{br}As if I'd count how many of you dimwits I've killed!
+SCN046B2/07	sub 861-1010	そう言えば、そのウスノロの中にいたっけ？{br}お前の売女もよ‼	Come to think of it, wasn't she one of those dimwits?{br}Your whore, too‼
+SCN046B2/08	sub 1011-1150	クッ、ククッ、クカカカカカカッ。	Heh, heh-heh, kahahahahaha.
+SCN046B3/01	sub 62-141	お前を殺すっ！	I'll kill you!
+SCN046B3/02	sub 381-500	まだだ。{br}まだ俺にはやるべきことが……。	Not yet.{br}I still have work to do……
+SCN046_VALVE/01	sub 71-131	ト・マ・ラ・ナ・イ・ワ・ヨ……	It・will・not・stop……
