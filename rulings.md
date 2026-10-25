@@ -520,3 +520,63 @@ Census counts are rows per store (script / scene / system), from the reviewer's 
 - `:12 0186` puts the mentioned pronoun in quotation marks (`"he,"` → “he,”).
 - `:48 0222` keeps the source's 。 and renders the rhetorical question as a statement.
 - None of these is a fidelity error.
+
+---
+
+## Unit script NO4_BAR.p05 (PR #6, MERGED, 2026-10-06)
+
+The bar after the search: Wolg's report (the culprit is human; one body was shot), William walks out, the surface crew loses the ship on the sonar, the party beds down, and Collison is attacked. It continues NO4_BAR.p04 directly. Reviewed once:
+- **Round 0** (d7386be): MERGE, squash c6858ea. Every gate passed; no finding.
+
+Figures:
+- With p01–p05 merged: NO4_BAR.SCR 29,159 / 65,535 bytes, 36,376 free; tokens 777 / 1,499 (MEASURE). p05 costs +518 bytes over p04's 36,894.
+- At most 4 rows per page (UNITCHECK, 58 pages, 0 violations). 2,679 target characters ÷ 1,208 source = 2.22.
+- CHECK compared 29 duplicate pairs (main's 26 + 0239, 0242, 0265) and 2 tag-variant pairs.
+- The reviewer's census made 110,084 source-side comparisons (58 rows × 1,898 other script and scene dump rows) at three levels: exact; `{p}{w}{br}` stripped; `【Name】` stripped with final punctuation normalised. Hits are in §6.4.
+
+Census counts are rows per store (script / scene / system), from the reviewer's grep of `dumps/` on 2026-10-06. Line citations use PROJECT.md §7's numbering in `tl/script/NO4_BAR.p05.tsv` (line = row number − 232).
+
+### 6.1 Terms promoted from §9
+- **客船** → `passenger ship` (14). 4 / 0 / 0: NO4_BAR/0182 (p04, shipped "passenger ship"), 0277, 0279, NO4_HWR_FRONT/0007. 例の客船 → "That passenger ship" (0279).
+  - Binds `:45 0277`, `:47 0279`. Glossary: §2 row added.
+- **便所** → `the toilet` (10). 2 / 0 / 0: NO4_BAR/0292, NO4_HWR_FRONT/0011, both Collison (わし). "the head" was the alternative; "toilet" is the plain word and needs no nautical gloss.
+  - Binds `:60 0292`. Glossary: §2 row added.
+- **ソナー** → `the sonar` (9). 5 / 0 / 0: NO4_BAR/0272, 0279, 0282, NO4_HWR_FRONT/0064, 0069. ソナーの反応が消えてしまった → "The contact's vanished from the sonar." (0272); the HWR_FRONT rows ソナーに反応が無い take "no contact on the sonar" in context.
+  - Binds `:40 0272`, `:47 0279`, `:50 0282`. Glossary: §3 row added.
+- **死体** → `body` (4). 23 / 0 / 0 (listed in the §6 row's census). Only the 死体 part of the §9 seed is promoted: 死骸 (2 / 0 / 0: NO4_BAR/0387, 0455) and 遺体 (1 / 0 / 0: NO4_BAR/0294) are rendered by p07 and p06 and stay in §9 until those reviews. The §9 row is narrowed to 死骸 · 遺体, its targets unchanged.
+  - Binds `:18 0250`, `:19 0251`, `:20 0252`. Glossary: §6 row added; §9 row narrowed.
+- **見張り** → `watch` (5): "stand watch", "keep watch", "change of watch". 7 / 0 / 0: NO3_CHAPEL/0061, 0097 (見張りの順番, added to the Variants), NO4_BAR/0288, 0322, 0339, 0400, NO4_HWR_FRONT/0143. 交代で見張りを立てて → "take turns standing watch". Open PRs #9 (0322 "stand watch", 0339 "change of watch") and #8 (0400 "keep watch") already conform.
+  - Binds `:56 0288`. Glossary: §6 row added; §9 row removed.
+
+### 6.2 Speakers (PR Flag 4)
+- NO4_BAR_T has no draft past T/0181, so every speaker comes from content (F-009).
+  - Collison: 0236–0237, 0258, 0260, 0262, 0292. Wolg: 0238, 0244, 0246, 0249–0250, 0252, 0256, 0267, 0269, 0287–0288, 0293. Oakland: 0240–0241, 0243, 0263, 0266, 0268. Miller: 0251, 0291. William: 0255, 0257, 0259, 0261.
+  - Surface crew (0271–0286): crewman A 0271, 0273, 0275, 0277; the sonar operator 0272, 0274, 0276, 0279, 0281, 0283, 0285; their superior 0278, 0280, 0282, 0284, 0286.
+- Uncertain, every one rendered speaker-neutral, so a corrected attribution changes no text: 0245, 0247, 0248, 0253 (Oakland or William; 0247's ふん、 plus the skeptic's line echoes Oakland's p03 0133, and 0248's food and diving gear fit him); 0254 (Oakland's 我々, or Wolg); 0264 (Wolg or Oakland); 0265 (anyone); 0270 (Oakland or Heming); 0289 (Miller, Heming or Oakland); 0290 (Oakland or Heming, 出来ん).
+- Binds `:4`–`:61`. Glossary: none.
+
+### 6.3 Movable codes and readings (PR Flags 2, 3, 5)
+- `:18 0250`: the source `{br}` before そうだろ、ミラー is removed, `{br} {p}` → `{p}`. With it the page is 5 rows; joined, the last row reads "weapon. Right, Miller?" (22).
+- `:30 0262`: 申し訳ない。{br}オークランドさん。 → "My apologies, Mr. Oakland." (26), the vocative merged as translation_prompt §5 example 1.
+- These are the only differences in the authored `{br}`/`{p}`/`{w}` sequence. No `{p}` added, no `{w}`, no `+` rows (F-012 n/a). Lines ended by an authored `{br}` measure 27 at most (0276).
+- `:23 0255` お前らが作ったんだろ⁉ has no stated object. Read as the shot body ("You did it yourselves, didn't you⁉"), which 0257 この、人殺しめ…‼ "Why, you murderers…‼" follows. The alternative, "You made it up", is noted; the English covers both loosely.
+- `:22 0254` 我々の装備を破壊した輩 → "whoever destroyed our gear", as p04 0212. PR #9's 0298 潜水装備を破壊した輩 → "whoever destroyed our diving gear" keeps the same frame.
+- `:38 0270` 上からの助け → "help from the people up top" (上 alone, R §4.2). `:54 0286` 非常招集 → "Emergency muster".
+- Step-5/6 departures, flagged and accepted: `:50 0282` clause reorder "What were you watching, if not the sonar?"; `:12 0244` "We know …" supplies the verb from 0243's わかったか; `:9 0241` 一刻も早く → "without delay"; `:15 0247` など → "simply".
+- Glossary: none.
+
+### 6.4 Recurrences (PR Flag 6)
+- 0239 and 0242: the save prompt (R §3.4), byte-identical to 0170 and 0173.
+- 0265 `………。` → `………` = 0201 (R §5.6). Its remaining recurrences are as R §5.6 lists them; the `【Name】`/unlabelled ……… rows (NO4_BAR_T/0010, 0068, 0151; NO4_HWR_FRONT/0033, 0123, 0129; NO4_HWR_FRONT_UP_T/0022, 0024, 0028; NO4_MACHINER90/0010) take `………` with their own ending tag.
+- **Untranslated exact recurrences; CHECK pairs them when translated:**
+  - 0245 なんだと⁉ → "What⁉" ↔ NO4_HWL_BACK/0008 (after 船体が回転し始めるぞ; the reading fits).
+  - 0263 いいや。 → "Not at all." ↔ NO4_BAR/0432 (p08; the reply to なにか文句でもあるのか).
+- **Not paired by CHECK:** NO3_CHAPEL/0033 なんだと‼ (‼ for ⁉) should take "What‼".
+- Glossary: none.
+
+### 6.5 Accepted readings (non-blocking review notes)
+- `:61 0293` "attacked by the monster": "a monster" would mark the surprise after 0246's "The culprit is human"; both read.
+- `:53 0285` "Cards with this guy…" is elliptical for "Playing cards with this guy…", as the source's カードを… is.
+- `:60 0292` wraps "I'm off to the toilet. Will | you come along?": acceptable under R §1.12 (no lone "a"/"I", no orphan).
+- `:28 0260` おい → "Here," keeps Collison's old-fashioned diction (glossary §7).
+- None of these is a fidelity error.
