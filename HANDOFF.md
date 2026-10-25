@@ -1,4 +1,4 @@
-**Last updated: 2026-10-25** — wave 4 closed: NO4_HWR_FRONT.p03, NO4_MACHINER90.p01, p02 and SCN047-EPILOG merged (PRs #14, #17, #15, #16), none parked; scene store complete; the wave 4 coordinator opens the wave 5 session.
+**Last updated: 2026-10-25** — wave 5 dispatched: NO4_TOOL_ROOM.p01, p02, NO4.b01, NO4.b02 (translators in flight); glossary seeds cd28387.
 
 ## Integration branch: `main`. Not configurable.
 Every PR bases on `main`; the reviewer merges into `main`; a wave is closed only when `origin/main` is
@@ -6,11 +6,9 @@ at the close commit (`CLAUDE.md` Rule 3). A fresh container may clone shallow wi
 preflight is `git fetch origin main && git checkout main && git reset --hard origin/main`.
 
 ## NEXT ACTION — always current, always a literal instruction
-> **Open the wave 5 session** (wave 4 coordinator; CLAUDE.md Rule 1, orchestrator.md §7): `create_session`
-> titled `Abyss Boat — wave 5`, tags `["abyssboat-translation", "wave-5"]`, `source_url`
-> https://github.com/DanaCrysalis/AbyssBoatTranslation, `source_revision` `main`, seed = SKILL.md §6a
-> with UNITS = Next up. First check `list_sessions` (mine: true, title `Abyss Boat — wave 5`): if one exists, do not open a second.
-> The wave 5 coordinator seeds the glossary for its units, then dispatches.
+> **Wave 5 coordinator:** wait for the four translators (In flight) to open PRs — wave barrier (orchestrator.md §4a).
+> Then review one PR at a time, in unit order (TOOL_ROOM.p01, p02, NO4.b01, b02), reviewer in the foreground.
+> If this session is gone: `ListAgents`/open PRs; a unit with no PR and no live translator → fresh translator, same branch.
 
 ## Progress
 | Store | Done | Total | |
@@ -22,14 +20,19 @@ preflight is `git fetch origin main && git checkout main && git reset --hard ori
 Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-25; `NO4_BAR.SCR` 37,378 free, 485/485; `NO4_HWR_FRONT.SCR` 54,355 free, 150/150; `NO4_MACHINER90.SCR` 57,820 free, 108/108).
 
 ## In flight
-Nothing. Wave 4's four units are merged; see Wave history and rulings R §14–§17.
+| Unit | Branch | State | Next |
+|---|---|---|---|
+| script NO4_TOOL_ROOM.p01 | `tl/script-NO4_TOOL_ROOM.p01` | translator dispatched (round 0) | translator opens PR; sibling of p02 |
+| script NO4_TOOL_ROOM.p02 | `tl/script-NO4_TOOL_ROOM.p02` | translator dispatched (round 0) | translator opens PR; sibling of p01 |
+| script NO4.b01 | `tl/script-NO4.b01` | translator dispatched (round 0) | translator opens PR |
+| script NO4.b02 | `tl/script-NO4.b02` | translator dispatched (round 0) | translator opens PR |
 
 ## Next up
 Wave 5 (QUEUE 2026-10-25), four script units (no scene units remain, PROJECT.md §10): NO4_TOOL_ROOM.p01 (42 rows, 766 chars,
 ratio 42.15) and NO4_TOOL_ROOM.p02 (38, 555, 57.80) — both `NO4_TOOL_ROOM.SCR`, 63,043 free — NO4.b01 (45, 931, 35.49;
 NO4_4001, 4101, 4102, ENTRANCE, HWL_BACK, HWL_BACK2) and NO4.b02 (46, 1,215, 27.30; NO4_HWL_FRONT, HWL_KAIDAN, HWR_BACK,
 MACHINE, P_OFFICE, SHOP, STORAGE); all tier D.
-Glossary seeds: not yet — the wave 5 coordinator's step 2.
+Glossary seeds: on main, cd28387 (§9, wave 5 rows).
 Bindings waiting: NO4.b01 NO4_HWL_BACK/0007 みんな何かにつかまれ！ → "Everyone, grab onto something!" (as NO4_MACHINER90/0096;
 船体 "the hull", 回転 "roll over"; R §15.4); NO4_4102/0001 エントランスホール lowercase, 刃物 "a sharp blade" (R §11.1, §12.1).
 NO4.b02: NO4_HWL_FRONT/0011 = NO4_HWR_FRONT/0101 byte for byte ("shipboard events", R §14.1); NO4_HWL_FRONT/0002 虫 "bug"
