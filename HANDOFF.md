@@ -1,4 +1,4 @@
-**Last updated: 2026-10-25** — wave 4: #14 merged (d7e9398), #15 merged (40c6491), #17 merged (8237cd9), #16 merged (1e66f3c); all four units merged, scene store 4/4 — wave 4 to close.
+**Last updated: 2026-10-25** — wave 4 closed: NO4_HWR_FRONT.p03, NO4_MACHINER90.p01, p02 and SCN047-EPILOG merged (PRs #14, #17, #15, #16), none parked; scene store complete; the wave 4 coordinator opens the wave 5 session.
 
 ## Integration branch: `main`. Not configurable.
 Every PR bases on `main`; the reviewer merges into `main`; a wave is closed only when `origin/main` is
@@ -6,9 +6,11 @@ at the close commit (`CLAUDE.md` Rule 3). A fresh container may clone shallow wi
 preflight is `git fetch origin main && git checkout main && git reset --hard origin/main`.
 
 ## NEXT ACTION — always current, always a literal instruction
-> **Wave 4 coordinator: close wave 4** (`CLAUDE.md` §4 step 6). All four units are merged: #14 d7e9398, #15 40c6491,
-> #17 8237cd9, #16 1e66f3c. Regenerate `build/abyss_boat_script.ods`, refresh the README status table, then open the
-> wave 5 session (four script units, PROJECT.md §10; no scene units remain).
+> **Open the wave 5 session** (wave 4 coordinator; CLAUDE.md Rule 1, orchestrator.md §7): `create_session`
+> titled `Abyss Boat — wave 5`, tags `["abyssboat-translation", "wave-5"]`, `source_url`
+> https://github.com/DanaCrysalis/AbyssBoatTranslation, `source_revision` `main`, seed = SKILL.md §6a
+> with UNITS = Next up. First check `list_sessions` (mine: true, title `Abyss Boat — wave 5`): if one exists, do not open a second.
+> The wave 5 coordinator seeds the glossary for its units, then dispatches.
 
 ## Progress
 | Store | Done | Total | |
@@ -20,33 +22,30 @@ preflight is `git fetch origin main && git checkout main && git reset --hard ori
 Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-25; `NO4_BAR.SCR` 37,378 free, 485/485; `NO4_HWR_FRONT.SCR` 54,355 free, 150/150; `NO4_MACHINER90.SCR` 57,820 free, 108/108).
 
 ## In flight
-Wave 4, dispatched 2026-10-25 — translator round 1 each; **barrier met** (4/4 PRs); review order #14, #17, #15, #16:
-| Unit | Branch | PR | State | Next |
-|---|---|---|---|---|
-| script NO4_HWR_FRONT.p03 | tl/script-NO4_HWR_FRONT.p03 | #14 | **MERGED** round 0, squash d7e9398; SCR 54,355 free (room 150/150), max 4 rows/page; CHECK 56 + 2 pairs; glossary 【女】, 乗客, 無線機, ボンベ promoted, 船内イベント added (rulings R §14) | done — nothing left on this unit |
-| script NO4_MACHINER90.p01 | tl/script-NO4_MACHINER90.p01 | #17 | **MERGED** round 1 (round 0 CHANGES: a lone-"an" wrap at 0025, a 28-column authored line at 0045, 潜入 at 0011), squash 8237cd9; SCR 57,820 free (room 108/108), max 4 rows/page; CHECK 57 + 6 pairs; census 16 translated pairs, 0 divergences; glossary ブリッジ, 雇い主, 虫, 処分 promoted, 無茶を言う added (rulings R §16) | done — nothing left on this unit |
-| script NO4_MACHINER90.p02 | tl/script-NO4_MACHINER90.p02 | #15 | **MERGED** round 0, squash 40c6491; SCR 58,308 free (54/108), max 4 rows/page; CHECK 56 + 4 pairs; census 13 translated pairs, 0 divergences; glossary 生き物, 船体, 装備 promoted, 潜入 "come aboard" added (rulings R §15) | done — nothing left on this unit |
-| scene SCN047-EPILOG | tl/scene-SCN047-EPILOG | #16 | **MERGED** round 1 (round 0 CHANGES: `:31 C1/03` "is beyond our senses" → "makes no sense to us"), squash 1e66f3c; 40 subtitles, max 4 lines; scene store 4/4 (190/190); CHECK 58 + 6 pairs; census 83,440 comparisons, 2 hits (the ハイ。 pair), 0 divergences; glossary 人間, 実験 · 検体 · フェーズ２ promoted, 自己犠牲, ハイ, うう added, 処分 conformed, 船体 note made referent-neutral (rulings R §17) | done — nothing left on this unit |
+Nothing. Wave 4's four units are merged; see Wave history and rulings R §14–§17.
 
 ## Next up
-Wave 4 (QUEUE 2026-10-25): script NO4_HWR_FRONT.p03 (46 rows, 759 chars, ratio 36.92, `NO4_HWR_FRONT.SCR`
-54,522 free), NO4_MACHINER90.p01 (54, 1,080, 28.51) and NO4_MACHINER90.p02 (54, 962, 31.88) — both
-`NO4_MACHINER90.SCR`, 59,419 free — plus scene SCN047-EPILOG (40 rows, 793 chars, geom; the last scene unit); all tier D.
-Glossary seeds: on main, 379c0e0 (§9, wave 4 rows).
-Wave-4 glossary state: #15 added 装備, 船体, 生き物, 潜入 (R §15.1); #17 added ブリッジ, 雇い主, 虫, 処分, 無茶を言う (R §16.1); #16's merge adds 人間 and 実験 · 検体 · フェーズ２ and conforms to 処分.
-Bindings waiting: NO2_THIRDSTORAGE/0006 `……。{p}` → `……{p}` (exact twin of NO4_MACHINER90/0034, R §16.4); NO4_HWL_BACK/0007 みんな何かにつかまれ！ → "Everyone, grab onto something!" (as NO4_MACHINER90/0096; 船体 "the hull", 回転 "roll over"; R §15.4); NO4_HWR_FRONT_DOWN_T/0001 → `【Oakland】What is it?{p}`. p03 NO4_HWR_FRONT/0144 copies 0013's target byte for byte (R §10.4); 0102 『ビアー＆ラガーズ』と書かれている →
-`"Beer & Lagers," it reads.` (R §12.4, glossary §6 と書かれている); SCN047B3/01 has `…、` → R §11.3 (`…`, lowercase
-continuation). Related shipped work: NO4_HWR_FRONT.p01–p02 (deck sign, speakers F-009), NO4_BAR.p01–p08, SCN041-SCN046
-(killer's laugh R §9.1/§13, ～ row), SCN038. Wave 3 rework: one PR of four (0441 なくていい rendered as a prohibition) —
-tell translators to keep permissive/negative modality literal; the mechanical F-011 scan worked (0 wrap findings this wave).
+Wave 5 (QUEUE 2026-10-25), four script units (no scene units remain, PROJECT.md §10): NO4_TOOL_ROOM.p01 (42 rows, 766 chars,
+ratio 42.15) and NO4_TOOL_ROOM.p02 (38, 555, 57.80) — both `NO4_TOOL_ROOM.SCR`, 63,043 free — NO4.b01 (45, 931, 35.49;
+NO4_4001, 4101, 4102, ENTRANCE, HWL_BACK, HWL_BACK2) and NO4.b02 (46, 1,215, 27.30; NO4_HWL_FRONT, HWL_KAIDAN, HWR_BACK,
+MACHINE, P_OFFICE, SHOP, STORAGE); all tier D.
+Glossary seeds: not yet — the wave 5 coordinator's step 2.
+Bindings waiting: NO4.b01 NO4_HWL_BACK/0007 みんな何かにつかまれ！ → "Everyone, grab onto something!" (as NO4_MACHINER90/0096;
+船体 "the hull", 回転 "roll over"; R §15.4); NO4_4102/0001 エントランスホール lowercase, 刃物 "a sharp blade" (R §11.1, §12.1).
+NO4.b02: NO4_HWL_FRONT/0011 = NO4_HWR_FRONT/0101 byte for byte ("shipboard events", R §14.1); NO4_HWL_FRONT/0002 虫 "bug"
+(R §16.1); NO4_MACHINE/0002 ボンベ "air tanks" (R §14.1); NO4_HWL_KAIDAN/0006 バリケード "clear", 道具 in context (R §11.1);
+NO4_SHOP/0005 船体 "the hull"; NO4_STORAGE/0002 エントランスホール lowercase. NO4_TOOL_ROOM: 生き物 "creature" ×5 (R §15.1),
+カバンごと in context (R §8.1, §13.1), Miller's taxonomy register (NO4_BAR/0352). Also NO2_THIRDSTORAGE/0006 `……{p}` (R §16.4),
+NO4_HWR_FRONT_DOWN_T/0001 `【Oakland】What is it?{p}` (later waves). Wave 4 lessons: two CHANGES of four (a lone-"an" wrap —
+scan for a/an/I; a 28-column authored line; a step-5 compression the geometry did not force — "beyond our senses"); sibling
+units in one room must agree on shared terms (潜入) — tell translators to read the sibling's head before pushing.
 
 ## Remaining
-QUEUE order, generated 2026-10-06 (wave 4 units moved to Next up 2026-10-25) (source characters, tags excluded). Script: NO4_TOOL_ROOM.p01 (766), p02 (555), NO4.b01 (931),
-NO4.b02 (1215), NO5.b01 (1144), NO6.b01 (839), NO6.b02 (495), NO3_CHAPEL.p01 (1068), p02 (1070),
+QUEUE order, generated 2026-10-06 (wave 5 units moved to Next up 2026-10-25) (source characters, tags excluded). Script: NO5.b01 (1144), NO6.b01 (839), NO6.b02 (495), NO3_CHAPEL.p01 (1068), p02 (1070),
 p03 (1039), NO3_NO4.p01 (633), p02 (597), NO3.b01 (1105), NO3.b02 (502), NO2.b01 (1021),
 NO2.b02 (829), NO1.b01 (151), SPACESHIP.b01 (159), then the `_T` test scripts (F-008):
 NO4_BAR_T.p01 (1426), p02 (1251), p03 (1270), p04 (1189), NO4_T.b01 (607), b02 (735), b03 (414).
-Scene: none after wave 4 (SCN047-EPILOG is in Next up); from wave 5, four script units per wave (PROJECT.md §10).
+Scene: none — store complete (wave 4). Four script units per wave (PROJECT.md §10).
 
 ## Blocked — needs a human
 1. **System store** (5 units, 188 rows) — exe slots too short for English; you chose to wait for an
@@ -78,6 +77,7 @@ Scene: none after wave 4 (SCN047-EPILOG is in Next up); from wave 5, four script
 | 1 | script NO4_BAR.p02, p03, p04; scene OP-SCN034 | 4 — #5 c7e2986, #3 185beb6, #2 131288b (round 0); #4 42d2db9 (round 0 CHANGES ふん, round 1 MERGE) | 0 | script 4/38 (259 rows), scene 1/4 (39), system blocked; NO4_BAR.SCR 36,894 free. Two usage-limit stops (weekly, then 5-hour), resumed |
 | 2 | script NO4_BAR.p05, p06, p07; scene SCN038 | 4 — #6 c6858ea (round 0); #9 1541592, #8 2a0b375, #7 8ffabc0 (round 0 CHANGES — lone-"a" / one-word wraps, battle-cry count — round 1 MERGE) | 0 | script 7/38 (433 rows), scene 2/4 (98), system blocked; NO4_BAR.SCR 36,357 free. Human stop 2026-10-06, resumed 2026-10-25 |
 | 3 | script NO4_BAR.p08, NO4_HWR_FRONT.p01, p02; scene SCN041-SCN046 | 4 — #13 28d44a9, #10 c755736, #11 f8e7b3a (round 0); #12 c39677d (round 0 CHANGES — 0441 modality, 0424 `…、` ruling — round 1 MERGE) | 0 | script 10/38 (589 rows), scene 3/4 (150), system blocked; NO4_BAR.SCR 37,378 free (room done), NO4_HWR_FRONT.SCR 54,522. Session-limit stop, resumed |
+| 4 | script NO4_HWR_FRONT.p03, NO4_MACHINER90.p01, p02; scene SCN047-EPILOG | 4 — #14 d7e9398, #15 40c6491 (round 0); #17 8237cd9 (round 0 CHANGES — lone-"an" wrap, 28-col line, 潜入 sibling agreement — round 1 MERGE); #16 1e66f3c (round 0 CHANGES — `:31` step-5 compression — round 1 MERGE) | 0 | script 13/38 (743 rows), scene 4/4 (190, store complete), system blocked; NO4_HWR_FRONT.SCR 54,355 (room done), NO4_MACHINER90.SCR 57,820 (room done). Session-limit stop, resumed |
 
 ## How to resume
 1. Preflight per `CLAUDE.md` §4 step 0. CHECK must pass. A fill marker left in `PROJECT.md` means
