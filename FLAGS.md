@@ -221,6 +221,22 @@ expects to be left with Judy alone. Shipped
 gender-neutral, "One of our… own" (`tl/script/NO4_BAR.p07.tsv:54`, PR #8 Flag 5), so nothing
 shipped depends on it. The translator of NO4_BAR.p08 and later units confirms from content; if a line
 names the victim, no p07 text changes · rulings R §8.2.
+NO4_BAR.p08 (PR #12): no line in 0410–0461 names the victim and Miller has none; nothing changes
+(rulings R §11.2).
+
+
+### F-019 · 2026-10-25 · script · OPEN
+Suspected source typo: `NO4_BAR/0412` 怪物は俺たちが動くのを待ってるんじないのか has じない where
+the sense, a negative rhetorical question, is じゃない (んじない 1 / 0 / 0, only here; the other
+じない hits are 信じない and 感じない). Shipped as "But isn't the monster waiting for us to move?"
+(`tl/script/NO4_BAR.p08.tsv:6 NO4_BAR/0412`, PR #12 Flag 8). Harmless · rulings R §11.4.
+
+
+### F-020 · 2026-10-25 · system · OPEN
+The 倉庫 row's form for the room names `rooms/053`, `069`, `105` (第３/第４/第６デッキ倉庫),
+"Deck 3 Storeroom", is 16 characters, over the 14-character room-name cap (glossary §8; exe slot 29
+bytes). The system translator needs a shorter form (e.g. "Deck 3 Store", 12) once F-006 unblocks the
+store; items/013 【第３デッキ倉庫の鍵】 has its own 43-character cap · PR #12 Flag 9 · rulings R §11.1.
 
 
 ## CHECK positive controls

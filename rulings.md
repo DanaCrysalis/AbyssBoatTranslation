@@ -962,3 +962,96 @@ Census counts are rows per store (script / scene / system), from the reviewer's 
 - **Not duplicates:** 0034 `……?` against NO4_BAR/0391 `……` and SCN038B/12 `……⁉` (R §8.4).
 - The #12 review's `…、` ruling does not apply: the unit has no `…、` (0 rows).
 - Glossary: none.
+
+## Unit script NO4_BAR.p08 (PR #12, MERGED, 2026-10-25)
+
+The end of the bar scenes. Three days without food; Wolg's plan to break the barricade on the stairs to the food storeroom (Deck 3, one deck up in the capsized ship); the search teams; Judy volunteers; the chain cutter is brought back; the move to a room near the storeroom; Oakland's bag with the monster's carcass. NO4_BAR.SCR is now fully translated (485/485). Reviewed twice:
+- **Round 0** (23bdaac): CHANGES.
+  - 0441: 帰ってこなくていい was rendered as a prohibition, an unflagged departure from a literal that fits.
+  - 0424: `…、` was followed by a capital (§11.3).
+- **Round 1** (280748e): MERGE, squash c39677d. Exactly those two rows changed (`git diff 23bdaac 280748e -- tl/`), each to the reviewer's wording.
+
+Figures:
+- **Container.** With p01–p08 merged and NO4_HWR_FRONT.p01: NO4_BAR.SCR 28,157 / 65,535 bytes, 37,378 free; tokens 419 / 1,499 (MEASURE). Against p07's 36,357 free, p08 *frees* 1,021 bytes, because the script dictionary rebuilds over the English text (tokens 621 → 419).
+- **Pages.** At most 4 rows per page (UNITCHECK, 52 rows, 0 violations).
+- **Ratio.** 2,529 target characters ÷ 1,125 source characters = 2.25 (round 0, from the PR; round 1 changes are ± 5 characters).
+- **Duplicates.** CHECK compared 44 duplicate pairs (main's 38 + 0430, 0432, 0440, 0443, 0460, 0461) and 2 tag-variant pairs.
+  - The reviewer's census made 108,472 source-side comparisons: 52 rows × 2,086 other script, scene and system dump rows.
+  - It ran at three levels: exact; `{p}{w}{br}` stripped; `【Name】` stripped with ！？ → ⁉ and final punctuation normalised.
+  - It found 92 hits, 48 of them translated pairs, with 0 mismatches. The hits are in §11.5.
+- **F-011 wrap scan**, run by the reviewer on `build/script_merged.tsv` (110 lines): no lone "a", "I" or "an" and no split title. Four lines end in "the" (0426, 0428, 0447, 0448; allowed, R §1.12 rule 2). The one-word rows are whole messages (0430 `………`, 0435 "What?") or the source's authored なんだと⁉{br} (0447 "What⁉"). Authored-`{br}` lines measure 27 at most.
+
+Census counts are rows per store (script / scene / system), from the reviewer's grep of `dumps/` on 2026-10-25. Line citations use PROJECT.md §7's numbering in `tl/script/NO4_BAR.p08.tsv` (line = row number − 406).
+
+### 11.1 Terms promoted from §9, and three added
+- **操舵室** → `the wheelhouse`; 操舵室のデッキ → `the wheelhouse deck` (14; 19).
+  - Census: 2 / 0 / 0, NO4_BAR/0428, 0437. ブリッジ is "the bridge" (rooms/108), so the two stay apart. "the helm" was the alternative; rejected, since a helm is the wheel itself, not a room.
+  - Binds `:22 0428` "Heming and John take the wheelhouse deck.", `:31 0437`.
+  - Glossary: §2 row added; §9 row removed.
+- **倉庫** (variant 第Nデッキ倉庫) → `storeroom` (9).
+  - Census: 1 / 0 / 4. Script: NO4_BAR/0424. System: rooms/053, 069, 105, items/013 (blocked).
+  - Kept apart from 食料庫 "the food storeroom" (R §2.1) by the modifier only; one noun for both reads naturally.
+  - The room-name form "Deck 3 Storeroom" is 16 characters, over the 14-character cap: F-020 (PR Flag 9).
+  - Binds `:18 0424` "they're all in the storeroom".
+  - Glossary: §2 row added, cap 14 and the F-020 pointer in the row; §9 row removed.
+- **バリケード** → `barricade`; the verb where the line wants it (9).
+  - Census: 5 / 0 / 0, NO4_BAR/0421, 0422, 0444, NO4_HWL_KAIDAN/0005, 0006.
+  - 0421 バリケードを作っている → "barricaded the stairs" (step-6 restructure, flagged, keeps the page at 4 rows). 撤去 → "clear" (0444); NO4_HWL_KAIDAN/0006 バリケードを撤去する takes the same verb.
+  - Binds `:15 0421`, `:16 0422` "that barricade", `:38 0444` "the barricade".
+  - Glossary: §3 row added; §9 row removed.
+- **チェーンカッター** → `chain cutter` (12).
+  - Census: 2 / 0 / 1, NO4_BAR/0444, NO6_TOOLROOM/0001, hints/006 (blocked, cap 39). "bolt cutters" rejected: the source names a chain cutter, one tool.
+  - Binds `:38 0444`.
+  - Glossary: §3 row added; §9 row removed.
+- **工具** → `tools` (5).
+  - Census: 2 / 0 / 0, NO4_BAR/0423, 0424. 道具 (2 / 1 / 1: NO4_BAR/0441, NO4_HWL_KAIDAN/0006, SCN047C1/05, items/009) is not fixed; 0441 "a tool" in context.
+  - Binds `:17 0423`, `:18 0424`.
+  - Glossary: §3 row added; §9 row removed.
+- **刃物** (variant 鋭利な刃物) → `blade`; `a sharp blade` (5; 13). New.
+  - Census: 3 / 0 / 0, NO4_BAR/0439, NO4_4102/0001 and NO6_BRIDGE/0020 (both 鋭利な刃物, wound descriptions).
+  - Binds `:33 0439` "bring back every blade you find".
+  - Glossary: §3 row added.
+- **親玉** → `the big one` (11). New.
+  - Census: 1 / 0 / 0, NO4_BAR/0438. The parent monster against 小さいの "small ones". Never "boss", which is 社長 (R §3.1).
+  - Binds `:32 0438`.
+  - Glossary: §6 row added.
+- **巣** (variant 化け物の巣) → `nest`; `the monster's nest` (4; 18). New.
+  - Census: 4 / 0 / 0, NO4_BAR/0368 (shipped "a monster's nest", Miller's generic), 0447, 0448, NO5_BANK/0006 (蜘蛛の巣 "web" and 化け物の巣 in one row; the second takes this row).
+  - The article follows the line: generic "a" (0368), the known monster "the" (0447, 0448).
+  - Binds `:41 0447`, `:42 0448`.
+  - Glossary: §6 row added.
+- **バッグ** 0454 → "bag", conforming to the 鞄 row (R §8.1). PR #11 proposes バッグ as a Variant of that row (its SCN046A1/01 "The bag‼"); that review decides the row, and this line needs no change either way.
+
+### 11.2 Speakers (PR Flag 3)
+- No `_T` draft of this scene exists, so speakers come from content (F-009).
+  - Wolg (the PR's attribution): 0413, 0415, 0417, 0420, 0422–0423, 0425–0426, 0428, 0430, 0432, 0435, 0437–0439, 0444–0446, 0448, 0450, 0452, 0454, 0456, 0458; he calls Oakland "boss" at 0454 (社長 row).
+  - Oakland: 0414 and 0429 (わし to his crew, R §1.10), 0431, 0447, 0449, 0451, 0453, 0455, 0457.
+  - William: 0419, 0421, 0424, 0427 (0418 addresses him; he knows the ship). Judy: 0434, 0436.
+- Uncertain, each rendered speaker-neutral so a corrected attribution changes no text: 0410–0411 (Wolg or Heming), 0412 (probably William), 0416 and 0418 (Oakland or Heming), 0433 (probably Wolg), 0441–0442 (Oakland or Wolg). 0430 and 0432 could equally be Heming, whom 0429 names; both are neutral. Accepted.
+- F-009 confirmed again: spk=4 carries William, Oakland, Judy and Wolg here.
+- F-018: no line names the second victim; Miller has no line in 0410–0461. Nothing shipped changes.
+- Glossary: none.
+
+### 11.3 `…、` → `…`, lowercase continuation (round-0 finding 2; PR Flag 6)
+- Source: `…、` mid-sentence, 4 / 2 / 0: NO4_BAR/0424, NO4_BAR_T/0130, NO2_MAINSTORAGE/0027, NO2_TOFE_ROOM/0003 (`……、`), SCN046A2/01, SCN047B3/01.
+- Target: the ellipsis alone, with the same glyph count; the 、 is absorbed, as 。 is after `…` (R §1.3). Because 、 continues the sentence, the next word is lowercase (a proper noun or "I" keeps its capital).
+- Reasoning: shipped mid-sentence `…` continues lowercase (NO4_BAR/0299 "Heh… if any exist", 0350 "A spider… an insect?", SCN038_5C2/01 "Oho…… don't tell me"), while `…。` starts a new sentence (0281, 0339, 0402, 0408). `…,` is not used in English.
+- Binds `:18 0424` "Tools… if any, they're all in the storeroom." PR #11 SCN046A2/01 "Bill… it's game over." already conforms.
+- Glossary: none. This is a punctuation convention.
+
+### 11.4 Movable codes and readings (PR Flags 2, 5–8; round-0 finding 1)
+- **Authored codes.** The authored `{br}`/`{p}`/`{w}` diff against the source matches Flag 2 exactly: leading `{p}` on the `+` rows 0411 (`-` → `{p}`), 0426 (`-` → `{p}`) and 0445 (`{p}` → `{p} {p}`), each after a `{br}`-ended row and at a sentence boundary (R §2.4). Without them the pages run to 5, 5 and 7 rows. Every other `{br}` follows the same sentence as in the source. F-012: all four `+` rows follow a `{br}`, so nothing glues. No `{w}` in the unit.
+- **0441** 帰ってこなくていい → "No need to come back here until you've found a tool." The round-0 "Don't come back here…" turned permission into prohibition; the literal is correct English with the same wraps (25 / 26), so literal-first (translation_prompt.md §2) applies.
+- **Step-5/6 departures, flagged and accepted:** 0455 化け物の死骸が入っている → "It's the monster's carcass." (the contents implied by 0454's question; holds the authored line at 27); 0421 noun → verb (§11.1); 0422 the topic phrase folded into "Trouble is, …"; 0424 あるとしたら → "If any"; 0418 "located" to avoid the one-word row "storeroom?".
+- **Punctuation:** 。 → `?` on three rhetorical questions (0442, 0454, 0457), accepted.
+- **Readings:** 0420 １つ上 → "one deck up" (capsized ship, R §2.1); 0421 下の連中 → "the lower-deck guys" (the lower-deck survivors; 下の連中 not fixed, R §3.2); 0441 期待しているぞ → "I'll be expecting results." (頼んだぞ is "I'm counting on you.", R §6.4); 0449 しかしだなっ → "But see here."; 0450 この部屋 → "here" (keeps the page at 4 rows).
+- **Suspected source typo:** 0412 じない → じゃない, read as the sense requires (F-019).
+- Glossary: none.
+
+### 11.5 Recurrences (PR Flag 10)
+- 0440, 0443, 0460, 0461: the save prompt (R §3.4), byte-identical to 0170, 0173, 0239, 0242, 0341, 0377, 0397, 0401. Untranslated: NO3_CHAPEL/0039, 0049, 0070, 0079, 0111, 0114, 0129, 0130, NO4_MACHINE/0001.
+- 0430 `………。` → `………` = 0201, 0265, SCN038_5C1/10. Untranslated exact: NO3_NO4/0007, 0061, NO4_HWR_FRONT/0057, 0092, SCN046B1/01; tag variants NO4_MACHINER90/0108, NO4_TOOL_ROOM/0025, 0060.
+- 0432 いいや。 → "Not at all." = 0263 (R §6.4).
+- 0447 opens with なんだと⁉ → "What⁉", as 0245; not a duplicate row (0447 continues).
+- In context, not duplicates: NO4_HWL_KAIDAN/0005–0006 バリケード, NO6_TOOLROOM/0001 チェーンカッター.
+- Glossary: none.

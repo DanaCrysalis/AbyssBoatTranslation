@@ -55,6 +55,8 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | 便所 | — | the toilet | 10 | — | lowercase; Collison's word (0292, NO4_HWR_FRONT/0011) | R §6.1 |
 | 通風孔 | — | air vent; "the vent" / "vent(s)" after first mention | 8; 8 | — | lowercase; "the air vent" at a scene's first mention (NO4_BAR/0294), then "vent" | R §7.1 |
 | 中央ダクト | — | the central duct | 16 | — | lowercase; NO4_BAR/0302 only | R §7.1 |
+| 操舵室 | 操舵室のデッキ | the wheelhouse; 操舵室のデッキ: the wheelhouse deck | 14; 19 | — | lowercase in dialogue; never "the bridge" (ブリッジ, rooms/108); 2 / 0 / 0 | R §11.1 |
+| 倉庫 | 第Nデッキ倉庫 | storeroom ("the storeroom"; "the Deck 3 storeroom") | 9 | 14 (room names, F-006) | lowercase in dialogue; 食料庫 stays "the food storeroom"; "Deck 3 Storeroom" (16) is over the room cap (F-020) | R §11.1 |
 
 ## 3. Items, currency, mechanics
 | Source | Variants | Target | Cols | Cap | Note | Ruling |
@@ -73,6 +75,10 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | ハンドガン | — | handgun | 7 | — | never "pistol"; ハンドガン程度 → "a mere handgun" (0343); equip/000, items/000 (blocked) take the same word | R §7.1 |
 | 鞄 | カバン · 旅行鞄 | bag; 旅行鞄: suitcase | 3; 8 | — | 鞄 and カバン one word (NO4_TOOL_ROOM/0003 カバンごと in context); plural as the line needs | R §8.1 |
 | マガジン | — | magazine; 予備のマガジン · マガジンの予備 → "spare magazine(s)" | 8 | — | the gun's magazine, never "clip"; NO3_NO4/0010 takes "spare magazine" | R §10.1 |
+| バリケード | — | barricade (verb "barricade(d)" where the line wants it) | 9 | — | 5 / 0 / 0; 撤去 → "clear" (0444; NO4_HWL_KAIDAN/0006 takes the same verb) | R §11.1 |
+| チェーンカッター | — | chain cutter | 12 | 39 (hints/006, blocked) | never "bolt cutters"; NO6_TOOLROOM/0001, hints/006 take the same words; 2 / 0 / 1 | R §11.1 |
+| 工具 | — | tools | 5 | — | 2 / 0 / 0; 道具 is not fixed ("a tool", 0441; NO4_HWL_KAIDAN/0006 in context) | R §11.1 |
+| 刃物 | 鋭利な刃物 | blade; 鋭利な刃物: a sharp blade | 5; 13 | — | 3 / 0 / 0 (NO4_BAR/0439 "every blade"; NO4_4102/0001, NO6_BRIDGE/0020) | R §11.1 |
 
 ## 4. Classes, units, system terms
 | Source | Variants | Target | Cols | Cap | Note | Ruling |
@@ -120,6 +126,8 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | グフッ | — | Guh | 3 | grunt as he is struck, SCN038B/17 only ("——Guh‼"); not フッ | R §9.1 |
 | 俺様 | — | no fixed word: the killer's swagger is carried by register | — | 俺様の…… → "My very own……" (SCN038_5C1/06); 俺様の女神 → "my very own goddess" (NO2_MAINSTORAGE/0003); 3 / 4 / 0 | R §9.1 |
 | 妹 | 妹さん | sister: "my sister" / "his sister"; the echo 妹？ → "Sister?" | 6 | William's dead sister; 妹さん drops さん (R §1.2) → "his sister" (NO4_HWR_FRONT/0075, 0080); SCN038D/17 "To my sister…" | R §10.1 |
+| 親玉 | — | the big one | 11 | the parent monster, NO4_BAR/0438 only; never "boss" (社長) | R §11.1 |
+| 巣 | 化け物の巣 | nest; 化け物の巣: the monster's nest ("a monster's nest" at 0368) | 4; 18 | 4 / 0 / 0; 蜘蛛の巣 (NO5_BANK/0006) is a web, in context | R §11.1 |
 
 ## 7. Register per character
 | Character | Register | Contractions? | Markers | Ruling |
@@ -153,11 +161,6 @@ so; the reviewer moves the row up into its section in the integration commit. --
 | 無線機 | — | the radio | the radio set | NO4_HWR_FRONT/0103 (near-duplicate of NO4_BAR/0171, R §3.6); 1 / 0 / 0 | 1 |
 | 無線室 | — | the radio room | — | NO6_BRIDGE/0001, 0006; rooms/107, items/011, hints/001–002 (cap 14 as a room name); 2 / 0 / 4 | 1 |
 | エントランスホール | — | entrance hall | lobby | NO4_4102/0001, NO4_HWL_BACK/0017, NO4_HWR_FRONT/0100 …; 6 / 0 / 2 rows (rooms/066, 084); ホール alone is fixed in §2 (R §2.1) | 1 |
-| 操舵室 | — | the wheelhouse (操舵室のデッキ → "the wheelhouse deck") | the helm | NO4_BAR/0428, 0437; ブリッジ is "the bridge" (rooms/108); 2 / 0 / 0 | 3 |
-| バリケード | — | barricade | — | NO4_BAR/0421–0444, NO4_HWL_KAIDAN/0005–0006; 5 / 0 / 0 | 3 |
-| チェーンカッター | — | chain cutter | bolt cutters | NO4_BAR/0444, NO6_TOOLROOM/0001, hints/006; 2 / 0 / 1 | 3 |
-| 倉庫 | 第Nデッキ倉庫 | storeroom ("the Deck 3 storeroom") | storage room | NO4_BAR/0424; rooms/053, 069, 105, items/013; 1 / 0 / 4 | 3 |
-| 工具 | — | tools | — | NO4_BAR/0423–0424; 道具 (NO4_HWL_KAIDAN/0006) in context; 2 / 0 / 0 | 3 |
 | 『フロアーインフォメーション』 · パーサーオフィス · メインダイニング · ラウンジ · ビアー＆ラガーズ · キャビン | — | "Floor Information" · Purser's Office · Main Dining · Lounge · Beer & Lagers · Cabins | Purser · Dining | the deck sign NO4_HWR_FRONT/0097–0100 = NO4_HWL_BACK/0014–0017 = NO4_HWL_BACK2/0010–0013, byte-identical; `{br}`-ended lines, 27 cols with the leading space; 3 / 0 / 1 | 3 |
 | クライド | — | Clyde | — | SCN046A2/02, Oakland to the one who betrays him (likely Heming's given name); 0 / 1 / 0 | 3 |
 | ジェイク・ノーマン | — | Jake Norman | — | SCN046B1/03, Wolg naming the killer; 0 / 1 / 0 | 3 |
