@@ -128,6 +128,10 @@ NO4_BAR.p06 (PR #9): 0294–0351 likewise from content; 0308 and 0311 (Oakland o
 0349 (probably William: やがる, and NO4_BAR/0363 has them meet him in a corridor) stay uncertain and
 are rendered speaker-neutral; spk=4 carries Wolg (0294), Oakland (0295) and Miller (0309), spk=5
 Wolg (0320) and Oakland (0326) (rulings R §7.2).
+NO4_BAR.p07 (PR #8): 0352–0409 likewise from content; 0365, 0378–0380, 0383, 0385, 0387, 0389,
+0391, 0402, 0405, 0408 and 0409 stay uncertain and are rendered speaker-neutral; 0370, 0404, 0406
+(probably Wolg), 0381, 0407 (probably Oakland) and 0403 (probably Heming) are likely but unconfirmed
+(rulings R §8.2).
 
 ### F-011 · 2026-10-04 · tools · OPEN
 PR #1 (NO4_BAR.p01) found four things CHECK and UNITCHECK do not verify. Each was confirmed by a
@@ -181,6 +185,31 @@ conditional 襲ってきたら (てきたどう 1 / 0 / 0, only here; 襲って�
 conditional, "what will you do if he attacks from the front?" (`tl/script/NO4_BAR.p06.tsv:31
 NO4_BAR/0321`, PR #9 Flag 7). Harmless; nothing to change unless the `_T` drafts show a different
 reading · rulings R §7.3.
+
+
+### F-016 · 2026-10-25 · script · OPEN
+Suspected source typo: `NO4_BAR/0396` 捕まられなくてもかまわん has 捕まられ (passive of 捕まる, "be
+caught", which makes no sense here) where the sense, after 0384's request to catch one, is the
+potential 捕まえられなくても ("even if you can't catch one"; 捕まられ 1 / 0 / 0, only here). Shipped
+as "No problem if you can't catch one." (`tl/script/NO4_BAR.p07.tsv:48 NO4_BAR/0396`, PR #8 Flag 9).
+Harmless; nothing to change unless the `_T` drafts show a different reading · rulings R §8.3.
+
+
+### F-017 · 2026-10-25 · script · OPEN
+Suspected source typo: `NO4_BAR/0407` 無事に帰り着いてからいくらでも追求してやる has 追求 ("pursue a
+goal"; 追求 1 / 0 / 0, 追及 0 rows) where the sense, blame for 0406's 俺の責任だ, is 追及 ("call to
+account"). Shipped as "I'll
+call you to account as much as I like!" (`tl/script/NO4_BAR.p07.tsv:59 NO4_BAR/0407`, PR #8
+Flag 9). Harmless · rulings R §8.3.
+
+
+### F-018 · 2026-10-25 · script · OPEN
+The second victim at `NO4_BAR/0402` 二人目の犠牲者が出た…。俺たちの…仲間だ is unnamed. Probably
+Miller: she has no line in 0410–0437, and at 0429 (わしはジュディと二人っきりか⁉) the speaker
+expects to be left with Judy alone. Shipped
+gender-neutral, "One of our… own" (`tl/script/NO4_BAR.p07.tsv:54`, PR #8 Flag 5), so nothing
+shipped depends on it. The translator of NO4_BAR.p08 and later units confirms from content; if a line
+names the victim, no p07 text changes · rulings R §8.2.
 
 
 ## CHECK positive controls

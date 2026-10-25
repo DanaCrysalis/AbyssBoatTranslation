@@ -639,3 +639,105 @@ Census counts are rows per store (script / scene / system), from the reviewer's 
 ### 7.5 Accepted readings (non-blocking review notes)
 - `:12 0302` "he reached for the room's vent" can read as grabbing the vent itself; "reached in through the room's vent" was offered in round 0 and not required.
 - None of these is a fidelity error.
+
+## Unit script NO4_BAR.p07 (PR #8, MERGED, 2026-10-25)
+
+The bar conversation goes on. It covers the spider/insect exchange, Wolg's three search teams, the report on the small monsters and the live sample, and then the second victim. It continues NO4_BAR.p06 directly. Reviewed twice:
+- **Round 0** (7977ba8, 2026-10-06): CHANGES.
+  - 0383 wrapped to a line ending in a lone "a" (R §1.12 rule 2).
+  - 0378 left a one-word row, "everywhere.", before an authored `{br}` (R §1.12 rule 1).
+  - The PR body's wrap claim was untrue, and its figures were measured without p05.
+- **Round 1** (860c462): MERGE, squash 2a0b375.
+  - Exactly those two rows changed, each to the reviewer's wording.
+  - The merge of `origin/main` left every other row untouched (`git diff 7977ba8 860c462`).
+
+Figures:
+- **Container**, with p01–p07 merged: NO4_BAR.SCR 29,178 / 65,535 bytes, 36,357 free; tokens 621 / 1,499 (MEASURE).
+  - Against p06's 36,174 free, p07 *frees* 183 bytes, because the script dictionary rebuilds over the English text (tokens 730 → 621).
+  - The PR body's 36,053 was measured before p06 landed.
+- **Pages**: at most 4 rows per page (UNITCHECK, 58 rows, 59 pages, 0 violations).
+- **Ratio**: 3,423 target characters ÷ 1,556 source characters = 2.20.
+- **Duplicates**: CHECK compared 33 duplicate pairs (main's 30, plus 0377, 0397 and 0401) and 2 tag-variant pairs.
+  - The reviewer's census made 120,988 source-side comparisons: 58 rows × 2,086 other script, scene and system dump rows.
+  - It ran at three levels: exact; `{p}{w}{br}` stripped; `【Name】` stripped with ！？ → ⁉ and final punctuation normalised.
+  - It found 67 hits, of which 21 are translated pairs, with 0 mismatches. The hits are in §8.4.
+
+Census counts are rows per store (script / scene / system), from the reviewer's grep of `dumps/` on 2026-10-25. Line citations use PROJECT.md §7's numbering in `tl/script/NO4_BAR.p07.tsv` (line = row number − 348).
+
+### 8.1 Terms promoted from §9
+- **モンスター** → `monster`; the small kind → `small monster(s)` (13 (14)).
+  - Census: 8 / 0 / 1. Script: NO4_BAR/0378 小さいタイプのモンスター, 0384 小さなモンスター, 0398 小型モンスター, NO3_NO4/0053, NO4_TOOL_ROOM/0039, NO5_BANK/0001 小さいモンスター, NO5_HW_R/0006, SPACESHIP/0001. System: hints/005 小モンスター (blocked).
+  - It is a synonym of 化け物 (58 / 1 / 0) and 怪物 (21 / 0 / 0) and takes the same target (R §1.8). "creature" was the alternative. It is rejected because Miller already uses "creature" freely (p01 0040, p07 0354), so it is not a fixed term.
+  - Every 小-variant is now listed in the row, so the duplicate census can pair them.
+  - Binds `:30 0378` "Small monsters", `:36 0384` "one small monster", `:50 0398` "a sample of the small monsters".
+  - Glossary: §6 row added; §9 row removed.
+- **死骸** → `carcass` (7).
+  - Census: 2 / 0 / 0, NO4_BAR/0387 and 0455 (p08, 化け物の死骸, where "the monster's carcass" is expected).
+  - It is a creature's dead body, kept apart from 死体 "body" (R §6.1) and 遺体 "remains" (R §7.1). The alternative "corpse" is rejected because it reads as human.
+  - Binds `:39 0387` "Will a carcass do?".
+  - Glossary: §6 row added; §9 row removed. The 遺体 row's note pointer "死骸 is §9" now reads "死骸 'carcass'", and its Ruling column adds §8.1. This changes the pointer only, not the target.
+- **鞄 · カバン · 旅行鞄** → `bag`; 旅行鞄 → `suitcase` (3; 8).
+  - Census: 鞄 3 / 0 / 0 (NO4_BAR/0392, 0393 in 旅行鞄, 0394), カバン 1 / 0 / 0 (NO4_TOOL_ROOM/0003), 旅行鞄 1 / 0 / 0 (0393).
+  - The plural follows the line: 0393 "plenty of passengers' suitcases".
+  - Binds `:44 0392` "Stuff it in a bag?", `:45 0393`, `:46 0394` "Take a bag each".
+  - Glossary: §3 row added; §9 row removed.
+- **昆虫採集** → `bug collecting` (14).
+  - Census: 1 / 0 / 0, NO4_BAR/0389 "No time for bug collecting.".
+  - Binds `:41 0389`.
+  - Glossary: §6 row added; §9 row removed. The 昆虫 row's note pointer "(§9, …)" now reads "is its own row", and its Ruling column adds §8.1. This changes the pointer only.
+- **節足動物門鋏角亜門** → `phylum Arthropoda, subphylum Chelicerata` (40).
+  - Census: 1 / 0 / 0, NO4_BAR/0352 only. It is the standard zoological naming: lowercase ranks, capitalised taxa.
+  - The wrap separates "phylum | Arthropoda". That is accepted, because it is not a courtesy title.
+  - Binds `:4 0352`.
+  - Glossary: §6 row added.
+- The PR also listed 蜘蛛, 昆虫, 死体 and 見張り. These were promoted earlier (R §6.1, §7.1), and p07 conforms: 0352 "spiders aren't insects", 0378/0380 "bodies", 0400 "keep watch".
+
+### 8.2 Speakers (PR Flag 5)
+- NO4_BAR_T has no draft of this scene, so every speaker comes from content (F-009). The attributions are:
+  - Miller: 0352, 0354, 0368–0369, 0371, 0384, 0386, 0388, 0390, 0393.
+  - Oakland: 0353, 0355, 0357, 0359, 0361; probably also 0381 and 0407.
+  - Wolg: 0356, 0358, 0360, 0362–0364, 0366–0367, 0372, 0374–0376, 0382, 0392, 0394–0396, 0398–0400; probably also 0370, 0404 and 0406.
+  - Judy: 0373.
+  - Heming: probably 0403.
+- These are uncertain, and every one is rendered speaker-neutral, so a corrected attribution changes no text: 0365, 0378–0380, 0383, 0385, 0387, 0389, 0391, 0402, 0405, 0408, 0409.
+- The second victim (0402 二人目の犠牲者…俺たちの…仲間だ) is unnamed. Miller is probably the victim: she is absent from 0410–0437, and at 0429 the speaker expects to be left alone with Judy. 0402 "One of our… own" is gender-neutral, so nothing shipped depends on it (F-018).
+- The pronoun for the monster is he/him/his, consistent with R §7.3:
+  - 0353 "how to handle him", 0355 "his weakness", 0408 ヤツ → "him".
+  - 0354 "the creature" supplies an object the source does not state.
+  - 0371 "see it‼" is Miller's, as in her p01 0040 "Might it be spider-shaped?". p06 gives her no pronoun for the monster. Accepted.
+- Glossary: none.
+
+### 8.3 Movable codes, wraps and readings (PR Flags 2–4, 6–9)
+- **Authored codes.** The authored `{br}`/`{p}`/`{w}` diff against the source matches the flags exactly:
+  - 0352 `{br} {br}` → `{br} {p}`: a click before "Taxonomy puts them…", giving pages of 2 + 3 rows.
+  - 0363 (the only `+` row) `{p}` → `{p} {p}`: a leading `{p}` after 0362's `{br}`, per R §2.4. The pages are 3 + the cursor row, then 3 rows. F-012: no glue.
+  - There is no `{w}` in the unit.
+- **Lines ended by an authored `{br}`** measure 27 at most: 0365, 0367, 0374, 0389, 0399 (29 lines, `len()`).
+- **F-011 scan.** The reviewer scanned the 148 wrapped lines of the unit in `build/script_merged.tsv`. It found no lone "a", "I" or "an" at a line end and no split courtesy title. The only one-word line is 0386 "Yes.", which is the source's authored ええ。{br}.
+- **Round-1 wraps** (R §1.12):
+  - 0378 "Small monsters are all over the place." (27 / 10) for そこらじゅうにいる.
+  - 0383 "Now we'll have to figure out how to escape on our own…" (28 / 25) for 考えないと.
+- **Step-6 restructure, flagged and accepted.** 0367 and 0374 use colon lists ("This deck: Heming, William." / "Below it: John, Miller."; "Bottom deck: I'll go alone.") to keep the authored lines within 27.
+- **Readings:**
+  - 0366 甲板より上、つまりここから下のデッキ → "above the deck, that is, the decks below us": the capsized ship (R §2.1).
+  - 0358 社長のあんたは → "Boss, …" (the §2 row in address).
+  - 0396 チビ → "the runts", in context.
+  - 0395 小さいヤツ → "the small ones", the parasites (a type, R §1.7).
+  - 0384 １匹 → "one" (R §1.5).
+- **Suspected source typos**, read as the sense requires:
+  - 0396 捕まられなくても → 捕まえられなくても, "No problem if you can't catch one." (F-016).
+  - 0407 追求 → 追及, "I'll call you to account" (F-017).
+- Glossary: none.
+
+### 8.4 Recurrences (PR Flag 10)
+- 0377, 0397 and 0401 are the save prompt (R §3.4). They are byte-identical to 0170, 0173, 0239, 0242 and 0341. CHECK pairs them.
+- Untranslated exact recurrence: 0373 …かまわないわ。 → "…I don't mind." ↔ NO3_NO4/0009. CHECK pairs it when that row is translated.
+- Tag variants: 0391 `……。` → `……` ↔ NO2_THIRDSTORAGE/0006 and NO4_MACHINER90/0034. CHECK pairs these too.
+- Not duplicates: ……？ and ……⁉ (NO4_HWR_FRONT/0034, NO4_MACHINER90/0093, SCN038B/04, /12) match 0391 only after punctuation is normalised.
+- Glossary: none.
+
+### 8.5 Accepted readings (non-blocking review notes, round 0)
+- `:19 0367` "This deck: Heming, William." could be read as one name in surname-first order. The parallel "Below it: John, Miller." disambiguates it.
+- `:12 0360` "enough to go on to talk big" is slightly clumsy. "Right now I just lack the material to talk big." was offered and not required.
+- `:6 0354` "the creature" could be "him" (the he/him used at 0353 and 0355). This was not required.
+- None of these is a fidelity error.

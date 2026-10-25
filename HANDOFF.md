@@ -1,4 +1,4 @@
-**Last updated: 2026-10-25 01:17 UTC** — wave 2 review: PR #9 (NO4_BAR.p06) MERGED round 1, squash 1541592; reviewer integration commit on `main`. p07 round 1 awaits re-review; SCN038 in rework.
+**Last updated: 2026-10-25 01:25 UTC** — wave 2 review: PR #8 (NO4_BAR.p07) MERGED round 1, squash 2a0b375; reviewer integration commit on `main`. SCN038 round 1 awaits re-review.
 
 ## Integration branch: `main`. Not configurable.
 Every PR bases on `main`; the reviewer merges into `main`; a wave is closed only when `origin/main` is
@@ -7,24 +7,24 @@ preflight is `git fetch origin main && git checkout main && git reset --hard ori
 
 ## NEXT ACTION — always current, always a literal instruction
 > **Wave 2, resumed 2026-10-25 — coordinator session_018sADRqUwzYCcf65e1pUc63, 12-minute watchdog.**
-> One reviewer at a time: #9 p06 merged — **re-review PR #8 (p07 round 1) next** (860c462),
-> then #7 SCN038 once its round 1 is pushed; then close wave 2 and open wave 3 (orchestrator.md §6–§7).
+> One reviewer at a time: #9 p06 and #8 p07 merged — **re-review PR #7 (SCN038 round 1) next** (103d60b);
+> then close wave 2 and open wave 3 (orchestrator.md §6–§7).
 
 ## Progress
 | Store | Done | Total | |
 |---|---|---|---|
-| script | 6 units · 375 rows | 38 units · 1,709 rows | p01–p06; UNITCHECK whole store 2026-10-25 |
+| script | 7 units · 433 rows | 38 units · 1,709 rows | p01–p07; UNITCHECK whole store 2026-10-25 |
 | scene | 1 unit · 39 rows | 4 units · 190 rows | from STATUS 2026-10-06 |
 | system | 0 | 5 units · 188 rows | blocked whole (F-006) |
 
-Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-25; tightest `NO4_BAR.SCR` 36,174 free with p01–p06).
+Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-25; tightest `NO4_BAR.SCR` 36,357 free with p01–p07).
 
 ## In flight
 | Unit | Branch | PR | State | Next |
 |---|---|---|---|---|
 | script NO4_BAR.p05 | `tl/script-NO4_BAR.p05` | #6 | **MERGED** round 0, squash c6858ea; NO4_BAR.SCR 36,376 free, 58 rows, max 4 rows/page, ratio 2.22, 29 dup pairs; 客船 便所 ソナー 死体 見張り promoted (R §6) | nobody — merged |
 | script NO4_BAR.p06 | `tl/script-NO4_BAR.p06` | #9 | **MERGED** round 1 (round 0 CHANGES: 4 lone-"a" wraps, 怪物 at 0351), squash 1541592; NO4_BAR.SCR 36,174 free, 58 rows, max 4 rows/page, ratio 2.16, 30 dup pairs; 通風孔 中央ダクト 遺体 ハンドガン 蜘蛛/クモ 昆虫 promoted, フッ added (R §7); F-015 (0321 typo) | nobody — merged |
-| script NO4_BAR.p07 | `tl/script-NO4_BAR.p07` | #8 | round 0 CHANGES (0378 one-word row, 0383 lone "a", restate figures); round 1 pushed by the same translator, head 860c462 (main merged in; 36,053 free) | reviewer: re-review round 1 |
+| script NO4_BAR.p07 | `tl/script-NO4_BAR.p07` | #8 | **MERGED** round 1 (round 0 CHANGES: 0378 one-word row, 0383 lone "a", stale figures), squash 2a0b375; NO4_BAR.SCR 36,357 free, 58 rows, max 4 rows/page, ratio 2.20, 33 dup pairs; モンスター (small monster) 死骸 鞄 昆虫採集 節足動物門鋏角亜門 promoted (R §8); F-016, F-017 (typos 0396, 0407), F-018 (second victim) | nobody — merged |
 | scene SCN038 | `tl/scene-SCN038` | #7 | round 0 CHANGES (B/10 battle cry one "a" too many; restate figures); round 1 pushed by the same translator, head 103d60b (main merged in) | reviewer: re-review round 1, after #8 |
 
 ## Next up
