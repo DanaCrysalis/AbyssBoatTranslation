@@ -26,7 +26,7 @@ Wave 3, dispatched 2026-10-25, glossary seeds 1c36061 (§9, 15 rows). Base `main
 | script NO4_BAR.p08 | `tl/script-NO4_BAR.p08` | — | translator, round 0 | translator opens PR |
 | script NO4_HWR_FRONT.p01 | `tl/script-NO4_HWR_FRONT.p01` | — | translator, round 0 | translator opens PR |
 | script NO4_HWR_FRONT.p02 | `tl/script-NO4_HWR_FRONT.p02` | #10 | PR open, round 0; NO4_HWR_FRONT.SCR 55,181 free (p01 not merged) | reviewer, behind the barrier |
-| scene SCN041-SCN046 | `tl/scene-SCN041-SCN046` | — | translator, round 0 | translator opens PR |
+| scene SCN041-SCN046 | `tl/scene-SCN041-SCN046` | #11 | PR open, round 0; 52 subtitles, max 4 lines | reviewer, behind the barrier |
 
 ## Next up
 Wave 4 (written at wave 3 close): from Remaining in QUEUE order — NO4_HWR_FRONT.p03, NO4_MACHINER90.p01,
