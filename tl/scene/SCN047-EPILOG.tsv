@@ -1,0 +1,43 @@
+# unit: scene/SCN047-EPILOG
+# rows: 40
+# columns: id <TAB> context <TAB> source <TAB> target (empty target = untranslated)
+SCN047A/01	sub 1-140	──予想されていた以上の局面を迎え、進行をシフトした。{br}実験を終了せよ。	——Facing a situation beyond what had been predicted, we have shifted course.{br}Terminate the experiment.
+SCN047A/02	sub 141-190	ハイ。	Yes.
+SCN047A/03	sub 191-230	検体の処分を行え。	Dispose of the specimen.
+SCN047A/04	sub 231-280	ハイ。	Yes.
+SCN047A/05	sub 514-544	うう…。	Uuh…
+SCN047A/06	sub 601-661	私…。	I…
+SCN047A/07	sub 641-790	どうして？{br}私、いままで知らなかったことを知ってる⁉	Why?{br}I know things I didn't know until now⁉
+SCN047A/08	sub 791-850	さわらないで！	Don't touch me!
+SCN047A/09	sub 851-1000	私のせいで……。{br}私のせいで、みんなが死んだなんて…！	Because of me……{br}To think everyone died because of me…!
+SCN047A/10	sub 1001-1080	全部わかったの…。{br}私はあなたとは違う。	I understand everything…{br}I'm different from you.
+SCN047A/11	sub 1081-1245	あなたたちとは違うのよ‼	I'm different from you all‼
+SCN047A/12	sub 1266-1379	あなたを殺せと言われたわ。	I was told to kill you.
+SCN047A/13	sub 1440-1490	私の前から消えて。	Get out of my sight.
+SCN047A/14	sub 1491-1627	私の手であなたを殺したくないの…。	I don't want to kill you with my own hands…
+SCN047A/15	sub 1691-1789	そう、それでいい。{br}さようなら……ジョン。	Yes, that's it.{br}Goodbye…… John.
+SCN047B2/01	sub 1-100	ここは…いったい…何なんだ？{br}それに、あいつらは…。	What… on earth… is this?{br}And those people…
+SCN047B2/02	sub 121-180	ジュディが…こいつらの仲間だった⁉	Judy… was one of them⁉
+SCN047B2/03	sub 361-460	あいつの言った…ことは…このことだったのか…。	So this is… what he… meant…
+SCN047B2/04	sub 484-580	ジョン、逃げろ…。{br}こんなことに…関わるんじゃない。	John, run…{br}Don't get mixed up… in something like this.
+SCN047B2/05	sub 686-750	ジュディを助け出す…？	Rescue Judy…?
+SCN047B2/06	sub 791-850	…危険すぎるぞ。	…It's too dangerous.
+SCN047B2/07	sub 906-990	どうしても…行くつもりなのか？	You're determined… to go?
+SCN047B2/08	sub 1044-1133	ならここは…任せておけ。{br}俺の…最後の…仕事だ。	Then leave this… to me.{br}It's my… last… job.
+SCN047B3/01	sub 181-370	くそっ…来やがった…。{br}俺が引きつける…あいだに…、お前はジュディを…。	Damn… here they come…{br}While I… draw them off… you get Judy…
+SCN047B3/02	sub 576-630	人間をなめんなああああああぁぁぁぁぁっ！	Don't underestimate humaaaaaaaaaaaans!
+SCN047C1/01	sub 86-136	ジョン、どうして……。	John, why……
+SCN047C1/02	sub 221-311	わざわざ殺されにやって来るとは……。	To think you'd come all this way just to be killed……
+SCN047C1/03	sub 411-650	お前たちの自己犠牲という習性は、我々の感覚には理解できない。{br}今回の実験も同じ結果だった。{br}理解不能なデータの蓄積に終わった。	Your habit of self-sacrifice is beyond our senses. This experiment ended the same.{br}More data we cannot fathom.
+SCN047C1/04	sub 661-800	しかし、お前がここまで来ることはまったく予想外だった。	However, your coming this far was entirely unforeseen.
+SCN047C1/05	sub 801-1060	終わった以上、使った道具は処分する必要がある。{br}いまから船体は軌道上で分解、投棄する。	It is over, so the tools we used must be disposed of.{br}We will now dismantle the vessel in orbit and dump it.
+SCN047C1/06	sub 1061-1250	最後にお前がどんな行動をとるのか、調べさせてもらおう。	Finally, allow us to examine what action you will take.
+SCN047C2/01	sub 1-61	今…気が付いたわ。	Just now… I realized.
+SCN047C2/02	sub 101-279	私はジョンを死なせたくない。{br}そのためなら命を掛けてもいいってことに‼	I don't want John to die.{br}That I'm willing to risk my life for that‼
+SCN047C2/03	sub 281-310	ば、馬鹿な‼	A-absurd‼
+SCN047C2/04	sub 321-461	この心が人間なのよ。{br}この心こそが人間なんだって！	This heart is what's human.{br}That this heart, above all, is human!
+SCN047C2/05	sub 462-520	私は、人間なんだって‼	That I am human‼
+EPILOG/01	sub 1-100	（それにしても、彼等の真の目的はいったい何だったのだろうか？）	(Even so, what on earth could their true purpose have been?)
+EPILOG/02	sub 101-200	（その答えを知るものは──もういない……）	(Those who knew the answer——are gone now……)
+EPILOG/03	sub 751-900	はい……わかりました。{br}実験をフェーズ２に移行します。	Yes…… understood.{br}Moving the experiment to Phase 2.
+EPILOG0/01	sub 1-119	（あの悲劇から１月が経過した。{br}我々２人が助かったのは奇跡と言うより他に無い）	(A month has passed since that tragedy.{br}That the two of us lived can only be called a miracle)
