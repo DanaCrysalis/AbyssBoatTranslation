@@ -1,4 +1,4 @@
-**Last updated: 2026-10-06 ~14:40 UTC** — wave 2 STOPPED by the human mid-review: p05 merged; p06 and p07 in rework; SCN038 not yet reviewed.
+**Last updated: 2026-10-25 01:05 UTC** — wave 2 RESUMED on the human's "continue" (stopped 2026-10-06 ~14:40): p05 merged; p06 and p07 in rework; SCN038 under review.
 
 ## Integration branch: `main`. Not configurable.
 Every PR bases on `main`; the reviewer merges into `main`; a wave is closed only when `origin/main` is
@@ -6,11 +6,10 @@ at the close commit (`CLAUDE.md` Rule 3). A fresh container may clone shallow wi
 preflight is `git fetch origin main && git checkout main && git reset --hard origin/main`.
 
 ## NEXT ACTION — always current, always a literal instruction
-> **STOPPED — the human said "stop for now" (2026-10-06 ~14:40 UTC; CLAUDE.md §8).** Nothing resumes by
-> itself; the coordinator's watchdog is deleted and the runner's backstop disabled. On restart (the human
-> tells the runner or this session, session_018sADRqUwzYCcf65e1pUc63, to continue): preflight, then
-> (1) send PR #8's round 0 findings to the p07 translator; (2) reviewer on #7 (SCN038); (3) re-review #9
-> round 1 (3471e2d); (4) re-review #8 after its round 1; (5) close wave 2 and open wave 3 (orchestrator.md §6–§7).
+> **Wave 2 resumed 2026-10-25 01:05 UTC (human: "continue") — coordinator session_018sADRqUwzYCcf65e1pUc63,
+> 12-minute watchdog.** In order, one reviewer at a time: (1) PR #8's round 0 findings sent to the p07
+> translator; (2) reviewer on #7 (SCN038) now; (3) re-review #9 round 1 (3471e2d); (4) re-review #8
+> after its round 1; (5) close wave 2 and open wave 3 (orchestrator.md §6–§7).
 
 ## Progress
 | Store | Done | Total | |
