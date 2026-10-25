@@ -1,4 +1,4 @@
-**Last updated: 2026-10-25** — wave 4: #14 merged (d7e9398), #15 merged (40c6491); #17 CHANGES round 1 (translator reworking); #16 to review.
+**Last updated: 2026-10-25** — wave 4: #14 merged (d7e9398), #15 merged (40c6491); #16 round 0 CHANGES (1 finding, translator reworking); #17 round 1 pushed (4b8964e), to re-review.
 
 ## Integration branch: `main`. Not configurable.
 Every PR bases on `main`; the reviewer merges into `main`; a wave is closed only when `origin/main` is
@@ -6,9 +6,9 @@ at the close commit (`CLAUDE.md` Rule 3). A fresh container may clone shallow wi
 preflight is `git fetch origin main && git checkout main && git reset --hard origin/main`.
 
 ## NEXT ACTION — always current, always a literal instruction
-> **Wave 4 coordinator: review PR #16 (SCN047-EPILOG); then #17 round 1 when its translator has pushed.** #17's three
-> round-0 findings went to its translator (agent a96acb0b4138cf690); its round 1 must also meet #15's bindings (Next up).
-> The reviewer runs in the foreground, one at a time; `git pull --ff-only` after each.
+> **Wave 4 coordinator: re-review PR #17 round 1 (head 4b8964e) while #16 is in rework.** Send #16's round-0 finding 1
+> verbatim (the PR #16 review whose first line is `DECISION: CHANGES`) to its translator (agent a197ccbb3deb8d732);
+> re-review #16 round 1 when it pushes. The reviewer runs in the foreground, one at a time; `git pull --ff-only` after each.
 
 ## Progress
 | Store | Done | Total | |
@@ -26,7 +26,7 @@ Wave 4, dispatched 2026-10-25 — translator round 1 each; **barrier met** (4/4 
 | script NO4_HWR_FRONT.p03 | tl/script-NO4_HWR_FRONT.p03 | #14 | **MERGED** round 0, squash d7e9398; SCR 54,355 free (room 150/150), max 4 rows/page; CHECK 56 + 2 pairs; glossary 【女】, 乗客, 無線機, ボンベ promoted, 船内イベント added (rulings R §14) | done — nothing left on this unit |
 | script NO4_MACHINER90.p01 | tl/script-NO4_MACHINER90.p01 | #17 | **Round 1 pushed, head 4b8964e (findings 1–3 fixed, SCR 58,346 free) — awaiting re-review after #16.** Round 0 (5840b2d): every mechanical gate passed (CHECK 57 + 4 pairs; SCR 58,358 free; max 4 rows/page; census 14 translated pairs, 0 divergences). Findings: 1 `:28 0025` wrap ends in a lone "an"; 2 `:48 0045` authored-`{br}` line is 28 > 27 → "I braced for no survivors,"; 3 `:14 0011` 潜入 → "come aboard", to agree with #15 0089. Flag 5 "absurd" accepted (無茶を言う in context; §6 row at MERGE). Promotions ブリッジ, 船体, 雇い主, 装備, 虫, 処分 accepted; integrated at MERGE (agent a96acb0b4138cf690) | reviewer round 1 (resume the round-0 reviewer) |
 | script NO4_MACHINER90.p02 | tl/script-NO4_MACHINER90.p02 | #15 | **MERGED** round 0, squash 40c6491; SCR 58,308 free (54/108), max 4 rows/page; CHECK 56 + 4 pairs; census 13 translated pairs, 0 divergences; glossary 生き物, 船体, 装備 promoted, 潜入 "come aboard" added (rulings R §15) | done — nothing left on this unit |
-| scene SCN047-EPILOG | tl/scene-SCN047-EPILOG | #16 | PR open, 210d59b; 40 subtitles, max 4 lines; scene store 4/4 (agent a197ccbb3deb8d732) | review behind the barrier |
+| scene SCN047-EPILOG | tl/scene-SCN047-EPILOG | #16 | **CHANGES round 1 — translator reworking.** Round 0 (210d59b): every gate passed (CHECK 57 + 4 pairs; UNITCHECK 40 rows, max 4 lines, 0 violations; census 83,440 comparisons, 2 hits = the ハイ。 pair, 0 divergences; wrap scan 78 lines, 1 accepted orphan `:28`). Finding 1: `:31 C1/03` "is beyond our senses" → "makes no sense to us" (same 4 lines). The review's rulings bind round 1: `:28` elongation and "underestimate" stand; speakers C1/01 Judy, C2/03 the alien; 船体 "the vessel" stands (§2 note made referent-neutral at MERGE); promotions 実験 · 検体 · フェーズ２, 処分, 人間 and new rows 自己犠牲, ハイ, うう accepted, integrated at MERGE (agent a197ccbb3deb8d732) | translator round 1, then reviewer round 1 |
 
 ## Next up
 Wave 4 (QUEUE 2026-10-25): script NO4_HWR_FRONT.p03 (46 rows, 759 chars, ratio 36.92, `NO4_HWR_FRONT.SCR`
