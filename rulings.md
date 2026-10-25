@@ -840,3 +840,125 @@ Census counts are rows per store (script / scene / system), from the reviewer's 
 - **Not duplicates**: B/04 ……？ and B/12 ……⁉ match NO4_BAR/0391 ……。 only once final punctuation is normalised (R §8.4).
 - **Echo**: SCN046B1/04 俺もまさか、こんな場所でお前に会えるとは思ってなかったぜ echoes `:59`, and can reuse its wording.
 - Glossary: none.
+
+## Unit script NO4_HWR_FRONT.p01 (PR #13, MERGED, 2026-10-25)
+
+The starboard front corridor, from John and his partner's patrol to Collison's death and William's return. The partner is skeptical of the monster. Collison explains the toilet arrangement and goes off. After his death, William accuses the salvagers of making the monster. A monster attack follows (`Retry?`, Yes/No), and then William agrees to come back. Reviewed once:
+- **Round 0** (fce14fa): MERGE, squash 28d44a9. Every gate passed, and there were no findings.
+
+Figures:
+- **Container.** With p01 merged: NO4_HWR_FRONT.SCR 10,524 / 65,535 bytes, 55,011 free; tokens 377 / 1,499 (MEASURE). p01 costs +1,174 bytes over the untranslated 56,185 free. NO4_HWR_FRONT.p02 (PR #10) lands in the same container.
+- **Pages.** At most 4 rows per page (UNITCHECK, 53 rows, 0 violations).
+- **Ratio.** 2,321 target characters ÷ 1,088 source characters = 2.13, re-measured with `codec.char_count`.
+- **Duplicates.** CHECK compared 38 duplicate pairs (main's 34 + s11/s17, s12/s18, 0023, 0034) and 2 tag-variant pairs.
+  - The reviewer's census made 110,558 source-side comparisons: 53 rows × every other script, scene and system dump row, with the sibling heads #10, #11 and #12 counted as translated.
+  - It ran at three levels: exact; `{p}{w}{br}` stripped; `【Name】` stripped, with ！？ → ⁉ and final punctuation normalised.
+  - It found 59 hits, 15 of them translated pairs, with 0 divergences. The two "different" hits differ in final punctuation only (§10.4).
+
+Census counts are rows per store (script / scene / system), from the reviewer's grep of `dumps/` on 2026-10-25. Line citations use PROJECT.md §7's numbering in `tl/script/NO4_HWR_FRONT.p01.tsv` (line = row number + 3; choices s11 s12 s17 s18 are lines 53–56).
+
+### 10.1 Terms promoted from §9
+- **マガジン** → `magazine` (8); 予備のマガジン / マガジンの予備 → "spare magazine(s)".
+  - Census: 2 / 0 / 0, NO4_HWR_FRONT/0020 and NO3_NO4/0010 (一応マガジンの予備を渡しておく, which should take "spare magazine").
+  - "clip" was the alternative. It is rejected: a handgun takes a magazine.
+  - Binds `:23 0020` "I'll share my spare magazines with you.".
+  - Glossary: §3 row added; §9 row removed.
+- **Ｒｅｔｒｙ？** → `Retry?` (6).
+  - Census: 2 / 0 / 0, NO4_HWR_FRONT/0036 and NO2_MAINSTORAGE/0007, both the game-over prompt.
+  - It is the source's own English. Typed ASCII, `encode_target('Retry?')` equals `encode_source('Ｒｅｔｒｙ？')` byte for byte (`827182858294829282998148`, checked by the reviewer).
+  - Binds `:39 0036`.
+  - Glossary: §4 row added; §9 row removed.
+- **はい · いいえ (choice)** → `Yes` · `No` (3 · 2), cap 27.
+  - Census: as exact `choice` rows, 8 / 0 / 0 each: NO2_HW_3 s05/s06, NO2_MAINSTORAGE s03/s04, NO2_TOFE_ROOM s08/s09, NO3_CABIN_3002 s03/s04, NO3_CABIN_3003 s03/s04, NO3_MACHINE s03/s04, NO4_HWR_FRONT s11/s12, s17/s18.
+  - The row's scope is `choice` rows. はい inside dialogue is translated in context.
+  - Binds `:53`–`:56`.
+  - Glossary: §4 row added; §9 row removed.
+- **妹 · 妹さん** → `sister`: "my sister" / "his sister"; the echo 妹？ → "Sister?" (6).
+  - Census: 妹 5 / 1 / 0, of which 妹さん is 2 / 0 / 0. The rows are NO4_HWR_FRONT/0031, 0032, 0075 (妹さん), 0080 (妹さん), 0082, and SCN038D/17.
+  - Every row means William's dead sister.
+  - さん is dropped, as for a role noun (R §1.2), and carried by tone.
+  - Already consistent:
+    - "little sister" was not used; the shipped SCN038D/17 says "To my sister…" (R §9.2).
+    - Sibling PR #10 renders 0075 "His sister…", 0080 "his sister's death" and 0082 "his sister's death". That conforms; the row binds both units.
+  - Binds `:34 0031` "Give my sister back!" and `:35 0032` "Sister?{br}What are you talking about?".
+  - Glossary: §6 row added; §9 row removed.
+
+### 10.2 Speakers (PR Flag 4; points decided in review)
+- There is no `_T` draft of this scene, so speakers are named from content (F-009).
+  - Collison: 0011–0013 (わし/おる/じゃ).
+  - William: 0025, 0027, 0029, 0031, 0033, 0035, 0038–0039, 0042, 0044, 0046, 0048.
+  - John's partner: every other message row.
+  - 0023 ウィリアムっ‼ is the partner's, or John's.
+  - 0036 is the game-over prompt.
+- **John's partner is not Oakland.**
+  - Oakland's 42 `【オークランド】` rows in the dump contain わし 5 times and 俺 0 times (NO4_BAR_T/0075, 0158, 0160, 0165; NO4_HWR_FRONT_DOWN_T/0002). His unlabelled わし lines agree (NO3_NO4/0002, NO4_BAR/0429).
+  - The partner says 俺 throughout (0002, 0003, 0006, 0007, 0008, 0020).
+  - He is Heming or Wolg:
+    - For Heming: 0004 (人間、歳をとると頭が固くなる, self-deprecating about age), うむ (0007) and わっはっは (0008) fit the older salvager.
+    - For Wolg: 俺 (NO4_BAR_T/0050, 0055), and his "the culprit is human" report (NO4_BAR/0246).
+  - Heming has no labelled line with a first-person pronoun, so the evidence cannot settle it.
+  - Every line is speaker-neutral, so a corrected attribution changes no text. Recorded in F-009.
+- **0018 まだ中にいるかもしれん → "He may still be in there."** The supplied subject is the monster's "he" (R §1.7, §7.3), for three reasons:
+  - 気をつけろよ makes the subject a danger.
+  - 0016 has just accepted John's report that there really was a monster, and 0015 that Collison was its victim.
+  - 0026 states that Collison is dead.
+  Reading "he" as Collison is not supported. "The monster may still be in there." wraps to a one-word row (R §1.12 rule 1). Accepted.
+- spk=0, 1 and 2 each carry the partner, as well as William (spk=1) and Collison (spk=2). spk=N is not a character id.
+- Glossary: none.
+
+### 10.3 Movable codes, wraps and readings (PR Flags 2, 3, 6, 7)
+- **Authored codes.** The authored `{br}`/`{p}`/`{w}` sequence differs from the source in one row: `:22 0019` `{br} {br}` → `{p} {br}`.
+  - Without the click, the page opened by 0019 and its `+` row 0020 has 5 rows. With it, the pages have 1 and 4 rows.
+  - The click falls at a sentence boundary. The source's page there is 3 rows, so this is not inherited (F-010 n/a).
+  - There is no `{w}`.
+  - F-012: the `+` rows 0020, 0039 and 0041 each follow a `{br}`-ended row, so nothing is glued. None of the 25 dump boundaries is in this unit.
+- **Glyph counts.** `…` `‼` `⁉` `──` counts match the source on every row.
+- **Wraps** (F-011 scan of `build/script_merged.tsv`, 115 wrapped lines):
+  - 0 lines end in a lone "a", "I" or "an".
+  - 0 split titles: "Mr. Collison" stays on one line at 0001, 0002, 0027 and 0044.
+  - 0 word-initial apostrophes.
+  - The one-word rows 0027 `…What⁉` and 0032 `Sister?` are the source's own authored breaks.
+  - Lines ended by an authored `{br}` are 27 or fewer (`len()`): 0006 line 1 and 0040 are 27.
+- **0035 お、お前らが作ったんだろ…？ → "Y-you made that thing, didn't you…?"**
+  - The supplied object is the monster, for three reasons:
+    - The topic is 0028–0029: the monster killed Collison, and William replies "You guys killed him!".
+    - 俺たちを選んだ "why did you choose us" makes the salvagers the monster's masters.
+    - 0038–0039 何故、怪物がお前たちも狙うんだ / けしかけた and 0046 あいつ continue the same belief.
+  - NO4_BAR/0255 (p05) お前らが作ったんだろ⁉ → "You did it yourselves, didn't you⁉" stays as shipped (R §6.3):
+    - Its context is the shot body and "whoever destroyed our gear".
+    - Its source differs (⁉ for …？, a different following line), and the two rows do not pair.
+  - This unit does show that William's belief is "you made the monster". A later pass that wants p05 to match could use "You made it, didn't you⁉". That would be optional, not a fidelity fix.
+- **Step-5/6 departures, flagged and accepted:**
+  - `:10 0007` reorder: "given the tech to submerge a passenger ship" carries といい.
+  - `:11 0008` 組織 implied: "What kind, I couldn't say.".
+  - `:42 0039` "set him on us": the object is supplied.
+  - `:44 0041` "We nearly got killed‼": the elided subject is read as the patrol attacked together.
+  - `:49 0046` あいつ → "that thing".
+- **Readings:**
+  - 0002 どうも → "can't quite".
+  - 0004 頭が固くなる → "hard-headed".
+  - 0006 ハハッ → "Ha-ha,"; 0008 わっはっは → "ha-ha-ha.".
+  - 0011 ４１０１号室 → "room 4101" (R §1.4); 便所 → "The toilet's" (§2 row).
+  - 0012 あいつ (the monster) → "He".
+  - 0013 済ませてくる → "I'll go and attend to it", Collison's diction.
+  - 0026 それはそっちのセリフだ → "I should be asking you that.".
+  - 0030 わからんヤツだな → "You just don't get it." (ヤツ as a person, R §1.7).
+  - Stutters hyphenated (R §4.3).
+- **Non-blocking:** 0005 なんだろうな。 → "…, I wonder?" puts a question mark on a sentence that ends in 。 in the source. That is acceptable English, and `?` is not a counted glyph.
+- Glossary: none.
+
+### 10.4 Recurrences (PR Flag 5)
+- **Translated, identical:**
+  - 0023 `William‼` = SCN038D/14.
+  - 0034 `……?` = SCN038B/04.
+  - s11 = s17 `Yes`, s12 = s18 `No`.
+  - 0033 `………` = NO4_BAR/0201, 0265, SCN038_5C1/10, and the sibling heads p02 0057 and 0092, p08 0430 and SCN046B1/01.
+  - 0009 is 0006's second sentence, byte for byte.
+- **Untranslated exact recurrences, which CHECK pairs once translated:**
+  - **0013 = NO4_HWR_FRONT/0144** (p03, wave 4): `Thank you. I'll go and attend to it.{br}Wait here a moment for me.`. The wave-4 translator copies it byte for byte. 0144 is spk=1 in a different scene, but the sentence is identical, so the target is too.
+  - 0036 = NO2_MAINSTORAGE/0007 `Retry?`.
+  - 0048 = NO3_NO4/0003 `…All right.`.
+  - s11/s17 and s12/s18 = the six NO2/NO3 Yes/No pairs (§10.1).
+- **Not duplicates:** 0034 `……?` against NO4_BAR/0391 `……` and SCN038B/12 `……⁉` (R §8.4).
+- The #12 review's `…、` ruling does not apply: the unit has no `…、` (0 rows).
+- Glossary: none.

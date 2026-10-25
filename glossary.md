@@ -72,11 +72,14 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | ソナー | — | the sonar | 9 | — | ソナーの反応 → "the contact" … on/from the sonar (0272); ソナーに反応が無い in context | R §6.1 |
 | ハンドガン | — | handgun | 7 | — | never "pistol"; ハンドガン程度 → "a mere handgun" (0343); equip/000, items/000 (blocked) take the same word | R §7.1 |
 | 鞄 | カバン · 旅行鞄 | bag; 旅行鞄: suitcase | 3; 8 | — | 鞄 and カバン one word (NO4_TOOL_ROOM/0003 カバンごと in context); plural as the line needs | R §8.1 |
+| マガジン | — | magazine; 予備のマガジン · マガジンの予備 → "spare magazine(s)" | 8 | — | the gun's magazine, never "clip"; NO3_NO4/0010 takes "spare magazine" | R §10.1 |
 
 ## 4. Classes, units, system terms
 | Source | Variants | Target | Cols | Cap | Note | Ruling |
 |---|---|---|---|---|---|---|
 | セーブする · セーブしない | — | Save · Don't save | 4 · 10 | 27 | the save choice pair (choice rows, §8) | R §1.9 |
+| Ｒｅｔｒｙ？ | — | Retry? | 6 | — | the game-over prompt, the source's own English: type ASCII `Retry?` (encodes to the source bytes) | R §10.1 |
+| はい · いいえ (choice) | — | Yes · No | 3 · 2 | 27 | `choice` rows only (8 / 0 / 0 each); はい in dialogue is in context | R §10.1 |
 
 ## 5. Verbal tics — decided, never mix
 <!-- What is fixed is the word; punctuation follows the source line. -->
@@ -116,6 +119,7 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | ～ (long-vowel mark) | — | repeat the vowel once per ～; a final っ after a word is dropped | — | SCN038B/11 行け～～～っ。 → "Goooo." (Go + 3 o); SCN046A3/01 in context; 0 / 2 / 0 | R §9.1 |
 | グフッ | — | Guh | 3 | grunt as he is struck, SCN038B/17 only ("——Guh‼"); not フッ | R §9.1 |
 | 俺様 | — | no fixed word: the killer's swagger is carried by register | — | 俺様の…… → "My very own……" (SCN038_5C1/06); 俺様の女神 → "my very own goddess" (NO2_MAINSTORAGE/0003); 3 / 4 / 0 | R §9.1 |
+| 妹 | 妹さん | sister: "my sister" / "his sister"; the echo 妹？ → "Sister?" | 6 | William's dead sister; 妹さん drops さん (R §1.2) → "his sister" (NO4_HWR_FRONT/0075, 0080); SCN038D/17 "To my sister…" | R §10.1 |
 
 ## 7. Register per character
 | Character | Register | Contractions? | Markers | Ruling |
@@ -154,10 +158,6 @@ so; the reviewer moves the row up into its section in the integration commit. --
 | チェーンカッター | — | chain cutter | bolt cutters | NO4_BAR/0444, NO6_TOOLROOM/0001, hints/006; 2 / 0 / 1 | 3 |
 | 倉庫 | 第Nデッキ倉庫 | storeroom ("the Deck 3 storeroom") | storage room | NO4_BAR/0424; rooms/053, 069, 105, items/013; 1 / 0 / 4 | 3 |
 | 工具 | — | tools | — | NO4_BAR/0423–0424; 道具 (NO4_HWL_KAIDAN/0006) in context; 2 / 0 / 0 | 3 |
-| マガジン | — | magazine ("spare magazine") | clip | NO4_HWR_FRONT/0020, NO3_NO4/0010; 2 / 0 / 0 | 3 |
-| Ｒｅｔｒｙ？ | — | Retry? (the source's own English, kept) | — | NO4_HWR_FRONT/0036, NO2_MAINSTORAGE/0007; 2 / 0 / 0 | 3 |
-| はい · いいえ (choice) | — | Yes · No | — | choice rows, NO4_HWR_FRONT/s11 s12 s17 s18 …; 8 / 0 / 0 each as choices | 3 |
-| 妹 | 妹さん | sister (William's; "my sister", "his sister") | little sister | NO4_HWR_FRONT/0031–0032, 0075–0082; R §8 "To my sister"; 5 / 1 / 0 | 3 |
 | 『フロアーインフォメーション』 · パーサーオフィス · メインダイニング · ラウンジ · ビアー＆ラガーズ · キャビン | — | "Floor Information" · Purser's Office · Main Dining · Lounge · Beer & Lagers · Cabins | Purser · Dining | the deck sign NO4_HWR_FRONT/0097–0100 = NO4_HWL_BACK/0014–0017 = NO4_HWL_BACK2/0010–0013, byte-identical; `{br}`-ended lines, 27 cols with the leading space; 3 / 0 / 1 | 3 |
 | クライド | — | Clyde | — | SCN046A2/02, Oakland to the one who betrays him (likely Heming's given name); 0 / 1 / 0 | 3 |
 | ジェイク・ノーマン | — | Jake Norman | — | SCN046B1/03, Wolg naming the killer; 0 / 1 / 0 | 3 |

@@ -138,6 +138,11 @@ uncertain and are rendered speaker-neutral:
 - B/01 (William or Heming), B/04 and B/13 (Judy or Heming), B/06, B/08 and B/21 (probably Heming).
 - D/02, 04, 05, 07–09 (Wolg or Oakland), D/12 (Wolg, Oakland or Heming).
 The 5C1/5C2 speaker is the killer, except 5C1/01, 07 and 10 (Judy) (rulings R §9.2).
+NO4_HWR_FRONT.p01 (PR #13): no `_T` draft exists, so speakers are named from content. Collison
+(0011–0013) and William (0025, 0027, 0029, 0031, 0033, 0035, 0038–0039, 0042, 0044, 0046, 0048) are certain. John's partner (every other message row)
+is not Oakland, whose 42 labelled rows use わし and never 俺, while the partner says 俺. He is Heming
+(0004 on age, うむ, わっはっは) or Wolg (俺). Rendered speaker-neutral. 0023 is the partner's or John's.
+spk=0/1/2 each carry the partner (rulings R §10.2).
 
 ### F-011 · 2026-10-04 · tools · OPEN
 PR #1 (NO4_BAR.p01) found four things CHECK and UNITCHECK do not verify. Each was confirmed by a
