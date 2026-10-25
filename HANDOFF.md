@@ -1,4 +1,4 @@
-**Last updated: 2026-10-25** — wave 2 closed: NO4_BAR.p05, p06, p07 and SCN038 merged (PRs #6, #9, #8, #7), none parked; the wave 2 coordinator opens the wave 3 session.
+**Last updated: 2026-10-25** — wave 3 dispatched: NO4_BAR.p08, NO4_HWR_FRONT.p01, p02, SCN041-SCN046 (wave 3 coordinator session).
 
 ## Integration branch: `main`. Not configurable.
 Every PR bases on `main`; the reviewer merges into `main`; a wave is closed only when `origin/main` is
@@ -6,11 +6,9 @@ at the close commit (`CLAUDE.md` Rule 3). A fresh container may clone shallow wi
 preflight is `git fetch origin main && git checkout main && git reset --hard origin/main`.
 
 ## NEXT ACTION — always current, always a literal instruction
-> **Open the wave 3 session** (wave 2 coordinator; CLAUDE.md Rule 1, orchestrator.md §7): `create_session`
-> titled `Abyss Boat — wave 3`, tags `["abyssboat-translation", "wave-3"]`, `source_url`
-> https://github.com/DanaCrysalis/AbyssBoatTranslation, `source_revision` `main`, seed = SKILL.md §6a
-> with UNITS = Next up. First check `list_sessions` (tag `wave-3`): if one exists, do not open a second.
-> The wave 3 coordinator seeds the glossary for its units, then dispatches.
+> **Wave 3 in flight** (wave 3 coordinator session). Wait for all four PRs (wave barrier), then one
+> `reviewer` at a time in unit order: NO4_BAR.p08 → NO4_HWR_FRONT.p01 → p02 → SCN041-SCN046.
+> Translators that stop are resumed by `SendMessage` (same agent, worktree intact). Watchdog: 12-minute `send_later`.
 
 ## Progress
 | Store | Done | Total | |
@@ -22,21 +20,17 @@ preflight is `git fetch origin main && git checkout main && git reset --hard ori
 Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-25; tightest `NO4_BAR.SCR` 36,357 free with p01–p07).
 
 ## In flight
-Nothing. Wave 2's four units are merged; see Wave history and rulings R §6–§9.
+Wave 3, dispatched 2026-10-25, glossary seeds 1c36061 (§9, 15 rows). Base `main`.
+| Unit | Branch | PR | State | Next |
+|---|---|---|---|---|
+| script NO4_BAR.p08 | `tl/script-NO4_BAR.p08` | — | translator, round 0 | translator opens PR |
+| script NO4_HWR_FRONT.p01 | `tl/script-NO4_HWR_FRONT.p01` | — | translator, round 0 | translator opens PR |
+| script NO4_HWR_FRONT.p02 | `tl/script-NO4_HWR_FRONT.p02` | — | translator, round 0 | translator opens PR |
+| scene SCN041-SCN046 | `tl/scene-SCN041-SCN046` | — | translator, round 0 | translator opens PR |
 
 ## Next up
-Wave 3 (QUEUE 2026-10-25): script NO4_BAR.p08 (52 rows, 1,125 chars, ratio 17.16, `NO4_BAR.SCR` 36,357
-free), NO4_HWR_FRONT.p01 (53, 1,088, 26.82) and NO4_HWR_FRONT.p02 (51, 1,018, 28.60) — both
-`NO4_HWR_FRONT.SCR`, 56,185 free — plus scene SCN041-SCN046 (52 rows, 773 chars, geom); all tier D.
-Glossary seeds: not yet — the wave 3 coordinator's step 2.
-Related shipped work: NO4_BAR.p01–p07 (p08 ends the bar conversation; voices glossary §7; rulings R §1–§3,
-§5–§8); SCN038 (R §9: the killer's laugh, battle cry, ～, «Name»たち) — SCN046B1/B2 reuse the laugh and
-SCN046B1/04 echoes SCN038_5C1/09. Recurrences waiting: なんだと⁉ → "What⁉" (NO4_HWL_BACK/0008), いいや。 →
-"Not at all." (NO4_BAR/0432), すまん…。 → "Sorry…" (SCN046A1/11), ウィリアムっ‼ → "William‼"
-(NO4_HWR_FRONT/0023), ……？ → "……?" (NO4_HWR_FRONT/0034). The save prompt is canonical (glossary §6).
-Wave 2 lesson: three of four PRs claimed a clean wrap read and had lone-"a" or one-word rows — tell
-translators to scan `build/script_merged.tsv` mechanically, not by eye, and to merge `origin/main` before
-measuring (PROJECT.md §7, F-011).
+Wave 4 (written at wave 3 close): from Remaining in QUEUE order — NO4_HWR_FRONT.p03, NO4_MACHINER90.p01,
+p02, plus scene SCN047-EPILOG.
 
 ## Remaining
 QUEUE order, generated 2026-10-06 (wave 3 units moved to Next up 2026-10-25) (source characters, tags excluded). Script: NO4_HWR_FRONT.p03 (759),
