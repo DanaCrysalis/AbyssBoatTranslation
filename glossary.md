@@ -52,6 +52,8 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | 生き残り | 生き残りグループ | survivor(s); 生き残りグループ: survivor group | 8 (9); 14 | — | the people still alive aboard | R §5.1 |
 | 客船 | — | passenger ship | 14 | — | this ship; 例の客船 → "that passenger ship" (0279) | R §6.1 |
 | 便所 | — | the toilet | 10 | — | lowercase; Collison's word (0292, NO4_HWR_FRONT/0011) | R §6.1 |
+| 通風孔 | — | air vent; "the vent" / "vent(s)" after first mention | 8; 8 | — | lowercase; "the air vent" at a scene's first mention (NO4_BAR/0294), then "vent" | R §7.1 |
+| 中央ダクト | — | the central duct | 16 | — | lowercase; NO4_BAR/0302 only | R §7.1 |
 
 ## 3. Items, currency, mechanics
 | Source | Variants | Target | Cols | Cap | Note | Ruling |
@@ -67,6 +69,7 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | 弾切れ | — | out of ammo | 11 | — | SCN029/02, SCN046A1/07; items/000 (blocked) in context | R §4.1 |
 | 薬品 | — | medicine | 8 | — | NO4_BAR/0226, NO3_MEDICALROOM/0002 | R §5.1 |
 | ソナー | — | the sonar | 9 | — | ソナーの反応 → "the contact" … on/from the sonar (0272); ソナーに反応が無い in context | R §6.1 |
+| ハンドガン | — | handgun | 7 | — | never "pistol"; ハンドガン程度 → "a mere handgun" (0343); equip/000, items/000 (blocked) take the same word | R §7.1 |
 
 ## 4. Classes, units, system terms
 | Source | Variants | Target | Cols | Cap | Note | Ruling |
@@ -98,6 +101,10 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | 大部屋 | — | large room | 10 | as 部屋; the shared rooms groups held out in (0089) | R §2.1 |
 | 死体 | — | body | 4 | a dead body, person or unknown; 死骸 (carcass) and 遺体 (remains) are separate rows | R §6.1 |
 | 見張り | 見張りを立てる · 見張りにつく · 見張りの交代 · 見張りの順番 | watch: "stand watch", "keep watch", "change of watch" | 5 | the duty, not the person ("lookout" only if a line names one) | R §6.1 |
+| 遺体 | — | remains | 7 | a person's dead body, respectful (0294 "We found no remains"); 死体 is "body", 死骸 is §9 | R §7.1 |
+| 蜘蛛 | クモ | spider | 6 | both spellings, one word; クモのような形 → "spider-shaped" (0040); 蜘蛛の巣 (NO5_BANK/0006) in context | R §7.1 |
+| 昆虫 | — | insect | 6 | 昆虫採集 is its own row (§9, "bug collecting") | R §7.1 |
+| フッ | — | Heh | 3 | Wolg's wry scoff; punctuation per source (フッ… → "Heh…", フッ、 → "Heh,"); not グフッ (SCN038B/17, a grunt) | R §7.1 |
 
 ## 7. Register per character
 | Character | Register | Contractions? | Markers | Ruling |
@@ -132,12 +139,9 @@ so; the reviewer moves the row up into its section in the integration commit. --
 | 無線室 | — | the radio room | — | NO6_BRIDGE/0001, 0006; rooms/107, items/011, hints/001–002 (cap 14 as a room name); 2 / 0 / 4 | 1 |
 | エントランスホール | — | entrance hall | lobby | NO4_4102/0001, NO4_HWL_BACK/0017, NO4_HWR_FRONT/0100 …; 6 / 0 / 2 rows (rooms/066, 084); ホール alone is fixed in §2 (R §2.1) | 1 |
 | モンスター | 小型モンスター | monster; 小型 / 小さいタイプの → "small monster(s)" | creature | NO4_BAR/0378, 0384, 0398, NO4_TOOL_ROOM/0039, NO5_BANK/0001, NO3_NO4/0053; 8 / 0 / 1 | 2 |
-| 通風孔 · 中央ダクト | — | air vent ("the vent" after first mention) · the central duct | ventilation shaft | 通風孔 NO4_BAR/0294–0321, NO2_CABIN_2001/0001, NO2_SUBSTORAGE …; 20 / 0 / 0. 中央ダクト NO4_BAR/0302 only | 2 |
-| 蜘蛛 | クモ | spider | — | NO4_BAR/0040 (shipped "spider-shaped"), 0349, 0350, 0352, NO4_BAR_T/0059, NO5_BANK/0006; 6 / 0 / 0 | 2 |
-| 昆虫 | 昆虫採集 | insect; 昆虫採集 → "bug collecting" | bug | NO4_BAR/0350–0352, 0389, NO4_TOOL_ROOM/0017, 0019 …; 12 / 0 / 0. 節足動物門鋏角亜門 (0352) → "phylum Arthropoda, subphylum Chelicerata" | 2 |
-| 死骸 · 遺体 | — | carcass (a creature's) · remains (a person's, respectful) | corpse | 死骸 NO4_BAR/0387, 0455 (2 / 0 / 0); 遺体 0294 (1 / 0 / 0). 死体 promoted to §6 "body" (R §6.1) | 2 |
+| 昆虫採集 | — | bug collecting | — | NO4_BAR/0389; 1 / 0 / 0. 節足動物門鋏角亜門 (0352) → "phylum Arthropoda, subphylum Chelicerata". 昆虫 alone promoted to §6 "insect" (R §7.1) | 2 |
+| 死骸 | — | carcass (a creature's) | corpse | NO4_BAR/0387, 0455; 2 / 0 / 0. 死体 (§6 "body", R §6.1) and 遺体 (§6 "remains", R §7.1) promoted | 2 |
 | 鞄 | カバン · 旅行鞄 | bag; 旅行鞄 → "suitcase" | — | NO4_BAR/0392–0394, NO4_TOOL_ROOM/0003; 4 / 0 / 0 | 2 |
-| ハンドガン | — | handgun | pistol | NO4_BAR/0343, NO4_MACHINER90/0004, 0012; equip/000, items/000 (system, blocked); 3 / 0 / 2 | 2 |
 | 俺様 | — | no fixed word: the scene villain's swagger is carried by register ("Yours truly" only if a line needs it) | — | SCN038_5C1/06, SCN046B1/11, SCN046B2/03 …; NO2_MAINSTORAGE/0002–0004; 3 / 4 / 0 | 2 |
 
 ## 10. Open questions

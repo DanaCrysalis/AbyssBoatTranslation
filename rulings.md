@@ -580,3 +580,62 @@ Census counts are rows per store (script / scene / system), from the reviewer's 
 - `:60 0292` wraps "I'm off to the toilet. Will | you come along?": acceptable under R §1.12 (no lone "a"/"I", no orphan).
 - `:28 0260` おい → "Here," keeps Collison's old-fashioned diction (glossary §7).
 - None of these is a fidelity error.
+
+## Unit script NO4_BAR.p06 (PR #9, MERGED, 2026-10-25)
+
+The bar after Collison is lost into the air vent: the survivors argue over the vents, Miller and Judy move to the small room, Wolg sets two rules, and after the save prompt Wolg reports the first handgun encounter and the spider comparison follows. It continues NO4_BAR.p05 directly. Reviewed twice:
+- **Round 0** (3e49f41, 2026-10-06): CHANGES. Four wraps left a line ending in a lone "a" (0298, 0312, 0330, 0335; R §1.12 rule 2), 0335 also read as innuendo ("get it up"), and 怪物 was dropped at 0351. The PR body's figures were stale.
+- **Round 1** (3471e2d, after the run's pause 2026-10-06 → 2026-10-25): MERGE, squash 1541592. Exactly those five rows changed, each to the reviewer's wording; the merge of `origin/main` left the unit file untouched.
+
+Figures:
+- With p01–p06 merged: NO4_BAR.SCR 29,361 / 65,535 bytes, 36,174 free; tokens 730 / 1,499 (MEASURE). p06 costs +202 bytes over p05's 36,376.
+- At most 4 rows per page (UNITCHECK, 58 rows, 55 pages, 0 violations). 2,983 target characters ÷ 1,384 source = 2.16.
+- CHECK compared 30 duplicate pairs (main's 29 + 0341) and 2 tag-variant pairs.
+- The reviewer's census made 120,988 source-side comparisons (58 rows × 2,086 other script, scene and system dump rows) at three levels: exact; `{p}{w}{br}` stripped; `【Name】` stripped with ！？ → ⁉ and final punctuation normalised. Hits are in §7.4.
+
+Census counts are rows per store (script / scene / system), from the reviewer's grep of `dumps/` on 2026-10-25. Line citations use PROJECT.md §7's numbering in `tl/script/NO4_BAR.p06.tsv` (line = row number − 290).
+
+### 7.1 Terms promoted from §9, and one added
+- **通風孔** → `air vent` (8), then `vent` / `vents`. 20 / 0 / 0: NO4_BAR/0294, 0302, 0307, 0311, 0321; NO2_CABIN_2001/0001, s05; NO2_SUBSTORAGE/0002, 0009, s06; NO2_TOFE_ROOM/0001, 0003, 0004; NO3_CABIN_3003/0002, s06; NO3_CABIN_3105/0001, 0003, 0004, 0005, s07. The full form at the scene's first mention (0294 "dragged deep into the air vent"), the short form after (0302 "the room's vent", 0307 "a vent in here", 0311 "a room with no vents", 0321 "without vents"). The room scripts of NO2/NO3 are examine texts, each a fresh first mention: "air vent".
+  - Binds `:4 0294`, `:12 0302`, `:17 0307`, `:21 0311`, `:31 0321`. Glossary: §2 row added; §9 row removed.
+- **中央ダクト** → `the central duct` (16). 1 / 0 / 0: NO4_BAR/0302 only.
+  - Binds `:12 0302`. Glossary: §2 row added.
+- **遺体** → `remains` (7). 1 / 0 / 0: NO4_BAR/0294 遺体は見つからなかった → "We found no remains". Only the 遺体 part of the §9 row is promoted; 死骸 (2 / 0 / 0: NO4_BAR/0387, 0455) is rendered by p07 (PR #8, still open) and stays in §9.
+  - Binds `:4 0294`. Glossary: §6 row added; §9 row narrowed to 死骸.
+- **ハンドガン** → `handgun` (7). 3 / 0 / 2: NO4_BAR/0343, NO4_MACHINER90/0004, 0012; equip/000, items/000 (system, blocked). ハンドガン程度の銃弾 → "Bullets from a mere handgun" (程度 as "mere").
+  - Binds `:53 0343`. Glossary: §3 row added; §9 row removed.
+- **蜘蛛 · クモ** → `spider` (6). 蜘蛛 4 / 0 / 0 (NO4_BAR/0349, 0350, 0352, NO5_BANK/0006) + クモ 2 / 0 / 0 (NO4_BAR/0040, NO4_BAR_T/0059) = 6. p01's 0040 クモのような形 shipped "spider-shaped" and agrees; PR #8 renders 0352 "spiders".
+  - Binds `:59 0349`, `:60 0350`. Glossary: §6 row added; §9 row removed.
+- **昆虫** → `insect` (6). 12 / 0 / 0, of which 昆虫採集 1 / 0 / 0 (NO4_BAR/0389, p07's "bug collecting"). 昆虫がでかくなった怪物 → "an overgrown insect monster" (0351, round-0 finding 5). Only 昆虫 alone is promoted; 昆虫採集 and the 節足動物門鋏角亜門 note stay in §9 for PR #8.
+  - Binds `:60 0350`, `:61 0351`. Glossary: §6 row added; §9 row narrowed to 昆虫採集.
+- **フッ** (new) → `Heh` (3), punctuation per source. 2 / 1 / 0: NO4_BAR/0299 フッ…そんなものがあればだがな → "Heh… if any exist, that is."; NO3_NO4/0017 フッ、どうやら知らないようだな (Wolg, his police past) → "Heh, …". The scene hit is グフッ‼ (SCN038B/17, a grunt as someone is struck), not this scoff.
+  - Binds `:9 0299`. Glossary: §6 row added.
+
+### 7.2 Speakers (PR Flag 6)
+- NO4_BAR_T has no draft of this scene, so every speaker comes from content (F-009).
+  - Wolg: 0294, 0298–0299, 0301–0302, 0304–0306, 0318, 0320, 0322, 0324, 0327, 0329, 0331, 0333, 0335, 0337–0339, 0342–0343, 0345, 0348.
+  - Oakland: 0295, 0297, 0300, 0303, 0319, 0321, 0323, 0325–0326, 0328, 0330, 0332, 0334, 0336, 0344, 0351.
+  - Miller: 0296, 0307, 0309–0310, 0312, 0314–0317, 0346.
+- Uncertain, every one rendered speaker-neutral, so a corrected attribution changes no text: 0308 and 0311 (Oakland or Heming); 0313 (Wolg or Oakland); 0340 (probably Oakland); 0347 (Oakland or Heming); 0350 (Wolg or Heming); 0349 (probably William: やがる, and NO4_BAR/0363 says they met him in a corridor).
+- spk=4 carries Wolg (0294), Oakland (0295) and Miller (0309); spk=5 carries Wolg (0320) and Oakland (0326). spk=N is not a character id.
+- Glossary: none.
+
+### 7.3 Movable codes and readings (PR Flags 2–5, 7, 9)
+- Authored `{br}`/`{p}`/`{w}` diff against the source, exactly as flagged: 0294 `{p}` → `{p} {p}` (a click after "…into the air vent."; pages 2 + 3); 0315 `-` → `{br}` (F-012, sentence boundary after the untagged 0314); 0338 `{br}` → `{br} {p}` (leading `{br}` after the untagged 0337 at "If you run into him," / "don't try to fight; run."; the source's internal `{br}` becomes a `{p}` before "Keep to these two rules."); 0349 `{br} {br}` → `{br}` (§2.1 step 2, "Not so." runs on). No `{w}` in the unit. Lines ended by an authored `{br}` measure 27 at most (0307, 0309, 0327, 0348).
+- Round-0 wrap fixes (R §1.12): 0298 "a real monster is aboard too…" (28 / 23 / 22); 0312 "I'd had enough of" for いい加減うんざりしてた (21 / 24 / 26 / 15); 0330 "What's the difference?" for どう違うというんだ (27 / 26 / 24); 0335 "I'll raise it to one hundred percent" for １００％まで…引き上げる, literal and free of the innuendo (23 / 20 / 27 / 28). The F-011 scan of all 375 translated script rows now finds no line ending in a lone "a", "I" or "an".
+- The monster takes he/him/his wherever an elided subject or object means it (0301, 0302, 0321, 0326, 0328, 0330, 0344, 0345, 0348, 0349, 0351), and 0337 ヤツ → "him" (glossary §6, R §1.7; p04 0198).
+- Step-5 implications, flagged and accepted: `:55 0345` 効かないと決まったわけじゃない → "That's not certain." (points back to 0344); `:47 0337` 部屋の外へは → "go outside"; `:58 0348` 動きが思ったより鈍い → "he's slower than we thought"; `:5 0295` → "Can such nonsense be true⁉".
+- 0321 正面から襲ってきたどうする is read as the conditional 襲ってきたら (suspected source typo, F-015).
+- Readings: 0331 算数の勝負 → "a math contest"; 0299 化け物用の対策 → "anti-monster measures"; 0320 女性専用 → "ladies-only"; 0296 また一人、減った → "We've lost another one."; 0317 護衛 → "escort".
+- Glossary: none.
+
+### 7.4 Recurrences (PR Flag 8)
+- 0341: the save prompt (R §3.4), ×20 exact in the dumps; byte-identical to 0170, 0173, 0239, 0242.
+- 0298 輩 → "whoever destroyed our diving gear", the frame of p04 0212 and p05 0254 (R §6.3).
+- 0336 頼んだぞ。 → "I'm counting on you." as p04 0235; NO3_NO4/0010 should reuse it.
+- 0325 どうすればいいんだ…？ ("What should we do…?") matches SCN001/01 and NO4_MACHINE_T/s06 どうすればいいんだ。 only with final punctuation normalised, so it is not a duplicate; SCN001/01 shipped "What are we to do?" (Oakland). Left as written; the round-0 note offering "What are we to do…?" was optional.
+- Glossary: none.
+
+### 7.5 Accepted readings (non-blocking review notes)
+- `:12 0302` "he reached for the room's vent" can read as grabbing the vent itself; "reached in through the room's vent" was offered in round 0 and not required.
+- None of these is a fidelity error.

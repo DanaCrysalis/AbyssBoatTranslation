@@ -123,6 +123,11 @@ uncertain and are rendered speaker-neutral; spk=6 carries a salvager and Colliso
 NO4_BAR.p05 (PR #6): 0236–0293 likewise from content; 0245, 0247, 0248, 0253, 0254, 0264, 0265,
 0270, 0289 and 0290 stay uncertain (Oakland, William, Wolg, Heming or Miller) and are rendered
 speaker-neutral; spk=4 carries Wolg (0249–0250), Miller (0251) and William (0255) (rulings R §6.2).
+NO4_BAR.p06 (PR #9): 0294–0351 likewise from content; 0308 and 0311 (Oakland or Heming), 0313
+(Wolg or Oakland), 0340 (probably Oakland), 0347 (Oakland or Heming), 0350 (Wolg or Heming) and
+0349 (probably William: やがる, and NO4_BAR/0363 has them meet him in a corridor) stay uncertain and
+are rendered speaker-neutral; spk=4 carries Wolg (0294), Oakland (0295) and Miller (0309), spk=5
+Wolg (0320) and Oakland (0326) (rulings R §7.2).
 
 ### F-011 · 2026-10-04 · tools · OPEN
 PR #1 (NO4_BAR.p01) found four things CHECK and UNITCHECK do not verify. Each was confirmed by a
@@ -168,6 +173,14 @@ Suspected source typo: `NO4_BAR/0218` もう一斑は社長とヘイミングだ
 only here) where the sense, after 二人ずつの二班, is 一班 ("the other team"; 0 rows). Shipped as
 "the other pair" (`tl/script/NO4_BAR.p04.tsv:44 NO4_BAR/0218`, PR #4 Flag 7). Harmless; nothing
 to change unless a later script or the `_T` drafts show a different reading · rulings R §5.5.
+
+
+### F-015 · 2026-10-25 · script · OPEN
+Suspected source typo: `NO4_BAR/0321` 正面から襲ってきたどうするつもりだ lacks the ら of the
+conditional 襲ってきたら (てきたどう 1 / 0 / 0, only here; 襲ってきたらどう 0 rows). Shipped as the
+conditional, "what will you do if he attacks from the front?" (`tl/script/NO4_BAR.p06.tsv:31
+NO4_BAR/0321`, PR #9 Flag 7). Harmless; nothing to change unless the `_T` drafts show a different
+reading · rulings R §7.3.
 
 
 ## CHECK positive controls
