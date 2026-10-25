@@ -1,4 +1,4 @@
-**Last updated: 2026-10-25** — wave 3 closed: NO4_BAR.p08, NO4_HWR_FRONT.p01, p02 and SCN041-SCN046 merged (PRs #12, #13, #10, #11), none parked; the wave 3 coordinator opens the wave 4 session.
+**Last updated: 2026-10-25** — wave 4 dispatched: four translators running; glossary seeds on main (379c0e0).
 
 ## Integration branch: `main`. Not configurable.
 Every PR bases on `main`; the reviewer merges into `main`; a wave is closed only when `origin/main` is
@@ -6,11 +6,9 @@ at the close commit (`CLAUDE.md` Rule 3). A fresh container may clone shallow wi
 preflight is `git fetch origin main && git checkout main && git reset --hard origin/main`.
 
 ## NEXT ACTION — always current, always a literal instruction
-> **Open the wave 4 session** (wave 3 coordinator; CLAUDE.md Rule 1, orchestrator.md §7): `create_session`
-> titled `Abyss Boat — wave 4`, tags `["abyssboat-translation", "wave-4"]`, `source_url`
-> https://github.com/DanaCrysalis/AbyssBoatTranslation, `source_revision` `main`, seed = SKILL.md §6a
-> with UNITS = Next up. First check `list_sessions` (mine: true, title `Abyss Boat — wave 4`): if one exists, do not open a second.
-> The wave 4 coordinator seeds the glossary for its units, then dispatches.
+> **Wave 4 coordinator: wait for the four translators** (wave barrier, orchestrator.md §4a). When every
+> unit below has an open PR, review them one at a time in unit order (reviewer subagent). A coordinator
+> that finds this line with no live translator: `ListAgents`, then re-dispatch any unit with no PR.
 
 ## Progress
 | Store | Done | Total | |
@@ -22,13 +20,19 @@ preflight is `git fetch origin main && git checkout main && git reset --hard ori
 Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-25; `NO4_BAR.SCR` 37,378 free, 485/485; `NO4_HWR_FRONT.SCR` 54,522 free, 104/150).
 
 ## In flight
-Nothing. Wave 3's four units are merged; see Wave history and rulings R §10–§13.
+Wave 4, dispatched 2026-10-25 — translator round 1 each; branch `tl/<store>-<id>`; no PR yet:
+| Unit | Branch | PR | State | Next |
+|---|---|---|---|---|
+| script NO4_HWR_FRONT.p03 | tl/script-NO4_HWR_FRONT.p03 | — | translating | translator opens PR |
+| script NO4_MACHINER90.p01 | tl/script-NO4_MACHINER90.p01 | — | translating | translator opens PR |
+| script NO4_MACHINER90.p02 | tl/script-NO4_MACHINER90.p02 | — | translating | translator opens PR |
+| scene SCN047-EPILOG | tl/scene-SCN047-EPILOG | — | translating | translator opens PR |
 
 ## Next up
 Wave 4 (QUEUE 2026-10-25): script NO4_HWR_FRONT.p03 (46 rows, 759 chars, ratio 36.92, `NO4_HWR_FRONT.SCR`
 54,522 free), NO4_MACHINER90.p01 (54, 1,080, 28.51) and NO4_MACHINER90.p02 (54, 962, 31.88) — both
 `NO4_MACHINER90.SCR`, 59,419 free — plus scene SCN047-EPILOG (40 rows, 793 chars, geom; the last scene unit); all tier D.
-Glossary seeds: not yet — the wave 4 coordinator's step 2.
+Glossary seeds: on main, 379c0e0 (§9, wave 4 rows).
 Bindings waiting: p03 NO4_HWR_FRONT/0144 copies 0013's target byte for byte (R §10.4); 0102 『ビアー＆ラガーズ』と書かれている →
 `"Beer & Lagers," it reads.` (R §12.4, glossary §6 と書かれている); SCN047B3/01 has `…、` → R §11.3 (`…`, lowercase
 continuation). Related shipped work: NO4_HWR_FRONT.p01–p02 (deck sign, speakers F-009), NO4_BAR.p01–p08, SCN041-SCN046
