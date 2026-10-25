@@ -49,6 +49,7 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | ホール | — | the hall | 8 | — | lowercase in dialogue; エントランスホール is its own row (§2) | R §2.1 |
 | 甲板 | — | deck ("on deck") | 4 | — | the ship's open deck; never デッキ (第Nデッキ → "Deck N") | R §2.1 |
 | 社長 | — | the boss | 8 | — | Oakland, as his crew calls him; in direct address "boss" | R §3.1 |
+| 雇い主 | — | employer | 8 | — | Oakland as employer of his crew and of Miller (NO4_BAR/0127, NO4_MACHINER90/0036; NO4_BAR_T/0162 copies 0127); 3 / 0 / 0 | R §16.1 |
 | 上の連中 | — | the people up top | 17 | — | the salvagers' surface crew; 上 alone for the same crew takes the same words (SCN002/05); 下の連中 is not fixed | R §3.2, §4.2 |
 | 海上 | — | the surface | 11 | — | "up on the surface" in p01 0009 | R §3.1 |
 | 第Nデッキ | 第２デッキ … 第６デッキ (full-width digit) | Deck N ("Deck 4") | 6 | 10 (deck names, F-006) | capitalised with an Arabic numeral; デッキ alone (このデッキ, 下のデッキ) is lowercase "deck" in context | R §5.1 |
@@ -61,6 +62,7 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | 通風孔 | — | air vent; "the vent" / "vent(s)" after first mention | 8; 8 | — | lowercase; "the air vent" at a scene's first mention (NO4_BAR/0294), then "vent" | R §7.1 |
 | 中央ダクト | — | the central duct | 16 | — | lowercase; NO4_BAR/0302 only | R §7.1 |
 | 操舵室 | 操舵室のデッキ | the wheelhouse; 操舵室のデッキ: the wheelhouse deck | 14; 19 | — | lowercase in dialogue; never "the bridge" (ブリッジ, rooms/108); 2 / 0 / 0 | R §11.1 |
+| ブリッジ | — | the bridge; room name: Bridge | 10; 6 | 14 (rooms/108, F-006) | lowercase in dialogue (NO4_MACHINER90/0019, 0020, 0028, 0029; NO6_BRIDGE/0017); 操舵室 stays "the wheelhouse"; 5 / 0 / 1 | R §16.1 |
 | 倉庫 | 第Nデッキ倉庫 | storeroom ("the storeroom"; "the Deck 3 storeroom") | 9 | 14 (room names, F-006) | lowercase in dialogue; 食料庫 stays "the food storeroom"; "Deck 3 Storeroom" (16) is over the room cap (F-020) | R §11.1 |
 | 右舷 · 左舷 | — | starboard · port | 9 · 4 | — | lowercase in dialogue (NO4_HWR_FRONT/0096); 1 / 0 / 9 · 1 / 0 / 5; room names (第Nデッキ右舷廊下 …) over cap 14 in any full form (F-021) | R §12.1 |
 | エントランスホール | — | entrance hall; on a sign or as a room name: Entrance Hall | 13 | 14 (rooms/066, 084) | lowercase in dialogue and narration (NO4_4102/0001, NO4_STORAGE/0002); 6 / 0 / 2 | R §12.1 |
@@ -135,6 +137,7 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | 蜘蛛 | クモ | spider | 6 | both spellings, one word; クモのような形 → "spider-shaped" (0040); 蜘蛛の巣 (NO5_BANK/0006) in context | R §7.1 |
 | 昆虫 | — | insect | 6 | 昆虫採集 is its own row ("bug collecting") | R §7.1, §8.1 |
 | 昆虫採集 | — | bug collecting | 14 | NO4_BAR/0389 only ("No time for bug collecting.") | R §8.1 |
+| 虫 | — | bug | 3 | 虫 alone: NO4_HWL_FRONT/0002, NO4_MACHINER90/0050, 0052; 昆虫 (insect), 成虫, 虫の居所 are other words; 虫かご (NO3_CHAPEL/0023) in context; 3 / 0 / 0 | R §16.1 |
 | 生き物 | — | creature | 8 | as shipped NO4_BAR/0040; NO4_MACHINER90/0064, 0072; NO4_TOOL_ROOM ×5; 9 / 0 / 0 | R §15.1 |
 | 潜入 (する) | — | come aboard ("the moment we come aboard", "did we even need to come aboard?") | 11 | the salvagers entering the wreck: NO4_MACHINER90/0011, 0089; 2 / 0 / 0 | R §15.1 |
 | 節足動物門鋏角亜門 | — | phylum Arthropoda, subphylum Chelicerata | 40 | Miller's taxonomy, NO4_BAR/0352 only; lowercase ranks, capitalised taxa | R §8.1 |
@@ -155,6 +158,8 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | 生肝 | — | raw liver | 9 | SCN046B2/04 only (アレの生肝 → "that thing's raw liver"); 0 / 1 / 0 | R §13.1 |
 | ゲームオーバー | — | game over ("it's game over") | 9 | in dialogue, SCN046A2/01 only (Heming to Oakland); 0 / 1 / 0 | R §13.1 |
 | 船内イベント | 『本日の船内イベント案内』 | shipboard events | 16 | the schedule notice, 5 identical rows (NO4_HWR_FRONT/0101, NO4_HWL_FRONT/0011, NO6_HW_1/0003, NO6_HW_2/0006, 0010) + NO4_SHOP/0006, NO5_BANK/0005; 7 / 0 / 0 | R §14.1 |
+| 無茶を言う | 無茶を言うな · 無茶を言わないで · 無茶を言ってる | in context: "ask the impossible" answering a request; "be absurd" answering a stance | 18; 9 | request: NO4_BAR/0155, 0352, 0389; stance: NO4_MACHINER90/0024, 0031, echo 0032 "being absurd"; 無茶 alone, 無茶苦茶 not fixed; 6 / 0 / 0 | R §16.1 |
+| 処分 | — | dispose of; それなりの処分 (NO4_MACHINER90/0036) in context: "the consequences" | 10 | SCN047A/03 "Dispose of the specimen.", C1/05 "must be disposed of" (#16); 1 / 2 / 0 | R §16.1 |
 
 ## 7. Register per character
 | Character | Register | Contractions? | Markers | Ruling |
@@ -185,12 +190,8 @@ so; the reviewer moves the row up into its section in the integration commit. --
 | Source | Variants | Proposed | Alternatives | Where seen | Wave |
 |---|---|---|---|---|---|
 | 無線室 | — | the radio room | — | NO6_BRIDGE/0001, 0006; rooms/107, items/011, hints/001–002 (cap 14 as a room name); 2 / 0 / 4 | 1 |
-| ブリッジ | — | the bridge (lowercase in dialogue); room name: Bridge | — | NO4_MACHINER90/0019, 0020, 0028, 0029; NO6_BRIDGE/0017; rooms/108; 操舵室 stays "the wheelhouse"; 5 / 0 / 1 | 4 |
-| 雇い主 | — | employer | — | as shipped NO4_BAR/0127; NO4_MACHINER90/0036; 3 / 0 / 0 | 4 |
-| 虫 | — | bug | insect (that is 昆虫) | NO4_MACHINER90/0050, 0052 …; not 虫の居所 (§6); 24 / 0 / 0 | 4 |
 | 人間 | — | human(s); "people" where the line is general | — | as shipped NO4_BAR/0132, 0246, NO4_HWR_FRONT/0003; SCN046B2/01; SCN047C2/04–05 ("human"); 21 / 5 / 0 | 4 |
 | 実験 · 検体 · フェーズ２ | — | experiment · specimen · Phase 2 | test subject (検体) | SCN047A/01, 03, SCN047C1/03, EPILOG/03; 0 / 3 / 0 · 0 / 1 / 0 · 0 / 1 / 0 | 4 |
-| 処分 | — | dispose of (SCN047A/03, C1/05); NO4_MACHINER90/0036 それなりの処分 in context ("face the consequences") | — | 1 / 2 / 0 | 4 |
 
 ## 10. Open questions
 <!-- one line each, with the FLAGS id. A closed question is deleted here; its answer stays in rulings.md. -->

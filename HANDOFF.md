@@ -1,4 +1,4 @@
-**Last updated: 2026-10-25** — wave 4: #14 merged (d7e9398), #15 merged (40c6491); #16 round 0 CHANGES (1 finding, translator reworking); #17 round 1 pushed (4b8964e), to re-review.
+**Last updated: 2026-10-25** — wave 4: #14 merged (d7e9398), #15 merged (40c6491), #17 merged (8237cd9); #16 round 0 CHANGES (1 finding, translator reworking).
 
 ## Integration branch: `main`. Not configurable.
 Every PR bases on `main`; the reviewer merges into `main`; a wave is closed only when `origin/main` is
@@ -6,25 +6,26 @@ at the close commit (`CLAUDE.md` Rule 3). A fresh container may clone shallow wi
 preflight is `git fetch origin main && git checkout main && git reset --hard origin/main`.
 
 ## NEXT ACTION — always current, always a literal instruction
-> **Wave 4 coordinator: re-review PR #17 round 1 (head 4b8964e) while #16 is in rework.** Send #16's round-0 finding 1
-> verbatim (the PR #16 review whose first line is `DECISION: CHANGES`) to its translator (agent a197ccbb3deb8d732);
-> re-review #16 round 1 when it pushes. The reviewer runs in the foreground, one at a time; `git pull --ff-only` after each.
+> **Wave 4 coordinator: re-review PR #16 round 1 (SCN047-EPILOG) when its translator has pushed; then close wave 4.**
+> PR #16's head moved from 210d59b to 8bc8f6a; confirm with the translator (agent a197ccbb3deb8d732) that round 1 is complete.
+> At #16's merge, its reviewer conforms to the §6 処分 row now on `main` (R §16.1).
+> The reviewer runs in the foreground; `git pull --ff-only` after it.
 
 ## Progress
 | Store | Done | Total | |
 |---|---|---|---|
-| script | 12 units · 689 rows | 38 units · 1,709 rows | NO4_BAR p01–p08 (room complete), NO4_HWR_FRONT p01–p03 (room complete), NO4_MACHINER90 p02; STATUS 2026-10-25 |
+| script | 13 units · 743 rows | 38 units · 1,709 rows | NO4_BAR p01–p08 (room complete), NO4_HWR_FRONT p01–p03 (room complete), NO4_MACHINER90 p01–p02 (room complete); STATUS 2026-10-25 |
 | scene | 3 units · 150 rows | 4 units · 190 rows | OP-SCN034, SCN038, SCN041-SCN046; STATUS 2026-10-25 |
 | system | 0 | 5 units · 188 rows | blocked whole (F-006) |
 
-Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-25; `NO4_BAR.SCR` 37,378 free, 485/485; `NO4_HWR_FRONT.SCR` 54,355 free, 150/150; `NO4_MACHINER90.SCR` 58,308 free, 54/108).
+Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-25; `NO4_BAR.SCR` 37,378 free, 485/485; `NO4_HWR_FRONT.SCR` 54,355 free, 150/150; `NO4_MACHINER90.SCR` 57,820 free, 108/108).
 
 ## In flight
 Wave 4, dispatched 2026-10-25 — translator round 1 each; **barrier met** (4/4 PRs); review order #14, #17, #15, #16:
 | Unit | Branch | PR | State | Next |
 |---|---|---|---|---|
 | script NO4_HWR_FRONT.p03 | tl/script-NO4_HWR_FRONT.p03 | #14 | **MERGED** round 0, squash d7e9398; SCR 54,355 free (room 150/150), max 4 rows/page; CHECK 56 + 2 pairs; glossary 【女】, 乗客, 無線機, ボンベ promoted, 船内イベント added (rulings R §14) | done — nothing left on this unit |
-| script NO4_MACHINER90.p01 | tl/script-NO4_MACHINER90.p01 | #17 | **Round 1 pushed, head 4b8964e (findings 1–3 fixed, SCR 58,346 free) — awaiting re-review after #16.** Round 0 (5840b2d): every mechanical gate passed (CHECK 57 + 4 pairs; SCR 58,358 free; max 4 rows/page; census 14 translated pairs, 0 divergences). Findings: 1 `:28 0025` wrap ends in a lone "an"; 2 `:48 0045` authored-`{br}` line is 28 > 27 → "I braced for no survivors,"; 3 `:14 0011` 潜入 → "come aboard", to agree with #15 0089. Flag 5 "absurd" accepted (無茶を言う in context; §6 row at MERGE). Promotions ブリッジ, 船体, 雇い主, 装備, 虫, 処分 accepted; integrated at MERGE (agent a96acb0b4138cf690) | reviewer round 1 (resume the round-0 reviewer) |
+| script NO4_MACHINER90.p01 | tl/script-NO4_MACHINER90.p01 | #17 | **MERGED** round 1 (round 0 CHANGES: a lone-"an" wrap at 0025, a 28-column authored line at 0045, 潜入 at 0011), squash 8237cd9; SCR 57,820 free (room 108/108), max 4 rows/page; CHECK 57 + 6 pairs; census 16 translated pairs, 0 divergences; glossary ブリッジ, 雇い主, 虫, 処分 promoted, 無茶を言う added (rulings R §16) | done — nothing left on this unit |
 | script NO4_MACHINER90.p02 | tl/script-NO4_MACHINER90.p02 | #15 | **MERGED** round 0, squash 40c6491; SCR 58,308 free (54/108), max 4 rows/page; CHECK 56 + 4 pairs; census 13 translated pairs, 0 divergences; glossary 生き物, 船体, 装備 promoted, 潜入 "come aboard" added (rulings R §15) | done — nothing left on this unit |
 | scene SCN047-EPILOG | tl/scene-SCN047-EPILOG | #16 | **CHANGES round 1 — translator reworking.** Round 0 (210d59b): every gate passed (CHECK 57 + 4 pairs; UNITCHECK 40 rows, max 4 lines, 0 violations; census 83,440 comparisons, 2 hits = the ハイ。 pair, 0 divergences; wrap scan 78 lines, 1 accepted orphan `:28`). Finding 1: `:31 C1/03` "is beyond our senses" → "makes no sense to us" (same 4 lines). The review's rulings bind round 1: `:28` elongation and "underestimate" stand; speakers C1/01 Judy, C2/03 the alien; 船体 "the vessel" stands (§2 note made referent-neutral at MERGE); promotions 実験 · 検体 · フェーズ２, 処分, 人間 and new rows 自己犠牲, ハイ, うう accepted, integrated at MERGE (agent a197ccbb3deb8d732) | translator round 1, then reviewer round 1 |
 
@@ -33,12 +34,8 @@ Wave 4 (QUEUE 2026-10-25): script NO4_HWR_FRONT.p03 (46 rows, 759 chars, ratio 3
 54,522 free), NO4_MACHINER90.p01 (54, 1,080, 28.51) and NO4_MACHINER90.p02 (54, 962, 31.88) — both
 `NO4_MACHINER90.SCR`, 59,419 free — plus scene SCN047-EPILOG (40 rows, 793 chars, geom; the last scene unit); all tier D.
 Glossary seeds: on main, 379c0e0 (§9, wave 4 rows).
-Bindings for #15 from #17's round-0 review (2026-10-25):
-- 潜入 (2 / 0 / 0: 0011, 0089) → "come aboard". #15's 0089 already conforms; p01 is changing to it.
-- 装備 → "gear" agrees (p01 0016, p02 0084). 0108 `………{p}` agrees with p01 0010.
-- 0076 無茶苦茶言う is not 無茶を言う, so it is free.
-- #15 merged first (40c6491): 装備, 船体, 生き物 and the §6 潜入 row are on `main` (R §15.1). #17's round 1 conforms to them (0011 "come aboard", 0016 "gear", 0022 "the hull"); its merge adds ブリッジ, 雇い主, 虫, 処分 and 無茶を言う. #16's merge adds 人間 and 実験 · 検体 · フェーズ２.
-Bindings waiting: NO4_HWL_BACK/0007 みんな何かにつかまれ！ → "Everyone, grab onto something!" (as NO4_MACHINER90/0096; 船体 "the hull", 回転 "roll over"; R §15.4); NO4_HWR_FRONT_DOWN_T/0001 → `【Oakland】What is it?{p}`. p03 NO4_HWR_FRONT/0144 copies 0013's target byte for byte (R §10.4); 0102 『ビアー＆ラガーズ』と書かれている →
+Wave-4 glossary state: #15 added 装備, 船体, 生き物, 潜入 (R §15.1); #17 added ブリッジ, 雇い主, 虫, 処分, 無茶を言う (R §16.1); #16's merge adds 人間 and 実験 · 検体 · フェーズ２ and conforms to 処分.
+Bindings waiting: NO2_THIRDSTORAGE/0006 `……。{p}` → `……{p}` (exact twin of NO4_MACHINER90/0034, R §16.4); NO4_HWL_BACK/0007 みんな何かにつかまれ！ → "Everyone, grab onto something!" (as NO4_MACHINER90/0096; 船体 "the hull", 回転 "roll over"; R §15.4); NO4_HWR_FRONT_DOWN_T/0001 → `【Oakland】What is it?{p}`. p03 NO4_HWR_FRONT/0144 copies 0013's target byte for byte (R §10.4); 0102 『ビアー＆ラガーズ』と書かれている →
 `"Beer & Lagers," it reads.` (R §12.4, glossary §6 と書かれている); SCN047B3/01 has `…、` → R §11.3 (`…`, lowercase
 continuation). Related shipped work: NO4_HWR_FRONT.p01–p02 (deck sign, speakers F-009), NO4_BAR.p01–p08, SCN041-SCN046
 (killer's laugh R §9.1/§13, ～ row), SCN038. Wave 3 rework: one PR of four (0441 なくていい rendered as a prohibition) —

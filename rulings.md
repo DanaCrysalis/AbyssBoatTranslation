@@ -1468,3 +1468,98 @@ Census counts are rows per store (script / scene / system), from the reviewer's 
 - **Near-duplicate for a later unit, by hand:** NO4_HWL_BACK/0007 みんな何かにつかまれ！{br}船が、船体が回転し始めるぞ！ The first sentence reuses 0096's words with the source's `!`: "Everyone, grab onto something!". 船体 → "the hull", and 回転 → "roll over" (glossary §3).
 - **Agreement:** 0068 ちょっと待って！ "Wait a minute!" agrees with NO4_BAR/0368 ちょっと待ってよ！.
 - Glossary: none.
+
+## Unit script NO4_MACHINER90.p01 (PR #17, MERGED, 2026-10-25)
+
+The salvagers' first entry into the capsized ship, told in flashback. Wolg hands out the weapons, Miller refuses one, Heming gives a handgun to John, and Oakland orders everyone to the bridge. Miller is held to the group as the team's doctor. Wolg checks the doors, they find the bodies, and Miller is drawn to an unknown bug. Reviewed twice:
+- **Round 0** (5840b2d, merged with main b1e5067 for review): CHANGES. Every mechanical gate passed; there were three findings:
+  - 1: `:28 0025` the wrap left a row ending in a lone "an" (R §1.12 rule 2).
+  - 2: `:48 0045` an authored-`{br}` line was 28 columns, over the preferred 27.
+  - 3: `:14 0011` 潜入 was "get inside", against #15's "come aboard".
+- **Round 1** (4b8964e, merged with main 0c81906, which has #15, for review): MERGE, squash 8237cd9. `git diff 5840b2d 4b8964e` changes exactly the three rows.
+
+Figures:
+- **Container.** NO4_MACHINER90.SCR 7,715 / 65,535 bytes, 57,820 free; tokens 115 / 1,499 (MEASURE, with p02). The room is complete, 108 / 108. p01 alone cost 1,073 bytes over the untranslated 59,419 free.
+- **Pages.** At most 4 rows per page (UNITCHECK, 54 rows, 0 violations). The whole store: 743 rows, 0 violations.
+- **Ratio.** About 2,400 target ÷ 1,080 source characters ≈ 2.2 (PR figure).
+- **Duplicates.** CHECK compared 57 duplicate pairs and 6 tag-variant pairs.
+  - The reviewer's census made 112,644 comparisons: 54 rows × every other dump row, at three levels (exact; `{p}{w}{br}` stripped; `【Name】` stripped, ！？ → ⁉, final 。！？ dropped).
+  - It found 27 hits, 16 of them translated pairs, with 0 divergences (§16.4).
+- **F-011 wrap scan.** 114 wrapped lines, 0 problems in round 1. Every authored-`{br}` line is ≤ 27.
+- **F-012.** The one `+` row, 0046, follows 0045 ending `{br}`; nothing glued.
+
+Census counts are rows per store (script / scene / system), from the reviewer's grep of `dumps/` on 2026-10-25. Line citations use PROJECT.md §7's numbering in `tl/script/NO4_MACHINER90.p01.tsv` (line = row number + 3).
+
+### 16.1 Terms promoted from §9, and one added
+- **ブリッジ** → `the bridge` (10); as a room name, `Bridge` (6, cap 14).
+  - Census: 5 / 0 / 1 — NO4_MACHINER90/0019, 0020, 0028, 0029, NO6_BRIDGE/0017; rooms/108 (blocked, F-006).
+  - Lowercase in dialogue (PROJECT.md §6). 操舵室 stays "the wheelhouse" (R §11.1).
+  - Binds `:22 0019` "We aim for the bridge first.", `:23 0020`, `:31 0028`, `:32 0029`.
+  - Glossary: §2 row added; §9 row removed.
+- **雇い主** → `employer` (8).
+  - Census: 3 / 0 / 0. Shipped as "employer" at NO4_BAR/0127; NO4_BAR_T/0162 is its labelled copy.
+  - Binds `:39 0036` "But I'm your employer, so be ready for the consequences.".
+  - Glossary: §2 row added; §9 row removed.
+- **虫** → `bug` (3).
+  - Census, 虫 alone: 3 / 0 / 0 — NO4_HWL_FRONT/0002 俺は虫は苦手でな, NO4_MACHINER90/0050, 0052.
+  - The seed's 24 counted every row containing 虫: 昆虫 ×12 (its own row, "insect"), 虫の居所 ×6 (§6), 成虫 ×2 (NO4_TOOL_ROOM/0070, 0075) and 虫かご ×1 (NO3_CHAPEL/0023). The last two are other words, rendered in context.
+  - "bug" over "insect": Heming's plain word, while Miller's 昆虫 keeps "insect". NO4_BAR/0389's "bug collecting" is the same register.
+  - Binds `:53 0050` "that creepy bug", `:55 0052` "a bug like it".
+  - Glossary: §6 row added; §9 row removed.
+- **処分** → `dispose of` (10); それなりの処分 in context.
+  - Census: 1 / 2 / 0 — SCN047A/03 検体の処分を行え, SCN047C1/05 道具は処分する必要がある (#16, both "dispose of" in its head), NO4_MACHINER90/0036.
+  - 0036 is disciplinary: それなりの処分は覚悟しろ → "be ready for the consequences". "dispose of" would be wrong there.
+  - #16's reviewer conforms to this row at its merge.
+  - Binds `:39 0036`; SCN047A/03, C1/05 (#16).
+  - Glossary: §6 row added; §9 row removed.
+- **無茶を言う** → in context, new (PR Flag 5).
+  - Census across every variant: 無茶を言 6 / 0 / 0 (無茶を言うな ×4, 無茶を言わないで ×1, 無茶を言ってる ×1); 無茶言 0. 無茶 appears in 9 / 0 / 0 rows in all.
+  - The shipped rows answer requests: NO4_BAR/0155 (to call for help) and 0352, 0389 (to catch the spider). They take "Don't ask the impossible".
+  - p01's rows answer a stance, not a request: 0024 answers "I'll wait here", 0031 answers "I'll be heading back". "ask the impossible" would misread them. "don't be absurd" fits, and Miller's echo 0032 無茶を言ってるのはあなたよ takes the same word: "You're the one being absurd".
+  - 無茶 alone is "That's absurd." (NO4_HWR_FRONT/0071) and "hopeless" (NO4_BAR/0175). 無茶苦茶言うやつ (NO4_MACHINER90/0076, #15) is a different word, "You say the wildest things." Neither is fixed.
+  - The rows are different messages, so no duplicate is split; no shipped line changes.
+  - Binds `:27 0024`, `:34 0031`, `:35 0032`.
+  - Glossary: §6 row added.
+- **Conformance with #15's rows** (R §15.1): 潜入 `:14 0011` "the moment we come aboard" (round-0 finding 3); 装備 `:19 0016` "this cumbersome gear"; 船体 `:25 0022` "the middle of the hull".
+
+### 16.2 Speakers (PR Flag 6)
+- Named from content (F-009). spk=4 carries Wolg and Miller, spk=3 Miller and the men, spk=5 Heming and Miller (0047), spk=2 Oakland and Miller (0044).
+  - Wolg: 0003–0004 (こいつは俺が持つ), 0006, 0008, 0015 (the safety warning NO4_MACHINE_T/s15 gives as 【ウォルグ】), 0016, 0022, 0026, 0039–0040, 0042.
+  - Miller: 0005, 0007, 0009, 0020, 0023, 0025, 0027, 0029–0030, 0032, 0034, 0037, 0044, 0047, 0049, 0051, 0053.
+  - Heming: 0002, 0012–0014 (俺, so not Oakland, whose わし is plain), 0017–0018, 0045–0046, 0048, 0050, 0052.
+  - Oakland: 0019, 0031, 0033, 0035–0036 (雇い主はわしだ), 0038, 0041, 0043, 0054.
+- Uncertain and rendered speaker-neutral: 0001 (Wolg or Oakland), 0011 (Heming or Oakland; a peacemaker line like NO4_BAR/0049), 0021, 0024, 0028 (Oakland or Wolg; male, not Miller), 0010 (unattributed).
+- Registers fit: Oakland is plain with his crew ("That's why I brought you."); Wolg terse ("Any guarantee there isn't?"); Miller assertive, with かしら and のよ carried by tone ("And any guarantee there is?").
+- Glossary: none.
+
+### 16.3 Movable codes, wraps and readings (PR Flags 2–4, 7)
+- **Authored codes.** Exactly four rows differ from the source, all in Flag 2:
+  - `:18 0015` `{br} {br} {p}` → `{br} {p} {p}`: an added `{p}` at the sentence boundary after 弾はでない。 It gives pages of 3 + 3, where 6 rows would otherwise go on one page.
+  - `:25 0022` loses the source's mid-sentence `{br}` (階段がある|はずだ), which broke for a narrower box: 4 rows.
+  - `:29 0026` gets the same treatment as 0015 after 判かっていない。: pages of 3 + 2.
+  - `:49 0046` gains a leading `{p}` on the `+` row after 0045's `{br}` ending (R §2.4): pages of 4 + 2. Added to F-010's in-game check.
+  - The unit has no `{w}`. Glyph counts match on all 54 rows.
+- **Round-0 findings, fixed in round 1:**
+  - `:28 0025`: "I didn't come for an | obstacle course." became "I didn't come along to run an obstacle course." (26 / 26 / 19). "an" at a wrap counts as "a" under R §1.12 rule 2, as reviews have applied it since wave 2.
+  - `:48 0045`: "I'd braced for no survivors," (28) became "I braced for no survivors," (26). It keeps 覚悟 and the comma. An authored-`{br}` line at 28 has not been accepted where a 27-or-less faithful wording exists (PROJECT.md §5.2).
+- **Step-5/6 departures, flagged and accepted:**
+  - 0015 reorders the reason clause after the verb (step 6); in source order, "recklessly." would be a one-word last row.
+  - 0027 いつ安全だとわかる → "when will we know that?" (step 5; "it's safe" orphans "safe?").
+  - 0028 → "We'll know at the bridge." (same reason).
+- **Readings accepted:**
+  - 0025 アスレチック → "obstacle course" (field athletics; "athletics" would be a false friend). 医者 → "doctor": she came as the team's doctor (0033 手当て), as the source says, though NO4_BAR/0042 calls her a marine biologist.
+  - 0036 処分 → "the consequences" (§16.1). 0044 この死体 → "these bodies". 0046 のか… → "Perhaps…", musing, no ？. 0047 冗談じゃないわ → "No way.".
+  - 0053 待ってと言った is kept literal, though Miller said どいて at 0049 (a source inconsistency).
+- **Modality** (the wave-3 lesson) is literal: 0005 要らない "I don't need one."; 0014 しまっておけばいい "just keep it stowed" (permissive); 0015 控えろ "refrain from".
+- **Non-blocking:** 0025 のよ？ "right?" asks where Miller insists ("remember?" would be closer). 0052 wraps "like | it.". Neither is a fidelity error.
+- Glossary: none.
+
+### 16.4 Recurrences (PR Flag 8)
+- **Translated, identical:**
+  - 0021 = NO4_BAR/0139 "Who knows.".
+  - 0010 `………{p}` = NO4_HWR_FRONT/0033 (tag variant), NO4_BAR/0201, 0265, 0430, NO4_HWR_FRONT/0057, 0092, SCN038_5C1/10, SCN046B1/01, sibling 0108 `………{p}`, and 0123/0129 once 【Woman】 is stripped.
+  - 0034 `……{p}` = NO4_BAR/0391 (tag variant). Sibling 0093 `……?{p}` and NO4_HWR_FRONT/0034 have ？, a different source.
+- **Untranslated twins, which CHECK pairs once translated:** NO2_THIRDSTORAGE/0006 `……。{p}` (exact twin of 0034) → `……{p}`; 0010's twins NO3_NO4/0007, 0061, NO4_TOOL_ROOM/0025, 0060.
+- **Labelled twins (F-013), by hand:** NO4_BAR_T/0010, 0068, 0151, NO4_HWR_FRONT_UP_T/0022, 0024, 0028 → `………` after the translated label (R §14.4, §15.4).
+- **Near-parallels, not paired:** NO4_BAR/0049 仲間割れは困る "infighting" (0011 "Falling out", a different sentence); 保証 → "guarantee", as NO4_BAR/0132.
+- Glossary: none.

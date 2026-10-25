@@ -77,6 +77,8 @@ after a row ending in `{br}` (0066, 0083, 0089, 0099); the source never has `{br
 Check in the same session that the box clears cleanly there, with no blank first row (rulings R §2.4).
 NO4_MACHINER90.p02 (PR #15) does the same at 0086, after 0085's `{br}` (Miller: "…What are you
 going to do about this?" then "You dragged me all the way here…"); check it with the others (R §15.3).
+NO4_MACHINER90.p01 (PR #17) does the same at 0046, after 0045's `{br}` (Heming: "…but such brutal
+killings…" then "Perhaps they killed each other over food…"); check it with the others (R §16.3).
 
 
 ## Open
@@ -170,6 +172,10 @@ NO4_MACHINER90.p02 (PR #15): named from content (spk=2 mostly Oakland, 3 Miller,
 with borrowings at 0062, 0068, 0082, 0088, 0090); 0063 is Oakland by its labelled twin
 NO4_HWR_FRONT_DOWN_T/0001. 0087 ミラー、少し黙れ (Oakland or Wolg), 0099 (Wolg or Oakland), and
 0093, 0108 stay uncertain and are rendered speaker-neutral (rulings R §15.2).
+NO4_MACHINER90.p01 (PR #17): named from content; spk=4 carries Wolg and Miller, spk=3 Miller and the
+men, spk=5 Heming and Miller (0047), spk=2 Oakland and Miller (0044). 0001 (Wolg or Oakland), 0011
+(Heming or Oakland), 0021, 0024, 0028 (Oakland or Wolg) and 0010 stay uncertain and are rendered
+speaker-neutral (rulings R §16.2).
 
 ### F-011 · 2026-10-04 · tools · OPEN
 PR #1 (NO4_BAR.p01) found four things CHECK and UNITCHECK do not verify. Each was confirmed by a
