@@ -1,0 +1,56 @@
+# unit: script/NO4_HWR_FRONT.p01
+# rows: 53
+# columns: id <TAB> context <TAB> source <TAB> target (empty target = untranslated)
+NO4_HWR_FRONT/0001	msg spk=1	なあ、ジョン。お前はコリスンさんたちの言う、化け物を信じるか？{p}	Say, John. Do you believe in this monster Mr. Collison and the others talk about?{p}
+NO4_HWR_FRONT/0002	msg spk=0	本当か？俺にはどうも信じられないんだ。{br}コリスンさんがウソをついているとも思えないが。	Really? I can't quite believe it.{br}I don't think Mr. Collison is lying, though.
+NO4_HWR_FRONT/0003	msg spk=0	俺か？どう考えても人間の仕業だろうな。{br}たぶん全員がそう思ってるはずだ。	Me? Any way you look at it, it's the work of a human.{br}Probably everyone thinks so.
+NO4_HWR_FRONT/0004	msg spk=0	おいおい、お前をバカにしてるわけじゃないぞ。{br}人間、歳をとると頭が固くなる一方でな。	Hey, I'm not mocking you.{br}People just get more hard-headed as they age.
+NO4_HWR_FRONT/0005	msg spk=0	そんな化け物がいたとして、人間をどうするつもりなんだろうな。	Suppose such a monster existed. What would he want with humans, I wonder?
+NO4_HWR_FRONT/0006	msg spk=0	ハハッ、俺にもわからんよ。{br}とにかく、いまは上と連絡をつけるのが先だ。急ごう。	Ha-ha, I don't know either.{br}Anyway, for now, reaching the people up top comes first. Let's hurry.
+NO4_HWR_FRONT/0007	msg spk=0	うむ。俺もそう思う。{br}客船を潜行させる技術といい、大きな組織が絡んでるのかもしれんな。	Mm. I think so too.{br}Maybe a big organization's involved, given the tech to submerge a passenger ship.
+NO4_HWR_FRONT/0008	msg spk=0	どんな組織かなんて、それはわからん。{br}まあ、俺の勘みたいなものだ。あてにするな、わっはっは。	What kind, I couldn't say.{br}Well, it's just my hunch. Don't count on it, ha-ha-ha.
+NO4_HWR_FRONT/0009	msg spk=1	とにかく、いまは上と連絡をつけるのが先だ。急ごう。	Anyway, for now, reaching the people up top comes first. Let's hurry.
+NO4_HWR_FRONT/0010	msg spk=1	やみくもに歩き回っても仕方が無い。{br}まずはこのフロアを中心に調べるんだ。行くぞ！	There's no use wandering around blindly.{br}First, we focus our search on this floor. Let's go!
+NO4_HWR_FRONT/0011	msg spk=2	便所は役に立たんからな、適当な部屋で済ませることになっておる。{br}わしら男はこの奥の４１０１号室じゃ。{p}	The toilet's no use, so we make do with a spare room.{br}For us men, it's room 4101, further in.{p}
+NO4_HWR_FRONT/0012	msg spk=2	夜は気をつけた方がいい。{br}あいつは夜の時間を知っておるからな。{p}	Best take care at night.{br}He knows when night falls, you see.{p}
+NO4_HWR_FRONT/0013	msg spk=2	ありがとう。済ませてくる。{br}ちょっと待っておってくれ。	Thank you. I'll go and attend to it.{br}Wait here a moment for me.
+NO4_HWR_FRONT/0014	msg spk=0	どうした、ジョン？	What is it, John?
+NO4_HWR_FRONT/0015	msg spk=0	なにっ、コリスンが⁉	What, Collison⁉
+NO4_HWR_FRONT/0016	msg spk=0	本当に化け物がいたって言うのか…。	You're saying there really was a monster…
+NO4_HWR_FRONT/0017	msg spk=1	よし、調査に行くぞ！ジョン‼	All right, let's go investigate! John‼
+NO4_HWR_FRONT/0018	msg spk=0	まだ中にいるかもしれん。{br}気をつけろよ、ジョン！	He may still be in there.{br}Be careful, John!
+NO4_HWR_FRONT/0019	msg spk=0	ジョン、弾の方は大丈夫か？{br}いつ化け物が襲ってくるかもしれん。{br}	John, how are you for ammo?{p}The monster could attack at any time.{br}
+NO4_HWR_FRONT/0020	msg spk=0 +	俺の予備のマガジンを分けてやろう。	I'll share my spare magazines with you.
+NO4_HWR_FRONT/0021	msg spk=1	それでは、行くか…ん⁉	Well then, let's go… Hm⁉
+NO4_HWR_FRONT/0022	msg spk=0	なにかが動いた…。{br}化け物か⁉	Something moved…{br}The monster⁉
+NO4_HWR_FRONT/0023	msg spk=1	ウィリアムっ‼	William‼
+NO4_HWR_FRONT/0024	msg spk=2	ま、待て！ウィリアム‼{br}ジョン、追いかけるぞ‼	W-wait! William‼{br}John, after him‼
+NO4_HWR_FRONT/0025	msg spk=1	な、なんだよっ、お前たち。	Wh-what do you guys want?
+NO4_HWR_FRONT/0026	msg spk=2	それはそっちのセリフだ。コリスンが殺されたぞ。	I should be asking you that. Collison's been killed.
+NO4_HWR_FRONT/0027	msg spk=1	…なに⁉{br}お、お前ら…とうとうコリスンさんを…。	…What⁉{br}Y-you guys… you finally got Mr. Collison…
+NO4_HWR_FRONT/0028	msg spk=2	勘違いするな。{br}化け物だ、彼を殺したのは。	Don't get the wrong idea.{br}It was the monster who killed him.
+NO4_HWR_FRONT/0029	msg spk=1	同じことだっ。{br}お前らが殺したんだ！	Same thing.{br}You guys killed him!
+NO4_HWR_FRONT/0030	msg spk=2	わからんヤツだな。{br}俺たちが何をするっていうんだ。	You just don't get it.{br}What are you saying we'd do?
+NO4_HWR_FRONT/0031	msg spk=1	妹を返せっ！	Give my sister back!
+NO4_HWR_FRONT/0032	msg spk=2	妹？{br}なにを言ってるんだ？	Sister?{br}What are you talking about?
+NO4_HWR_FRONT/0033	msg spk=1	………	………
+NO4_HWR_FRONT/0034	msg spk=2	……？	……?
+NO4_HWR_FRONT/0035	msg spk=1	お、お前らが作ったんだろ…？{br}ど、どうして、俺たちを選んだんだよ…？	Y-you made that thing, didn't you…?{br}Wh-why did you choose us…?
+NO4_HWR_FRONT/0036	msg spk=2	Ｒｅｔｒｙ？	Retry?
+NO4_HWR_FRONT/0037	msg spk=2	大丈夫か⁉{br}やられたのかと思ったぞ。	Are you all right⁉{br}I thought you were done for.
+NO4_HWR_FRONT/0038	msg spk=0	…何故、怪物がお前たちも狙うんだ？{br}	…Why is the monster after you too?{br}
+NO4_HWR_FRONT/0039	msg spk=0 +	お前たちがけしかけたんじゃないのか？	Didn't you set him on us?
+NO4_HWR_FRONT/0040	msg spk=2	何を馬鹿げた事をいっている。{br}	What a stupid thing to say.{br}
+NO4_HWR_FRONT/0041	msg spk=2 +	今のを見ただろ！危うく殺されかけたんだぞ‼	You saw what just happened! We nearly got killed‼
+NO4_HWR_FRONT/0042	msg spk=1	じゃあ、いったい誰がこんなことを…。	Then who on earth did this…
+NO4_HWR_FRONT/0043	msg spk=2	とりあえず戻ってこないか？{br}今は一人でも多く仲間がいてくれた方が心強い。	Why not come back for now?{br}At a time like this, it's reassuring to have even one more ally.
+NO4_HWR_FRONT/0044	msg spk=1	教えてくれ。{br}コリスンさんは本当に死んだのか？	Tell me.{br}Is Mr. Collison really dead?
+NO4_HWR_FRONT/0045	msg spk=2	ああ。殺されるのをジョンが見たらしい。	Yeah. Apparently John saw him being killed.
+NO4_HWR_FRONT/0046	msg spk=1	本当にあいつが殺したんだな？	So that thing really did kill him?
+NO4_HWR_FRONT/0047	msg spk=2	間違い無い。{br}それより、戻ってくる気はあるのか？	No doubt about it.{br}More importantly, will you come back?
+NO4_HWR_FRONT/0048	msg spk=1	…わかった。	…All right.
+NO4_HWR_FRONT/0049	msg spk=2	じゃあ一旦戻ろう。急いでこの事を報告しないとな。	Then let's head back for now. We'd better hurry and report this.
+NO4_HWR_FRONT/s11	choice	はい	Yes
+NO4_HWR_FRONT/s12	choice	いいえ	No
+NO4_HWR_FRONT/s17	choice	はい	Yes
+NO4_HWR_FRONT/s18	choice	いいえ	No
