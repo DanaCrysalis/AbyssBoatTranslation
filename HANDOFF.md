@@ -25,7 +25,7 @@ Wave 4, dispatched 2026-10-25 — translator round 1 each; branch `tl/<store>-<i
 |---|---|---|---|---|
 | script NO4_HWR_FRONT.p03 | tl/script-NO4_HWR_FRONT.p03 | #14 | PR open, e424309; SCR 54,355 free, max 4 rows/page (agent af5978371ed6bd35d) | review behind the barrier |
 | script NO4_MACHINER90.p01 | tl/script-NO4_MACHINER90.p01 | — | translating (agent a96acb0b4138cf690) | translator opens PR |
-| script NO4_MACHINER90.p02 | tl/script-NO4_MACHINER90.p02 | — | translating (agent a6c058ae7cfa40cfd) | translator opens PR |
+| script NO4_MACHINER90.p02 | tl/script-NO4_MACHINER90.p02 | #15 | PR open; SCR 58,308 free, max 4 rows/page; flags 潜入/装備 agreement with p01 (agent a6c058ae7cfa40cfd) | review behind the barrier |
 | scene SCN047-EPILOG | tl/scene-SCN047-EPILOG | — | translating (agent a197ccbb3deb8d732) | translator opens PR |
 
 ## Next up
