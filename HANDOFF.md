@@ -6,8 +6,8 @@ at the close commit (`CLAUDE.md` Rule 3). A fresh container may clone shallow wi
 preflight is `git fetch origin main && git checkout main && git reset --hard origin/main`.
 
 ## NEXT ACTION — always current, always a literal instruction
-> **Wave 3 barrier met** (all four PRs open: #12, #13, #10, #11). Review one
-> `reviewer` at a time in unit order: #12 NO4_BAR.p08 → #13 NO4_HWR_FRONT.p01 → #10 p02 → #11 SCN041-SCN046.
+> **Wave 3 barrier met.** #12 in rework round 1 (translator resumed). Review #13 now, then #10, #11, then #12
+> round 1 once pushed — one `reviewer` at a time. Session limit hit 2026-10-25 ~02:00, reset 06:00 UTC, resumed 06:50 on "continue".
 > Translators that stop are resumed by `SendMessage` (same agent, worktree intact). Watchdog: 12-minute `send_later`.
 
 ## Progress
@@ -23,7 +23,7 @@ Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEA
 Wave 3, dispatched 2026-10-25, glossary seeds 1c36061 (§9, 15 rows). Base `main`.
 | Unit | Branch | PR | State | Next |
 |---|---|---|---|---|
-| script NO4_BAR.p08 | `tl/script-NO4_BAR.p08` | #12 | PR open, round 0; NO4_BAR.SCR 37,395 free, max 4 rows/page | reviewer, behind the barrier |
+| script NO4_BAR.p08 | `tl/script-NO4_BAR.p08` | #12 | round 0 CHANGES (0441 なくていい as prohibition; 0424 `…、` ruling); gates green, NO4_BAR.SCR 37,395 free | translator, round 1 (SendMessage) → reviewer |
 | script NO4_HWR_FRONT.p01 | `tl/script-NO4_HWR_FRONT.p01` | #13 | PR open, round 0; NO4_HWR_FRONT.SCR 55,011 free (p02 not merged) | reviewer, behind the barrier |
 | script NO4_HWR_FRONT.p02 | `tl/script-NO4_HWR_FRONT.p02` | #10 | PR open, round 0; NO4_HWR_FRONT.SCR 55,181 free (p01 not merged) | reviewer, behind the barrier |
 | scene SCN041-SCN046 | `tl/scene-SCN041-SCN046` | #11 | PR open, round 0; 52 subtitles, max 4 lines | reviewer, behind the barrier |
