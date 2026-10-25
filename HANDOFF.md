@@ -23,7 +23,7 @@ Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEA
 Wave 3, dispatched 2026-10-25, glossary seeds 1c36061 (§9, 15 rows). Base `main`.
 | Unit | Branch | PR | State | Next |
 |---|---|---|---|---|
-| script NO4_BAR.p08 | `tl/script-NO4_BAR.p08` | — | translator, round 0 | translator opens PR |
+| script NO4_BAR.p08 | `tl/script-NO4_BAR.p08` | #12 | PR open, round 0; NO4_BAR.SCR 37,395 free, max 4 rows/page | reviewer, behind the barrier |
 | script NO4_HWR_FRONT.p01 | `tl/script-NO4_HWR_FRONT.p01` | — | translator, round 0 | translator opens PR |
 | script NO4_HWR_FRONT.p02 | `tl/script-NO4_HWR_FRONT.p02` | #10 | PR open, round 0; NO4_HWR_FRONT.SCR 55,181 free (p01 not merged) | reviewer, behind the barrier |
 | scene SCN041-SCN046 | `tl/scene-SCN041-SCN046` | #11 | PR open, round 0; 52 subtitles, max 4 lines | reviewer, behind the barrier |
