@@ -22,10 +22,10 @@ Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEA
 ## In flight
 | Unit | Branch | State | Next |
 |---|---|---|---|
-| script NO4_TOOL_ROOM.p01 | `tl/script-NO4_TOOL_ROOM.p01` | translator dispatched (round 0) | translator opens PR; sibling of p02 |
-| script NO4_TOOL_ROOM.p02 | `tl/script-NO4_TOOL_ROOM.p02` | translator dispatched (round 0) | translator opens PR; sibling of p01 |
-| script NO4.b01 | `tl/script-NO4.b01` | translator dispatched (round 0) | translator opens PR |
-| script NO4.b02 | `tl/script-NO4.b02` | translator dispatched (round 0) | translator opens PR |
+| script NO4_TOOL_ROOM.p01 | `tl/script-NO4_TOOL_ROOM.p01` | translator stopped on session limit, resumed by SendMessage 2026-10-26 | translator opens PR; sibling of p02 |
+| script NO4_TOOL_ROOM.p02 | `tl/script-NO4_TOOL_ROOM.p02` | translator stopped on session limit, resumed by SendMessage 2026-10-26 | translator opens PR; sibling of p01 |
+| script NO4.b01 | `tl/script-NO4.b01` | translator stopped on session limit, resumed by SendMessage 2026-10-26 | translator opens PR |
+| script NO4.b02 | `tl/script-NO4.b02` | PR #18 open (round 0) | reviewer, behind the barrier |
 
 ## Next up
 Wave 5 (QUEUE 2026-10-25), four script units (no scene units remain, PROJECT.md §10): NO4_TOOL_ROOM.p01 (42 rows, 766 chars,
@@ -71,6 +71,7 @@ Scene: none — store complete (wave 4). Four script units per wave (PROJECT.md 
 - Effort lowered from `max` to `high` for every role, and a usage limit (session or weekly) is a stop that nothing resumes by itself — human, 2026-10-06 — PROJECT.md §1, §10.
 - Wave 3 stopped on the 5-hour session limit 2026-10-25 ~02:00 UTC (reviewer of #12, HTTP 429; reset 06:00) and resumed on the human's "continue" 06:50 UTC; the reviewer was resumed by `SendMessage`.
 - Wave 4 stopped on the 5-hour session limit 2026-10-25 ~07:50 UTC (reviewer of #14, HTTP 429; reset 11:40) and resumed on the human's "continue" 11:42 UTC; the reviewer was resumed by `SendMessage`.
+- Wave 5 stopped on the 5-hour session limit 2026-10-25 ~12:35 UTC (three translators, HTTP 429; reset 16:40) and resumed on the human's "continue" 2026-10-26 01:24 UTC; translators resumed by `SendMessage`.
 - Wave 2 stopped by the human ("stop for now", 2026-10-06 ~14:40 UTC) mid-review and resumed on "continue" 2026-10-25 01:05 UTC; translators resumed by `SendMessage` with worktrees intact.
 
 ## Wave history
