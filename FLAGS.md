@@ -79,6 +79,9 @@ NO4_MACHINER90.p02 (PR #15) does the same at 0086, after 0085's `{br}` (Miller: 
 going to do about this?" then "You dragged me all the way here…"); check it with the others (R §15.3).
 NO4_MACHINER90.p01 (PR #17) does the same at 0046, after 0045's `{br}` (Heming: "…but such brutal
 killings…" then "Perhaps they killed each other over food…"); check it with the others (R §16.3).
+NO4_TOOL_ROOM.p01 (PR #21) adds 5 `{p}` inside the 【Miller】/【Judy】 dialogue (0006, 0022, 0034,
+0037, 0042), so the page after each click opens with no repeated label; the source re-labels after
+every click. Check in the same session that those pages still read as Miller's (R §18.3).
 
 
 ## Open
@@ -295,6 +298,14 @@ NO4_HWL_BACK2/0011–0013; NO5_HW_R/0009–0010), so their targets ship flush le
 (`tl/script/NO4_HWR_FRONT.p02.tsv:52`–`:54`, PR #10 Flag 3). Harmless as shipped; a tool PR that
 allows a leading U+3000 (or a typed indent tag) would restore the layout, a human decision ·
 rulings R §12.1.
+
+### F-023 · 2026-10-26 · script · OPEN
+Two suspected source typos in NO4_TOOL_ROOM, read as the sense requires: `NO4_TOOL_ROOM/0034`
+対向できるシステム (対向 "facing"; 1 / 0 / 0, only here; 対抗 0 rows) where the sense is 対抗 ("counter"),
+shipped "that can counter such conditions" (`tl/script/NO4_TOOL_ROOM.p01.tsv:37`); and
+`NO4_TOOL_ROOM/0042` 生まれかが, missing the る of 生まれるかが (生まれか 1 / 0 / 0, only here), shipped
+"how superior an organism could be born" (`:45`). PR #21 Flag 7. Harmless; nothing to change unless
+the `_T` drafts show a different reading · rulings R §18.3.
 
 ## CHECK positive controls
 <!-- One entry per kind of violation deliberately planted and caught by CHECK (tools/README.md rule 3).

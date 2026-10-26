@@ -21,7 +21,7 @@ Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEA
 ## In flight
 | Unit | Branch | State | Next |
 |---|---|---|---|
-| script NO4_TOOL_ROOM.p01 | `tl/script-NO4_TOOL_ROOM.p01` | PR #21 open (round 0; resumed after session limit) | reviewer — first in unit order |
+| script NO4_TOOL_ROOM.p01 | `tl/script-NO4_TOOL_ROOM.p01` | **MERGED** — PR #21 round 0, squash b01686f; NO4_TOOL_ROOM.SCR 62,141 free, max 4 rows/page; dupes 70 + 6 pairs (census 87,612, 0 divergent); glossary rows 哺乳類 感覚器官 解剖 生物 生命·生命体 利点 + labels (R §18.1), F-023, F-010 note; integration commit on main | done — coordinator: pull, then review #20 (confirm its rows against R §18.1) |
 | script NO4_TOOL_ROOM.p02 | `tl/script-NO4_TOOL_ROOM.p02` | PR #20 open (round 0; resumed after session limit) | reviewer, behind the barrier; re-confirm agreement with p01's PR head |
 | script NO4.b01 | `tl/script-NO4.b01` | PR #19 open (round 0; resumed after session limit) | reviewer, behind the barrier; settle 売店/両替所 frame with #18 |
 | script NO4.b02 | `tl/script-NO4.b02` | PR #18 open (round 0) | reviewer, behind the barrier |

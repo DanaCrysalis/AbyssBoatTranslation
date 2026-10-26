@@ -1674,3 +1674,95 @@ Census counts are rows per store (script / scene / system), from the reviewer's 
   - NO3_NO4/0053 バカな、閉じ込めたはず‼ is a different line (馬鹿な here is the alien's).
   - NO4_MACHINER90/0081 これはいったい⁉ "What on earth is this⁉" agrees with `:19`.
 - Glossary: none.
+
+## Unit script NO4_TOOL_ROOM.p01 (PR #21, MERGED, 2026-10-26)
+
+Miller shows John the drowned sample. Then comes the 【Miller】/【Judy】 exchange: the creature combines the advantages of insects and mammals. The sibling NO4_TOOL_ROOM.p02 (#20) continues the conversation.
+- **Round 0** (210d4d1, merged with main 02a7bbd for review): MERGE, squash b01686f. No findings.
+
+Figures:
+- **Container.** NO4_TOOL_ROOM.SCR 3,394 / 65,535 bytes, 62,141 free; tokens 227 / 1,499 (MEASURE). That is +902 bytes over the untranslated 63,043 free; 42 / 80 rows translated.
+- **Pages.** At most 4 rows per page (UNITCHECK, 42 rows, 0 violations). The whole store: 785 rows, 0 violations.
+- **Ratio.** 1,871 ÷ 766 = 2.44 (PR figure).
+- **Duplicates.** CHECK compared 70 duplicate pairs and 6 tag-variant pairs.
+  - The reviewer's census made 87,612 comparisons: 42 rows × 2,086 other dump rows, at three levels (exact; `{p}{w}{br}` stripped; `【Name】` stripped, ！？ → ⁉, final 。！？ dropped).
+  - It found 178 hits, almost all label rows, with 0 divergences (§18.4).
+- **F-011 wrap scan.** 107 wrapped lines and 0 problems. Every `{w}`- or authored-`{br}`-ended line is ≤ 27 (`len()`).
+- **F-012.** Every `+` row follows a `{br}` ending.
+
+Census counts are rows per store (script / scene / system), from the reviewer's grep of `dumps/` on 2026-10-26. Line citations use PROJECT.md §7's numbering in `tl/script/NO4_TOOL_ROOM.p01.tsv` (line = row number + 3).
+
+### 18.1 Terms promoted from §9, and rows added
+- **哺乳類** → `mammal(s)` (7 / 6).
+  - Census: 9 / 0 / 0 — NO4_TOOL_ROOM/0017, 0019, 0022, 0029, 0031, 0033, 0034, 0037 (p01) and 0064 (p02 "mammals", #20 head fae16dc).
+  - Glossary: §6 row added; §9 row removed.
+- **感覚器官** → `sensory organs` (14); the seed's alternative "sense organs" was not taken.
+  - Census: 2 / 0 / 0 — 0035 "keen sensory organs", 0037 "their sensory organs bring".
+  - Glossary: §6 row added; §9 row removed.
+- **解剖** → `dissect / dissection` (7 / 10).
+  - Census: 2 / 0 / 0. The two uses: `:14 0011` 解剖してみないと → "without dissecting it", and NO4_HWL_FRONT/0001 怪物の解剖 → "the monster's dissection" (#18 head 0e3bb89).
+  - The two units agree. "autopsy" is wrong for a creature.
+  - Glossary: §6 row added; §9 row removed.
+- **生物** (variant 全生物) → `organism(s)`; 全生物 → "all organisms".
+  - Census: 生物 11 / 0 / 0, of which 2 are 海洋生物学者 (NO4_BAR/0042, NO4_BAR_T/0062; §2 row). That leaves 9: NO4_BAR/0457 and NO4_TOOL_ROOM/0016, 0017, 0021, 0023, 0042, 0047, 0048, 0055.
+  - Miller's scientific word, kept apart from 生き物 "creature" (§6, R §15.1). The same speaker uses both in one scene: 0006 不思議な生き物 vs 0016 この生物.
+  - In context:
+    - Shipped NO4_BAR/0457 新種の生物だぞ⁉ → "This is a new species⁉" (Oakland). No change.
+    - `:24 0021` 生物としての観点から言えば → "Biologically," (§18.3).
+  - Binds `:19 0016`, `:20 0017`, `:26 0023`, `:45 0042`; p02 0047, 0048, 0055 agree.
+  - Glossary: §6 row added.
+- **生命 · 生命体**, as an organism → `life form` (9), with no hyphen, so the wrap cannot strand "life-form.".
+  - Census: 生命体 1 / 0 / 0 (0041). 生命 7 / 1 / 0: as an organism only at 0033 優秀な生命. Elsewhere it means "life", in context: NO4_BAR/0216 "lives", NO4_HWR_FRONT/0062–0063 "the sanctity of life", NO3_CHAPEL/0120 (untranslated), SCN038D/08. 生命力 (0027) is "vitality".
+  - Binds `:36 0033`, `:44 0041`.
+  - Glossary: §6 row added, scoped to the organism sense.
+- **利点** → `advantage(s)` (10 / 9).
+  - Census: 4 / 0 / 0 — 0017, 0019, 0031; p02 0064 "the advantages of both insects and mammals" agrees.
+  - Glossary: §6 row added.
+- **【ミラー】 · 【ジュディ】** → `【Miller】` · `【Judy】` (8 · 6), with brackets kept, as 【女】 (R §14.1).
+  - Census: 30 / 2 / 0 · 16 / 0 / 0. Shipped SCN002OLD/04, 06 already use `【Miller】` as a prefix.
+  - p01 and p02 use the labels as standalone `【Name】{br}` rows.
+  - Glossary: §1 row added.
+- **Conformance:**
+  - `:6 0003` カバンごと → "bag and all" (鞄 row, R §8.1, §13.1).
+  - 生き物 "creature" at `:9 0006` and `:12 0009` (R §15.1).
+  - モンスター "monster" at `:42 0039` (R §8.1).
+
+### 18.2 Speakers (PR Flag 6)
+- 0001–0004: Miller to John, unlabelled. Her かしら/わ register fits, and she holds the sample (NO4_BAR/0392–0394). John's side is not shown.
+- 0005–0042 follow the in-message labels. spk=0 throughout (F-009).
+- Register fits R §1.10: articulate and assertive. かしら is carried by "I wonder" (0007), as p02 0046 does. Sentence-final わ/よ/ね have no markers.
+- Glossary: none.
+
+### 18.3 Movable codes, wraps and readings (PR Flags 2–5, 7)
+- **Added `{p}`.** Exactly five rows differ from the source in their `{p}{w}{br}` sequence. All five are in Flag 2, and the reviewer proved each one forced by removing it in a scratch copy and re-running UNITCHECK:
+  - `:9 0006` `{br} {w} {br}` → `{br} {p} {w} {br}`. Without it, the page from 0005 is 6 rows.
+  - `:25 0022` `{w} {br}` → `{p} {w} {br}`. Without it, 5 rows from 0021.
+  - `:37 0034` `{w} {br}` → `{p} {w} {br}`. Without it, 6 rows from 0033.
+  - `:40 0037` `{p}` → `{p} {p}`. Without it, 6 rows from 0036.
+  - `:45 0042` `{p}` → `{p} {p}`. Without it, 5 rows from 0041.
+  - Each click is at a comma or colon. No `{br}` was moved, added or removed.
+  - The page after each added click carries no repeated 【Name】 label. This is added to F-010's in-game check.
+- **Restructures (step 6), all forced, nothing dropped.** The page model matters here: after a `{w}{br}` the next page opens with a blank row, then the label row, so a labelled reply has 2 text rows, and an unlabelled continuation 3.
+  - `:19 0016` "Should this organism be what I imagine". The plain "If this organism is what I | imagine" ends a line in a lone "I".
+  - `:20 0017` "with both insect and mammal advantages——that's my view." The source order ("the advantages of both insects and mammals") wraps to 4 rows where 3 are available.
+  - `:22 0019` "The advantages…… of insects and mammals?". The source order leaves "advantages?" alone on the last row (R §1.12). Judy's hesitation is kept, one word earlier.
+  - `:38 0035` "Another trait: keen sensory organs, like eyes and ears, to sense the outside world." This is 3 rows of 27. The clause-for-clause form takes 4. Every element is kept: すぐれた, 目や耳など, 外界を知る, のも特徴.
+  - `:40 0037` uses a colon around the forced `{p}`; といえる → "you could call those".
+- **Step 4, forced.** `:24 0021` 生物としての観点から言えば → "Biologically,". After 0019's `{w}{br}` the page is blank + 【Miller】 + text, so 0021 has 2 rows. "From a biological standpoint, Earth's most successful race is insects." takes 3. This is a shorter synonym, not an implication (wave-4 lesson: no unforced compression).
+- **Readings accepted:**
+  - 0002 料金は取らないわ → "I won't charge admission." This is Miller's dry joke about viewing the sample: the fee is named from context, and nothing is added to the plot.
+  - 0012 わからないのかも → "Or maybe it's unknowable……", so that Judy's echo 0014 stays one word ("…Unknowable?").
+  - 0021 種族 → "race". 0022 numbers spelled out (R §1.4); 種類 → "species".
+  - 0042 "how superior an organism could be born" is stiff but literal (生まれる).
+- **Suspected source typos** (F-023). Both readings are confirmed:
+  - `:37 0034` 対向できる → 対抗できる "counter". 対向 is 1 / 0 / 0, only here, and 対抗 0.
+  - `:45 0042` 生まれかが → 生まれるかが "could be born". 生まれか is 1 / 0 / 0, only here.
+- Glossary: none.
+
+### 18.4 Recurrences (PR Flags 8, 9)
+- **Translated, identical:** 0025 `………{p}` matches NO4_BAR/0201, 0265, 0430, NO4_HWR_FRONT/0033 (after its 。), 0057, 0092, NO4_MACHINER90/0010, 0108, SCN038_5C1/10, SCN046B1/01, and 0123/0129 once 【Woman】 is stripped.
+- **Untranslated twins, which CHECK pairs once translated:**
+  - p02 0060 `………{w}{br}` (#20 head agrees); NO3_NO4/0007, 0061.
+  - Labelled `_T` twins (F-013): NO4_BAR_T/0010, 0068, 0151 and NO4_HWR_FRONT_UP_T/0022, 0024, 0028 take `………` after the translated label.
+- **Sibling agreement with #20 (head fae16dc).** It agrees on 生き物, 生物, 利点, 哺乳類, the labels, `………` and かしら → "I wonder". #20's integration only confirms the rows above.
+- Glossary: none.
