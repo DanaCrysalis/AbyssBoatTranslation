@@ -24,7 +24,7 @@ Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEA
 |---|---|---|---|
 | script NO4_TOOL_ROOM.p01 | `tl/script-NO4_TOOL_ROOM.p01` | translator stopped on session limit, resumed by SendMessage 2026-10-26 | translator opens PR; sibling of p02 |
 | script NO4_TOOL_ROOM.p02 | `tl/script-NO4_TOOL_ROOM.p02` | translator stopped on session limit, resumed by SendMessage 2026-10-26 | translator opens PR; sibling of p01 |
-| script NO4.b01 | `tl/script-NO4.b01` | translator stopped on session limit, resumed by SendMessage 2026-10-26 | translator opens PR |
+| script NO4.b01 | `tl/script-NO4.b01` | PR #19 open (round 0; resumed after session limit) | reviewer, behind the barrier; settle 売店/両替所 frame with #18 |
 | script NO4.b02 | `tl/script-NO4.b02` | PR #18 open (round 0) | reviewer, behind the barrier |
 
 ## Next up
