@@ -6,8 +6,8 @@ at the close commit (`CLAUDE.md` Rule 3). A fresh container may clone shallow wi
 preflight is `git fetch origin main && git checkout main && git reset --hard origin/main`.
 
 ## NEXT ACTION — always current, always a literal instruction
-> **Wave 5 coordinator:** #21 p01 MERGED (b01686f, integrate 8517ea9). Next: reviewer for #20 p02 (foreground),
-> then #19 → #18. `git pull --ff-only` after each.
+> **Wave 5 coordinator:** #21 MERGED; #20 in rework (round 1). Review #19 b01 now (foreground); when #20's translator
+> pushes, re-review #20 by SendMessage to its reviewer; then #18. `git pull --ff-only` after each.
 
 ## Progress
 | Store | Done | Total | |
@@ -22,7 +22,7 @@ Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEA
 | Unit | Branch | State | Next |
 |---|---|---|---|
 | script NO4_TOOL_ROOM.p01 | `tl/script-NO4_TOOL_ROOM.p01` | **MERGED** — PR #21 round 0, squash b01686f; NO4_TOOL_ROOM.SCR 62,141 free, max 4 rows/page; dupes 70 + 6 pairs (census 87,612, 0 divergent); glossary rows 哺乳類 感覚器官 解剖 生物 生命·生命体 利点 + labels (R §18.1), F-023, F-010 note; integration commit on main | done — coordinator: pull, then review #20 (confirm its rows against R §18.1) |
-| script NO4_TOOL_ROOM.p02 | `tl/script-NO4_TOOL_ROOM.p02` | PR #20 open (round 0; resumed after session limit) | reviewer, behind the barrier; re-confirm agreement with p01's PR head |
+| script NO4_TOOL_ROOM.p02 | `tl/script-NO4_TOOL_ROOM.p02` | PR #20 round 0 CHANGES — two lone-"an" wraps (0047, 0069), Flag 6 correction | same translator reworking (SendMessage); then round-1 re-review by the same reviewer |
 | script NO4.b01 | `tl/script-NO4.b01` | PR #19 open (round 0; resumed after session limit) | reviewer, behind the barrier; settle 売店/両替所 frame with #18 |
 | script NO4.b02 | `tl/script-NO4.b02` | PR #18 open (round 0) | reviewer, behind the barrier |
 
