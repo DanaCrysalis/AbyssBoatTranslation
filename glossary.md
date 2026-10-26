@@ -99,6 +99,7 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | 工具 | — | tools | 5 | — | 2 / 0 / 0; 道具 is not fixed ("a tool", 0441; NO4_HWL_KAIDAN/0006 in context) | R §11.1 |
 | 刃物 | 鋭利な刃物 | blade; 鋭利な刃物: a sharp blade | 5; 13 | — | 3 / 0 / 0 (NO4_BAR/0439 "every blade"; NO4_4102/0001, NO6_BRIDGE/0020) | R §11.1 |
 | シャッター | 防水シャッター | shutter; 防水シャッター: watertight shutter | 7; 18 | 39 (hints/011, blocked) | lowercase; 31 / 1 / 1 (防水シャッター 3 / 0 / 0, the control panels NO3_MACHINE/0002, 0004, NO6_BRIDGE/0012) | R §13.1 |
+| ロッカー | ロッカールーム (rooms/086) | locker; room name: Locker Room | 6; 11 | 14 (rooms/086, F-006) | lowercase; NO4_TOOL_ROOM/0080 何も入っていない → "The locker is empty."; 空のようだ (NO5_LOCKERROOM/0005–0006) → "seems empty"; 7 / 0 / 1 | R §19.1 |
 
 ## 4. Classes, units, system terms
 | Source | Variants | Target | Cols | Cap | Note | Ruling |
@@ -172,6 +173,9 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | 生物 | 全生物 | organism(s); 全生物: all organisms | 8 (9); 13 | Miller's word, kept apart from 生き物 "creature"; NO4_TOOL_ROOM ×8; 新種の生物 (NO4_BAR/0457 "a new species") and 生物としての観点 (0021 "Biologically") in context; 海洋生物学者 is §2; 9 / 0 / 0 | R §18.1 |
 | 生命 · 生命体 (an organism) | — | life form | 9 | no hyphen; 優秀な生命 (NO4_TOOL_ROOM/0033), 恐るべき生命体 (0041); 生命 as "life" (NO4_BAR/0216, NO4_HWR_FRONT/0062–0063, SCN038D/08) and 生命力 in context; 2 / 0 / 0 | R §18.1 |
 | 利点 | — | advantage(s) | 10 (9) | NO4_TOOL_ROOM/0017, 0019, 0031, 0064; 4 / 0 / 0 | R §18.1 |
+| 成虫 | — | adult(s) | 5 (6) | the grown form of the creature: NO4_TOOL_ROOM/0070 "the adult", 0075 "become adults"; 虫 alone is "bug"; 2 / 0 / 0 | R §19.1 |
+| 幼生体 · サナギ | — | larva · pupa ("the pupa stage") | 5 · 4 | Miller's life-stage terms, NO4_TOOL_ROOM/0072 only; never "chrysalis"; 1 / 0 / 0 each | R §19.1 |
+| クローン羊 | — | the cloned sheep | 16 | NO4_TOOL_ROOM/0053 only; no name added ("Dolly"); 1 / 0 / 0 | R §19.1 |
 
 ## 7. Register per character
 | Character | Register | Contractions? | Markers | Ruling |
@@ -206,11 +210,8 @@ so; the reviewer moves the row up into its section in the integration commit. --
 | カードキー | — | card key | keycard | NO4_SHOP/0001; items/010 (item name, F-006); 1 / 0 / 1 | 5 |
 | 売店 | 売店のカウンター | the shop; 売店のカウンター: the shop counter | the kiosk | NO4_HWL_BACK/0018 = NO4_HWL_BACK2/0014 (byte-identical sources, one target); 2 / 0 / 0 | 5 |
 | 両替所 | 両替所のカウンター | the currency exchange; …のカウンター: the exchange counter | the exchange desk | NO4_P_OFFICE/0012 (same frame as the 売店 row: keep the wording parallel); 1 / 0 / 0 | 5 |
-| 幼生体 · サナギ | — | larva · pupa | larval form · chrysalis | NO4_TOOL_ROOM/0072 (Judy's taxonomy register); 1 / 0 / 0 | 5 |
-| クローン羊 | — | the cloned sheep | Dolly the sheep (adds a name: avoid) | NO4_TOOL_ROOM/0053; 1 / 0 / 0 | 5 |
 | 生存者 | — | survivor(s) — same word as 生き残り (§2) | — | NO4_HWL_FRONT/0008; 1 / 0 / 0 | 5 |
 | 乗組員 | — | crew member(s); the crew | — | NO4_STORAGE/0004; 1 / 0 / 0 | 5 |
-| ロッカー | — | locker | — | NO4_TOOL_ROOM/0080, NO5_LOCKERROOM/0004–0007, NO2_MAINSTORAGE/0029–0030; rooms/086; 7 / 0 / 1 | 5 |
 | 懐中電灯 | — | flashlight | torch | NO4_SHOP/0005; items/006 (item name, F-006); 1 / 0 / 1 | 5 |
 
 ## 10. Open questions

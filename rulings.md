@@ -1766,3 +1766,88 @@ Census counts are rows per store (script / scene / system), from the reviewer's 
   - Labelled `_T` twins (F-013): NO4_BAR_T/0010, 0068, 0151 and NO4_HWR_FRONT_UP_T/0022, 0024, 0028 take `………` after the translated label.
 - **Sibling agreement with #20 (head fae16dc).** It agrees on 生き物, 生物, 利点, 哺乳類, the labels, `………` and かしら → "I wonder". #20's integration only confirms the rows above.
 - Glossary: none.
+
+## Unit script NO4_TOOL_ROOM.p02 (PR #20, MERGED, 2026-10-26)
+
+Judy and Miller finish p01's sample analysis: the organism, eggs, life stages and weak points. The unit ends with the locker narration at 0080. Reviewed twice:
+- **Round 0** (fae16dc, merged with main 1477cf0 for review): CHANGES. Every mechanical gate passed, but there were three findings:
+  - 1: `:8 0047` "making an | organism", a lone "an" at a wrap (R §1.12 rule 2, as applied in R §16.3).
+  - 2: `:30 0069` "Given that it has an | exoskeleton", the same fault.
+  - 3: PR Flag 6 claimed there were none.
+- **Round 1** (3672de3, merged with main d0c362a for review): MERGE, squash c60bcc6. `git diff fae16dc 3672de3` changes exactly 0047 and 0069, and the PR body corrects Flag 6.
+
+Figures:
+- **Container.** NO4_TOOL_ROOM.SCR 3,636 / 65,535 bytes, 61,899 free; tokens 73 / 1,499 (MEASURE). The room is complete, 80 / 80 with p01.
+- **Pages.** At most 4 rows per page (UNITCHECK, 38 rows, 0 violations). The whole store: 823 rows, 0 violations.
+- **Ratio.** 1,302 ÷ 555 = 2.35 (PR figure).
+- **Duplicates.** CHECK compared 83 duplicate pairs and 7 tag-variant pairs.
+  - The reviewer's census made 237,479 comparisons: 38 rows × 2,083 other dump rows, at three levels (exact; `{p}{w}{br}` stripped; `【Name】` stripped, ！？ → ⁉, final 。！？ dropped).
+  - It found 178 hits, 98 of them against translated rows, with 0 divergences (§19.4).
+- **F-011 wrap scan.** 68 wrapped lines, 0 problems in round 1. All 33 `{w}`- or authored-`{br}`-ended lines are ≤ 27 (`len()`); the longest is 0075, at 27.
+- **F-012.** Every `+` row follows a `{br}` or `{w}{br}` ending; nothing glues.
+
+Census counts are rows per store (script / scene / system), from the reviewer's grep of `dumps/` on 2026-10-26. Line citations use PROJECT.md §7's numbering in `tl/script/NO4_TOOL_ROOM.p02.tsv` (line = row number − 39).
+
+### 19.1 Terms promoted from §9, and one added
+- **幼生体 · サナギ** → `larva · pupa` (5 · 4); 0072 "If this is the larva, … the pupa stage".
+  - Census: 幼生体 1 / 0 / 0, 幼生 1 / 0 / 0 (the same row), サナギ 1 / 0 / 0, さなぎ and 蛹 0 / 0 / 0.
+  - The seed's alternatives "larval form · chrysalis" were not taken. "chrysalis" names a butterfly's pupa, and Miller's register is general entomology.
+  - Glossary: §6 row added; §9 row removed.
+- **クローン羊** → `the cloned sheep` (16); 0053 "the birth of the cloned sheep".
+  - Census: 1 / 0 / 0; クローン 1 / 0 / 0 (the same row).
+  - The source gives no name, so "Dolly" would add one.
+  - Glossary: §6 row added; §9 row removed.
+- **ロッカー** → `locker` (6). The room name ロッカールーム (rooms/086) → "Locker Room" (11, under cap 14; blocked, F-006).
+  - Census: 7 / 0 / 1 — NO4_TOOL_ROOM/0080, NO5_LOCKERROOM/0004–0007, NO2_MAINSTORAGE/0029–0030; rooms/086.
+  - `:41 0080` ロッカーには何も入っていない → "The locker is empty.". This is a rewording under R §1.12 rule 1: "There's nothing in the locker." wraps "There's nothing in the | locker.", a one-word last row. Nothing is compressed.
+  - NO5_LOCKERROOM/0005 ロッカーの中は空のようだ and 0006 このロッカーは空のようだ take "seems empty", keeping the hedge that 0080 does not have.
+  - Glossary: §3 row added; §9 row removed.
+- **成虫** → `adult(s)` (5 / 6). This is not a §9 seed; it is added.
+  - Census: 2 / 0 / 0 — `:31 0070` "If that big one is the adult", `:36 0075` "All of these become adults?".
+  - It is kept apart from 虫 "bug" (R §16.1) and 昆虫 "insect" (R §7.1).
+  - Glossary: §6 row added.
+- **Confirmed, not duplicated** (rows on main from #21, R §18.1):
+  - 生物 "organism": `:8 0047`, `:9 0048`, `:16 0055`.
+  - 生き物 "creature": `:5 0044`, `:19 0058`, `:25 0064`.
+  - 哺乳類 "mammals" and 利点 "advantages": `:25 0064`.
+  - 【Miller】 / 【Judy】 labels.
+- Glossary: as above. No existing row is changed.
+
+### 19.2 Speakers (PR Flag 8)
+- Speakers follow the in-message labels; spk=0 throughout (F-009). Judy: 0044, 0050, 0055, 0060, 0066, 0075. Miller: the rest. 0080 is narration.
+- Miller's かしら is carried by "I wonder" (`:7 0046`), as in p01 0007 (R §18.2). Sentence-final わ/よ/ね have no markers.
+- Judy's register stays plain.
+- Glossary: none.
+
+### 19.3 Movable codes, wraps and readings (PR Flags 2–6, 9, 10)
+- **Added `{p}`.** Exactly two rows differ from the source in their `{p}{w}{br}` sequence. Both are in the PR's Flags, and the reviewer proved each forced by removing it in a scratch copy and re-running UNITCHECK:
+  - `:8 0047` `{w} {br}` → `{p} {w} {br}`, a leading `{p}` on a `+` row after 0046's `{br}`, at a sentence boundary (R §2.4).
+    - Without it, the page from 0044 is 7 rows.
+    - This is the chain F-010 names as 5 rows in the source.
+    - Added to F-010's in-game check.
+  - `:25 0064` `{p}` → `{p} {p}`, at the clause comma ("…of both insects and mammals,{p}then this creature is…"). Without it, the page from 0063 is 6 rows.
+  - No `{br}` was moved, added or removed. All 19 `{w}` are kept in place.
+- **Round-0 findings, fixed in round 1:**
+  - `:8 0047` became "…making such an intricate organism should be quite impossible." It wraps 27 / 27 / 28 / 20, so the page stays at 4. "such an intricate" keeps これほど精巧な.
+  - `:30 0069` became "Since it has an exoskeleton, it must either molt or undergo metamorphosis." It wraps 28 / 22 / 22. 以上 → "Since", and "either…or" carries か. 0069 has 3 rows on its page (cursor + 3). Any opening of "Given that it has an exoskeleton" puts "an" at column 20, and "metamorphosis." alone is the other trap.
+  - Lesson for translators: a hand-read of the wrap missed both cases. Scan the wrapped lines with a script, as the PR's round 1 did.
+- **Wording chosen for wraps, accepted as not §2.1 step 5** (the wave-4 lesson):
+  - `:16 0055` "We're going to take on… that kind of organism?". The hesitation moves from before the verb to before the object, nothing is dropped, and そんな → "that kind of".
+  - `:39 0078` 結論を急いじゃダメ → "But we mustn't be hasty in reaching a conclusion." This is longer than the source. "jump to conclusions" orphans "conclusions.", and "rush to a conclusion" ends a row in a lone "a".
+  - `:41 0080`: see §19.1.
+- **Readings accepted:**
+  - `:19 0058` …とはなにか。 → "?". The wh-clause is interrogative in English, so "?" is the target punctuation (PROJECT.md §6 maps 。 for statements).
+  - `:25 0064` 卵生もしくは卵胎生 → "oviparous or ovoviviparous". These are technical terms in Japanese too, in Miller's taxonomy register (NO4_BAR/0352). Judy's "Eggs…?" (0066) picks up 卵. "both" echoes p01 0017 両方の利点 and adds no fact.
+  - `:13 0052` "That, in secret, research had been well under way." completes Judy's "That means——" (ってことね).
+  - `:40 0079` 充分ある → "every chance".
+- Glyph counts match on all 38 rows. `…。` and `──。` absorb the 。 (R §1.3).
+- Glossary: none.
+
+### 19.4 Recurrences
+- **Translated, identical:**
+  - `:21 0060` `………{w}{br}` matches the `………` family: NO4_BAR/0201, 0265, 0430; NO4_HWR_FRONT/0033, 0057, 0092, and 0123/0129 once 【Woman】 is stripped; NO4_MACHINER90/0010, 0108; NO4_TOOL_ROOM/0025; SCN038_5C1/10, SCN046B1/01.
+  - The 【Judy】{br} / 【Miller】{br} label rows are identical to p01's.
+- **Untranslated twins, which CHECK pairs once translated:**
+  - 0060 ↔ NO3_NO4/0007, 0061, and NO4_BAR_T/0068 (labelled, F-013).
+  - No other row of the unit recurs in any dump.
+- Glossary: none.

@@ -82,6 +82,10 @@ killings…" then "Perhaps they killed each other over food…"); check it with 
 NO4_TOOL_ROOM.p01 (PR #21) adds 5 `{p}` inside the 【Miller】/【Judy】 dialogue (0006, 0022, 0034,
 0037, 0042), so the page after each click opens with no repeated label; the source re-labels after
 every click. Check in the same session that those pages still read as Miller's (R §18.3).
+NO4_TOOL_ROOM.p02 (PR #20) clears the 5-row chain from 0044 named above with a leading `{p}` at
+0047, after 0046's `{br}` (Miller: "Why is that, I wonder?" then "Going by research presented at
+conferences…"; 7 rows without it), and adds one at 0064's clause comma; check both with the others
+(R §19.3).
 
 
 ## Open
