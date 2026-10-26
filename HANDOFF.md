@@ -1,4 +1,4 @@
-**Last updated: 2026-10-26** — wave 5 closed: NO4_TOOL_ROOM.p01, p02, NO4.b01, NO4.b02 merged (PRs #21, #20, #19, #18), none parked; the wave 5 coordinator opens the wave 6 session.
+**Last updated: 2026-10-26** — wave 6 dispatched: NO5.b01, NO6.b01, NO6.b02, NO3_CHAPEL.p01 (translators running); seeds a376c49.
 
 ## Integration branch: `main`. Not configurable.
 Every PR bases on `main`; the reviewer merges into `main`; a wave is closed only when `origin/main` is
@@ -6,11 +6,9 @@ at the close commit (`CLAUDE.md` Rule 3). A fresh container may clone shallow wi
 preflight is `git fetch origin main && git checkout main && git reset --hard origin/main`.
 
 ## NEXT ACTION — always current, always a literal instruction
-> **Open the wave 6 session** (wave 5 coordinator; CLAUDE.md Rule 1, orchestrator.md §7): `create_session`
-> titled `Abyss Boat — wave 6`, tags `["abyssboat-translation", "wave-6"]`, `source_url`
-> https://github.com/DanaCrysalis/AbyssBoatTranslation, `source_revision` `main`, seed = SKILL.md §6a
-> with UNITS = Next up. First check `list_sessions` (mine: true, title `Abyss Boat — wave 6`): if one exists, do not open a second.
-> The wave 6 coordinator seeds the glossary for its units, then dispatches.
+> **Wave 6 coordinator: wait for the four translators** (In flight), re-checking the barrier on each return
+> (`ListAgents`; a returned translator with no PR → resume it by `SendMessage`, else a fresh one, same branch).
+> Barrier met → reviewer per PR in unit order NO5.b01 → NO6.b01 → NO6.b02 → NO3_CHAPEL.p01, one at a time.
 
 ## Progress
 | Store | Done | Total | |
@@ -22,13 +20,18 @@ preflight is `git fetch origin main && git checkout main && git reset --hard ori
 Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-26; `NO4_BAR.SCR` 37,378 free; `NO4_TOOL_ROOM.SCR` 61,899, 80/80; the NO4.b01/b02 rooms ≥ 63,697).
 
 ## In flight
-Nothing. Wave 5's four units are merged; see Wave history and rulings R §18–§21.
+| Unit | Branch | PR | State | Next |
+|---|---|---|---|---|
+| script NO5.b01 | `tl/script-NO5.b01` | — | translator dispatched 2026-10-26 (round 0) | translator opens PR |
+| script NO6.b01 | `tl/script-NO6.b01` | — | translator dispatched 2026-10-26 (round 0) | translator opens PR |
+| script NO6.b02 | `tl/script-NO6.b02` | — | translator dispatched 2026-10-26 (round 0) | translator opens PR |
+| script NO3_CHAPEL.p01 | `tl/script-NO3_CHAPEL.p01` | — | translator dispatched 2026-10-26 (round 0) | translator opens PR |
 
 ## Next up
 Wave 6 (QUEUE 2026-10-26), four script units: NO5.b01 (58 rows, 1,144 chars, ratio 29.06; NO5_BANK, ENTRANCEL, ENTRANCEM,
 HW_L, HW_R, LOCKERROOM, SHOP), NO6.b01 (37, 839, 39.03; NO6_BRIDGE, ENTRANCE, HW_1, HW_2), NO6.b02 (27, 495, 66.38; NO6_HW_3,
 HW_4, HW_5, STORAGE, TOOLROOM, WIRELESSROOM), NO3_CHAPEL.p01 (62, 1,068, 27.82; NO3_CHAPEL.SCR 57,297 free); all tier D.
-Glossary seeds: not yet — the wave 6 coordinator's step 2 (§9 still holds 無線室 "the radio room", NO6_BRIDGE).
+Glossary seeds: on main, a376c49 (§9 wave 6 rows, incl. six fixed cross-unit sentences for NO5/NO6).
 Bindings waiting: NO5_BANK/0005 = NO4_SHOP/0006 `"Today's Shipboard Events," it reads.{p}`; NO5_HW_R/0008 = NO4_HWL_BACK/0014
 `"Floor Information"{br}` (sign entries R §12.1); NO6_HW_1/0003 = NO6_HW_2/0006 = 0010 = NO4_HWL_FRONT/0011 byte for byte (R §21.4);
 NO5_LOCKERROOM/0004–0007 ロッカー "locker", 空のようだ "seems empty" (R §19); 切り刻む/無残に "hacked to pieces"/"brutally" at
