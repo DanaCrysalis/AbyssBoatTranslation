@@ -43,7 +43,7 @@ QUEUE order, generated 2026-10-06 (wave 6 units moved to Next up 2026-10-26) (so
 p03 (1039), NO3_NO4.p01 (633), p02 (597), NO3.b01 (1105), NO3.b02 (502), NO2.b01 (1021),
 NO2.b02 (829), NO1.b01 (151), SPACESHIP.b01 (159), then the `_T` test scripts (F-008):
 NO4_BAR_T.p01 (1426), p02 (1251), p03 (1270), p04 (1189), NO4_T.b01 (607), b02 (735), b03 (414).
-Scene: none — store complete (wave 4). Four script units per wave (PROJECT.md §10). 21 script units remain after wave 6's four.
+Scene: none — store complete (wave 4). Four script units per wave (PROJECT.md §10). 17 script units remain after wave 6's four.
 
 ## Blocked — needs a human
 1. **System store** (5 units, 188 rows) — exe slots too short for English; you chose to wait for an
