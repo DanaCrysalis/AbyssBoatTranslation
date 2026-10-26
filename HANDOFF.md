@@ -6,9 +6,8 @@ at the close commit (`CLAUDE.md` Rule 3). A fresh container may clone shallow wi
 preflight is `git fetch origin main && git checkout main && git reset --hard origin/main`.
 
 ## NEXT ACTION — always current, always a literal instruction
-> **Wave 5 coordinator:** wait for the four translators (In flight) to open PRs — wave barrier (orchestrator.md §4a).
-> Then review one PR at a time, in unit order (TOOL_ROOM.p01, p02, NO4.b01, b02), reviewer in the foreground.
-> If this session is gone: `ListAgents`/open PRs; a unit with no PR and no live translator → fresh translator, same branch.
+> **Wave 5 coordinator:** barrier met (#21 p01, #20 p02, #19 b01, #18 b02). Review one at a time, reviewer in the
+> foreground, in unit order: #21 → #20 → #19 → #18. `git pull --ff-only` after each. Reviewer of #21 running now.
 
 ## Progress
 | Store | Done | Total | |
@@ -22,7 +21,7 @@ Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEA
 ## In flight
 | Unit | Branch | State | Next |
 |---|---|---|---|
-| script NO4_TOOL_ROOM.p01 | `tl/script-NO4_TOOL_ROOM.p01` | translator stopped on session limit, resumed by SendMessage 2026-10-26 | translator opens PR; sibling of p02 |
+| script NO4_TOOL_ROOM.p01 | `tl/script-NO4_TOOL_ROOM.p01` | PR #21 open (round 0; resumed after session limit) | reviewer — first in unit order |
 | script NO4_TOOL_ROOM.p02 | `tl/script-NO4_TOOL_ROOM.p02` | PR #20 open (round 0; resumed after session limit) | reviewer, behind the barrier; re-confirm agreement with p01's PR head |
 | script NO4.b01 | `tl/script-NO4.b01` | PR #19 open (round 0; resumed after session limit) | reviewer, behind the barrier; settle 売店/両替所 frame with #18 |
 | script NO4.b02 | `tl/script-NO4.b02` | PR #18 open (round 0) | reviewer, behind the barrier |
