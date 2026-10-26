@@ -191,6 +191,10 @@ SCN047-EPILOG (PR #16): subtitles, named from content. C1/01 "John, why……" i
 is the alien voice. SCN047A/02, 04 ハイ (probably Judy taking orders, or an alien subordinate), the
 EPILOG/EPILOG0 inner thoughts (probably John) and EPILOG/03 (an unidentified agent reporting to the
 aliens) stay uncertain and are rendered speaker-neutral (rulings R §17.2).
+NO4.b02 (PR #18): no `_T` draft for any of its seven rooms, so all are named from content.
+NO4_HWL_FRONT/0001 (spk=-, spoken), 0002–0003 (俺) and 0004–0006 (probably Oakland, who leads the run)
+and NO4_P_OFFICE/0001–0008 (probably Wolg) stay uncertain and are rendered speaker-neutral
+(rulings R §21.2).
 
 ### F-011 · 2026-10-04 · tools · OPEN
 PR #1 (NO4_BAR.p01) found four things CHECK and UNITCHECK do not verify. Each was confirmed by a
@@ -314,6 +318,13 @@ shipped "that can counter such conditions" (`tl/script/NO4_TOOL_ROOM.p01.tsv:37`
 `NO4_TOOL_ROOM/0042` 生まれかが, missing the る of 生まれるかが (生まれか 1 / 0 / 0, only here), shipped
 "how superior an organism could be born" (`:45`). PR #21 Flag 7. Harmless; nothing to change unless
 the `_T` drafts show a different reading · rulings R §18.3.
+
+### F-024 · 2026-10-26 · script · OPEN
+A suspected source typo: `NO4_HWR_BACK/0002` 船内に浸入するために使用した扉だ has 浸入 ("water
+ingress") where the sense is 侵入 ("entry"); perhaps a pun, since the party came in through the
+flooded hull (浸入 1 / 0 / 0, only here; 侵入 1 / 0 / 0). Shipped as the sense requires, "It's the door we used to get into the ship."
+(`tl/script/NO4.b02.tsv:22`). PR #18 Flag 5. Harmless; nothing to change unless a `_T` draft or the
+in-game context shows a different reading · rulings R §21.3.
 
 ## CHECK positive controls
 <!-- One entry per kind of violation deliberately planted and caught by CHECK (tools/README.md rule 3).

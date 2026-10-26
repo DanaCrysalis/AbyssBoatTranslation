@@ -56,7 +56,9 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | 第Nデッキ | 第２デッキ … 第６デッキ (full-width digit) | Deck N ("Deck 4") | 6 | 10 (deck names, F-006) | capitalised with an Arabic numeral; デッキ alone (このデッキ, 下のデッキ) is lowercase "deck" in context | R §5.1 |
 | 元警官 | — | ex-policeman | 12 | — | Wolg's past; 警官 alone in context (Miller's sarcastic "cop", NO4_BAR/0231) | R §5.1 |
 | 生き残り | 生き残りグループ | survivor(s); 生き残りグループ: survivor group | 8 (9); 14 | — | the people still alive aboard | R §5.1 |
+| 生存者 | — | survivor(s) | 8 (9) | — | same word as 生き残り; NO4_HWL_FRONT/0008 "there may be no survivors left"; 1 / 0 / 0 | R §21.1 |
 | 乗客 | — | passenger(s) | 10 (9) | — | as shipped NO4_BAR/0028, 0094, 0191, 0198, 0393; NO4_HWR_FRONT/0122 "a passenger on board this ship"; 15 / 0 / 0 | R §14.1 |
+| 乗組員 | 乗組員の制服 | crew member(s); the crew; 乗組員の制服: crew uniforms | 11 (12); 8; 13 | — | the ship's own crew, never the salvagers; NO4_STORAGE/0004 "Inside are crew uniforms."; 1 / 0 / 0 | R §21.1 |
 | 客船 | — | passenger ship | 14 | — | this ship; 例の客船 → "that passenger ship" (0279) | R §6.1 |
 | 船体 | — | the hull | 8 | — | lowercase; 船 alone stays "the ship"; a repeat in one sentence may take "it" (NO4_MACHINER90/0098); SCN047C1/05 "the vessel" in context, referent left open (alien ship or the passenger ship); 5 / 1 / 0 | R §15.1, §17.1 |
 | 便所 | — | the toilet | 10 | — | lowercase; Collison's word (0292, NO4_HWR_FRONT/0011) | R §6.1 |
@@ -74,6 +76,7 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | ビアー＆ラガーズ | 『ビアー＆ラガーズ』 | Beer & Lagers | 13 | — | the bar's name, capitalised; 4 / 0 / 0 (NO4_HWR_FRONT/0102 `"Beer & Lagers," it reads.`) | R §12.1 |
 | キャビン | キャビンＮＮＮＮ (rooms/*) | cabin; on the sign: Cabins; room names: Cabin NNNN | 5; 6; 10 | 14 (room names) | 部屋 stays "room" (R §1.6); 3 / 0 / 15 | R §1.6, §12.1 |
 | 売店 | 売店のカウンター | the shop; 売店のカウンター: the shop counter | 8; 16 | — | lowercase; NO4_HWL_BACK/0018 = NO4_HWL_BACK2/0014 `The shop counter, it seems.`; the 両替所 frame is not made parallel (R §20.1); 2 / 0 / 0 | R §20.1 |
+| 両替所 | 両替所のカウンター | the currency exchange; 両替所のカウンター: the exchange counter | 21; 20 | — | lowercase; NO4_P_OFFICE/0012 `This seems to be the exchange counter.{br}Hard to tell what's inside.{p}`, not parallel with 売店 (R §20.1); 1 / 0 / 0 | R §20.1, §21.1 |
 
 ## 3. Items, currency, mechanics
 | Source | Variants | Target | Cols | Cap | Note | Ruling |
@@ -103,6 +106,9 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | ロッカー | ロッカールーム (rooms/086) | locker; room name: Locker Room | 6; 11 | 14 (rooms/086, F-006) | lowercase; NO4_TOOL_ROOM/0080 何も入っていない → "The locker is empty."; 空のようだ (NO5_LOCKERROOM/0005–0006) → "seems empty"; 7 / 0 / 1 | R §19.1 |
 | ワイヤーリフト | — | the wire lift | 13 | — | lowercase; NO4_ENTRANCE/0004, 0005; never "winch line"; 2 / 0 / 0 | R §20.1 |
 | 振動 | — | tremor | 6 | — | the ship shaking (NO4_HWL_BACK/0006 "this tremor"); NO6_HW_4/0001, NO6_TOOLROOM/0003, SPACESHIP_HW/0004 take the same word; NO4_BAR_T/0177 (developer note) in context; 5 / 0 / 0 | R §20.1 |
+| カードキー | — | card key | 8 | 43 (items/010, blocked) | two words, never "keycard"; NO4_SHOP/0001 "This body had a card key."; 1 / 0 / 1 | R §21.1 |
+| 懐中電灯 | — | flashlight | 10 | 43 (items/006, blocked) | never "torch"; NO4_SHOP/0005 "A flashlight is lying here."; 1 / 0 / 1 | R §21.1 |
+| チェーン (alone) | — | chain | 5 | — | NO4_HWL_KAIDAN/0002 "secured tight with a chain"; チェーンカッター is its own row; 鎖 (NO4_BAR/0422 "chains") not fixed; 1 / 0 / 0 alone | R §21.1 |
 
 ## 4. Classes, units, system terms
 | Source | Variants | Target | Cols | Cap | Note | Ruling |
@@ -172,7 +178,7 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | うう | — | Uuh (one "u" per う, "h" closing) | 3 | SCN047A/05 うう…。 → "Uuh…"; ううむ (NO3_CHAPEL/0119) is another word; 0 / 1 / 0 | R §17.1 |
 | 哺乳類 | — | mammal(s) | 7 (6) | Miller's science talk: NO4_TOOL_ROOM/0017, 0019, 0022, 0029, 0031, 0033, 0034, 0037, 0064; 9 / 0 / 0 | R §18.1 |
 | 感覚器官 | — | sensory organs | 14 | NO4_TOOL_ROOM/0035, 0037; 2 / 0 / 0 | R §18.1 |
-| 解剖 (する) | — | dissect / dissection | 7 / 10 | NO4_TOOL_ROOM/0011 "dissecting", NO4_HWL_FRONT/0001 "dissection" (#18); never "autopsy"; 2 / 0 / 0 | R §18.1 |
+| 解剖 (する) | — | dissect / dissection | 7 / 10 | NO4_TOOL_ROOM/0011 "dissecting", NO4_HWL_FRONT/0001 "the monster's dissection" (both shipped); never "autopsy"; 2 / 0 / 0 | R §18.1, §21.1 |
 | 生物 | 全生物 | organism(s); 全生物: all organisms | 8 (9); 13 | Miller's word, kept apart from 生き物 "creature"; NO4_TOOL_ROOM ×8; 新種の生物 (NO4_BAR/0457 "a new species") and 生物としての観点 (0021 "Biologically") in context; 海洋生物学者 is §2; 9 / 0 / 0 | R §18.1 |
 | 生命 · 生命体 (an organism) | — | life form | 9 | no hyphen; 優秀な生命 (NO4_TOOL_ROOM/0033), 恐るべき生命体 (0041); 生命 as "life" (NO4_BAR/0216, NO4_HWR_FRONT/0062–0063, SCN038D/08) and 生命力 in context; 2 / 0 / 0 | R §18.1 |
 | 利点 | — | advantage(s) | 10 (9) | NO4_TOOL_ROOM/0017, 0019, 0031, 0064; 4 / 0 / 0 | R §18.1 |
@@ -210,11 +216,6 @@ so; the reviewer moves the row up into its section in the integration commit. --
 | Source | Variants | Proposed | Alternatives | Where seen | Wave |
 |---|---|---|---|---|---|
 | 無線室 | — | the radio room | — | NO6_BRIDGE/0001, 0006; rooms/107, items/011, hints/001–002 (cap 14 as a room name); 2 / 0 / 4 | 1 |
-| カードキー | — | card key | keycard | NO4_SHOP/0001; items/010 (item name, F-006); 1 / 0 / 1 | 5 |
-| 両替所 | 両替所のカウンター | the currency exchange; …のカウンター: the exchange counter | the exchange desk | NO4_P_OFFICE/0012; frame **not** parallel with 売店 (R §20.1): #18 keeps `This seems to be the exchange counter.`; 1 / 0 / 0 | 5 |
-| 生存者 | — | survivor(s) — same word as 生き残り (§2) | — | NO4_HWL_FRONT/0008; 1 / 0 / 0 | 5 |
-| 乗組員 | — | crew member(s); the crew | — | NO4_STORAGE/0004; 1 / 0 / 0 | 5 |
-| 懐中電灯 | — | flashlight | torch | NO4_SHOP/0005; items/006 (item name, F-006); 1 / 0 / 1 | 5 |
 
 ## 10. Open questions
 <!-- one line each, with the FLAGS id. A closed question is deleted here; its answer stays in rulings.md. -->

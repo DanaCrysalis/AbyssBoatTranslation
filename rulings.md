@@ -1945,3 +1945,124 @@ Census counts are rows per store (script / scene / system), from the reviewer's 
 - **Phrase families for later units, by hand:** 切り刻 and 無残 (§20.1); 鍵が掛かって → "This door is locked." (ENTRANCE/0001; #18 HWL_FRONT/0009 "Seems this door is locked." agrees).
 - **Sibling #18 (head 0e3bb89):** NO4_SHOP/0005 "when the hull rolled over" agrees on 船体 and 回転. NO4_P_OFFICE/0012 keeps its wording (§20.1).
 - Glossary: none.
+
+## Unit script NO4.b02 (PR #18, MERGED, 2026-10-26)
+
+A bundle of seven whole small rooms:
+- HWL_FRONT: the monster's dissection, and the run when "he" shows up.
+- HWL_KAIDAN: the chained stairs to Deck 3 and the barricade.
+- HWR_BACK: the door they came in by.
+- MACHINE: the smashed air tanks and the save point.
+- P_OFFICE: the shot bodies and Wolg's reading of the killer.
+- SHOP: the card key and the flashlight.
+- STORAGE.
+
+Reviewed twice:
+- **Round 0** (0e3bb89, merged with main 963e300 for review): CHANGES, two findings. Both were hedges dropped where the geometry did not force it, the pattern of R §20.3 (§21.3).
+- **Round 1** (f27559f, merged with main 1d0e120 for review): MERGE, squash aa4badb. `git diff 0e3bb89 f27559f` changes exactly `:43` and `:49`, applying the findings verbatim.
+
+Figures:
+- **Containers** (MEASURE). All seven rooms are complete:
+
+  | File | Bytes | Free | Tokens | Rows |
+  |---|---|---|---|---|
+  | NO4_HWL_FRONT.SCR | 1,838 | 63,697 | 41 | 11/11 |
+  | NO4_HWL_KAIDAN.SCR | 981 | 64,554 | 35 | 6/6 |
+  | NO4_HWR_BACK.SCR | 643 | 64,892 | 33 | 2/2 |
+  | NO4_MACHINE.SCR | 529 | 65,006 | 32 | 5/5 |
+  | NO4_P_OFFICE.SCR | 1,507 | 64,028 | 50 | 12/12 |
+  | NO4_SHOP.SCR | 787 | 64,748 | 38 | 6/6 |
+  | NO4_STORAGE.SCR | 611 | 64,924 | 33 | 4/4 |
+
+- **Pages.** At most 4 rows per page (UNITCHECK, 46 rows, 0 violations). The whole store: 914 rows, 0 violations.
+- **Duplicates.** CHECK compared 99 duplicate pairs and 7 tag-variant pairs. Without the unit file it compares 95 and 7, so the unit adds 4: the save prompt, Save, Don't save, and the schedule notice.
+  - The reviewer's census made 287,868 comparisons: 46 rows × every dump row, at three levels (exact; `{p}{w}{br}` stripped; `【Name】` stripped, ！？ → ⁉, final 。！？ dropped).
+  - It found 65 hits: 37 translated and identical, 28 untranslated, 0 divergent (§21.4).
+- **Codes.** The authored `{p}{w}{br}` sequence matches the source's on 45 rows. The exception is `:35 P_OFFICE/0008`, with one `{p}` added (§21.3). The `…`/`‼`/`⁉` counts match. The unit has no `{w}` and no `──`.
+- **F-011 wrap scan.** 121 wrapped lines: no lone "a"/"an"/"I". The only one-word row is the `Save` choice. Every authored-`{br}` line is ≤ 27 (`len()`).
+- **F-012.** The one `+` row, `:20 KAIDAN/0006`, follows a `{br}` ending.
+
+Census counts are rows per store (script / scene / system), from the reviewer's grep of `dumps/` on 2026-10-26. Line citations use PROJECT.md §7's numbering in `tl/script/NO4.b02.tsv` (line = row order + 3).
+
+### 21.1 Terms promoted from §9, and one added
+- **両替所** (variant 両替所のカウンター) → `the currency exchange`; 両替所のカウンター → `the exchange counter` (21; 20).
+  - Census: 1 / 0 / 0.
+  - Binds `:39 P_OFFICE/0012` `This seems to be the exchange counter.{br}Hard to tell what's inside.{p}`. That is exactly the frame R §20.1 fixed: not parallel with 売店's `The shop counter, it seems.`, because each row takes the literal wording that orphans no word.
+  - Glossary: §2 row added; §9 row removed.
+- **カードキー** → `card key` (8). Census: 1 / 0 / 1 (NO4_SHOP/0001; items/010, blocked, F-006).
+  - Binds `:40` "This body had a card key." The item name takes the same words.
+  - Glossary: §3 row added; §9 row removed.
+- **懐中電灯** → `flashlight` (10). Census: 1 / 0 / 1 (NO4_SHOP/0005; items/006, blocked).
+  - "flashlight" over "torch" for the American setting (Philadelphia, R §1.9).
+  - Binds `:44`.
+  - Glossary: §3 row added; §9 row removed.
+- **生存者** → `survivor(s)`, the same word as 生き残り. Census: 1 / 0 / 0.
+  - Binds `:11 HWL_FRONT/0008` "there may be no survivors left…".
+  - Glossary: §2 row added; §9 row removed.
+- **乗組員** (variant 乗組員の制服) → `crew member(s)`, `the crew`; 乗組員の制服 → `crew uniforms`.
+  - Census: 1 / 0 / 0.
+  - It means the ship's own crew. The salvagers are サルベージャー.
+  - Binds `:49 STORAGE/0004` "Inside are crew uniforms."
+  - Glossary: §2 row added; §9 row removed.
+- **チェーン** (alone) → `chain` (5), new.
+  - Census: チェーン 3 / 0 / 1, of which 2 / 0 / 1 are チェーンカッター (R §11.1), so alone it is 1 / 0 / 0.
+  - Binds `:16 KAIDAN/0002` "secured tight with a chain".
+  - 鎖 (NO4_BAR/0422 "chains") is another word and is not fixed. A grep for 鎖 also hits 封鎖, "sealed off" at `:15`.
+  - Glossary: §3 row added.
+- **解剖** (R §18.1) → `the monster's dissection` at `:4 HWL_FRONT/0001`. This agrees with NO4_TOOL_ROOM/0011 "dissecting".
+  - Glossary: §6 note updated (both rows shipped).
+- **Conformance:**
+  - 怪物 and 化け物 → "monster"; 虫 → "bugs" (R §16.1); ボンベ → "air tanks" (R §14.1); バリケード → "barricade", 撤去 → "clear" and 道具 → "a tool" (R §11.1).
+  - 第３デッキ → "Deck 3"; フロア and フロアー → "floor"; 装備 → "gear"; 死体 → "body"; 乗客 → "passengers"; 人間 → "humans".
+  - 船体 → "the hull" and 回転 → "rolled over", agreeing with NO4.b01; エントランスホール in lowercase; ヤツ → "he".
+  - The save prompt, Save and Don't save as §4 and §6.
+
+### 21.2 Speakers (PR Flag 4)
+- These are named from content (F-009). None of the seven rooms has a `_T` draft, and every line is speaker-neutral in English.
+  - HWL_FRONT/0001 is spk=- but spoken (ぞ).
+  - HWL_FRONT/0002–0003 say 俺 and leave John to the dissection.
+  - HWL_FRONT/0004–0006 read as Oakland, who leads the run.
+  - P_OFFICE/0001–0008 read as Wolg: the ex-policeman's ballistics and his denial of the monster.
+  - KAIDAN/0002 やがる → "The damn thing's", per R §13.3.
+- Glossary: none. F-009 note added.
+
+### 21.3 Movable codes, wraps and readings (PR Flags 2, 3, 5)
+- **Round-0 findings, both hedges** (R §20.3's rule: a hedge stays unless the page forces it out).
+  - `:49 STORAGE/0004` 使えそうな物は無いようだ.
+    - Round 0 had "Nothing here looks usable.", the same English as `:24 MACHINE/0002` 使えそうな装備は何も無い, which has no ようだ.
+    - The source keeps the two forms apart: plain 無い at NO2_TOFE_ROOM/0005 and NO3_MEDICALROOM/0001; 無いようだ at NO2_MAINSTORAGE/0030 and NO3_STORAGE/0002.
+    - Now `There seems to be nothing that looks usable.` (wrapped 25 / 18).
+    - Later rows of the family take "There seems to be nothing that looks usable" for 使えそうな物は無いようだ, and "No … looks usable" for plain 無い.
+  - `:43 SHOP/0004` 特に役立ちそうな物は見当たらない.
+    - Round 0 had "Nothing particularly useful is in sight.", which dropped the attributive そう.
+    - Shipped NO4_BAR/0226 役に立ちそうな ("any medicine that might help") and this unit's `:10` 手がかりになりそうな ("might be a clue") both keep it.
+    - Now `Nothing in sight looks particularly useful.` (22 / 20). "Nothing that looks particularly useful is in sight." orphans "sight.".
+- **`{p}` added** at `:35 P_OFFICE/0008`, after "…easier for us to act, too.", a sentence boundary.
+  - It is forced: without it the message wraps to 5 rows (26/26/26/27/27). It now runs 3 + 2.
+  - Flagged (PR Flag 2).
+- **Wording for geometry (PR Flag 3).** The reviewer confirmed that none of these is an unforced step-5 compression, and each keeps its hedge:
+  - "I'm bad with bugs, you see." (でな)
+  - "Seems this door is locked."
+  - "There seems to be no going on without a tool to clear the barricade."
+  - "A real clever one." (sarcastic 大したお利口さん)
+  - "This seems to be the exchange counter." (§21.1)
+- **Readings accepted (PR Flag 5):**
+  - `:33 P_OFFICE/0006` 口径は９ミリ → "Nine-millimeter caliber.": a measurement spelled out per R §1.4. A caliber is not a name, as deck and cabin numbers are.
+  - `:32 0005` 人間の仕業 → "the work of humans": generic, ahead of 0007's "Can't say how many".
+  - `:22 HWR_BACK/0002` 浸入 → "the door we used to get into the ship": the sense of 侵入, a suspected source typo (F-024).
+  - `:45 SHOP/0006` 『本日の船内イベント案内』 → `"Today's Shipboard Events," it reads.` The notice title carries 案内, and "Guide" would add nothing, so this is not a dropped fact. NO5_BANK/0005 takes the same words.
+  - `:36 0009` "Both palms have holes put through them." keeps the passive.
+- Glossary: none.
+
+### 21.4 Recurrences (PR Flag 6)
+- **Translated, identical:**
+  - HWL_FRONT/0011 = NO4_HWR_FRONT/0101, byte for byte (R §14.1).
+  - MACHINE/0001, s03 and s04 = the 12 NO4_BAR save prompts and choices.
+- **Untranslated twins, which CHECK pairs once translated:**
+  - HWL_FRONT/0011 = NO6_HW_1/0003 = NO6_HW_2/0006 = NO6_HW_2/0010.
+  - SHOP/0006 = NO5_BANK/0005.
+  - The NO3_CHAPEL save rows: 0039, 0049, 0070, 0079, 0111, 0114, 0129, 0130; s09–s35.
+- **Phrase families for later units, by hand:**
+  - 使えそうな物 … 無い / 無いようだ / 見当たらない(ようだ) (§21.3): NO1_CONTROLROOM/0002, NO1_STORAGE/0001, NO2_MAINSTORAGE/0030, NO2_TOFE_ROOM/0005, NO3_MACHINE/0001, NO3_MEDICALROOM/0001–0003, NO3_STORAGE/0002, NO5_BANK/0007, NO6_STORAGE/0002.
+  - 銃で撃たれて死んでいる → "Shot dead with a gun." (`:37`, `:38`).
+- Glossary: none.
