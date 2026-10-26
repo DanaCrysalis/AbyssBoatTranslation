@@ -1,0 +1,49 @@
+# unit: script/NO4.b02
+# rows: 46
+# columns: id <TAB> context <TAB> source <TAB> target (empty target = untranslated)
+NO4_HWL_FRONT/0001	msg spk=-	ジョン、怪物の解剖が気になるなら見ていてもいいぞ。	John, if you're curious about the monster's dissection, you can watch.
+NO4_HWL_FRONT/0002	msg spk=0	俺は虫は苦手でな。	I'm bad with bugs, you see.
+NO4_HWL_FRONT/0003	msg spk=1	後は頼むぞジョン。{br}俺は先に戻らせてもらうよ。	I'll leave it to you, John.{br}I'll be heading back first.
+NO4_HWL_FRONT/0004	msg spk=0	どうした、ジョン⁉{br}何かあったのか？	What's wrong, John⁉{br}Did something happen?
+NO4_HWL_FRONT/0005	msg spk=0	なに、ヤツがでたのか‼	What, he showed up‼
+NO4_HWL_FRONT/0006	msg spk=0	よし、逃げるぞ‼{br}ジョン、ジュディ、ついて来い！	Right, let's run‼{br}John, Judy, follow me!
+NO4_HWL_FRONT/0007	msg spk=1	ジョン、ここまでに何か手がかりになりそうなものは見つかっていないか？{p}	John, have you found anything so far that might be a clue?{p}
+NO4_HWL_FRONT/0008	msg spk=0	そうか…。先程から全く人の気配を感じないし、この分だと生存者はもういないかもしれんな…。	I see… I haven't sensed any sign of people for a while now, so at this rate there may be no survivors left…
+NO4_HWL_FRONT/0009	msg spk=1	このドアは鍵が掛かっているようだ。{p}	Seems this door is locked.{p}
+NO4_HWL_FRONT/0010	msg spk=1	ジョン、どこへ行くつもりだ？まだこのフロアの調査は終わっていないぞ。	John, where do you think you're going? We haven't finished searching this floor yet.
+NO4_HWL_FRONT/0011	msg spk=0	もう起こることの無い、船内イベントのスケジュール表が張ってある。{p}	A schedule of shipboard events that will never take place now is posted here.{p}
+NO4_HWL_KAIDAN/0001	msg spk=-	見ろ、ジョン。この先が第３デッキに行く階段みたいなんだが、封鎖されちまってる。	Look, John. The stairs to Deck 3 seem to be up ahead, but they've been sealed off.
+NO4_HWL_KAIDAN/0002	msg spk=0	チェーンでガッチリ固定されてやがる。ここを開けるのは無理そうだな。	The damn thing's secured tight with a chain. Doesn't look like we can open it.
+NO4_HWL_KAIDAN/0003	msg spk=0	ともかく、引き続きこのフロアーの捜索を続けよう。	Anyway, let's carry on searching this floor.
+NO4_HWL_KAIDAN/0004	msg spk=1	このフロアは全部調べたし、とりあえず報告に戻るとするか。	We've checked this whole floor, so let's head back and report for now.
+NO4_HWL_KAIDAN/0005	msg spk=0	バリケードが設置されている。{br}	A barricade is in place.{br}
+NO4_HWL_KAIDAN/0006	msg spk=0 +	バリケードを撤去するための道具がないと先には進めそうにない。{p}	There seems to be no going on without a tool to clear the barricade.{p}
+NO4_HWR_BACK/0001	msg spk=1	何をしているジョン！どんな危険が潜んでいるかわからん。単独行動は避けるんだ。{p}	What are you doing, John! There's no telling what dangers are lurking. Avoid going off on your own.{p}
+NO4_HWR_BACK/0002	msg spk=1	船内に浸入するために使用した扉だ。{br}装備もなしに開けるわけにはいかない。{p}	It's the door we used to get into the ship.{br}Opening it without our gear is out of the question.{p}
+NO4_MACHINE/0001	msg spk=-	ここまでの状況をセーブできます。セーブしますか？	You can save your progress so far. Do you want to save?
+NO4_MACHINE/0002	msg spk=-	何者かによって破壊されたボンベがある。{br}使えそうな装備は何も無い。{p}	There are air tanks here, destroyed by someone.{br}No gear here looks usable.{p}
+NO4_MACHINE/0003	msg spk=-	機械は正常に動いているようだ。{p}	The machinery seems to be running normally.{p}
+NO4_MACHINE/s03	choice	セーブする	Save
+NO4_MACHINE/s04	choice	セーブしない	Don't save
+NO4_P_OFFICE/0001	msg spk=-	ここも随分派手にやられている。…ん？{p}	This place has been badly torn up too. …Hm?{p}
+NO4_P_OFFICE/0002	msg spk=-	こいつを見ろ…。この部屋の死体は様子が違う。{p}	Look at this… The bodies in this room are different.{p}
+NO4_P_OFFICE/0003	msg spk=0	ほかの部屋の連中は滅茶苦茶に引き裂かれて死んでいたが、この部屋の連中は撃たれて死んでいる。{p}	The people in the other rooms were torn to shreds, but the ones in this room were shot dead.{p}
+NO4_P_OFFICE/0004	msg spk=0	さあな。化け物とやらは銃も扱えるらしい。大したお利口さんだ。	Who knows. Seems this so-called monster can handle guns too. A real clever one.
+NO4_P_OFFICE/0005	msg spk=0	当然のことだな。化け物なんて存在しない。人間の仕業だ。	Naturally. There's no such thing as monsters. This is the work of humans.
+NO4_P_OFFICE/0006	msg spk=0	口径は９ミリ。一発で仕留めてるところを見るに、相手はかなりの熟練者だ。	Nine-millimeter caliber. Judging by the one-shot kills, whoever did this is highly skilled.
+NO4_P_OFFICE/0007	msg spk=0	数まではわからんな。これだけの人数をひとりで片づけることも、決して無理な相談じゃない。	Can't say how many. Even dealing with this many people single-handed is by no means impossible.
+NO4_P_OFFICE/0008	msg spk=0	これで俺たちの敵のビジュアルが浮かんできた。これでこっちも動きやすくなる。さあ、残りの部屋も調べて戻るぞ。	Now we've got a picture of our enemy. That'll make it easier for us to act, too.{p}Right, let's check the rest of the rooms and head back.
+NO4_P_OFFICE/0009	msg spk=1	眉間を撃たれて死んでいる。{br}両手のひらに穴が開けられている。{p}	Shot dead between the eyes.{br}Both palms have holes put through them.{p}
+NO4_P_OFFICE/0010	msg spk=1	銃で撃たれて死んでいる。{br}乗客同士で殺しあったようだ。{p}	Shot dead with a gun.{br}It seems the passengers killed each other.{p}
+NO4_P_OFFICE/0011	msg spk=1	銃で撃たれて死んでいる。{br}顔には何故か安堵の表情が窺える。{p}	Shot dead with a gun.{br}For some reason, the face wears a look of relief.{p}
+NO4_P_OFFICE/0012	msg spk=1	両替所のカウンターのようだ。{br}中の様子は良くわからない。{p}	This seems to be the exchange counter.{br}Hard to tell what's inside.{p}
+NO4_SHOP/0001	msg spk=-	この死体は、カードキーを所持していた。{p}	This body had a card key.{p}
+NO4_SHOP/0002	msg spk=-	他には何も持っていないようだ。{p}	There seems to be nothing else on it.{p}
+NO4_SHOP/0003	msg spk=-	事切れてからかなり経つようだ。{br}死体からは強烈な腐敗臭が漂っている。{p}	Seems it's been dead for quite a while.{br}A strong stench of decay drifts from the body.{p}
+NO4_SHOP/0004	msg spk=-	棚が倒れている。{br}特に役立ちそうな物は見当たらない。{p}	The shelves have toppled.{br}Nothing in sight looks particularly useful.{p}
+NO4_SHOP/0005	msg spk=-	懐中電灯が落ちている。{br}船体が回転した時に落ちてきたのだろうか。{p}	A flashlight is lying here.{br}Could it have fallen when the hull rolled over?{p}
+NO4_SHOP/0006	msg spk=-	『本日の船内イベント案内』と書かれている。{p}	"Today's Shipboard Events," it reads.{p}
+NO4_STORAGE/0001	msg spk=-	この部屋にも、何もなしか…。	Nothing in this room either…
+NO4_STORAGE/0002	msg spk=1	…エントランスホールの向こう側にも部屋があるはずだ。そっちも調査してみる必要があるな。{p}	…There should be rooms beyond the entrance hall too. We'll need to search those as well.{p}
+NO4_STORAGE/0003	msg spk=1	よし、行くぞ。ついて来いよ。{p}	Right, let's go. Follow me.{p}
+NO4_STORAGE/0004	msg spk=0	乗組員の制服が入っている。{br}使えそうな物は無いようだ。{p}	Inside are crew uniforms.{br}There seems to be nothing that looks usable.{p}
