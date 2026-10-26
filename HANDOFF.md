@@ -6,8 +6,8 @@ at the close commit (`CLAUDE.md` Rule 3). A fresh container may clone shallow wi
 preflight is `git fetch origin main && git checkout main && git reset --hard origin/main`.
 
 ## NEXT ACTION — always current, always a literal instruction
-> **Wave 5 coordinator:** #21, #20 MERGED. #19 round-1 re-review now (head 0a44a5c, same reviewer by SendMessage);
-> then #18 (fresh reviewer, unique review + integration branch names). `git pull --ff-only` after each.
+> **Wave 5 coordinator:** #21, #20, #19 MERGED. Review #18 b02 now (fresh reviewer, foreground, branches
+> review-w5-pr18 / integrate-w5-pr18); then close wave 5. `git pull --ff-only` after.
 
 ## Progress
 | Store | Done | Total | |
