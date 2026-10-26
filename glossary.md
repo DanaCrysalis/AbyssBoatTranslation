@@ -73,6 +73,7 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | ラウンジ | — | Lounge | 6 | — | capitalised, a sign entry; 3 / 0 / 0 | R §12.1 |
 | ビアー＆ラガーズ | 『ビアー＆ラガーズ』 | Beer & Lagers | 13 | — | the bar's name, capitalised; 4 / 0 / 0 (NO4_HWR_FRONT/0102 `"Beer & Lagers," it reads.`) | R §12.1 |
 | キャビン | キャビンＮＮＮＮ (rooms/*) | cabin; on the sign: Cabins; room names: Cabin NNNN | 5; 6; 10 | 14 (room names) | 部屋 stays "room" (R §1.6); 3 / 0 / 15 | R §1.6, §12.1 |
+| 売店 | 売店のカウンター | the shop; 売店のカウンター: the shop counter | 8; 16 | — | lowercase; NO4_HWL_BACK/0018 = NO4_HWL_BACK2/0014 `The shop counter, it seems.`; the 両替所 frame is not made parallel (R §20.1); 2 / 0 / 0 | R §20.1 |
 
 ## 3. Items, currency, mechanics
 | Source | Variants | Target | Cols | Cap | Note | Ruling |
@@ -100,6 +101,8 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | 刃物 | 鋭利な刃物 | blade; 鋭利な刃物: a sharp blade | 5; 13 | — | 3 / 0 / 0 (NO4_BAR/0439 "every blade"; NO4_4102/0001, NO6_BRIDGE/0020) | R §11.1 |
 | シャッター | 防水シャッター | shutter; 防水シャッター: watertight shutter | 7; 18 | 39 (hints/011, blocked) | lowercase; 31 / 1 / 1 (防水シャッター 3 / 0 / 0, the control panels NO3_MACHINE/0002, 0004, NO6_BRIDGE/0012) | R §13.1 |
 | ロッカー | ロッカールーム (rooms/086) | locker; room name: Locker Room | 6; 11 | 14 (rooms/086, F-006) | lowercase; NO4_TOOL_ROOM/0080 何も入っていない → "The locker is empty."; 空のようだ (NO5_LOCKERROOM/0005–0006) → "seems empty"; 7 / 0 / 1 | R §19.1 |
+| ワイヤーリフト | — | the wire lift | 13 | — | lowercase; NO4_ENTRANCE/0004, 0005; never "winch line"; 2 / 0 / 0 | R §20.1 |
+| 振動 | — | tremor | 6 | — | the ship shaking (NO4_HWL_BACK/0006 "this tremor"); NO6_HW_4/0001, NO6_TOOLROOM/0003, SPACESHIP_HW/0004 take the same word; NO4_BAR_T/0177 (developer note) in context; 5 / 0 / 0 | R §20.1 |
 
 ## 4. Classes, units, system terms
 | Source | Variants | Target | Cols | Cap | Note | Ruling |
@@ -116,7 +119,7 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 ## 6. Stock phrases and interjections
 | Source | Variants | Target | Cols | Note | Ruling |
 |---|---|---|---|---|---|
-| ヤツ | — | he / him / his | 2 / 3 / 3 | the monster or the killer only, never "it"; a type of person (〜なヤツ) in context | R §1.7 |
+| ヤツ | — | he / him / his | 2 / 3 / 3 | the monster or the killer, never "it"; a named person in context (NO4_HWL_BACK/0005 William → "his"); a type of person (〜なヤツ) in context | R §1.7, §20.3 |
 | 化け物 | 怪物 | monster | 7 | synonyms, one target; NO4_BAR/0083 has both: repeat "monster" | R §1.8 |
 | 殺人鬼 | — | the killer | 10 | "a … killer" with a modifier (いかれた殺人鬼); the 鬼 pun at NO4_HWR_FRONT_UP_T/0004 in context | R §4.1 |
 | じいさん | 爺さん · 爺 · じじい | old man | 7 | "Old man," at a sentence start; 爺 and じじい (pejorative) added 2026-10-06 | R §1.9, §3.3 |
@@ -176,6 +179,7 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | 成虫 | — | adult(s) | 5 (6) | the grown form of the creature: NO4_TOOL_ROOM/0070 "the adult", 0075 "become adults"; 虫 alone is "bug"; 2 / 0 / 0 | R §19.1 |
 | 幼生体 · サナギ | — | larva · pupa ("the pupa stage") | 5 · 4 | Miller's life-stage terms, NO4_TOOL_ROOM/0072 only; never "chrysalis"; 1 / 0 / 0 each | R §19.1 |
 | クローン羊 | — | the cloned sheep | 16 | NO4_TOOL_ROOM/0053 only; no name added ("Dolly"); 1 / 0 / 0 | R §19.1 |
+| 切り刻む · 無残に | 切り刻まれた · 切り刻まれている · 切り刻まれ · 無惨 | hacked to pieces · brutally (無残に切り刻まれた死体 → "a body, brutally hacked to pieces") | 16 · 8 | the bodies: NO4_4001/0001, NO4_4102/0001, 0004; 無惨な殺され方 "such brutal killings" (NO4_MACHINER90/0045); 見るも無残 (NO3_MEDICALROOM/0006) in context; 切り刻 10 / 0 / 0, 無残 6 / 0 / 0, 無惨 1 / 0 / 0 | R §20.1 |
 
 ## 7. Register per character
 | Character | Register | Contractions? | Markers | Ruling |
@@ -206,10 +210,8 @@ so; the reviewer moves the row up into its section in the integration commit. --
 | Source | Variants | Proposed | Alternatives | Where seen | Wave |
 |---|---|---|---|---|---|
 | 無線室 | — | the radio room | — | NO6_BRIDGE/0001, 0006; rooms/107, items/011, hints/001–002 (cap 14 as a room name); 2 / 0 / 4 | 1 |
-| ワイヤーリフト | — | the wire lift | the winch line | NO4_ENTRANCE/0004, 0005; 2 / 0 / 0 | 5 |
 | カードキー | — | card key | keycard | NO4_SHOP/0001; items/010 (item name, F-006); 1 / 0 / 1 | 5 |
-| 売店 | 売店のカウンター | the shop; 売店のカウンター: the shop counter | the kiosk | NO4_HWL_BACK/0018 = NO4_HWL_BACK2/0014 (byte-identical sources, one target); 2 / 0 / 0 | 5 |
-| 両替所 | 両替所のカウンター | the currency exchange; …のカウンター: the exchange counter | the exchange desk | NO4_P_OFFICE/0012 (same frame as the 売店 row: keep the wording parallel); 1 / 0 / 0 | 5 |
+| 両替所 | 両替所のカウンター | the currency exchange; …のカウンター: the exchange counter | the exchange desk | NO4_P_OFFICE/0012; frame **not** parallel with 売店 (R §20.1): #18 keeps `This seems to be the exchange counter.`; 1 / 0 / 0 | 5 |
 | 生存者 | — | survivor(s) — same word as 生き残り (§2) | — | NO4_HWL_FRONT/0008; 1 / 0 / 0 | 5 |
 | 乗組員 | — | crew member(s); the crew | — | NO4_STORAGE/0004; 1 / 0 / 0 | 5 |
 | 懐中電灯 | — | flashlight | torch | NO4_SHOP/0005; items/006 (item name, F-006); 1 / 0 / 1 | 5 |

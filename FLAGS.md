@@ -148,6 +148,10 @@ NO4_BAR.p06 (PR #9): 0294–0351 likewise from content; 0308 and 0311 (Oakland o
 0349 (probably William: やがる, and NO4_BAR/0363 has them meet him in a corridor) stay uncertain and
 are rendered speaker-neutral; spk=4 carries Wolg (0294), Oakland (0295) and Miller (0309), spk=5
 Wolg (0320) and Oakland (0326) (rulings R §7.2).
+NO4.b01 (PR #19): NO4_4101/4102 and ENTRANCE spk=0/1 are Oakland or Wolg (4101/0002 お前 to John
+fits Oakland); NO4_HWL_BACK/0001–0002 unattributed (0002 Heming, Wolg or Oakland); 0005, 0007 Heming;
+0008 shares spk=5 with 0007 but answers it; HWL_BACK2/0006 answers 0005 on the same spk=5. All
+rendered speaker-neutral (rulings R §20.2).
 NO4_BAR.p07 (PR #8): 0352–0409 likewise from content; 0365, 0378–0380, 0383, 0385, 0387, 0389,
 0391, 0402, 0405, 0408 and 0409 stay uncertain and are rendered speaker-neutral; 0370, 0404, 0406
 (probably Wolg), 0381, 0407 (probably Oakland) and 0403 (probably Heming) are likely but unconfirmed

@@ -1851,3 +1851,97 @@ Census counts are rows per store (script / scene / system), from the reviewer's 
   - 0060 ↔ NO3_NO4/0007, 0061, and NO4_BAR_T/0068 (labelled, F-013).
   - No other row of the unit recurs in any dump.
 - Glossary: none.
+
+## Unit script NO4.b01 (PR #19, MERGED, 2026-10-26)
+
+A bundle of six whole small rooms: two bodies hacked to pieces (4001, 4102), the drop to the lower decks by wire lift (ENTRANCE), William's death and the hull rolling over (HWL_BACK 0001–0009), Judy alone in the corridor (0010–0018), and the regrouped party (HWL_BACK2). Reviewed twice:
+- **Round 0** (44cd515, merged with main 74c4008 for review): CHANGES, one finding. `:15 NO4_ENTRANCE/0004` 降りられそうもない → "there's no getting down" dropped the そう hedge, and the geometry did not force it (§20.3).
+- **Round 1** (0a44a5c, merged with main c035540 for review): MERGE, squash 77be2cb. `git diff 44cd515 0a44a5c` changes exactly `:15`, applying the finding's text verbatim.
+
+Figures:
+- **Containers** (MEASURE). All six rooms are complete:
+
+  | File | Bytes | Free | Tokens | Rows |
+  |---|---|---|---|---|
+  | NO4_4001.SCR | 311 | 65,224 | 29 | 1/1 |
+  | NO4_4101.SCR | 709 | 64,826 | 33 | 3/3 |
+  | NO4_4102.SCR | 654 | 64,881 | 36 | 4/4 |
+  | NO4_ENTRANCE.SCR | 1,067 | 64,468 | 38 | 5/5 |
+  | NO4_HWL_BACK.SCR | 1,503 | 64,032 | 52 | 18/18 |
+  | NO4_HWL_BACK2.SCR | 1,357 | 64,178 | 52 | 14/14 |
+
+- **Pages.** At most 4 rows per page (UNITCHECK, 45 rows, 0 violations). The whole store: 868 rows, 0 violations.
+- **Ratio.** 2,171 ÷ 931 = 2.33 (PR figure, round 0).
+- **Duplicates.** CHECK compared 95 duplicate pairs and 7 tag-variant pairs; without the unit file it compares 83 and 7, so the unit adds 12 pairs.
+  - The reviewer's census made 93,870 comparisons: 45 rows × every other dump row, at three levels (exact; `{p}{w}{br}` stripped; `【Name】` stripped, ！？ → ⁉, final 。！？ dropped).
+  - It found 27 hits with 0 divergences (§20.4).
+- **Codes.** The authored `{p}{w}{br}` sequence is identical to the source's on all 45 rows, and the `…`/`‼`/`⁉` counts match. The unit has no `{w}` and no `──`.
+- **F-011 wrap scan.** 120 wrapped lines: no lone "a"/"an"/"I", and no split title. Every authored-`{br}` line is ≤ 27 (`len()`). The one one-word row is `:23 HWL_BACK/0007` "something!" (§20.3).
+- **F-012.** The only `+` rows are the sign rows, each after a `{br}` ending.
+
+Census counts are rows per store (script / scene / system), from the reviewer's grep of `dumps/` on 2026-10-26. Line citations use PROJECT.md §7's numbering in `tl/script/NO4.b01.tsv` (line = row order + 3).
+
+### 20.1 Terms promoted from §9, added, and the counter frame
+- **ワイヤーリフト** → `the wire lift` (13).
+  - Census: 2 / 0 / 0 (NO4_ENTRANCE/0004, 0005).
+  - Binds `:15 0004` "without the wire lift" and `:16 0005` "use the wire lift here".
+  - Glossary: §3 row added; §9 row removed.
+- **売店** (variant 売店のカウンター) → `the shop`; 売店のカウンター → `the shop counter` (8; 16).
+  - Census: 2 / 0 / 0. HWL_BACK/0018 = HWL_BACK2/0014 byte for byte, and the targets are identical.
+  - Binds `:34`, `:48` `The shop counter, it seems.{br}Can't see inside from here.{p}`.
+  - Glossary: §2 row added; §9 row removed.
+- **The 〜のカウンターのようだ frame is not made parallel** with #18's NO4_P_OFFICE/0012 両替所のカウンターのようだ。. The wave-5 seed asked for parallel wording; geometry rules it out. Each row takes the literal wording that avoids a one-word row (R §1.12 rule 1), measured with `codec.wrap(…, 28)`:
+  - b01: "This seems to be the shop | counter." and "This must be the shop | counter." each orphan "counter.". "Looks like the shop counter." is 28 before an authored `{br}`. So b01 keeps `The shop counter, it seems.` (27).
+  - b02: "The exchange counter, it | seems." orphans "seems.". So #18 keeps `This seems to be the exchange counter.{br}Hard to tell what's inside.{p}` ("This seems to be the | exchange counter.") unchanged.
+  - Both keep the ようだ hedge and the seeded term. The sources are not duplicates, and their second sentences differ in the source (見えない vs 良くわからない).
+  - Glossary: the §9 両替所 row's note is corrected to say so. #18 promotes it.
+- **切り刻む · 無残に** → `hacked to pieces` · `brutally` (16 · 8), new.
+  - Census: 切り刻 10 / 0 / 0, 無残 6 / 0 / 0, and the variant 無惨 1 / 0 / 0.
+  - Binds:
+    - `:4 4001/0001` "It's a body, brutally hacked to pieces."
+    - `:8 4102/0001` "It's been hacked to pieces with what looks like a sharp blade." (鋭利な刃物, R §11.1)
+    - `:11 4102/0004` "A body lies here, brutally hacked to pieces."
+  - Shipped NO4_MACHINER90/0045 この無惨な殺され方 "such brutal killings" agrees.
+  - Later rows take the same words: NO2_CABIN_2101/0001, 2103/0001, NO2_THIRDSTORAGE/0009, NO3_CABIN_3003/0003, NO3_CABIN_3105/0008, NO5_BANK/0008, NO6_BRIDGE/0020. 見るも無残 (NO3_MEDICALROOM/0006) is translated in context.
+  - 死体が転がっている (6 / 0 / 0) → "A body lies here" is not fixed.
+  - Glossary: §6 row added.
+- **振動** → `tremor` (6), new.
+  - Census: 5 / 0 / 0. "vibration" leaves "travels⁉" alone on a row at `:22 HWL_BACK/0006`, so the step-4 synonym is forced.
+  - "tremor" fits the later rows too: NO6_HW_4/0001 先刻の振動, NO6_TOOLROOM/0003 今の振動, SPACESHIP_HW/0004 この振動. NO4_BAR_T/0177 (a developer note) is translated in context.
+  - Glossary: §3 row added.
+- **Conformance:** エントランスホール lowercase in dialogue at `:8`, and "Entrance Hall" on the sign. 死体 "body", 化け物 "monster", 乗客 "passengers", シャッター "shutter", 装備 "gear", 船体 "the hull", 回転 "roll over", and the deck sign as R §12.1.
+
+### 20.2 Speakers (PR Flag 5)
+- These are named from content (F-009), and every line is speaker-neutral in English.
+  - 4101, 4102 and ENTRANCE (spk=0/1): Oakland or Wolg. 4101/0002 お前 to John fits Oakland. 4102/0001 is spk=- but spoken (だな).
+  - HWL_BACK/0005 and 0007: Heming, as NO4_MACHINER90/0096. 0008 なんだと⁉ shares spk=5 but answers 0007.
+  - HWL_BACK/0010–0018 (spk=2): Judy alone (ヤツよ, 逃げなきゃ), so 0011 and 0012 take "I".
+  - HWL_BACK2/0006 そうだな answers 0005 on the same spk=5.
+- Glossary: none. F-009 note added.
+
+### 20.3 Movable codes, wraps and readings (PR Flags 2–6, 8)
+- **Round-0 finding.** `:15 ENTRANCE/0004` 降りられそうもない keeps its hedge: `But from this height, it doesn't look like we can get down without the wire lift. John, would you go on ahead?{p}`, wrapping 24 / 28 / 27 / 28, 4 rows.
+  - The room hedges 0002 降りられそうだ and 0003 なさそうだな. Shipped NO4_MACHINER90/0039 開きそうにない is "Doesn't look like it'll open.".
+  - The round-0 "there's no getting down" stated an expectation as fact and was not forced by the page. It also left "John," at a row end apart from its question.
+- **Binding `:23 HWL_BACK/0007`** (R §15.4): the first sentence reuses NO4_MACHINER90/0096's words. Each glyph follows its own source: 0007 `！` → `!`, 0096 `‼` → `‼`. "something!" is a one-word row, accepted on R §15.3's measurement of the same candidates.
+- **Wording for geometry (PR Flag 3).** The reviewer confirmed none is an unforced step-5 compression:
+  - 最後まで "to the last", 本当なのか "Is that true…?" and これは "It's" are equally faithful.
+  - 振動 "tremor" is step 4, forced (§20.1).
+  - "isn't wasted", the two sentences of 0013, "You're all right too, John?" (27), and 4102/0004's participle after the verb (ordinary order, not step 6) are all fine.
+- **ヤツ = William** at `:21 HWL_BACK/0005` ヤツの意志 → "his will". The row's word is kept, and the §6 ヤツ note is extended to a named person in context. HWL_BACK/0010 and HWL_BACK2/0006 are the killer or monster → "him", as R §1.7.
+- **ー not carried** at `:25 HWL_BACK/0009` 誰かなんとかしろー‼ → "Somebody do something‼".
+  - Census: hiragana or kanji + ー is 2 / 1 / 0. The other two (ねー, NO4_BAR/0136, SCN046B2/06) are rough speech, not elongation, so this is the only shouted elongation.
+  - The ～ row covers ～ only, and ‼ carries the shout.
+- **Accepted:** 0005 ためにも → "If only so…"; 0012 外は海の中だ → "Outside is underwater." (= HWL_BACK2/0007).
+- Glossary: §6 ヤツ note extended.
+
+### 20.4 Recurrences (PR Flag 7)
+- **Translated, identical:**
+  - HWL_BACK/0008 `What⁉` = NO4_BAR/0245.
+  - The sign HWL_BACK/0014–0017 = HWL_BACK2/0010–0013 = NO4_HWR_FRONT/0097–0100.
+  - HWL_BACK/0013 = HWL_BACK2/0008 = 0009.
+  - HWL_BACK/0018 = HWL_BACK2/0014.
+- **Untranslated twin, which CHECK pairs once translated:** NO5_HW_R/0008 = HWL_BACK/0014 → `"Floor Information"{br}`.
+- **Phrase families for later units, by hand:** 切り刻 and 無残 (§20.1); 鍵が掛かって → "This door is locked." (ENTRANCE/0001; #18 HWL_FRONT/0009 "Seems this door is locked." agrees).
+- **Sibling #18 (head 0e3bb89):** NO4_SHOP/0005 "when the hull rolled over" agrees on 船体 and 回転. NO4_P_OFFICE/0012 keeps its wording (§20.1).
+- Glossary: none.
