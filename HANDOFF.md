@@ -23,8 +23,8 @@ Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEA
 | Unit | Branch | PR | State | Next |
 |---|---|---|---|---|
 | script NO5.b01 | `tl/script-NO5.b01` | — | translator dispatched 2026-10-26 (round 0); 429 stop, resumed 2026-10-30 | translator opens PR |
-| script NO6.b01 | `tl/script-NO6.b01` | — | translator dispatched 2026-10-26 (round 0); 429 stop, resumed 2026-10-30 | translator opens PR |
-| script NO6.b02 | `tl/script-NO6.b02` | — | translator dispatched 2026-10-26 (round 0); 429 stop, resumed 2026-10-30 | translator opens PR |
+| script NO6.b01 | `tl/script-NO6.b01` | #23 | PR open f179006; applying the coordinator's seed-wrap fix (Decisions) | translator pushes, then barrier |
+| script NO6.b02 | `tl/script-NO6.b02` | #22 | PR open e7b2766; applying the coordinator's seed-wrap fix (Decisions) | translator pushes, then barrier |
 | script NO3_CHAPEL.p01 | `tl/script-NO3_CHAPEL.p01` | — | translator dispatched 2026-10-26 (round 0); 429 stop, resumed 2026-10-30 | translator opens PR |
 
 ## Next up
@@ -70,6 +70,7 @@ Scene: none — store complete (wave 4). Four script units per wave (PROJECT.md 
 - Wave 3 stopped on the 5-hour session limit 2026-10-25 ~02:00 UTC (reviewer of #12, HTTP 429; reset 06:00) and resumed on the human's "continue" 06:50 UTC; the reviewer was resumed by `SendMessage`.
 - Wave 4 stopped on the 5-hour session limit 2026-10-25 ~07:50 UTC (reviewer of #14, HTTP 429; reset 11:40) and resumed on the human's "continue" 11:42 UTC; the reviewer was resumed by `SendMessage`.
 - Wave 5 stopped on the 5-hour session limit 2026-10-25 ~12:35 UTC (three translators, HTTP 429; reset 16:40) and resumed on the human's "continue" 2026-10-26 01:24 UTC; translators resumed by `SendMessage`.
+- Wave 6 seeds: four §9 cross-unit sentences wrapped badly (lone "a"/"I", one-word last rows — NO6.b02 Flag 3, NO6.b01 Flag 4). Coordinator replaced them before review, sent to all three NO5/NO6 translators: 鍵が掛かっていて… `It's locked, so the door won't open.{p}`; 水かさ… `The water… it keeps rising…{w}{br}Must hurry… it's dangerous…{p}`; 水が深すぎて… `The water's too deep… can't… brea… the…{p}`; シャッターで封鎖され(て)… `A shutter has sealed it off. There seems to be no going any further.{p}` (codec.wrap verified). The reviewer updates §9 at integration.
 - Wave 6 stopped on the 5-hour session limit 2026-10-26 ~02:20 UTC (all four translators, HTTP 429; reset 06:20) and resumed on the human's "continue" 2026-10-30 11:00 UTC; translators resumed by `SendMessage`, worktrees intact (drafts uncommitted).
 - Wave 2 stopped by the human ("stop for now", 2026-10-06 ~14:40 UTC) mid-review and resumed on "continue" 2026-10-25 01:05 UTC; translators resumed by `SendMessage` with worktrees intact.
 
