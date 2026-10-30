@@ -1,0 +1,34 @@
+# unit: script/NO3_NO4.p01
+# rows: 31
+# columns: id <TAB> context <TAB> source <TAB> target (empty target = untranslated)
+NO3_NO4/0001	msg spk=-	先程の事もあるし、安易に動き回るのは危険だ。{br}新しい拠点を探してくる。	After what happened earlier, it's dangerous to move around carelessly.{br}I'll go look for a new base.
+NO3_NO4/0002	msg spk=4	待て、ウォルグ。{br}お前はわしの側から離れるな。{br}探索はヘイミングとジョンで行け。	Wait, Wolg.{br}Don't you leave my side.{br}Heming and John, go search.
+NO3_NO4/0003	msg spk=2	…わかった。	…All right.
+NO3_NO4/0004	msg spk=5	ジョン、行こうか？	John, shall we go?
+NO3_NO4/0005	msg spk=5	…待って。私に行かせて。{br}ジョンと二人で行かせてほしいの…。	…Wait. Let me go.{br}Please let John and me go, just the two of us…
+NO3_NO4/0006	msg spk=1	おお、それがいい。{br}ヘイミング、お前も残っていろ！	Oh, that's a fine idea.{br}Heming, you stay here too!
+NO3_NO4/0007	msg spk=2	………。	………
+NO3_NO4/0008	msg spk=5	どういうつもりか知らんが、安全である保障はないぞ。{br}いいのか？	I don't know what you're thinking, but there's no guarantee it's safe.{br}Are you sure?
+NO3_NO4/0009	msg spk=4	…かまわないわ。	…I don't mind.
+NO3_NO4/0010	msg spk=1	頼んだぞ、ジョン。{br}一応マガジンの予備を渡しておく。{br}何かあったら発砲して知らせろ。	I'm counting on you, John.{br}I'll give you a spare magazine, just in case.{p}Fire a shot to let us know if anything happens.
+NO3_NO4/0011	msg spk=0	一通り見て回ったけど、新しい拠点になりそうなのは…教会くらいね。	We've had a look all around, but about the only place that could make a new base is… the chapel.
+NO3_NO4/0012	msg spk=0	じゃあ、皆を呼んできましょうか。	Well then, shall we go call everyone here?
+NO3_NO4/0013	msg spk=100	どうした、ジョン。{br}眠れないのか？	What is it, John?{br}Can't sleep?
+NO3_NO4/0014	msg spk=0	安心しろ。俺は元警官だ。{br}人を守るのには慣れている。	Relax. I'm an ex-policeman.{br}I'm used to guarding people.
+NO3_NO4/0015	msg spk=4	いや、違うな。俺は守れなかったんだ。{br}もっとも大切なものを……。	No, that's wrong. I couldn't protect it.{br}What mattered most to me……
+NO3_NO4/0016	msg spk=0	なにをだって？{br}…家族さ。	Protect what, you ask?{br}…My family.
+NO3_NO4/0017	msg spk=0	フッ、どうやら知らないようだな。{br}俺が警察を辞めた理由を……。	Heh, seems you don't know.{br}The reason why I quit the police force……
+NO3_NO4/0018	msg spk=4	お前がまだガキの頃だな。頭のいかれた殺人鬼がいてな。{w}{br}	This was when you were still a kid. There was a crazed killer around.{w}{br}
+NO3_NO4/0019	msg spk=4 +	俺の知っているだけでも、２２人殺した…。{w}{br}	He killed twenty-two people, at least that I know of…{w}{br}
+NO3_NO4/0020	msg spk=4 +	{br}	{br}
+NO3_NO4/0021	msg spk=4 +	その頃の俺はまだ若く、そして恐れを知らない無鉄砲な警官だった。{w}{br}	I was still young then, and a fearless, reckless cop.{w}{br}
+NO3_NO4/0022	msg spk=4 +	既に何度も手柄をあげていた俺は勢いに乗ってた。{w}{br}	I'd already made my mark many times over, and I was on a roll.{w}{br}
+NO3_NO4/0023	msg spk=4 +	ヤツの時も今までと同じだと思っていた。{w}{br}	I figured it'd be the same as always with him, too.{w}{br}
+NO3_NO4/0024	msg spk=4 +	いかれた殺人鬼など絶対に俺の手でぶち込んでやるってな。{w}{br}	That I'd lock up some crazed killer with my own hands, no matter what.{w}{br}
+NO3_NO4/0025	msg spk=4 +	{br}	{br}
+NO3_NO4/0026	msg spk=4 +	結果、俺はヤツをあと一歩のとこまで追い詰めた。{p}	As a result, I came within one step of cornering him.{p}
+NO3_NO4/0027	msg spk=4	だが、ヤツはとことん普通じゃなかった。{w}{br}	But he was abnormal through and through.{w}{br}
+NO3_NO4/0028	msg spk=4 +	{br}	{br}
+NO3_NO4/0029	msg spk=4 +	ある日、捜査から帰った俺は異変に気づいた。{w}{br}	One day I came home from the case to find something off.{w}{br}
+NO3_NO4/0030	msg spk=4 +	いつも出迎えてくれるワイフが来ない。{w}それに血の匂い…。{w}{br}	My wife, who always met me at the door, didn't come.{w}{br}And the smell of blood…{w}{br}
+NO3_NO4/0031	msg spk=4 +	俺は急いで家に飛び込んだ。{p}	I rushed into the house.{p}
