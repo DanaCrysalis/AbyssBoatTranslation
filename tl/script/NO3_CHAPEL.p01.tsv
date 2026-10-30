@@ -1,0 +1,65 @@
+# unit: script/NO3_CHAPEL.p01
+# rows: 62
+# columns: id <TAB> context <TAB> source <TAB> target (empty target = untranslated)
+NO3_CHAPEL/0001	msg spk=-	ここは…教会ね。{br}船の中にこんなに立派な教会があるなんて…。	This is… a chapel.{br}To think there's such a fine chapel inside a ship…
+NO3_CHAPEL/0002	msg spk=100	少し…いいかしら。	Just a moment… may I?
+NO3_CHAPEL/0003	msg spk=0	ジョン…教えてほしいの。{br}どうして、ウィリアムはあなたたちを助けたの？	John… please tell me.{br}Why did William save you and the others?
+NO3_CHAPEL/0004	msg spk=100	多くの人間たちは、自分が生き残るために他人の食料を奪ったわ。{br}	Many people stole food from others to save themselves.{br}
+NO3_CHAPEL/0005	msg spk=100 +	他人の命を奪ってまで生き続けようとしたの…{p}	They even killed others, trying to keep on living…{p}
+NO3_CHAPEL/0006	msg spk=100	自分のために、他人を犠牲にする。{br}ここでは、それが秩序だったのよ…。{p}	Sacrificing others for your own sake.{br}Here, that was the order…{p}
+NO3_CHAPEL/0007	msg spk=100	でも、ウィリアムは違った。{br}彼は他人のために、自分を犠牲にした。	But William was different.{br}He sacrificed himself for others' sake.
+NO3_CHAPEL/0008	msg spk=100	何故？{br}ウィリアムの行動は理解できないの。{p}	Why?{br}I can't understand what William did.{p}
+NO3_CHAPEL/0009	msg spk=100	ジョン、わかるのなら教えてほしいの。{p}	John, if you understand it, please tell me.{p}
+NO3_CHAPEL/0010	msg spk=0	…ごめんなさい。変なこと聞いて…。	…I'm sorry. Asking you such a strange thing…
+NO3_CHAPEL/0011	msg spk=100	行きましょう。	Let's go.
+NO3_CHAPEL/0012	msg spk=4	ここを新たな拠点として、まずは食料と生き残りを探す。{p}	We'll make this our new base, and start by looking for food and survivors.{p}
+NO3_CHAPEL/0013	msg spk=4	実際のところ、これ以上飲まず食わずで船内を探索することは危険だ。{p}	In fact, it's dangerous to explore the ship any longer without food or water.{p}
+NO3_CHAPEL/0014	msg spk=4	それに、この船で当分暮らすとしてもお互い協力し合うことも重要だ。{p}	Besides, if we're to live on this ship for a while, it's also important that we cooperate with each other.{p}
+NO3_CHAPEL/0015	msg spk=4	当分暮らすだと⁉	Live here for a while⁉
+NO3_CHAPEL/0016	msg spk=4	おかしいと思わんか？{br}もう４日目だというのに助けが来ない。{p}	Don't you find it strange?{br}It's already the fourth day, yet no help has come.{p}
+NO3_CHAPEL/0017	msg spk=4	上の連中に俺たちを救助できない理由ができたんだろう。{p}	The people up top must now have some reason they can't rescue us.{p}
+NO3_CHAPEL/0018	msg spk=4	理由だと？	A reason, you say?
+NO3_CHAPEL/0019	msg spk=2	それはこの船にありそうな気がするな。	I have a feeling the reason may lie with this ship.
+NO3_CHAPEL/0020	msg spk=5	この船がどうかしたのか？	What about this ship?
+NO3_CHAPEL/0021	msg spk=2	移動しているのかもしれん。	It may be moving.
+NO3_CHAPEL/0022	msg spk=5	仮に移動しているとするなら、止まるまでは手は出せんだろうな。	Supposing it is moving, they probably can't lift a finger until it stops.
+NO3_CHAPEL/0023	msg spk=4	だったらどうするというんだ⁉{br}死ぬまで虫かごに閉じこめられたままか⁉	Then what are we to do⁉{br}Stay locked in a bug cage until we die⁉
+NO3_CHAPEL/0024	msg spk=2	心配するな、俺たちが入り込めたんだ。{br}そのうちやってくるさ。	Don't worry, we made it in.{br}They'll come before long.
+NO3_CHAPEL/0025	msg spk=4	ふ、ふざけるな！	D-don't give me that!
+NO3_CHAPEL/0026	msg spk=4	どうあがいたって装備もなしに脱出はできん。{br}待つしかないんだ。{p}	However we struggle, there's no escaping without gear.{br}All we can do is wait.{p}
+NO3_CHAPEL/0027	msg spk=4	それには、ここで確実に生き延びる方法を見つける必要がある。{p}	To do that, we need to find a sure way to survive here.{p}
+NO3_CHAPEL/0028	msg spk=4	とりあえずは食料と生き残りを見つけることか…。	So for now, it's about finding food and survivors…
+NO3_CHAPEL/0029	msg spk=5	そのとおりだ。	Exactly.
+NO3_CHAPEL/0030	msg spk=4	まず俺とジョンで行く。	First, John and I will go.
+NO3_CHAPEL/0031	msg spk=4	駄目だ！{br}お前はここにいろ‼	No!{br}You stay here‼
+NO3_CHAPEL/0032	msg spk=2	いつまでもあんたのダダに付き合ってられない。{br}このまま待っていても、助かる可能性は低い。	I can't keep humoring your tantrums forever.{br}Even if we wait here, our chances of rescue are slim.
+NO3_CHAPEL/0033	msg spk=4	なんだと‼	What‼
+NO3_CHAPEL/0034	msg spk=2	…待って。{br}私とジョンが行くわ。いいでしょ……。	…Wait.{br}John and I will go.{br}That's fine, isn't it……
+NO3_CHAPEL/0035	msg spk=1	いや、いくら化け物がいなくなったとしても、全ての危険が無くなったわけじゃない。{br}俺が行こう。	No. Even if the monster's gone, that doesn't mean all danger is gone.{br}I'll go.
+NO3_CHAPEL/0036	msg spk=5	ヘイミング、お前は脱出の方法を考えるんだ！{br}それがお前の仕事だ。{br}探索はジョンとジュディの二人だ。	Heming, you work out a way for us to escape!{br}That's your job.{br}John and Judy will search.
+NO3_CHAPEL/0037	msg spk=2	……確かにそうだな。	……That's true enough.
+NO3_CHAPEL/0038	msg spk=5	ジョン、気を付けて行ってこいよ。{br}何かあったら戻って来い。	John, be careful out there.{br}If anything happens, get back here.
+NO3_CHAPEL/0039	msg spk=0	ここまでの状況をセーブできます。セーブしますか？	You can save your progress so far. Do you want to save?
+NO3_CHAPEL/0040	msg spk=0	どうした。{br}生き残りでもいたのか？	What is it?{br}Was there a survivor, maybe?
+NO3_CHAPEL/0041	msg spk=0	生き残りがいたとしても、不用意に近づくな。{br}	Even if there are survivors, don't approach carelessly.{br}
+NO3_CHAPEL/0042	msg spk=0 +	錯乱していて攻撃される恐れがあるからな。	They're liable to be deranged and attack you.
+NO3_CHAPEL/0043	msg spk=0	相当まいっているようだな。{br}	Looks like it's taking quite a toll.{br}
+NO3_CHAPEL/0044	msg spk=0 +	こんな状況下だから、仕方が無いか。	With things as they are, it can't be helped, I suppose.
+NO3_CHAPEL/s09	choice	セーブする	Save
+NO3_CHAPEL/s10	choice	セーブしない	Don't save
+NO3_CHAPEL/s13	choice	セーブする	Save
+NO3_CHAPEL/s14	choice	セーブしない	Don't save
+NO3_CHAPEL/s19	choice	セーブする	Save
+NO3_CHAPEL/s20	choice	セーブしない	Don't save
+NO3_CHAPEL/s21	choice	セーブする	Save
+NO3_CHAPEL/s22	choice	セーブしない	Don't save
+NO3_CHAPEL/s23	choice	セーブする	Save
+NO3_CHAPEL/s24	choice	セーブしない	Don't save
+NO3_CHAPEL/s25	choice	セーブする	Save
+NO3_CHAPEL/s26	choice	セーブしない	Don't save
+NO3_CHAPEL/s28	choice	握る	Hold the round
+NO3_CHAPEL/s29	choice	握らない	Don't hold it
+NO3_CHAPEL/s32	choice	セーブする	Save
+NO3_CHAPEL/s33	choice	セーブしない	Don't save
+NO3_CHAPEL/s34	choice	セーブする	Save
+NO3_CHAPEL/s35	choice	セーブしない	Don't save
