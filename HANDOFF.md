@@ -23,10 +23,10 @@ Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEA
 Wave 7, dispatched 2026-10-30, seeds 3b28903 (glossary §9). Translator owns each unit until its PR is open; then the reviewer.
 | Unit | Branch | PR | State |
 |---|---|---|---|
-| script NO3_CHAPEL.p02 | `tl/script-NO3_CHAPEL.p02` | — | translating (round 0) |
-| script NO3_CHAPEL.p03 | `tl/script-NO3_CHAPEL.p03` | — | translating (round 0) |
-| script NO3_NO4.p01 | `tl/script-NO3_NO4.p01` | — | translating (round 0) |
-| script NO3_NO4.p02 | `tl/script-NO3_NO4.p02` | — | translating (round 0) |
+| script NO3_CHAPEL.p02 | `tl/script-NO3_CHAPEL.p02` | — | translating (round 0), agent a198bdd3d2e501a41 |
+| script NO3_CHAPEL.p03 | `tl/script-NO3_CHAPEL.p03` | — | translating (round 0), agent a85e8f3aa6d16000a |
+| script NO3_NO4.p01 | `tl/script-NO3_NO4.p01` | — | translating (round 0), agent a761f7e3a43fb5cfc |
+| script NO3_NO4.p02 | `tl/script-NO3_NO4.p02` | — | translating (round 0), agent ae823e5ab8f02fb64 |
 
 ## Next up
 Wave 7 (QUEUE 2026-10-30), four script units: NO3_CHAPEL.p02 (44 rows, 1,070 chars, ratio 27.16), NO3_CHAPEL.p03 (44, 1,039,
