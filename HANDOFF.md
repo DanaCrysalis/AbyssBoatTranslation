@@ -24,7 +24,7 @@ Wave 7, dispatched 2026-10-30, seeds 3b28903 (glossary §9). Translator owns eac
 | Unit | Branch | PR | State |
 |---|---|---|---|
 | script NO3_CHAPEL.p02 | `tl/script-NO3_CHAPEL.p02` | #26 (7afbe0c) | PR open, round 0; waits for the barrier; agent a198bdd3d2e501a41 |
-| script NO3_CHAPEL.p03 | `tl/script-NO3_CHAPEL.p03` | — | translating (round 0, resumed 19:57 after limit stop), agent a85e8f3aa6d16000a |
+| script NO3_CHAPEL.p03 | `tl/script-NO3_CHAPEL.p03` | #28 (d4a6b39) | PR open, round 0; waits for the barrier; agent a85e8f3aa6d16000a |
 | script NO3_NO4.p01 | `tl/script-NO3_NO4.p01` | — | translating (round 0, resumed 19:57 after limit stop), agent a761f7e3a43fb5cfc |
 | script NO3_NO4.p02 | `tl/script-NO3_NO4.p02` | #27 (7edf333) | PR open, round 0; waits for the barrier; agent ae823e5ab8f02fb64. Flag 3: mid-row `{w}` glue (0030, 0040, 0043) — relayed to p01; candidate CHECK blind spot |
 
