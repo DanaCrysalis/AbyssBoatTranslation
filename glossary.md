@@ -242,6 +242,20 @@ NOT decisions. The first translator to render one promotes it in the PR's Glossa
 so; the reviewer moves the row up into its section in the integration commit. -->
 | Source | Variants | Proposed | Alternatives | Where seen | Wave |
 |---|---|---|---|---|---|
+| 機関室 | — | the engine room (lowercase in dialogue) | — | NO3_CHAPEL/0093, 0099, 0100, 0106, 0115, 0128; NO3_NO4/0054 (×2); later NO2_NO3/0004, NO1_ENGINEROOM/0002; hints/012–014 (blocked) — 9 / 0 / 3 | 7 |
+| エンジン · 機関 | 機関を止める (0122) | the engine | "the engines" | NO3_CHAPEL/0093, 0094, 0116, 0118, 0122 (機関), 0125, 0128; later NO1_CONTROLROOM/0003 — 7 / 0 / 0 | 7 |
+| 動力 · 動力源 | — | power · the power source | "propulsion" | NO3_CHAPEL/0101, 0102 — 2 / 0 / 0 | 7 |
+| 浮上 · 浮き上がる | — | surface ("the ship may surface") · float up | "rise" | NO3_CHAPEL/0102, 0103, 0116 — 2 / 0 / 0 (+1 浮き上がる) | 7 |
+| 燃料バルブ | 燃料 | the fuel valve; 燃料 "fuel" (as shipped NO6_HW_3/0001) | — | NO3_CHAPEL/0126 — 1 / 0 / 0 | 7 |
+| アモ | — | round ("take out one round", bound to s28/s29 `Hold the round` — R §25.1) | "bullet" — rejected by the binding | NO3_CHAPEL/0122 — 1 / 0 / 0 | 7 |
+| 残弾 | 銃の残弾 | ammo ("You're low on ammo"; "the ammo left in your gun") | "rounds left" | NO3_CHAPEL/0077, 0078 — 2 / 0 / 0; cf. 弾切れ "out of ammo" (§3) | 7 |
+| レーザーサイト | — | laser sight | — | NO3_CHAPEL/0084 — 1 / 0 / 0 | 7 |
+| 例の生き残り | — | that survivor (the one who targeted Judy) | "the survivor we know about" | NO3_CHAPEL/0115; NO3_NO4/0046 — 2 / 0 / 0 | 7 |
+| 人型の化け物 | — | a humanoid monster | "a monster shaped like a man" | NO3_CHAPEL/0056 — 1 / 0 / 0; 化け物 → monster (§6) | 7 |
+| 厄介 · やっかい | 厄介事 · やっかいなこと | trouble ("Either way, it's trouble." — 0055 なにが厄介だ echoes it) | "a nuisance", "tricky" (shipped NO4_HWR_FRONT/0142 in context) | NO3_CHAPEL/0054, 0055, 0056, 0087; shipped "in trouble" NO4_4101/0003, NO4_HWR_FRONT/0087 — 9 / 0 / 0 | 7 |
+| ワイフ | — | my wife | "the wife" | NO3_NO4/0030, 0032 — 2 / 0 / 0 (a loanword affectation; not carried) | 7 |
+| 警察 | 警察を辞めた | the police; 警察を辞めた "quit the police force" | "left the force" | NO3_NO4/0017, 0041 — 2 / 0 / 0; 元警官 "ex-policeman" (§2) | 7 |
+| ステンドグラス | — | the stained glass | — | NO3_CHAPEL/0131 — 1 / 0 / 0 | 7 |
 
 ## 10. Open questions
 <!-- one line each, with the FLAGS id. A closed question is deleted here; its answer stays in rulings.md. -->
