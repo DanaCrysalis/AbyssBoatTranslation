@@ -23,10 +23,10 @@ Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEA
 ## In flight
 | Unit | Branch | Translator | PR | State | Next |
 |---|---|---|---|---|---|
-| script NO3.b01 | tl/script-NO3.b01 | w8-NO3.b01 | — | dispatched 2026-10-30 | translator opens PR |
-| script NO3.b02 | tl/script-NO3.b02 | w8-NO3.b02 | — | dispatched 2026-10-30 | translator opens PR |
-| script NO2.b01 | tl/script-NO2.b01 | w8-NO2.b01 | — | dispatched 2026-10-30 | translator opens PR |
-| script NO2.b02 | tl/script-NO2.b02 | w8-NO2.b02 | — | dispatched 2026-10-30 | translator opens PR |
+| script NO3.b01 | tl/script-NO3.b01 | agent a6187514e1619c86e | — | dispatched 2026-10-30 | translator opens PR |
+| script NO3.b02 | tl/script-NO3.b02 | agent a8a857f473ab05821 | — | dispatched 2026-10-30 | translator opens PR |
+| script NO2.b01 | tl/script-NO2.b01 | agent a1c8fce0b285232be | — | dispatched 2026-10-30 | translator opens PR |
+| script NO2.b02 | tl/script-NO2.b02 | agent ab765e917510a1a75 | — | dispatched 2026-10-30 | translator opens PR |
 
 ## Next up
 Wave 8 (QUEUE 2026-10-30), four script bundles: NO3.b01 (51 rows, 1,105 chars, ratio 29.98; NO3_CABIN_3002/3003/3104/3105/3106,
