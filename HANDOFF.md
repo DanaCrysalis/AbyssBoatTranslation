@@ -23,7 +23,7 @@ Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEA
 Wave 7, dispatched 2026-10-30, seeds 3b28903 (glossary §9). Translator owns each unit until its PR is open; then the reviewer.
 | Unit | Branch | PR | State |
 |---|---|---|---|
-| script NO3_CHAPEL.p02 | `tl/script-NO3_CHAPEL.p02` | — | translating (round 0, resumed 19:57 after limit stop), agent a198bdd3d2e501a41 |
+| script NO3_CHAPEL.p02 | `tl/script-NO3_CHAPEL.p02` | #26 (7afbe0c) | PR open, round 0; waits for the barrier; agent a198bdd3d2e501a41 |
 | script NO3_CHAPEL.p03 | `tl/script-NO3_CHAPEL.p03` | — | translating (round 0, resumed 19:57 after limit stop), agent a85e8f3aa6d16000a |
 | script NO3_NO4.p01 | `tl/script-NO3_NO4.p01` | — | translating (round 0, resumed 19:57 after limit stop), agent a761f7e3a43fb5cfc |
 | script NO3_NO4.p02 | `tl/script-NO3_NO4.p02` | — | translating (round 0, resumed 19:57 after limit stop), agent ae823e5ab8f02fb64 |
