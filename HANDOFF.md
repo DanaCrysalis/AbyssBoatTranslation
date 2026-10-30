@@ -1,4 +1,4 @@
-**Last updated: 2026-10-30** — wave 6 closed: NO5.b01, NO6.b01, NO6.b02, NO3_CHAPEL.p01 merged (PRs #25, #23, #22, #24), all round 0, none parked; the wave 6 coordinator opens the wave 7 session.
+**Last updated: 2026-10-30** — wave 7 dispatched: NO3_CHAPEL.p02, p03, NO3_NO4.p01, p02 (seeds 3b28903).
 
 ## Integration branch: `main`. Not configurable.
 Every PR bases on `main`; the reviewer merges into `main`; a wave is closed only when `origin/main` is
@@ -6,11 +6,9 @@ at the close commit (`CLAUDE.md` Rule 3). A fresh container may clone shallow wi
 preflight is `git fetch origin main && git checkout main && git reset --hard origin/main`.
 
 ## NEXT ACTION — always current, always a literal instruction
-> **Open the wave 7 session** (wave 6 coordinator; CLAUDE.md Rule 1, orchestrator.md §7): `create_session`
-> titled `Abyss Boat — wave 7`, tags `["abyssboat-translation", "wave-7"]`, `source_url`
-> https://github.com/DanaCrysalis/AbyssBoatTranslation, `source_revision` `main`, seed = SKILL.md §6a
-> with UNITS = Next up. First check `list_sessions` (mine: true, title `Abyss Boat — wave 7`): if one exists, do not open a second.
-> The wave 7 coordinator seeds the glossary for its units, then dispatches.
+> **Wave 7 coordinator: wait for the four translators** (In flight), re-checking the barrier as each returns
+> (`ListAgents`; a returned translator with no PR → fresh translator, same branch). Barrier met → reviewer per PR
+> in unit order, one at a time. Watchdog: `send_later` every 12 minutes.
 
 ## Progress
 | Store | Done | Total | |
@@ -22,12 +20,18 @@ preflight is `git fetch origin main && git checkout main && git reset --hard ori
 Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-30; `NO4_BAR.SCR` 37,378 free; `NO4_TOOL_ROOM.SCR` 61,899, 80/80; the NO4.b01/b02 rooms ≥ 63,697; the NO5 rooms ≥ 63,950; NO6_BRIDGE 63,400, the other NO6 rooms ≥ 64,242; NO3_CHAPEL.SCR 55,976, 62/150).
 
 ## In flight
-Nothing. Wave 6's four units are merged; see Wave history and rulings R §22–§25.
+Wave 7, dispatched 2026-10-30, seeds 3b28903 (glossary §9). Translator owns each unit until its PR is open; then the reviewer.
+| Unit | Branch | PR | State |
+|---|---|---|---|
+| script NO3_CHAPEL.p02 | `tl/script-NO3_CHAPEL.p02` | — | translating (round 0) |
+| script NO3_CHAPEL.p03 | `tl/script-NO3_CHAPEL.p03` | — | translating (round 0) |
+| script NO3_NO4.p01 | `tl/script-NO3_NO4.p01` | — | translating (round 0) |
+| script NO3_NO4.p02 | `tl/script-NO3_NO4.p02` | — | translating (round 0) |
 
 ## Next up
 Wave 7 (QUEUE 2026-10-30), four script units: NO3_CHAPEL.p02 (44 rows, 1,070 chars, ratio 27.16), NO3_CHAPEL.p03 (44, 1,039,
 27.94) — both NO3_CHAPEL.SCR, 55,976 free — NO3_NO4.p01 (31, 633, 49.76), NO3_NO4.p02 (30, 597, 52.70) — NO3_NO4.SCR, 61,729 free; all tier D.
-Glossary seeds: not yet — the wave 7 coordinator's step 2 (§9 is empty).
+Glossary seeds: §9, commit 3b28903 (14 rows; no cross-unit fixed sentences — every wave-7 duplicate source is already shipped).
 Bindings waiting: NO3_CHAPEL save prompts 0049, 0070, 0079, 0111, 0114, 0129, 0130 = NO3_CHAPEL/0039 byte for byte, choices
 `Save` / `Don't save`; NO3_CHAPEL/0122 the engine vote — "take out one round" … "hold it in your right hand", matching s28/s29
 `Hold the round` / `Don't hold it` and SCN046 (R §25.3, §13.2); speakers Wolg/Oakland/Heming/Judy, William dead (R §25.2);
