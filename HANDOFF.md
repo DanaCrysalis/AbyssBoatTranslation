@@ -1,4 +1,4 @@
-**Last updated: 2026-10-30** — wave 6 review complete: #25 NO5.b01 (squash 4a6819e), #23 NO6.b01 (388bb77), #22 NO6.b02 (47b3edc), #24 NO3_CHAPEL.p01 (6fe71ae) all MERGED round 0; next: wave 6 close by the coordinator.
+**Last updated: 2026-10-30** — wave 6 closed: NO5.b01, NO6.b01, NO6.b02, NO3_CHAPEL.p01 merged (PRs #25, #23, #22, #24), all round 0, none parked; the wave 6 coordinator opens the wave 7 session.
 
 ## Integration branch: `main`. Not configurable.
 Every PR bases on `main`; the reviewer merges into `main`; a wave is closed only when `origin/main` is
@@ -6,10 +6,11 @@ at the close commit (`CLAUDE.md` Rule 3). A fresh container may clone shallow wi
 preflight is `git fetch origin main && git checkout main && git reset --hard origin/main`.
 
 ## NEXT ACTION — always current, always a literal instruction
-> **Wave 6 close by the coordinator.** All four units merged (#25 4a6819e, #23 388bb77, #22 47b3edc, #24 6fe71ae),
-> none parked, no PR open. Do CLAUDE.md §4 step 6 (CHECK on main, regenerate and commit `build/abyss_boat_script.ods`
-> via ODS EXPORT, README status from STATUS, prune worktrees, `wc -l HANDOFF.md`, Wave history line, Next up = wave 7
-> from QUEUE), push `handoff: wave 6 closed` with the Rule 3 proof, then open the wave 7 session (step 7).
+> **Open the wave 7 session** (wave 6 coordinator; CLAUDE.md Rule 1, orchestrator.md §7): `create_session`
+> titled `Abyss Boat — wave 7`, tags `["abyssboat-translation", "wave-7"]`, `source_url`
+> https://github.com/DanaCrysalis/AbyssBoatTranslation, `source_revision` `main`, seed = SKILL.md §6a
+> with UNITS = Next up. First check `list_sessions` (mine: true, title `Abyss Boat — wave 7`): if one exists, do not open a second.
+> The wave 7 coordinator seeds the glossary for its units, then dispatches.
 
 ## Progress
 | Store | Done | Total | |
@@ -21,33 +22,27 @@ preflight is `git fetch origin main && git checkout main && git reset --hard ori
 Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-30; `NO4_BAR.SCR` 37,378 free; `NO4_TOOL_ROOM.SCR` 61,899, 80/80; the NO4.b01/b02 rooms ≥ 63,697; the NO5 rooms ≥ 63,950; NO6_BRIDGE 63,400, the other NO6 rooms ≥ 64,242; NO3_CHAPEL.SCR 55,976, 62/150).
 
 ## In flight
-| Unit | Branch | PR | State | Next |
-|---|---|---|---|---|
-| script NO5.b01 | `tl/script-NO5.b01` | #25 | **MERGED** round 0, squash 4a6819e; 58 rows, max 4 rows/page, lowest NO5_ENTRANCEL.SCR 63,950 free; dupes 113 pairs (+14); no findings; §9 sentences corrected + 9 terms and 3 sentences promoted (R §22); F-025 typos; integration commit `integrate: script NO5.b01` | none — done |
-| script NO6.b01 | `tl/script-NO6.b01` | #23 | **MERGED** round 0, squash 388bb77; 37 rows, max 4 rows/page, lowest NO6_BRIDGE.SCR 63,400 free; dupes 122 pairs (+9), census 50/50 identical incl. #22; no findings; leading `{p}` at BRIDGE/0002 and 0020 reorder approved (R §23.2–§23.3, F-010); 6 §9 terms + 4 sentences promoted, 操作パネル/舵 added (R §23.1); integration commit `integrate: script NO6.b01` | none — done |
-| script NO6.b02 | `tl/script-NO6.b02` | #22 | **MERGED** round 0, squash 47b3edc; 27 rows, max 4 rows/page, lowest NO6_HW_3.SCR 64,572 free; dupes 135 pairs (+13), census 56/56 identical; no findings; TOOLROOM/0001 `A chain cutter, it seems.` approved (R §24.2); no new terms, 浸水/チェーンカッター notes extended (R §24.1); integration commit `integrate: script NO6.b02` | none — done |
-| script NO3_CHAPEL.p01 | `tl/script-NO3_CHAPEL.p01` | #24 | **MERGED** round 0, squash 6fe71ae; 62 rows, max 4 rows/page, NO3_CHAPEL.SCR 55,976 free (62/150); dupes 152 pairs (+17), census 340 hits, 0 divergent; no findings; speakers Wolg/Oakland/Heming/Judy (William dead, R §25.2), s28/s29 = the engine vote `Hold the round` / `Don't hold it`, 0034 `{br}` added approved; 教会 "the chapel" ("a chapel" at 0001), 拠点 "base" promoted, 握る · 握らない added, §9 now empty (R §25.1); p02/p03 must word 0122 with "round" and "right hand"; integration commit `integrate: script NO3_CHAPEL.p01` | none — done |
+Nothing. Wave 6's four units are merged; see Wave history and rulings R §22–§25.
 
 ## Next up
-Wave 6 (QUEUE 2026-10-26), four script units: NO5.b01 (58 rows, 1,144 chars, ratio 29.06; NO5_BANK, ENTRANCEL, ENTRANCEM,
-HW_L, HW_R, LOCKERROOM, SHOP), NO6.b01 (37, 839, 39.03; NO6_BRIDGE, ENTRANCE, HW_1, HW_2), NO6.b02 (27, 495, 66.38; NO6_HW_3,
-HW_4, HW_5, STORAGE, TOOLROOM, WIRELESSROOM), NO3_CHAPEL.p01 (62, 1,068, 27.82; NO3_CHAPEL.SCR 57,297 free); all tier D.
-Glossary seeds: on main, a376c49 (§9 wave 6 rows, incl. six fixed cross-unit sentences for NO5/NO6).
-Bindings waiting: NO5_BANK/0005 = NO4_SHOP/0006 `"Today's Shipboard Events," it reads.{p}`; NO5_HW_R/0008 = NO4_HWL_BACK/0014
-`"Floor Information"{br}` (sign entries R §12.1); NO6_HW_1/0003 = NO6_HW_2/0006 = 0010 = NO4_HWL_FRONT/0011 byte for byte (R §21.4);
-NO5_LOCKERROOM/0004–0007 ロッカー "locker", 空のようだ "seems empty" (R §19); 切り刻む/無残に "hacked to pieces"/"brutally" at
-NO5_BANK/0008, NO6_BRIDGE/0020 (R §20.1); 振動 "tremor" NO6_HW_4/0001, NO6_TOOLROOM/0003 (R §20.1); チェーンカッター NO6_TOOLROOM/0001;
-NO5_ENTRANCEL/0005 reuses NO4_HWR_FRONT/0142 (pointer corrected; was NO4_BAR/0142) "Follow me…"; 使えそうな物 hedge family NO5_BANK/0007, NO6_STORAGE/0002 (R §21.3–§21.4 —
-keep ようだ/そう); NO3_CHAPEL save prompts = the NO4_BAR ones byte for byte; NO3_CHAPEL/0033 なんだと‼ → "What‼".
-Wave 5 lessons: three CHANGES of four — lone "an" wraps (#20), and dropped そう/ようだ hedges the geometry did not force (#19, #18):
-tell translators to keep every hedge and scan wraps with a script; reviewers use unique review AND integration branch names.
+Wave 7 (QUEUE 2026-10-30), four script units: NO3_CHAPEL.p02 (44 rows, 1,070 chars, ratio 27.16), NO3_CHAPEL.p03 (44, 1,039,
+27.94) — both NO3_CHAPEL.SCR, 55,976 free — NO3_NO4.p01 (31, 633, 49.76), NO3_NO4.p02 (30, 597, 52.70) — NO3_NO4.SCR, 61,729 free; all tier D.
+Glossary seeds: not yet — the wave 7 coordinator's step 2 (§9 is empty).
+Bindings waiting: NO3_CHAPEL save prompts 0049, 0070, 0079, 0111, 0114, 0129, 0130 = NO3_CHAPEL/0039 byte for byte, choices
+`Save` / `Don't save`; NO3_CHAPEL/0122 the engine vote — "take out one round" … "hold it in your right hand", matching s28/s29
+`Hold the round` / `Don't hold it` and SCN046 (R §25.3, §13.2); speakers Wolg/Oakland/Heming/Judy, William dead (R §25.2);
+教会 "the chapel", 拠点 "base" (NO3_NO4/0001, 0011); 燃料 at NO3_CHAPEL/0126 unfixed; NO3_NO4/0051 浸水 per glossary §3;
+NO3_NO4/0043 親父 "your dad"; NO3_NO4/0010 "spare magazine" (glossary §3).
+Wave 6 lessons: zero CHANGES of four. Seeded fixed sentences must themselves pass the wrap rule — run codec.wrap(…, 28) on every
+seeded target before committing the seeds (four failed in wave 6 and were corrected mid-wave). The dispatch must not guess speakers
+or plot readings it has not checked against the dump (two wrong guesses in NO3_CHAPEL.p01's dispatch); say "read from content".
+Keep: hedges kept, wraps scanned with a script, unique review/integration branch names.
 
 ## Remaining
-QUEUE order, generated 2026-10-06 (wave 6 units moved to Next up 2026-10-26) (source characters, tags excluded). Script: NO3_CHAPEL.p02 (1070),
-p03 (1039), NO3_NO4.p01 (633), p02 (597), NO3.b01 (1105), NO3.b02 (502), NO2.b01 (1021),
+QUEUE order, generated 2026-10-30 (wave 7 units in Next up) (source characters, tags excluded). Script: NO3.b01 (1105), NO3.b02 (502), NO2.b01 (1021),
 NO2.b02 (829), NO1.b01 (151), SPACESHIP.b01 (159), then the `_T` test scripts (F-008):
 NO4_BAR_T.p01 (1426), p02 (1251), p03 (1270), p04 (1189), NO4_T.b01 (607), b02 (735), b03 (414).
-Scene: none — store complete (wave 4). Four script units per wave (PROJECT.md §10). 17 script units remain after wave 6's four.
+Scene: none — store complete (wave 4). Four script units per wave (PROJECT.md §10). 13 script units remain after wave 7's four.
 
 ## Blocked — needs a human
 1. **System store** (5 units, 188 rows) — exe slots too short for English; you chose to wait for an
@@ -84,6 +79,7 @@ Scene: none — store complete (wave 4). Four script units per wave (PROJECT.md 
 | 3 | script NO4_BAR.p08, NO4_HWR_FRONT.p01, p02; scene SCN041-SCN046 | 4 — #13 28d44a9, #10 c755736, #11 f8e7b3a (round 0); #12 c39677d (round 0 CHANGES — 0441 modality, 0424 `…、` ruling — round 1 MERGE) | 0 | script 10/38 (589 rows), scene 3/4 (150), system blocked; NO4_BAR.SCR 37,378 free (room done), NO4_HWR_FRONT.SCR 54,522. Session-limit stop, resumed |
 | 4 | script NO4_HWR_FRONT.p03, NO4_MACHINER90.p01, p02; scene SCN047-EPILOG | 4 — #14 d7e9398, #15 40c6491 (round 0); #17 8237cd9 (round 0 CHANGES — lone-"an" wrap, 28-col line, 潜入 sibling agreement — round 1 MERGE); #16 1e66f3c (round 0 CHANGES — `:31` step-5 compression — round 1 MERGE) | 0 | script 13/38 (743 rows), scene 4/4 (190, store complete), system blocked; NO4_HWR_FRONT.SCR 54,355 (room done), NO4_MACHINER90.SCR 57,820 (room done). Session-limit stop, resumed |
 | 5 | script NO4_TOOL_ROOM.p01, p02, NO4.b01, NO4.b02 | 4 — #21 b01686f (round 0); #20 c60bcc6 (round 0 CHANGES — lone-"an" wraps — round 1 MERGE); #19 77be2cb (round 0 CHANGES — dropped そう hedge — round 1 MERGE); #18 aa4badb (round 0 CHANGES — dropped ようだ/そう hedges — round 1 MERGE) | 0 | script 17/38 (914 rows), scene 4/4, system blocked; NO4_TOOL_ROOM.SCR 61,899 (room done). Session-limit stop, resumed |
+| 6 | script NO5.b01, NO6.b01, NO6.b02, NO3_CHAPEL.p01 | 4 — #25 4a6819e, #23 388bb77, #22 47b3edc, #24 6fe71ae (all round 0; seeded cross-unit sentences re-cut for wraps before review) | 0 | script 21/38 (1,098 rows), scene 4/4, system blocked; decks NO5, NO6 complete; NO3_CHAPEL.SCR 55,976 (62/150). Session-limit stop, resumed |
 
 ## How to resume
 1. Preflight per `CLAUDE.md` §4 step 0. CHECK must pass. A fill marker left in `PROJECT.md` means
