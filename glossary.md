@@ -55,7 +55,7 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | 海上 | — | the surface | 11 | — | "up on the surface" in p01 0009 | R §3.1 |
 | 第Nデッキ | 第２デッキ … 第６デッキ (full-width digit) | Deck N ("Deck 4") | 6 | 10 (deck names, F-006) | capitalised with an Arabic numeral; デッキ alone (このデッキ, 下のデッキ) is lowercase "deck" in context | R §5.1 |
 | 元警官 | — | ex-policeman | 12 | — | Wolg's past; 警官 alone in context (Miller's sarcastic "cop", NO4_BAR/0231) | R §5.1 |
-| 警察 | 警察を辞めた | the police; 警察を辞めた: quit the police force | 10; 21 | — | Wolg's past: NO3_NO4/0017 "The reason why I quit the police force……", 0041 the same words; 警官 alone in context (NO3_NO4/0021 "cop"); 2 / 0 / 0 | R §27.1 |
+| 警察 | 警察を辞めた | the police; 警察を辞めた: quit the police force | 10; 21 | — | Wolg's past: NO3_NO4/0017 "The reason why I quit the police force……", 0041 the same words; 警官 alone in context (NO3_NO4/0021 "cop"); 2 / 0 / 0 | R §27.1, §29.1 |
 | 生き残り | 生き残りグループ | survivor(s); 生き残りグループ: survivor group | 8 (9); 14 | — | the people still alive aboard | R §5.1 |
 | 生存者 | — | survivor(s) | 8 (9) | — | same word as 生き残り; NO4_HWL_FRONT/0008 "there may be no survivors left"; 1 / 0 / 0 | R §21.1 |
 | 乗客 | — | passenger(s) | 10 (9) | — | as shipped NO4_BAR/0028, 0094, 0191, 0198, 0393; NO4_HWR_FRONT/0122 "a passenger on board this ship"; 15 / 0 / 0 | R §14.1 |
@@ -86,8 +86,8 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | ショップ | — | the shop (same word as 売店) | 8 | — | lowercase; NO5_SHOP/0002 ショップの備品 → "the shop's equipment"; 1 / 0 / 0 | R §22.1 |
 | 教会 | — | the chapel; "a chapel" at the discovery (NO3_CHAPEL/0001); room name: Chapel | 10; 8; 6 | 14 (rooms/040, F-006) | lowercase in dialogue; never "church"; NO3_HW_1/0001 = NO3_NO4/0011 …教会くらいね take "the chapel"; hints/013 blocked; 3 / 0 / 2 | R §25.1 |
 | 拠点 | — | base ("our new base"; 新しい拠点 → "a new base") | 4 | — | NO3_CHAPEL/0012 "We'll make this our new base"; NO3_NO4/0001, NO3_HW_1/0001 = NO3_NO4/0011 to come; not "base of operations"; 4 / 0 / 0 | R §25.1 |
-| 機関室 | — | the engine room | 15 | 14 (if a room name; hints/012–014 blocked, F-006) | lowercase in dialogue; NO3_CHAPEL/0093, 0099, 0100 ("The engine room?"), 0106, 0115, 0128; NO3_NO4/0054 ×2 (#27) agrees; NO2_NO3/0004, NO1_ENGINEROOM/0002 to come; 9 / 0 / 3 | R §28.1 |
-| 例の生き残り | — | that survivor | 13 | — | the one who targeted Judy (NO3_CHAPEL/0051, 0060, 0072); NO3_CHAPEL/0115 "That survivor still worries me"; NO3_NO4/0046 (#27) agrees; 生き残り alone stays "survivor(s)"; 2 / 0 / 0 | R §28.1 |
+| 機関室 | — | the engine room | 15 | 14 (if a room name; hints/012–014 blocked, F-006) | lowercase in dialogue; NO3_CHAPEL/0093, 0099, 0100 ("The engine room?"), 0106, 0115, 0128; NO3_NO4/0054 ×2 "The engine room! Let's run for the engine room‼"; NO2_NO3/0004, NO1_ENGINEROOM/0002 to come; 9 / 0 / 3 | R §28.1, §29.1 |
+| 例の生き残り | — | that survivor | 13 | — | the one who targeted Judy (NO3_CHAPEL/0051, 0060, 0072); NO3_CHAPEL/0115 "That survivor still worries me"; NO3_NO4/0046 "that survivor seems likely to be on this deck"; 生き残り alone stays "survivor(s)"; 2 / 0 / 0 | R §28.1, §29.1 |
 
 ## 3. Items, currency, mechanics
 | Source | Variants | Target | Cols | Cap | Note | Ruling |
@@ -194,7 +194,7 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | ウスノロ | — | dimwit (pl. dimwits) | 6 | the killer's word for his victims: 親愛なるウスノロ → "my dear dimwit", てめえらウスノロ → "you dimwits", そのウスノロ → "those dimwits"; 0 / 3 / 0 | R §13.1 |
 | メス | — | bitch (あのメス → "that bitch") | 5 | the killer on Judy, SCN046B1/10–11; article in context; 0 / 2 / 0 | R §13.1 |
 | 売女 | — | whore (お前の売女 → "your whore") | 5 | the killer on Wolg's murdered wife, SCN046B2/07; 0 / 1 / 0 | R §13.1 |
-| ワイフ | — | my wife | 7 | Wolg's murdered wife, his police story: NO3_NO4/0030 "My wife, who always met me at the door…", 0032; the loanword affectation is not carried; 2 / 0 / 0 | R §27.1 |
+| ワイフ | — | my wife | 7 | Wolg's murdered wife, his police story: NO3_NO4/0030 "My wife, who always met me at the door…", 0032; the loanword affectation is not carried; 2 / 0 / 0 | R §27.1, §29.1 |
 | 神 | — | god, lowercase ("a god", "that god of yours") | 3 | SCN046B2/02–05; 女神 is the 俺様 row's "goddess"; NO4_BAR_T/0144 神は──主は in context; 1 / 4 / 0 (女神 3 / 0 / 0) | R §13.1 |
 | 生肝 | — | raw liver | 9 | SCN046B2/04 only (アレの生肝 → "that thing's raw liver"); 0 / 1 / 0 | R §13.1 |
 | ゲームオーバー | — | game over ("it's game over") | 9 | in dialogue, SCN046A2/01 only (Heming to Oakland); 0 / 1 / 0 | R §13.1 |
@@ -227,6 +227,7 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | 水が深すぎて…息が…でき…な…{p} | — | `The water's too deep… can't… brea… the…{p}` | 39 (28 / 10) | fixed sentence, Judy drowning: NO6_ENTRANCE/0002 = NO6_HW_2/0002 = NO6_HW_4/0004 = NO6_HW_5/0002; 4 …; the subject of "can't" implied (step 5); 4 / 0 / 0 | R §23.1 |
 | 鍵が掛かっていて、扉は開かない。{p} | — | `It's locked, so the door won't open.{p}` | 36 (24 / 11) | fixed sentence, unhedged: NO6_HW_2/0005, 0007 = NO6_HW_3/0005–0007, NO6_HW_4/0005, 0008; 扉は鍵が掛かっていて開きそうに無い (NO3_HW_1/0005–6, NO3_HW_2/0002–3) is hedged, kept apart; 7 / 0 / 0 | R §23.1 |
 | 水圧で扉を開けられない。{p} | — | `The water pressure won't let the door open.{p}` | 43 (28 / 14) | fixed sentence: NO6_HW_2/0008–0009 = NO6_HW_4/0006–0007, NO6_HW_5/0004; 5 / 0 / 0 | R §23.1 |
+| 閉じ込める | 閉じ込めた · 閉じ込めていた | shut in ("We've shut him in"; "he's supposed to be shut in") | 7 | the monster's confinement: NO4_HWL_BACK2/0006, NO3_NO4/0053 (はず → "supposed to"); NO2_MAINSTORAGE/0027 to come; 閉じこめ in context (NO3_CHAPEL/0023 "locked in"); 3 / 0 / 0 | R §29.1 |
 
 ## 7. Register per character
 | Character | Register | Contractions? | Markers | Ruling |

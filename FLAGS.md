@@ -102,6 +102,12 @@ NO3_CHAPEL.p03 (PR #28) replaces the first authored `{br}` of NO3_CHAPEL/0122, t
 a `{p}` ("…take out one round." then "If you're in favor of stopping the engine, hold it in your
 right hand."; 6 rows without it, pages 2 + 4 with it). Check that the second page opens on its first
 row (R §28.2).
+NO3_NO4.p02 (PR #27) ends Wolg's police story with no `{p}` added in its `{w}` chains: every `{w}`
+page fits 4 rows as the tools model it, but between `{p}` clicks the English runs 10 rows
+(0032–0037; source 7), 7 (0038–0040; source 5) and 8 (0041–0043; source 4). Check them in the same
+night-talk session. It also adds a leading `{p}` at NO3_NO4/0046, a `+` row after the `{br}`-ended
+0045 ("…going to search Deck 3." then "Going by what we've heard, that survivor…"; 5 rows without
+it). Check that the box clears and the second page opens on its first row (R §29.2).
 
 
 ## Open
@@ -378,6 +384,19 @@ hand. A tool PR that models a mid-row `{w}` as continuing the row would close it
 PROJECT.md §7's blind spots · rulings R §26.4.
 NO3_NO4/0030 shipped in PR #29 (squash e6a9aa1) as `didn't come.{w}{br}And the smell of blood…{w}{br}`,
 checked by hand (25 / 23 columns); 0040 and 0043 remain, in #27 (R §27.2).
+NO3_NO4/0040 and 0043 shipped in PR #27 (squash 62509c4) as `I couldn't do anything.{w}{br}I couldn't…`
+and `…the table.{w}{br}That's how…`, checked by hand (23 and 10 columns before the `{br}`). All three
+dump rows are now done, and no unshipped row needs the check. The entry stays OPEN only for the tool PR
+that would model a mid-row `{w}`. The PROJECT.md §7 blind-spot line stays until that PR lands (R §29).
+
+### F-027 · 2026-10-30 · script · OPEN
+Two suspected source typos in one row, read as the sense requires: `NO3_NO4/0057`
+何をぐずぐすしている！ has ぐずぐす where the sense is ぐずぐず (ぐずぐす 1 / 0 / 0, only here;
+NO4_BAR/0172 has ぐずぐずしてる), and さっさと落ち着けれる場所を探して来い has 落ち着けれる for 落ち着ける
+(1 / 0 / 0). Shipped "What are you dawdling for!{br}Hurry up and go find somewhere we can settle in‼"
+(`tl/script/NO3_NO4.p02.tsv:29`). The first sentence matches shipped NO4_BAR/0172, but CHECK does not
+pair them because the sources differ. PR #27 Flag 10. Harmless; nothing to change unless the in-game
+context shows a different reading · rulings R §29.2.
 
 ## CHECK positive controls
 <!-- One entry per kind of violation deliberately planted and caught by CHECK (tools/README.md rule 3).

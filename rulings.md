@@ -2685,3 +2685,101 @@ Census counts are rows per store (script / scene / system), from the reviewer's 
 - **The save prompt.** 0111, 0114, 0129 and 0130 copy `tl/script/NO3_CHAPEL.p01.tsv:42` (0039) byte for byte. All 8 NO3_CHAPEL save rows are shipped and identical.
 - **NO3_NO4.p02 (#27):** 0046 例の生き残り → "that survivor" and 0054 機関室 → "the engine room" agree with §28.1 in head 7edf333. The #27 reviewer confirms them against the glossary.
 - Glossary: none.
+
+## Unit script NO3_NO4.p02 (PR #27, MERGED, 2026-10-30)
+
+The second and last part of the NO3_NO4 room script (NO3_NO4/0032–0061; 30 rows, 597 source characters, tier D, ratio 52.70):
+- 0032–0044: the end of Wolg's police story to John (his wife's murder, quitting the force, being hired by Oakland), continuing NO3_NO4.p01 (#29).
+- 0045–0047: Wolg sets out to search Deck 3 with Heming.
+- 0048–0055: the water, the monster, the run for the engine room, the shutter.
+- 0056–0061: Oakland's outburst, instructions to the searchers, another victim.
+
+Reviewed once:
+- **Round 0** (7edf333, cut from ae83b72, merged with main 1418e1f for review → f402f0f, no conflict): MERGE, squash 62509c4. Findings: none; two non-blocking notes (§29.2).
+
+Figures (on the merge with 1418e1f, which has p01):
+- **Container.** NO3_NO4.SCR 4,808 / 65,535 bytes, 60,727 free, 73 tokens, 61/61 rows: the room is complete (MEASURE). The file was at 61,029 free with p01 alone, so the unit cost 302 bytes. The dictionary is rebuilt per build, so this is less than the PR's 520 measured without p01. `containers negative: 0; under the reserve (2000 bytes): 0`.
+- **Pages.** At most 4 rows per page (UNITCHECK, 30 rows, 0 violations). The whole store: 1,247 rows, 0 violations. MERGE: keys that never matched 0.
+- **Duplicates.** CHECK compared 169 duplicate pairs and 8 tag-variant pairs, against main's 165 and 8.
+  - The reviewer's census: 30 rows × every script and scene dump row, exact and with `{p}{w}{br}` stripped (！？ → ⁉), 56,940 comparisons.
+  - It found 29 recurrences: 0 divergent, 0 untranslated.
+  - 0061 `………` = NO3_NO4/0007, NO4_BAR/0201, 0265, 0430, NO4_HWR_FRONT/0057, 0092, SCN038_5C1/10, SCN046B1/01; tag variants NO4_MACHINER90/0108, NO4_TOOL_ROOM/0025, 0060.
+  - The `{br}` rows 0034, 0036 and 0039 = p01's 0020, 0025 and 0028.
+- **Codes.** The authored `{p}{w}{br}` sequence differs from the source on 3 of 30 rows, exactly PR Flag 2: `:12 0040` and `:15 0043` `{w} {p}` → `{w} {br} {p}` (F-026), and `:18 0046` `-` → `{p}` (§29.2). The `…`/`‼`/`⁉`/`──` counts match on 30 of 30.
+- **Widths.** The reviewer's script ran codec.wrap(…, 28) per authored segment over 62 lines. It was proved on planted violations: a lone "I", an authored line at 28, a split "Mr.", a one-word last row, and `{w}` glue.
+  - 18 lines end at an authored `{br}` or `{w}`, all ≤ 27 (`len()`); the longest are 0044 and 0059 at 27.
+  - The 28-column lines (0045, 0053, 0059) are tool wraps.
+  - No lone "a" or "I", no one-word last row, no split title.
+- **F-012.** Every `+` row (0033–0037, 0039, 0040, 0042, 0043, 0046) follows a `{br}` ending.
+- **F-026.** All three dump rows are now shipped with `{br}` after the mid-row `{w}`: 0030 (#29), `:12 0040` (line before the `{br}` 23 columns), `:15 0043` (10).
+
+Census counts are rows per store (script / scene / system), from the reviewer's grep of `dumps/` on 2026-10-30. Line citations use PROJECT.md §7's numbering in `tl/script/NO3_NO4.p02.tsv` (line = row order + 3).
+
+### 29.1 Terms: §9 promotions confirmed, one row added
+- **§9 is empty.** The four seeds this unit renders were promoted by #28/#29, each citing this PR's head 7edf333, and the shipped lines agree:
+  - ワイフ → "my wife" (`:4 0032`; R §27.1).
+  - 警察を辞めた → "quit the police force" (`:13 0041`, word for word with p01 0017; R §27.1).
+  - 例の生き残り → "that survivor" (`:18 0046`; R §28.1).
+  - 機関室 → "the engine room" ×2 (`:26 0054`; R §28.1).
+  - The rows' "(#27) agrees" notes are replaced by the shipped wording, and their Ruling column points here. No target changes.
+- **閉じ込める** (variants 閉じ込めた, 閉じ込めていた) → `shut in` (7).
+  - Census: 3 / 0 / 0. NO4_HWL_BACK2/0006 ヤツは閉じ込めたが → "We've shut him in" (shipped); `:25 0053` バカな、閉じ込めたはず‼ → "Impossible, he's supposed to be shut in‼"; NO2_MAINSTORAGE/0027 この先にいた怪物を閉じ込めていたのね (NO2, to come).
+  - The elided subject of 0053 is the monster, so it takes "he" under the ヤツ rule (R §1.7). はず → "supposed to".
+  - 閉じこめ (2 / 0 / 0: NO3_CHAPEL/0023 "locked in", shipped; NO4_BAR_T/0108) is people trapped, not the monster, so it stays in context.
+  - Glossary: §6 row added.
+- **Applied, unchanged:**
+  - 親父 → "your dad" (`:15 0043`); 第３デッキ → "Deck 3" (`:17 0045`); 浸水 → "flooding" (`:23 0051`).
+  - モンスター / 化け物 → "monster" (`:25 0053`, `:30 0058`, singular as NO3_CHAPEL/0035).
+  - 社長 → "the boss" (`:28 0056`, Oakland on himself); 生き残り → "survivors", 人間 → "a human" (`:31 0059`).
+  - ヤツ → he/him (0038, 0041, 0042); 一番大切なもの → "what mattered most to me" (`:12 0040`, = p01 0015).
+- **Not fixed, in context:**
+  - 眉間 "between her eyes" (2 / 0 / 0, echoing NO4_P_OFFICE/0009 "between the eyes").
+  - 犠牲者 "victim" (2 / 0 / 0, as NO4_BAR/0402).
+  - 復讐 "revenge", セーター "sweater" (1 / 0 / 0 each).
+
+### 29.2 Movable codes, readings and speakers (PR Flags 2–5, 7–9)
+- **`:12 0040`, `:15 0043` `{w} {p}` → `{w} {br} {p}`** (PR Flags 2–3). This is the F-026 fix (R §26.4), as 0030 in #29. Approved.
+- **`:18 0046` leading `{p}`** on the `+` row after 0045's `{br}` (R §2.4).
+  - Without it, the page from 0045 is 2 + 3 = 5 rows. 0046 is 74 characters and cannot take fewer than 3 rows.
+  - With it, the pages are 3 (the last is the cursor row) + 3. The `{p}` sits at the sentence boundary.
+  - Approved; added to F-010.
+- **No `{p}` added in the `{w}` chains 0032–0037, 0038–0040, 0041–0043** (PR Flag 4).
+  - Every `{w}` page fits 4 rows as the tools model it.
+  - Between `{p}` clicks, the English runs 10 / 7 / 8 rows against the source's 7 / 5 / 4.
+  - Recorded under F-010.
+- **Departures** (PR Flag 8, §2.1 steps 5–6), each justified by a measured wrap, accepted:
+  - `:7 0035` いつまでたっても編みあがらない → "forever unfinished": the knitting is implied by the sweater, and the page stays at 4.
+  - `:14 0042` "there was no tracking him down…": "…I couldn't" leaves a lone "I".
+  - `:16 0044` "I'll do everything I can to get you out of here." (the お前は topic is not fronted).
+  - `:23 0051` supplies "the ship".
+  - `:31 0059` "Be sure not to shoot a human by mistake.": "Don't shoot…" leaves "mistake." alone; "Be sure" carries よ.
+- **Hedges kept:**
+  - `:18 0046` 可能性が高いようだ → "seems likely"; `:27 0055` そう → "seems".
+  - `:30 0058` 良さそうな → "good-looking"; `:31 0059` かもしれん → "may yet"; `:25 0053` はず → "supposed to".
+- **`:27 0055`** シャッターが下りていて先には進めそうに無い。{p} → `The shutter is down, so there seems to be no going any further.{p}` (23 / 26 / 12).
+  - "The shutter is down" follows shipped NO5_ENTRANCEM/0011–0012. "There seems to be no going any further" follows the §6 fixed 封鎖 sentence and keeps そう. It is not a byte duplicate.
+  - NO2_HW_5/0003 シャッターが下りていて先には進めない。{p} (unhedged, NO2) should take `The shutter is down, so there's no going any further.{p}`. That keeps this frame and drops only the hedge, as the §6 閉ざされて row keeps the unhedged sentences apart.
+- **`:29 0057` source typos** (PR Flag 10; F-027), read as the sense requires:
+  - ぐずぐす for ぐずぐず → "What are you dawdling for!", the words of shipped NO4_BAR/0172. The source differs, so CHECK does not pair them.
+  - 落ち着けれる for 落ち着ける → "somewhere we can settle in", as SCN002/02 腰を落ち着けた "settling in".
+- **Readings accepted:**
+  - `:9 0037` 眉間と掌 → "between her eyes and in her palms", the killer's signature (NO4_P_OFFICE/0009).
+  - `:19 0047` よし → "Right," (NO4_HWL_FRONT/0006).
+  - `:12 0040` and `:32 0060` 何もできなかった → "I couldn't do anything" both.
+- **Non-blocking notes:**
+  - `:15 0043` 復讐じゃ食うことはできん → "Revenge doesn't put food on the table." This renders the sense ("can't eat on revenge"), not a swapped idiom.
+  - `:18 0046` からな (the reason for 0045) is carried by juxtaposition.
+- **Speakers** (PR Flag 5, F-009), named from content:
+  - Wolg: 0032–0046 (spk=4) and probably 0060.
+  - Oakland: 0056 (わしは社長), and 0057 by its ぐずぐず echo of NO4_BAR/0172.
+  - Wolg or Heming: 0058–0059.
+  - Uncertain: 0047–0054.
+  - Narration: 0055. Silence: 0061.
+  - Every line is speaker-neutral in English, checked line by line.
+- Glossary: none beyond §29.1.
+
+### 29.3 Recurrences and bindings
+- 0061 `………` and the `{br}` rows 0034/0036/0039 match p01 and the shipped rows (§29 Figures).
+- NO2_MAINSTORAGE/0027 takes "shut in" (§29.1).
+- NO2_HW_5/0003 takes the unhedged shutter sentence (§29.2).
+- Glossary: none.

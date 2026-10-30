@@ -1,4 +1,4 @@
-**Last updated: 2026-10-30** — wave 7 in review: #26 NO3_CHAPEL.p02 MERGED (squash 56e2531); #29 NO3_NO4.p01 MERGED (squash e6a9aa1); #28 NO3_CHAPEL.p03 MERGED round 1 (squash f45c28a); #27 next.
+**Last updated: 2026-10-30** — wave 7 reviewed, all four merged: #26 NO3_CHAPEL.p02 (squash 56e2531); #29 NO3_NO4.p01 (squash e6a9aa1); #28 NO3_CHAPEL.p03 round 1 (squash f45c28a); #27 NO3_NO4.p02 round 0 (squash 62509c4). Wave close next.
 
 ## Integration branch: `main`. Not configurable.
 Every PR bases on `main`; the reviewer merges into `main`; a wave is closed only when `origin/main` is
@@ -6,19 +6,19 @@ at the close commit (`CLAUDE.md` Rule 3). A fresh container may clone shallow wi
 preflight is `git fetch origin main && git checkout main && git reset --hard origin/main`.
 
 ## NEXT ACTION — always current, always a literal instruction
-> **Wave 7 barrier met 2026-10-30 20:05 UTC (four PRs open).** Reviewer, one at a time, in unit order:
-> #26 NO3_CHAPEL.p02 → #28 NO3_CHAPEL.p03 → #29 NO3_NO4.p01 → #27 NO3_NO4.p02. #26 MERGED (round 0, squash 56e2531).
-> #29 MERGED (round 0, squash e6a9aa1). #28 MERGED (round 1, squash f45c28a). **Review #27 next** — the last of wave 7. The #27 reviewer checks the mid-row `{w}` rows 0040 and 0043 (F-026; 0030 shipped in #29), the p01 bindings (R §27.3), and 0046 "that survivor" / 0054 "the engine room" against the glossary rows promoted from #28 (R §28.1, §28.3).
+> **Close wave 7** (`CLAUDE.md` §4 step 6). All four units are merged: #26 56e2531, #29 e6a9aa1, #28 f45c28a (round 1), #27 62509c4 (round 0, integration on main).
+> Run CHECK on `main`, regenerate and commit `build/abyss_boat_script.ods`, refresh the README status table from STATUS, prune worktrees, add the wave 7 line to Wave history, and put wave 8 in Next up (QUEUE: NO3.b01, NO3.b02, NO2.b01, NO2.b02). Commit `handoff: wave 7 closed`, push, and prove it landed on `main` (Rule 3).
+> Then `create_session` for wave 8. The NO3.b01 binding: NO3_HW_1/0001–0002 = NO3_NO4.p01 0011–0012 byte for byte (R §27.3). NO2.b01/b02: NO2_MAINSTORAGE/0027 "shut in" (glossary §6, R §29.1); NO2_HW_5/0003 `The shutter is down, so there's no going any further.{p}` (R §29.2).
 > Watchdog: `send_later` every 12 minutes.
 
 ## Progress
 | Store | Done | Total | |
 |---|---|---|---|
-| script | 24 units · 1,217 rows | 38 units · 1,709 rows | NO4_BAR p01–p08, NO4_HWR_FRONT p01–p03, NO4_MACHINER90 p01–p02, NO4_TOOL_ROOM p01–p02 (rooms complete), NO4.b01, NO4.b02 (deck NO4 complete bar the `_T` scripts); NO5.b01 (deck NO5 complete); NO6.b01, NO6.b02 (deck NO6 complete); NO3_CHAPEL.p01–p03 (room complete, 150/150); NO3_NO4.p01 (31/61); STATUS 2026-10-30 |
+| script | 25 units · 1,247 rows | 38 units · 1,709 rows | NO4_BAR p01–p08, NO4_HWR_FRONT p01–p03, NO4_MACHINER90 p01–p02, NO4_TOOL_ROOM p01–p02 (rooms complete), NO4.b01, NO4.b02 (deck NO4 complete bar the `_T` scripts); NO5.b01 (deck NO5 complete); NO6.b01, NO6.b02 (deck NO6 complete); NO3_CHAPEL.p01–p03 (room complete, 150/150); NO3_NO4.p01–p02 (room complete, 61/61); STATUS 2026-10-30 |
 | scene | 4 units · 190 rows | 4 units · 190 rows | OP-SCN034, SCN038, SCN041-SCN046, SCN047-EPILOG (store complete) |
 | system | 0 | 5 units · 188 rows | blocked whole (F-006) |
 
-Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-30; `NO4_BAR.SCR` 37,378 free; `NO4_TOOL_ROOM.SCR` 61,899, 80/80; the NO4.b01/b02 rooms ≥ 63,697; the NO5 rooms ≥ 63,950; NO6_BRIDGE 63,400, the other NO6 rooms ≥ 64,242; NO3_CHAPEL.SCR 55,247, 150/150; NO3_NO4.SCR 61,029, 31/61).
+Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-30; `NO4_BAR.SCR` 37,378 free; `NO4_TOOL_ROOM.SCR` 61,899, 80/80; the NO4.b01/b02 rooms ≥ 63,697; the NO5 rooms ≥ 63,950; NO6_BRIDGE 63,400, the other NO6 rooms ≥ 64,242; NO3_CHAPEL.SCR 55,247, 150/150; NO3_NO4.SCR 60,727, 61/61).
 
 ## In flight
 Wave 7, dispatched 2026-10-30, seeds 3b28903 (glossary §9). Translator owns each unit until its PR is open; then the reviewer.
@@ -27,7 +27,7 @@ Wave 7, dispatched 2026-10-30, seeds 3b28903 (glossary §9). Translator owns eac
 | script NO3_CHAPEL.p02 | `tl/script-NO3_CHAPEL.p02` | #26 (7afbe0c) | **MERGED** round 0, squash 56e2531; 44 rows, NO3_CHAPEL.SCR 55,316 free, 48 dup pairs (CHECK 155 + 7); 4 §9 rows promoted (R §26); integration commit on main |
 | script NO3_CHAPEL.p03 | `tl/script-NO3_CHAPEL.p03` | #28 (d4a6b39 → 92146e5) | **MERGED** round 1, squash f45c28a (round 0 CHANGES: 0128 authored-`{br}` line at 28, fixed); 44 rows, NO3_CHAPEL.SCR 55,247 free, 150/150 (room complete); CHECK 165 + 8 pairs (160 + 8 without it), census 81 pairs, 0 divergent; 8 §9 rows promoted (R §28); integration commit on main |
 | script NO3_NO4.p01 | `tl/script-NO3_NO4.p01` | #29 (61022fd) | **MERGED** round 0, squash e6a9aa1; 31 rows, NO3_NO4.SCR 61,029 free, CHECK 160 + 8 pairs (155 + 7 without it), census 64,666 comparisons, 0 divergent; ワイフ, 警察 promoted (R §27); F-026 0030 verified; integration commit on main |
-| script NO3_NO4.p02 | `tl/script-NO3_NO4.p02` | #27 (7edf333) | PR open, round 0; agent ae823e5ab8f02fb64. Flag 3: mid-row `{w}` glue (0030, 0040, 0043) — relayed to p01; candidate CHECK blind spot |
+| script NO3_NO4.p02 | `tl/script-NO3_NO4.p02` | #27 (7edf333) | **MERGED** round 0, squash 62509c4; 30 rows, NO3_NO4.SCR 60,727 free, 61/61 (room complete); CHECK 169 + 8 pairs (165 + 8 without it), census 56,940 comparisons, 0 divergent; F-026 0040/0043 verified (all 3 dump rows done); 閉じ込める row added; F-027 typos (R §29); integration commit on main |
 
 ## Next up
 Wave 7 (QUEUE 2026-10-30), four script units: NO3_CHAPEL.p02 (44 rows, 1,070 chars, ratio 27.16), NO3_CHAPEL.p03 (44, 1,039,
