@@ -2182,3 +2182,72 @@ Census counts are rows per store (script / scene / system), from the reviewer's 
   - …危険よ: NO6_HW_4/0002, SPACESHIP_HW/0005.
   - シャッターが下りていて: NO2_HW_5/0003 (plain), NO3_NO4/0055 (そうに無い).
 - Glossary: none.
+
+## Unit script NO6.b01 (PR #23, MERGED, 2026-10-30)
+
+A bundle of four NO6 rooms (37 rows, 839 source characters, tier D, ratio 39.03):
+- BRIDGE: the locked radio room, the key, the shutter lock on Deck 5, the control panel, a body.
+- ENTRANCE: Judy's flooding lines, the way up, Deck 6 ahead.
+- HW_1 and HW_2: the sealing shutters, the shipboard-events schedule, locked and pressure-held doors.
+
+Reviewed once:
+- **Round 0** (8ecdb7e, merged with main c650d6d for review): MERGE, squash 388bb77. Findings: none.
+
+Figures:
+- **Containers** (MEASURE). All four rooms are complete:
+
+  | File | Bytes | Free | Tokens | Rows |
+  |---|---|---|---|---|
+  | NO6_BRIDGE.SCR | 2,135 | 63,400 | 49 | 20/20 |
+  | NO6_ENTRANCE.SCR | 622 | 64,913 | 33 | 4/4 |
+  | NO6_HW_1.SCR | 513 | 65,022 | 28 | 3/3 |
+  | NO6_HW_2.SCR | 1,293 | 64,242 | 37 | 10/10 |
+
+- **Pages.** At most 4 rows per page (UNITCHECK, 37 rows, 0 violations). The whole store: 1,009 rows, 0 violations.
+- **Duplicates.** CHECK compared 122 duplicate pairs and 7 tag-variant pairs. Without the unit file it compares 113 and 7, so the unit adds 9.
+  - The reviewer's census made 77,182 comparisons: 37 rows × every dump row, at three levels (exact; `{p}{w}{br}` stripped; `【Name】` stripped, ！？ → ⁉, final 。！？… dropped), against `tl/` on main plus #22 (a2a5ade) and #24 (12556a0). 50 hits, all translated and byte-identical.
+- **Codes.** The authored `{p}{w}{br}` sequence matches the source's on 36 of 37 rows; the exception is `:5 BRIDGE/0002` (§23.2). The `…`/`‼`/`⁉`/`──` counts match on all 37.
+- **F-011 wrap scan** (the reviewer's script, `build/script_merged.tsv`, 89 lines, plant-tested): no lone "a", "an" or "I", no one-word last row, no split title or "Deck | N". `:17 BRIDGE/0014` ends a row in "The", which R §1.12 rule 2 allows. Authored-`{br}`/`{w}` lines ≤ 27 (`len()`): 24, 14, 21, 26, 27, 27.
+- **F-012.** One boundary, BRIDGE/0001 → 0002 (§23.2). The `+` rows 0015 and 0017 follow `{br}` endings.
+
+Census counts are rows per store (script / scene / system), from the reviewer's grep of `dumps/` on 2026-10-30. Line citations use PROJECT.md §7's numbering in `tl/script/NO6.b01.tsv` (line = row order + 3).
+
+### 23.1 Terms promoted from §9, two new terms, four fixed sentences, one variant added
+- **Promoted as seeded** (PR Glossary additions):
+  - 無線室 → `the radio room`; room name `Radio Room` (14; 10), 2 / 0 / 4. `:4 BRIDGE/0001`, `:9 0006`. rooms/107 (cap 14), items/011, hints/001–002 are blocked (F-006). 通信室 stays "the communications room" (R §22.1). §2 row.
+  - 水圧 → `the water pressure` (18), 7 / 0 / 0. `:14 BRIDGE/0011` "The water pressure has warped the door, so it can't be opened."; the fixed sentence below. NO4_BAR_T/0105 気圧と水圧 in context. §3 row.
+  - 親父 → `your dad` (8), 2 / 0 / 0. `:11 BRIDGE/0008` "He'll make a fuss if we're late, your dad." keeps the source's postposed お前の親父は. NO3_NO4/0043 俺はお前の親父に雇われた takes the same words. Never "old man", which is じいさん (Collison). §6 row.
+  - シャッターロック → `the shutter lock` (16), 1 / 0 / 0. `:17 BRIDGE/0014`. §3 row.
+  - 航海のスケジュール → `the voyage schedule` (19), 1 / 0 / 0. `:13 BRIDGE/0010`. §6 row.
+  - 水かさ → `the water (rising)` (9), 4 / 0 / 0, only inside the fixed sentence. §6 row.
+- **New terms:**
+  - 操作パネル → `control panel` (13); 防水シャッターの操作パネルがある → `There's a control panel for the watertight shutters.` (52). Census 5 / 0 / 0: `:15 BRIDGE/0012`; NO3_MACHINE/0004 opens with the identical sentence 防水シャッターの操作パネルがある。{br}, which CHECK does not pair (the second sentences differ), and must reuse the English byte for byte; NO3_MACHINE/0002 のようだ takes the same words hedged; NO3_FOODSTORAGE/0011, NO2_SUBSTORAGE/0005 in context. §3 row.
+  - 舵 → `the ship's wheel` (16). Census 3 / 0 / 0, of which 2 are 操舵室 (NO4_BAR/0428, 0437, "the wheelhouse"); 舵 alone 1, `:16 BRIDGE/0013`. §3 row.
+- **鍵 row, variant added** (a change to an existing row, written out here): NO6_BRIDGE/0001 鍵が締まっている is a fourth spelling of the "locked" phrase (締ま 1 / 0 / 0, already inside the row's 26 / 0 / 5). `:4` renders it "it seems to be locked". The row's Variants and note gain 鍵が締まって; its target is unchanged; no shipped line is affected. Also bound: `:9` "without a key", `:10` "So you found the key.", `:12 BRIDGE/0009` 扉には鍵がかかっている → "The door is locked." (shipped NO4_ENTRANCE/0001 この扉は… "This door is locked." agrees).
+- **Fixed sentences promoted from §9 to §6** (the coordinator's wave 6 replacements, R §22.1; #22 at a2a5ade identical byte for byte):
+  - 水かさ…増えつづけてる…。{w}{br}急がないと…危険よ…。{p} → `The water… it keeps rising…{w}{br}Must hurry… it's dangerous…{p}` (27 / 27). 4 / 0 / 0: `:24 ENTRANCE/0001` = `:31 HW_2/0001` = NO6_HW_4/0003 = NO6_HW_5/0001. Four … each side; the 。 after each … absorbed (R §1.3).
+  - 水が深すぎて…息が…でき…な…{p} → `The water's too deep… can't… brea… the…{p}` (39; wrapped 28 / 10). 4 / 0 / 0: `:25 ENTRANCE/0002` = `:32 HW_2/0002` = NO6_HW_4/0004 = NO6_HW_5/0002. The source breaks できない across the gasps; the English breaks "breathe", and the subject of "can't" is implied (step 5, the coordinator's form, flagged). The seed's "I" stranded at a wrap.
+  - 鍵が掛かっていて、扉は開かない。{p} → `It's locked, so the door won't open.{p}` (36; 24 / 11). 7 / 0 / 0: `:35 HW_2/0005` = `:37 0007` = NO6_HW_3/0005–0007, NO6_HW_4/0005, 0008. Unhedged as the source. 扉は鍵が掛かっていて開きそうに無い (NO3_HW_1/0005–6, NO3_HW_2/0002–3, 4 / 0 / 0) is a different, hedged sentence and keeps its そう.
+  - 水圧で扉を開けられない。{p} → `The water pressure won't let the door open.{p}` (43; 28 / 14), unchanged from the seed. 5 / 0 / 0: `:38 HW_2/0008` = `:39 0009` = NO6_HW_4/0006–0007, NO6_HW_5/0004.
+- Glossary: rows added to §2 (無線室), §3 (水圧, シャッターロック, 操作パネル, 舵) and §6 (親父, 航海のスケジュール, 水かさ, the four sentences); §3 鍵 variant added as above; the eight §9 rows removed. 教会 and 拠点 stay in §9 for NO3_CHAPEL.
+
+### 23.2 Movable codes (PR Flag 2)
+- **Leading `{p}`** at `:5 BRIDGE/0002`, a `+` row after the untagged 0001. 0001 ("…but it seems to be locked.", 68) and 0002 (52) cannot share a 4-row page in any wording that keeps この扉の向こう, らしい and ようだ; without the click the page runs 7 rows. With it, 3 + 3.
+  - The click falls at the sentence boundary, and because `{p}` clears the box it also closes the F-012 glue boundary (R §2.3), so no leading `{br}` is needed.
+  - This extends R §2.4 (a leading `{p}` on a `+` row after a `{br}` ending) to a `+` row after an untagged ending. Added to F-010's in-game check.
+- No `{br}` moved, added or removed by hand; `{w}` untouched.
+
+### 23.3 Departures, speakers, readings (PR Flags 3, 5, 6)
+- **`:23 BRIDGE/0020`** 鋭利な刃物のようなもので切り刻まれている → `Something like a sharp blade has hacked it to pieces.{p}` (28 / 24). Active reorder, step 6, flagged; approved. Every passive wording strands "blade." on the last row ("It's been hacked to pieces with something like a sharp | blade."). Parity with shipped NO4_4102/0001 ("…with what looks like a sharp blade.") is not required: the sources differ (のようなもの vs らしき物) and are not a pair. The hedge and the glossary words (R §11.1, §20.1) are kept.
+- **`:15 BRIDGE/0012`** 操作できない → "inoperable", step 4, forced: "…are broken and can't be operated." makes the page 5 rows.
+- **Hedges** (wave 5's lesson, R §20.3), all kept: らしい "apparently" + ようだ "it seems" (`:4`); そうにない "Doesn't look like" (`:9`); のようなもの "Something like" (`:23`); どうやら…そう "It looks like" (`:26`); ようだ "seems" (`:27`); そうにない "There seems to be no going" (`:28`–`:29`). 一応 "Just in case", とやら "so-called", にも "too" (`:21`).
+- **Speakers** (F-009). BRIDGE 0001–0008, 0014–0018 and HW_2/0003–0004 are one of Oakland's crew addressing John (俺, お前の親父, やりきれん, ならん) — plausibly Heming, but unnamed; the English is speaker-neutral. 0015 解除してみるか？ "Shall we try releasing it?" is his question, answered by his own 0016. BRIDGE 0009–0013, 0019–0020 and HW_2/0005–0010 are narration despite spk=0/1. The … lines are Judy (よ).
+- **Readings accepted:** ん？ "Hm?"; やりきれん "hard to bear"; 記載されている "is written here"; 首が切断 "The head has been severed."; 恐怖の形相で朽ち果てている "has rotted away, frozen in a look of terror"; 動かしても "when you turn it" (the wheel).
+- Wording chosen for wraps, all literal (PR Flag 3): 0008 postposed "your dad", 0017 "Deck 5, John" (no "Deck | 5"), ENTRANCE/0004 "Deck 6 seems to be up ahead." (28, a wrapped line), HW_2/0003 "a pretty complicated layout", HW_2/0004 "Follow me so you don't lose your way."
+- Glossary: none beyond §23.1.
+
+### 23.4 Recurrences (PR Flag 7)
+- **Translated, identical:** HW_1/0003 = HW_2/0006 = 0010 = NO4_HWL_FRONT/0011 = NO4_HWR_FRONT/0101; ENTRANCE/0003 = NO5_ENTRANCEL/0006 = 0009; HW_1/0001–0002 = NO5_HW_L/0003, 0005, NO5_HW_R/0007 (the され、 variant).
+- **#22 (NO6.b02, a2a5ade), identical:** the four sentences of §23.1 and the 封鎖 sentence at NO6_HW_5/0005.
+- **Families for later units, by hand:** NO3_MACHINE/0004 first sentence = `:15`'s (§23.1); NO3_MACHINE/0002 hedged; 扉は鍵が掛かっていて開きそうに無い (NO3_HW_1, NO3_HW_2), hedged, kept apart from `:35`.
+- Glossary: none.

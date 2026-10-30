@@ -77,7 +77,8 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | キャビン | キャビンＮＮＮＮ (rooms/*) | cabin; on the sign: Cabins; room names: Cabin NNNN | 5; 6; 10 | 14 (room names) | 部屋 stays "room" (R §1.6); 3 / 0 / 15 | R §1.6, §12.1 |
 | 売店 | 売店のカウンター | the shop; 売店のカウンター: the shop counter | 8; 16 | — | lowercase; NO4_HWL_BACK/0018 = NO4_HWL_BACK2/0014 `The shop counter, it seems.`; the 両替所 frame is not made parallel (R §20.1); 2 / 0 / 0 | R §20.1 |
 | 両替所 | 両替所のカウンター | the currency exchange; 両替所のカウンター: the exchange counter | 21; 20 | — | lowercase; NO4_P_OFFICE/0012 `This seems to be the exchange counter.{br}Hard to tell what's inside.{p}`, not parallel with 売店 (R §20.1); 1 / 0 / 0 | R §20.1, §21.1 |
-| 通信室 | — | the communications room | 23 | — | lowercase; NO5_ENTRANCEL/0004 only; never 無線室 "the radio room" (§9); 1 / 0 / 0 | R §22.1 |
+| 通信室 | — | the communications room | 23 | — | lowercase; NO5_ENTRANCEL/0004 only; never 無線室 "the radio room" (§2); 1 / 0 / 0 | R §22.1 |
+| 無線室 | 無線室の鍵 (items/011) | the radio room; room name: Radio Room | 14; 10 | 14 (rooms/107, F-006) | lowercase in dialogue (NO6_BRIDGE/0001, 0006); 通信室 stays "the communications room"; hints/001–002, items/011 blocked; 2 / 0 / 4 | R §23.1 |
 | 銀行 | — | a bank; on the sign: Bank | 6; 4 | 14 (rooms/088, F-006) | lowercase in narration (NO5_ENTRANCEM/0011 "A bank seems to lie ahead"), capitalised on the sign (NO5_HW_R/0010); 2 / 0 / 1 | R §22.1 |
 | 雑貨屋 | — | a general store; on the sign: General Store | 15; 13 | 14 (rooms/082, F-006) | lowercase in narration (NO5_ENTRANCEM/0012), capitalised on the sign (NO5_HW_R/0009 `Entrance Hall/General Store`); never "sundries shop"; 2 / 0 / 1 | R §22.1 |
 | カフェ · スポーツジム | — | Cafe · Gym (sign entries) | 4 · 3 | — | capitalised, sign entries, NO5_HW_R/0010 `Bank/Cafe/Gym,` only; no é (charset); not "Sports Gym"; 1 / 0 / 0 each | R §22.1 |
@@ -115,7 +116,11 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | 懐中電灯 | — | flashlight | 10 | 43 (items/006, blocked) | never "torch"; NO4_SHOP/0005 "A flashlight is lying here."; 1 / 0 / 1 | R §21.1 |
 | チェーン (alone) | — | chain | 5 | — | NO4_HWL_KAIDAN/0002 "secured tight with a chain"; チェーンカッター is its own row; 鎖 (NO4_BAR/0422 "chains") not fixed; 1 / 0 / 0 alone | R §21.1 |
 | 消火器 | — | fire extinguisher | 17 | 43 (items/007, blocked) | NO5_SHOP/0002 "There's a fire extinguisher lying here."; NO6_HW_3/0003 takes the same words; 2 / 0 / 1 | R §22.1 |
-| 鍵 | 鍵が掛かって(い)る · 鍵がかかって · 鍵がかけられて | key; locked (鍵が掛か…/鍵がかか…/鍵がかけ… → "locked") | 3; 6 | — | NO5_LOCKERROOM/0004 "Found a key placed inside the locker."; NO5_HW_R/0004 "The door is locked"; カードキー is its own row; 26 / 0 / 5 (掛か 13, かか 5, かけ 1) | R §22.1 |
+| 鍵 | 鍵が掛かって(い)る · 鍵がかかって · 鍵がかけられて · 鍵が締まって | key; locked (鍵が掛か…/鍵がかか…/鍵がかけ…/鍵が締ま… → "locked") | 3; 6 | — | NO5_LOCKERROOM/0004 "Found a key placed inside the locker."; NO5_HW_R/0004 "The door is locked"; NO6_BRIDGE/0001 締まっている "locked" (variant added, R §23.1); カードキー is its own row; 26 / 0 / 5 (掛か 13, かか 5, かけ 1, 締ま 1) | R §22.1, §23.1 |
+| 水圧 | — | the water pressure | 18 | — | NO6_BRIDGE/0011 "The water pressure has warped the door"; the fixed 水圧で扉を… sentence (§6); NO4_BAR_T/0105 気圧と水圧 in context; 7 / 0 / 0 | R §23.1 |
+| シャッターロック | — | the shutter lock | 16 | — | NO6_BRIDGE/0014 "The shutter lock on Deck 5 is still engaged."; 1 / 0 / 0 | R §23.1 |
+| 操作パネル | 防水シャッターの操作パネル | control panel; 防水シャッターの操作パネル: a control panel for the watertight shutters | 13; 43 | — | NO6_BRIDGE/0012 `There's a control panel for the watertight shutters.{br}`; NO3_MACHINE/0004 opens with the same sentence and reuses it; NO3_MACHINE/0002 (+ ようだ), NO3_FOODSTORAGE/0011, NO2_SUBSTORAGE/0005; 5 / 0 / 0 | R §23.1 |
+| 舵 (船の舵) | — | the ship's wheel | 16 | — | NO6_BRIDGE/0013 only; 操舵室 stays "the wheelhouse"; 1 / 0 / 0 alone (3 with 操舵室) | R §23.1 |
 | 浸水 | — | flood / flooding / flooded, as the line needs | 5 / 8 / 7 | — | shipped NO4_BAR/0068 "a flood"; NO5_ENTRANCEL/0003 "The flooding's already started…⁉", NO5_ENTRANCEM/0010 "…it's flooded."; 6 / 0 / 0 | R §22.1 |
 
 ## 4. Classes, units, system terms
@@ -198,6 +203,13 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | どうやらここから上に昇れそうだ。{p} | — | `It looks like there's a way up from here.{p}` | 41 | fixed sentence: NO5_ENTRANCEL/0006, 0009 = NO6_ENTRANCE/0003; keep the そう hedge; 3 / 0 / 0 | R §22.1 |
 | シャッターで封鎖されて、先に進めそうにない。{p} | シャッターで封鎖され、先に進めそうにない。{p} | `A shutter has sealed it off. There seems to be no going any further.{p}` | 68 (28 / 26 / 12) | fixed sentence, both spellings one target: NO5_HW_L/0003, 0005, NO5_HW_R/0007 (され、) = NO6_HW_1/0001–0002, NO6_HW_5/0005 (されて、); replaces the wave 6 seed, which stranded "a"; 6 / 0 / 0 | R §22.1 |
 | シャッターで閉ざされて先には進めない。{p} | — | `A shutter closes off the way. No going any further.{p}` | 51 (24 / 26) | unhedged, kept apart from the 封鎖 sentence: NO5_ENTRANCEM/0005 = 0006; plain シャッターが下りていて先には進めない (NO2_HW_5/0003) may reuse "No going any further."; 2 / 0 / 0 | R §22.1 |
+| 親父 | — | your dad (お前の親父 → "your dad") | 8 | Oakland, to John, by his crew: NO6_BRIDGE/0008 "…if we're late, your dad." (postposed as the source), NO3_NO4/0043; never "old man" (じいさん, Collison); 2 / 0 / 0 | R §23.1 |
+| 航海のスケジュール | — | the voyage schedule | 19 | NO6_BRIDGE/0010 "The voyage schedule is written here." only; 船内イベントのスケジュール表 stays as shipped (R §21.4); 1 / 0 / 0 | R §23.1 |
+| 水かさ | — | the water (rising): 水かさ…増えつづけてる → "The water… it keeps rising…" | 9 | only in the fixed sentence below; 4 / 0 / 0 | R §23.1 |
+| 水かさ…増えつづけてる…。{w}{br}急がないと…危険よ…。{p} | — | `The water… it keeps rising…{w}{br}Must hurry… it's dangerous…{p}` | 27 / 27 | fixed sentence, Judy: NO6_ENTRANCE/0001 = NO6_HW_2/0001 = NO6_HW_4/0003 = NO6_HW_5/0001; 4 … each side; replaces the wave 6 seed; 4 / 0 / 0 | R §23.1 |
+| 水が深すぎて…息が…でき…な…{p} | — | `The water's too deep… can't… brea… the…{p}` | 39 (28 / 10) | fixed sentence, Judy drowning: NO6_ENTRANCE/0002 = NO6_HW_2/0002 = NO6_HW_4/0004 = NO6_HW_5/0002; 4 …; the subject of "can't" implied (step 5); 4 / 0 / 0 | R §23.1 |
+| 鍵が掛かっていて、扉は開かない。{p} | — | `It's locked, so the door won't open.{p}` | 36 (24 / 11) | fixed sentence, unhedged: NO6_HW_2/0005, 0007 = NO6_HW_3/0005–0007, NO6_HW_4/0005, 0008; 扉は鍵が掛かっていて開きそうに無い (NO3_HW_1/0005–6, NO3_HW_2/0002–3) is hedged, kept apart; 7 / 0 / 0 | R §23.1 |
+| 水圧で扉を開けられない。{p} | — | `The water pressure won't let the door open.{p}` | 43 (28 / 14) | fixed sentence: NO6_HW_2/0008–0009 = NO6_HW_4/0006–0007, NO6_HW_5/0004; 5 / 0 / 0 | R §23.1 |
 
 ## 7. Register per character
 | Character | Register | Contractions? | Markers | Ruling |
@@ -227,18 +239,8 @@ NOT decisions. The first translator to render one promotes it in the PR's Glossa
 so; the reviewer moves the row up into its section in the integration commit. -->
 | Source | Variants | Proposed | Alternatives | Where seen | Wave |
 |---|---|---|---|---|---|
-| 無線室 | — | the radio room | — | NO6_BRIDGE/0001, 0006; rooms/107, items/011, hints/001–002 (cap 14 as a room name); 2 / 0 / 4 | 1 |
 | 教会 | — | the chapel (lowercase; room name: Chapel) | church | NO3_CHAPEL/0001, NO3_HW_1/0001, NO3_NO4/0011; rooms/040, hints/013 blocked; 3 / 0 / 2 | 6 |
 | 拠点 | — | base | base of operations | NO3_CHAPEL/0012, NO3_HW_1/0001, NO3_NO4/0001, 0011; 4 / 0 / 0 | 6 |
-| 水圧 | — | the water pressure | — | NO6_BRIDGE/0011, NO6_HW_2/0008–9, NO6_HW_4/0006–7, NO6_HW_5/0004, NO4_BAR_T/0105; 7 / 0 / 0 | 6 |
-| 水かさ | — | the water (rising) | the water level | NO6_ENTRANCE/0001 = NO6_HW_2/0001 = NO6_HW_4/0003 = NO6_HW_5/0001 (fixed sentence below); 4 / 0 / 0 | 6 |
-| 親父 | — | your dad | your father | NO6_BRIDGE/0008, NO3_NO4/0043; never "old man" (that is じいさん/爺さん, Collison); 2 / 0 / 0 | 6 |
-| シャッターロック | — | the shutter lock | — | NO6_BRIDGE/0014 only; 1 / 0 / 0 | 6 |
-| 航海のスケジュール | — | the voyage schedule | — | NO6_BRIDGE/0010 only; 船内イベントのスケジュール表 stays as shipped (R §21.4) | 6 |
-| Cross-unit sentence | 水かさ…増えつづけてる…。{w}{br}急がないと…危険よ…。{p} | `The water… it keeps rising…{w}{br}Must hurry… it's dangerous…{p}` | — | NO6_ENTRANCE/0001, NO6_HW_2/0001 (b01) = NO6_HW_4/0003, NO6_HW_5/0001 (b02); Judy; 4 … each side | 6 |
-| Cross-unit sentence | 水が深すぎて…息が…でき…な…{p} | `The water's too deep… can't… brea… the…{p}` | — | NO6_ENTRANCE/0002, NO6_HW_2/0002 (b01) = NO6_HW_4/0004, NO6_HW_5/0002 (b02); Judy drowning; 4 … | 6 |
-| Cross-unit sentence | 鍵が掛かっていて、扉は開かない。{p} | `It's locked, so the door won't open.{p}` | — | NO6_HW_2/0005, 0007 (b01) = NO6_HW_3/0005–0007, NO6_HW_4/0005, 0008 (b02); NO3_HW_1/0005–6, NO3_HW_2/0002–3 later | 6 |
-| Cross-unit sentence | 水圧で扉を開けられない。{p} | `The water pressure won't let the door open.{p}` | — | NO6_HW_2/0008–0009 (b01) = NO6_HW_4/0006–0007, NO6_HW_5/0004 (b02) | 6 |
 
 ## 10. Open questions
 <!-- one line each, with the FLAGS id. A closed question is deleted here; its answer stays in rulings.md. -->

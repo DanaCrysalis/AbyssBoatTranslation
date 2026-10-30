@@ -86,6 +86,10 @@ NO4_TOOL_ROOM.p02 (PR #20) clears the 5-row chain from 0044 named above with a l
 0047, after 0046's `{br}` (Miller: "Why is that, I wonder?" then "Going by research presented at
 conferences…"; 7 rows without it), and adds one at 0064's clause comma; check both with the others
 (R §19.3).
+NO6.b01 (PR #23) adds a leading `{p}` at NO6_BRIDGE/0002, a `+` row after the untagged 0001 (a
+crew member: "…but it seems to be locked." then "We can't go back empty-handed…"; 7 rows without
+it). The source has no click between the two; check that the box clears and the second page opens
+on its first row (R §23.2).
 
 
 ## Open
@@ -218,7 +222,8 @@ confirmed in PR #5's review by a plant in NO4_BAR.p02 (0113 without its leading 
 `All checks passed`, UNITCHECK 0 violations (0113's first line counted at 10 + 9 columns), MERGE
 writes the glued text. 25 boundaries in the script dump: NO4_BAR 0113, 0115, 0149, 0315, 0338;
 NO4_BAR_T 14; NO4_HWR_FRONT/0077; NO4_HWR_FRONT_DOWN_T/0005; NO4_HWR_FRONT_UP_T/0026, 0027;
-NO5_ENTRANCEL/0005; NO6_BRIDGE/0002. Translators open the `+` target with `{br}` (flagged);
+NO5_ENTRANCEL/0005; NO6_BRIDGE/0002 (PR #23 opens it with a forced `{p}` instead, which clears
+the box: R §23.2). Translators open the `+` target with `{br}` (flagged);
 listed in PROJECT.md §7 and checked by hand · would close with a tool PR: CHECK errors when a
 translated `+` target starts with text and the previous row's target ends in text, not a tag
 (rulings R §2.3).
