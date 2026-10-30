@@ -6,9 +6,9 @@ at the close commit (`CLAUDE.md` Rule 3). A fresh container may clone shallow wi
 preflight is `git fetch origin main && git checkout main && git reset --hard origin/main`.
 
 ## NEXT ACTION — always current, always a literal instruction
-> **Wave 6 coordinator: wait for the four translators** (In flight), re-checking the barrier on each return
-> (`ListAgents`; a returned translator with no PR → resume it by `SendMessage`, else a fresh one, same branch).
-> Barrier met → reviewer per PR in unit order NO5.b01 → NO6.b01 → NO6.b02 → NO3_CHAPEL.p01, one at a time.
+> **Wave 6 coordinator: barrier met** (PRs #25, #23, #22, #24 open). Reviewer subagent per PR, one at a time, in unit
+> order: #25 NO5.b01 → #23 NO6.b01 → #22 NO6.b02 → #24 NO3_CHAPEL.p01. Pull after each; CHANGES → findings verbatim to
+> the same translator by `SendMessage`, review the next meanwhile. Reviewer branches review-w6-prN / integrate-w6-prN.
 
 ## Progress
 | Store | Done | Total | |
@@ -22,7 +22,7 @@ Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEA
 ## In flight
 | Unit | Branch | PR | State | Next |
 |---|---|---|---|---|
-| script NO5.b01 | `tl/script-NO5.b01` | — | translator dispatched 2026-10-26 (round 0); 429 stop, resumed 2026-10-30 | translator opens PR |
+| script NO5.b01 | `tl/script-NO5.b01` | #25 | PR open 8d0fc61, round 0; lowest NO5_ENTRANCEL.SCR 63,950 free; open: {p} added at NO5_ENTRANCEL/0004, sign row 0011 form | reviewer (now) |
 | script NO6.b01 | `tl/script-NO6.b01` | #23 | PR open 8ecdb7e, round 0, seed-wrap fix applied; wrap scan 0/89; open: {p} added at NO6_BRIDGE/0002, 0020 reorder | reviewer, after barrier |
 | script NO6.b02 | `tl/script-NO6.b02` | #22 | PR open a2a5ade, round 0, seed-wrap fix applied; wrap scan 0/60; open: NO6_TOOLROOM/0001 wording (Flag 5) | reviewer, after barrier |
 | script NO3_CHAPEL.p01 | `tl/script-NO3_CHAPEL.p01` | #24 | PR open 12556a0, round 0; NO3_CHAPEL.SCR 55,976 free; open: speakers (Wolg/Oakland/Heming — the dispatch's William reading was wrong), s28/s29 = the ammo vote, 教会 article | reviewer, after barrier |
@@ -36,7 +36,7 @@ Bindings waiting: NO5_BANK/0005 = NO4_SHOP/0006 `"Today's Shipboard Events," it 
 `"Floor Information"{br}` (sign entries R §12.1); NO6_HW_1/0003 = NO6_HW_2/0006 = 0010 = NO4_HWL_FRONT/0011 byte for byte (R §21.4);
 NO5_LOCKERROOM/0004–0007 ロッカー "locker", 空のようだ "seems empty" (R §19); 切り刻む/無残に "hacked to pieces"/"brutally" at
 NO5_BANK/0008, NO6_BRIDGE/0020 (R §20.1); 振動 "tremor" NO6_HW_4/0001, NO6_TOOLROOM/0003 (R §20.1); チェーンカッター NO6_TOOLROOM/0001;
-NO5_ENTRANCEL/0005 reuses NO4_BAR/0142 "Follow me…"; 使えそうな物 hedge family NO5_BANK/0007, NO6_STORAGE/0002 (R §21.3–§21.4 —
+NO5_ENTRANCEL/0005 reuses NO4_HWR_FRONT/0142 (pointer corrected; was NO4_BAR/0142) "Follow me…"; 使えそうな物 hedge family NO5_BANK/0007, NO6_STORAGE/0002 (R §21.3–§21.4 —
 keep ようだ/そう); NO3_CHAPEL save prompts = the NO4_BAR ones byte for byte; NO3_CHAPEL/0033 なんだと‼ → "What‼".
 Wave 5 lessons: three CHANGES of four — lone "an" wraps (#20), and dropped そう/ようだ hedges the geometry did not force (#19, #18):
 tell translators to keep every hedge and scan wraps with a script; reviewers use unique review AND integration branch names.
