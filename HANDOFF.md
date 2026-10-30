@@ -1,4 +1,4 @@
-**Last updated: 2026-10-30** — wave 7 closed: NO3_CHAPEL.p02, p03, NO3_NO4.p01, p02 merged (PRs #26, #28, #29, #27), one CHANGES round (#28), none parked; rooms NO3_CHAPEL and NO3_NO4 complete. The wave 7 coordinator opens the wave 8 session.
+**Last updated: 2026-10-30** — wave 8 dispatched (NO3.b01, NO3.b02, NO2.b01, NO2.b02); glossary seeds bd79313. **NO WATCHDOG — attended run**: this wave session is at lineage depth 8 (limit 8), so `send_later` and `create_session` are refused (see NEXT ACTION).
 
 ## Integration branch: `main`. Not configurable.
 Every PR bases on `main`; the reviewer merges into `main`; a wave is closed only when `origin/main` is
@@ -6,11 +6,10 @@ at the close commit (`CLAUDE.md` Rule 3). A fresh container may clone shallow wi
 preflight is `git fetch origin main && git checkout main && git reset --hard origin/main`.
 
 ## NEXT ACTION — always current, always a literal instruction
-> **Open the wave 8 session** (wave 7 coordinator; CLAUDE.md Rule 1, orchestrator.md §7): `create_session`
-> titled `Abyss Boat — wave 8`, tags `["abyssboat-translation", "wave-8"]`, `source_url`
-> https://github.com/DanaCrysalis/AbyssBoatTranslation, `source_revision` `main`, seed = SKILL.md §6a
-> with UNITS = Next up. First check `list_sessions` (mine: true, title `Abyss Boat — wave 8`): if one exists, do not open a second.
-> The wave 8 coordinator seeds the glossary for its units, then dispatches.
+> **NO WATCHDOG — attended run.** Wave 8 coordinator (session lineage depth 8 of 8: `send_later` and
+> `create_session` are refused, "no user or organization setting changes this limit"). Wave 8 is dispatched:
+> wait for all four PRs (barrier), then review one at a time. At wave close no successor session can be opened
+> from here: the human starts wave 9 from a **fresh top-level session** (`/translate`, which resets the lineage).
 
 ## Progress
 | Store | Done | Total | |
@@ -22,14 +21,19 @@ preflight is `git fetch origin main && git checkout main && git reset --hard ori
 Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-30; `NO4_BAR.SCR` 37,378 free; `NO4_TOOL_ROOM.SCR` 61,899, 80/80; the NO4.b01/b02 rooms ≥ 63,697; the NO5 rooms ≥ 63,950; NO6_BRIDGE 63,400, the other NO6 rooms ≥ 64,242; NO3_CHAPEL.SCR 55,247, 150/150; NO3_NO4.SCR 60,727, 61/61).
 
 ## In flight
-Nothing. Wave 7's four units are merged; see Wave history and rulings R §26–§29.
+| Unit | Branch | Translator | PR | State | Next |
+|---|---|---|---|---|---|
+| script NO3.b01 | tl/script-NO3.b01 | w8-NO3.b01 | — | dispatched 2026-10-30 | translator opens PR |
+| script NO3.b02 | tl/script-NO3.b02 | w8-NO3.b02 | — | dispatched 2026-10-30 | translator opens PR |
+| script NO2.b01 | tl/script-NO2.b01 | w8-NO2.b01 | — | dispatched 2026-10-30 | translator opens PR |
+| script NO2.b02 | tl/script-NO2.b02 | w8-NO2.b02 | — | dispatched 2026-10-30 | translator opens PR |
 
 ## Next up
 Wave 8 (QUEUE 2026-10-30), four script bundles: NO3.b01 (51 rows, 1,105 chars, ratio 29.98; NO3_CABIN_3002/3003/3104/3105/3106,
 NO3_FOODSTORAGE, NO3_HW_1), NO3.b02 (25, 502, 65.55; NO3_HW_2/3, NO3_MACHINE, NO3_MEDICALROOM, NO3_NO2, NO3_STORAGE), NO2.b01 (55,
 1,021, 32.00; NO2_CABIN_2001/2101/2103, NO2_HW_1–5, NO2_MAINSTORAGE), NO2.b02 (43, 829, 39.66; NO2_NO3, NO2_SUBSTORAGE,
 NO2_THIRDSTORAGE, NO2_TOFE_ROOM); all tier D, every container ≥ 63,293 free.
-Glossary seeds: not yet — the wave 8 coordinator's step 2 (§9 is empty).
+Glossary seeds: §9, commit bd79313 (19 rows).
 Bindings waiting: NO3_HW_1/0001–0002 = NO3_NO4/0011–0012 byte for byte (R §27.3; CHECK pairs them); NO2_MAINSTORAGE/0027
 閉じ込める "shut in" (glossary §6, R §29.1); NO2_HW_5/0003 `The shutter is down, so there's no going any further.{p}` (R §29.2);
 NO2_NO3/0004 機関室 "the engine room" (glossary §2); 例の生き残り "that survivor"; ワイフ "my wife"; 警察 (glossary §2).
