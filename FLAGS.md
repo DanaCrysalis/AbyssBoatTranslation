@@ -94,6 +94,10 @@ NO3_CHAPEL.p02 (PR #26) adds leading `{p}` at NO3_CHAPEL/0060 and 0085, `+` rows
 `{br}`-ended 0059 and 0084 ("…the monsters again." then "Besides, we must beware
 the survivor…"; "…with a laser sight." then "Odd gear for self-defense."; 5 and 6 rows without
 them). Check them with the others (R §26.2).
+NO3_NO4.p01 (PR #29) adds no `{p}` to Wolg's police story, the `{w}` chains 0018–0026 and
+0027–0031: every `{w}` page fits 4 rows as the tools model it. If `{w}` keeps the box, both chains
+run far past 4 rows between `{p}` clicks, in the Japanese as well. Play the night talk with Wolg
+and report whether the box scrolls or clears at each `{w}` (R §27.2).
 
 
 ## Open
@@ -364,6 +368,8 @@ dumps/script.tsv`; scene 0). The translators of NO3_NO4.p01 (#29 Flag 3) and p02
 it independently. Each adds a `{br}` after the `{w}`, flagged; the reviewer checks those rows by
 hand. A tool PR that models a mid-row `{w}` as continuing the row would close it. Added to
 PROJECT.md §7's blind spots · rulings R §26.4.
+NO3_NO4/0030 shipped in PR #29 (squash e6a9aa1) as `didn't come.{w}{br}And the smell of blood…{w}{br}`,
+checked by hand (25 / 23 columns); 0040 and 0043 remain, in #27 (R §27.2).
 
 ## CHECK positive controls
 <!-- One entry per kind of violation deliberately planted and caught by CHECK (tools/README.md rule 3).

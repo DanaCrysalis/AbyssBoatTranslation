@@ -55,6 +55,7 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | 海上 | — | the surface | 11 | — | "up on the surface" in p01 0009 | R §3.1 |
 | 第Nデッキ | 第２デッキ … 第６デッキ (full-width digit) | Deck N ("Deck 4") | 6 | 10 (deck names, F-006) | capitalised with an Arabic numeral; デッキ alone (このデッキ, 下のデッキ) is lowercase "deck" in context | R §5.1 |
 | 元警官 | — | ex-policeman | 12 | — | Wolg's past; 警官 alone in context (Miller's sarcastic "cop", NO4_BAR/0231) | R §5.1 |
+| 警察 | 警察を辞めた | the police; 警察を辞めた: quit the police force | 10; 21 | — | Wolg's past: NO3_NO4/0017 "The reason why I quit the police force……", 0041 the same words; 警官 alone in context (NO3_NO4/0021 "cop"); 2 / 0 / 0 | R §27.1 |
 | 生き残り | 生き残りグループ | survivor(s); 生き残りグループ: survivor group | 8 (9); 14 | — | the people still alive aboard | R §5.1 |
 | 生存者 | — | survivor(s) | 8 (9) | — | same word as 生き残り; NO4_HWL_FRONT/0008 "there may be no survivors left"; 1 / 0 / 0 | R §21.1 |
 | 乗客 | — | passenger(s) | 10 (9) | — | as shipped NO4_BAR/0028, 0094, 0191, 0198, 0393; NO4_HWR_FRONT/0122 "a passenger on board this ship"; 15 / 0 / 0 | R §14.1 |
@@ -185,6 +186,7 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | ウスノロ | — | dimwit (pl. dimwits) | 6 | the killer's word for his victims: 親愛なるウスノロ → "my dear dimwit", てめえらウスノロ → "you dimwits", そのウスノロ → "those dimwits"; 0 / 3 / 0 | R §13.1 |
 | メス | — | bitch (あのメス → "that bitch") | 5 | the killer on Judy, SCN046B1/10–11; article in context; 0 / 2 / 0 | R §13.1 |
 | 売女 | — | whore (お前の売女 → "your whore") | 5 | the killer on Wolg's murdered wife, SCN046B2/07; 0 / 1 / 0 | R §13.1 |
+| ワイフ | — | my wife | 7 | Wolg's murdered wife, his police story: NO3_NO4/0030 "My wife, who always met me at the door…", 0032; the loanword affectation is not carried; 2 / 0 / 0 | R §27.1 |
 | 神 | — | god, lowercase ("a god", "that god of yours") | 3 | SCN046B2/02–05; 女神 is the 俺様 row's "goddess"; NO4_BAR_T/0144 神は──主は in context; 1 / 4 / 0 (女神 3 / 0 / 0) | R §13.1 |
 | 生肝 | — | raw liver | 9 | SCN046B2/04 only (アレの生肝 → "that thing's raw liver"); 0 / 1 / 0 | R §13.1 |
 | ゲームオーバー | — | game over ("it's game over") | 9 | in dialogue, SCN046A2/01 only (Heming to Oakland); 0 / 1 / 0 | R §13.1 |
@@ -253,8 +255,6 @@ so; the reviewer moves the row up into its section in the integration commit. --
 | 燃料バルブ | 燃料 | the fuel valve; 燃料 "fuel" (as shipped NO6_HW_3/0001) | — | NO3_CHAPEL/0126 — 1 / 0 / 0 | 7 |
 | アモ | — | round ("take out one round", bound to s28/s29 `Hold the round` — R §25.1) | "bullet" — rejected by the binding | NO3_CHAPEL/0122 — 1 / 0 / 0 | 7 |
 | 例の生き残り | — | that survivor (the one who targeted Judy) | "the survivor we know about" | NO3_CHAPEL/0115; NO3_NO4/0046 — 2 / 0 / 0 | 7 |
-| ワイフ | — | my wife | "the wife" | NO3_NO4/0030, 0032 — 2 / 0 / 0 (a loanword affectation; not carried) | 7 |
-| 警察 | 警察を辞めた | the police; 警察を辞めた "quit the police force" | "left the force" | NO3_NO4/0017, 0041 — 2 / 0 / 0; 元警官 "ex-policeman" (§2) | 7 |
 | ステンドグラス | — | the stained glass | — | NO3_CHAPEL/0131 — 1 / 0 / 0 | 7 |
 
 ## 10. Open questions

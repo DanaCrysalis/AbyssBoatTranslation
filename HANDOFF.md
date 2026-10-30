@@ -1,4 +1,4 @@
-**Last updated: 2026-10-30** — wave 7 in review: #26 NO3_CHAPEL.p02 MERGED (squash 56e2531); #28 next.
+**Last updated: 2026-10-30** — wave 7 in review: #26 NO3_CHAPEL.p02 MERGED (squash 56e2531); #29 NO3_NO4.p01 MERGED (squash e6a9aa1); #28 round 1 re-review next, then #27.
 
 ## Integration branch: `main`. Not configurable.
 Every PR bases on `main`; the reviewer merges into `main`; a wave is closed only when `origin/main` is
@@ -8,17 +8,17 @@ preflight is `git fetch origin main && git checkout main && git reset --hard ori
 ## NEXT ACTION — always current, always a literal instruction
 > **Wave 7 barrier met 2026-10-30 20:05 UTC (four PRs open).** Reviewer, one at a time, in unit order:
 > #26 NO3_CHAPEL.p02 → #28 NO3_CHAPEL.p03 → #29 NO3_NO4.p01 → #27 NO3_NO4.p02. #26 MERGED (round 0, squash 56e2531).
-> #28 round 0 CHANGES → translator reworking. **Review #29 next** (while #28 reworks), then #28 round 1, then #27. The mid-row `{w}` blind spot is now PROJECT.md §7 / F-026; the #29 and #27 reviewers check those rows.
+> #29 MERGED (round 0, squash e6a9aa1). **Next: #28 round 1 re-review (when its translator has pushed), then #27.** The #27 reviewer checks the mid-row `{w}` rows 0040 and 0043 (F-026; 0030 shipped in #29) and the p01 bindings (R §27.3).
 > Watchdog: `send_later` every 12 minutes.
 
 ## Progress
 | Store | Done | Total | |
 |---|---|---|---|
-| script | 22 units · 1,142 rows | 38 units · 1,709 rows | NO4_BAR p01–p08, NO4_HWR_FRONT p01–p03, NO4_MACHINER90 p01–p02, NO4_TOOL_ROOM p01–p02 (rooms complete), NO4.b01, NO4.b02 (deck NO4 complete bar the `_T` scripts); NO5.b01 (deck NO5 complete); NO6.b01, NO6.b02 (deck NO6 complete); NO3_CHAPEL.p01–p02 (106/150 rows of the room); STATUS 2026-10-30 |
+| script | 23 units · 1,173 rows | 38 units · 1,709 rows | NO4_BAR p01–p08, NO4_HWR_FRONT p01–p03, NO4_MACHINER90 p01–p02, NO4_TOOL_ROOM p01–p02 (rooms complete), NO4.b01, NO4.b02 (deck NO4 complete bar the `_T` scripts); NO5.b01 (deck NO5 complete); NO6.b01, NO6.b02 (deck NO6 complete); NO3_CHAPEL.p01–p02 (106/150 rows of the room); NO3_NO4.p01 (31/61); STATUS 2026-10-30 |
 | scene | 4 units · 190 rows | 4 units · 190 rows | OP-SCN034, SCN038, SCN041-SCN046, SCN047-EPILOG (store complete) |
 | system | 0 | 5 units · 188 rows | blocked whole (F-006) |
 
-Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-30; `NO4_BAR.SCR` 37,378 free; `NO4_TOOL_ROOM.SCR` 61,899, 80/80; the NO4.b01/b02 rooms ≥ 63,697; the NO5 rooms ≥ 63,950; NO6_BRIDGE 63,400, the other NO6 rooms ≥ 64,242; NO3_CHAPEL.SCR 55,316, 106/150).
+Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-30; `NO4_BAR.SCR` 37,378 free; `NO4_TOOL_ROOM.SCR` 61,899, 80/80; the NO4.b01/b02 rooms ≥ 63,697; the NO5 rooms ≥ 63,950; NO6_BRIDGE 63,400, the other NO6 rooms ≥ 64,242; NO3_CHAPEL.SCR 55,316, 106/150; NO3_NO4.SCR 61,029, 31/61).
 
 ## In flight
 Wave 7, dispatched 2026-10-30, seeds 3b28903 (glossary §9). Translator owns each unit until its PR is open; then the reviewer.
@@ -26,7 +26,7 @@ Wave 7, dispatched 2026-10-30, seeds 3b28903 (glossary §9). Translator owns eac
 |---|---|---|---|
 | script NO3_CHAPEL.p02 | `tl/script-NO3_CHAPEL.p02` | #26 (7afbe0c) | **MERGED** round 0, squash 56e2531; 44 rows, NO3_CHAPEL.SCR 55,316 free, 48 dup pairs (CHECK 155 + 7); 4 §9 rows promoted (R §26); integration commit on main |
 | script NO3_CHAPEL.p03 | `tl/script-NO3_CHAPEL.p03` | #28 (d4a6b39) | round 0 **CHANGES** (1 finding: 0128 authored-`{br}` line 28 cols, unflagged; fix proposed) → rework round 1 with the same translator, agent a85e8f3aa6d16000a; re-review = reviewer aceac7d80f4e1f819 by SendMessage, diff 0128 only |
-| script NO3_NO4.p01 | `tl/script-NO3_NO4.p01` | #29 (61022fd) | PR open, round 0; agent a761f7e3a43fb5cfc. Flag 3: same mid-row `{w}` finding, 0030 fixed |
+| script NO3_NO4.p01 | `tl/script-NO3_NO4.p01` | #29 (61022fd) | **MERGED** round 0, squash e6a9aa1; 31 rows, NO3_NO4.SCR 61,029 free, CHECK 160 + 8 pairs (155 + 7 without it), census 64,666 comparisons, 0 divergent; ワイフ, 警察 promoted (R §27); F-026 0030 verified; integration commit on main |
 | script NO3_NO4.p02 | `tl/script-NO3_NO4.p02` | #27 (7edf333) | PR open, round 0; agent ae823e5ab8f02fb64. Flag 3: mid-row `{w}` glue (0030, 0040, 0043) — relayed to p01; candidate CHECK blind spot |
 
 ## Next up
@@ -37,7 +37,7 @@ Bindings waiting: NO3_CHAPEL save prompts 0049, 0070, 0079, 0111, 0114, 0129, 01
 `Save` / `Don't save`; NO3_CHAPEL/0122 the engine vote — "take out one round" … "hold it in your right hand", matching s28/s29
 `Hold the round` / `Don't hold it` and SCN046 (R §25.3, §13.2); speakers Wolg/Oakland/Heming/Judy, William dead (R §25.2);
 教会 "the chapel", 拠点 "base" (NO3_NO4/0001, 0011); 燃料 at NO3_CHAPEL/0126 unfixed; NO3_NO4/0051 浸水 per glossary §3;
-NO3_NO4/0043 親父 "your dad"; NO3_NO4/0010 "spare magazine" (glossary §3).
+NO3_NO4/0043 親父 "your dad"; NO3_NO4/0010 "spare magazine" (glossary §3). NO3.b01: NO3_HW_1/0001–0002 copy NO3_NO4.p01 0011–0012 byte for byte (R §27.3).
 Wave 6 lessons: zero CHANGES of four. Seeded fixed sentences must themselves pass the wrap rule — run codec.wrap(…, 28) on every
 seeded target before committing the seeds (four failed in wave 6 and were corrected mid-wave). The dispatch must not guess speakers
 or plot readings it has not checked against the dump (two wrong guesses in NO3_CHAPEL.p01's dispatch); say "read from content".

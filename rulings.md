@@ -2526,3 +2526,79 @@ Census counts are rows per store (script / scene / system), from the reviewer's 
 - The reviewers of #29 and #27 check the fix on those three rows.
 - PROJECT.md §7 gains the blind-spot line and FLAGS.md gains F-026, in this commit, ahead of those reviews, so that their reviewers find it listed.
 - Glossary: none.
+
+## Unit script NO3_NO4.p01 (PR #29, MERGED, 2026-10-30)
+
+The first part of the NO3_NO4 room script (31 rows, 633 source characters, tier D, ratio 49.76):
+- 0001–0012: the party sends Judy and John to look for a new base, and they settle on the chapel.
+- 0013–0031: Wolg's night talk to John, the first half of his police story. It continues in NO3_NO4.p02 (#27).
+
+Reviewed once:
+- **Round 0** (61022fd, merged with main 0511790 for review): MERGE, squash e6a9aa1. Findings: none; four non-blocking notes (§27.2).
+
+Figures:
+- **Container.** NO3_NO4.SCR 4,506 / 65,535 bytes, 61,029 free, 239 tokens, 31/61 rows (MEASURE). This unit cost 700 bytes, from 61,729 free.
+- **Pages.** At most 4 rows per page (UNITCHECK, 31 rows, 0 violations). The whole store: 1,173 rows, 0 violations.
+- **Duplicates.** CHECK compared 160 duplicate pairs and 8 tag-variant pairs, against 155 and 7 on the same tree without the unit.
+  - The reviewer's census: 64,666 comparisons (31 rows × every dump row), at three levels (exact; `{p}{w}{br}` stripped; `【Name】` stripped, ！？ → ⁉, final punctuation dropped).
+  - 30 hits, plus the three `{br}` rows ↔ NO5_BANK/0004 as tag variants. 0 divergent.
+  - Byte-identical to shipped rows: 0003 = NO4_HWR_FRONT/0048 `…All right.`; 0009 = NO4_BAR/0373 `…I don't mind.`; 0007 `………` = 7 exact rows and 3 tag variants.
+  - 12 untranslated hits: NO3_HW_1/0001–0002, NO3_NO4/0061, 0034, 0036, 0039 (§27.3).
+- **Codes.** The authored `{p}{w}{br}` sequence differs from the source on 2 of 31 rows, `:13 0010` and `:33 0030` (§27.2). The `…` counts match on 31 of 31; no ‼, ⁉ or ── in the unit.
+- **F-011 wrap scan** (the reviewer's script, 68 wrapped lines): no lone "a", "an" or "I", no one-word last row, no split title. Authored-`{br}` and `{w}`-ended lines ≤ 27 (`len()`; 0014 and 0029 at 27).
+- **F-012.** None: every `+` row (0019–0026, 0028–0031) follows a `{br}` ending.
+- **F-026.** `:33 0030` takes `{w}{br}` after the mid-row `{w}` (25 / 23 columns). 0040 and 0043 are in p02.
+
+Census counts are rows per store (script / scene / system), from the reviewer's grep of `dumps/` on 2026-10-30. Line citations use PROJECT.md §7's numbering in `tl/script/NO3_NO4.p01.tsv` (line = row order + 3).
+
+### 27.1 Terms promoted from §9
+- **ワイフ** → `my wife` (7).
+  - Census: 2 / 0 / 0. `:33 0030` いつも出迎えてくれるワイフが来ない → "My wife, who always met me at the door, didn't come."; NO3_NO4/0032 (p02, #27 head 7edf333) "I found my wife with no trouble at all."
+  - The loanword affectation is not carried: "the wife" (the §9 alternative) reads as distance, which the story does not have.
+  - Glossary: §6 row added; §9 row removed.
+- **警察** (variant 警察を辞めた) → `the police`; 警察を辞めた → `quit the police force` (10; 21).
+  - Census: 2 / 0 / 0, both 警察を辞めた. `:20 0017` 俺が警察を辞めた理由を…… → "The reason why I quit the police force……"; NO3_NO4/0041 (p02) "To go after him, I quit the police force."
+  - "left the force" (the §9 alternative) is idiomatic but drops 警察. 元警官 stays "ex-policeman" (§2). 警官 alone is "cop" in context: `:24 0021` 無鉄砲な警官 → "a fearless, reckless cop", Wolg on himself, as Miller's "cop" (NO4_BAR/0231).
+  - Glossary: §2 row added; §9 row removed.
+- **Applied, unchanged:**
+  - 新しい拠点 → "a new base" (0001, 0011); 教会 → "the chapel" (0011); 元警官 → "ex-policeman" (0014).
+  - マガジンの予備 → "spare magazine" (0010); フッ、 → "Heh," (0017).
+  - (頭の)いかれた殺人鬼 → "a crazed killer" (0018, 0024; R §1.7 binds both); ヤツ → him/he (0023, 0026, 0027).
+  - ２２人 → "twenty-two people" (0019, R §1.4).
+- **Not fixed, in context:** ガキ → "kid" (0018); 捜査 → "the case" (0029); 結果 → "As a result" (0026).
+
+### 27.2 Movable codes, readings and speakers (PR Flags 2–6, 9)
+- **`:13 0010` `{br}{br}` → `{br}{p}`** (PR Flag 2).
+  - The three sentences need 5 rows whichever `{br}` is dropped: 26 | 21 + 23 | 26 + 20. Merging the first two still wraps to 3 rows.
+  - The `{p}` sits at the sentence boundary after "just in case.". A `{br}` after it would open the new page on a blank row, so it is removed.
+  - The step-6 reorder `Fire a shot to let us know if anything happens.` changes no sense. The literal order wraps `If anything happens, fire a | shot…`, a lone "a" (R §1.12 rule 2).
+  - Approved.
+- **`:33 0030` `{w}{w}{br}` → `{w}{br}{w}{br}`** (PR Flag 3). This is the F-026 fix (R §26.4): the second sentence starts its own row instead of gluing to "come." mid-row. Approved.
+- **No `{p}` added in the `{w}` chains** 0018–0026 and 0027–0031 (PR Flag 9).
+  - In the tool model, every `{w}` page fits 4 rows: 3/3/4/4/3/4/4 and 2/4/3/2/2.
+  - If `{w}` keeps the box in game, both chains overflow in the Japanese too. This is recorded under F-010.
+- **Hedges kept:** `:14 0011` なりそう → "could", くらい → "about the only"; `:20 0017` どうやら…ようだ → "seems"; `:22 0019` だけでも → "at least that I know of".
+- **Non-blocking review notes**, each accepted:
+  - `:17 0014` 守る → "guarding": "I'm used to protecting people." leaves "people." as a one-word last row (R §1.12 rule 1). The echo is carried by meaning: `:18 0015` "protect", `:19 0016` なにを → "Protect what, you ask?".
+  - `:18 0015` uses a forward "it" for the inverted object (守れなかったんだ。{br}もっとも大切なものを……). "I couldn't protect{br}what mattered most…" leaves "protect" alone on a row before the `{br}`.
+  - `:32 0029` drops the comma after "One day". With it, the line wraps to a one-word last row, "off.".
+  - `:29 0026` あと一歩のとこまで追い詰めた → "came within one step of cornering him", equivalent to "had him all but cornered".
+  - `:27 0024` wraps `…with my own hands, no | matter what.`. "no" is a function word, acceptable under R §1.12 rule 2.
+- **Speakers** (PR Flag 4, F-009), named from content:
+  - Wolg: 0001, 0003, 0013–0031.
+  - Oakland: 0002, 0006, 0010.
+  - Heming: 0004, 0008.
+  - Judy: 0005, 0009, 0011, 0012.
+  - spk=4 carries Oakland, Judy and Wolg; spk=0 carries Judy and Wolg. Every line is speaker-neutral in English.
+- Glossary: none beyond §27.1.
+
+### 27.3 Recurrences and bindings (PR Flags 7–8)
+- **NO3_HW_1/0001–0002** (NO3.b01) = `:14 0011` and `:15 0012` byte for byte: `We've had a look all around, but about the only place that could make a new base is… the chapel.` · `Well then, shall we go call everyone here?`. Both stand alone there: Judy to John, before NO3_HW_1/0003's boarded door.
+- **NO3_NO4.p02 (#27):**
+  - 0061 `………`.
+  - 0034, 0036 and 0039 `{br}`.
+  - "my wife" (0032).
+  - "quit the police force" (0041).
+  - 一番大切なもの → "what mattered most to me" (0040), echoing `:18 0015` もっとも大切なもの.
+  - All already match in #27 head 7edf333.
+- Glossary: none.
