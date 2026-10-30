@@ -25,7 +25,7 @@ Wave 7, dispatched 2026-10-30, seeds 3b28903 (glossary §9). Translator owns eac
 | Unit | Branch | PR | State |
 |---|---|---|---|
 | script NO3_CHAPEL.p02 | `tl/script-NO3_CHAPEL.p02` | #26 (7afbe0c) | **MERGED** round 0, squash 56e2531; 44 rows, NO3_CHAPEL.SCR 55,316 free, 48 dup pairs (CHECK 155 + 7); 4 §9 rows promoted (R §26); integration commit on main |
-| script NO3_CHAPEL.p03 | `tl/script-NO3_CHAPEL.p03` | #28 (d4a6b39) | round 0 **CHANGES** (1 finding: 0128 authored-`{br}` line 28 cols, unflagged; fix proposed) → rework round 1 with the same translator, agent a85e8f3aa6d16000a; re-review = reviewer aceac7d80f4e1f819 by SendMessage, diff 0128 only |
+| script NO3_CHAPEL.p03 | `tl/script-NO3_CHAPEL.p03` | #28 (d4a6b39 → round 1 92146e5) | round 0 **CHANGES** (1 finding: 0128 authored-`{br}` line 28 cols, unflagged; fix proposed) → round 1 pushed 92146e5 (0128 fixed, rebased on 0511790), agent a85e8f3aa6d16000a; re-review = reviewer aceac7d80f4e1f819 by SendMessage, diff 0128 only |
 | script NO3_NO4.p01 | `tl/script-NO3_NO4.p01` | #29 (61022fd) | **MERGED** round 0, squash e6a9aa1; 31 rows, NO3_NO4.SCR 61,029 free, CHECK 160 + 8 pairs (155 + 7 without it), census 64,666 comparisons, 0 divergent; ワイフ, 警察 promoted (R §27); F-026 0030 verified; integration commit on main |
 | script NO3_NO4.p02 | `tl/script-NO3_NO4.p02` | #27 (7edf333) | PR open, round 0; agent ae823e5ab8f02fb64. Flag 3: mid-row `{w}` glue (0030, 0040, 0043) — relayed to p01; candidate CHECK blind spot |
 
