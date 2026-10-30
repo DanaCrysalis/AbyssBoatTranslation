@@ -83,6 +83,8 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | 雑貨屋 | — | a general store; on the sign: General Store | 15; 13 | 14 (rooms/082, F-006) | lowercase in narration (NO5_ENTRANCEM/0012), capitalised on the sign (NO5_HW_R/0009 `Entrance Hall/General Store`); never "sundries shop"; 2 / 0 / 1 | R §22.1 |
 | カフェ · スポーツジム | — | Cafe · Gym (sign entries) | 4 · 3 | — | capitalised, sign entries, NO5_HW_R/0010 `Bank/Cafe/Gym,` only; no é (charset); not "Sports Gym"; 1 / 0 / 0 each | R §22.1 |
 | ショップ | — | the shop (same word as 売店) | 8 | — | lowercase; NO5_SHOP/0002 ショップの備品 → "the shop's equipment"; 1 / 0 / 0 | R §22.1 |
+| 教会 | — | the chapel; "a chapel" at the discovery (NO3_CHAPEL/0001); room name: Chapel | 10; 8; 6 | 14 (rooms/040, F-006) | lowercase in dialogue; never "church"; NO3_HW_1/0001 = NO3_NO4/0011 …教会くらいね take "the chapel"; hints/013 blocked; 3 / 0 / 2 | R §25.1 |
+| 拠点 | — | base ("our new base"; 新しい拠点 → "a new base") | 4 | — | NO3_CHAPEL/0012 "We'll make this our new base"; NO3_NO4/0001, NO3_HW_1/0001 = NO3_NO4/0011 to come; not "base of operations"; 4 / 0 / 0 | R §25.1 |
 
 ## 3. Items, currency, mechanics
 | Source | Variants | Target | Cols | Cap | Note | Ruling |
@@ -129,6 +131,7 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | セーブする · セーブしない | — | Save · Don't save | 4 · 10 | 27 | the save choice pair (choice rows, §8) | R §1.9 |
 | Ｒｅｔｒｙ？ | — | Retry? | 6 | — | the game-over prompt, the source's own English: type ASCII `Retry?` (encodes to the source bytes) | R §10.1 |
 | はい · いいえ (choice) | — | Yes · No | 3 · 2 | 27 | `choice` rows only (8 / 0 / 0 each); はい in dialogue is in context | R §10.1 |
+| 握る · 握らない (choice) | — | Hold the round · Don't hold it | 14 · 13 | 27 | the engine vote after NO3_CHAPEL/0122 (s28 / s29), never a handshake; 0122 右手に握れ takes "hold it in your right hand"; 1 / 0 / 0 each | R §25.1 |
 
 ## 5. Verbal tics — decided, never mix
 <!-- What is fixed is the word; punctuation follows the source line. -->
@@ -239,8 +242,6 @@ NOT decisions. The first translator to render one promotes it in the PR's Glossa
 so; the reviewer moves the row up into its section in the integration commit. -->
 | Source | Variants | Proposed | Alternatives | Where seen | Wave |
 |---|---|---|---|---|---|
-| 教会 | — | the chapel (lowercase; room name: Chapel) | church | NO3_CHAPEL/0001, NO3_HW_1/0001, NO3_NO4/0011; rooms/040, hints/013 blocked; 3 / 0 / 2 | 6 |
-| 拠点 | — | base | base of operations | NO3_CHAPEL/0012, NO3_HW_1/0001, NO3_NO4/0001, 0011; 4 / 0 / 0 | 6 |
 
 ## 10. Open questions
 <!-- one line each, with the FLAGS id. A closed question is deleted here; its answer stays in rulings.md. -->

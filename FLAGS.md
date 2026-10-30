@@ -202,6 +202,10 @@ and NO4_P_OFFICE/0001–0008 (probably Wolg) stay uncertain and are rendered spe
 NO6.b02 (PR #22): spk=100 carries Judy (NO6_HW_4/0001–0004, NO6_TOOLROOM/0003–0004) and narration
 (NO6_HW_4/0005–0008, the locked- and pressure-door lines); spk=- carries Judy at NO6_HW_5/0001–0002 and
 TOOLROOM/0002; spk=0 is narration (NO6_HW_3). Every line is speaker-neutral in English (rulings R §24.2).
+NO3_CHAPEL.p01 (PR #24): William is dead by this scene (0007, past tense). Named from content: Wolg
+plans (0012–0014, 0030, 0032), Oakland panics (0015, 0023, 0025, 0031, 0033), Heming offers to go
+(0035) and is addressed at 0036, Judy 0001–0011 and 0034; spk=4 carries Wolg and Oakland. 0016–0018,
+0020, 0022, 0026–0028, 0036–0038 stay uncertain and are rendered speaker-neutral (rulings R §25.2).
 
 ### F-011 · 2026-10-04 · tools · OPEN
 PR #1 (NO4_BAR.p01) found four things CHECK and UNITCHECK do not verify. Each was confirmed by a

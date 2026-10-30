@@ -1,4 +1,4 @@
-**Last updated: 2026-10-30** — wave 6 review: #25 NO5.b01 MERGED (squash 4a6819e), #23 NO6.b01 MERGED (squash 388bb77), #22 NO6.b02 MERGED (squash 47b3edc), all round 0; next #24 NO3_CHAPEL.p01.
+**Last updated: 2026-10-30** — wave 6 review complete: #25 NO5.b01 (squash 4a6819e), #23 NO6.b01 (388bb77), #22 NO6.b02 (47b3edc), #24 NO3_CHAPEL.p01 (6fe71ae) all MERGED round 0; next: wave 6 close by the coordinator.
 
 ## Integration branch: `main`. Not configurable.
 Every PR bases on `main`; the reviewer merges into `main`; a wave is closed only when `origin/main` is
@@ -6,18 +6,19 @@ at the close commit (`CLAUDE.md` Rule 3). A fresh container may clone shallow wi
 preflight is `git fetch origin main && git checkout main && git reset --hard origin/main`.
 
 ## NEXT ACTION — always current, always a literal instruction
-> **Wave 6 coordinator: barrier met** (PRs #25, #23, #22, #24 open). Reviewer subagent per PR, one at a time, in unit
-> order: #25 NO5.b01 (merged) → #23 NO6.b01 (merged) → #22 NO6.b02 (merged) → **#24 NO3_CHAPEL.p01 next**. Pull after each; CHANGES → findings verbatim to
-> the same translator by `SendMessage`, review the next meanwhile. Reviewer branches review-w6-prN / integrate-w6-prN.
+> **Wave 6 close by the coordinator.** All four units merged (#25 4a6819e, #23 388bb77, #22 47b3edc, #24 6fe71ae),
+> none parked, no PR open. Do CLAUDE.md §4 step 6 (CHECK on main, regenerate and commit `build/abyss_boat_script.ods`
+> via ODS EXPORT, README status from STATUS, prune worktrees, `wc -l HANDOFF.md`, Wave history line, Next up = wave 7
+> from QUEUE), push `handoff: wave 6 closed` with the Rule 3 proof, then open the wave 7 session (step 7).
 
 ## Progress
 | Store | Done | Total | |
 |---|---|---|---|
-| script | 20 units · 1,036 rows | 38 units · 1,709 rows | NO4_BAR p01–p08, NO4_HWR_FRONT p01–p03, NO4_MACHINER90 p01–p02, NO4_TOOL_ROOM p01–p02 (rooms complete), NO4.b01, NO4.b02 (deck NO4 complete bar the `_T` scripts); NO5.b01 (deck NO5 complete); NO6.b01, NO6.b02 (deck NO6 complete); STATUS 2026-10-30 |
+| script | 21 units · 1,098 rows | 38 units · 1,709 rows | NO4_BAR p01–p08, NO4_HWR_FRONT p01–p03, NO4_MACHINER90 p01–p02, NO4_TOOL_ROOM p01–p02 (rooms complete), NO4.b01, NO4.b02 (deck NO4 complete bar the `_T` scripts); NO5.b01 (deck NO5 complete); NO6.b01, NO6.b02 (deck NO6 complete); NO3_CHAPEL.p01 (62/150 rows of the room); STATUS 2026-10-30 |
 | scene | 4 units · 190 rows | 4 units · 190 rows | OP-SCN034, SCN038, SCN041-SCN046, SCN047-EPILOG (store complete) |
 | system | 0 | 5 units · 188 rows | blocked whole (F-006) |
 
-Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-30; `NO4_BAR.SCR` 37,378 free; `NO4_TOOL_ROOM.SCR` 61,899, 80/80; the NO4.b01/b02 rooms ≥ 63,697; the NO5 rooms ≥ 63,950; NO6_BRIDGE 63,400, the other NO6 rooms ≥ 64,242).
+Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-30; `NO4_BAR.SCR` 37,378 free; `NO4_TOOL_ROOM.SCR` 61,899, 80/80; the NO4.b01/b02 rooms ≥ 63,697; the NO5 rooms ≥ 63,950; NO6_BRIDGE 63,400, the other NO6 rooms ≥ 64,242; NO3_CHAPEL.SCR 55,976, 62/150).
 
 ## In flight
 | Unit | Branch | PR | State | Next |
@@ -25,7 +26,7 @@ Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEA
 | script NO5.b01 | `tl/script-NO5.b01` | #25 | **MERGED** round 0, squash 4a6819e; 58 rows, max 4 rows/page, lowest NO5_ENTRANCEL.SCR 63,950 free; dupes 113 pairs (+14); no findings; §9 sentences corrected + 9 terms and 3 sentences promoted (R §22); F-025 typos; integration commit `integrate: script NO5.b01` | none — done |
 | script NO6.b01 | `tl/script-NO6.b01` | #23 | **MERGED** round 0, squash 388bb77; 37 rows, max 4 rows/page, lowest NO6_BRIDGE.SCR 63,400 free; dupes 122 pairs (+9), census 50/50 identical incl. #22; no findings; leading `{p}` at BRIDGE/0002 and 0020 reorder approved (R §23.2–§23.3, F-010); 6 §9 terms + 4 sentences promoted, 操作パネル/舵 added (R §23.1); integration commit `integrate: script NO6.b01` | none — done |
 | script NO6.b02 | `tl/script-NO6.b02` | #22 | **MERGED** round 0, squash 47b3edc; 27 rows, max 4 rows/page, lowest NO6_HW_3.SCR 64,572 free; dupes 135 pairs (+13), census 56/56 identical; no findings; TOOLROOM/0001 `A chain cutter, it seems.` approved (R §24.2); no new terms, 浸水/チェーンカッター notes extended (R §24.1); integration commit `integrate: script NO6.b02` | none — done |
-| script NO3_CHAPEL.p01 | `tl/script-NO3_CHAPEL.p01` | #24 | PR open 12556a0, round 0; NO3_CHAPEL.SCR 55,976 free; open: speakers (Wolg/Oakland/Heming — the dispatch's William reading was wrong), s28/s29 = the ammo vote, 教会 article | reviewer, after barrier |
+| script NO3_CHAPEL.p01 | `tl/script-NO3_CHAPEL.p01` | #24 | **MERGED** round 0, squash 6fe71ae; 62 rows, max 4 rows/page, NO3_CHAPEL.SCR 55,976 free (62/150); dupes 152 pairs (+17), census 340 hits, 0 divergent; no findings; speakers Wolg/Oakland/Heming/Judy (William dead, R §25.2), s28/s29 = the engine vote `Hold the round` / `Don't hold it`, 0034 `{br}` added approved; 教会 "the chapel" ("a chapel" at 0001), 拠点 "base" promoted, 握る · 握らない added, §9 now empty (R §25.1); p02/p03 must word 0122 with "round" and "right hand"; integration commit `integrate: script NO3_CHAPEL.p01` | none — done |
 
 ## Next up
 Wave 6 (QUEUE 2026-10-26), four script units: NO5.b01 (58 rows, 1,144 chars, ratio 29.06; NO5_BANK, ENTRANCEL, ENTRANCEM,

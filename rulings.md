@@ -2341,3 +2341,92 @@ Census counts are rows per store (script / scene / system), from the reviewer's 
   - 扉は鍵が掛かっていて開きそうに無い (NO3_HW_1/0005–0006, NO3_HW_2/0002–0003) is hedged, and stays apart from `:8` (R §23.1).
   - 正常に動いているようだ (NO1_CONTROLROOM/0003) sits beside shipped NO4_MACHINE/0003 "seems to be running normally" and `:30`.
 - Glossary: none.
+
+## Unit script NO3_CHAPEL.p01 (PR #24, MERGED, 2026-10-30)
+
+The first part of the chapel room (62 rows, 1,068 source characters, tier D, ratio 27.82):
+- 0001–0011: Judy finds the chapel and asks John why William saved them.
+- 0012–0038: the survivors (Wolg, Oakland, Heming, Judy) argue over making the chapel their base and who searches.
+- 0039–0044: the save prompt and the talk-to lines that follow.
+- The 16 save choices, and s28/s29, the engine vote.
+
+Reviewed once:
+- **Round 0** (12556a0, merged with main 5204c25 for review): MERGE, squash 6fe71ae. Findings: none.
+
+Figures:
+- **Container.** NO3_CHAPEL.SCR 9,559 / 65,535 bytes, 55,976 free, 364 tokens, 62/150 rows (MEASURE). Untranslated it had 57,297 free. p02/p03 share the file.
+- **Pages.** At most 4 rows per page (UNITCHECK, 62 rows, 0 violations). The whole store: 1,098 rows, 0 violations.
+- **Duplicates.** CHECK compared 152 duplicate pairs and 7 tag-variant pairs, against main's 135 and 7.
+  - The +17 are 0039 joining the save-prompt group and the 16 Save / Don't save rows.
+  - The reviewer's census: 129,332 comparisons (62 rows × every dump row), at three levels (exact; `{p}{w}{br}` stripped; `【Name】` stripped, ！？ → ⁉, final punctuation dropped). It found 340 hits: 333 identical, 7 untranslated, 0 divergent.
+  - Only 0039 and the s-rows recur.
+- **Codes.** The authored `{p}{w}{br}` sequence differs from the source on 1 of 62 rows, `:37 0034` (PR Flag 2). The `…`/`‼`/`⁉`/`──` counts match on 62 of 62 (plant-tested script).
+- **F-011 wrap scan** (the reviewer's script, `build/script_merged.tsv`, 99 lines, proved on 5 planted violations first): no lone "a", "an" or "I", no one-word continuation row, no split title. Authored-`{br}` lines ≤ 27 (`len()`; 0024 and 0038 at 27).
+- **F-012.** Three `+` rows, 0005, 0042 and 0044, each after a `{br}` ending.
+
+Census counts are rows per store (script / scene / system), from the reviewer's grep of `dumps/` on 2026-10-30. Line citations use PROJECT.md §7's numbering in `tl/script/NO3_CHAPEL.p01.tsv` (line = row order + 3).
+
+### 25.1 Terms promoted from §9, and one choice pair added
+- **教会** → `the chapel`; `a chapel` at the discovery; room name `Chapel` (10; 8; 6). Cap 14 (rooms/040, blocked).
+  - Census: 3 / 0 / 2. Rows: NO3_CHAPEL/0001; NO3_HW_1/0001 = NO3_NO4/0011 (…教会くらいね, untranslated); rooms/040, hints/013 (blocked, F-006).
+  - `:4 0001` ここは…教会ね。{br}船の中にこんなに立派な教会があるなんて… → `This is… a chapel.{br}To think there's such a fine chapel inside a ship…`.
+  - Judy is discovering the room, and the second clause marvels that a ship has one at all, so the indefinite article is right (PR Flag 5). NO3_NO4/0011 comes after she has seen it, so the default stays "the chapel".
+  - "church" (the §9 alternative) is rejected: a room aboard a liner is a chapel.
+  - Glossary: §2 row added; §9 row removed.
+- **拠点** → `base` (4).
+  - Census: 4 / 0 / 0. Rows: `:15 0012` ここを新たな拠点として → "We'll make this our new base"; NO3_NO4/0001 新しい拠点を探してくる and NO3_HW_1/0001 = NO3_NO4/0011 新しい拠点になりそうなのは (untranslated) take "a new base".
+  - "base of operations" (the §9 alternative) is rejected: it is too long for these lines and adds nothing.
+  - Glossary: §2 row added; §9 row removed.
+- **握る · 握らない** (choice) → `Hold the round` · `Don't hold it` (14 · 13). Cap 27. New.
+  - Census: 握 3 / 0 / 0: NO3_CHAPEL/0122, s28, s29.
+  - These are the engine vote, not a handshake (the dispatch's guess). Three things show it:
+    - 0122 (spk=2, Wolg per R §13.2) sets it up: 全員アモを一発取り出せ。{br}機関を止めることに賛成なら、右手に握れ。{br}イヤならなにも持つな。
+    - The choice sits between the 0114 and 0129 save pairs.
+    - 0123 ジョン以外は全員賛成か…… records the result.
+  - "the round" is the one round of ammo 0122 asks for. 握らない is the empty hand (なにも持つな).
+  - **Binds p02/p03:** 0122 must say "take out one round" … "hold it in your right hand" (or equivalent with "round" and "right hand"), in line with these choices and with the SCN046 subtitles `When you're ready, raise your right hand.` / `Open your hand.` (R §13.2, §13.4).
+  - Glossary: §4 row added.
+- **Applied, unchanged:**
+  - Heming, Judy, John, William; 化け物 → monster (`:38`); 生き残り → survivors (`:15`, `:31`, `:43`, `:44`); 装備 → gear (`:29`); 上の連中 → the people up top (`:20`).
+  - 人間たち → "people" (`:7`, the 人間 row's general use).
+  - 虫かご → "a bug cage" (`:26`, in context per the §6 虫 note).
+  - The save prompt (`:42`) and Save / Don't save (`:48–59`, `:62–65`).
+- **Not fixed**, each once in the source: 秩序 "the order" (1 / 0 / 0), ダダ "tantrums" (1 / 0 / 0), 錯乱 "deranged" (3 / 0 / 0; NO4_BAR/0304 "lose your head" and NO3_CHAPEL/0052 in context), 食料 "food" (as shipped).
+- **§9 is now empty.** These were the last wave 6 rows.
+
+### 25.2 Speakers (PR Flag 3)
+- **William is dead by this scene.** 0007 彼は他人のために、自分を犠牲にした is past tense, after NO4_HWL_BACK (R §20). The dispatch's suggestion that he speaks in 0012–0038 was wrong, and the translator corrected it.
+- **Named from content** (F-009; spk=4 carries Wolg and Oakland, spk=2 Heming, Wolg and Judy, spk=5 Oakland or Wolg):
+  - Wolg plans: 0012–0014, 0030 まず俺とジョンで行く, 0032 あんたのダダ.
+  - Oakland is the frightened boss: 0015, 0023, 0025, 0031 (holding Wolg back), 0033.
+  - Heming offers to go at 0035 and is addressed at 0036.
+  - Judy: 0001–0011, 0034.
+  - These stay uncertain: 0016–0017 (Wolg or Heming), 0018, 0020, 0022, 0026–0028, 0036 (Oakland assigning jobs, or Wolg), 0037 and 0038.
+- Every line is speaker-neutral in English, so a corrected attribution changes no text.
+- Glossary: none.
+
+### 25.3 Movable codes and readings (PR Flags 2, 6, 7, 10)
+- **`:37 0034`** `{br}` → `{br}{br}`: a `{br}` is added after "John and I will go." so いいでしょ…… takes its own row (`That's fine, isn't it……`) and does not wrap "That's | fine". The page is 3 rows. Approved.
+- **Hedges** (wave 5's lesson, R §20.3), all kept:
+  - `:20 0017` んだろう → "must".
+  - `:22 0019` ありそうな気がする → "I have a feeling … may".
+  - `:24 0021` かもしれん → "may"; `:25 0022` だろうな → "probably".
+  - `:35 0032` 可能性は低い → "chances … slim".
+  - `:45 0042` 恐れがある → "liable"; `:46 0043` ようだ → "Looks like"; `:47 0044` か → "I suppose".
+- **Step 3/5/6 departures, flagged and accepted:**
+  - `:39 0036` drops 二人, which the two names already say; keeping it makes the page 5 rows.
+  - `:46 0043` 相当まいっているようだな has no subject. "Looks like it's taking quite a toll." keeps the referent open without inventing a pronoun.
+  - `:5 0002` 少し…いいかしら → "Just a moment… may I?" (the ？ follows the question in English; R §13.3's かしら？ case is the source-marked one).
+  - `:9 0006` 秩序 → "the order", not "the order of things", which left "things…" alone on the last row. The social-order sense reads from context. This is non-blocking.
+- **Echoes:**
+  - `:28 0025` ふ、ふざけるな！ → "D-don't give me that!" follows NO4_BAR/0255 and SCN046B2/05 "Don't give me that!" and the stutter-hyphen rule (R §4.3, §5.7).
+  - `:21 0018` 理由だと？ → "A reason, you say?" follows SCN046B2/05 神だと！ "A god, you say!".
+  - `:18 0015` 当分暮らすだと⁉ → "Live here for a while⁉" echoes 0014.
+  - `:36 0033` なんだと‼ → `What‼`, as bound in R §6 (the ‼ form, unpaired by CHECK with なんだと⁉ "What⁉").
+- Glossary: none.
+
+### 25.4 Recurrences (PR Flag 8)
+- **Translated, identical:** 0039 = the save prompt (NO4_BAR ×12, NO4_MACHINE/0001; R §3.4). The 16 s-rows = Save / Don't save.
+- **Untranslated twins**, which CHECK pairs once translated: NO3_CHAPEL/0049, 0070, 0079, 0111, 0114, 0129, 0130 (p02/p03) must copy `:42`.
+- **For p02/p03:** 0122 per §25.1; 0052 錯乱していたのか may take "deranged" (`:45`).
+- Glossary: none.
