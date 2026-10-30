@@ -86,6 +86,8 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | ショップ | — | the shop (same word as 売店) | 8 | — | lowercase; NO5_SHOP/0002 ショップの備品 → "the shop's equipment"; 1 / 0 / 0 | R §22.1 |
 | 教会 | — | the chapel; "a chapel" at the discovery (NO3_CHAPEL/0001); room name: Chapel | 10; 8; 6 | 14 (rooms/040, F-006) | lowercase in dialogue; never "church"; NO3_HW_1/0001 = NO3_NO4/0011 …教会くらいね take "the chapel"; hints/013 blocked; 3 / 0 / 2 | R §25.1 |
 | 拠点 | — | base ("our new base"; 新しい拠点 → "a new base") | 4 | — | NO3_CHAPEL/0012 "We'll make this our new base"; NO3_NO4/0001, NO3_HW_1/0001 = NO3_NO4/0011 to come; not "base of operations"; 4 / 0 / 0 | R §25.1 |
+| 機関室 | — | the engine room | 15 | 14 (if a room name; hints/012–014 blocked, F-006) | lowercase in dialogue; NO3_CHAPEL/0093, 0099, 0100 ("The engine room?"), 0106, 0115, 0128; NO3_NO4/0054 ×2 (#27) agrees; NO2_NO3/0004, NO1_ENGINEROOM/0002 to come; 9 / 0 / 3 | R §28.1 |
+| 例の生き残り | — | that survivor | 13 | — | the one who targeted Judy (NO3_CHAPEL/0051, 0060, 0072); NO3_CHAPEL/0115 "That survivor still worries me"; NO3_NO4/0046 (#27) agrees; 生き残り alone stays "survivor(s)"; 2 / 0 / 0 | R §28.1 |
 
 ## 3. Items, currency, mechanics
 | Source | Variants | Target | Cols | Cap | Note | Ruling |
@@ -127,6 +129,12 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | 浸水 | — | flood / flooding / flooded, as the line needs | 5 / 8 / 7 | — | shipped NO4_BAR/0068 "a flood"; NO5_ENTRANCEL/0003 "The flooding's already started…⁉", NO5_ENTRANCEM/0010 "…it's flooded.", NO6_HW_4/0001 "It's flooding…"; 6 / 0 / 0 | R §22.1, §24.1 |
 | 残弾 | 銃の残弾 | ammo ("You seem low on ammo."); 銃の残弾: the ammo left in your gun | 4; 25 | — | NO3_CHAPEL/0077, 0078; 弾切れ stays "out of ammo"; never "rounds left"; 2 / 0 / 0 | R §26.1 |
 | レーザーサイト | — | laser sight ("a gun fitted with a laser sight") | 11 | — | NO3_CHAPEL/0084 only; 1 / 0 / 0 | R §26.1 |
+| エンジン · 機関 | 機関を止める | the engine (singular) | 10 | — | NO3_CHAPEL/0093, 0094, 0116, 0118, 0125, 0128; 機関 alone only 0122 機関を止める → "stopping the engine"; a repeat may take "it" (0095); 機関室 is §2; 7 / 0 / 0 · 1 / 0 / 0 | R §28.1 |
+| 動力 · 動力源 | — | power · the power source | 5 · 16 | — | NO3_CHAPEL/0101 動力が生きている → "its power is still running"; 0102 動力源を破壊すれば → "Destroy the power source"; never "propulsion"; 1 / 0 / 0 each | R §28.1 |
+| 浮上 · 浮き上がる | — | surface · float up | 7 · 8 | — | the ship rising: NO3_CHAPEL/0102, 0116 "the ship may surface"; 0103 "it'll probably float up"; 2 / 0 / 0 · 1 / 0 / 0 | R §28.1 |
+| 燃料バルブ | 燃料 | the fuel valve; 燃料: fuel | 14; 4 | — | NO3_CHAPEL/0126 "If we close the fuel valve"; 燃料 as shipped NO6_HW_3/0001; 1 / 0 / 0 · 2 / 0 / 0 | R §28.1 |
+| アモ | — | round ("take out one round") | 5 | — | NO3_CHAPEL/0122 only, bound to s28/s29 `Hold the round` / `Don't hold it` (§4); never "bullet"; 1 / 0 / 0 | R §25.1, §28.1 |
+| ステンドグラス | — | the stained glass | 17 | — | NO3_CHAPEL/0131 "Cracks run through the stained glass."; 1 / 0 / 0 | R §28.1 |
 
 ## 4. Classes, units, system terms
 | Source | Variants | Target | Cols | Cap | Note | Ruling |
@@ -248,14 +256,6 @@ NOT decisions. The first translator to render one promotes it in the PR's Glossa
 so; the reviewer moves the row up into its section in the integration commit. -->
 | Source | Variants | Proposed | Alternatives | Where seen | Wave |
 |---|---|---|---|---|---|
-| 機関室 | — | the engine room (lowercase in dialogue) | — | NO3_CHAPEL/0093, 0099, 0100, 0106, 0115, 0128; NO3_NO4/0054 (×2); later NO2_NO3/0004, NO1_ENGINEROOM/0002; hints/012–014 (blocked) — 9 / 0 / 3 | 7 |
-| エンジン · 機関 | 機関を止める (0122) | the engine | "the engines" | NO3_CHAPEL/0093, 0094, 0116, 0118, 0122 (機関), 0125, 0128; later NO1_CONTROLROOM/0003 — 7 / 0 / 0 | 7 |
-| 動力 · 動力源 | — | power · the power source | "propulsion" | NO3_CHAPEL/0101, 0102 — 2 / 0 / 0 | 7 |
-| 浮上 · 浮き上がる | — | surface ("the ship may surface") · float up | "rise" | NO3_CHAPEL/0102, 0103, 0116 — 2 / 0 / 0 (+1 浮き上がる) | 7 |
-| 燃料バルブ | 燃料 | the fuel valve; 燃料 "fuel" (as shipped NO6_HW_3/0001) | — | NO3_CHAPEL/0126 — 1 / 0 / 0 | 7 |
-| アモ | — | round ("take out one round", bound to s28/s29 `Hold the round` — R §25.1) | "bullet" — rejected by the binding | NO3_CHAPEL/0122 — 1 / 0 / 0 | 7 |
-| 例の生き残り | — | that survivor (the one who targeted Judy) | "the survivor we know about" | NO3_CHAPEL/0115; NO3_NO4/0046 — 2 / 0 / 0 | 7 |
-| ステンドグラス | — | the stained glass | — | NO3_CHAPEL/0131 — 1 / 0 / 0 | 7 |
 
 ## 10. Open questions
 <!-- one line each, with the FLAGS id. A closed question is deleted here; its answer stays in rulings.md. -->

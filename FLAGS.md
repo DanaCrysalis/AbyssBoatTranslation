@@ -98,6 +98,10 @@ NO3_NO4.p01 (PR #29) adds no `{p}` to Wolg's police story, the `{w}` chains 0018
 0027–0031: every `{w}` page fits 4 rows as the tools model it. If `{w}` keeps the box, both chains
 run far past 4 rows between `{p}` clicks, in the Japanese as well. Play the night talk with Wolg
 and report whether the box scrolls or clears at each `{w}` (R §27.2).
+NO3_CHAPEL.p03 (PR #28) replaces the first authored `{br}` of NO3_CHAPEL/0122, the engine vote, with
+a `{p}` ("…take out one round." then "If you're in favor of stopping the engine, hold it in your
+right hand."; 6 rows without it, pages 2 + 4 with it). Check that the second page opens on its first
+row (R §28.2).
 
 
 ## Open
@@ -218,6 +222,10 @@ NO3_CHAPEL.p02 (PR #26): Oakland 0048, 0055, 0057, 0073, 0074 (probably 0081, 00
 (0089 元警官 replies); Heming 0067 (named in 0068), 0075–0076; Judy 0066, 0069. 0045–0047, 0050–0054,
 0056, 0058–0065, 0071–0072, 0077–0078, 0080, 0082–0086 stay uncertain and are rendered
 speaker-neutral, checked line by line (rulings R §26.2).
+NO3_CHAPEL.p03 (PR #28): Wolg 0090, 0104, 0106–0107, 0109–0110, 0120, 0122 (the vote), 0126, 0128
+(probably 0115), on spk=5, 0 and 2; Oakland 0108, 0112–0113 (probably 0119, 0127); Heming probably
+0099, 0101, 0103, 0105, 0116, 0121. 0089 (Heming or Oakland), 0091–0097, 0117–0118, 0123–0125 stay
+uncertain; 0131–0132 narration. All speaker-neutral, checked line by line (rulings R §28.2).
 
 ### F-011 · 2026-10-04 · tools · OPEN
 PR #1 (NO4_BAR.p01) found four things CHECK and UNITCHECK do not verify. Each was confirmed by a

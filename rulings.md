@@ -2602,3 +2602,86 @@ Census counts are rows per store (script / scene / system), from the reviewer's 
   - 一番大切なもの → "what mattered most to me" (0040), echoing `:18 0015` もっとも大切なもの.
   - All already match in #27 head 7edf333.
 - Glossary: none.
+
+## Unit script NO3_CHAPEL.p03 (PR #28, MERGED, 2026-10-30)
+
+The third and last part of the chapel room (NO3_CHAPEL/0089–0132; 44 rows, 1,039 source characters, tier D, ratio 27.94):
+- 0089–0097: the answer to Wolg's "shoot to kill", then the night talk about the engine noise.
+- 0098–0110: the engine-power theory, and Wolg splitting the party.
+- 0111–0114: Oakland's outburst, between save prompts.
+- 0115–0130: the engine room is found, the vote with one round in the right hand, the fuel valve, and the save prompts.
+- 0131–0132: the stained glass.
+
+Reviewed twice:
+- **Round 0** (d4a6b39, merged with main 1a9f070 for review): CHANGES. Every mechanical gate passed; there was one finding:
+  - 1: `:43 0128` the line before the authored `{br}` wrapped to "stopping the engine will do." at 28 columns. It was unflagged, and the PR's Checks line said all such lines were ≤ 27 (R §1.12 rule 3, R §17 precedent).
+- **Round 1** (92146e5, rebased on 0511790, merged with main 4feb2ee, which has #29, for review): MERGE, squash f45c28a. `git diff d4a6b39 92146e5` changes only `:43 0128` in the unit file. The PR body's Checks line and Flag 6 wording were corrected.
+
+Figures (round 1, on the merge with 4feb2ee):
+- **Container.** NO3_CHAPEL.SCR 10,288 / 65,535 bytes, 55,247 free, 143 tokens, 150/150 rows: the room is complete (MEASURE). Used bytes went from 10,219 to 10,288 (+69, from 55,316 free) while tokens went from 320 to 143: the dictionary is rebuilt per build, so the per-unit byte cost is not additive.
+- **Pages.** At most 4 rows per page (UNITCHECK, 44 rows, 0 violations). The whole store: 1,217 rows, 0 violations. MERGE: keys that never matched 0.
+- **Duplicates.** CHECK compared 165 duplicate pairs and 8 tag-variant pairs, against main's 160 and 8. The +5 are 0111, 0114, 0129 and 0130 joining the save-prompt group, and 0104 pairing with NO4_BAR/0164.
+  - The reviewer's census: 44 rows × 1,899 script and scene dump rows (`{p}{w}{br}` stripped, `【Name】` stripped, ！？ → ⁉, final punctuation dropped).
+  - It compared 81 pairs: 81 identical, 0 divergent, 0 untranslated. The 8 NO3_CHAPEL save rows have 1 distinct target.
+- **Codes.** The authored `{p}{w}{br}` sequence differs from the source on 1 of 44 rows, `:37 0122` (§28.2). The `…`/`‼`/`⁉`/`──` counts match on 44 of 44.
+- **Widths.** Lines ended by an authored `{br}`: 18, all ≤ 27 after codec.wrap (`len()`); the longest are 0121 and 0128 at 27.
+- **F-011 wrap scan** (`build/script_merged.tsv`, 103 lines): no lone "a", "an" or "I", no one-word last row, no split title.
+- **F-012.** Two `+` rows, 0118 and 0132, each after a `{br}` ending. **F-026:** the unit's sources have no `{w}`.
+
+Census counts are rows per store (script / scene / system), from the reviewer's grep of `dumps/` on 2026-10-30. Line citations use PROJECT.md §7's numbering in `tl/script/NO3_CHAPEL.p03.tsv` (line = row order + 3).
+
+### 28.1 Terms promoted from §9
+- **機関室** → `the engine room` (15). Cap 14 if it ever becomes a room name (hints/012–014, blocked).
+  - Census: 9 / 0 / 3. Rows: `:8 0093`, `:14 0099`, `:15 0100` "The engine room? Why?", `:21 0106`, `:30 0115`, `:43 0128`; NO3_NO4/0054 ×2 in one row (#27 head 7edf333: "The engine room! Let's run for the engine room‼", agrees); NO2_NO3/0004, NO1_ENGINEROOM/0002 to come; hints/012–014.
+  - Glossary: §2 row added; §9 row removed.
+- **エンジン · 機関** (variant 機関を止める) → `the engine` (10), singular.
+  - Census: エンジン 7 / 0 / 0; 機関 10 / 0 / 3, of which 9 / 0 / 3 are 機関室, so 機関 alone is 1 / 0 / 0 (`:37 0122` 機関を止める → "stopping the engine").
+  - The §9 alternative "the engines" is rejected: nothing in the source counts them, and 0093 動いてるんだよ、エンジンが reads as one machine.
+  - `:10 0095` 止めれば → "If we stop it": the engine of 0094, repeated, takes "it".
+  - Glossary: §3 row added; §9 row removed.
+- **動力 · 動力源** → `power` · `the power source` (5 · 16).
+  - Census: 動力 2 / 0 / 0 in all, 動力 alone 1 (`:16 0101` 動力が生きている → "its power is still running", not "alive"), 動力源 1 (`:17 0102` 動力源を破壊すれば → "Destroy the power source"). "propulsion" (the §9 alternative) is rejected: the theory is about what keeps the ship at depth, not what moves it.
+  - Glossary: §3 row added; §9 row removed.
+- **浮上 · 浮き上がる** → `surface` · `float up` (7 · 8).
+  - Census: 浮上 2 / 0 / 0 (`:17 0102`, `:31 0116` "the ship may surface"); 浮き上が 1 / 0 / 0 (`:18 0103` "it'll probably float up"). Two source verbs, two English verbs.
+  - Glossary: §3 row added; §9 row removed.
+- **燃料バルブ** (variant 燃料) → `the fuel valve`; 燃料 `fuel` (14; 4).
+  - Census: 燃料 2 / 0 / 0 (`:41 0126`; NO6_HW_3/0001 "Fuel leaking from a pipe…", shipped); 燃料バルブ 1 / 0 / 0. SCN046_VALVE's "It" is this valve's engine (R §13.3).
+  - Glossary: §3 row added; §9 row removed. R §24's "not fixed" note on 燃料 is superseded by this row.
+- **アモ** → `round` (5).
+  - Census: 1 / 0 / 0 (`:37 0122` 全員アモを一発取り出せ → "Everyone, take out one round."). Bound by R §25.1 to s28/s29 `Hold the round` / `Don't hold it`. "bullet" is rejected by that binding.
+  - Glossary: §3 row added; §9 row removed.
+- **例の生き残り** → `that survivor` (13).
+  - Census: 2 / 0 / 0. `:30 0115` 例の生き残りの存在が気になるが → "That survivor still worries me, but…". "still" is carried by 例の, the concern of NO3_CHAPEL/0051, 0060, 0072, and it keeps "room." from a one-word last row. NO3_NO4/0046 (#27 head 7edf333) "that survivor seems likely to be on this deck", agrees.
+  - "the survivor we know about" (the §9 alternative) is rejected as long and flat.
+  - Glossary: §2 row added; §9 row removed.
+- **ステンドグラス** → `the stained glass` (17).
+  - Census: 1 / 0 / 0. `:46 0131` ステンドグラスは、ひび割れている → "Cracks run through the stained glass." (restructure, flagged): "The stained glass is cracked." is 29 columns and wraps "cracked." alone.
+  - Glossary: §3 row added; §9 row removed.
+- **Applied, unchanged:** 元警官 → ex-policeman (`:4 0089`); 社長 → "The boss" (`:22 0107`, third person, as NO4_BAR/0433); 見張りの順番 → "Our turn to keep watch" (`:12 0097`); 生命 → "lives" (`:35 0120`, the "life" sense); 下のデッキ → "the deck below" (`:13 0098`); ウォルグのヤツ → "That Wolg" (`:27 0112`, `:28 0113`, R §1.7); the save prompt (0111, 0114, 0129, 0130); 0104 わかった。 = NO4_BAR/0164 `All right.`.
+- **Not fixed, in context:** 推測 "guess" (0101, 0117; 2 / 0 / 0), 出力 "output", 浮力 "buoyancy", 深度 "depth", 銃撃戦 "gunfight", 解雇 "fired", リーダー "the leader" (1 / 0 / 0 each).
+
+### 28.2 Movable codes, readings and speakers (PR Flags 2–6, 8)
+- **`:37 0122` `{br}{br}` → `{p}{br}`** (PR Flag 2).
+  - Kept as `{br}`, the three sentences need 6 rows (2 + 3 + 1). The `{p}` replaces the first `{br}`, at the sentence boundary between the instruction ("take out one round") and the voting rule. A `{p}{br}` would open the new page on a blank row.
+  - Pages 2 + 4. Approved, and added to F-010's in-game check.
+- **0122 binding** (R §25.1, §13.2): "Right… Everyone, take out one round." / "If you're in favor of stopping the engine, hold it in your right hand." / "If not, hold nothing." This agrees with s28/s29 and the SCN046 subtitles "raise your right hand" / "Open your hand". なにも持つな is the empty hand of 握らない.
+- **`:43 0128`** (round 1): ああ。だがエンジンを止めれば何が起こるかわからん。 → "Yeah. But stop the engine, and who knows what happens." The 〜すれば frame follows `:17 0102` ("Destroy the power source, and the ship may surface."). It wraps 26 / 27 before the authored `{br}`, so the page stays 4 rows.
+- **`:4 0089` with p02's `:47 0088`** (R §26.3): "…we'll just have to shoot to kill." → "Not what I'd expect to hear from an ex-policeman." → `:5 0090` "We can't let any more of our people be killed." This reads as the exchange: the jab, then Wolg's answer.
+- **Hedges kept** (R §20.3), each checked: `:8 0093` おそらく "probably"; `:9 0094`, `:10 0095` ×2, `:11 0096`, `:31 0116`, `:33 0118`, `:34 0119` かもしれ… "may"; `:17 0102` かもしれんな "Could be." and かもしれん "may"; `:18 0103` だろう, `:34 0119` だろうな "probably"; `:41 0126` はず "should"; `:47 0132` だろうか "Could".
+- **Step-4–6 departures, flagged and accepted:**
+  - `:28 0113` 帰ったら解雇してやる！ → "When we're back, he's fired!" (agency shift; "I'll fire him!" leaves "him!" alone).
+  - `:38 0123` "All but John are in favor……"; `:40 0125` "But can we stop the engine…?"; `:18 0103` "Oddly, there's air aboard."; `:34 0119` 当分 → "for now"; `:46 0131` the stained-glass restructure; `:47 0132` "Could" for だろうか.
+- **Readings accepted:** `:7 0092` and `:8 0093` keep the source's inverted order ("Bothering you? That sound."; "It's running, the engine."). `:15 0100` なぜだ。 → "Why?": a question in English, the ？ count's one difference.
+- **Speakers** (PR Flag 6, F-009), named from content:
+  - Wolg: 0090, 0104, 0106–0107 (俺とヘイミング…社長はここで待機), 0109–0110, 0120, 0122, 0126, 0128; probably 0115. He is on spk=5, 0 and 2. The vote is his (R §13.2).
+  - Oakland: 0108, 0112–0113 (言いおって, 解雇); probably 0119 and 0127.
+  - Heming, probably: 0099, 0101, 0103, 0105, 0116, 0121 (よかろう → "Let us all decide, then.").
+  - 0089 is Heming or Oakland. 0091–0097, 0117–0118 and 0123–0125 stay uncertain. 0131–0132 are narration.
+  - Every line is speaker-neutral in English, so a corrected attribution changes no text (checked line by line).
+- Glossary: none beyond §28.1.
+
+### 28.3 Recurrences
+- **The save prompt.** 0111, 0114, 0129 and 0130 copy `tl/script/NO3_CHAPEL.p01.tsv:42` (0039) byte for byte. All 8 NO3_CHAPEL save rows are shipped and identical.
+- **NO3_NO4.p02 (#27):** 0046 例の生き残り → "that survivor" and 0054 機関室 → "the engine room" agree with §28.1 in head 7edf333. The #27 reviewer confirms them against the glossary.
+- Glossary: none.
