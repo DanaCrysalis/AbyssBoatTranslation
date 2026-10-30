@@ -35,7 +35,7 @@ NO3_FOODSTORAGE, NO3_HW_1), NO3.b02 (25, 502, 65.55; NO3_HW_2/3, NO3_MACHINE, NO
 NO2_THIRDSTORAGE, NO2_TOFE_ROOM); all tier D, every container ≥ 63,293 free.
 Glossary seeds: §9, commit bd79313 (19 rows).
 Bindings waiting: NO3_HW_1/0001–0002 = NO3_NO4/0011–0012 byte for byte (R §27.3; CHECK pairs them); NO2_MAINSTORAGE/0027
-閉じ込める "shut in" (glossary §6, R §29.1); NO2_HW_5/0003 `The shutter is down, so there's no going any further.{p}` (R §29.2);
+閉じ込める "shut in" (glossary §6, R §29.1); NO2_HW_5/0003 `The shutter is down, so no going any further.{p}` (R §29.2's form re-cut for a one-word last row; glossary §9);
 NO2_NO3/0004 機関室 "the engine room" (glossary §2); 例の生き残り "that survivor"; ワイフ "my wife"; 警察 (glossary §2).
 Wave 7 lessons: one CHANGES of four — an authored-`{br}` line at 28 that the PR's own check missed because it measured the
 unwrapped segment. Translators must measure the last wrapped line before every authored `{br}`/`{w}` with codec.wrap(…, 28) and
