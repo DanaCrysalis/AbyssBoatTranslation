@@ -24,7 +24,7 @@ Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEA
 |---|---|---|---|---|
 | script NO5.b01 | `tl/script-NO5.b01` | — | translator dispatched 2026-10-26 (round 0); 429 stop, resumed 2026-10-30 | translator opens PR |
 | script NO6.b01 | `tl/script-NO6.b01` | #23 | PR open 8ecdb7e, round 0, seed-wrap fix applied; wrap scan 0/89; open: {p} added at NO6_BRIDGE/0002, 0020 reorder | reviewer, after barrier |
-| script NO6.b02 | `tl/script-NO6.b02` | #22 | PR open e7b2766; applying the coordinator's seed-wrap fix (Decisions) | translator pushes, then barrier |
+| script NO6.b02 | `tl/script-NO6.b02` | #22 | PR open a2a5ade, round 0, seed-wrap fix applied; wrap scan 0/60; open: NO6_TOOLROOM/0001 wording (Flag 5) | reviewer, after barrier |
 | script NO3_CHAPEL.p01 | `tl/script-NO3_CHAPEL.p01` | #24 | PR open 12556a0, round 0; NO3_CHAPEL.SCR 55,976 free; open: speakers (Wolg/Oakland/Heming — the dispatch's William reading was wrong), s28/s29 = the ammo vote, 教会 article | reviewer, after barrier |
 
 ## Next up
