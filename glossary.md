@@ -257,6 +257,25 @@ NOT decisions. The first translator to render one promotes it in the PR's Glossa
 so; the reviewer moves the row up into its section in the integration commit. -->
 | Source | Variants | Proposed | Alternatives | Where seen | Wave |
 |---|---|---|---|---|---|
+| 扉は鍵が掛かっていて開きそうに無い。{p} | — | `The door's locked. It looks like it won't open.{p}` (27 / 19) | — | NO3_HW_1/0005–0006 (NO3.b01) = NO3_HW_2/0002–0003 (NO3.b02); hedged, kept apart from the unhedged `It's locked, so the door won't open.` (§6) | 8 |
+| シャッターは閉鎖され開きそうに無い。{p} | — | `The shutter's sealed. It looks like it won't open.{p}` (24 / 25) | — | NO3_HW_1/0007, 0008, 0011 (NO3.b01) = NO2_HW_4/0001 (NO2.b01) | 8 |
+| シャッターはロックされていて開きそうに無い。{p} · シャッターは閉ざされていて開きそうに無い。{p} | — | `The shutter's locked. It looks like it won't open.{p}` · `The shutter's closed. It looks like it won't open.{p}` (24 / 25 each) | — | ロック: NO3_HW_2/0001, 0004, 0005, NO3_HW_3/0001 (NO3.b02); 閉ざされ: NO2_HW_2/0001, NO2_HW_5/0001 (NO2.b01); one family with the row above | 8 |
+| シャッターが閉じていて先に進めない。{p} | — | `The shutter is closed, so there's no going any further.{p}` | — | NO2_HW_1/0001, 0004 (NO2.b01); unhedged, the shape of R §29.2's 下りていて sentence (NO2_HW_5/0003) | 8 |
+| コントロール装置を破壊されたため、このエレベータはもう使用できない。{p} | — | `The controls were destroyed, so this elevator can no longer be used.{p}` (28 / 23 / 15) | — | NO3_FOODSTORAGE/0007 (NO3.b01) = NO2_SUBSTORAGE/0008 (NO2.b02) | 8 |
+| エレベータは反応しない…。ここで狙撃された時にコントロール装置が破壊されてしまったようだ。{p} · …食料庫で狙撃された時に… | — | `The elevator won't respond… It seems the sniper fire here destroyed the controls.{p}` (27 / 24 / 28) · `… It seems the sniper fire in the food storeroom destroyed the controls.{p}` (27 / 27 / 28 / 13) | — | NO3_FOODSTORAGE/0006 (NO3.b01) · NO2_SUBSTORAGE/0007 (NO2.b02); siblings, CHECK does not pair them | 8 |
+| ほかには使えそうな物は無い。{p} | — | `There's nothing else that looks usable.{p}` (25 / 13) | — | NO3_MEDICALROOM/0001 (NO3.b02) = NO2_TOFE_ROOM/0005 (NO2.b02); shipped NO4_STORAGE/0004 "There seems to be nothing that looks usable." | 8 |
+| 〜から、銃の弾をみつけた。{p} | 机の引き出しから · ロッカーから | `Found ammo in a desk drawer.{p}` (28) · `Found ammo in the locker.{p}` | — | NO3_STORAGE/0001 (NO3.b02) · NO2_MAINSTORAGE/0029 (NO2.b01); 銃の弾 → ammo (§3 残弾) | 8 |
+| 〜には、(もう)使えそうなものは無いようだ。{p} | 引き出しには、もう · ロッカーには、 | `There seems to be nothing else usable in the drawer.{p}` · `There seems to be nothing usable in the locker.{p}` | — | NO3_STORAGE/0002 (NO3.b02) · NO2_MAINSTORAGE/0030 (NO2.b01) | 8 |
+| 天井に通風孔が見える。{br}ここから他の部屋に行けそうだ。 · 壁に… | — | `An air vent in the ceiling.{br}Looks like it could lead to other rooms.` (27 · 27 / 12) · `An air vent in the wall.{br}…` | — | NO2_CABIN_2001/0001 (NO2.b01) · NO2_SUBSTORAGE/0009 (NO2.b02); 天井には…ここをたどって行けば別の部屋にいけそうだ (NO3_CABIN_3003/0002 = NO3_CABIN_3105/0005) is its own sentence, same vocabulary | 8 |
+| 通風孔に入る · 入らない (choice) | — | `Enter the vent` · `Don't enter` | — | NO3_CABIN_3003/s06–s07, NO3_CABIN_3105/s07–s08 (NO3.b01), NO2_CABIN_2001/s05–s06 (NO2.b01), NO2_SUBSTORAGE/s06–s07 (NO2.b02) | 8 |
+| 『…』{br} + と書かれた用紙が(何枚か)張られている。{p} | — | `"Optional Cruise Tours,"{br}` + `read several posted sheets.{p}` (24 · 27) · `"Shipboard Precautions,"{br}` + `reads a posted sheet.{p}` | — | NO3_NO2/0001–0002 (NO3.b02; the + row's leading full-width space is not carried) · NO2_NO3/0005–0006 (NO2.b02); the と書かれている pattern (§6, R §12.1) | 8 |
+| 〜死体が転がっている · 横たわっている | — | `A body lies here, …` (shipped NO4_4102/0004 `A body lies here, brutally hacked to pieces.{p}`) | — | NO3_CABIN_3003/0003, 3105/0006, 0008 (NO3.b01), NO2_CABIN_2101/0001–0002, 2103/0001 (NO2.b01) | 8 |
+| 撃たれて死んでいる · 撃たれて死んでる | 銃で撃たれて死んでいる | `Shot dead.` (shipped NO4_P_OFFICE/0003, 0010–0011) | — | NO3_FOODSTORAGE/0016 (NO3.b01) · NO2_THIRDSTORAGE/0010 (NO2.b02) | 8 |
+| 首を飛ばされ(る) | — | head torn off ("Its head was torn off by a monster, it seems.") | head knocked off; decapitated | NO3_FOODSTORAGE/0015 (NO3.b01) · NO2_THIRDSTORAGE/0011 (NO2.b02); 首が切り離され (NO3_MEDICALROOM/0007) "cut off", 首が切断され (shipped NO6_BRIDGE/0019) "severed" are other words | 8 |
+| 食料 · 食糧 | 保存用の食料 | food; 保存用の食料: preserved food | provisions | 食料 as shipped (29 rows "food"); 食糧 NO3_FOODSTORAGE/0013, 0014, 0016; 保存用 NO2_SUBSTORAGE/0013, 0015; 食料庫 stays "the food storeroom" (§2) | 8 |
+| エレベータ · コントロール装置 · リフト · 食料運搬用のリフト | — | elevator · the controls · lift · a lift for carrying food | dumbwaiter (rejected: too technical) | NO3_FOODSTORAGE/0006–0011 (NO3.b01), NO2_SUBSTORAGE/0007–0008 (NO2.b02); ワイヤーリフト stays "the wire lift" (§3) | 8 |
+| バッテリ · バッテリー | — | battery | — | NO3_FOODSTORAGE/0009 (NO3.b01) · NO3_STORAGE/0003 (NO3.b02); items/008 (blocked) | 8 |
+| ハチェット | — | hatchet | axe | NO3_HW_1/0004, 0009 (NO3.b01); items/002, equip/002 (blocked) | 8 |
 
 ## 10. Open questions
 <!-- one line each, with the FLAGS id. A closed question is deleted here; its answer stays in rulings.md. -->
