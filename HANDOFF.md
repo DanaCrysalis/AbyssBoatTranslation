@@ -1,4 +1,4 @@
-**Last updated: 2026-10-30** — wave 7 dispatched: NO3_CHAPEL.p02, p03, NO3_NO4.p01, p02 (seeds 3b28903).
+**Last updated: 2026-10-30** — wave 7 in review: #26 NO3_CHAPEL.p02 MERGED (squash 56e2531); #28 next.
 
 ## Integration branch: `main`. Not configurable.
 Every PR bases on `main`; the reviewer merges into `main`; a wave is closed only when `origin/main` is
@@ -7,23 +7,24 @@ preflight is `git fetch origin main && git checkout main && git reset --hard ori
 
 ## NEXT ACTION — always current, always a literal instruction
 > **Wave 7 barrier met 2026-10-30 20:05 UTC (four PRs open).** Reviewer, one at a time, in unit order:
-> #26 NO3_CHAPEL.p02 → #28 NO3_CHAPEL.p03 → #29 NO3_NO4.p01 → #27 NO3_NO4.p02. Now reviewing: #26.
+> #26 NO3_CHAPEL.p02 → #28 NO3_CHAPEL.p03 → #29 NO3_NO4.p01 → #27 NO3_NO4.p02. #26 MERGED (round 0, squash 56e2531).
+> **Review #28 next.** The mid-row `{w}` blind spot is now PROJECT.md §7 / F-026; the #29 and #27 reviewers check those rows.
 > Watchdog: `send_later` every 12 minutes.
 
 ## Progress
 | Store | Done | Total | |
 |---|---|---|---|
-| script | 21 units · 1,098 rows | 38 units · 1,709 rows | NO4_BAR p01–p08, NO4_HWR_FRONT p01–p03, NO4_MACHINER90 p01–p02, NO4_TOOL_ROOM p01–p02 (rooms complete), NO4.b01, NO4.b02 (deck NO4 complete bar the `_T` scripts); NO5.b01 (deck NO5 complete); NO6.b01, NO6.b02 (deck NO6 complete); NO3_CHAPEL.p01 (62/150 rows of the room); STATUS 2026-10-30 |
+| script | 22 units · 1,142 rows | 38 units · 1,709 rows | NO4_BAR p01–p08, NO4_HWR_FRONT p01–p03, NO4_MACHINER90 p01–p02, NO4_TOOL_ROOM p01–p02 (rooms complete), NO4.b01, NO4.b02 (deck NO4 complete bar the `_T` scripts); NO5.b01 (deck NO5 complete); NO6.b01, NO6.b02 (deck NO6 complete); NO3_CHAPEL.p01–p02 (106/150 rows of the room); STATUS 2026-10-30 |
 | scene | 4 units · 190 rows | 4 units · 190 rows | OP-SCN034, SCN038, SCN041-SCN046, SCN047-EPILOG (store complete) |
 | system | 0 | 5 units · 188 rows | blocked whole (F-006) |
 
-Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-30; `NO4_BAR.SCR` 37,378 free; `NO4_TOOL_ROOM.SCR` 61,899, 80/80; the NO4.b01/b02 rooms ≥ 63,697; the NO5 rooms ≥ 63,950; NO6_BRIDGE 63,400, the other NO6 rooms ≥ 64,242; NO3_CHAPEL.SCR 55,976, 62/150).
+Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-30; `NO4_BAR.SCR` 37,378 free; `NO4_TOOL_ROOM.SCR` 61,899, 80/80; the NO4.b01/b02 rooms ≥ 63,697; the NO5 rooms ≥ 63,950; NO6_BRIDGE 63,400, the other NO6 rooms ≥ 64,242; NO3_CHAPEL.SCR 55,316, 106/150).
 
 ## In flight
 Wave 7, dispatched 2026-10-30, seeds 3b28903 (glossary §9). Translator owns each unit until its PR is open; then the reviewer.
 | Unit | Branch | PR | State |
 |---|---|---|---|
-| script NO3_CHAPEL.p02 | `tl/script-NO3_CHAPEL.p02` | #26 (7afbe0c) | PR open, round 0; agent a198bdd3d2e501a41 |
+| script NO3_CHAPEL.p02 | `tl/script-NO3_CHAPEL.p02` | #26 (7afbe0c) | **MERGED** round 0, squash 56e2531; 44 rows, NO3_CHAPEL.SCR 55,316 free, 48 dup pairs (CHECK 155 + 7); 4 §9 rows promoted (R §26); integration commit on main |
 | script NO3_CHAPEL.p03 | `tl/script-NO3_CHAPEL.p03` | #28 (d4a6b39) | PR open, round 0; agent a85e8f3aa6d16000a |
 | script NO3_NO4.p01 | `tl/script-NO3_NO4.p01` | #29 (61022fd) | PR open, round 0; agent a761f7e3a43fb5cfc. Flag 3: same mid-row `{w}` finding, 0030 fixed |
 | script NO3_NO4.p02 | `tl/script-NO3_NO4.p02` | #27 (7edf333) | PR open, round 0; agent ae823e5ab8f02fb64. Flag 3: mid-row `{w}` glue (0030, 0040, 0043) — relayed to p01; candidate CHECK blind spot |

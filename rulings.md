@@ -2430,3 +2430,99 @@ Census counts are rows per store (script / scene / system), from the reviewer's 
 - **Untranslated twins**, which CHECK pairs once translated: NO3_CHAPEL/0049, 0070, 0079, 0111, 0114, 0129, 0130 (p02/p03) must copy `:42`.
 - **For p02/p03:** 0122 per §25.1; 0052 錯乱していたのか may take "deranged" (`:45`).
 - Glossary: none.
+
+---
+
+## Unit script NO3_CHAPEL.p02 (PR #26, MERGED, 2026-10-30)
+
+The second part of the chapel room (44 rows, 1,070 source characters, tier D, ratio 27.16):
+- 0045–0049: the talk-to lines before the food search, and the save prompt.
+- 0050–0070: the party reports the food, the survivor who targeted Judy, and the humanoid monster. Heming sends John and Judy to Deck 2. Then the save prompt.
+- 0071–0079: the talk-to lines, and the save prompt.
+- 0080–0088: the second attack. The laser-sighted gun points to one person, and Wolg's "shoot to kill" (answered by 0089 元警官の言うこととは思えん, p03).
+
+Reviewed once:
+- **Round 0** (7afbe0c, merged with main f542d01 for review): MERGE, squash 56e2531. Findings: none; four non-blocking notes (§26.2).
+
+Figures:
+- **Container.** NO3_CHAPEL.SCR 10,219 / 65,535 bytes, 55,316 free, 320 tokens, 106/150 rows (MEASURE). This unit cost 660 bytes, from 55,976 free.
+- **Pages.** At most 4 rows per page (UNITCHECK, 44 rows, 0 violations). The whole store: 1,142 rows, 0 violations.
+- **Duplicates.** CHECK compared 155 duplicate pairs and 7 tag-variant pairs, against main's 152 and 7. The +3 are 0049, 0070 and 0079 joining the save-prompt group.
+  - The reviewer's census: 91,784 comparisons (44 rows × every dump row), at three levels (exact; `{p}{w}{br}` stripped; `【Name】` stripped, ！？ → ⁉, final punctuation dropped).
+  - It compared 48 translated pairs: 48 identical, 0 divergent. 12 untranslated hits (0111, 0114, 0129, 0130 ×3).
+  - Only the save prompt recurs.
+- **Codes.** The authored `{p}{w}{br}` sequence differs from the source on 2 of 44 rows, `:19 0060` and `:44 0085` (PR Flag 2, §26.2). The `…`/`‼`/`⁉`/`──` counts match on 44 of 44, and the `！`/`？` counts also match on 44 of 44.
+- **F-011 wrap scan** (the reviewer's script, `build/script_merged.tsv`, 100 lines): no lone "a", "an" or "I", no one-word last row, no split title. Authored-`{br}` lines ≤ 27 (`len()`; 0055 and 0059 at 27).
+- **F-012.** Five `+` rows, 0046, 0060, 0064, 0076 and 0085, each after a `{br}` ending.
+
+Census counts are rows per store (script / scene / system), from the reviewer's grep of `dumps/` on 2026-10-30. Line citations use PROJECT.md §7's numbering in `tl/script/NO3_CHAPEL.p02.tsv` (line = row order + 3).
+
+### 26.1 Terms promoted from §9
+- **残弾** (variant 銃の残弾) → `ammo` (4); 銃の残弾 → `the ammo left in your gun` (25).
+  - Census: 2 / 0 / 0. Rows: `:36 0077` 残弾が少ないようだな → "You seem low on ammo."; `:37 0078` 銃の残弾には気をつけてな → "watch the ammo left in your gun".
+  - Matches 弾切れ "out of ammo" (§3). The §9 alternative "rounds left" is rejected: "round" is bound to アモ for the engine vote (R §25.1), and two words for one noun would blur it.
+  - Glossary: §3 row added; §9 row removed.
+- **レーザーサイト** → `laser sight` (11).
+  - Census: 1 / 0 / 0. `:43 0084` レーザーサイトを付けた銃 → "a gun fitted with a laser sight".
+  - Glossary: §3 row added; §9 row removed.
+- **人型の化け物** → `a humanoid monster` (18).
+  - Census: 人型 1 / 0 / 0. `:15 0056`. 化け物 → monster per R §1.8.
+  - "a monster shaped like a man" (the §9 alternative) wraps to an extra row on a 4-row page.
+  - Glossary: §6 row added; §9 row removed.
+- **厄介 · やっかい** (variants 厄介事 · やっかいなこと) → `trouble` (7).
+  - Census: 9 / 0 / 0. Every row is listed here:
+    - This unit: `:13 0054` どちらにしろ厄介だな → "Either way, it's trouble."; `:14 0055` なにが厄介だ！ → "What trouble!"; `:15 0056` 厄介事 → "isn't the only trouble"; `:46 0087` やっかいなこと → "one trouble after another".
+    - Shipped and left in context: NO4_4101/0003 and NO4_HWR_FRONT/0087 やっかいだ "in trouble"; NO4_BAR/0422 やっかいなことに "Trouble is"; NO4_HWR_FRONT/0142 ちょっと厄介 "tricky"; NO4_BAR/0264 やっかい払い "Good riddance".
+  - One word across 0054–0056 carries the source's echo: 0055 throws 0054's word back, and 0056 picks it up again.
+  - Glossary: §6 row added; §9 row removed.
+- **Applied, unchanged:** 化け物 → monster (0056, 0057, 0059, 0064, 0081); 生き残り → survivor(s) (0051, 0060, 0062, 0072); 死体 → bodies (0063); 見張り → watch (0061); 第２デッキ → Deck 2 (0067); 装備 → gear (0085); 人間 → human (0081, 0082); ジョンたち → "John and the others" (0050); 食料 → food; 錯乱 → "deranged" (0052, R §25.4); the save prompt (0049, 0070, 0079).
+- **Not fixed, in context:** 調査 → "investigate/investigating" (0067, 0071, 0074); 予備 → "spare" (0077); 護身用 → "for self-defense" (0085).
+
+### 26.2 Movable codes, readings and speakers (PR Flags 2–7)
+- **Leading `{p}` on `+` rows** (R §2.4):
+  - `:19 0060` `-` → `{p}`. Without it, the page from 0059 runs to 5 rows; with it, the pages hold 4 and 2.
+  - `:44 0085` `{br}` → `{p}{br}`. Without it, the page from 0084 runs to 6 rows; with it, 4 and 3. The source `{br}` between 0085's two sentences is kept.
+  - Both sit at sentence boundaries. Approved.
+- **Hedges kept** (wave 5's lesson, R §20.3):
+  - `:10 0051` らしい ×2 → "Apparently" … "it seems".
+  - `:15 0056` そうだ → "It seems"; `:21 0062` そうだ → "apparently".
+  - `:22 0063` らしい → "it seems"; `:23 0064` ようだ → "seems".
+  - `:24 0065` だろうか → "I wonder"; `:25 0066` かもしれない → "may".
+  - `:26 0067` いくまい → "can hardly"; `:36 0077` ようだ → "seem".
+  - `:41 0082` らしい → "Apparently", 可能性が高い → "most likely"; `:47 0088` あるまい → "we'll just have to".
+- **ヤツ as the head of a relative clause.** `:21 0062` ジュディを襲ったヤツ → "the guy who attacked Judy".
+  - This is the killer, but the party does not know that yet. As the head of a relative clause, ヤツ cannot be "he" in English, so it is translated in context as a noun for a male person, as R §1.7 allows for common-noun uses.
+  - As a bare pronoun for the monster or the killer it stays he/him/his. `:44 0085` そんなヤツ → "guys like that" is the 〜なヤツ type case.
+  - Glossary: §6 ヤツ note extended.
+- **Non-blocking review notes**, each accepted:
+  - `:12 0053` 故意に殺そうとした → "he meant to kill her?" (PR Flag 6 calls it step 5). "meant to" carries the intent the question turns on, against 0052's 錯乱. The attempt is the established fact of 0051. Nothing is dropped, so the line is accepted as equivalent rather than as a compression. "he tried to kill her on purpose?" also fits, if a later edit wants it.
+  - `:14 0055` なにが厄介だ！ → "What trouble!" is the dismissive echo of 0054. Out of context the English could read as an exclamation of how much trouble, but the next sentence ("It's only a person, just one.") fixes the reading. The ！ follows the source.
+  - `:27 0068` 頼めるか → "can I ask you?" is elliptical but clear after "Deck 2 needs investigating." "can I count on you?" and "can I rely on you?" overrun the row and leave a one-word row.
+  - `:5 0046` → "A misjudgment means death." must fit the 4th row of 0045's page (PR Flag 6).
+  - `:23 0064` 深刻だった → "seems severe": "seems to have been severe" adds a fifth row.
+  - `:34 0075` いくら…といっても → "Even with food" is equivalent.
+- **Speakers** (PR Flag 3, F-009), all named from content:
+  - Oakland: 0048, 0055 (addresses Wolg), 0057, 0073, 0074; probably 0081 and 0087.
+  - Wolg: 0088 (0089 元警官 replies), and probably the reporting lines.
+  - Heming: 0067 (named in 0068), and 0075–0076 (escape is his job, 0036).
+  - Judy: 0066, 0069.
+  - The others are uncertain. Every line is speaker-neutral in English, so a corrected attribution changes no text (checked line by line).
+- **Echoes accepted:**
+  - `:7 0048` follows NO4_BAR/0442 "What are you dawdling for?{br}Hurry up and go find one!", with ‼ per source.
+  - `:37 0078` いざという時のために "For when it counts", as NO4_BAR/0288.
+  - `:46 0087` まったく "Honestly", as NO4_MACHINER90/0043.
+- Glossary: §6 ヤツ note extended; nothing else.
+
+### 26.3 Recurrences and bindings for p03 (PR Flag 9)
+- **The save prompt.** 0049, 0070 and 0079 copy `tl/script/NO3_CHAPEL.p01.tsv:42` (0039) byte for byte. NO3_CHAPEL/0111, 0114, 0129 and 0130 (p03) must copy it too, and CHECK pairs them.
+- **0089** 元警官の言うこととは思えんな answers `:47 0088` "we'll just have to shoot to kill".
+- Glossary: none.
+
+### 26.4 A CHECK blind spot recorded in this integration: mid-row `{w}` (wave 7, PRs #27, #29)
+- **Source.** `{w}` followed by text, not by `{br}`: `grep -cP '\{w\}[^{]' dumps/script.tsv` → 3 (NO3_NO4/0030, 0040, 0043); scene 0.
+- **Engine.** `docs/ENGINE.md` §6: `{w}` waits for a click and keeps the box, and "the next byte follows it". The next sentence therefore continues on the same row with no separator, so an English target glues ("come.And").
+- **Tools.** `tools/abyss/codec.py` `PAGE_ENDS = ('{p}', '{w}')` models `{w}` as a page start, so CHECK and UNITCHECK pass the glue.
+- **Who found it.** The translators of NO3_NO4.p01 (#29 Flag 3) and NO3_NO4.p02 (#27 Flag 3) found it independently. Each fixes it with a `{br}` after the `{w}`.
+- The reviewers of #29 and #27 check the fix on those three rows.
+- PROJECT.md §7 gains the blind-spot line and FLAGS.md gains F-026, in this commit, ahead of those reviews, so that their reviewers find it listed.
+- Glossary: none.

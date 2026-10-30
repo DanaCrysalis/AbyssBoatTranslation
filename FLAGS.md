@@ -90,6 +90,10 @@ NO6.b01 (PR #23) adds a leading `{p}` at NO6_BRIDGE/0002, a `+` row after the un
 crew member: "…but it seems to be locked." then "We can't go back empty-handed…"; 7 rows without
 it). The source has no click between the two; check that the box clears and the second page opens
 on its first row (R §23.2).
+NO3_CHAPEL.p02 (PR #26) adds leading `{p}` at NO3_CHAPEL/0060 and 0085, `+` rows after the
+`{br}`-ended 0059 and 0084 ("…the monsters again." then "Besides, we must beware
+the survivor…"; "…with a laser sight." then "Odd gear for self-defense."; 5 and 6 rows without
+them). Check them with the others (R §26.2).
 
 
 ## Open
@@ -206,6 +210,10 @@ NO3_CHAPEL.p01 (PR #24): William is dead by this scene (0007, past tense). Named
 plans (0012–0014, 0030, 0032), Oakland panics (0015, 0023, 0025, 0031, 0033), Heming offers to go
 (0035) and is addressed at 0036, Judy 0001–0011 and 0034; spk=4 carries Wolg and Oakland. 0016–0018,
 0020, 0022, 0026–0028, 0036–0038 stay uncertain and are rendered speaker-neutral (rulings R §25.2).
+NO3_CHAPEL.p02 (PR #26): Oakland 0048, 0055, 0057, 0073, 0074 (probably 0081, 0087); Wolg 0088
+(0089 元警官 replies); Heming 0067 (named in 0068), 0075–0076; Judy 0066, 0069. 0045–0047, 0050–0054,
+0056, 0058–0065, 0071–0072, 0077–0078, 0080, 0082–0086 stay uncertain and are rendered
+speaker-neutral, checked line by line (rulings R §26.2).
 
 ### F-011 · 2026-10-04 · tools · OPEN
 PR #1 (NO4_BAR.p01) found four things CHECK and UNITCHECK do not verify. Each was confirmed by a
@@ -345,6 +353,17 @@ has 後回しだ), shipped "Searching over there can wait." (`tl/script/NO5.b01.
 `NO5_BANK/0009` たくさんの啄ばまれた後, where the sense is 跡 ("marks"; 啄 1 / 0 / 0), shipped "Many peck
 marks can be seen." (`:12`). PR #25 Flag 10. Harmless; nothing to change unless the in-game
 context shows a different reading · rulings R §22.3.
+
+### F-026 · 2026-10-30 · tools · OPEN
+A `{w}` followed directly by text, not by `{br}`, keeps the box, and the next byte follows it on the
+same row (`docs/ENGINE.md` §6). An English target therefore glues the two sentences ("come.And"),
+and the second one starts mid-row, so the row's real width is longer than modelled. The tools model
+`{w}` as a page start (`tools/abyss/codec.py` `PAGE_ENDS`), so CHECK and UNITCHECK pass both. The
+script dump has exactly 3 such rows, NO3_NO4/0030, 0040 and 0043 (`grep -P '\{w\}[^{]'
+dumps/script.tsv`; scene 0). The translators of NO3_NO4.p01 (#29 Flag 3) and p02 (#27 Flag 3) found
+it independently. Each adds a `{br}` after the `{w}`, flagged; the reviewer checks those rows by
+hand. A tool PR that models a mid-row `{w}` as continuing the row would close it. Added to
+PROJECT.md §7's blind spots · rulings R §26.4.
 
 ## CHECK positive controls
 <!-- One entry per kind of violation deliberately planted and caught by CHECK (tools/README.md rule 3).

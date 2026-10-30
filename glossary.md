@@ -124,6 +124,8 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | 操作パネル | 防水シャッターの操作パネル | control panel; 防水シャッターの操作パネル: a control panel for the watertight shutters | 13; 43 | — | NO6_BRIDGE/0012 `There's a control panel for the watertight shutters.{br}`; NO3_MACHINE/0004 opens with the same sentence and reuses it; NO3_MACHINE/0002 (+ ようだ), NO3_FOODSTORAGE/0011, NO2_SUBSTORAGE/0005; 5 / 0 / 0 | R §23.1 |
 | 舵 (船の舵) | — | the ship's wheel | 16 | — | NO6_BRIDGE/0013 only; 操舵室 stays "the wheelhouse"; 1 / 0 / 0 alone (3 with 操舵室) | R §23.1 |
 | 浸水 | — | flood / flooding / flooded, as the line needs | 5 / 8 / 7 | — | shipped NO4_BAR/0068 "a flood"; NO5_ENTRANCEL/0003 "The flooding's already started…⁉", NO5_ENTRANCEM/0010 "…it's flooded.", NO6_HW_4/0001 "It's flooding…"; 6 / 0 / 0 | R §22.1, §24.1 |
+| 残弾 | 銃の残弾 | ammo ("You seem low on ammo."); 銃の残弾: the ammo left in your gun | 4; 25 | — | NO3_CHAPEL/0077, 0078; 弾切れ stays "out of ammo"; never "rounds left"; 2 / 0 / 0 | R §26.1 |
+| レーザーサイト | — | laser sight ("a gun fitted with a laser sight") | 11 | — | NO3_CHAPEL/0084 only; 1 / 0 / 0 | R §26.1 |
 
 ## 4. Classes, units, system terms
 | Source | Variants | Target | Cols | Cap | Note | Ruling |
@@ -141,8 +143,10 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 ## 6. Stock phrases and interjections
 | Source | Variants | Target | Cols | Note | Ruling |
 |---|---|---|---|---|---|
-| ヤツ | — | he / him / his | 2 / 3 / 3 | the monster or the killer, never "it"; a named person in context (NO4_HWL_BACK/0005 William → "his"); a type of person (〜なヤツ) in context | R §1.7, §20.3 |
+| ヤツ | — | he / him / his | 2 / 3 / 3 | the monster or the killer, never "it"; a named person in context (NO4_HWL_BACK/0005 William → "his"); a type of person (〜なヤツ) in context; head of a relative clause in context (NO3_CHAPEL/0062 "the guy who attacked Judy") | R §1.7, §20.3, §26.2 |
 | 化け物 | 怪物 | monster | 7 | synonyms, one target; NO4_BAR/0083 has both: repeat "monster" | R §1.8 |
+| 人型の化け物 | — | a humanoid monster | 18 | NO3_CHAPEL/0056 only; 化け物 → monster; 1 / 0 / 0 | R §26.1 |
+| 厄介 · やっかい | 厄介事 · やっかいなこと | trouble ("Either way, it's trouble."; echo なにが厄介だ！ → "What trouble!"; "one trouble after another") | 7 | NO3_CHAPEL/0054–0056, 0087; shipped "in trouble" (NO4_4101/0003, NO4_HWR_FRONT/0087), "Trouble is" (NO4_BAR/0422), "tricky" (0142), やっかい払い "Good riddance" (0264) in context; 9 / 0 / 0 | R §26.1 |
 | 殺人鬼 | — | the killer | 10 | "a … killer" with a modifier (いかれた殺人鬼); the 鬼 pun at NO4_HWR_FRONT_UP_T/0004 in context | R §4.1 |
 | じいさん | 爺さん · 爺 · じじい | old man | 7 | "Old man," at a sentence start; 爺 and じじい (pejorative) added 2026-10-06 | R §1.9, §3.3 |
 | ふん | — | Hmph | 4 | the interjection only (not 踏んで); punctuation per source: ふん、 → "Hmph," | R §3.2 |
@@ -248,11 +252,7 @@ so; the reviewer moves the row up into its section in the integration commit. --
 | 浮上 · 浮き上がる | — | surface ("the ship may surface") · float up | "rise" | NO3_CHAPEL/0102, 0103, 0116 — 2 / 0 / 0 (+1 浮き上がる) | 7 |
 | 燃料バルブ | 燃料 | the fuel valve; 燃料 "fuel" (as shipped NO6_HW_3/0001) | — | NO3_CHAPEL/0126 — 1 / 0 / 0 | 7 |
 | アモ | — | round ("take out one round", bound to s28/s29 `Hold the round` — R §25.1) | "bullet" — rejected by the binding | NO3_CHAPEL/0122 — 1 / 0 / 0 | 7 |
-| 残弾 | 銃の残弾 | ammo ("You're low on ammo"; "the ammo left in your gun") | "rounds left" | NO3_CHAPEL/0077, 0078 — 2 / 0 / 0; cf. 弾切れ "out of ammo" (§3) | 7 |
-| レーザーサイト | — | laser sight | — | NO3_CHAPEL/0084 — 1 / 0 / 0 | 7 |
 | 例の生き残り | — | that survivor (the one who targeted Judy) | "the survivor we know about" | NO3_CHAPEL/0115; NO3_NO4/0046 — 2 / 0 / 0 | 7 |
-| 人型の化け物 | — | a humanoid monster | "a monster shaped like a man" | NO3_CHAPEL/0056 — 1 / 0 / 0; 化け物 → monster (§6) | 7 |
-| 厄介 · やっかい | 厄介事 · やっかいなこと | trouble ("Either way, it's trouble." — 0055 なにが厄介だ echoes it) | "a nuisance", "tricky" (shipped NO4_HWR_FRONT/0142 in context) | NO3_CHAPEL/0054, 0055, 0056, 0087; shipped "in trouble" NO4_4101/0003, NO4_HWR_FRONT/0087 — 9 / 0 / 0 | 7 |
 | ワイフ | — | my wife | "the wife" | NO3_NO4/0030, 0032 — 2 / 0 / 0 (a loanword affectation; not carried) | 7 |
 | 警察 | 警察を辞めた | the police; 警察を辞めた "quit the police force" | "left the force" | NO3_NO4/0017, 0041 — 2 / 0 / 0; 元警官 "ex-policeman" (§2) | 7 |
 | ステンドグラス | — | the stained glass | — | NO3_CHAPEL/0131 — 1 / 0 / 0 | 7 |
