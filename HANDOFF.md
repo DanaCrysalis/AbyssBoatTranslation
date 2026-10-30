@@ -6,9 +6,9 @@ at the close commit (`CLAUDE.md` Rule 3). A fresh container may clone shallow wi
 preflight is `git fetch origin main && git checkout main && git reset --hard origin/main`.
 
 ## NEXT ACTION — always current, always a literal instruction
-> **Wave 7 coordinator: wait for the four translators** (In flight), re-checking the barrier as each returns
-> (`ListAgents`; a returned translator with no PR → fresh translator, same branch). Barrier met → reviewer per PR
-> in unit order, one at a time. Watchdog: `send_later` every 12 minutes.
+> **Wave 7 barrier met 2026-10-30 20:05 UTC (four PRs open).** Reviewer, one at a time, in unit order:
+> #26 NO3_CHAPEL.p02 → #28 NO3_CHAPEL.p03 → #29 NO3_NO4.p01 → #27 NO3_NO4.p02. Now reviewing: #26.
+> Watchdog: `send_later` every 12 minutes.
 
 ## Progress
 | Store | Done | Total | |
@@ -23,10 +23,10 @@ Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEA
 Wave 7, dispatched 2026-10-30, seeds 3b28903 (glossary §9). Translator owns each unit until its PR is open; then the reviewer.
 | Unit | Branch | PR | State |
 |---|---|---|---|
-| script NO3_CHAPEL.p02 | `tl/script-NO3_CHAPEL.p02` | #26 (7afbe0c) | PR open, round 0; waits for the barrier; agent a198bdd3d2e501a41 |
-| script NO3_CHAPEL.p03 | `tl/script-NO3_CHAPEL.p03` | #28 (d4a6b39) | PR open, round 0; waits for the barrier; agent a85e8f3aa6d16000a |
-| script NO3_NO4.p01 | `tl/script-NO3_NO4.p01` | — | translating (round 0, resumed 19:57 after limit stop), agent a761f7e3a43fb5cfc |
-| script NO3_NO4.p02 | `tl/script-NO3_NO4.p02` | #27 (7edf333) | PR open, round 0; waits for the barrier; agent ae823e5ab8f02fb64. Flag 3: mid-row `{w}` glue (0030, 0040, 0043) — relayed to p01; candidate CHECK blind spot |
+| script NO3_CHAPEL.p02 | `tl/script-NO3_CHAPEL.p02` | #26 (7afbe0c) | PR open, round 0; agent a198bdd3d2e501a41 |
+| script NO3_CHAPEL.p03 | `tl/script-NO3_CHAPEL.p03` | #28 (d4a6b39) | PR open, round 0; agent a85e8f3aa6d16000a |
+| script NO3_NO4.p01 | `tl/script-NO3_NO4.p01` | #29 (61022fd) | PR open, round 0; agent a761f7e3a43fb5cfc. Flag 3: same mid-row `{w}` finding, 0030 fixed |
+| script NO3_NO4.p02 | `tl/script-NO3_NO4.p02` | #27 (7edf333) | PR open, round 0; agent ae823e5ab8f02fb64. Flag 3: mid-row `{w}` glue (0030, 0040, 0043) — relayed to p01; candidate CHECK blind spot |
 
 ## Next up
 Wave 7 (QUEUE 2026-10-30), four script units: NO3_CHAPEL.p02 (44 rows, 1,070 chars, ratio 27.16), NO3_CHAPEL.p03 (44, 1,039,
