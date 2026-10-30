@@ -199,6 +199,9 @@ NO4.b02 (PR #18): no `_T` draft for any of its seven rooms, so all are named fro
 NO4_HWL_FRONT/0001 (spk=-, spoken), 0002–0003 (俺) and 0004–0006 (probably Oakland, who leads the run)
 and NO4_P_OFFICE/0001–0008 (probably Wolg) stay uncertain and are rendered speaker-neutral
 (rulings R §21.2).
+NO6.b02 (PR #22): spk=100 carries Judy (NO6_HW_4/0001–0004, NO6_TOOLROOM/0003–0004) and narration
+(NO6_HW_4/0005–0008, the locked- and pressure-door lines); spk=- carries Judy at NO6_HW_5/0001–0002 and
+TOOLROOM/0002; spk=0 is narration (NO6_HW_3). Every line is speaker-neutral in English (rulings R §24.2).
 
 ### F-011 · 2026-10-04 · tools · OPEN
 PR #1 (NO4_BAR.p01) found four things CHECK and UNITCHECK do not verify. Each was confirmed by a

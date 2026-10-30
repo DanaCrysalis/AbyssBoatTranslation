@@ -2251,3 +2251,93 @@ Census counts are rows per store (script / scene / system), from the reviewer's 
 - **#22 (NO6.b02, a2a5ade), identical:** the four sentences of §23.1 and the 封鎖 sentence at NO6_HW_5/0005.
 - **Families for later units, by hand:** NO3_MACHINE/0004 first sentence = `:15`'s (§23.1); NO3_MACHINE/0002 hedged; 扉は鍵が掛かっていて開きそうに無い (NO3_HW_1, NO3_HW_2), hedged, kept apart from `:35`.
 - Glossary: none.
+
+## Unit script NO6.b02 (PR #22, MERGED, 2026-10-30)
+
+A bundle of six NO6 rooms (27 rows, 495 source characters, tier D, ratio 66.38):
+- HW_3: the fuel fire, the fire extinguisher, the locked doors.
+- HW_4 and HW_5: Judy's flooding lines, and the doors held by water pressure, a lock or a shutter.
+- STORAGE: instruments, toppled shelves.
+- TOOLROOM: the chain cutter, a tremor, "let's go back".
+- WIRELESSROOM: radio equipment that cannot reach the surface.
+
+Reviewed once:
+- **Round 0** (a2a5ade, merged with main 0b71bed for review): MERGE, squash 47b3edc. Findings: none.
+- The head already carried the coordinator's wave 6 replacements for the seeded sentences (PR Flag 3, R §22.1, §23.1).
+
+Figures:
+- **Containers** (MEASURE). All six rooms are complete:
+
+  | File | Bytes | Free | Tokens | Rows |
+  |---|---|---|---|---|
+  | NO6_HW_3.SCR | 963 | 64,572 | 36 | 7/7 |
+  | NO6_HW_4.SCR | 813 | 64,722 | 36 | 8/8 |
+  | NO6_HW_5.SCR | 648 | 64,887 | 31 | 5/5 |
+  | NO6_STORAGE.SCR | 465 | 65,070 | 28 | 2/2 |
+  | NO6_TOOLROOM.SCR | 517 | 65,018 | 38 | 4/4 |
+  | NO6_WIRELESSROOM.SCR | 393 | 65,142 | 29 | 1/1 |
+
+- **Pages.** At most 4 rows per page (UNITCHECK, 27 rows, 0 violations). The whole store: 1,036 rows, 0 violations.
+- **Duplicates.** CHECK compared 135 duplicate pairs and 7 tag-variant pairs. Without the unit file it compares 122 and 7, so the unit adds 13.
+  - The reviewer's census compared 27 rows × every dump row, `{p}{w}{br}` stripped: 56 translated pairs, all byte-identical, and no untranslated twin.
+  - The 封鎖 sentence in both spellings (R §22.1): 6 / 0 / 0, identical.
+- **Codes.** The authored `{p}{w}{br}` sequence and the `…`/`‼`/`⁉`/`──`/！/？ counts match the source on 27 of 27 rows (plant-tested script).
+- **F-011 wrap scan** (the reviewer's script, `build/script_merged.tsv`, 60 lines, plant-tested): no lone "a", "an" or "I", no one-word last row, no split title. Authored-`{br}`/`{w}` lines ≤ 27 (`len()`).
+- **F-012.** The one `+` row, TOOLROOM/0004, follows a `{br}` ending.
+
+Census counts are rows per store (script / scene / system), from the reviewer's grep of `dumps/` on 2026-10-30. Line citations use PROJECT.md §7's numbering in `tl/script/NO6.b02.tsv` (line = row order + 3).
+
+### 24.1 Terms: nothing new; two notes extended
+- **Rendered as fixed** (all already in the glossary; no §9 row is rendered here):
+  - 消火器 `fire extinguisher`, 2 / 0 / 1: `:6 HW_3/0003`. Promoted at #25 (R §22.1).
+  - 浸水 `flooding`, 6 / 0 / 0: `:11 HW_4/0001` "It's flooding…".
+  - 振動 `tremor`, 5 / 0 / 0: `:11` 先刻の振動 "that tremor earlier", and `:28 TOOLROOM/0003` 今の振動 "That tremor just now". The sources differ, so the renderings differ around the fixed word.
+  - チェーンカッター `chain cutter`, 2 / 0 / 1: `:26 TOOLROOM/0001`.
+  - 回転 `roll over`: `:28`, with "the ship" supplied as the subject.
+  - 無線装置 `radio equipment`, 海上 `the surface`: `:30 WIRELESSROOM/0001`.
+  - The five §6 fixed sentences (R §22.1, §23.1): `:8–10`, `:15`, `:18` (鍵); `:13`, `:19` (水かさ); `:14`, `:20` (水が深すぎて); `:16–17`, `:22` (水圧); `:23` (封鎖).
+- **Conformance with shipped lines, not fixed terms:**
+  - 棚が倒れて `The shelves have toppled` (`:25`) matches NO4_SHOP/0004. 棚 is 4 / 0 / 0.
+  - 廊下 `corridor` (`:4`) matches NO4_BAR/0058 and 0196. 廊下 is 5 / 0 / 16, and the system rows are room names (F-006).
+  - 連絡 → "reach" (`:30`) follows NO4_HWR_FRONT/0006 "reaching the people up top". 連絡 is 6 / 0 / 0.
+- **Not fixed**, because each occurs once in the source: 水流 "current", 計器類 "instruments", 燃料 "fuel" (2 / 0 / 0; NO3_CHAPEL/0126 in context), パイプ "pipe" (6 / 0 / 0; NO2_HW_3/0001–0005 in context).
+- Glossary: notes extended, with no target changed and no shipped line affected:
+  - §3 浸水: NO6_HW_4/0001 added.
+  - §3 チェーンカッター: NO6_TOOLROOM/0001's wording added.
+
+### 24.2 Readings and departures (PR Flags 4–8)
+- **`:26 TOOLROOM/0001`** これは、チェーンカッターのようだ。 → `A chain cutter, it seems.{p}` (25), approved (PR Flag 5).
+  - これは points at the examined item, and context carries it (step 5, flagged). This is R §20.1's frame for 売店のカウンターのようだ.
+  - Measured with `codec.wrap(…, 28)`, every wording that keeps "This" or "It's" leaves "cutter." or "seems." alone on a row, or ends a row in "a" (R §1.12 rule 1). The reviewer re-measured each of these wordings: "This seems to be a chain cutter.", "This appears to be…", "This is a chain cutter, it seems.", "It's a chain cutter, it seems.", "This, it seems, is a chain cutter.", "It seems that this is a…".
+  - "This seems a chain cutter." (26) was rejected. English seem + a bare noun phrase is evaluative ("seems a shame"), not identifying.
+  - The ようだ hedge and the glossary term are kept.
+- **`:6 HW_3/0003`, `:7 0004`**: the sources have no 。, so the targets have no period (R §4.3, PR Flag 4).
+  - "Used the fire extinguisher" is subjectless as the source. "You used…" wraps "extinguisher" alone, so this is step 5, flagged.
+  - みるみる → "before your eyes".
+- **`:27 TOOLROOM/0002`** そう…戻りましょうか…。 → `I see… Shall we go back…`, with no "?". The source has no ？ (PROJECT.md §6), and the 。 after … is absorbed (R §1.3). The opposite case is R §13.3, where かしら？ keeps its ？. `:28` かしら…？ keeps "?".
+- **Hedges** (wave 5's lesson, R §20.3), all kept:
+  - ようだ: `:4` "seems to have caught fire"; `:26` "it seems"; `:30` "appears" + "it seems" (both ようだ).
+  - そう: `:23` "There seems to be".
+  - The 使えそうな物 family (R §21.3–§21.4): `:25` 見当たらないようだ → "There seems to be nothing in sight that looks usable." This sits beside NO5_BANK/0007 (plain 見当たらない) and NO4_STORAGE/0004 (無いようだ), each as its source.
+  - `:24` 見た目には is a limiter, "To all appearances".
+- **Wording measured, accepted:**
+  - `:30`: "It appears to be working normally" makes the page 5 rows. "contact the surface" (28) fits, but "reach" stays, as shipped 連絡.
+  - `:21` "The current is too strong to go any further." keeps the causal て as an ordinary too…to frame.
+  - `:28` また… keeps its own halting slot, "Again…".
+  - `:12` follows the source's … positions: "This place is… dangerous.{br}…Let's hurry."
+- **Speakers** (F-009):
+  - Judy: HW_4/0001–0004, HW_5/0001–0002 (spk=-, the fixed lines), and TOOLROOM/0002–0004 (ましょう, かしら; spk=- and 100).
+  - Narration: HW_3/0001–0007 (spk=0) and HW_4/0005–0008 (spk=100).
+  - The English is speaker-neutral.
+- Glossary: none beyond §24.1.
+
+### 24.3 Recurrences (PR Flag 9)
+- **Translated, identical:**
+  - The four §23.1 sentences across NO6_ENTRANCE, NO6_HW_2, HW_3, HW_4 and HW_5.
+  - The 封鎖 sentence at HW_5/0005 = NO6_HW_1/0001–0002, and its され、 variant at NO5_HW_L/0003, 0005, NO5_HW_R/0007.
+- **Families for later units, by hand:**
+  - ここは危険よ！{br}急ぎましょう。 (SPACESHIP_HW/0005) may take `:12`'s "Let's hurry".
+  - …戻りましょう (NO1_ENGINEROOM/0003) may take "let's go back" (`:29`; NO5_BANK/0003, NO5_HW_L/0002).
+  - 扉は鍵が掛かっていて開きそうに無い (NO3_HW_1/0005–0006, NO3_HW_2/0002–0003) is hedged, and stays apart from `:8` (R §23.1).
+  - 正常に動いているようだ (NO1_CONTROLROOM/0003) sits beside shipped NO4_MACHINE/0003 "seems to be running normally" and `:30`.
+- Glossary: none.

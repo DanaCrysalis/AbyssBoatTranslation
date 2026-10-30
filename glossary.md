@@ -105,7 +105,7 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | 鞄 | カバン · バッグ · 旅行鞄 | bag; 旅行鞄: suitcase | 3; 8 | — | 鞄, カバン, バッグ one word (NO4_TOOL_ROOM/0003 カバンごと in context); plural as the line needs; バッグ 1 / 1 / 0 | R §8.1, §13.1 |
 | マガジン | — | magazine; 予備のマガジン · マガジンの予備 → "spare magazine(s)" | 8 | — | the gun's magazine, never "clip"; NO3_NO4/0010 takes "spare magazine" | R §10.1 |
 | バリケード | — | barricade (verb "barricade(d)" where the line wants it) | 9 | — | 5 / 0 / 0; 撤去 → "clear" (0444; NO4_HWL_KAIDAN/0006 takes the same verb) | R §11.1 |
-| チェーンカッター | — | chain cutter | 12 | 39 (hints/006, blocked) | never "bolt cutters"; NO6_TOOLROOM/0001, hints/006 take the same words; 2 / 0 / 1 | R §11.1 |
+| チェーンカッター | — | chain cutter | 12 | 39 (hints/006, blocked) | never "bolt cutters"; NO6_TOOLROOM/0001 `A chain cutter, it seems.` (R §20.1 frame); hints/006 takes the same words; 2 / 0 / 1 | R §11.1, §24.1 |
 | 工具 | — | tools | 5 | — | 2 / 0 / 0; 道具 is not fixed ("a tool", 0441; NO4_HWL_KAIDAN/0006 in context) | R §11.1 |
 | 刃物 | 鋭利な刃物 | blade; 鋭利な刃物: a sharp blade | 5; 13 | — | 3 / 0 / 0 (NO4_BAR/0439 "every blade"; NO4_4102/0001, NO6_BRIDGE/0020) | R §11.1 |
 | シャッター | 防水シャッター | shutter; 防水シャッター: watertight shutter | 7; 18 | 39 (hints/011, blocked) | lowercase; 31 / 1 / 1 (防水シャッター 3 / 0 / 0, the control panels NO3_MACHINE/0002, 0004, NO6_BRIDGE/0012) | R §13.1 |
@@ -121,7 +121,7 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | シャッターロック | — | the shutter lock | 16 | — | NO6_BRIDGE/0014 "The shutter lock on Deck 5 is still engaged."; 1 / 0 / 0 | R §23.1 |
 | 操作パネル | 防水シャッターの操作パネル | control panel; 防水シャッターの操作パネル: a control panel for the watertight shutters | 13; 43 | — | NO6_BRIDGE/0012 `There's a control panel for the watertight shutters.{br}`; NO3_MACHINE/0004 opens with the same sentence and reuses it; NO3_MACHINE/0002 (+ ようだ), NO3_FOODSTORAGE/0011, NO2_SUBSTORAGE/0005; 5 / 0 / 0 | R §23.1 |
 | 舵 (船の舵) | — | the ship's wheel | 16 | — | NO6_BRIDGE/0013 only; 操舵室 stays "the wheelhouse"; 1 / 0 / 0 alone (3 with 操舵室) | R §23.1 |
-| 浸水 | — | flood / flooding / flooded, as the line needs | 5 / 8 / 7 | — | shipped NO4_BAR/0068 "a flood"; NO5_ENTRANCEL/0003 "The flooding's already started…⁉", NO5_ENTRANCEM/0010 "…it's flooded."; 6 / 0 / 0 | R §22.1 |
+| 浸水 | — | flood / flooding / flooded, as the line needs | 5 / 8 / 7 | — | shipped NO4_BAR/0068 "a flood"; NO5_ENTRANCEL/0003 "The flooding's already started…⁉", NO5_ENTRANCEM/0010 "…it's flooded.", NO6_HW_4/0001 "It's flooding…"; 6 / 0 / 0 | R §22.1, §24.1 |
 
 ## 4. Classes, units, system terms
 | Source | Variants | Target | Cols | Cap | Note | Ruling |

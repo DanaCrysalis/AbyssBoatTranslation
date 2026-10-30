@@ -1,4 +1,4 @@
-**Last updated: 2026-10-30** — wave 6 review: #25 NO5.b01 MERGED (squash 4a6819e), #23 NO6.b01 MERGED (squash 388bb77), both round 0; next #22 NO6.b02.
+**Last updated: 2026-10-30** — wave 6 review: #25 NO5.b01 MERGED (squash 4a6819e), #23 NO6.b01 MERGED (squash 388bb77), #22 NO6.b02 MERGED (squash 47b3edc), all round 0; next #24 NO3_CHAPEL.p01.
 
 ## Integration branch: `main`. Not configurable.
 Every PR bases on `main`; the reviewer merges into `main`; a wave is closed only when `origin/main` is
@@ -7,24 +7,24 @@ preflight is `git fetch origin main && git checkout main && git reset --hard ori
 
 ## NEXT ACTION — always current, always a literal instruction
 > **Wave 6 coordinator: barrier met** (PRs #25, #23, #22, #24 open). Reviewer subagent per PR, one at a time, in unit
-> order: #25 NO5.b01 (merged) → #23 NO6.b01 (merged) → **#22 NO6.b02 next** → #24 NO3_CHAPEL.p01. Pull after each; CHANGES → findings verbatim to
+> order: #25 NO5.b01 (merged) → #23 NO6.b01 (merged) → #22 NO6.b02 (merged) → **#24 NO3_CHAPEL.p01 next**. Pull after each; CHANGES → findings verbatim to
 > the same translator by `SendMessage`, review the next meanwhile. Reviewer branches review-w6-prN / integrate-w6-prN.
 
 ## Progress
 | Store | Done | Total | |
 |---|---|---|---|
-| script | 19 units · 1,009 rows | 38 units · 1,709 rows | NO4_BAR p01–p08, NO4_HWR_FRONT p01–p03, NO4_MACHINER90 p01–p02, NO4_TOOL_ROOM p01–p02 (rooms complete), NO4.b01, NO4.b02 (deck NO4 complete bar the `_T` scripts); NO5.b01 (deck NO5 complete); NO6.b01 (NO6_BRIDGE, ENTRANCE, HW_1, HW_2); STATUS 2026-10-30 |
+| script | 20 units · 1,036 rows | 38 units · 1,709 rows | NO4_BAR p01–p08, NO4_HWR_FRONT p01–p03, NO4_MACHINER90 p01–p02, NO4_TOOL_ROOM p01–p02 (rooms complete), NO4.b01, NO4.b02 (deck NO4 complete bar the `_T` scripts); NO5.b01 (deck NO5 complete); NO6.b01, NO6.b02 (deck NO6 complete); STATUS 2026-10-30 |
 | scene | 4 units · 190 rows | 4 units · 190 rows | OP-SCN034, SCN038, SCN041-SCN046, SCN047-EPILOG (store complete) |
 | system | 0 | 5 units · 188 rows | blocked whole (F-006) |
 
-Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-30; `NO4_BAR.SCR` 37,378 free; `NO4_TOOL_ROOM.SCR` 61,899, 80/80; the NO4.b01/b02 rooms ≥ 63,697; the NO5 rooms ≥ 63,950; NO6_BRIDGE 63,400, the other NO6.b01 rooms ≥ 64,242).
+Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-30; `NO4_BAR.SCR` 37,378 free; `NO4_TOOL_ROOM.SCR` 61,899, 80/80; the NO4.b01/b02 rooms ≥ 63,697; the NO5 rooms ≥ 63,950; NO6_BRIDGE 63,400, the other NO6 rooms ≥ 64,242).
 
 ## In flight
 | Unit | Branch | PR | State | Next |
 |---|---|---|---|---|
 | script NO5.b01 | `tl/script-NO5.b01` | #25 | **MERGED** round 0, squash 4a6819e; 58 rows, max 4 rows/page, lowest NO5_ENTRANCEL.SCR 63,950 free; dupes 113 pairs (+14); no findings; §9 sentences corrected + 9 terms and 3 sentences promoted (R §22); F-025 typos; integration commit `integrate: script NO5.b01` | none — done |
 | script NO6.b01 | `tl/script-NO6.b01` | #23 | **MERGED** round 0, squash 388bb77; 37 rows, max 4 rows/page, lowest NO6_BRIDGE.SCR 63,400 free; dupes 122 pairs (+9), census 50/50 identical incl. #22; no findings; leading `{p}` at BRIDGE/0002 and 0020 reorder approved (R §23.2–§23.3, F-010); 6 §9 terms + 4 sentences promoted, 操作パネル/舵 added (R §23.1); integration commit `integrate: script NO6.b01` | none — done |
-| script NO6.b02 | `tl/script-NO6.b02` | #22 | PR open a2a5ade, round 0, seed-wrap fix applied; wrap scan 0/60; open: NO6_TOOLROOM/0001 wording (Flag 5) | reviewer, after barrier |
+| script NO6.b02 | `tl/script-NO6.b02` | #22 | **MERGED** round 0, squash 47b3edc; 27 rows, max 4 rows/page, lowest NO6_HW_3.SCR 64,572 free; dupes 135 pairs (+13), census 56/56 identical; no findings; TOOLROOM/0001 `A chain cutter, it seems.` approved (R §24.2); no new terms, 浸水/チェーンカッター notes extended (R §24.1); integration commit `integrate: script NO6.b02` | none — done |
 | script NO3_CHAPEL.p01 | `tl/script-NO3_CHAPEL.p01` | #24 | PR open 12556a0, round 0; NO3_CHAPEL.SCR 55,976 free; open: speakers (Wolg/Oakland/Heming — the dispatch's William reading was wrong), s28/s29 = the ammo vote, 教会 article | reviewer, after barrier |
 
 ## Next up
