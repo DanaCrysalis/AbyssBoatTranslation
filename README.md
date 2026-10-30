@@ -80,6 +80,6 @@ wave is a session and opens the next. The watchdog is armed before every turn en
 <!-- The coordinator refreshes this table from STATUS at every wave close. -->
 | Store | Done | Total |
 |---|---|---|
-| script | 21 units · 1,098 rows · 23,174 chars | 38 units · 1,709 rows · 37,172 chars |
+| script | 25 units · 1,247 rows · 26,513 chars | 38 units · 1,709 rows · 37,172 chars |
 | scene | 4 units · 190 rows · 3,015 chars | 4 units · 190 rows · 3,015 chars |
 | system | 0 (blocked until an exe patch, F-006) | 5 units · 188 rows · 2,091 chars |
