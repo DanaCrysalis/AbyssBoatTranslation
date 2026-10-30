@@ -1,0 +1,33 @@
+# unit: script/NO3_NO4.p02
+# rows: 30
+# columns: id <TAB> context <TAB> source <TAB> target (empty target = untranslated)
+NO3_NO4/0032	msg spk=4	ワイフはいとも簡単に見つけることができた。{w}{br}	I found my wife with no trouble at all.{w}{br}
+NO3_NO4/0033	msg spk=4 +	リビングのソファーに腰を掛けていたんだ。{w}{br}	She was sitting on the living room sofa.{w}{br}
+NO3_NO4/0034	msg spk=4 +	{br}	{br}
+NO3_NO4/0035	msg spk=4 +	いつまでたっても編みあがらない俺のセーターを膝に置いて……。{w}{br}	With my sweater on her lap, forever unfinished……{w}{br}
+NO3_NO4/0036	msg spk=4 +	{br}	{br}
+NO3_NO4/0037	msg spk=4 +	眉間と掌に穴を空けられた状態で……。{p}	With holes put between her eyes and in her palms……{p}
+NO3_NO4/0038	msg spk=4	ヤツの思惑どおりさ。{w}{br}俺は動揺し、ヤツはまんまと逃げおおせた。{w}{br}	Just as he'd planned.{w}{br}I was shaken, and he got clean away.{w}{br}
+NO3_NO4/0039	msg spk=4 +	{br}	{br}
+NO3_NO4/0040	msg spk=4 +	何もできなかった。{w}一番大切なものを守り抜くことができなかった。{p}	I couldn't do anything.{w}{br}I couldn't protect what mattered most to me.{p}
+NO3_NO4/0041	msg spk=4	俺はヤツを追うため、警察を辞めた。{w}{br}	To go after him, I quit the police force.{w}{br}
+NO3_NO4/0042	msg spk=4 +	だが、どうやってもヤツを捜し出すことはできなかった…。{w}{br}	But whatever I did, there was no tracking him down…{w}{br}
+NO3_NO4/0043	msg spk=4 +	復讐じゃ食うことはできん。{w}俺はお前の親父に雇われたってわけだ。{p}	Revenge doesn't put food on the table.{w}{br}That's how I came to be hired by your dad.{p}
+NO3_NO4/0044	msg spk=4	つまらん話だったな。{br}もう寝ろ、ジョン。お前は俺が全力でここから出してやる。	That was a dull story, huh.{br}Go to sleep now, John. I'll do everything I can to get you out of here.
+NO3_NO4/0045	msg spk=4	予定どおり、俺とヘイミングは第３デッキを調べる。{br}	As planned, Heming and I are going to search Deck 3.{br}
+NO3_NO4/0046	msg spk=4 +	話どおりなら、例の生き残りはこのデッキにいる可能性が高いようだからな。	{p}Going by what we've heard, that survivor seems likely to be on this deck.
+NO3_NO4/0047	msg spk=0	よし、始めるぞ。	Right, let's get started.
+NO3_NO4/0048	msg spk=4	なんだ、これは⁉	What is this⁉
+NO3_NO4/0049	msg spk=2	水だ。いつの間に…？	It's water. Since when…?
+NO3_NO4/0050	msg spk=4	おい、どういうことだ⁉	Hey, what's going on⁉
+NO3_NO4/0051	msg spk=2	浸水してるんじゃないのか⁉	Isn't the ship flooding⁉
+NO3_NO4/0052	msg spk=5	もともと水が入ってこないのが不思議だったんだ。	It was always strange that no water got in.
+NO3_NO4/0053	msg spk=4	モンスター⁉{br}バカな、閉じ込めたはず‼	A monster⁉{br}Impossible, he's supposed to be shut in‼
+NO3_NO4/0054	msg spk=5	機関室だ！機関室へ逃げるぞ‼	The engine room! Let's run for the engine room‼
+NO3_NO4/0055	msg spk=4	シャッターが下りていて先には進めそうに無い。{p}	The shutter is down, so there seems to be no going any further.{p}
+NO3_NO4/0056	msg spk=4	どうして誰も救助にこない！{br}わしは社長だぞ‼	Why is no one coming to rescue us!{br}I'm the boss‼
+NO3_NO4/0057	msg spk=2	何をぐずぐすしている！{br}さっさと落ち着けれる場所を探して来い‼	What are you dawdling for!{br}Hurry up and go find somewhere we can settle in‼
+NO3_NO4/0058	msg spk=2	良さそうな所は発見できたか？{br}化け物がもういないという保証は無い。{br}注意は怠るなよ。	Found a good-looking spot?{br}There's no guarantee the monster's gone.{br}Don't let your guard down.
+NO3_NO4/0059	msg spk=4	まだ生き残りがいるかもしれん。{br}間違って人間を撃つなよ。	There may yet be survivors.{br}Be sure not to shoot a human by mistake.
+NO3_NO4/0060	msg spk=4	また犠牲者が増えてしまったな。{br}俺は何もできなかった…。	Another victim, huh.{br}I couldn't do anything…
+NO3_NO4/0061	msg spk=5	………。	………
