@@ -1,0 +1,30 @@
+# unit: script/NO6.b02
+# rows: 27
+# columns: id <TAB> context <TAB> source <TAB> target (empty target = untranslated)
+NO6_HW_3/0001	msg spk=0	廊下の下に走るパイプから漏れる燃料に引火してしまったようだ。{p}	Fuel leaking from a pipe running under the corridor seems to have caught fire.{p}
+NO6_HW_3/0002	msg spk=0	このままでは、とても先には進めない。{p}	As it is, there's no way to get any further.{p}
+NO6_HW_3/0003	msg spk=0	消火器を使った{p}	Used the fire extinguisher{p}
+NO6_HW_3/0004	msg spk=0	火はみるみる消えていく{p}	The fire dies out before your eyes{p}
+NO6_HW_3/0005	msg spk=0	鍵が掛かっていて、扉は開かない。{p}	It's locked. The door won't open.{p}
+NO6_HW_3/0006	msg spk=0	鍵が掛かっていて、扉は開かない。{p}	It's locked. The door won't open.{p}
+NO6_HW_3/0007	msg spk=0	鍵が掛かっていて、扉は開かない。{p}	It's locked. The door won't open.{p}
+NO6_HW_4/0001	msg spk=100	浸水してるわ…{br}先刻の振動で…{p}	It's flooding…{br}From that tremor earlier…{p}
+NO6_HW_4/0002	msg spk=100	ここは…危険よ。{br}…急ぎましょう。{p}	This place is… dangerous.{br}…Let's hurry.{p}
+NO6_HW_4/0003	msg spk=100	水かさ…増えつづけてる…。{w}{br}急がないと…危険よ…。{p}	The water… it keeps rising…{w}{br}We have to hurry… it's dangerous…{p}
+NO6_HW_4/0004	msg spk=100	水が深すぎて…息が…でき…な…{p}	The water's too deep… I can't… brea… the…{p}
+NO6_HW_4/0005	msg spk=100	鍵が掛かっていて、扉は開かない。{p}	It's locked. The door won't open.{p}
+NO6_HW_4/0006	msg spk=100	水圧で扉を開けられない。{p}	The water pressure won't let the door open.{p}
+NO6_HW_4/0007	msg spk=100	水圧で扉を開けられない。{p}	The water pressure won't let the door open.{p}
+NO6_HW_4/0008	msg spk=100	鍵が掛かっていて、扉は開かない。{p}	It's locked. The door won't open.{p}
+NO6_HW_5/0001	msg spk=-	水かさ…増えつづけてる…。{w}{br}急がないと…危険よ…。{p}	The water… it keeps rising…{w}{br}We have to hurry… it's dangerous…{p}
+NO6_HW_5/0002	msg spk=-	水が深すぎて…息が…でき…な…{p}	The water's too deep… I can't… brea… the…{p}
+NO6_HW_5/0003	msg spk=-	水流が激しくて、これ以上進むことはできない。{p}	The current is too strong to go any further.{p}
+NO6_HW_5/0004	msg spk=-	水圧で扉を開けられない。{p}	The water pressure won't let the door open.{p}
+NO6_HW_5/0005	msg spk=-	シャッターで封鎖されて、先に進めそうにない。{p}	It's sealed off by a shutter. There seems to be no going any further.{p}
+NO6_STORAGE/0001	msg spk=-	何かの計器類がある。{br}見た目には異常なく動いている。{p}	There are instruments of some kind here.{br}To all appearances, they're running fine.{p}
+NO6_STORAGE/0002	msg spk=-	棚が倒れて滅茶苦茶になっている。{br}使えそうな物は見当たらないようだ。{p}	The shelves have toppled, and the place is a mess.{br}There seems to be nothing in sight that looks usable.{p}
+NO6_TOOLROOM/0001	msg spk=-	これは、チェーンカッターのようだ。{p}	A chain cutter, it seems.{p}
+NO6_TOOLROOM/0002	msg spk=-	見つかった…⁉{br}そう…戻りましょうか…。	You found it…⁉{br}I see… Shall we go back…
+NO6_TOOLROOM/0003	msg spk=100	今の振動…また…回転するのかしら…？{br}	That tremor just now… Again… I wonder if the ship will roll over…?{br}
+NO6_TOOLROOM/0004	msg spk=100 +	急いで…戻りましょう…。	Quickly… let's go back…
+NO6_WIRELESSROOM/0001	msg spk=-	無線装置がある。{br}正常に動いているようだが、海上との連絡には使えないようだ。{p}	There's radio equipment.{br}It appears to work normally, but it seems it can't be used to reach the surface.{p}
