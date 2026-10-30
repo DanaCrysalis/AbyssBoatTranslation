@@ -326,6 +326,14 @@ flooded hull (浸入 1 / 0 / 0, only here; 侵入 1 / 0 / 0). Shipped as the sen
 (`tl/script/NO4.b02.tsv:22`). PR #18 Flag 5. Harmless; nothing to change unless a `_T` draft or the
 in-game context shows a different reading · rulings R §21.3.
 
+### F-025 · 2026-10-30 · script · OPEN
+Two suspected source typos in NO5, read as the sense requires: `NO5_ENTRANCEL/0002`
+そっちの調査は後回した, where the sense is 後回しだ (後回した 1 / 0 / 0, only here; NO4_HWR_FRONT/0125
+has 後回しだ), shipped "Searching over there can wait." (`tl/script/NO5.b01.tsv:14`); and
+`NO5_BANK/0009` たくさんの啄ばまれた後, where the sense is 跡 ("marks"; 啄 1 / 0 / 0), shipped "Many peck
+marks can be seen." (`:12`). PR #25 Flag 10. Harmless; nothing to change unless the in-game
+context shows a different reading · rulings R §22.3.
+
 ## CHECK positive controls
 <!-- One entry per kind of violation deliberately planted and caught by CHECK (tools/README.md rule 3).
 A checker that has never failed has never been tested. -->

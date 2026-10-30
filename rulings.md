@@ -2066,3 +2066,119 @@ Census counts are rows per store (script / scene / system), from the reviewer's 
   - 使えそうな物 … 無い / 無いようだ / 見当たらない(ようだ) (§21.3): NO1_CONTROLROOM/0002, NO1_STORAGE/0001, NO2_MAINSTORAGE/0030, NO2_TOFE_ROOM/0005, NO3_MACHINE/0001, NO3_MEDICALROOM/0001–0003, NO3_STORAGE/0002, NO5_BANK/0007, NO6_STORAGE/0002.
   - 銃で撃たれて死んでいる → "Shot dead with a gun." (`:37`, `:38`).
 - Glossary: none.
+
+## Unit script NO5.b01 (PR #25, MERGED, 2026-10-30)
+
+A bundle of the seven NO5 rooms (58 rows, 1,144 source characters, tier D, ratio 29.06):
+- BANK: the captured small monster, the blood web, the bodies.
+- ENTRANCEL and ENTRANCEM: the flooding, the way up, the shutters.
+- HW_L and HW_R: card doors, shutters, and the second deck sign.
+- LOCKERROOM: the key, and the crew's "your job is Deck 6".
+- SHOP: the fire extinguisher.
+
+Reviewed once:
+- **Round 0** (8d0fc61, merged with main 7be28e0 for review): MERGE, squash 4a6819e. Findings: none.
+
+Figures:
+- **Containers** (MEASURE). All seven rooms are complete:
+
+  | File | Bytes | Free | Tokens | Rows |
+  |---|---|---|---|---|
+  | NO5_BANK.SCR | 1,111 | 64,424 | 40 | 9/9 |
+  | NO5_ENTRANCEL.SCR | 1,585 | 63,950 | 45 | 11/11 |
+  | NO5_ENTRANCEM.SCR | 1,430 | 64,105 | 42 | 12/12 |
+  | NO5_HW_L.SCR | 761 | 64,774 | 33 | 5/5 |
+  | NO5_HW_R.SCR | 1,172 | 64,363 | 45 | 12/12 |
+  | NO5_LOCKERROOM.SCR | 843 | 64,692 | 38 | 7/7 |
+  | NO5_SHOP.SCR | 495 | 65,040 | 30 | 2/2 |
+
+- **Pages.** At most 4 rows per page (UNITCHECK, 58 rows, 0 violations). The whole store: 972 rows, 0 violations.
+- **Duplicates.** CHECK compared 113 duplicate pairs and 7 tag-variant pairs. Without the unit file it compares 99 and 7, so the unit adds 14.
+  - The reviewer's census made 120,988 comparisons: 58 rows × every dump row, at three levels (exact; `{p}{w}{br}` stripped; `【Name】` stripped, ！？ → ⁉, final 。！？ dropped).
+  - Real hits: the internal twins, BANK/0005 = NO4_SHOP/0006, and HW_R/0008 = the three shipped sign titles, all identical. The other hits are tag-only `{p}` rows matching tag-only rows, which is noise. Untranslated: ENTRANCEL/0006 = 0009 = NO6_ENTRANCE/0003.
+- **Codes.** The authored `{p}{w}{br}` sequence matches the source's on 56 of 58 rows. The exceptions are `:16 ENTRANCEL/0004` and `:17 0005` (§22.3). The `…`/`‼`/`⁉` and ！/？ counts match. The unit has no `{w}` and no `──`.
+- **F-011 wrap scan** (the reviewer's script, `build/script_merged.tsv`, 123 lines):
+  - No lone "a", "an" or "I", and no split title.
+  - Five lines end in "the", which R §1.12 rule 2 allows: BANK/0003, ENTRANCEL/0004, ENTRANCEM/0005, 0006, SHOP/0002.
+  - The one one-word row is the sign entry `Bank/Cafe/Gym,`.
+  - Authored-`{br}` lines are ≤ 27 (`len()`).
+- **F-012.** One boundary, 0004 → 0005 (§22.3). The other eight `+` rows follow a `{br}` ending.
+
+Census counts are rows per store (script / scene / system), from the reviewer's grep of `dumps/` on 2026-10-30. Line citations use PROJECT.md §7's numbering in `tl/script/NO5.b01.tsv` (line = row order + 3).
+
+### 22.1 Terms promoted from §9, three fixed sentences, and one note extended
+- **Promoted as seeded** (PR Glossary additions):
+  - 通信室 → `the communications room` (23), 1 / 0 / 0. `:16 ENTRANCEL/0004`. 無線室 stays "the radio room" (§9).
+  - 銀行 → `a bank`; on the sign `Bank` (6; 4), 2 / 0 / 1. `:34 ENTRANCEM/0011`, `:50 HW_R/0010`.
+  - 雑貨屋 → `a general store`; on the sign `General Store` (15; 13), 2 / 0 / 1. `:35 ENTRANCEM/0012`, `:49 HW_R/0009`. "General Store" (13) fits the rooms/082 cap of 14.
+  - カフェ · スポーツジム → `Cafe` · `Gym` (4 · 3), 1 / 0 / 0 each. `:50 HW_R/0010`. No é (PROJECT.md §5.1). "Sports Gym" was not taken, because the row is 14 as it is.
+  - ショップ → `the shop` (8), the same word as 売店, 1 / 0 / 0. `:61 SHOP/0002` "the shop's equipment".
+  - 消火器 → `fire extinguisher` (17), 2 / 0 / 1. `:61 SHOP/0002`. NO6_HW_3/0003 in #22 takes the same words ("Used the fire extinguisher").
+  - 浸水 → `flood / flooding / flooded`, as the line needs, 6 / 0 / 0. `:15 ENTRANCEL/0003` "The flooding's already started…⁉"; `:33 ENTRANCEM/0010` "…it's flooded." Shipped NO4_BAR/0068 has "a flood".
+  - 担当 → `job` (3), 4 / 0 / 0. `:20 ENTRANCEL/0008` = `:23 0011` = `:31 ENTRANCEM/0008` "Our… job… is this floor."; `:54 LOCKERROOM/0002` "Isn't your job on Deck 6?".
+  - 鍵 → `key`; the 鍵が掛か… / 鍵がかか… / 鍵がかけ… phrases → `locked`. Census: 26 / 0 / 5 (掛か 13, かか 5, かけ 1). `:56 LOCKERROOM/0004` "Found a key placed inside the locker."; `:44 HW_R/0004` "The door is locked". This agrees with shipped NO4_ENTRANCE/0001 and NO4_HWL_FRONT/0009.
+  - Glossary: rows added to §2 (通信室, 銀行, 雑貨屋, カフェ · スポーツジム, ショップ), §3 (消火器, 鍵, 浸水) and §6 (担当). The §9 rows were removed.
+- **Fixed sentences.**
+  - **どうやらここから上に昇れそうだ。{p}** → `It looks like there's a way up from here.{p}` (41; wrapped 27 / 13). そう is kept as "looks like". Census 3 / 0 / 0: `:18 ENTRANCEL/0006` = `:21 0009` = NO6_ENTRANCE/0003, which is identical in #23 at 8ecdb7e. Promoted from §9 to §6.
+  - **シャッターで封鎖されて、先に進めそうにない。{p}**, with the variant **シャッターで封鎖され、先に進めそうにない。{p}** → `A shutter has sealed it off. There seems to be no going any further.{p}` (68; wrapped 28 / 26 / 12).
+    - The wave 6 seed, `It's sealed off by a shutter. …`, wrapped "It's sealed off by a | shutter.", a lone "a" (R §1.12 rule 2). The coordinator replaced it before review (HANDOFF → Decisions), and this is that replacement.
+    - そう is kept as "There seems to be".
+    - Census 6 / 0 / 0. され、: `:38 HW_L/0003`, `:40 0005`, `:47 HW_R/0007`. されて、: NO6_HW_1/0001–0002 (#23 at 8ecdb7e) and NO6_HW_5/0005 (#22 at a2a5ade), identical byte for byte.
+    - CHECK cannot pair the two spellings, so the glossary row lists both.
+    - Promoted from §9 to §6.
+  - **シャッターで閉ざされて先には進めない。{p}** → `A shutter closes off the way. No going any further.{p}` (51; wrapped 24 / 26). New.
+    - The source has no hedge, so the target has none, and it is kept apart from the hedged 封鎖 sentence.
+    - "It's closed off by a shutter." strands "a" at the wrap.
+    - Census 2 / 0 / 0: `:28 ENTRANCEM/0005` = `:29 0006`.
+    - The plain シャッターが下りていて先には進めない (NO2_HW_5/0003) may reuse "No going any further."; NO3_NO4/0055 そうに無い is hedged.
+    - Glossary: §6 row added.
+- **§9 rows corrected, not yet rendered on main.** The coordinator's wave 6 replacements for the remaining seeded sentences are now the §9 text: 鍵が掛かっていて、扉は開かない。{p} → `It's locked, so the door won't open.{p}`; 水かさ…増えつづけてる…。{w}{br}急がないと…危険よ…。{p} → `The water… it keeps rising…{w}{br}Must hurry… it's dangerous…{p}`; 水が深すぎて…息が…でき…な…{p} → `The water's too deep… can't… brea… the…{p}`. These match #22 and #23 as they stand. They stay PROVISIONAL until one of those PRs merges. No shipped line is affected.
+- **と書かれている** (§6, R §12.1): the note is extended for the row-alone case, with no target changed. The sign is NO5_HW_R/0008–0011:
+  ```
+  "Floor Information"{br}
+  Entrance Hall/General Store{br}
+  Bank/Cafe/Gym,{br}
+  it reads.{p}
+  ```
+  - The rows measure 19, 27, 14 and 9, a 4-row page.
+  - The title is NO4_HWR_FRONT/0097 byte for byte. The entries are joined by an unspaced "/". The indent is dropped (F-022).
+  - The source gives と書かれている its own row, so R §12.1's `«last entry», it reads.` is carried across the source's own split. No text moves between messages.
+  - No shipped line is affected.
+
+### 22.2 Speakers (PR Flag 9)
+- Judy (わ/よ, halting …) speaks BANK/0001–0003, ENTRANCEL/0007–0008 and 0010–0011, ENTRANCEM/0001–0002 and 0007–0010, HW_L/0001–0002, HW_R/0001–0003 and 0006, LOCKERROOM/0001, and SHOP/0001. ENTRANCEL/0007 borrows spk=1 (F-009).
+- The party leader (ジョン, 急ごう, 始まらんがな) speaks ENTRANCEL/0001–0005 and ENTRANCEM/0003–0004, read as Oakland. The English is neutral.
+- LOCKERROOM/0002–0003 (俺たち / お前たち to John) is one of Oakland's crew, or Oakland. The English is neutral.
+- The rest is narration.
+
+### 22.3 Movable codes, wraps and readings (PR Flags 2, 5–8, 10, 11)
+- **`{p}` added** at `:16 ENTRANCEL/0004`, after "…at the very top.", at a sentence boundary. It is forced: without it the page runs 7 rows. The message now runs 4 + 2, and 0005's leading `{br}` row makes the second page 3.
+- **Leading `{br}`** at `:17 ENTRANCEL/0005`, on the F-012 boundary after the untagged 0004 (R §2.3).
+  - The source splits one sentence mid-clause (下へ下へと向かえば / たどり着けるはずだ). The `{br}` falls between the conditional and the main clause: "…if we keep heading down," / "we should reach it.".
+  - 寄り道せずについて来いよ reuses NO4_HWR_FRONT/0142 付いて "Follow me, and no detours." byte for byte (PR Flag 4). 付いて and ついて are spelling variants, and CHECK does not pair them. HANDOFF's pointer, which read NO4_BAR/0142, was corrected by the coordinator.
+- **Hedges** (wave 5's lesson, R §20.3). Every hedge is kept:
+  - のだろうか: BANK/0006 "I wonder", SHOP/0002 "Could it have been".
+  - 使えそうな: BANK/0007 "looks usable".
+  - なりそう: ENTRANCEL/0003 "it looks like".
+  - だろう: ENTRANCEL/0004 "probably". はず: 0005 "should".
+  - ようだが + そうにない: ENTRANCEM/0011–0012 "seems … doesn't look like".
+  - ようだ: HW_L/0004 = HW_R/0005 "It seems". そうにない: HW_R/0004 "looks impossible to open".
+  - なさそう: LOCKERROOM/0001 = SHOP/0001 "doesn't seem". 空のようだ: LOCKERROOM/0005–0006 "seems empty". 役に立ちそうに無い: LOCKERROOM/0007 "don't look useful".
+- **The 使えそうな物 family** (R §21.4): BANK/0007 見当たらない → "There's nothing else in sight that looks usable." It sits beside #22's NO6_STORAGE/0002 見当たらないようだ, "There seems to be nothing in sight that looks usable.", and shipped NO4_STORAGE/0004 無いようだ, "There seems to be nothing that looks usable.". The forms stay apart as the sources do.
+- **Wording chosen for wraps** (PR Flag 7). None of these is a step-5 compression, and nothing is dropped. "we captured", "it's eerie……", "Found a key placed inside the locker.", "spare clothes" (着替え), "it looks impossible to open", "Now the ship's upside down" (今 / 反転).
+- **Readings accepted:**
+  - BANK/0008 "It has been brutally hacked to pieces." and 0009 "It's dead, with both its legs severed." take "It" for the examined body. The shipped fragments ("Shot dead between the eyes.", NO4_P_OFFICE/0009) are subjectless, but "Dead, with both legs severed." leaves "severed." alone on a row.
+  - ENTRANCEL/0001 大事 (おおごと) → "a big deal". ENTRANCEM/0004 愚痴 → "griping", as shipped NO4_BAR/0137 愚痴る "quit griping". SCN002A/07 愚痴を言っても始まらん "There's no use complaining." is a different sentence and is not bound.
+  - PR Flag 8 says まったく → "Honestly," is "as shipped", which is inexact: NO4_BAR/0017 is Collison's "Really,". まったく is not fixed, and the speaker differs. Accepted.
+  - ENTRANCEL/0008 against LOCKERROOM/0002: the alternative scripts for different story states are each translated as written (PR Flag 11).
+- **Suspected source typos** (PR Flag 10, F-025): `:14 ENTRANCEL/0002` 後回した for 後回しだ → "can wait"; `:12 BANK/0009` 啄ばまれた後 for 跡 → "peck marks". 1 / 0 / 0 each.
+- Glossary: none beyond §22.1.
+
+### 22.4 Recurrences (PR Flag 12)
+- **Translated, identical:** BANK/0005 = NO4_SHOP/0006; HW_R/0008 = NO4_HWR_FRONT/0097 = NO4_HWL_BACK/0014 = NO4_HWL_BACK2/0010. Internal: ENTRANCEL/0006 = 0009; 0007 = 0010 = ENTRANCEM/0007; 0008 = 0011 = ENTRANCEM/0008; ENTRANCEM/0005 = 0006; HW_L/0001 = HW_R/0002; HW_L/0002 = HW_R/0003; HW_L/0003 = 0005 = HW_R/0007; HW_L/0004 = HW_R/0005; LOCKERROOM/0001 = SHOP/0001.
+- **Untranslated twins:** ENTRANCEL/0006 = NO6_ENTRANCE/0003 (#23). The 封鎖 variant at NO6_HW_1/0001–0002 (#23) and NO6_HW_5/0005 (#22) is not paired by CHECK (§22.1).
+- **Families for later units, by hand:**
+  - 扉が歪んで: HW_R/0012 "The door is warped and can't be opened."; NO6_BRIDGE/0011 (#23 "The water pressure has warped the door, so it can't be opened."); NO3_CABIN_3106/0001 らしく … そうにない, hedged.
+  - …危険よ: NO6_HW_4/0002, SPACESHIP_HW/0005.
+  - シャッターが下りていて: NO2_HW_5/0003 (plain), NO3_NO4/0055 (そうに無い).
+- Glossary: none.

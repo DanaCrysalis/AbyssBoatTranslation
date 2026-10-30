@@ -1,4 +1,4 @@
-**Last updated: 2026-10-26** — wave 6 dispatched: NO5.b01, NO6.b01, NO6.b02, NO3_CHAPEL.p01 (translators running); seeds a376c49.
+**Last updated: 2026-10-30** — wave 6 review: #25 NO5.b01 MERGED (squash 4a6819e, round 0); next #23 NO6.b01.
 
 ## Integration branch: `main`. Not configurable.
 Every PR bases on `main`; the reviewer merges into `main`; a wave is closed only when `origin/main` is
@@ -13,16 +13,16 @@ preflight is `git fetch origin main && git checkout main && git reset --hard ori
 ## Progress
 | Store | Done | Total | |
 |---|---|---|---|
-| script | 17 units · 914 rows | 38 units · 1,709 rows | NO4_BAR p01–p08, NO4_HWR_FRONT p01–p03, NO4_MACHINER90 p01–p02, NO4_TOOL_ROOM p01–p02 (rooms complete), NO4.b01, NO4.b02 (deck NO4 complete bar the `_T` scripts); STATUS 2026-10-26 |
+| script | 18 units · 972 rows | 38 units · 1,709 rows | NO4_BAR p01–p08, NO4_HWR_FRONT p01–p03, NO4_MACHINER90 p01–p02, NO4_TOOL_ROOM p01–p02 (rooms complete), NO4.b01, NO4.b02 (deck NO4 complete bar the `_T` scripts); NO5.b01 (deck NO5 complete); STATUS 2026-10-30 |
 | scene | 4 units · 190 rows | 4 units · 190 rows | OP-SCN034, SCN038, SCN041-SCN046, SCN047-EPILOG (store complete) |
 | system | 0 | 5 units · 188 rows | blocked whole (F-006) |
 
-Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-26; `NO4_BAR.SCR` 37,378 free; `NO4_TOOL_ROOM.SCR` 61,899, 80/80; the NO4.b01/b02 rooms ≥ 63,697).
+Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-30; `NO4_BAR.SCR` 37,378 free; `NO4_TOOL_ROOM.SCR` 61,899, 80/80; the NO4.b01/b02 rooms ≥ 63,697; the NO5 rooms ≥ 63,950).
 
 ## In flight
 | Unit | Branch | PR | State | Next |
 |---|---|---|---|---|
-| script NO5.b01 | `tl/script-NO5.b01` | #25 | PR open 8d0fc61, round 0; lowest NO5_ENTRANCEL.SCR 63,950 free; open: {p} added at NO5_ENTRANCEL/0004, sign row 0011 form | reviewer (now) |
+| script NO5.b01 | `tl/script-NO5.b01` | #25 | **MERGED** round 0, squash 4a6819e; 58 rows, max 4 rows/page, lowest NO5_ENTRANCEL.SCR 63,950 free; dupes 113 pairs (+14); no findings; §9 sentences corrected + 9 terms and 3 sentences promoted (R §22); F-025 typos; integration commit `integrate: script NO5.b01` | none — done |
 | script NO6.b01 | `tl/script-NO6.b01` | #23 | PR open 8ecdb7e, round 0, seed-wrap fix applied; wrap scan 0/89; open: {p} added at NO6_BRIDGE/0002, 0020 reorder | reviewer, after barrier |
 | script NO6.b02 | `tl/script-NO6.b02` | #22 | PR open a2a5ade, round 0, seed-wrap fix applied; wrap scan 0/60; open: NO6_TOOLROOM/0001 wording (Flag 5) | reviewer, after barrier |
 | script NO3_CHAPEL.p01 | `tl/script-NO3_CHAPEL.p01` | #24 | PR open 12556a0, round 0; NO3_CHAPEL.SCR 55,976 free; open: speakers (Wolg/Oakland/Heming — the dispatch's William reading was wrong), s28/s29 = the ammo vote, 教会 article | reviewer, after barrier |

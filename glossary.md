@@ -77,6 +77,11 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | キャビン | キャビンＮＮＮＮ (rooms/*) | cabin; on the sign: Cabins; room names: Cabin NNNN | 5; 6; 10 | 14 (room names) | 部屋 stays "room" (R §1.6); 3 / 0 / 15 | R §1.6, §12.1 |
 | 売店 | 売店のカウンター | the shop; 売店のカウンター: the shop counter | 8; 16 | — | lowercase; NO4_HWL_BACK/0018 = NO4_HWL_BACK2/0014 `The shop counter, it seems.`; the 両替所 frame is not made parallel (R §20.1); 2 / 0 / 0 | R §20.1 |
 | 両替所 | 両替所のカウンター | the currency exchange; 両替所のカウンター: the exchange counter | 21; 20 | — | lowercase; NO4_P_OFFICE/0012 `This seems to be the exchange counter.{br}Hard to tell what's inside.{p}`, not parallel with 売店 (R §20.1); 1 / 0 / 0 | R §20.1, §21.1 |
+| 通信室 | — | the communications room | 23 | — | lowercase; NO5_ENTRANCEL/0004 only; never 無線室 "the radio room" (§9); 1 / 0 / 0 | R §22.1 |
+| 銀行 | — | a bank; on the sign: Bank | 6; 4 | 14 (rooms/088, F-006) | lowercase in narration (NO5_ENTRANCEM/0011 "A bank seems to lie ahead"), capitalised on the sign (NO5_HW_R/0010); 2 / 0 / 1 | R §22.1 |
+| 雑貨屋 | — | a general store; on the sign: General Store | 15; 13 | 14 (rooms/082, F-006) | lowercase in narration (NO5_ENTRANCEM/0012), capitalised on the sign (NO5_HW_R/0009 `Entrance Hall/General Store`); never "sundries shop"; 2 / 0 / 1 | R §22.1 |
+| カフェ · スポーツジム | — | Cafe · Gym (sign entries) | 4 · 3 | — | capitalised, sign entries, NO5_HW_R/0010 `Bank/Cafe/Gym,` only; no é (charset); not "Sports Gym"; 1 / 0 / 0 each | R §22.1 |
+| ショップ | — | the shop (same word as 売店) | 8 | — | lowercase; NO5_SHOP/0002 ショップの備品 → "the shop's equipment"; 1 / 0 / 0 | R §22.1 |
 
 ## 3. Items, currency, mechanics
 | Source | Variants | Target | Cols | Cap | Note | Ruling |
@@ -109,6 +114,9 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | カードキー | — | card key | 8 | 43 (items/010, blocked) | two words, never "keycard"; NO4_SHOP/0001 "This body had a card key."; 1 / 0 / 1 | R §21.1 |
 | 懐中電灯 | — | flashlight | 10 | 43 (items/006, blocked) | never "torch"; NO4_SHOP/0005 "A flashlight is lying here."; 1 / 0 / 1 | R §21.1 |
 | チェーン (alone) | — | chain | 5 | — | NO4_HWL_KAIDAN/0002 "secured tight with a chain"; チェーンカッター is its own row; 鎖 (NO4_BAR/0422 "chains") not fixed; 1 / 0 / 0 alone | R §21.1 |
+| 消火器 | — | fire extinguisher | 17 | 43 (items/007, blocked) | NO5_SHOP/0002 "There's a fire extinguisher lying here."; NO6_HW_3/0003 takes the same words; 2 / 0 / 1 | R §22.1 |
+| 鍵 | 鍵が掛かって(い)る · 鍵がかかって · 鍵がかけられて | key; locked (鍵が掛か…/鍵がかか…/鍵がかけ… → "locked") | 3; 6 | — | NO5_LOCKERROOM/0004 "Found a key placed inside the locker."; NO5_HW_R/0004 "The door is locked"; カードキー is its own row; 26 / 0 / 5 (掛か 13, かか 5, かけ 1) | R §22.1 |
+| 浸水 | — | flood / flooding / flooded, as the line needs | 5 / 8 / 7 | — | shipped NO4_BAR/0068 "a flood"; NO5_ENTRANCEL/0003 "The flooding's already started…⁉", NO5_ENTRANCEM/0010 "…it's flooded."; 6 / 0 / 0 | R §22.1 |
 
 ## 4. Classes, units, system terms
 | Source | Variants | Target | Cols | Cap | Note | Ruling |
@@ -161,7 +169,7 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | 妹 | 妹さん | sister: "my sister" / "his sister"; the echo 妹？ → "Sister?" | 6 | William's dead sister; 妹さん drops さん (R §1.2) → "his sister" (NO4_HWR_FRONT/0075, 0080); SCN038D/17 "To my sister…" | R §10.1 |
 | 親玉 | — | the big one | 11 | the parent monster, NO4_BAR/0438 only; never "boss" (社長) | R §11.1 |
 | 巣 | 化け物の巣 | nest; 化け物の巣: the monster's nest ("a monster's nest" at 0368) | 4; 18 | 4 / 0 / 0; 蜘蛛の巣 (NO5_BANK/0006) is a web, in context | R §11.1 |
-| と書かれている | — | it reads: `"«text»," it reads.`; ending a multi-row sign: `«last entry», it reads.` | 8 | 7 / 0 / 0; NO5_HW_R/0011 (alone on its row, after the sign) in context | R §12.1 |
+| と書かれている | — | it reads: `"«text»," it reads.`; ending a multi-row sign: `«last entry», it reads.` | 8 | 7 / 0 / 0; alone on its row after a sign (NO5_HW_R/0011): previous row ends `«last entry»,{br}`, then `it reads.{p}` | R §12.1, §22.1 |
 | ウスノロ | — | dimwit (pl. dimwits) | 6 | the killer's word for his victims: 親愛なるウスノロ → "my dear dimwit", てめえらウスノロ → "you dimwits", そのウスノロ → "those dimwits"; 0 / 3 / 0 | R §13.1 |
 | メス | — | bitch (あのメス → "that bitch") | 5 | the killer on Judy, SCN046B1/10–11; article in context; 0 / 2 / 0 | R §13.1 |
 | 売女 | — | whore (お前の売女 → "your whore") | 5 | the killer on Wolg's murdered wife, SCN046B2/07; 0 / 1 / 0 | R §13.1 |
@@ -186,6 +194,10 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | 幼生体 · サナギ | — | larva · pupa ("the pupa stage") | 5 · 4 | Miller's life-stage terms, NO4_TOOL_ROOM/0072 only; never "chrysalis"; 1 / 0 / 0 each | R §19.1 |
 | クローン羊 | — | the cloned sheep | 16 | NO4_TOOL_ROOM/0053 only; no name added ("Dolly"); 1 / 0 / 0 | R §19.1 |
 | 切り刻む · 無残に | 切り刻まれた · 切り刻まれている · 切り刻まれ · 無惨 | hacked to pieces · brutally (無残に切り刻まれた死体 → "a body, brutally hacked to pieces") | 16 · 8 | the bodies: NO4_4001/0001, NO4_4102/0001, 0004; 無惨な殺され方 "such brutal killings" (NO4_MACHINER90/0045); 見るも無残 (NO3_MEDICALROOM/0006) in context; 切り刻 10 / 0 / 0, 無残 6 / 0 / 0, 無惨 1 / 0 / 0 | R §20.1 |
+| 担当 | — | job ("Our… job… is this floor."; "Isn't your job on Deck 6?") | 3 | the party's assigned search area: NO5_ENTRANCEL/0008 = 0011 = NO5_ENTRANCEM/0008, NO5_LOCKERROOM/0002; not "assigned"; 4 / 0 / 0 | R §22.1 |
+| どうやらここから上に昇れそうだ。{p} | — | `It looks like there's a way up from here.{p}` | 41 | fixed sentence: NO5_ENTRANCEL/0006, 0009 = NO6_ENTRANCE/0003; keep the そう hedge; 3 / 0 / 0 | R §22.1 |
+| シャッターで封鎖されて、先に進めそうにない。{p} | シャッターで封鎖され、先に進めそうにない。{p} | `A shutter has sealed it off. There seems to be no going any further.{p}` | 68 (28 / 26 / 12) | fixed sentence, both spellings one target: NO5_HW_L/0003, 0005, NO5_HW_R/0007 (され、) = NO6_HW_1/0001–0002, NO6_HW_5/0005 (されて、); replaces the wave 6 seed, which stranded "a"; 6 / 0 / 0 | R §22.1 |
+| シャッターで閉ざされて先には進めない。{p} | — | `A shutter closes off the way. No going any further.{p}` | 51 (24 / 26) | unhedged, kept apart from the 封鎖 sentence: NO5_ENTRANCEM/0005 = 0006; plain シャッターが下りていて先には進めない (NO2_HW_5/0003) may reuse "No going any further."; 2 / 0 / 0 | R §22.1 |
 
 ## 7. Register per character
 | Character | Register | Contractions? | Markers | Ruling |
@@ -216,27 +228,16 @@ so; the reviewer moves the row up into its section in the integration commit. --
 | Source | Variants | Proposed | Alternatives | Where seen | Wave |
 |---|---|---|---|---|---|
 | 無線室 | — | the radio room | — | NO6_BRIDGE/0001, 0006; rooms/107, items/011, hints/001–002 (cap 14 as a room name); 2 / 0 / 4 | 1 |
-| 通信室 | — | the communications room | the comms room | NO5_ENTRANCEL/0004 only; not 無線室 ("the radio room"); 1 / 0 / 0 | 6 |
-| 銀行 | — | a bank; on the sign: Bank | — | NO5_ENTRANCEM/0011, NO5_HW_R/0010 (sign); rooms/088 blocked; 2 / 0 / 1 | 6 |
-| 雑貨屋 | — | a general store; on the sign: General Store | sundries shop | NO5_ENTRANCEM/0012, NO5_HW_R/0009 (sign); rooms/082 blocked; 2 / 0 / 1 | 6 |
-| カフェ · スポーツジム | — | Cafe · Gym (sign entries) | Sports Gym | NO5_HW_R/0010 only; no é (charset) | 6 |
-| ショップ | — | the shop (same word as 売店) | the store | NO5_SHOP/0002 ショップの備品 → "the shop's"; 1 / 0 / 0 | 6 |
-| 消火器 | — | fire extinguisher | — | NO5_SHOP/0002, NO6_HW_3/0003; items/007 (cap 43) blocked; 2 / 0 / 1 | 6 |
 | 教会 | — | the chapel (lowercase; room name: Chapel) | church | NO3_CHAPEL/0001, NO3_HW_1/0001, NO3_NO4/0011; rooms/040, hints/013 blocked; 3 / 0 / 2 | 6 |
 | 拠点 | — | base | base of operations | NO3_CHAPEL/0012, NO3_HW_1/0001, NO3_NO4/0001, 0011; 4 / 0 / 0 | 6 |
-| 浸水 | — | flood / flooding / flooded, as the line needs | — | shipped NO4_BAR/0068 "a flood"; NO5_ENTRANCEL/0003, NO5_ENTRANCEM/0010, NO6_HW_4/0001, NO3_NO4/0051; 6 / 0 / 0 | 6 |
 | 水圧 | — | the water pressure | — | NO6_BRIDGE/0011, NO6_HW_2/0008–9, NO6_HW_4/0006–7, NO6_HW_5/0004, NO4_BAR_T/0105; 7 / 0 / 0 | 6 |
 | 水かさ | — | the water (rising) | the water level | NO6_ENTRANCE/0001 = NO6_HW_2/0001 = NO6_HW_4/0003 = NO6_HW_5/0001 (fixed sentence below); 4 / 0 / 0 | 6 |
-| 担当 | — | our job / assigned (私たちの担当は… → "Our job… is this floor.") | our area | NO5_ENTRANCEL/0008 = 0011 = NO5_ENTRANCEM/0008; NO5_LOCKERROOM/0002; 4 / 0 / 0 | 6 |
 | 親父 | — | your dad | your father | NO6_BRIDGE/0008, NO3_NO4/0043; never "old man" (that is じいさん/爺さん, Collison); 2 / 0 / 0 | 6 |
-| 鍵 | — | key; 鍵が掛かって(い)る → "locked" | — | 26 rows; NO5_LOCKERROOM/0004, NO6_BRIDGE/0001–0009; カードキー is its own row | 6 |
 | シャッターロック | — | the shutter lock | — | NO6_BRIDGE/0014 only; 1 / 0 / 0 | 6 |
 | 航海のスケジュール | — | the voyage schedule | — | NO6_BRIDGE/0010 only; 船内イベントのスケジュール表 stays as shipped (R §21.4) | 6 |
-| Cross-unit sentence | どうやらここから上に昇れそうだ。{p} | `It looks like there's a way up from here.{p}` | — | NO5_ENTRANCEL/0006, 0009 (NO5.b01) = NO6_ENTRANCE/0003 (NO6.b01); keep the そう hedge | 6 |
-| Cross-unit sentence | 水かさ…増えつづけてる…。{w}{br}急がないと…危険よ…。{p} | `The water… it keeps rising…{w}{br}We have to hurry… it's dangerous…{p}` | — | NO6_ENTRANCE/0001, NO6_HW_2/0001 (b01) = NO6_HW_4/0003, NO6_HW_5/0001 (b02); Judy; 4 … each side | 6 |
-| Cross-unit sentence | 水が深すぎて…息が…でき…な…{p} | `The water's too deep… I can't… brea… the…{p}` | — | NO6_ENTRANCE/0002, NO6_HW_2/0002 (b01) = NO6_HW_4/0004, NO6_HW_5/0002 (b02); Judy drowning; 4 … | 6 |
-| Cross-unit sentence | シャッターで封鎖されて、先に進めそうにない。{p} · variant シャッターで封鎖され、先に進めそうにない。{p} | `It's sealed off by a shutter. There seems to be no going any further.{p}` | — | NO6_HW_1/0001–0002 (b01) = NO6_HW_5/0005 (b02); variant NO5_HW_L/0003, 0005, NO5_HW_R/0007 (NO5.b01) takes the same target; echoes NO4_HWL_BACK/0013 | 6 |
-| Cross-unit sentence | 鍵が掛かっていて、扉は開かない。{p} | `It's locked. The door won't open.{p}` | — | NO6_HW_2/0005, 0007 (b01) = NO6_HW_3/0005–0007, NO6_HW_4/0005, 0008 (b02); NO3_HW_1/0005–6, NO3_HW_2/0002–3 later | 6 |
+| Cross-unit sentence | 水かさ…増えつづけてる…。{w}{br}急がないと…危険よ…。{p} | `The water… it keeps rising…{w}{br}Must hurry… it's dangerous…{p}` | — | NO6_ENTRANCE/0001, NO6_HW_2/0001 (b01) = NO6_HW_4/0003, NO6_HW_5/0001 (b02); Judy; 4 … each side | 6 |
+| Cross-unit sentence | 水が深すぎて…息が…でき…な…{p} | `The water's too deep… can't… brea… the…{p}` | — | NO6_ENTRANCE/0002, NO6_HW_2/0002 (b01) = NO6_HW_4/0004, NO6_HW_5/0002 (b02); Judy drowning; 4 … | 6 |
+| Cross-unit sentence | 鍵が掛かっていて、扉は開かない。{p} | `It's locked, so the door won't open.{p}` | — | NO6_HW_2/0005, 0007 (b01) = NO6_HW_3/0005–0007, NO6_HW_4/0005, 0008 (b02); NO3_HW_1/0005–6, NO3_HW_2/0002–3 later | 6 |
 | Cross-unit sentence | 水圧で扉を開けられない。{p} | `The water pressure won't let the door open.{p}` | — | NO6_HW_2/0008–0009 (b01) = NO6_HW_4/0006–0007, NO6_HW_5/0004 (b02) | 6 |
 
 ## 10. Open questions
