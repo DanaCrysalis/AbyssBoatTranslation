@@ -8,7 +8,7 @@ preflight is `git fetch origin main && git checkout main && git reset --hard ori
 ## NEXT ACTION — always current, always a literal instruction
 > **Wave 7 barrier met 2026-10-30 20:05 UTC (four PRs open).** Reviewer, one at a time, in unit order:
 > #26 NO3_CHAPEL.p02 → #28 NO3_CHAPEL.p03 → #29 NO3_NO4.p01 → #27 NO3_NO4.p02. #26 MERGED (round 0, squash 56e2531).
-> **Review #28 next.** The mid-row `{w}` blind spot is now PROJECT.md §7 / F-026; the #29 and #27 reviewers check those rows.
+> #28 round 0 CHANGES → translator reworking. **Review #29 next** (while #28 reworks), then #28 round 1, then #27. The mid-row `{w}` blind spot is now PROJECT.md §7 / F-026; the #29 and #27 reviewers check those rows.
 > Watchdog: `send_later` every 12 minutes.
 
 ## Progress
@@ -25,7 +25,7 @@ Wave 7, dispatched 2026-10-30, seeds 3b28903 (glossary §9). Translator owns eac
 | Unit | Branch | PR | State |
 |---|---|---|---|
 | script NO3_CHAPEL.p02 | `tl/script-NO3_CHAPEL.p02` | #26 (7afbe0c) | **MERGED** round 0, squash 56e2531; 44 rows, NO3_CHAPEL.SCR 55,316 free, 48 dup pairs (CHECK 155 + 7); 4 §9 rows promoted (R §26); integration commit on main |
-| script NO3_CHAPEL.p03 | `tl/script-NO3_CHAPEL.p03` | #28 (d4a6b39) | PR open, round 0; agent a85e8f3aa6d16000a |
+| script NO3_CHAPEL.p03 | `tl/script-NO3_CHAPEL.p03` | #28 (d4a6b39) | round 0 **CHANGES** (1 finding: 0128 authored-`{br}` line 28 cols, unflagged; fix proposed) → rework round 1 with the same translator, agent a85e8f3aa6d16000a; re-review = reviewer aceac7d80f4e1f819 by SendMessage, diff 0128 only |
 | script NO3_NO4.p01 | `tl/script-NO3_NO4.p01` | #29 (61022fd) | PR open, round 0; agent a761f7e3a43fb5cfc. Flag 3: same mid-row `{w}` finding, 0030 fixed |
 | script NO3_NO4.p02 | `tl/script-NO3_NO4.p02` | #27 (7edf333) | PR open, round 0; agent ae823e5ab8f02fb64. Flag 3: mid-row `{w}` glue (0030, 0040, 0043) — relayed to p01; candidate CHECK blind spot |
 
