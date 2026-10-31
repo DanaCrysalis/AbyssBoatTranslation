@@ -8,7 +8,7 @@ preflight is `git fetch origin main && git checkout main && git reset --hard ori
 ## NEXT ACTION — always current, always a literal instruction
 > **NO WATCHDOG — attended run** (session lineage depth 8 of 8: `send_later` and `create_session` refused).
 > Wave 8 barrier met: PRs #32 (NO3.b01), #30 (NO3.b02), #31 (NO2.b01), #33 (NO2.b02) all open. Review one at a time
-> in unit order — #32 merged; #30 in rework (round 1); next #31, then #33, then #30 re-review — `reviewer` subagent in the foreground, unique branches review-w8-prN /
+> in unit order — #32 merged; #30 round 1 pushed, #31 in rework (round 1); next #33, then re-reviews #30, #31 — `reviewer` subagent in the foreground, unique branches review-w8-prN /
 > integrate-w8-prN; `git pull --ff-only` after each. At wave close the human starts wave 9 from a fresh top-level
 > session (`/translate`).
 
@@ -25,8 +25,8 @@ Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEA
 | Unit | Branch | Translator | PR | State | Next |
 |---|---|---|---|---|---|
 | script NO3.b01 | tl/script-NO3.b01 | agent a6187514e1619c86e | #32 | **MERGED** round 0, squash 4ed66e9 (51 rows, max 4 rows/page, NO3_HW_1.SCR 63,784 free; CHECK 183 + 8 pairs; findings none); integration: 12 §9 rows promoted, 18 rows added, F-003 extended, R §30 | none — next: review #30 |
-| script NO3.b02 | tl/script-NO3.b02 | agent a8a857f473ab05821 | #30 | round 0 **CHANGES** (reviewer agent a2ca20bf212ea5d24): 1 dropped そう "looks" at NO3_STORAGE/0002 (ruling also binds #31 NO2_MAINSTORAGE/0030), 2 body pronoun "it" not "they" (0005, 0007, STORAGE/0004), 3 "here" moved to keep the 操作パネル phrase whole; findings sent to the translator 2026-10-31 | translator pushes round 1; re-review by the same reviewer |
-| script NO2.b01 | tl/script-NO2.b01 | agent a1c8fce0b285232be | #31 | PR open (55 rows, max 4 rows/page, NO2_MAINSTORAGE.SCR 62,828 free); open: speakers 0014/0016/0018, 0025 | review 3rd |
+| script NO3.b02 | tl/script-NO3.b02 | agent a8a857f473ab05821 | #30 | round 0 **CHANGES** (reviewer agent a2ca20bf212ea5d24): 1 dropped そう "looks" at NO3_STORAGE/0002 (ruling also binds #31 NO2_MAINSTORAGE/0030), 2 body pronoun "it" not "they" (0005, 0007, STORAGE/0004), 3 "here" moved to keep the 操作パネル phrase whole; findings sent 2026-10-31 | round 1 pushed 39dde92 (all three fixed) | re-review by the same reviewer after #31/#33 |
+| script NO2.b01 | tl/script-NO2.b01 | agent a1c8fce0b285232be | #31 | round 0 **CHANGES** (reviewer agent aa876e8404bbd93b0): 1 NO2_MAINSTORAGE/0030 → `The locker seems to hold nothing that looks usable.{p}` (#30 ruling a), 2 NO2_CABIN_2101/0002 "the victim" → "it" (#30 ruling b); speakers, 0020, new rows キサマ/スパナ/鍵がかかっている accepted; findings sent 2026-10-31 | translator pushes round 1; re-review by the same reviewer |
 | script NO2.b02 | tl/script-NO2.b02 | agent ab765e917510a1a75 | #33 | PR open (43 rows, max 4 rows/page, NO2_SUBSTORAGE.SCR 63,713 free); open: speaker NO2_NO3/0004, 食繋ぐ typo, 切り裂かれ vs 引き裂かれ | review 4th |
 
 ## Next up
