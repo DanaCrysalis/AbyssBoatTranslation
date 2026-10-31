@@ -1,0 +1,58 @@
+# unit: script/NO2.b01
+# rows: 55
+# columns: id <TAB> context <TAB> source <TAB> target (empty target = untranslated)
+NO2_CABIN_2001/0001	msg spk=-	天井に通風孔が見える。{br}ここから他の部屋に行けそうだ。	An air vent in the ceiling.{br}Looks like it could lead to other rooms.
+NO2_CABIN_2001/s05	choice	通風孔に入る	Enter the vent
+NO2_CABIN_2001/s06	choice	入らない	Don't enter
+NO2_CABIN_2101/0001	msg spk=-	化け物に襲われたらしい切り刻まれた死体が転がっている。{p}	A body lies here, hacked to pieces, apparently attacked by a monster.{p}
+NO2_CABIN_2101/0002	msg spk=-	銃で撃たれた死体が横たわっている。寝ているところを襲われたのだろうか？{p}	A body lies here, shot with a gun. Could the victim have been attacked while asleep?{p}
+NO2_CABIN_2103/0001	msg spk=-	切り刻まれ、ばらばらになった死体が転がっている。{p}	A body lies here, hacked to pieces and scattered.{p}
+NO2_HW_1/0001	msg spk=-	シャッターが閉じていて先に進めない。{p}	The shutter is closed, so no going any further.{p}
+NO2_HW_1/0002	msg spk=-	鍵がかかっている…。{p}	The door is locked…{p}
+NO2_HW_1/0003	msg spk=-	鍵がかかっている…。{p}	The door is locked…{p}
+NO2_HW_1/0004	msg spk=-	シャッターが閉じていて先に進めない。{p}	The shutter is closed, so no going any further.{p}
+NO2_HW_2/0001	msg spk=-	シャッターは閉ざされていて開きそうに無い。{p}	The shutter's closed. It looks like it won't open.{p}
+NO2_HW_3/0001	msg spk=-	パイプから漏れる蒸気が激しく吹きつけ、とても先に進めそうにない…。{p}	Steam leaking from a pipe blasts out fiercely. It seems there's no way to go any further…{p}
+NO2_HW_3/0002	msg spk=-	パイプから漏れる蒸気が激しく吹きつけ、とても先に進めそうにない…。{p}	Steam leaking from a pipe blasts out fiercely. It seems there's no way to go any further…{p}
+NO2_HW_3/0003	msg spk=-	パイプから漏れる蒸気が激しく吹きつけ、とても先に進めそうにない…。{p}	Steam leaking from a pipe blasts out fiercely. It seems there's no way to go any further…{p}
+NO2_HW_3/0004	msg spk=-	パイプにバルブが取り付けられている。回してみますか？	There's a valve fitted to the pipe. Do you want to try turning it?
+NO2_HW_3/0005	msg spk=-	パイプから漏れていた蒸気が止まった。{p}	The steam that was leaking from the pipe has stopped.{p}
+NO2_HW_3/s05	choice	はい	Yes
+NO2_HW_3/s06	choice	いいえ	No
+NO2_HW_4/0001	msg spk=-	シャッターは閉鎖され開きそうに無い。{p}	The shutter's sealed. It looks like it won't open.{p}
+NO2_HW_4/0002	msg spk=-	鍵がかかっている…。{p}	The door is locked…{p}
+NO2_HW_5/0001	msg spk=-	シャッターは閉ざされていて開きそうに無い。{p}	The shutter's closed. It looks like it won't open.{p}
+NO2_HW_5/0002	msg spk=-	鍵がかかっている…。{p}	The door is locked…{p}
+NO2_HW_5/0003	msg spk=-	シャッターが下りていて先には進めない。{p}	The shutter is down, so no going any further.{p}
+NO2_MAINSTORAGE/0001	msg spk=-	クッ、ククッ、クカカカカカカッ。{br}そんなに急いでどこに行くんだ？	Heh, heh-heh, kahahahahaha.{br}Where are you off to in such a hurry?
+NO2_MAINSTORAGE/0002	msg spk=7	俺様のことはどうでもいいんだよ。{br}クッ、ククッ。	Never you mind about me.{br}Heh, heh-heh.
+NO2_MAINSTORAGE/0003	msg spk=7	おいキサマ！{br}その俺様の女神を置いていけば、今だけは殺さないでおいてやる。	Hey, you bastard!{br}Leave my very own goddess behind, and I'll hold off on killing you, just for now.
+NO2_MAINSTORAGE/0004	msg spk=7	なんだぁ、この俺様とやりあおうってのかい？{br}クッ、ククッ。{br}面白すぎるぜ、キサマ！	Huh? You mean to take on the likes of me?{br}Heh, heh-heh.{br}Too much fun, you bastard!
+NO2_MAINSTORAGE/0005	msg spk=7	クッ、ククッ、クカカカカカカッ。{br}脆い、脆すぎる。	Heh, heh-heh, kahahahahaha.{br}Fragile, far too fragile.
+NO2_MAINSTORAGE/0006	msg spk=7	つまらない奴め。{br}このまま死ね‼	What a bore you are.{br}Die right where you stand‼
+NO2_MAINSTORAGE/0007	msg spk=7	Ｒｅｔｒｙ？	Retry?
+NO2_MAINSTORAGE/0008	msg spk=7	クッ、ククッ、クカカカカカカッ。{br}この俺を追い込むとは、やるねぇ。	Heh, heh-heh, kahahahahaha.{br}Backing me into a corner, eh? Not bad.
+NO2_MAINSTORAGE/0009	msg spk=7	さすがは女神が見込んだ男ってところかぁ？	As expected of the man the goddess chose, huh?
+NO2_MAINSTORAGE/0010	msg spk=7	ジョン、何があった⁉	John, what happened⁉
+NO2_MAINSTORAGE/0011	msg spk=4	せっかく面白くなってきたのに五月蝿いのがきやがったぜ。	Just when things were getting fun, a pest had to show up.
+NO2_MAINSTORAGE/0012	msg spk=7	女神は今度バラさせてもらうぜ。{br}クッ、ククッ、クカカカカカカッ。	Next time, allow me to carve up the goddess.{br}Heh, heh-heh, kahahahahaha.
+NO2_MAINSTORAGE/0013	msg spk=7	あいつは…⁉	That guy…⁉
+NO2_MAINSTORAGE/0014	msg spk=4	ウォルグ、あの男を知ってるのか？	Wolg, do you know that man?
+NO2_MAINSTORAGE/0015	msg spk=5	……いや。	……No.
+NO2_MAINSTORAGE/0016	msg spk=4	そうか…。{br}まるで昔から知っているような口ぶりだったんでな。	I see…{br}He talked like he'd known you a long time, is all.
+NO2_MAINSTORAGE/0017	msg spk=5	いったん戻った方がいいな。{br}社長が無事とも言い切れん。	Better head back for now.{br}Can't say for certain the boss is safe.
+NO2_MAINSTORAGE/0018	msg spk=4	ああ。	Yeah.
+NO2_MAINSTORAGE/0019	msg spk=5	ねぇ、ウォルグ。{br}ヘイミングやオークランドは、どうしたの？{br}どうして追いついてこないの⁉	Hey, Wolg.{br}What's happened to Heming and Oakland?{br}Why aren't they catching up⁉
+NO2_MAINSTORAGE/0020	msg spk=100	後で追いつく。早く行け！	They'll catch up later. Hurry up and go!
+NO2_MAINSTORAGE/0021	msg spk=4	そう──死んだのね…。	I see——they're dead, then…
+NO2_MAINSTORAGE/0022	msg spk=100	先に行け…。	Go on ahead…
+NO2_MAINSTORAGE/0023	msg spk=4	あなたは？	What about you?
+NO2_MAINSTORAGE/0024	msg spk=100	行けと言ってるだろう‼	Go, I'm telling you‼
+NO2_MAINSTORAGE/0025	msg spk=4	（スパナが扉の所に引っかかっている。）{p}	(There's a wrench caught in the door.){p}
+NO2_MAINSTORAGE/0026	msg spk=4	これで扉を閉鎖していたのね…。何故こんなことを…？	So this is what they sealed the door with… Why would they do this…?
+NO2_MAINSTORAGE/0027	msg spk=100	そう…、この先にいた怪物を閉じ込めていたのね。{p}	I see… they had shut in the monster beyond this point.{p}
+NO2_MAINSTORAGE/0028	msg spk=100	これはもう必要ないし、外しておきましょう。{p}	This isn't needed anymore, so let's take it off.{p}
+NO2_MAINSTORAGE/0029	msg spk=100	ロッカーから、銃の弾をみつけた。{p}	Found ammo in the locker.{p}
+NO2_MAINSTORAGE/0030	msg spk=100	ロッカーには、使えそうなものは無いようだ。{p}	There seems to be nothing usable in the locker.{p}
+NO2_MAINSTORAGE/s03	choice	はい	Yes
+NO2_MAINSTORAGE/s04	choice	いいえ	No
