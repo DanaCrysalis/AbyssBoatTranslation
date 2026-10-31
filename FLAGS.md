@@ -49,7 +49,9 @@ box, these prompts need a re-cut to 2 rows (R §30.3). NO3.b02 (PR #30) adds NO3
 (source 2) before Yes/No (`tl/script/NO3.b02.tsv:11–12`; R §31.2). NO2.b01 (PR #31) adds
 NO2_CABIN_2001/0001, 3 rows (source 2), before `Enter the vent` / `Don't enter`, and NO2_HW_3/0004
 `…Do you want to try turning it?`, 3 rows (source 1), before Yes/No (`tl/script/NO2.b01.tsv:4, :18`;
-R §32.2).
+R §32.2). NO2.b02 (PR #33) adds NO2_SUBSTORAGE/0009 `An air vent in the wall.{br}Looks like it could
+lead to other rooms.`, 3 rows (source 2), before `Enter the vent` / `Don't enter`
+(`tl/script/NO2.b02.tsv:18`; R §33.3).
 
 ### F-004 · 2026-10-04 · font · HUMAN
 Full-width English is wide (28 characters a line). A font hack could double that: draw two
@@ -249,6 +251,10 @@ Wolg 0010, 0013, 0015, 0017, 0020, 0022, 0024; Judy 0019, 0021, 0023, 0026–002
 killer and Wolg, spk=4 the killer, a male companion and Judy, spk=5 Wolg and Judy. 0014/0016/0018
 (のか, んでな, ああ; Heming or John) and the bracketed thought 0025 (John or Judy) stay uncertain and
 are rendered speaker-neutral (rulings R §32.2).
+NO2.b02 (PR #33): Judy at NO2_NO3/0001–0003, NO2_SUBSTORAGE/0001–0002, NO2_THIRDSTORAGE/0001–0008,
+NO2_TOFE_ROOM/0001–0003, on spk=-, 100 and 0; narration on spk=100 and 0 elsewhere. NO2_NO3/0004
+黙って機関室へ急げっ！ (spk=100) is a rough male voice, most likely Wolg, uncertain; rendered
+speaker-neutral (rulings R §33.3).
 
 ### F-011 · 2026-10-04 · tools · OPEN
 PR #1 (NO4_BAR.p01) found four things CHECK and UNITCHECK do not verify. Each was confirmed by a

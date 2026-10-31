@@ -2991,3 +2991,57 @@ Census counts are rows per store (script / scene / system), from the reviewer's 
   - HW_3 とても先に進めそうにない → `It seems there's no way to go any further…`, とても as "no way". Kept apart from the §6 封鎖 sentence, whose source has no とても.
 - **F-003.** `:4` CABIN_2001/0001 (3 rows, source 2) before the vent choices and `:18` HW_3/0004 (3 rows, source 1) before Yes/No are appended to F-003.
 - Glossary: none beyond §32.1.
+
+## Unit script NO2.b02 (PR #33, MERGED, 2026-10-31)
+
+Four small deck-2 rooms (NO2_NO3, NO2_SUBSTORAGE, NO2_THIRDSTORAGE, NO2_TOFE_ROOM; 43 rows, 829 source characters, tier D, ratio 39.66): Judy and John escape to deck 2 after the explosion, John alone in the sub-storeroom (the dead elevator, the vent, bodies, preserved food), Judy's outburst on self-sacrifice in the third storeroom, and the vent room.
+
+Reviewed twice:
+- **Round 0** (0c27480, merged with main ee9ed7b): CHANGES, two findings. (1) `:19`/`:21` NO2_SUBSTORAGE/0010 = 0012 and (2) `:36` NO2_THIRDSTORAGE/0009 turned the passive 〜されたのだろうか active (§33.2).
+- **Round 1** (c0727e3, merged with main ec70d70 → 22c7b51, no conflict): MERGE, squash b7e0ea2. Exactly the three prescribed rows changed. Findings: none.
+
+Figures (round 1):
+- **Containers.** MEASURE after MERGE: NO2_SUBSTORAGE.SCR 1,835 / 65,535 (63,700 free), NO2_THIRDSTORAGE 1,053 (64,482), NO2_TOFE_ROOM 851 (64,684), NO2_NO3 787 (64,748); every room complete, deck NO2 complete. `containers negative: 0; under the reserve (2000 bytes): 0`.
+- **Pages.** At most 4 rows per page (UNITCHECK: 43 rows, 0 violations); whole store 1,421 rows, 0 violations. MERGE: keys that never matched 0.
+- **Duplicates.** CHECK compared 214 duplicate pairs and 9 tag-variant pairs. The reviewer's census (every unit row × every dump row, exact, `{p}{w}{br}`-stripped, 【】-stripped, ！？ → ⁉): 28 translated pairs, 0 mismatches — SUBSTORAGE/0008 = NO3_FOODSTORAGE/0007; TOFE_ROOM/0005 = NO3_MEDICALROOM/0001; s06–s07 = NO3_CABIN_3003, 3105, NO2_CABIN_2001 vent choices; s08–s09 = seven Yes/No pairs; THIRDSTORAGE/0006 = NO4_MACHINER90/0034, NO4_BAR/0391 (variant); 0010 = 0012; 0013 = 0015.
+- **Codes.** The authored `{p}{w}{br}` sequence equals the source's on 43 of 43 rows; no `{w}`. `…`/`‼`/`⁉`/`──` counts match on 43 of 43; the one punctuation change is 0009's 。 → "?" on a "Could …" question, as shipped NO4_SHOP/0005, NO3_CABIN_3104/0002.
+- **Widths.** 17 lines end at an authored `{br}`; the last wrapped line of each is ≤ 27 (`codec.wrap(…, 28)`, `len()`). No lone "a"/"an"/"I", no one-word last row.
+- **F-012.** All six `+` rows (NO2_NO3/0002, 0006, SUBSTORAGE/0002, 0014, 0016, THIRDSTORAGE/0002) follow a `{br}` ending.
+
+Census counts are rows per store (script / scene / system), from the reviewer's grep of `dumps/` on 2026-10-31. Line citations use PROJECT.md §7's numbering in `tl/script/NO2.b02.tsv` (line = row order + 3).
+
+### 33.1 Terms promoted and added; cross-unit sentences
+- **Seeds and bound sentences, used byte for byte** (all already §3/§4/§6 rows from R §30.1, §31.1, §32.1; their "#33" notes now say shipped):
+  - `:17` 0008 = NO3_FOODSTORAGE/0007 `The controls were destroyed, so this elevator can no longer be used.{p}` (CHECK pair).
+  - `:16` 0007 食料庫で sibling of NO3_FOODSTORAGE/0006: `…It seems the sniper fire in the food storeroom destroyed the controls.{p}` (27 / 27 / 28 / 13); only "here" → "in the food storeroom" differs.
+  - `:18` 0009 `An air vent in the wall.{br}Looks like it could lead to other rooms.`, the wall twin of shipped NO2_CABIN_2001/0001.
+  - `:26`–`:27` `Enter the vent` · `Don't enter`; `:42` TOFE_ROOM/0004 通風孔に入りますか？ → `Enter the vent?` matches.
+  - `:43` TOFE_ROOM/0005 = NO3_MEDICALROOM/0001 `There's nothing else that looks usable.{p}` (CHECK pair).
+  - `:8`–`:9` NO2_NO3/0005–0006 `"Shipboard Precautions,"{br}` + `reads a posted sheet.{p}`, parallel to NO3_NO2/0001–0002.
+  - `:34` THIRDSTORAGE/0007 `I'm sorry.{br}……Let's go.` — its second sentence = NO3_FOODSTORAGE/0005 `……Let's go.`
+  - `:37` 0010 `Shot dead.` (§6 撃たれて死んでいる, variant 死んでる); `:38` 0011 `Its head has been torn off.` (§6 首を飛ばされ, passive).
+  - `:22`/`:24` 保存用の食料 "preserved food"; `:15` 食料 "food" (§3).
+- **引き裂く · 切り裂く** (PR Flag 8, coordinator point). Conform to the §6 row from R §31.1: `:19`/`:21` バラバラに引き裂かれ "torn to pieces"; `:20` 身体が半分に切り裂かれ `The body is sliced in half.`, kept apart from NO3_STORAGE/0004 身体を半分に引き裂かれ `The body is torn in half.` on purpose (different verbs). The PR's proposed バラバラに引き裂かれ row is already covered by that row; no new row. Census 引き裂 6 / 0 / 0, 切り裂 1 / 0 / 1, バラバラ 3 / 0 / 0 (NO3_MEDICALROOM/0006 バラバラで "in pieces" in context).
+- **Added:** ハッチ → "hatch" (§3; 1 / 0 / 0, `:35` THIRDSTORAGE/0008 `A hatch…{br}`).
+- Glossary: §3 ハッチ row added; "#33" notes set to shipped on §3 食料 · 食糧, エレベータ; §4 通風孔に入る; §6 撃たれて死んでいる, 首を飛ばされ, コントロール装置…, エレベータは反応しない…, ほかには使えそうな物は無い, 『…』 notice, 引き裂く · 切り裂く, the ceiling/wall vent; §6 死体 note extended (§33.2).
+
+### 33.2 The passive だろうか frame (round-0 findings 1–2)
+- Source: 〜(ら)れたのだろうか about a body — 8 / 0 / 0: NO2_CABIN_2101/0002, NO2_SUBSTORAGE/0010, 0012, NO2_THIRDSTORAGE/0009, NO3_CABIN_3104/0002, NO3_CABIN_3105/0007, NO3_FOODSTORAGE/0012, NO3_MEDICALROOM/0007.
+- Target: the passive, with the body ("it") as subject: `Could it have been <participle> (by a monster)?`. Shipped before this unit, all passive: NO3_MEDICALROOM/0007 `Could it have been killed by a monster?`, NO3_FOODSTORAGE/0012 `Could it have been eaten by a monster?`, NO3_CABIN_3105/0007 `Could it have been cornered here and killed?`, NO3_CABIN_3104/0002 `…could they have been attacked inside?` (unseen occupants), NO2_CABIN_2101/0002 `…Could it have been attacked while asleep?`.
+- Reasoning: literal first (the source is passive and keeps the body as topic), and the near-sibling must parallel — MEDICALROOM/0007's source differs from SUBSTORAGE/0010 only by ここにいた. Round 0's active `Could the monster that was here have killed it?` and `Could a monster have attacked it?` broke both. This decides the #30 reviewer's open note (R §31.2).
+- Binds: `:19` = `:21` NO2_SUBSTORAGE/0010 = 0012 `It's been torn to pieces.{br}Could it have been killed by the monster that was here?{p}` (25 · 28 / 26); `:36` NO2_THIRDSTORAGE/0009 `Could it have been attacked by a monster? It's been brutally hacked to pieces.{p}` (27 / 23 / 26). The plain だろう (no か) stays "probably" (`:37`, `:38`).
+- Glossary: §6 死体 note extended to name the frame.
+
+### 33.3 Speakers, readings and wrap-forced wordings
+- **Speakers** (PR Flag 4, F-009), from content: Judy at NO2_NO3/0001–0003, SUBSTORAGE/0001–0002, THIRDSTORAGE/0001–0008, TOFE_ROOM/0001–0003 (かしら/わ/の/のよ); narration (John's viewpoint, plain だ/ようだ) at SUBSTORAGE/0003–0016, THIRDSTORAGE/0009–0011, TOFE_ROOM/0005–0006; NO2_NO3/0005–0006 narration; TOFE_ROOM/0004 the prompt.
+- **`:7` NO2_NO3/0004 黙って機関室へ急げっ！** is a rough male command, not Judy. Most likely Wolg, who is on this deck (SUBSTORAGE/0003 locks the door); not decidable from the dump (急げ 1 / 0 / 0). `Shut up and hurry to the engine room!` is speaker-neutral, so a later attribution changes no text. Recorded under F-009. 機関室 "the engine room" (§2).
+- **`:23` SUBSTORAGE/0014 食繋ぐ** (PR Flag 9): read as 食い繋ぐ with the okurigana omitted, a written variant rather than a sure typo; 1 / 0 / 0, nothing to pair. `…we can hold out for a while.` Accepted.
+- **Judy's outburst, THIRDSTORAGE/0001–0007**, against shipped NO3_CHAPEL/0003–0009 and SCN047C2/01–05: plain and emphatic, no markers; 助けてくれる "save" as NO3_CHAPEL/0003; ‼ ⁉ kept. Accepted.
+- **Wrap-forced wordings** (PR Flag 5), each measured and accepted:
+  - `:22`/`:24` 保存用の食料が置かれている → `Here's some preserved food.{br}` (27). 置かれている is existential in examine text; "here's" keeps the location. `Preserved food has been left here.` runs past 27 and strands `here.` before the authored `{br}`.
+  - `:44` TOFE_ROOM/0006 低い音を立てて動いている → `It runs with a low hum.` (23). A hum is a low running sound; nothing is added. `It's running with a low hum.` is 28 before the authored `{br}`. 分からない "Hard to tell", as NO4_P_OFFICE/0012.
+  - `:32` THIRDSTORAGE/0005 わからない ×2 → `I don't know` ×2, repetition kept; `…I don't understand!` strands one word before the authored `{br}`.
+  - `:10` "up on that container…"; `:11`/`:41` じゃないかしら "maybe"; `:41` `……、` → `…… maybe` (R §11.3); `:15` "heading back"; `:20` `The body is sliced in half.` (a 6-row page otherwise); `:40` "something's here‼".
+- **Hedges kept** (PR Flag 7): ようだ/ようで "seems"; そう "Looks like"/"looks like"; そうに無い "doesn't look like"; だろうか "Could …?"; だろう "probably"; かしら "I wonder"/"maybe".
+- **F-003.** `:18` SUBSTORAGE/0009 is 3 rows (source 2) before the vent choices; appended to F-003. `:42` TOFE_ROOM/0004 is 1 row (source 1) before Yes/No.
+- Glossary: none beyond §33.1–§33.2.
