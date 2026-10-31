@@ -289,6 +289,14 @@ NOT decisions. The first translator to render one promotes it in the PR's Glossa
 so; the reviewer moves the row up into its section in the integration commit. -->
 | Source | Variants | Proposed | Alternatives | Where seen | Wave |
 |---|---|---|---|---|---|
+| 制御装置 | — | the control system ("It seems to be the engine's control system.") | control unit; never "the controls" (that is コントロール装置, §3) | NO1_CONTROLROOM/0003, SPACESHIP_HW/0004 (2 / 0 / 0); R §2 note at rulings.md:304 | 9 |
+| 報告に戻る · 戻って知らせる | 報告に戻りましょう · 戻って知らせましょう | head back and report (shipped NO4_HWL_KAIDAN/0004, NO4_HWR_FRONT/0049) | go back and tell them (戻って知らせる only) | NO1_ENGINEROOM/0002, 0003 | 9 |
+| 武器 | — | weapon (shipped NO4_BAR/0332, NO4_MACHINER90/0001) | — | SPACESHIP/0002 その武器 → "that weapon" | 9 |
+| チャージ | — | charge: チャージに時間がかかる → "takes time to charge" | recharge | SPACESHIP/0002 only (1 / 0 / 0) | 9 |
+| 落下 | 船の落下が始まっている | fall: "the ship's starting to fall⁉" (⁉ kept, one glyph) | going down | SPACESHIP_HW/0004 only (1 / 0 / 0); 振動 → "tremor" (§6) | 9 |
+| ほかには何も入っていない{p} | — | `There's nothing else inside.{p}` (one line; R §1.12) | — | NO1_CONTROLROOM/0001; cf. NO4_TOOL_ROOM/0080 ロッカーには何も入っていない "The locker is empty." | 9 |
+| 使えそうな物はすでに奪われた後のようだ。{p} | — | `It seems anything that looked usable has already been taken.{p}` (keeps そう "looked", ようだ "seems"; wraps 22/25/11, no one-word last row) | — | NO1_STORAGE/0001; 使えそう family R §21.3–§21.4, §31.1 | 9 |
+| 【男】 (label in a message) | — | 【Man】 | — | NO4_BAR_T and the other `_T` scripts (6 in the dump); brackets kept, as 【女】 → 【Woman】 (§1) | 9 |
 
 ## 10. Open questions
 <!-- one line each, with the FLAGS id. A closed question is deleted here; its answer stays in rulings.md. -->
