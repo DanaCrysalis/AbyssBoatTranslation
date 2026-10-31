@@ -1,0 +1,54 @@
+# unit: script/NO3.b01
+# rows: 51
+# columns: id <TAB> context <TAB> source <TAB> target (empty target = untranslated)
+NO3_CABIN_3002/0001	msg spk=-	壁が破壊され、隣の部屋に通じているようだ。隣の部屋に入りますか？	The wall is destroyed and seems to open into the next room. Enter the next room?
+NO3_CABIN_3002/s03	choice	はい	Yes
+NO3_CABIN_3002/s04	choice	いいえ	No
+NO3_CABIN_3003/0001	msg spk=-	壁が破壊され、隣の部屋に通じているようだ。隣の部屋に入りますか？	The wall is destroyed and seems to open into the next room. Enter the next room?
+NO3_CABIN_3003/0002	msg spk=-	天井には通風孔が見える。ここをたどって行けば別の部屋にいけそうだ。	An air vent in the ceiling. It looks like following it could lead to another room.
+NO3_CABIN_3003/0003	msg spk=-	無残に切り刻まれた死体が転がっている。{br}傷口は既に腐りかけている。{p}	A body lies here, brutally hacked to pieces.{br}The wounds are already starting to rot.{p}
+NO3_CABIN_3003/0004	msg spk=-	銃で撃たれた死体だ。{br}乗客同士で殺しあったのだろうか？{p}	A body, shot with a gun.{br}Could the passengers have killed each other?{p}
+NO3_CABIN_3003/s03	choice	はい	Yes
+NO3_CABIN_3003/s04	choice	いいえ	No
+NO3_CABIN_3003/s06	choice	通風孔に入る	Enter the vent
+NO3_CABIN_3003/s07	choice	入らない	Don't enter
+NO3_CABIN_3104/0001	msg spk=-	内側から鍵をかけられている。{br}	It's locked from inside.{br}
+NO3_CABIN_3104/0002	msg spk=- +	人がいる気配が無いところを見ると中で襲われたのだろうか。{p}	Judging by the lack of any sign of people, could they have been attacked inside?{p}
+NO3_CABIN_3105/0001	msg spk=-	通風孔ね。誰かが…移動手段にしていたのかしら…？{br}入ってみるの？	An air vent. I wonder if someone… was using it as their way around…?{br}Are you going in?
+NO3_CABIN_3105/0002	msg spk=0	そう…。{br}何か明かりになる物が無いと先に進むのは危険ね…。	I see…{br}Without something to use as a light, it's dangerous to go on…
+NO3_CABIN_3105/0003	msg spk=100	何か明かりになる物を見つけないと、通風孔を使うのは危険ね…。	Unless we find something to use as a light, using the air vent is dangerous…
+NO3_CABIN_3105/0004	msg spk=100	何か明かりになる物を見つけないと、通風孔を使うのは危険ね…。	Unless we find something to use as a light, using the air vent is dangerous…
+NO3_CABIN_3105/0005	msg spk=100	天井には通風孔が見える。ここをたどって行けば別の部屋にいけそうだ。	An air vent in the ceiling. It looks like following it could lead to another room.
+NO3_CABIN_3105/0006	msg spk=100	銃で撃たれた死体が転がっている。{br}	A body lies here, shot with a gun.{br}
+NO3_CABIN_3105/0007	msg spk=100 +	ここまで追い詰められて殺されたのだろうか？{p}	Could it have been cornered here and killed?{p}
+NO3_CABIN_3105/0008	msg spk=100	切り刻まれた死体が転がっている。{br}化け物から逃げようと足掻いた跡がみえる。{p}	A body, hacked to pieces, lies here.{br}There are signs it struggled to escape a monster.{p}
+NO3_CABIN_3105/s07	choice	通風孔に入る	Enter the vent
+NO3_CABIN_3105/s08	choice	入らない	Don't enter
+NO3_CABIN_3106/0001	msg spk=-	扉が歪んでいるらしく開けられそうにない。{p}	The door seems to be warped. It doesn't look like it can be opened.{p}
+NO3_FOODSTORAGE/0001	msg spk=-	真っ暗ね…。明かりつけるわね…。{p}	It's pitch dark… I'll turn on a light…{p}
+NO3_FOODSTORAGE/0002	msg spk=-	酷い匂い…。{br}多くの人がここで死んだのね…。	What a horrible smell…{br}So many people died here…
+NO3_FOODSTORAGE/0003	msg spk=100	食べ物は腐っているものばかりだわ…。	The food is all rotten…
+NO3_FOODSTORAGE/0004	msg spk=100	鍵……。{br}落としていったのかしら？	A key……{br}I wonder if someone dropped it here?
+NO3_FOODSTORAGE/0005	msg spk=100	……行きましょう。	……Let's go.
+NO3_FOODSTORAGE/0006	msg spk=100	エレベータは反応しない…。ここで狙撃された時にコントロール装置が破壊されてしまったようだ。{p}	The elevator won't respond… It seems the sniper fire here destroyed the controls.{p}
+NO3_FOODSTORAGE/0007	msg spk=100	コントロール装置を破壊されたため、このエレベータはもう使用できない。{p}	The controls were destroyed, so this elevator can no longer be used.{p}
+NO3_FOODSTORAGE/0008	msg spk=100	このリフト電気が死んでいるわ。{br}このままでは…動かせないわ。	This lift's power is dead.{br}As it is… we can't move it.
+NO3_FOODSTORAGE/0009	msg spk=100	先程、手に入れたバッテリを使えばこのリフトを動かせると思うわ。{p}	If we use the battery we got earlier, I think we can move this lift.{p}
+NO3_FOODSTORAGE/0010	msg spk=100	でも、このリフト…中からの操作は無理……みたい。{br}行って、ジョン。私が操作するわ。{p}	But this lift… operating it from inside is impossible…… it seems.{br}Go, John. I'll operate it.{p}
+NO3_FOODSTORAGE/0011	msg spk=100	食料運搬用のリフトだ。横の操作パネルで操作する仕組みのようだ。{p}	It's a lift for carrying food. It seems to be operated from the control panel beside it.{p}
+NO3_FOODSTORAGE/0012	msg spk=100	化け物に食べられたのだろうか？{br}身体の所々が足りないようだ。{p}	Could it have been eaten by a monster?{br}The body seems to be missing parts here and there.{p}
+NO3_FOODSTORAGE/0013	msg spk=100	食糧のダンボールがある。{br}だが、中は腐っているようで、酷い腐臭が漂っている。{p}	A cardboard box of food.{br}But the contents seem to have rotted, and a horrible stench of decay drifts out.{p}
+NO3_FOODSTORAGE/0014	msg spk=100	食糧のダンボールがある。{br}中身は空のようだ。{p}	A cardboard box of food.{br}It seems to be empty.{p}
+NO3_FOODSTORAGE/0015	msg spk=100	化け物に首を飛ばされたようだ。{p}	It seems a monster tore its head off.{p}
+NO3_FOODSTORAGE/0016	msg spk=100	撃たれて死んでいる。{br}どうやら食糧の取り合いで殺されたようだ。{p}	Shot dead.{br}Seems it was killed fighting over the food.{p}
+NO3_HW_1/0001	msg spk=-	一通り見て回ったけど、新しい拠点になりそうなのは…教会くらいね。	We've had a look all around, but about the only place that could make a new base is… the chapel.
+NO3_HW_1/0002	msg spk=0	じゃあ、皆を呼んできましょうか。	Well then, shall we go call everyone here?
+NO3_HW_1/0003	msg spk=100	扉には木板が打ち付けられており、中に入れない。{p}	Wooden boards have been nailed over the door, so there's no getting inside.{p}
+NO3_HW_1/0004	msg spk=100	ハチェットで木板を打ち壊した。{br}これで中に入れそうだ。{p}	Smashed the wooden boards with the hatchet.{br}It looks like we can get inside now.{p}
+NO3_HW_1/0005	msg spk=100	扉は鍵が掛かっていて開きそうに無い。{p}	The door's locked. It looks like it won't open.{p}
+NO3_HW_1/0006	msg spk=100	扉は鍵が掛かっていて開きそうに無い。{p}	The door's locked. It looks like it won't open.{p}
+NO3_HW_1/0007	msg spk=100	シャッターは閉鎖され開きそうに無い。{p}	The shutter's sealed. It looks like it won't open.{p}
+NO3_HW_1/0008	msg spk=100	シャッターは閉鎖され開きそうに無い。{p}	The shutter's sealed. It looks like it won't open.{p}
+NO3_HW_1/0009	msg spk=100	これはハチェットの収容箱のようだ。{br}	This seems to be a storage box for a hatchet.{br}
+NO3_HW_1/0010	msg spk=100	中身は空だ…。{p}	It's empty…{p}
+NO3_HW_1/0011	msg spk=100	シャッターは閉鎖され開きそうに無い。{p}	The shutter's sealed. It looks like it won't open.{p}
