@@ -1,4 +1,4 @@
-**Last updated: 2026-10-30** — wave 8 dispatched (NO3.b01, NO3.b02, NO2.b01, NO2.b02); glossary seeds bd79313. **NO WATCHDOG — attended run**: this wave session is at lineage depth 8 (limit 8), so `send_later` and `create_session` are refused (see NEXT ACTION).
+**Last updated: 2026-10-31** — wave 8 closed: NO3.b01, NO3.b02, NO2.b01, NO2.b02 merged (PRs #32, #30, #31, #33), three CHANGES rounds (#30, #31, #33), none parked; decks NO3 and NO2 complete. **NO WATCHDOG — attended run**: the wave 8 session is at lineage depth 8 (limit 8) and cannot open the wave 9 session.
 
 ## Integration branch: `main`. Not configurable.
 Every PR bases on `main`; the reviewer merges into `main`; a wave is closed only when `origin/main` is
@@ -6,50 +6,42 @@ at the close commit (`CLAUDE.md` Rule 3). A fresh container may clone shallow wi
 preflight is `git fetch origin main && git checkout main && git reset --hard origin/main`.
 
 ## NEXT ACTION — always current, always a literal instruction
-> **NO WATCHDOG — attended run** (session lineage depth 8 of 8: `send_later` and `create_session` refused).
-> Wave 8 barrier met: PRs #32 (NO3.b01), #30 (NO3.b02), #31 (NO2.b01), #33 (NO2.b02) all open. Review one at a time
-> in unit order — #32 merged; #30, #31 merged (round 1); #33 round 1 pushed; next #33 re-review, then wave close — `reviewer` subagent in the foreground, unique branches review-w8-prN /
-> integrate-w8-prN; `git pull --ff-only` after each. At wave close the human starts wave 9 from a fresh top-level
-> session (`/translate`).
+> **Human: start wave 9 from a fresh top-level session** — run `/translate` in a new session you open yourself (not one
+> spawned by a session), so the lineage counter resets. Wave 8's session is at lineage depth 8 of 8: `create_session` and
+> `send_later` are refused there ("no user or organization setting changes this limit"). The runner opens the
+> `Abyss Boat — wave 9` session with UNITS = Next up; first check `list_sessions` (mine: true, that title) — if one exists,
+> do not open a second. **NO WATCHDOG — attended run** until a session with a watchdog takes over.
 
 ## Progress
 | Store | Done | Total | |
 |---|---|---|---|
-| script | 25 units · 1,247 rows | 38 units · 1,709 rows | NO4_BAR p01–p08, NO4_HWR_FRONT p01–p03, NO4_MACHINER90 p01–p02, NO4_TOOL_ROOM p01–p02 (rooms complete), NO4.b01, NO4.b02 (deck NO4 complete bar the `_T` scripts); NO5.b01 (deck NO5 complete); NO6.b01, NO6.b02 (deck NO6 complete); NO3_CHAPEL.p01–p03 (room complete, 150/150); NO3_NO4.p01–p02 (room complete, 61/61); STATUS 2026-10-30 |
+| script | 29 units · 1,421 rows | 38 units · 1,709 rows | NO4_BAR p01–p08, NO4_HWR_FRONT p01–p03, NO4_MACHINER90 p01–p02, NO4_TOOL_ROOM p01–p02 (rooms complete), NO4.b01, NO4.b02 (deck NO4 complete bar the `_T` scripts); NO5.b01 (deck NO5 complete); NO6.b01, NO6.b02 (deck NO6 complete); NO3_CHAPEL.p01–p03 (room complete, 150/150); NO3_NO4.p01–p02 (room complete, 61/61); NO3.b01, NO3.b02, NO2.b01, NO2.b02 (decks NO3, NO2 complete); STATUS 2026-10-31 |
 | scene | 4 units · 190 rows | 4 units · 190 rows | OP-SCN034, SCN038, SCN041-SCN046, SCN047-EPILOG (store complete) |
 | system | 0 | 5 units · 188 rows | blocked whole (F-006) |
 
-Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-30; `NO4_BAR.SCR` 37,378 free; `NO4_TOOL_ROOM.SCR` 61,899, 80/80; the NO4.b01/b02 rooms ≥ 63,697; the NO5 rooms ≥ 63,950; NO6_BRIDGE 63,400, the other NO6 rooms ≥ 64,242; NO3_CHAPEL.SCR 55,247, 150/150; NO3_NO4.SCR 60,727, 61/61).
+Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-31; the NO3/NO2 bundle rooms ≥ 62,822 (NO2_MAINSTORAGE); `NO4_BAR.SCR` 37,378 free; `NO4_TOOL_ROOM.SCR` 61,899, 80/80; the NO4.b01/b02 rooms ≥ 63,697; the NO5 rooms ≥ 63,950; NO6_BRIDGE 63,400, the other NO6 rooms ≥ 64,242; NO3_CHAPEL.SCR 55,247, 150/150; NO3_NO4.SCR 60,727, 61/61).
 
 ## In flight
-| Unit | Branch | Translator | PR | State | Next |
-|---|---|---|---|---|---|
-| script NO3.b01 | tl/script-NO3.b01 | agent a6187514e1619c86e | #32 | **MERGED** round 0, squash 4ed66e9 (51 rows, max 4 rows/page, NO3_HW_1.SCR 63,784 free; CHECK 183 + 8 pairs; findings none); integration: 12 §9 rows promoted, 18 rows added, F-003 extended, R §30 | none — next: review #30 |
-| script NO3.b02 | tl/script-NO3.b02 | agent a8a857f473ab05821 | #30 | **MERGED** round 1, squash 0a3bbec (25 rows, max 4 rows/page, NO3_MEDICALROOM.SCR 64,637 free; CHECK 190 + 8 pairs; round 0 CHANGES — dropped "looks", body "it", 操作パネル phrase — round 1 findings none); integration: 5 §9 rows promoted (drawer row corrected, locker sibling `The locker seems to hold nothing that looks usable.{p}`), §6 使えそう and 引き裂く · 切り裂く rows, 死体 "it" note, F-003 extended, R §31 (rulings a §31.1, b §31.2) | none — next: re-review #31, then #33 |
-| script NO2.b01 | tl/script-NO2.b01 | agent a1c8fce0b285232be | #31 | **MERGED** round 1, squash 028dcdf (55 rows, max 4 rows/page, NO2_MAINSTORAGE.SCR 62,822 free; CHECK 205 + 9 pairs; round 0 CHANGES — locker "looks", body "it" — round 1 findings none); integration: 3 §9 rows promoted (§9 now empty), キサマ/スパナ/鍵がかかっている… added, notes set to shipped, F-003 and F-009 extended, R §32 (three events in MAINSTORAGE; 0014/0016/0018 Heming or John; 0020 "They'll" = Heming and Oakland) | none — next: #33 rework |
-| script NO2.b02 | tl/script-NO2.b02 | agent ab765e917510a1a75 | #33 | **MERGED** round 1, squash b7e0ea2 (43 rows, max 4 rows/page, NO2_SUBSTORAGE.SCR 63,700 free; CHECK 214 + 9 pairs; round 0 CHANGES — passive 〜されたのだろうか at SUBSTORAGE/0010 = 0012, THIRDSTORAGE/0009 — round 1 findings none); integration: §3 ハッチ added, "#33" notes set to shipped, §6 死体 note names the passive frame, F-003 and F-009 extended, R §33 (passive frame census 8 / 0 / 0; NO2_NO3/0004 likely Wolg, neutral; 食繋ぐ = 食い繋ぐ; 引き裂/切り裂 per §6) | none — wave 8 has no open PR left: wave close |
+Nothing. Wave 8's four units are merged; see Wave history and rulings R §30–§33.
 
 ## Next up
-Wave 8 (QUEUE 2026-10-30), four script bundles: NO3.b01 (51 rows, 1,105 chars, ratio 29.98; NO3_CABIN_3002/3003/3104/3105/3106,
-NO3_FOODSTORAGE, NO3_HW_1), NO3.b02 (25, 502, 65.55; NO3_HW_2/3, NO3_MACHINE, NO3_MEDICALROOM, NO3_NO2, NO3_STORAGE), NO2.b01 (55,
-1,021, 32.00; NO2_CABIN_2001/2101/2103, NO2_HW_1–5, NO2_MAINSTORAGE), NO2.b02 (43, 829, 39.66; NO2_NO3, NO2_SUBSTORAGE,
-NO2_THIRDSTORAGE, NO2_TOFE_ROOM); all tier D, every container ≥ 63,293 free.
-Glossary seeds: §9, commit bd79313 (19 rows).
-Bindings waiting: NO3_HW_1/0001–0002 = NO3_NO4/0011–0012 byte for byte (R §27.3; CHECK pairs them); NO2_MAINSTORAGE/0027
-閉じ込める "shut in" (glossary §6, R §29.1); NO2_HW_5/0003 `The shutter is down, so no going any further.{p}` (R §29.2's form re-cut for a one-word last row; glossary §9);
-NO2_NO3/0004 機関室 "the engine room" (glossary §2); 例の生き残り "that survivor"; ワイフ "my wife"; 警察 (glossary §2).
-Wave 7 lessons: one CHANGES of four — an authored-`{br}` line at 28 that the PR's own check missed because it measured the
-unwrapped segment. Translators must measure the last wrapped line before every authored `{br}`/`{w}` with codec.wrap(…, 28) and
-len() ≤ 27. Mid-row `{w}` (F-026): the dump's three rows are shipped; flag any `{w}` not followed by `{br}`. Keep: hedges kept,
-wraps scanned with a script, speakers "read from content", unique review/integration branch names, codec.wrap on every seeded
-fixed sentence. Resume messages after a limit stop: say "continue from the file on disk", not "your draft is intact" (two of four
-drafts were empty skeletons).
+Wave 9 (QUEUE 2026-10-31), four script units: NO1.b01 (8 rows, 151 chars, ratio 215.03; NO1_CONTROLROOM, NO1_ENGINEROOM,
+NO1_STORAGE), SPACESHIP.b01 (8, 159, 205.08; SPACESHIP, SPACESHIP_HW), NO4_BAR_T.p01 (46, 1,426, 21.37), NO4_BAR_T.p02 (48,
+1,251, 24.22; NO4_BAR_T.SCR 58,098 free); all tier D. `_T` test scripts: keep `【 】` around the speaker name (PROJECT.md §6);
+labelled copies of shipped NO4_BAR rows are not paired by CHECK — census them by hand, label stripped (PROJECT.md §7, F-013).
+Glossary seeds: not yet — the wave 9 coordinator's step 2 (§9 is empty).
+Carried: NO1_CONTROLROOM/0004 どうやら化け物に襲われたようだ → `It seems it was attacked by a monster.` (R §31); an examined
+body is "it" and 〜されたのだろうか keeps the passive (R §31.2, §33.2); 使えそう keeps "looks" (R §31.1).
+Wave 8 lessons: three CHANGES of four, all reading findings (dropped attributive そう "looks"; body "they"/"the victim" for "it";
+passive turned active); seeds now carry these. Coordinator seeds must be wrap-checked *and* checked against R §20–§21 families
+(the drawer seed dropped "looks"). Both usage-limit stops left drafts as empty skeletons; resume with "continue from the file
+on disk". Keep: measure the last wrapped line before every authored `{br}` ≤ 27, hedges, wrap scan, speakers from content,
+unique review-wN-prK / integrate-wN-prK branches.
 
 ## Remaining
-QUEUE order, generated 2026-10-30 (wave 8 units in Next up) (source characters, tags excluded). Script: NO1.b01 (151), SPACESHIP.b01 (159),
-then the `_T` test scripts (F-008):
-NO4_BAR_T.p01 (1426), p02 (1251), p03 (1270), p04 (1189), NO4_T.b01 (607), b02 (735), b03 (414).
-Scene: none — store complete (wave 4). Four script units per wave (PROJECT.md §10). 9 script units remain after wave 8's four.
+QUEUE order, generated 2026-10-31 (wave 9 units in Next up) (source characters, tags excluded). Script, the `_T` test
+scripts (F-008): NO4_BAR_T.p03 (1270), p04 (1189), NO4_T.b01 (607), b02 (735), b03 (414).
+Scene: none — store complete (wave 4). Four script units per wave (PROJECT.md §10). 5 script units remain after wave 9's four.
 
 ## Blocked — needs a human
 1. **System store** (5 units, 188 rows) — exe slots too short for English; you chose to wait for an
@@ -91,6 +83,7 @@ Scene: none — store complete (wave 4). Four script units per wave (PROJECT.md 
 | 5 | script NO4_TOOL_ROOM.p01, p02, NO4.b01, NO4.b02 | 4 — #21 b01686f (round 0); #20 c60bcc6 (round 0 CHANGES — lone-"an" wraps — round 1 MERGE); #19 77be2cb (round 0 CHANGES — dropped そう hedge — round 1 MERGE); #18 aa4badb (round 0 CHANGES — dropped ようだ/そう hedges — round 1 MERGE) | 0 | script 17/38 (914 rows), scene 4/4, system blocked; NO4_TOOL_ROOM.SCR 61,899 (room done). Session-limit stop, resumed |
 | 6 | script NO5.b01, NO6.b01, NO6.b02, NO3_CHAPEL.p01 | 4 — #25 4a6819e, #23 388bb77, #22 47b3edc, #24 6fe71ae (all round 0; seeded cross-unit sentences re-cut for wraps before review) | 0 | script 21/38 (1,098 rows), scene 4/4, system blocked; decks NO5, NO6 complete; NO3_CHAPEL.SCR 55,976 (62/150). Session-limit stop, resumed |
 | 7 | script NO3_CHAPEL.p02, p03, NO3_NO4.p01, p02 | 4 — #26 56e2531, #29 e6a9aa1, #27 62509c4 (round 0); #28 f45c28a (round 0 CHANGES — 0128 authored-`{br}` line at 28 — round 1 MERGE) | 0 | script 25/38 (1,247 rows), scene 4/4, system blocked; rooms NO3_CHAPEL (55,247 free, 150/150) and NO3_NO4 (60,727, 61/61) complete; F-026 mid-row `{w}` found and fixed. Session-limit stop, resumed |
+| 8 | script NO3.b01, NO3.b02, NO2.b01, NO2.b02 | 4 — #32 4ed66e9 (round 0); #30 0a3bbec (round 0 CHANGES — dropped "looks", body "it", 操作パネル phrase — round 1 MERGE); #31 028dcdf (round 0 CHANGES — locker "looks", body "it" — round 1 MERGE); #33 b7e0ea2 (round 0 CHANGES — passive 〜されたのだろうか — round 1 MERGE) | 0 | script 29/38 (1,421 rows), scene 4/4, system blocked; decks NO3 and NO2 complete (rooms ≥ 62,822 free). Two session-limit stops, resumed. Lineage limit: no successor session |
 
 ## How to resume
 1. Preflight per `CLAUDE.md` §4 step 0. CHECK must pass. A fill marker left in `PROJECT.md` means
