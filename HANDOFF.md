@@ -8,7 +8,7 @@ preflight is `git fetch origin main && git checkout main && git reset --hard ori
 ## NEXT ACTION — always current, always a literal instruction
 > **NO WATCHDOG — attended run** (session lineage depth 8 of 8: `send_later` and `create_session` refused).
 > Wave 8 barrier met: PRs #32 (NO3.b01), #30 (NO3.b02), #31 (NO2.b01), #33 (NO2.b02) all open. Review one at a time
-> in unit order — #32 merged; #30 merged (round 1); #31 round 1 pushed; #33 in rework (round 1); next #31 re-review, then #33 re-review — `reviewer` subagent in the foreground, unique branches review-w8-prN /
+> in unit order — #32 merged; #30, #31 merged (round 1); #33 round 1 pushed; next #33 re-review, then wave close — `reviewer` subagent in the foreground, unique branches review-w8-prN /
 > integrate-w8-prN; `git pull --ff-only` after each. At wave close the human starts wave 9 from a fresh top-level
 > session (`/translate`).
 
@@ -27,7 +27,7 @@ Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEA
 | script NO3.b01 | tl/script-NO3.b01 | agent a6187514e1619c86e | #32 | **MERGED** round 0, squash 4ed66e9 (51 rows, max 4 rows/page, NO3_HW_1.SCR 63,784 free; CHECK 183 + 8 pairs; findings none); integration: 12 §9 rows promoted, 18 rows added, F-003 extended, R §30 | none — next: review #30 |
 | script NO3.b02 | tl/script-NO3.b02 | agent a8a857f473ab05821 | #30 | **MERGED** round 1, squash 0a3bbec (25 rows, max 4 rows/page, NO3_MEDICALROOM.SCR 64,637 free; CHECK 190 + 8 pairs; round 0 CHANGES — dropped "looks", body "it", 操作パネル phrase — round 1 findings none); integration: 5 §9 rows promoted (drawer row corrected, locker sibling `The locker seems to hold nothing that looks usable.{p}`), §6 使えそう and 引き裂く · 切り裂く rows, 死体 "it" note, F-003 extended, R §31 (rulings a §31.1, b §31.2) | none — next: re-review #31, then #33 |
 | script NO2.b01 | tl/script-NO2.b01 | agent a1c8fce0b285232be | #31 | **MERGED** round 1, squash 028dcdf (55 rows, max 4 rows/page, NO2_MAINSTORAGE.SCR 62,822 free; CHECK 205 + 9 pairs; round 0 CHANGES — locker "looks", body "it" — round 1 findings none); integration: 3 §9 rows promoted (§9 now empty), キサマ/スパナ/鍵がかかっている… added, notes set to shipped, F-003 and F-009 extended, R §32 (three events in MAINSTORAGE; 0014/0016/0018 Heming or John; 0020 "They'll" = Heming and Oakland) | none — next: #33 rework |
-| script NO2.b02 | tl/script-NO2.b02 | agent ab765e917510a1a75 | #33 | round 0 **CHANGES** (reviewer agent aba11f462eec32695): 1 NO2_SUBSTORAGE/0010 = 0012 and 2 NO2_THIRDSTORAGE/0009 turned the passive 〜されたのだろうか active → keep the passive with "it" (census 8 / 0 / 0); NO2_NO3/0004 speaker neutral (likely Wolg), 食繋ぐ, 引き裂/切り裂, wrap wordings accepted; ハッチ row due at merge; findings sent 2026-10-31 | translator pushes round 1; re-review by the same reviewer |
+| script NO2.b02 | tl/script-NO2.b02 | agent ab765e917510a1a75 | #33 | round 0 **CHANGES** (reviewer agent aba11f462eec32695): 1 NO2_SUBSTORAGE/0010 = 0012 and 2 NO2_THIRDSTORAGE/0009 turned the passive 〜されたのだろうか active → keep the passive with "it" (census 8 / 0 / 0); NO2_NO3/0004 speaker neutral (likely Wolg), 食繋ぐ, 引き裂/切り裂, wrap wordings accepted; ハッチ row due at merge; findings sent 2026-10-31 | round 1 pushed c0727e3 (all three rows fixed) | re-review by the same reviewer |
 
 ## Next up
 Wave 8 (QUEUE 2026-10-30), four script bundles: NO3.b01 (51 rows, 1,105 chars, ratio 29.98; NO3_CABIN_3002/3003/3104/3105/3106,
