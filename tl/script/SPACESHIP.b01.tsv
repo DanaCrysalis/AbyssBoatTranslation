@@ -1,0 +1,11 @@
+# unit: script/SPACESHIP.b01
+# rows: 8
+# columns: id <TAB> context <TAB> source <TAB> target (empty target = untranslated)
+SPACESHIP/0001	msg spk=0	なに⁉なんなの、このモンスターは…	What⁉ What is this monster…
+SPACESHIP/0002	msg spk=100	ジョン、その武器はチャージに時間が{br}かかるわ。{br}気をつけて‼	John, that weapon{br}takes time to charge.{br}Be careful‼
+SPACESHIP/0003	msg spk=100	この扉は、何の反応も示さない…。{p}	This door shows no response at all…{p}
+SPACESHIP_HW/0001	msg spk=-	今戻るのは危険すぎる…。{p}	It's too dangerous to go back now…{p}
+SPACESHIP_HW/0002	msg spk=-	ジョン、彼らの使っていた銃よ。{br}あなたが持っていて。	John, this is the gun they were using.{br}You keep it.
+SPACESHIP_HW/0003	msg spk=100	なに⁉この音は…。	What⁉ This sound…
+SPACESHIP_HW/0004	msg spk=100	この振動…船の落下が始まっている⁉{br}さっき、制御装置を破壊したから…。	This tremor… the ship's starting to fall⁉{br}Because we destroyed the control system earlier…
+SPACESHIP_HW/0005	msg spk=100	ジョン、ここは危険よ！{br}急ぎましょう。	John, it's dangerous here!{br}Let's hurry.
