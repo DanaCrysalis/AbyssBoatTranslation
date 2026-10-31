@@ -23,10 +23,10 @@ Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEA
 ## In flight
 | Unit | Branch | Translator | PR | State | Next |
 |---|---|---|---|---|---|
-| script NO3.b01 | tl/script-NO3.b01 | agent a6187514e1619c86e | — | dispatched 2026-10-30 | translator opens PR |
-| script NO3.b02 | tl/script-NO3.b02 | agent a8a857f473ab05821 | — | dispatched 2026-10-30 | translator opens PR |
-| script NO2.b01 | tl/script-NO2.b01 | agent a1c8fce0b285232be | — | dispatched 2026-10-30 | translator opens PR |
-| script NO2.b02 | tl/script-NO2.b02 | agent ab765e917510a1a75 | — | dispatched 2026-10-30 | translator opens PR |
+| script NO3.b01 | tl/script-NO3.b01 | agent a6187514e1619c86e | — | dispatched 2026-10-30; 429 stop; resumed 2026-10-31 | translator opens PR |
+| script NO3.b02 | tl/script-NO3.b02 | agent a8a857f473ab05821 | — | dispatched 2026-10-30; 429 stop; resumed 2026-10-31 | translator opens PR |
+| script NO2.b01 | tl/script-NO2.b01 | agent a1c8fce0b285232be | — | dispatched 2026-10-30; 429 stop; resumed 2026-10-31 | translator opens PR |
+| script NO2.b02 | tl/script-NO2.b02 | agent ab765e917510a1a75 | — | dispatched 2026-10-30; 429 stop; resumed 2026-10-31 | translator opens PR |
 
 ## Next up
 Wave 8 (QUEUE 2026-10-30), four script bundles: NO3.b01 (51 rows, 1,105 chars, ratio 29.98; NO3_CABIN_3002/3003/3104/3105/3106,
@@ -75,6 +75,7 @@ Scene: none — store complete (wave 4). Four script units per wave (PROJECT.md 
 - Wave 6 seeds: four §9 cross-unit sentences wrapped badly (lone "a"/"I", one-word last rows — NO6.b02 Flag 3, NO6.b01 Flag 4). Coordinator replaced them before review, sent to all three NO5/NO6 translators: 鍵が掛かっていて… `It's locked, so the door won't open.{p}`; 水かさ… `The water… it keeps rising…{w}{br}Must hurry… it's dangerous…{p}`; 水が深すぎて… `The water's too deep… can't… brea… the…{p}`; シャッターで封鎖され(て)… `A shutter has sealed it off. There seems to be no going any further.{p}` (codec.wrap verified). The reviewer updates §9 at integration.
 - Wave 6 stopped on the 5-hour session limit 2026-10-26 ~02:20 UTC (all four translators, HTTP 429; reset 06:20) and resumed on the human's "continue" 2026-10-30 11:00 UTC; translators resumed by `SendMessage`, worktrees intact (drafts uncommitted).
 - Wave 7 stopped on the 5-hour session limit 2026-10-30 ~12:00 UTC (all four translators, HTTP 429, mid-draft; reset 15:50) and resumed on the human's "continue" 19:57 UTC; translators resumed by `SendMessage`, worktrees intact (drafts uncommitted).
+- Wave 8 stopped on the 5-hour session limit 2026-10-30 ~20:50 UTC (all four translators, HTTP 429, early in drafting; reset 00:50) and resumed on the human's "continue" 2026-10-31 16:44 UTC; translators resumed by `SendMessage` ("continue from the file on disk"), worktrees intact.
 - Wave 2 stopped by the human ("stop for now", 2026-10-06 ~14:40 UTC) mid-review and resumed on "continue" 2026-10-25 01:05 UTC; translators resumed by `SendMessage` with worktrees intact.
 
 ## Wave history
