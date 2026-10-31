@@ -135,6 +135,13 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | 燃料バルブ | 燃料 | the fuel valve; 燃料: fuel | 14; 4 | — | NO3_CHAPEL/0126 "If we close the fuel valve"; 燃料 as shipped NO6_HW_3/0001; 1 / 0 / 0 · 2 / 0 / 0 | R §28.1 |
 | アモ | — | round ("take out one round") | 5 | — | NO3_CHAPEL/0122 only, bound to s28/s29 `Hold the round` / `Don't hold it` (§4); never "bullet"; 1 / 0 / 0 | R §25.1, §28.1 |
 | ステンドグラス | — | the stained glass | 17 | — | NO3_CHAPEL/0131 "Cracks run through the stained glass."; 1 / 0 / 0 | R §28.1 |
+| 食料 · 食糧 | 保存用の食料 | food; 保存用の食料: preserved food | 4; 14 | — | 食料庫 stays "the food storeroom" (§2); 食糧 NO3_FOODSTORAGE/0013, 0014, 0016 "food"; 保存用 NO2_SUBSTORAGE/0013, 0015 (#33); never "provisions"; 食料 39 / 0 / 3 incl. 食料庫 11 / 0 / 2 · 食糧 3 / 0 / 0 | R §30.1 |
+| エレベータ · コントロール装置 · リフト · 食料運搬用のリフト | — | elevator · the controls · lift · a lift for carrying food | 8 · 12 · 4 · 24 | — | NO3_FOODSTORAGE/0006–0011; NO2_SUBSTORAGE/0007–0008 (#33); ワイヤーリフト stays "the wire lift"; never "dumbwaiter"; 4 / 0 / 0 · 4 / 0 / 0 · 4 / 0 / 0 alone · 1 / 0 / 0 | R §30.1 |
+| バッテリ · バッテリー | — | battery | 7 | 43 (items/008, blocked) | both spellings one word: NO3_FOODSTORAGE/0009 "the battery we got earlier"; NO3_STORAGE/0003 (#30) "a battery"; 2 / 0 / 1 | R §30.1 |
+| ハチェット | — | hatchet | 7 | 43 (items/002, blocked) | never "axe"; NO3_HW_1/0004 "Smashed the wooden boards with the hatchet.", 0009; equip/002 blocked; 2 / 0 / 2 | R §30.1 |
+| ダンボール | 食糧のダンボール | cardboard box; 食糧のダンボールがある → `A cardboard box of food.` | 13; 24 | — | NO3_FOODSTORAGE/0013 = 0014 (first sentence, before an authored `{br}`); 2 / 0 / 0 | R §30.1 |
+| 木板 | — | wooden boards | 13 | — | NO3_HW_1/0003 "nailed over the door", 0004; 2 / 0 / 0 | R §30.1 |
+| 収容箱 | — | storage box | 11 | — | NO3_HW_1/0009 "a storage box for a hatchet"; 1 / 0 / 0 | R §30.1 |
 
 ## 4. Classes, units, system terms
 | Source | Variants | Target | Cols | Cap | Note | Ruling |
@@ -143,6 +150,7 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | Ｒｅｔｒｙ？ | — | Retry? | 6 | — | the game-over prompt, the source's own English: type ASCII `Retry?` (encodes to the source bytes) | R §10.1 |
 | はい · いいえ (choice) | — | Yes · No | 3 · 2 | 27 | `choice` rows only (8 / 0 / 0 each); はい in dialogue is in context | R §10.1 |
 | 握る · 握らない (choice) | — | Hold the round · Don't hold it | 14 · 13 | 27 | the engine vote after NO3_CHAPEL/0122 (s28 / s29), never a handshake; 0122 右手に握れ takes "hold it in your right hand"; 1 / 0 / 0 each | R §25.1 |
+| 通風孔に入る · 入らない (choice) | — | Enter the vent · Don't enter | 14 · 11 | 27 | `choice` rows: NO3_CABIN_3003/s06–s07, 3105/s07–s08; NO2_CABIN_2001/s05–s06 (#31), NO2_SUBSTORAGE/s06–s07 (#33) match; 入らない in dialogue (NO5_HW_R/0006) in context; 4 / 0 / 0 each | R §30.1 |
 
 ## 5. Verbal tics — decided, never mix
 <!-- What is fixed is the word; punctuation follows the source line. -->
@@ -228,6 +236,16 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | 鍵が掛かっていて、扉は開かない。{p} | — | `It's locked, so the door won't open.{p}` | 36 (24 / 11) | fixed sentence, unhedged: NO6_HW_2/0005, 0007 = NO6_HW_3/0005–0007, NO6_HW_4/0005, 0008; 扉は鍵が掛かっていて開きそうに無い (NO3_HW_1/0005–6, NO3_HW_2/0002–3) is hedged, kept apart; 7 / 0 / 0 | R §23.1 |
 | 水圧で扉を開けられない。{p} | — | `The water pressure won't let the door open.{p}` | 43 (28 / 14) | fixed sentence: NO6_HW_2/0008–0009 = NO6_HW_4/0006–0007, NO6_HW_5/0004; 5 / 0 / 0 | R §23.1 |
 | 閉じ込める | 閉じ込めた · 閉じ込めていた | shut in ("We've shut him in"; "he's supposed to be shut in") | 7 | the monster's confinement: NO4_HWL_BACK2/0006, NO3_NO4/0053 (はず → "supposed to"); NO2_MAINSTORAGE/0027 to come; 閉じこめ in context (NO3_CHAPEL/0023 "locked in"); 3 / 0 / 0 | R §29.1 |
+| 腐臭 | 腐敗臭 | stench of decay | 15 | NO3_FOODSTORAGE/0013 "a horrible stench of decay drifts out"; 腐敗臭 as shipped NO4_SHOP/0003 "A strong stench of decay drifts from the body."; 1 / 0 / 0 each | R §30.1 |
+| 明かりになる物 | — | something to use as a light | 27 | Judy: NO3_CABIN_3105/0002, 0003 = 0004; 3 / 0 / 0 | R §30.1 |
+| 隣の部屋 | — | the next room | 13 | NO3_CABIN_3002/0001 = 3003/0001 (twice in each); 部屋 stays "room"; 2 / 0 / 0 | R §30.1 |
+| 〜死体が転がっている | 死体が横たわっている | `A body lies here, «participle».`; where the frame strands one word before an authored `{br}`: `A body, «participle», lies here.` | 17 | NO4_4102/0004 = NO3_CABIN_3003/0003 "…, brutally hacked to pieces."; 3105/0006 "…, shot with a gun."; 3105/0008 `A body, hacked to pieces, lies here.{br}`; NO2_CABIN_2101/0001–0002, 2103/0001 (#31) to come; 6 / 0 / 0 + 1 横たわって | R §30.2 |
+| 撃たれて死んでいる | 撃たれて死んでる · 銃で撃たれて死んでいる | `Shot dead.`; 銃で: `Shot dead with a gun.` | 10; 21 | NO4_P_OFFICE/0003, 0009–0011 (shipped), NO3_FOODSTORAGE/0016 `Shot dead.{br}`; NO2_THIRDSTORAGE/0010 (#33) to come; 6 / 0 / 0 | R §30.1 |
+| 首を飛ばされ(る) | 首を飛ばされている | tear … head off: `a monster tore its head off` (active); `its head has been torn off` (passive) | 17; 26 | NO3_FOODSTORAGE/0015 `It seems a monster tore its head off.{p}`; NO2_THIRDSTORAGE/0011 (#33) `Its head has been torn off.`; 首が切り離され "cut off", 首が切断され "severed" are other words; 2 / 0 / 0 | R §30.2 |
+| 扉は鍵が掛かっていて開きそうに無い。{p} | — | `The door's locked. It looks like it won't open.{p}` | 47 (27 / 19) | fixed sentence, hedged: NO3_HW_1/0005–0006 = NO3_HW_2/0002–0003 (#30 matches); kept apart from the unhedged `It's locked, so the door won't open.` (§6); 4 / 0 / 0 | R §30.1 |
+| シャッターは閉鎖され開きそうに無い。{p} | — | `The shutter's sealed. It looks like it won't open.{p}` | 50 (24 / 25) | fixed sentence: NO3_HW_1/0007, 0008, 0011 = NO2_HW_4/0001 (#31 matches); the ロック · 閉ざされ siblings are §9; 4 / 0 / 0 | R §30.1 |
+| コントロール装置を破壊されたため、このエレベータはもう使用できない。{p} | — | `The controls were destroyed, so this elevator can no longer be used.{p}` | 68 (28 / 23 / 15) | fixed sentence: NO3_FOODSTORAGE/0007 = NO2_SUBSTORAGE/0008 (#33 matches); 2 / 0 / 0 | R §30.1 |
+| エレベータは反応しない…。ここで狙撃された時にコントロール装置が破壊されてしまったようだ。{p} | …食料庫で狙撃された時に… | `The elevator won't respond… It seems the sniper fire here destroyed the controls.{p}`; 食料庫で: `…sniper fire in the food storeroom destroyed…` | 81 (27 / 24 / 28); 98 (27 / 27 / 28 / 13) | siblings, CHECK does not pair them: NO3_FOODSTORAGE/0006 · NO2_SUBSTORAGE/0007 (#33 matches); 1 / 0 / 0 each | R §30.1 |
 
 ## 7. Register per character
 | Character | Register | Contractions? | Markers | Ruling |
@@ -257,25 +275,13 @@ NOT decisions. The first translator to render one promotes it in the PR's Glossa
 so; the reviewer moves the row up into its section in the integration commit. -->
 | Source | Variants | Proposed | Alternatives | Where seen | Wave |
 |---|---|---|---|---|---|
-| 扉は鍵が掛かっていて開きそうに無い。{p} | — | `The door's locked. It looks like it won't open.{p}` (27 / 19) | — | NO3_HW_1/0005–0006 (NO3.b01) = NO3_HW_2/0002–0003 (NO3.b02); hedged, kept apart from the unhedged `It's locked, so the door won't open.` (§6) | 8 |
-| シャッターは閉鎖され開きそうに無い。{p} | — | `The shutter's sealed. It looks like it won't open.{p}` (24 / 25) | — | NO3_HW_1/0007, 0008, 0011 (NO3.b01) = NO2_HW_4/0001 (NO2.b01) | 8 |
-| シャッターはロックされていて開きそうに無い。{p} · シャッターは閉ざされていて開きそうに無い。{p} | — | `The shutter's locked. It looks like it won't open.{p}` · `The shutter's closed. It looks like it won't open.{p}` (24 / 25 each) | — | ロック: NO3_HW_2/0001, 0004, 0005, NO3_HW_3/0001 (NO3.b02); 閉ざされ: NO2_HW_2/0001, NO2_HW_5/0001 (NO2.b01); one family with the row above | 8 |
+| シャッターはロックされていて開きそうに無い。{p} · シャッターは閉ざされていて開きそうに無い。{p} | — | `The shutter's locked. It looks like it won't open.{p}` · `The shutter's closed. It looks like it won't open.{p}` (24 / 25 each) | — | ロック: NO3_HW_2/0001, 0004, 0005, NO3_HW_3/0001 (NO3.b02); 閉ざされ: NO2_HW_2/0001, NO2_HW_5/0001 (NO2.b01); one family with §6 シャッターは閉鎖され (R §30.1) | 8 |
 | シャッターが閉じていて先に進めない。{p} · シャッターが下りていて先には進めない。{p} | — | `The shutter is closed, so no going any further.{p}` (28 / 18) · `The shutter is down, so no going any further.{p}` (26 / 18) | R §29.2's `The shutter is down, so there's no going any further.{p}` wraps `…any \| further.` — a one-word last row; replaced | NO2_HW_1/0001, 0004 · NO2_HW_5/0003 (NO2.b01); unhedged; "No going any further." as §6 閉ざされて | 8 |
-| コントロール装置を破壊されたため、このエレベータはもう使用できない。{p} | — | `The controls were destroyed, so this elevator can no longer be used.{p}` (28 / 23 / 15) | — | NO3_FOODSTORAGE/0007 (NO3.b01) = NO2_SUBSTORAGE/0008 (NO2.b02) | 8 |
-| エレベータは反応しない…。ここで狙撃された時にコントロール装置が破壊されてしまったようだ。{p} · …食料庫で狙撃された時に… | — | `The elevator won't respond… It seems the sniper fire here destroyed the controls.{p}` (27 / 24 / 28) · `… It seems the sniper fire in the food storeroom destroyed the controls.{p}` (27 / 27 / 28 / 13) | — | NO3_FOODSTORAGE/0006 (NO3.b01) · NO2_SUBSTORAGE/0007 (NO2.b02); siblings, CHECK does not pair them | 8 |
 | ほかには使えそうな物は無い。{p} | — | `There's nothing else that looks usable.{p}` (25 / 13) | — | NO3_MEDICALROOM/0001 (NO3.b02) = NO2_TOFE_ROOM/0005 (NO2.b02); shipped NO4_STORAGE/0004 "There seems to be nothing that looks usable." | 8 |
 | 〜から、銃の弾をみつけた。{p} | 机の引き出しから · ロッカーから | `Found ammo in a desk drawer.{p}` (28) · `Found ammo in the locker.{p}` | — | NO3_STORAGE/0001 (NO3.b02) · NO2_MAINSTORAGE/0029 (NO2.b01); 銃の弾 → ammo (§3 残弾) | 8 |
 | 〜には、(もう)使えそうなものは無いようだ。{p} | 引き出しには、もう · ロッカーには、 | `There seems to be nothing else usable in the drawer.{p}` · `There seems to be nothing usable in the locker.{p}` | — | NO3_STORAGE/0002 (NO3.b02) · NO2_MAINSTORAGE/0030 (NO2.b01) | 8 |
-| 天井に通風孔が見える。{br}ここから他の部屋に行けそうだ。 · 壁に… | — | `An air vent in the ceiling.{br}Looks like it could lead to other rooms.` (27 · 27 / 12) · `An air vent in the wall.{br}…` | — | NO2_CABIN_2001/0001 (NO2.b01) · NO2_SUBSTORAGE/0009 (NO2.b02); 天井には…ここをたどって行けば別の部屋にいけそうだ (NO3_CABIN_3003/0002 = NO3_CABIN_3105/0005) is its own sentence, same vocabulary | 8 |
-| 通風孔に入る · 入らない (choice) | — | `Enter the vent` · `Don't enter` | — | NO3_CABIN_3003/s06–s07, NO3_CABIN_3105/s07–s08 (NO3.b01), NO2_CABIN_2001/s05–s06 (NO2.b01), NO2_SUBSTORAGE/s06–s07 (NO2.b02) | 8 |
+| 天井に通風孔が見える。{br}ここから他の部屋に行けそうだ。 · 壁に… | — | `An air vent in the ceiling.{br}Looks like it could lead to other rooms.` (27 · 27 / 12) · `An air vent in the wall.{br}…` | — | NO2_CABIN_2001/0001 (NO2.b01) · NO2_SUBSTORAGE/0009 (NO2.b02); 天井には…ここをたどって行けば別の部屋にいけそうだ (NO3_CABIN_3003/0002 = NO3_CABIN_3105/0005, shipped `An air vent in the ceiling. It looks like following it could lead to another room.`, R §30.1) is its own sentence, same vocabulary | 8 |
 | 『…』{br} + と書かれた用紙が(何枚か)張られている。{p} | — | `"Optional Cruise Tours,"{br}` + `read several posted sheets.{p}` (24 · 27) · `"Shipboard Precautions,"{br}` + `reads a posted sheet.{p}` | — | NO3_NO2/0001–0002 (NO3.b02; the + row's leading full-width space is not carried) · NO2_NO3/0005–0006 (NO2.b02); the と書かれている pattern (§6, R §12.1) | 8 |
-| 〜死体が転がっている · 横たわっている | — | `A body lies here, …` (shipped NO4_4102/0004 `A body lies here, brutally hacked to pieces.{p}`) | — | NO3_CABIN_3003/0003, 3105/0006, 0008 (NO3.b01), NO2_CABIN_2101/0001–0002, 2103/0001 (NO2.b01) | 8 |
-| 撃たれて死んでいる · 撃たれて死んでる | 銃で撃たれて死んでいる | `Shot dead.` (shipped NO4_P_OFFICE/0003, 0010–0011) | — | NO3_FOODSTORAGE/0016 (NO3.b01) · NO2_THIRDSTORAGE/0010 (NO2.b02) | 8 |
-| 首を飛ばされ(る) | — | head torn off ("Its head was torn off by a monster, it seems.") | head knocked off; decapitated | NO3_FOODSTORAGE/0015 (NO3.b01) · NO2_THIRDSTORAGE/0011 (NO2.b02); 首が切り離され (NO3_MEDICALROOM/0007) "cut off", 首が切断され (shipped NO6_BRIDGE/0019) "severed" are other words | 8 |
-| 食料 · 食糧 | 保存用の食料 | food; 保存用の食料: preserved food | provisions | 食料 as shipped (29 rows "food"); 食糧 NO3_FOODSTORAGE/0013, 0014, 0016; 保存用 NO2_SUBSTORAGE/0013, 0015; 食料庫 stays "the food storeroom" (§2) | 8 |
-| エレベータ · コントロール装置 · リフト · 食料運搬用のリフト | — | elevator · the controls · lift · a lift for carrying food | dumbwaiter (rejected: too technical) | NO3_FOODSTORAGE/0006–0011 (NO3.b01), NO2_SUBSTORAGE/0007–0008 (NO2.b02); ワイヤーリフト stays "the wire lift" (§3) | 8 |
-| バッテリ · バッテリー | — | battery | — | NO3_FOODSTORAGE/0009 (NO3.b01) · NO3_STORAGE/0003 (NO3.b02); items/008 (blocked) | 8 |
-| ハチェット | — | hatchet | axe | NO3_HW_1/0004, 0009 (NO3.b01); items/002, equip/002 (blocked) | 8 |
 
 ## 10. Open questions
 <!-- one line each, with the FLAGS id. A closed question is deleted here; its answer stays in rulings.md. -->

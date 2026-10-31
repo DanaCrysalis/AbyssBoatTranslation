@@ -2783,3 +2783,60 @@ Census counts are rows per store (script / scene / system), from the reviewer's 
 - NO2_MAINSTORAGE/0027 takes "shut in" (§29.1).
 - NO2_HW_5/0003 takes the unhedged shutter sentence (§29.2).
 - Glossary: none.
+
+## Unit script NO3.b01 (PR #32, MERGED, 2026-10-31)
+
+Seven small deck-3 rooms (NO3_CABIN_3002/3003/3104/3105/3106, NO3_FOODSTORAGE, NO3_HW_1; 51 rows, 1,105 source characters, tier D, ratio 29.98): John's examine text on bodies, doors, shutters and vents; Judy in the food storeroom (the lift and the battery) and choosing the chapel as the new base.
+
+Reviewed once:
+- **Round 0** (84adc22, merged with main bc2b1ac for review → 3366c46, no conflict): MERGE, squash 4ed66e9. Findings: none.
+
+Figures (on the merge with bc2b1ac):
+- **Containers.** MEASURE after MERGE: NO3_HW_1.SCR 1,751 / 65,535 (63,784 free), NO3_FOODSTORAGE 1,687 (63,848), NO3_CABIN_3105 1,152 (64,383), 3003 763 (64,772), 3002 369 (65,166), 3104 341 (65,194), 3106 287 (65,248); every room complete. `containers negative: 0; under the reserve (2000 bytes): 0`.
+- **Pages.** At most 4 rows per page (UNITCHECK, 51 rows, 0 violations); whole store 1,298 rows, 0 violations. MERGE: keys that never matched 0.
+- **Duplicates.** CHECK compared 183 duplicate pairs and 8 tag-variant pairs. The reviewer's census: 51 rows × every script and scene dump row, exact and with `{p}{w}{br}` stripped (！？ → ⁉), 96,798 comparisons, 64 recurrences, 0 divergent against `tl/` and the heads of the open sibling PRs #30, #31, #33.
+- **Codes.** The authored `{p}{w}{br}` sequence equals the source's on 51 of 51 rows (PR Flag 2); no `{w}` in the unit. `…`/`‼`/`⁉`/`──` counts match on 51 of 51.
+- **Widths.** 17 lines end at an authored `{br}`; the last wrapped line of each is ≤ 26 (`codec.wrap(…, 28)`, `len()`). The 28-column lines are tool wraps. No lone "a"/"an"/"I", no one-word last row (read in `build/script_merged.tsv`).
+- **F-012.** Both `+` rows (NO3_CABIN_3104/0002, 3105/0007) follow a `{br}` ending.
+
+Census counts are rows per store (script / scene / system), from the reviewer's grep of `dumps/` on 2026-10-31. Line citations use PROJECT.md §7's numbering in `tl/script/NO3.b01.tsv` (line = row order + 3).
+
+### 30.1 Terms promoted from §9, and rows added
+- **Promoted, as seeded** (§9 → §3, §4, §6), each applied byte for byte:
+  - 扉は鍵が掛かっていて開きそうに無い。{p} → `The door's locked. It looks like it won't open.{p}` (4 / 0 / 0): `:48`, `:49` NO3_HW_1/0005–0006; NO3_HW_2/0002–0003 in #30 already match. Hedged, kept apart from the unhedged §6 `It's locked, so the door won't open.`
+  - シャッターは閉鎖され開きそうに無い。{p} → `The shutter's sealed. It looks like it won't open.{p}` (4 / 0 / 0): `:50`, `:51`, `:54` NO3_HW_1/0007, 0008, 0011; NO2_HW_4/0001 in #31 matches. The ロック · 閉ざされ siblings stay in §9 for #30/#31.
+  - コントロール装置を破壊されたため… (2 / 0 / 0): `:34` NO3_FOODSTORAGE/0007; NO2_SUBSTORAGE/0008 in #33 matches.
+  - エレベータは反応しない…。ここで狙撃された時に… (1 / 0 / 0) `:33` NO3_FOODSTORAGE/0006, and its 食料庫で sibling NO2_SUBSTORAGE/0007 (1 / 0 / 0, #33 matches); promoted as one row, CHECK does not pair them.
+  - 通風孔に入る · 入らない (choice) → `Enter the vent` · `Don't enter` (4 / 0 / 0 each as choice rows): `:13`, `:14`, `:25`, `:26`; #31 NO2_CABIN_2001/s05–s06 and #33 NO2_SUBSTORAGE/s06–s07 match. 入らない in dialogue (NO5_HW_R/0006) stays in context.
+  - 撃たれて死んでいる → `Shot dead.` (6 / 0 / 0): `:43` NO3_FOODSTORAGE/0016, as shipped NO4_P_OFFICE/0003, 0009–0011; NO2_THIRDSTORAGE/0010 (#33) to come.
+  - 食料 · 食糧 → "food" (食料 39 / 0 / 3 incl. 食料庫 11 / 0 / 2; 食糧 3 / 0 / 0): `:40`, `:41`, `:43`. 保存用の食料 "preserved food" (#33). "provisions" rejected.
+  - エレベータ · コントロール装置 · リフト · 食料運搬用のリフト → elevator · the controls · lift · a lift for carrying food (4 · 4 · 4 alone, 6 with ワイヤーリフト · 1, all script): `:33`–`:38`.
+  - バッテリ · バッテリー → "battery" (2 / 0 / 1): `:36`; #30 NO3_STORAGE/0003 バッテリー agrees.
+  - ハチェット → "hatchet" (2 / 0 / 2): `:47`, `:52`; never "axe".
+- **Added** (PR Glossary additions):
+  - ダンボール → "cardboard box"; 食糧のダンボールがある → `A cardboard box of food.` (2 / 0 / 0, `:40`, `:41`). The fragment is needed: "There's a cardboard box of food." wraps `…box of | food.` before the authored `{br}`.
+  - 隣の部屋 → "the next room" (2 / 0 / 0, `:4`, `:7`). 木板 → "wooden boards" (2 / 0 / 0, `:46`, `:47`). 収容箱 → "storage box" (1 / 0 / 0, `:52`).
+  - 腐臭 → "stench of decay" (1 / 0 / 0, `:40`), with 腐敗臭 (1 / 0 / 0) as shipped NO4_SHOP/0003.
+  - 明かりになる物 → "something to use as a light" (3 / 0 / 0, `:18`–`:20`).
+- **Applied, unchanged:** 死体 "body"; 化け物 "monster"; 通風孔 "An air vent" at first mention (`:8`, `:17`), "the air vent" after (`:19`, `:20`); 鍵 "locked" (`:15`, `:48`) and "A key" (`:31`); 乗客 "passengers" (`:10`); 操作パネル "control panel" (`:38`); 切り刻む · 無残に (`:9` = shipped NO4_4102/0004); ジョン "John" (`:37`).
+- NO3_CABIN_3003/0002 = 3105/0005 天井には通風孔が見える。ここをたどって行けば… → `An air vent in the ceiling. It looks like following it could lead to another room.` (2 / 0 / 0, a CHECK pair); noted in §9's 天井に通風孔 row for #31/#33.
+- Glossary: 18 rows added to §3, §4, §6; 12 §9 rows removed; §9 rows still needed by #30/#31/#33 kept, two notes pointed here.
+
+### 30.2 Frame departures, readings and speakers (PR Flags 3–5, 7–11)
+- **`:24 NO3_CABIN_3105/0008` `A body, hacked to pieces, lies here.{br}`** (PR Flag 3, step 6). The §9 frame `A body lies here, hacked to pieces.` wraps 27 + `pieces.` (7) before an authored `{br}`: a one-word last row (R §1.12). The reorder keeps every word and the glossary term. Accepted; the §6 row records it as the frame's variant before an authored `{br}`. `:22 3105/0006` keeps the frame (`A body lies here, shot with | a gun.`).
+- **`:42 NO3_FOODSTORAGE/0015` `It seems a monster tore its head off.{p}`** (PR Flag 4). The §9 example `Its head was torn off by a monster, it seems.` wraps `…by a | monster,` (lone "a"). The active verb keeps ようだ as "It seems". The row is worded as the verb "tear … head off", active or passive, so it also covers #33 NO2_THIRDSTORAGE/0011 首を飛ばされている。化け物にやられたのだろう。 → `Its head has been torn off. A monster probably did it.{p}` (census 首を飛ばさ 2 / 0 / 0).
+- **化け物 "a monster" in narration** (PR Flag 10): `:24` 3105/0008, `:39` FOODSTORAGE/0012, `:42` 0015. R §11.1: the article follows the line — generic "a" where no known monster is meant (NO4_BAR/0368), "the" for the known one (NO5_BANK/0006, NO3_CHAPEL/0035, 0064, NO3_NO4/0058). These bodies' killers are unspecified, and small monsters are aboard; #31 NO2_CABIN_2101/0001 and #33 NO2_THIRDSTORAGE/0011 take "a monster" too. Census 化け物 58 / 1 / 0, 怪物 21 / 0 / 0. Accepted.
+- **……行きましょう。** `:32` FOODSTORAGE/0005 `……Let's go.` = the second sentence of #33 NO2_THIRDSTORAGE/0007 `I'm sorry.{br}……Let's go.` (sentence-level; CHECK does not pair a line inside a longer message).
+- **Rewordings for wraps** (PR Flag 5), each measured and accepted: `:31` 0004 "here" supplied; `:37` 0010 `…impossible…… it seems.`; `:17` 3105/0001 移動手段 → "their way around"; `:19`/`:20` "using the air vent is dangerous…"; `:40` 漂っている → "drifts out"; `:43` 取り合いで → "fighting over the food"; `:10` 3003/0004 銃で撃たれた死体だ → `A body, shot with a gun.`
+- **Hedges kept** (PR Flag 7): ようだ "seems"/"It seems"; そう "looks like"; `:27` 3106/0001 らしく…そうにない "seems … doesn't look like"; だろうか "Could …?"; かしら "I wonder"; みたい "it seems"; どうやら…ようだ "Seems".
+- **Body pronoun "it"** (PR Flag 11), as shipped NO4_SHOP/0003; "they" only for the unseen occupants at `:16` 3104/0002.
+- **Speakers** (PR Flag 8, F-009), from content: Judy at 3105/0001–0004, FOODSTORAGE/0001–0005, 0008–0010 (ね/わ/かしら/のね, "Go, John"), HW_1/0001–0002 (bound, R §27.3); narration (plain だ/ようだ) elsewhere. spk=100 carries both; the English is speaker-neutral where it matters.
+- **`:52`–`:53` NO3_HW_1/0009 ends `{br}`, 0010 is not `+`** (PR Flag 13). Both kept as the source. With a `{br}` ending there is no glue whether or not the engine continues the box. No change.
+- **Pre-choice prompts** (PR Flag 9): `:4`/`:7` 3 rows and `:17` 4 rows before choices; recorded under F-003 (whether the options share the box). Not blocking.
+- Glossary: the §6 死体が転がっている and 首を飛ばされ rows point here.
+
+### 30.3 Recurrences and bindings
+- **NO3_HW_1/0001–0002 = NO3_NO4/0011–0012** byte for byte (`:44`, `:45`; R §27.3): source and target bytes equal, verified.
+- For the open wave-8 PRs, already matching at their heads: #30 NO3_HW_2/0002–0003, NO3_STORAGE/0003 "battery"; #31 NO2_HW_4/0001, NO2_CABIN_2001/s05–s06; #33 NO2_SUBSTORAGE/0007–0008, s06–s07, NO2_THIRDSTORAGE/0007 (……Let's go.), 0011 ("torn off", "a monster").
+- F-003 extended with the three prompts (`:4`, `:7`, `:17`).
+- Glossary: none beyond §30.1.
