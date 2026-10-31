@@ -23,7 +23,7 @@ Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEA
 | Unit | Branch | Translator | PR | Round | Next |
 |---|---|---|---|---|---|
 | script NO1.b01 | `tl/script-NO1.b01` | returned 2026-10-31 | #34 | 0 | review behind the barrier (64,568 free min; open: Flag 2 shelves recast, Flag 7 0002 verb) |
-| script SPACESHIP.b01 | `tl/script-SPACESHIP.b01` | dispatched 2026-10-31 | — | 0 | translator drafts, opens PR |
+| script SPACESHIP.b01 | `tl/script-SPACESHIP.b01` | returned 2026-10-31 | #35 | 0 | review behind the barrier (64,841 free min; open: Flag 3 "we destroyed", Flag 2 moved `{br}`) |
 | script NO4_BAR_T.p01 | `tl/script-NO4_BAR_T.p01` | dispatched 2026-10-31 | — | 0 | translator drafts, opens PR |
 | script NO4_BAR_T.p02 | `tl/script-NO4_BAR_T.p02` | dispatched 2026-10-31 | — | 0 | translator drafts, opens PR |
 
