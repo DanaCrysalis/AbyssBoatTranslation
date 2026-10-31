@@ -6,10 +6,11 @@ at the close commit (`CLAUDE.md` Rule 3). A fresh container may clone shallow wi
 preflight is `git fetch origin main && git checkout main && git reset --hard origin/main`.
 
 ## NEXT ACTION — always current, always a literal instruction
-> **NO WATCHDOG — attended run.** Wave 8 coordinator (session lineage depth 8 of 8: `send_later` and
-> `create_session` are refused, "no user or organization setting changes this limit"). Wave 8 is dispatched:
-> wait for all four PRs (barrier), then review one at a time. At wave close no successor session can be opened
-> from here: the human starts wave 9 from a **fresh top-level session** (`/translate`, which resets the lineage).
+> **NO WATCHDOG — attended run** (session lineage depth 8 of 8: `send_later` and `create_session` refused).
+> Wave 8 barrier met: PRs #32 (NO3.b01), #30 (NO3.b02), #31 (NO2.b01), #33 (NO2.b02) all open. Review one at a time
+> in unit order — #32, #30, #31, #33 — `reviewer` subagent in the foreground, unique branches review-w8-prN /
+> integrate-w8-prN; `git pull --ff-only` after each. At wave close the human starts wave 9 from a fresh top-level
+> session (`/translate`).
 
 ## Progress
 | Store | Done | Total | |
@@ -23,10 +24,10 @@ Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEA
 ## In flight
 | Unit | Branch | Translator | PR | State | Next |
 |---|---|---|---|---|---|
-| script NO3.b01 | tl/script-NO3.b01 | agent a6187514e1619c86e | — | dispatched 2026-10-30; 429 stop; resumed 2026-10-31 | translator opens PR |
-| script NO3.b02 | tl/script-NO3.b02 | agent a8a857f473ab05821 | #30 | PR open (25 rows, max 4 rows/page, NO3_MEDICALROOM.SCR 64,633 free); Flags 4–5 for the reviewer | barrier: wait for siblings |
-| script NO2.b01 | tl/script-NO2.b01 | agent a1c8fce0b285232be | #31 | PR open (55 rows, max 4 rows/page, NO2_MAINSTORAGE.SCR 62,828 free); open: speakers 0014/0016/0018, 0025 | barrier: wait for siblings |
-| script NO2.b02 | tl/script-NO2.b02 | agent ab765e917510a1a75 | — | dispatched 2026-10-30; 429 stop; resumed 2026-10-31 | translator opens PR |
+| script NO3.b01 | tl/script-NO3.b01 | agent a6187514e1619c86e | #32 | PR open (51 rows, max 4 rows/page, NO3_HW_1.SCR 63,784 free); translator report pending | review 1st |
+| script NO3.b02 | tl/script-NO3.b02 | agent a8a857f473ab05821 | #30 | PR open (25 rows, max 4 rows/page, NO3_MEDICALROOM.SCR 64,633 free); Flags 4–5 for the reviewer | review 2nd |
+| script NO2.b01 | tl/script-NO2.b01 | agent a1c8fce0b285232be | #31 | PR open (55 rows, max 4 rows/page, NO2_MAINSTORAGE.SCR 62,828 free); open: speakers 0014/0016/0018, 0025 | review 3rd |
+| script NO2.b02 | tl/script-NO2.b02 | agent ab765e917510a1a75 | #33 | PR open (43 rows, max 4 rows/page, NO2_SUBSTORAGE.SCR 63,713 free); open: speaker NO2_NO3/0004, 食繋ぐ typo, 切り裂かれ vs 引き裂かれ | review 4th |
 
 ## Next up
 Wave 8 (QUEUE 2026-10-30), four script bundles: NO3.b01 (51 rows, 1,105 chars, ratio 29.98; NO3_CABIN_3002/3003/3104/3105/3106,
