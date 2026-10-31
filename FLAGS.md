@@ -39,6 +39,12 @@ words for the halting voice: check it draws legibly (`tl/scene/SCN041-SCN046.tsv
 Choice options and inline lines (`choice`/`text` rows) are assumed to fit 28 columns
 (CHOICE_COLS) · script store, e.g. NO2_CABIN_2001/s05 "通風孔に入る" · open a choice in game
 with a long English option and report what fits.
+Also whether a choice list shares the 4-row message box with the prompt before it. NO3.b01 (PR #32)
+has prompts the English made longer than the source: NO3_CABIN_3002/0001 = NO3_CABIN_3003/0001
+`…Enter the next room?` is 3 rows (source 2) before Yes/No, and NO3_CABIN_3105/0001 `…Are you going
+in?` is 4 rows (source 2) before `Enter the vent` / `Don't enter` (`tl/script/NO3.b01.tsv:4, :7,
+:17`). Shipped NO3_CHAPEL/0122 also puts a 4-row page before 握る/握らない. If the options share the
+box, these prompts need a re-cut to 2 rows (R §30.3).
 
 ### F-004 · 2026-10-04 · font · HUMAN
 Full-width English is wide (28 characters a line). A font hack could double that: draw two

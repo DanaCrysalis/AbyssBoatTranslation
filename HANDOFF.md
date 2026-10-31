@@ -24,7 +24,7 @@ Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEA
 ## In flight
 | Unit | Branch | Translator | PR | State | Next |
 |---|---|---|---|---|---|
-| script NO3.b01 | tl/script-NO3.b01 | agent a6187514e1619c86e | #32 | PR open (51 rows, max 4 rows/page, NO3_HW_1.SCR 63,784 free); translator report pending | review 1st |
+| script NO3.b01 | tl/script-NO3.b01 | agent a6187514e1619c86e | #32 | **MERGED** round 0, squash 4ed66e9 (51 rows, max 4 rows/page, NO3_HW_1.SCR 63,784 free; CHECK 183 + 8 pairs; findings none); integration: 12 §9 rows promoted, 18 rows added, F-003 extended, R §30 | none — next: review #30 |
 | script NO3.b02 | tl/script-NO3.b02 | agent a8a857f473ab05821 | #30 | PR open (25 rows, max 4 rows/page, NO3_MEDICALROOM.SCR 64,633 free); Flags 4–5 for the reviewer | review 2nd |
 | script NO2.b01 | tl/script-NO2.b01 | agent a1c8fce0b285232be | #31 | PR open (55 rows, max 4 rows/page, NO2_MAINSTORAGE.SCR 62,828 free); open: speakers 0014/0016/0018, 0025 | review 3rd |
 | script NO2.b02 | tl/script-NO2.b02 | agent ab765e917510a1a75 | #33 | PR open (43 rows, max 4 rows/page, NO2_SUBSTORAGE.SCR 63,713 free); open: speaker NO2_NO3/0004, 食繋ぐ typo, 切り裂かれ vs 引き裂かれ | review 4th |
