@@ -3045,3 +3045,40 @@ Census counts are rows per store (script / scene / system), from the reviewer's 
 - **Hedges kept** (PR Flag 7): ようだ/ようで "seems"; そう "Looks like"/"looks like"; そうに無い "doesn't look like"; だろうか "Could …?"; だろう "probably"; かしら "I wonder"/"maybe".
 - **F-003.** `:18` SUBSTORAGE/0009 is 3 rows (source 2) before the vent choices; appended to F-003. `:42` TOFE_ROOM/0004 is 1 row (source 1) before Yes/No.
 - Glossary: none beyond §33.1–§33.2.
+
+## Unit script SPACESHIP.b01 (PR #35, MERGED, 2026-10-31)
+
+Figures (round 0):
+- **Containers.** MEASURE after MERGE: SPACESHIP.SCR 661 / 65,535 (64,874 free), SPACESHIP_HW.SCR 694 (64,841); both rooms complete, deck SPACESHIP complete. `containers negative: 0; under the reserve (2000 bytes): 0`.
+- **Pages.** At most 4 rows per page (UNITCHECK: 8 rows, 0 violations; the 4 at `:10` SPACESHIP_HW/0004); whole store 1,429 rows, 0 violations. MERGE: keys that never matched 0.
+- **Duplicates.** CHECK compared 214 duplicate pairs and 9 tag-variant pairs. The reviewer's census (every unit row × every dump row, exact, `{p}{w}{br}`-stripped, 【】-stripped, ！？ → ⁉, final 。！？… dropped): 50,064 comparisons, 0 hits. Sub-sentence census matched the shipped renderings: なに⁉ 4 / 0 / 0 (NO3_CHAPEL/0057 "What⁉"), 急ぎましょう 2 / 0 / 0 (NO6_HW_4/0002 "Let's hurry."), 危険すぎ · 危険過ぎ 1 / 1 / 0 · 1 / 0 / 0 ("too dangerous", R §17.4), この振動 2 / 0 / 0 (NO4_HWL_BACK/0006 "this tremor").
+- **Codes.** The authored `{p}{w}{br}` sequence equals the source's on 8 of 8 rows; one `{br}` moved within it (§34.2). No `{w}`, no `+` rows. `…`/`‼`/`⁉` counts match on 8 of 8.
+- **Widths.** Five lines end at an authored `{br}`: 17, 21 (`:5`), 11 (`:8`), 17 (`:10`), 26 (`:11`), all ≤ 27 (`codec.wrap(…, 28)`, `len()`). No lone "a"/"an"/"I", no one-word last row.
+
+Census counts are rows per store (script / scene / system), from the reviewer's grep of `dumps/` on 2026-10-31. Line citations use PROJECT.md §7's numbering in `tl/script/SPACESHIP.b01.tsv` (line = row order + 3).
+
+### 34.1 Terms promoted from §9
+- Source: 制御装置 — 2 / 0 / 0 (SPACESHIP_HW/0004, NO1_CONTROLROOM/0003). Target: `the control system` (18). Binds `:10` `…Because we destroyed the control system earlier…`; NO1_CONTROLROOM/0003 (#34, in rework) `the engine's control system`, which the #34 reviewer accepted. Kept apart from コントロール装置 "the controls" (§3, R §30.1); 装置 alone stays unfixed (R §3.1). Glossary: §3 row added from §9.
+- Source: 武器 — 7 / 0 / 1 (NO4_BAR/0097, 0269, 0332, NO4_BAR_T/0138, NO4_MACHINER90/0001, NO4_TOOL_ROOM/0037, SPACESHIP/0002; items/003). Target: `weapon(s)` (6 / 7); その武器 → `that weapon`. Shipped: NO4_BAR/0332, NO4_MACHINER90/0001 "weapons"; 0097 武器らしい武器 "real weapons", 0269 武器を携帯 "armed", NO4_TOOL_ROOM/0037 "greatest weapons" in context. Binds `:5`. Glossary: §3 row added from §9.
+- Source: チャージ — 1 / 0 / 0. Target: `takes time to charge` (チャージに時間がかかる); "charge", never "recharge". Binds `:5`. Glossary: §3 row added from §9.
+- Source: 落下 (船の落下が始まっている) — 1 / 0 / 0. Target: `the ship's starting to fall⁉` (28; wraps 23 / 17 with `This tremor…`). ⁉ one glyph. Binds `:10`. Glossary: §3 row added from §9.
+
+### 34.2 The moved `{br}` at SPACESHIP/0002 (PR Flag 2)
+- Source: `ジョン、その武器はチャージに時間が{br}かかるわ。{br}気をつけて‼`. Target: `John, that weapon{br}takes time to charge.{br}Be careful‼` (17 / 21 / 11).
+- Reasoning: at the source position the first line is "John, that weapon takes time" = 28, over the 27 preferred for a line ended by an authored `{br}` (PROJECT.md §5.2). The source's own break already splits the clause (after 時間が); the moved break keeps a subject | predicate split and the count (2 → 2). Removing the `{br}` instead wraps to "…takes time" / "to charge.", a two-word row. Accepted.
+- Binds `:5`. Glossary: none.
+
+### 34.3 Who destroyed the control system (PR Flag 3)
+- Source: SPACESHIP_HW/0004 さっき、制御装置を破壊したから…。 — no subject; 1 / 0 / 0.
+- Target: `Because we destroyed the control system earlier…`.
+- Evidence: SCN047C1/01–06 (alien voice to John) and C2/01–05 (Judy's declaration; the alien's ば、馬鹿な‼ at C2/03) name no act of destruction; no other row in the three dumps mentions it; 制御装置 elsewhere only at NO1_CONTROLROOM/0003, where it runs normally. Judy speaks to John, who is beside her (she has just handed him the alien gun, SPACESHIP_HW/0002).
+- Reasoning: English needs a subject. "we" is the one that asserts no actor the source does not; "I" (Judy) or "you" (John) would each state a fact the text never gives, and a John-alone reading would more naturally name him (あなたが). The passive ("was destroyed") is rejected: the source is active 破壊した, and voice is kept (R §33.2). さっき → "earlier", as 先刻 at NO6_HW_4/0001.
+- Binds `:10`. Glossary: none. A later in-game look that shows the act may narrow the pronoun; nothing else would change.
+
+### 34.4 Speakers and readings
+- **Speakers** (PR Flag 4, F-009): Judy on spk=100 (`:5` わ, `:11` よ / ましょう), spk=0 (`:4` なの) and spk=- (`:8` あなたが持っていて); `:7` (spk=-) Judy or John's thought; `:6`, `:9`, `:10` Judy or narration. Every line is speaker-neutral in English.
+- `:6` 何の反応も示さない → `This door shows no response at all…` — kept apart from 反応しない "won't respond" (NO3_FOODSTORAGE/0006, NO2_SUBSTORAGE/0007): different verbs stay apart (R §31.1).
+- `:8` 彼らの使っていた銃よ → `John, this is the gun they were using.`; 銃 stays "gun" (items/003 レーザーガン is blocked and not borrowed); あなたが持っていて → `You keep it.`
+- `:11` ここは危険よ！ → `John, it's dangerous here!` (26) — a different source from NO6_HW_4/0002 ここは…危険よ "This place is… dangerous."; "this place is dangerous!" strands "dangerous!" before the authored `{br}`. 急ぎましょう "Let's hurry." as NO6_HW_4/0002 (R §24.3).
+- `:4`, `:9` なに⁉ "What⁉", as NO3_CHAPEL/0057; the fragments kept.
+- Glossary: none beyond §34.1.

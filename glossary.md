@@ -144,6 +144,10 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | 収容箱 | — | storage box | 11 | — | NO3_HW_1/0009 "a storage box for a hatchet"; 1 / 0 / 0 | R §30.1 |
 | ハッチ | — | hatch | 5 | — | NO2_THIRDSTORAGE/0008 `A hatch…{br}` only (Judy); 1 / 0 / 0 | R §33.1 |
 | スパナ | — | wrench | 6 | — | NO2_MAINSTORAGE/0025 "(There's a wrench caught in the door.)" only; US usage, as 懐中電灯 "flashlight"; 1 / 0 / 0 | R §32.1 |
+| 制御装置 | — | the control system | 18 | — | SPACESHIP_HW/0004 "Because we destroyed the control system earlier…" (shipped); NO1_CONTROLROOM/0003 "the engine's control system" (#34); never "the controls" (コントロール装置); 装置 alone not fixed; 2 / 0 / 0 | R §3.1, §34.1 |
+| 武器 | — | weapon(s) (その武器 → "that weapon") | 6 (7) | — | SPACESHIP/0002 "John, that weapon" (shipped); NO4_BAR/0332, NO4_MACHINER90/0001 "weapons"; 武器らしい武器 "real weapons" (NO4_BAR/0097), 武器を携帯 "armed" (0269), NO4_TOOL_ROOM/0037 in context; 7 / 0 / 1 (items/003 blocked) | R §34.1 |
+| チャージ | チャージに時間がかかる | charge: "takes time to charge" | 6; 20 | — | SPACESHIP/0002 only (the alien gun); never "recharge"; 1 / 0 / 0 | R §34.1 |
+| 落下 | 船の落下が始まっている | fall: "the ship's starting to fall⁉" | 4; 28 | — | SPACESHIP_HW/0004 only; ⁉ one glyph; wraps "the ship's" / "starting to fall⁉" (17); 船 alone "the ship" (§2 船体); 1 / 0 / 0 | R §34.1 |
 
 ## 4. Classes, units, system terms
 | Source | Variants | Target | Cols | Cap | Note | Ruling |
@@ -289,11 +293,7 @@ NOT decisions. The first translator to render one promotes it in the PR's Glossa
 so; the reviewer moves the row up into its section in the integration commit. -->
 | Source | Variants | Proposed | Alternatives | Where seen | Wave |
 |---|---|---|---|---|---|
-| 制御装置 | — | the control system ("It seems to be the engine's control system.") | control unit; never "the controls" (that is コントロール装置, §3) | NO1_CONTROLROOM/0003, SPACESHIP_HW/0004 (2 / 0 / 0); R §2 note at rulings.md:304 | 9 |
 | 報告に戻る · 戻って知らせる | 報告に戻りましょう · 戻って知らせましょう | head back and report (shipped NO4_HWL_KAIDAN/0004, NO4_HWR_FRONT/0049) | go back and tell them (戻って知らせる only) | NO1_ENGINEROOM/0002, 0003 | 9 |
-| 武器 | — | weapon (shipped NO4_BAR/0332, NO4_MACHINER90/0001) | — | SPACESHIP/0002 その武器 → "that weapon" | 9 |
-| チャージ | — | charge: チャージに時間がかかる → "takes time to charge" | recharge | SPACESHIP/0002 only (1 / 0 / 0) | 9 |
-| 落下 | 船の落下が始まっている | fall: "the ship's starting to fall⁉" (⁉ kept, one glyph) | going down | SPACESHIP_HW/0004 only (1 / 0 / 0); 振動 → "tremor" (§6) | 9 |
 | ほかには何も入っていない{p} | — | `There's nothing else inside.{p}` (one line; R §1.12) | — | NO1_CONTROLROOM/0001; cf. NO4_TOOL_ROOM/0080 ロッカーには何も入っていない "The locker is empty." | 9 |
 | 使えそうな物はすでに奪われた後のようだ。{p} | — | `It seems anything that looked usable has already been taken.{p}` (keeps そう "looked", ようだ "seems"; wraps 22/25/11, no one-word last row) | — | NO1_STORAGE/0001; 使えそう family R §21.3–§21.4, §31.1 | 9 |
 | 【男】 (label in a message) | — | 【Man】 | — | NO4_BAR_T and the other `_T` scripts (6 in the dump); brackets kept, as 【女】 → 【Woman】 (§1) | 9 |

@@ -1,4 +1,4 @@
-**Last updated: 2026-10-31** — wave 8 closed: NO3.b01, NO3.b02, NO2.b01, NO2.b02 merged (PRs #32, #30, #31, #33), three CHANGES rounds (#30, #31, #33), none parked; decks NO3 and NO2 complete. Wave 9 session opened by a fresh top-level runner.
+**Last updated: 2026-10-31** — wave 9 in review: PR #35 SPACESHIP.b01 MERGED (squash e967004, round 0, no findings; deck SPACESHIP complete). Wave 8 closed: NO3.b01, NO3.b02, NO2.b01, NO2.b02 merged (PRs #32, #30, #31, #33); decks NO3 and NO2 complete.
 
 ## Integration branch: `main`. Not configurable.
 Every PR bases on `main`; the reviewer merges into `main`; a wave is closed only when `origin/main` is
@@ -7,22 +7,22 @@ preflight is `git fetch origin main && git checkout main && git reset --hard ori
 
 ## NEXT ACTION — always current, always a literal instruction
 > **Wave 9 coordinator:** barrier met 2026-10-31 23:25 UTC (PRs #34–#37 open). Reviewer, one at a time in unit order:
-> #34 NO1.b01 (round 0 CHANGES, in rework) → #35 SPACESHIP.b01 (reviewing) → #36 → #37 → #34 round 1. Watchdog armed (12 min). A resumer: `ListAgents` first.
+> #34 NO1.b01 (round 0 CHANGES, in rework) → ~~#35~~ MERGED → **#36 NO4_BAR_T.p01 next** → #37 → #34 round 1. Watchdog armed (12 min). A resumer: `ListAgents` first.
 
 ## Progress
 | Store | Done | Total | |
 |---|---|---|---|
-| script | 29 units · 1,421 rows | 38 units · 1,709 rows | NO4_BAR p01–p08, NO4_HWR_FRONT p01–p03, NO4_MACHINER90 p01–p02, NO4_TOOL_ROOM p01–p02 (rooms complete), NO4.b01, NO4.b02 (deck NO4 complete bar the `_T` scripts); NO5.b01 (deck NO5 complete); NO6.b01, NO6.b02 (deck NO6 complete); NO3_CHAPEL.p01–p03 (room complete, 150/150); NO3_NO4.p01–p02 (room complete, 61/61); NO3.b01, NO3.b02, NO2.b01, NO2.b02 (decks NO3, NO2 complete); STATUS 2026-10-31 |
+| script | 30 units · 1,429 rows | 38 units · 1,709 rows | NO4_BAR p01–p08, NO4_HWR_FRONT p01–p03, NO4_MACHINER90 p01–p02, NO4_TOOL_ROOM p01–p02 (rooms complete), NO4.b01, NO4.b02 (deck NO4 complete bar the `_T` scripts); NO5.b01 (deck NO5 complete); NO6.b01, NO6.b02 (deck NO6 complete); NO3_CHAPEL.p01–p03 (room complete, 150/150); NO3_NO4.p01–p02 (room complete, 61/61); NO3.b01, NO3.b02, NO2.b01, NO2.b02 (decks NO3, NO2 complete); SPACESHIP.b01 (deck SPACESHIP complete); STATUS 2026-10-31 |
 | scene | 4 units · 190 rows | 4 units · 190 rows | OP-SCN034, SCN038, SCN041-SCN046, SCN047-EPILOG (store complete) |
 | system | 0 | 5 units · 188 rows | blocked whole (F-006) |
 
-Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-31; the NO3/NO2 bundle rooms ≥ 62,822 (NO2_MAINSTORAGE); `NO4_BAR.SCR` 37,378 free; `NO4_TOOL_ROOM.SCR` 61,899, 80/80; the NO4.b01/b02 rooms ≥ 63,697; the NO5 rooms ≥ 63,950; NO6_BRIDGE 63,400, the other NO6 rooms ≥ 64,242; NO3_CHAPEL.SCR 55,247, 150/150; NO3_NO4.SCR 60,727, 61/61).
+Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-31; the NO3/NO2 bundle rooms ≥ 62,822 (NO2_MAINSTORAGE); `NO4_BAR.SCR` 37,378 free; `NO4_TOOL_ROOM.SCR` 61,899, 80/80; the NO4.b01/b02 rooms ≥ 63,697; the NO5 rooms ≥ 63,950; NO6_BRIDGE 63,400, the other NO6 rooms ≥ 64,242; NO3_CHAPEL.SCR 55,247, 150/150; NO3_NO4.SCR 60,727, 61/61; SPACESHIP.SCR 64,874, SPACESHIP_HW.SCR 64,841, 8/8).
 
 ## In flight
 | Unit | Branch | Translator | PR | Round | Next |
 |---|---|---|---|---|---|
 | script NO1.b01 | `tl/script-NO1.b01` | rework | #34 | 1 | round 0 CHANGES (1 finding: :9 0002 知らせる → "tell them", not "report"; Flag 2 accepted); same translator fixing, then re-review |
-| script SPACESHIP.b01 | `tl/script-SPACESHIP.b01` | returned 2026-10-31 | #35 | 0 | review behind the barrier (64,841 free min; open: Flag 3 "we destroyed", Flag 2 moved `{br}`) |
+| script SPACESHIP.b01 | `tl/script-SPACESHIP.b01` | done | #35 | 0 | **MERGED** 2026-10-31, squash e967004, no findings; SPACESHIP.SCR 64,874 / SPACESHIP_HW.SCR 64,841 free; Flag 3 "we" and Flag 2 moved `{br}` accepted (R §34.2–§34.3); §9 制御装置, 武器, チャージ, 落下 promoted to §3; integration commit on main (`integrate: SPACESHIP.b01`). Nothing left; branch kept (403 on delete) |
 | script NO4_BAR_T.p01 | `tl/script-NO4_BAR_T.p01` | returned 2026-10-31 | #36 | 0 | review behind the barrier (56,220 free; open: Flag 5 0036 reuse vs lone "a", Flag 8 母船, 【老人】 → 【Old Man】) |
 | script NO4_BAR_T.p02 | `tl/script-NO4_BAR_T.p02` | returned 2026-10-31 | #37 | 0 | review behind the barrier (56,594 free; open: Flag 3 0081 restructure, Flag 5 0092 two clicks) |
 

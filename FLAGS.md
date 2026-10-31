@@ -255,6 +255,10 @@ NO2.b02 (PR #33): Judy at NO2_NO3/0001–0003, NO2_SUBSTORAGE/0001–0002, NO2_T
 NO2_TOFE_ROOM/0001–0003, on spk=-, 100 and 0; narration on spk=100 and 0 elsewhere. NO2_NO3/0004
 黙って機関室へ急げっ！ (spk=100) is a rough male voice, most likely Wolg, uncertain; rendered
 speaker-neutral (rulings R §33.3).
+SPACESHIP.b01 (PR #35): Judy on spk=100, spk=0 (SPACESHIP/0001 なの) and spk=- (SPACESHIP_HW/0002
+あなたが持っていて); SPACESHIP_HW/0001 (spk=-) Judy or John's thought; SPACESHIP/0003, SPACESHIP_HW/0003–0004
+Judy or narration. All speaker-neutral. SPACESHIP_HW/0004's unstated subject of 破壊した is rendered
+"we" (rulings R §34.3, R §34.4).
 
 ### F-011 · 2026-10-04 · tools · OPEN
 PR #1 (NO4_BAR.p01) found four things CHECK and UNITCHECK do not verify. Each was confirmed by a
