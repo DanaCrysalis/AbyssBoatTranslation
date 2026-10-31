@@ -24,7 +24,7 @@ Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEA
 | Unit | Branch | Translator | PR | State | Next |
 |---|---|---|---|---|---|
 | script NO3.b01 | tl/script-NO3.b01 | agent a6187514e1619c86e | — | dispatched 2026-10-30; 429 stop; resumed 2026-10-31 | translator opens PR |
-| script NO3.b02 | tl/script-NO3.b02 | agent a8a857f473ab05821 | — | dispatched 2026-10-30; 429 stop; resumed 2026-10-31 | translator opens PR |
+| script NO3.b02 | tl/script-NO3.b02 | agent a8a857f473ab05821 | #30 | PR open (25 rows, max 4 rows/page, NO3_MEDICALROOM.SCR 64,633 free); Flags 4–5 for the reviewer | barrier: wait for siblings |
 | script NO2.b01 | tl/script-NO2.b01 | agent a1c8fce0b285232be | — | dispatched 2026-10-30; 429 stop; resumed 2026-10-31 | translator opens PR |
 | script NO2.b02 | tl/script-NO2.b02 | agent ab765e917510a1a75 | — | dispatched 2026-10-30; 429 stop; resumed 2026-10-31 | translator opens PR |
 
