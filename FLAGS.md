@@ -46,7 +46,10 @@ in?` is 4 rows (source 2) before `Enter the vent` / `Don't enter` (`tl/script/NO
 :17`). Shipped NO3_CHAPEL/0122 also puts a 4-row page before 握る/握らない. If the options share the
 box, these prompts need a re-cut to 2 rows (R §30.3). NO3.b02 (PR #30) adds NO3_MACHINE/0002 + `+` 0003
 `There seems to be a control panel for the watertight shutters here.{br}Press the switch?`, 4 rows
-(source 2) before Yes/No (`tl/script/NO3.b02.tsv:11–12`; R §31.2).
+(source 2) before Yes/No (`tl/script/NO3.b02.tsv:11–12`; R §31.2). NO2.b01 (PR #31) adds
+NO2_CABIN_2001/0001, 3 rows (source 2), before `Enter the vent` / `Don't enter`, and NO2_HW_3/0004
+`…Do you want to try turning it?`, 3 rows (source 1), before Yes/No (`tl/script/NO2.b01.tsv:4, :18`;
+R §32.2).
 
 ### F-004 · 2026-10-04 · font · HUMAN
 Full-width English is wide (28 characters a line). A font hack could double that: draw two
@@ -240,6 +243,12 @@ NO3_CHAPEL.p03 (PR #28): Wolg 0090, 0104, 0106–0107, 0109–0110, 0120, 0122 (
 (probably 0115), on spk=5, 0 and 2; Oakland 0108, 0112–0113 (probably 0119, 0127); Heming probably
 0099, 0101, 0103, 0105, 0116, 0121. 0089 (Heming or Oakland), 0091–0097, 0117–0118, 0123–0125 stay
 uncertain; 0131–0132 narration. All speaker-neutral, checked line by line (rulings R §28.2).
+NO2.b01 (PR #31): NO2_MAINSTORAGE holds three events — 0001–0018 the killer's ambush, 0019–0024 Judy
+and Wolg after the SCN046A parting, 0025–0028 Judy at the wrenched door. Killer 0001–0009, 0011–0012;
+Wolg 0010, 0013, 0015, 0017, 0020, 0022, 0024; Judy 0019, 0021, 0023, 0026–0028. spk=7 carries the
+killer and Wolg, spk=4 the killer, a male companion and Judy, spk=5 Wolg and Judy. 0014/0016/0018
+(のか, んでな, ああ; Heming or John) and the bracketed thought 0025 (John or Judy) stay uncertain and
+are rendered speaker-neutral (rulings R §32.2).
 
 ### F-011 · 2026-10-04 · tools · OPEN
 PR #1 (NO4_BAR.p01) found four things CHECK and UNITCHECK do not verify. Each was confirmed by a

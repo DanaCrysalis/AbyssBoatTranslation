@@ -2902,3 +2902,92 @@ Census counts are rows per store (script / scene / system), from the reviewer's 
   - 化け物に襲われたようだ (2 / 0 / 0): NO1_CONTROLROOM/0004 どうやら… can reuse `It seems it was attacked by a monster.`
 - **F-003.** NO3_MACHINE/0002 + 0003 is a 4-row prompt (source 2) before Yes/No; it is appended to F-003.
 - Glossary: the 死体 note as above; nothing else beyond §31.1.
+
+## Unit script NO2.b01 (PR #31, MERGED, 2026-10-31)
+
+Nine deck-2 rooms (NO2_CABIN_2001/2101/2103, NO2_HW_1–5, NO2_MAINSTORAGE; 55 rows, 1,021 source characters, tier D, ratio 32.00). The corridors and cabins are John's examine text: shutters, locked doors, the steam valve, three bodies and the ceiling vent. NO2_MAINSTORAGE holds the killer's ambush, Wolg's arrival, Judy and Wolg after the SCN046A parting, and the wrenched door.
+
+Reviewed twice:
+- **Round 0** (cb42a85, merged with main ac1741c → ad42574, no conflict): CHANGES, two findings. (1) `:56` NO2_MAINSTORAGE/0030 dropped 使えそう's "looks" (R §31.1, ruling a). (2) `:8` NO2_CABIN_2101/0002 "Could the victim…" added a noun where the shipped convention is "it" (R §31.2, ruling b).
+- **Round 1** (4b8499c, merged with main 24093f6 → d780938, no conflict): MERGE, squash 028dcdf. Exactly the two prescribed rows changed. Findings: none.
+
+Figures (round 1):
+- **Containers.** MEASURE after MERGE: NO2_MAINSTORAGE.SCR 2,713 / 65,535 (62,822 free); NO2_HW_3 942 (64,593); NO2_HW_1 645 (64,890); NO2_HW_5 557 (64,978); NO2_CABIN_2001 445 (65,090); NO2_CABIN_2101 383 (65,152); NO2_HW_2 377 (65,158); NO2_HW_4 371 (65,164); NO2_CABIN_2103 269 (65,266). Every room is complete. `containers negative: 0; under the reserve (2000 bytes): 0`.
+- **Pages.** At most 4 rows per page (UNITCHECK: 55 rows, 0 violations); whole store 1,378 rows, 0 violations. MERGE: keys that never matched 0.
+- **Duplicates.** CHECK compared 205 duplicate pairs and 9 tag-variant pairs; without the unit the figures are 190 and 8. The tag variant is 0023 ↔ NO4_HWR_FRONT/0128 `What about you?`. The reviewer's source-side census compared 55 rows with every dump row, exact and with `{p}{w}{br}` stripped: 38 pairs, 0 mismatches. Untranslated twins: #33 NO2_SUBSTORAGE/s06–s07 and NO2_TOFE_ROOM/s08–s09, already matching at its head.
+- **Codes.** The authored `{p}{w}{br}` sequence equals the source's on 55 of 55 rows. There is no `{w}` and no `+` row. `…`/`‼`/`⁉`/`──` counts match on 55 of 55; `?` is added at 0004 ("Huh?") and 0008 ("eh?") as readings.
+- **Widths.** 14 lines end at an authored `{br}`; the last wrapped line of each is ≤ 27 (`codec.wrap(…, 28)`, `len()`). No lone "a"/"an"/"I" and no one-word last row (read in `build/script_merged.tsv`).
+
+Census counts are rows per store (script / scene / system), from the reviewer's grep of `dumps/` on 2026-10-31. Line citations use PROJECT.md §7's numbering in `tl/script/NO2.b01.tsv` (line = row order + 3).
+
+### 32.1 Terms promoted from §9, and rows added
+- **Promoted, as seeded** (§9 → §6), each applied byte for byte:
+  - シャッターは閉ざされていて開きそうに無い。{p} → `The shutter's closed. It looks like it won't open.{p}` (2 / 0 / 0): `:14` NO2_HW_2/0001 = `:24` NO2_HW_5/0001. This completes the 閉鎖され / ロック / 閉ざされ family (R §30.1, §31.1).
+  - シャッターが閉じていて先に進めない。{p} · シャッターが下りていて先には進めない。{p} → `The shutter is closed, so no going any further.{p}` · `The shutter is down, so no going any further.{p}` (2 / 0 / 0 · 1 / 0 / 0): `:10` = `:13` NO2_HW_1/0001, 0004; `:26` NO2_HW_5/0003.
+    - R §29.2's `…so there's no going any further.` wraps `…any | further.`, a one-word last row, so it is replaced. This keeps the unhedged frame and "no going any further" of §6 閉ざされて.
+    - NO3_NO4/0055 そうに無い stays hedged (R §29.2). Census シャッターが下りていて 4 / 0 / 0.
+  - 天井に通風孔が見える。{br}ここから他の部屋に行けそうだ。 → `An air vent in the ceiling.{br}Looks like it could lead to other rooms.` (1 / 0 / 0): `:4`, そう kept as "Looks like".
+    - The 壁に sibling (1 / 0 / 0, #33 NO2_SUBSTORAGE/0009) matches at #33's head, with its second sentence byte-identical.
+    - 天井には…ここをたどって行けば (R §30.1) is its own sentence.
+  - The §9 examples already promoted by #32/#30 are used exactly:
+    - `:22` NO2_HW_4/0001 = shipped NO3_HW_1/0007, 0008, 0011, a CHECK pair.
+    - `:5`–`:6` vent choices.
+    - `:55` `Found ammo in the locker.{p}`.
+    - `:56` `The locker seems to hold nothing that looks usable.{p}` (round 1, R §31.1).
+    - The 死体が転がっている frame at `:7`, `:8`, `:9`. Their "#31" notes now point at shipped rows.
+- **Added** (PR Glossary additions):
+  - キサマ · きさま → "you bastard" (2 / 0 / 0 · 0 / 1 / 0). The killer: `:29` 0003 `Hey, you bastard!`, `:30` 0004 `Too much fun, you bastard!`. Shipped SCN046B2/05 (Wolg) has `You bastard, how many…`.
+  - スパナ → "wrench" (1 / 0 / 0, `:51` 0025), US usage as 懐中電灯 "flashlight".
+  - 鍵がかかっている…。{p} → `The door is locked…{p}` (4 / 0 / 0): `:11`, `:12`, `:23`, `:25`.
+    - "The door" is supplied, because the examined object in a corridor is the door, as at NO6_BRIDGE/0009.
+    - That row's source differs (扉には…。, no …), so CHECK does not pair the two. The glyph count follows each source.
+    - Census 鍵がかかって 5 / 0 / 0.
+- **Applied, unchanged:**
+  - Names: Wolg, Heming, Oakland, John. 社長 "the boss" (`:43`).
+  - 死体 "body"; 化け物 · 怪物 "monster" (`:7` "a monster", R §30.2; `:53` "the monster").
+  - 閉じ込める "shut in" (`:53`, R §29.1).
+  - The killer's laugh (R §9.1); 俺様 · 女神 "my very own goddess" (`:29`, R §9.1).
+  - 切り刻む "hacked to pieces"; Retry?; Yes/No.
+  - `:50` 0024 行けと言ってるだろう‼ follows SCN038B/20 `Go, I'm telling you‼` (a near-repeat, not paired).
+- Glossary:
+  - §6: five rows added (閉ざされ, 閉じていて · 下りていて, the ceiling/wall vent, 鍵がかかっている…, キサマ · きさま).
+  - §3: one row added (スパナ).
+  - Three §9 rows removed; §9 is now empty.
+  - Notes updated to "shipped" on §4 通風孔に入る and on §6 閉鎖され, ロック, 閉じ込める, 死体が転がっている, 銃の弾, 〜には使えそうなものは無いようだ, 閉ざされて.
+
+### 32.2 Speakers, readings and departures
+- **NO2_MAINSTORAGE is three events** (PR Flag 5, F-009), read from content:
+  - 0001–0018: the killer's ambush; Wolg arrives at 0010 `John, what happened⁉`.
+  - 0019–0024: Judy and Wolg, after the SCN046A1–A3 parting, where Heming and Oakland are lost (行けっ！ウォルグ！).
+  - 0025–0028: Judy at the door.
+  - The events point opposite ways. 0017 いったん戻った方がいいな / 社長が無事とも言い切れん presumes Oakland alive and the party turning back. 0019 どうして追いついてこないの and 0022 先に行け have the party pressing on while Heming and Oakland fail to follow. So 0019/0021 do not exclude Heming from 0014–0018.
+- **Speakers.**
+  - Killer: 0001–0009, 0011–0012. His register is crude (やがった, ぜ, キサマ), with the mock courtesy of 0012 バラさせてもらう "allow me to carve up" (R §13.2).
+  - Wolg: 0010, 0013, 0015, 0017, 0020, 0022, 0024.
+  - Judy: 0019, 0021, 0023, 0026–0028 (ねぇ/の/のね/ましょう).
+  - 0014/0016/0018 (のか, んでな, ああ) are male, not Judy; Heming or John. They stay open, rendered speaker-neutral.
+  - 0025 （…） → `( )`, an inner thought, John or Judy, neutral.
+  - Narration: 0029–0030.
+- **0020 後で追いつく → `They'll catch up later.`** The subject is Heming and Oakland, not Wolg.
+  - The line answers 0019's question.
+  - 0021 そう──死んだのね reacts to the evasion.
+  - 0023 あなたは？ only makes sense if Wolg has not said he will follow. "I'll catch up later" would make 0023 redundant.
+- **The killer's name.** ジェイク・ノーマン "Jake Norman" (§1) appeared only in the PR's note. No row in this unit names him; Wolg first does at SCN046B1/03. No name is added to the text.
+- **Step 5–6 departures** (PR Flag 4), each measured and accepted:
+  - `:29` 0003 今だけは moved to the end, "just for now" (17 / 25 / 28 / 26). In the source position it left `you.` alone.
+  - `:30` 0004 面白すぎるぜ → `Too much fun, you bastard!` with the subject implied; 面白すぎる may mean the situation as much as the person.
+  - `:43` 0017 `Better head back for now.` ("We'd" implied), in Wolg's terse register.
+  - `:56` 0030 the step-6 locker recast (R §31.1).
+  - その俺様の女神 → "my very own goddess": English cannot stack その with "my".
+- **Body pronoun "it"** (ruling b, R §31.2): `:8` NO2_CABIN_2101/0002 `…Could it have been attacked while asleep?{p}` (27 / 25 / 22). Its first sentence equals shipped NO3_CABIN_3105/0006's.
+- **Hedges kept:**
+  - らしい "apparently" (`:7`); のだろうか "Could …?" (`:8`).
+  - そうに無い "It looks like" (`:14`, `:22`, `:24`); そうにない "It seems" (`:15`–`:17`); そうだ "Looks like" (`:4`).
+  - ようだ + attributive そう "seems … looks usable" (`:56`).
+- **Readings accepted** (PR Flag 6):
+  - 0009 見込んだ "chose"; 0016 んでな "…, is all"; 0021 `──` → `——`.
+  - 0027 `…、` → `…` with a lowercase continuation (R §11.3).
+  - CABIN_2103 ばらばらになった "scattered".
+  - HW_3 とても先に進めそうにない → `It seems there's no way to go any further…`, とても as "no way". Kept apart from the §6 封鎖 sentence, whose source has no とても.
+- **F-003.** `:4` CABIN_2001/0001 (3 rows, source 2) before the vent choices and `:18` HW_3/0004 (3 rows, source 1) before Yes/No are appended to F-003.
+- Glossary: none beyond §32.1.
