@@ -1,4 +1,4 @@
-**Last updated: 2026-10-31** — wave 8 closed: NO3.b01, NO3.b02, NO2.b01, NO2.b02 merged (PRs #32, #30, #31, #33), three CHANGES rounds (#30, #31, #33), none parked; decks NO3 and NO2 complete. **NO WATCHDOG — attended run**: the wave 8 session is at lineage depth 8 (limit 8) and cannot open the wave 9 session.
+**Last updated: 2026-10-31** — wave 8 closed: NO3.b01, NO3.b02, NO2.b01, NO2.b02 merged (PRs #32, #30, #31, #33), three CHANGES rounds (#30, #31, #33), none parked; decks NO3 and NO2 complete. Wave 9 session opened by a fresh top-level runner.
 
 ## Integration branch: `main`. Not configurable.
 Every PR bases on `main`; the reviewer merges into `main`; a wave is closed only when `origin/main` is
@@ -6,11 +6,9 @@ at the close commit (`CLAUDE.md` Rule 3). A fresh container may clone shallow wi
 preflight is `git fetch origin main && git checkout main && git reset --hard origin/main`.
 
 ## NEXT ACTION — always current, always a literal instruction
-> **Human: start wave 9 from a fresh top-level session** — run `/translate` in a new session you open yourself (not one
-> spawned by a session), so the lineage counter resets. Wave 8's session is at lineage depth 8 of 8: `create_session` and
-> `send_later` are refused there ("no user or organization setting changes this limit"). The runner opens the
-> `Abyss Boat — wave 9` session with UNITS = Next up; first check `list_sessions` (mine: true, that title) — if one exists,
-> do not open a second. **NO WATCHDOG — attended run** until a session with a watchdog takes over.
+> **Wave 9 coordinator (session `Abyss Boat — wave 9`, opened 2026-10-31 by a fresh top-level runner, lineage reset):**
+> run wave 9 with UNITS = Next up — glossary seeds, dispatch, review behind the barrier, close, open wave 10. Runner
+> backstop watchdog armed (30 min). If no `Abyss Boat — wave 9` session exists in `list_sessions`, the runner opens it.
 
 ## Progress
 | Store | Done | Total | |
