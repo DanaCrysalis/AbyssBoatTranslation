@@ -44,7 +44,9 @@ has prompts the English made longer than the source: NO3_CABIN_3002/0001 = NO3_C
 `…Enter the next room?` is 3 rows (source 2) before Yes/No, and NO3_CABIN_3105/0001 `…Are you going
 in?` is 4 rows (source 2) before `Enter the vent` / `Don't enter` (`tl/script/NO3.b01.tsv:4, :7,
 :17`). Shipped NO3_CHAPEL/0122 also puts a 4-row page before 握る/握らない. If the options share the
-box, these prompts need a re-cut to 2 rows (R §30.3).
+box, these prompts need a re-cut to 2 rows (R §30.3). NO3.b02 (PR #30) adds NO3_MACHINE/0002 + `+` 0003
+`There seems to be a control panel for the watertight shutters here.{br}Press the switch?`, 4 rows
+(source 2) before Yes/No (`tl/script/NO3.b02.tsv:11–12`; R §31.2).
 
 ### F-004 · 2026-10-04 · font · HUMAN
 Full-width English is wide (28 characters a line). A font hack could double that: draw two

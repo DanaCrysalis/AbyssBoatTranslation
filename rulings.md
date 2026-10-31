@@ -2840,3 +2840,65 @@ Census counts are rows per store (script / scene / system), from the reviewer's 
 - For the open wave-8 PRs, already matching at their heads: #30 NO3_HW_2/0002–0003, NO3_STORAGE/0003 "battery"; #31 NO2_HW_4/0001, NO2_CABIN_2001/s05–s06; #33 NO2_SUBSTORAGE/0007–0008, s06–s07, NO2_THIRDSTORAGE/0007 (……Let's go.), 0011 ("torn off", "a monster").
 - F-003 extended with the three prompts (`:4`, `:7`, `:17`).
 - Glossary: none beyond §30.1.
+
+## Unit script NO3.b02 (PR #30, MERGED, 2026-10-31)
+
+Six small deck-3 rooms (NO3_HW_2, NO3_HW_3, NO3_MACHINE, NO3_MEDICALROOM, NO3_NO2, NO3_STORAGE; 25 rows, 502 source characters, tier D, ratio 65.55). All of it is John's examine text: locked doors and shutters, the watertight-shutter panel, three bodies, a drawer, a battery and a posted notice.
+
+Reviewed twice:
+- **Round 0** (5f3673c, merged with main 17f46ba → 4b724e6): CHANGES, three findings. (1) `:26 NO3_STORAGE/0002` dropped 使えそう's "looks" (§31.1). (2) The bodies at `:20`, `:22`, `:28` were "they"/"them" (§31.2). (3) `:11 NO3_MACHINE/0002` split the §3 操作パネル phrase with "here" (§31.1).
+- **Round 1** (39dde92, merged with main 204f1e1 → 77134f3, no conflict): MERGE, squash 0a3bbec. Exactly the five prescribed rows changed. Findings: none.
+
+Figures (round 1):
+- **Containers.** MEASURE after MERGE: NO3_MEDICALROOM.SCR 898 / 65,535 (64,637 free), NO3_HW_2 775 (64,760), NO3_MACHINE 638 (64,897), NO3_STORAGE 543 (64,992), NO3_NO2 445 (65,090), NO3_HW_3 413 (65,122). Every room is complete. `containers negative: 0; under the reserve (2000 bytes): 0`.
+- **Pages.** At most 4 rows per page (UNITCHECK: 25 rows, 0 violations); whole store 1,323 rows, 0 violations. MERGE: keys that never matched 0.
+- **Duplicates.** CHECK compared 190 duplicate pairs and 8 tag-variant pairs. The reviewer's census split the 25 rows into sentences at `{br}`/`{p}`/`{w}` and searched them as substrings over every script and scene dump row. It found 67 hits, and every translated exact recurrence is byte-identical against `tl/` and the heads of #31 (4b8499c) and #33 (0c27480).
+- **Codes.** The authored `{p}{w}{br}` sequence equals the source's on 25 of 25 rows; the unit has no `{w}`. The `…`/`‼`/`⁉`/`──`/`?` counts match on 25 of 25.
+- **Widths.** Nine lines end at an authored `{br}`; the last wrapped line of each is ≤ 27 (8, 10, 14, 14, 16, 24, 24, 26, 27; `codec.wrap(…, 28)`, `len()`). No lone "a"/"an"/"I" and no one-word last row.
+- **F-012.** Both `+` rows (`:12` NO3_MACHINE/0003, `:24` NO3_NO2/0002) follow a `{br}` ending.
+
+Census counts are rows per store (script / scene / system), from the reviewer's grep of `dumps/` on 2026-10-31. Line citations use PROJECT.md §7's numbering in `tl/script/NO3.b02.tsv` (line = row order + 3).
+
+### 31.1 Terms promoted from §9, the 使えそう ruling, and rows added
+- **Ruling a — 使えそう keeps "looks"** (PR Flag 4, round-0 finding 1). Census 使えそう 13 / 0 / 0.
+  - Every shipped row keeps the attributive そう as "looks": NO4_MACHINE/0002, NO4_STORAGE/0004, NO5_BANK/0007, NO6_STORAGE/0002, NO3_MACHINE/0001, NO3_MEDICALROOM/0001–0003.
+  - The wave-8 §9 seed for 〜には、(もう)使えそうなものは無いようだ dropped it in both siblings (`…nothing else usable in the drawer.` · `…nothing usable in the locker.`). R §20.3/§21.3 make a dropped hedge a CHANGES when the page does not force it.
+  - `:26` NO3_STORAGE/0002 → `There seems to be nothing else in the drawer that looks usable.{p}` (25 / 23 / 13). もう is "else" (after 0001's ammo), and ようだ is "There seems".
+  - NO2_MAINSTORAGE/0030 (#31) takes `The locker seems to hold nothing that looks usable.{p}` (24 / 26). Both straight placements strand a word: `…in the locker that looks | usable.` (28 / 21 / 7) and `…looks usable in the | locker.` (25 / 24 / 7). So the topic ロッカーには becomes the subject, a step-6 recast, flagged, and both hedges are kept. #31 round 1 already has it.
+  - Plain 無い keeps no "seems": `:16` NO3_MEDICALROOM/0001 ほかには使えそうな物は無い → `There's nothing else that looks usable.{p}`, parallel to NO5_BANK/0007 `There's nothing else in sight that looks usable.` R §21.3's "No … looks usable" and "There's nothing … that looks usable" are both the plain form. #33 NO2_TOFE_ROOM/0005 matches byte for byte (2 / 0 / 0).
+  - The §6 使えそう family row records it.
+- **The 操作パネル phrase stays whole** (PR Flag 5, round-0 finding 3). `:11` NO3_MACHINE/0002 防水シャッターの操作パネルのようだ。{br} → `There seems to be a control panel for the watertight shutters here.{br}` (27 / 24 / 14). R §23.1 says it "takes the same words hedged".
+  - "here" is supplied because `…for the watertight | shutters.` strands one word before the authored `{br}`. This follows the precedent of NO3_FOODSTORAGE/0004 (R §30.2).
+  - "here" goes last so that "a control panel for the watertight shutters" stays one string. Round 0's `…a control panel here for the…` split it.
+  - `:13` NO3_MACHINE/0004's first sentence equals NO6_BRIDGE/0012's byte for byte. Census 操作パネル 5 / 0 / 0. The §3 row's note is updated with the shipped form.
+- **Promoted, as seeded** (§9 → §6):
+  - シャッターはロックされていて開きそうに無い。{p} → `The shutter's locked. It looks like it won't open.{p}` (4 / 0 / 0), at `:4`, `:7`, `:8`, `:9`. The 閉ざされ sibling (2 / 0 / 0, #31) stays in §9.
+  - 〜から、銃の弾をみつけた。{p} → `Found ammo in a desk drawer.{p}` (`:25`) · `Found ammo in the locker.{p}` (#31 matches). Census 銃の弾 2 / 0 / 0.
+  - 『…』{br} + と書かれた用紙が(何枚か)張られている。{p} → `"Optional Cruise Tours,"{br}` + `read several posted sheets.{p}` (`:23`–`:24`). The と書かれている pattern (R §12.1) applies.
+    - について is not carried in a title, as 案内 was not (R §21.3).
+    - The + row's leading full-width space is dropped.
+    - #33 NO2_NO3/0005–0006 `"Shipboard Precautions,"{br}` + `reads a posted sheet.{p}` matches. Census と書かれた用紙 2 / 0 / 0.
+  - 扉は鍵が掛かっていて… (`:5`, `:6` = shipped NO3_HW_1/0005–0006) and バッテリー (`:27` `This seems to be a battery.{p}`) were already §3/§6 rows (R §30.1). Their "#30 matches" notes now point at shipped rows.
+- **Added — 引き裂く "tear" · 切り裂く "slice"** (point raised by the coordinator; #33 Flag). Census 引き裂 6 / 0 / 0, 切り裂 1 / 0 / 1 (items/009, the wire cutter, blocked).
+  - 引き裂く: shipped NO4_P_OFFICE/0003 滅茶苦茶に引き裂かれ and NO4_BAR/0250 ずたずたに引き裂かれ are "torn to shreds"; NO4_BAR/0310 人間を引き裂く is "rips people apart". `:28` 半分に引き裂かれ is "torn in half". #33 NO2_SUBSTORAGE/0010, 0012 バラバラに引き裂かれ is "torn to pieces".
+  - 切り裂く: #33 NO2_SUBSTORAGE/0011 半分に切り裂かれ is "sliced in half". The two verbs are different words in the source and stay apart in English.
+- Glossary: §6 rows added (ロック sentence, 使えそう family, ほかには…, 銃の弾をみつけた, 〜には使えそうなものは無いようだ with the corrected targets, 用紙 notice, 引き裂く · 切り裂く). The §3 操作パネル and バッテリ notes and the §6 扉は鍵 note are updated. Four §9 rows are removed, and the ロック/閉ざされ row is cut to its 閉ざされ half.
+
+### 31.2 Readings, pronoun and recurrences
+- **Ruling b — an examined body is "it"** (round-0 finding 2). This follows R §30.2, shipped NO4_SHOP/0003, NO5_BANK/0008, NO3_CABIN_3105/0007 and NO3_FOODSTORAGE/0012, 0016. The rows:
+  - `:20` NO3_MEDICALROOM/0005 `…Examining the wound, it seems a gun killed it.{p}`
+  - `:22` 0007 `Could it have been killed by a monster?{p}` (the frame of NO3_FOODSTORAGE/0012)
+  - `:28` NO3_STORAGE/0004 `It seems it was attacked by a monster.{br}`. "Seems it was…" would leave `monster.` alone before the authored `{br}`.
+  - "they" stays only for people not in view (NO3_CABIN_3104/0002). The §6 死体 row's note records this (a scope note added, pointing to R §30.2 and §31.2; the target "body" is unchanged). #31's NO2_CABIN_2101/0002 got the same finding.
+- **Readings accepted** (PR Flags 6–7), with every hedge kept: ようだ/どうやら is "seems"; だろう "probably"; のだろうか "Could …?".
+  - `:10` 船内の備品 → "shipboard equipment"; 特に使えそうな物は見当たらない → `Nothing in sight looks particularly usable.`, the NO4_SHOP/0004 frame.
+  - `:12` スイッチを押しますか？ → `Press the switch?`.
+  - `:18` 強奪された跡 → "signs of having been looted".
+  - `:21` 見るも無残 → "a brutal sight to behold" (the §6 切り刻む · 無残に row's word); 端々 → "here and there".
+  - `:22` 首が切り離され → "cut off", kept apart from 首を飛ばされ "torn off" and 首が切断され "severed" (§6).
+- **Speakers.** All 25 rows are spk=- narration, read from content (plain だ/ようだ/ある).
+- **For later units, by hand** (CHECK does not pair these):
+  - 化け物に殺されたのだろうか (3 / 0 / 0): #33 NO2_SUBSTORAGE/0010, 0012 ここにいた化け物に… has `Could the monster that was here have killed it?`. `Could it have been killed by the monster that was here?{p}` (28 / 26) would parallel `:22`. That is #33's reviewer's call.
+  - 化け物に襲われたようだ (2 / 0 / 0): NO1_CONTROLROOM/0004 どうやら… can reuse `It seems it was attacked by a monster.`
+- **F-003.** NO3_MACHINE/0002 + 0003 is a 4-row prompt (source 2) before Yes/No; it is appended to F-003.
+- Glossary: the 死体 note as above; nothing else beyond §31.1.
