@@ -7,7 +7,7 @@ preflight is `git fetch origin main && git checkout main && git reset --hard ori
 
 ## NEXT ACTION — always current, always a literal instruction
 > **Wave 9 coordinator:** barrier met 2026-10-31 23:25 UTC (PRs #34–#37 open). Reviewer, one at a time in unit order:
-> #34 NO1.b01 → #35 SPACESHIP.b01 → #36 NO4_BAR_T.p01 → #37 NO4_BAR_T.p02. Watchdog armed (12 min). A resumer: `ListAgents` first.
+> #34 NO1.b01 (round 0 CHANGES, in rework) → #35 SPACESHIP.b01 (reviewing) → #36 → #37 → #34 round 1. Watchdog armed (12 min). A resumer: `ListAgents` first.
 
 ## Progress
 | Store | Done | Total | |
@@ -21,7 +21,7 @@ Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEA
 ## In flight
 | Unit | Branch | Translator | PR | Round | Next |
 |---|---|---|---|---|---|
-| script NO1.b01 | `tl/script-NO1.b01` | returned 2026-10-31 | #34 | 0 | review behind the barrier (64,568 free min; open: Flag 2 shelves recast, Flag 7 0002 verb) |
+| script NO1.b01 | `tl/script-NO1.b01` | rework | #34 | 1 | round 0 CHANGES (1 finding: :9 0002 知らせる → "tell them", not "report"; Flag 2 accepted); same translator fixing, then re-review |
 | script SPACESHIP.b01 | `tl/script-SPACESHIP.b01` | returned 2026-10-31 | #35 | 0 | review behind the barrier (64,841 free min; open: Flag 3 "we destroyed", Flag 2 moved `{br}`) |
 | script NO4_BAR_T.p01 | `tl/script-NO4_BAR_T.p01` | returned 2026-10-31 | #36 | 0 | review behind the barrier (56,220 free; open: Flag 5 0036 reuse vs lone "a", Flag 8 母船, 【老人】 → 【Old Man】) |
 | script NO4_BAR_T.p02 | `tl/script-NO4_BAR_T.p02` | returned 2026-10-31 | #37 | 0 | review behind the barrier (56,594 free; open: Flag 3 0081 restructure, Flag 5 0092 two clicks) |
