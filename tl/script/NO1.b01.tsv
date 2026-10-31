@@ -6,6 +6,6 @@ NO1_CONTROLROOM/0002	msg spk=-	棚には使えそうなものはなさそうだ�
 NO1_CONTROLROOM/0003	msg spk=-	エンジンの制御装置のようだ。{br}なぜか正常に稼動しているようだ。{p}	It seems to be the engine's control system.{br}For some reason, it seems to be running normally.{p}
 NO1_CONTROLROOM/0004	msg spk=-	首が見当たらない。{br}どうやら化け物に襲われたようだ。{p}	The head can't be found.{br}It seems it was attacked by a monster.{p}
 NO1_ENGINEROOM/0001	msg spk=-	ここは…。	This place…
-NO1_ENGINEROOM/0002	msg spk=0	機関室…。戻って知らせましょう。	The engine room… Let's head back and report.
+NO1_ENGINEROOM/0002	msg spk=0	機関室…。戻って知らせましょう。	The engine room… Let's head back and tell them.
 NO1_ENGINEROOM/0003	msg spk=100	ジョン、今はここを調査するより報告に戻りましょう…。	John, rather than investigating here now, let's head back and report…
 NO1_STORAGE/0001	msg spk=-	使えそうな物はすでに奪われた後のようだ。{p}	It seems anything that looked usable has already been taken.{p}
