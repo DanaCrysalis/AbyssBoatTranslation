@@ -6,9 +6,9 @@ at the close commit (`CLAUDE.md` Rule 3). A fresh container may clone shallow wi
 preflight is `git fetch origin main && git checkout main && git reset --hard origin/main`.
 
 ## NEXT ACTION — always current, always a literal instruction
-> **Wave 9 coordinator (session `Abyss Boat — wave 9`, opened 2026-10-31 by a fresh top-level runner, lineage reset):**
-> run wave 9 with UNITS = Next up — glossary seeds, dispatch, review behind the barrier, close, open wave 10. Runner
-> backstop watchdog armed (30 min). If no `Abyss Boat — wave 9` session exists in `list_sessions`, the runner opens it.
+> **Wave 9 coordinator (session `Abyss Boat — wave 9`):** four translators dispatched 2026-10-31 (In flight). Wait for
+> every unit to have an open PR (barrier), then run the reviewer one PR at a time in unit order NO1.b01 → SPACESHIP.b01 →
+> NO4_BAR_T.p01 → p02. Watchdog armed (12 min). A resumer: `ListAgents` first; never re-dispatch over a live translator.
 
 ## Progress
 | Store | Done | Total | |
@@ -20,14 +20,19 @@ preflight is `git fetch origin main && git checkout main && git reset --hard ori
 Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-31; the NO3/NO2 bundle rooms ≥ 62,822 (NO2_MAINSTORAGE); `NO4_BAR.SCR` 37,378 free; `NO4_TOOL_ROOM.SCR` 61,899, 80/80; the NO4.b01/b02 rooms ≥ 63,697; the NO5 rooms ≥ 63,950; NO6_BRIDGE 63,400, the other NO6 rooms ≥ 64,242; NO3_CHAPEL.SCR 55,247, 150/150; NO3_NO4.SCR 60,727, 61/61).
 
 ## In flight
-Nothing. Wave 8's four units are merged; see Wave history and rulings R §30–§33.
+| Unit | Branch | Translator | PR | Round | Next |
+|---|---|---|---|---|---|
+| script NO1.b01 | `tl/script-NO1.b01` | dispatched 2026-10-31 | — | 0 | translator drafts, opens PR |
+| script SPACESHIP.b01 | `tl/script-SPACESHIP.b01` | dispatched 2026-10-31 | — | 0 | translator drafts, opens PR |
+| script NO4_BAR_T.p01 | `tl/script-NO4_BAR_T.p01` | dispatched 2026-10-31 | — | 0 | translator drafts, opens PR |
+| script NO4_BAR_T.p02 | `tl/script-NO4_BAR_T.p02` | dispatched 2026-10-31 | — | 0 | translator drafts, opens PR |
 
 ## Next up
 Wave 9 (QUEUE 2026-10-31), four script units: NO1.b01 (8 rows, 151 chars, ratio 215.03; NO1_CONTROLROOM, NO1_ENGINEROOM,
 NO1_STORAGE), SPACESHIP.b01 (8, 159, 205.08; SPACESHIP, SPACESHIP_HW), NO4_BAR_T.p01 (46, 1,426, 21.37), NO4_BAR_T.p02 (48,
 1,251, 24.22; NO4_BAR_T.SCR 58,098 free); all tier D. `_T` test scripts: keep `【 】` around the speaker name (PROJECT.md §6);
 labelled copies of shipped NO4_BAR rows are not paired by CHECK — census them by hand, label stripped (PROJECT.md §7, F-013).
-Glossary seeds: not yet — the wave 9 coordinator's step 2 (§9 is empty).
+Glossary seeds: committed 7ebb50c (§9, eight rows: 制御装置, 報告に戻る, 武器, チャージ, 落下, ほかには何も入っていない, NO1_STORAGE/0001, 【男】).
 Carried: NO1_CONTROLROOM/0004 どうやら化け物に襲われたようだ → `It seems it was attacked by a monster.` (R §31); an examined
 body is "it" and 〜されたのだろうか keeps the passive (R §31.2, §33.2); 使えそう keeps "looks" (R §31.1).
 Wave 8 lessons: three CHANGES of four, all reading findings (dropped attributive そう "looks"; body "they"/"the victim" for "it";
