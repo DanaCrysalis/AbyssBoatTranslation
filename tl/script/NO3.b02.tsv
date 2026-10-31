@@ -1,0 +1,28 @@
+# unit: script/NO3.b02
+# rows: 25
+# columns: id <TAB> context <TAB> source <TAB> target (empty target = untranslated)
+NO3_HW_2/0001	msg spk=-	シャッターはロックされていて開きそうに無い。{p}	The shutter's locked. It looks like it won't open.{p}
+NO3_HW_2/0002	msg spk=-	扉は鍵が掛かっていて開きそうに無い。{p}	The door's locked. It looks like it won't open.{p}
+NO3_HW_2/0003	msg spk=-	扉は鍵が掛かっていて開きそうに無い。{p}	The door's locked. It looks like it won't open.{p}
+NO3_HW_2/0004	msg spk=-	シャッターはロックされていて開きそうに無い。{p}	The shutter's locked. It looks like it won't open.{p}
+NO3_HW_2/0005	msg spk=-	シャッターはロックされていて開きそうに無い。{p}	The shutter's locked. It looks like it won't open.{p}
+NO3_HW_3/0001	msg spk=-	シャッターはロックされていて開きそうに無い。{p}	The shutter's locked. It looks like it won't open.{p}
+NO3_MACHINE/0001	msg spk=-	船内の備品が入っている。{br}特に使えそうな物は見当たらない。{p}	There's shipboard equipment in here.{br}Nothing in sight looks particularly usable.{p}
+NO3_MACHINE/0002	msg spk=-	防水シャッターの操作パネルのようだ。{br}	There seems to be a control panel for the watertight shutters here.{br}
+NO3_MACHINE/0003	msg spk=- +	スイッチを押しますか？	Press the switch?
+NO3_MACHINE/0004	msg spk=-	防水シャッターの操作パネルがある。{br}もう動かす必要はないだろう。{p}	There's a control panel for the watertight shutters.{br}There's probably no need to operate it anymore.{p}
+NO3_MACHINE/s03	choice	はい	Yes
+NO3_MACHINE/s04	choice	いいえ	No
+NO3_MEDICALROOM/0001	msg spk=-	ほかには使えそうな物は無い。{p}	There's nothing else that looks usable.{p}
+NO3_MEDICALROOM/0002	msg spk=-	使えそうな薬品は何も残っていない。{p}	There's no medicine left that looks usable.{p}
+NO3_MEDICALROOM/0003	msg spk=-	使えそうな物は入っていない。{br}棚には強奪された跡がある。{p}	Nothing in it looks usable.{br}The shelves bear signs of having been looted.{p}
+NO3_MEDICALROOM/0004	msg spk=-	死体のそばに鍵が落ちている。{p}	There's a key lying beside the body.{p}
+NO3_MEDICALROOM/0005	msg spk=-	頭から血を流して死んでいる。{br}傷痕を調べてみると、どうやら銃で殺されたようだ。{p}	Dead, with blood flowing from the head.{br}Examining the wound, it seems a gun killed it.{p}
+NO3_MEDICALROOM/0006	msg spk=-	バラバラで見るも無残な状態である。{br}端々に噛み跡が残っている。{p}	It's in pieces, a brutal sight to behold.{br}There are bite marks left here and there.{p}
+NO3_MEDICALROOM/0007	msg spk=-	首が切り離されている。{br}化け物に殺されたのだろうか？{p}	The head has been cut off.{br}Could it have been killed by a monster?{p}
+NO3_NO2/0001	msg spk=-	『クルーズのオプションツアーについて』{br}	"Optional Cruise Tours,"{br}
+NO3_NO2/0002	msg spk=- +	　と書かれた用紙が何枚か張られている。{p}	read several posted sheets.{p}
+NO3_STORAGE/0001	msg spk=-	机の引き出しから、銃の弾をみつけた。{p}	Found ammo in a desk drawer.{p}
+NO3_STORAGE/0002	msg spk=-	引き出しには、もう使えそうなものは無いようだ。{p}	There seems to be nothing else in the drawer that looks usable.{p}
+NO3_STORAGE/0003	msg spk=-	これは、バッテリーのようだ。{p}	This seems to be a battery.{p}
+NO3_STORAGE/0004	msg spk=-	化け物に襲われたようだ。{br}身体を半分に引き裂かれている。{p}	It seems it was attacked by a monster.{br}The body is torn in half.{p}
