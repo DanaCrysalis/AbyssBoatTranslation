@@ -5,7 +5,7 @@ NO2_CABIN_2001/0001	msg spk=-	天井に通風孔が見える。{br}ここから�
 NO2_CABIN_2001/s05	choice	通風孔に入る	Enter the vent
 NO2_CABIN_2001/s06	choice	入らない	Don't enter
 NO2_CABIN_2101/0001	msg spk=-	化け物に襲われたらしい切り刻まれた死体が転がっている。{p}	A body lies here, hacked to pieces, apparently attacked by a monster.{p}
-NO2_CABIN_2101/0002	msg spk=-	銃で撃たれた死体が横たわっている。寝ているところを襲われたのだろうか？{p}	A body lies here, shot with a gun. Could the victim have been attacked while asleep?{p}
+NO2_CABIN_2101/0002	msg spk=-	銃で撃たれた死体が横たわっている。寝ているところを襲われたのだろうか？{p}	A body lies here, shot with a gun. Could it have been attacked while asleep?{p}
 NO2_CABIN_2103/0001	msg spk=-	切り刻まれ、ばらばらになった死体が転がっている。{p}	A body lies here, hacked to pieces and scattered.{p}
 NO2_HW_1/0001	msg spk=-	シャッターが閉じていて先に進めない。{p}	The shutter is closed, so no going any further.{p}
 NO2_HW_1/0002	msg spk=-	鍵がかかっている…。{p}	The door is locked…{p}
@@ -53,6 +53,6 @@ NO2_MAINSTORAGE/0026	msg spk=4	これで扉を閉鎖していたのね…。何�
 NO2_MAINSTORAGE/0027	msg spk=100	そう…、この先にいた怪物を閉じ込めていたのね。{p}	I see… they had shut in the monster beyond this point.{p}
 NO2_MAINSTORAGE/0028	msg spk=100	これはもう必要ないし、外しておきましょう。{p}	This isn't needed anymore, so let's take it off.{p}
 NO2_MAINSTORAGE/0029	msg spk=100	ロッカーから、銃の弾をみつけた。{p}	Found ammo in the locker.{p}
-NO2_MAINSTORAGE/0030	msg spk=100	ロッカーには、使えそうなものは無いようだ。{p}	There seems to be nothing usable in the locker.{p}
+NO2_MAINSTORAGE/0030	msg spk=100	ロッカーには、使えそうなものは無いようだ。{p}	The locker seems to hold nothing that looks usable.{p}
 NO2_MAINSTORAGE/s03	choice	はい	Yes
 NO2_MAINSTORAGE/s04	choice	いいえ	No
