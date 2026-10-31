@@ -8,7 +8,7 @@ preflight is `git fetch origin main && git checkout main && git reset --hard ori
 ## NEXT ACTION — always current, always a literal instruction
 > **NO WATCHDOG — attended run** (session lineage depth 8 of 8: `send_later` and `create_session` refused).
 > Wave 8 barrier met: PRs #32 (NO3.b01), #30 (NO3.b02), #31 (NO2.b01), #33 (NO2.b02) all open. Review one at a time
-> in unit order — #32 merged; #30 round 1 pushed, #31 in rework (round 1); next #33, then re-reviews #30, #31 — `reviewer` subagent in the foreground, unique branches review-w8-prN /
+> in unit order — #32 merged; #30 merged (round 1); #31 round 1 pushed; next #33, then #31 re-review — `reviewer` subagent in the foreground, unique branches review-w8-prN /
 > integrate-w8-prN; `git pull --ff-only` after each. At wave close the human starts wave 9 from a fresh top-level
 > session (`/translate`).
 
@@ -26,7 +26,7 @@ Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEA
 |---|---|---|---|---|---|
 | script NO3.b01 | tl/script-NO3.b01 | agent a6187514e1619c86e | #32 | **MERGED** round 0, squash 4ed66e9 (51 rows, max 4 rows/page, NO3_HW_1.SCR 63,784 free; CHECK 183 + 8 pairs; findings none); integration: 12 §9 rows promoted, 18 rows added, F-003 extended, R §30 | none — next: review #30 |
 | script NO3.b02 | tl/script-NO3.b02 | agent a8a857f473ab05821 | #30 | **MERGED** round 1, squash 0a3bbec (25 rows, max 4 rows/page, NO3_MEDICALROOM.SCR 64,637 free; CHECK 190 + 8 pairs; round 0 CHANGES — dropped "looks", body "it", 操作パネル phrase — round 1 findings none); integration: 5 §9 rows promoted (drawer row corrected, locker sibling `The locker seems to hold nothing that looks usable.{p}`), §6 使えそう and 引き裂く · 切り裂く rows, 死体 "it" note, F-003 extended, R §31 (rulings a §31.1, b §31.2) | none — next: re-review #31, then #33 |
-| script NO2.b01 | tl/script-NO2.b01 | agent a1c8fce0b285232be | #31 | round 0 **CHANGES** (reviewer agent aa876e8404bbd93b0): 1 NO2_MAINSTORAGE/0030 → `The locker seems to hold nothing that looks usable.{p}` (#30 ruling a), 2 NO2_CABIN_2101/0002 "the victim" → "it" (#30 ruling b); speakers, 0020, new rows キサマ/スパナ/鍵がかかっている accepted; findings sent 2026-10-31 | translator pushes round 1; re-review by the same reviewer |
+| script NO2.b01 | tl/script-NO2.b01 | agent a1c8fce0b285232be | #31 | round 0 **CHANGES** (reviewer agent aa876e8404bbd93b0): 1 NO2_MAINSTORAGE/0030 → `The locker seems to hold nothing that looks usable.{p}` (#30 ruling a), 2 NO2_CABIN_2101/0002 "the victim" → "it" (#30 ruling b); speakers, 0020, new rows キサマ/スパナ/鍵がかかっている accepted; findings sent 2026-10-31 | round 1 pushed 4b8499c (both fixed) | re-review by the same reviewer after #33 |
 | script NO2.b02 | tl/script-NO2.b02 | agent ab765e917510a1a75 | #33 | PR open (43 rows, max 4 rows/page, NO2_SUBSTORAGE.SCR 63,713 free); open: speaker NO2_NO3/0004, 食繋ぐ typo, 切り裂かれ vs 引き裂かれ | review 4th |
 
 ## Next up
