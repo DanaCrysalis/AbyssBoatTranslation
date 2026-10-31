@@ -6,9 +6,8 @@ at the close commit (`CLAUDE.md` Rule 3). A fresh container may clone shallow wi
 preflight is `git fetch origin main && git checkout main && git reset --hard origin/main`.
 
 ## NEXT ACTION — always current, always a literal instruction
-> **Wave 9 coordinator (session `Abyss Boat — wave 9`):** four translators dispatched 2026-10-31 (In flight). Wait for
-> every unit to have an open PR (barrier), then run the reviewer one PR at a time in unit order NO1.b01 → SPACESHIP.b01 →
-> NO4_BAR_T.p01 → p02. Watchdog armed (12 min). A resumer: `ListAgents` first; never re-dispatch over a live translator.
+> **Wave 9 coordinator:** barrier met 2026-10-31 23:25 UTC (PRs #34–#37 open). Reviewer, one at a time in unit order:
+> #34 NO1.b01 → #35 SPACESHIP.b01 → #36 NO4_BAR_T.p01 → #37 NO4_BAR_T.p02. Watchdog armed (12 min). A resumer: `ListAgents` first.
 
 ## Progress
 | Store | Done | Total | |
@@ -25,7 +24,7 @@ Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEA
 | script NO1.b01 | `tl/script-NO1.b01` | returned 2026-10-31 | #34 | 0 | review behind the barrier (64,568 free min; open: Flag 2 shelves recast, Flag 7 0002 verb) |
 | script SPACESHIP.b01 | `tl/script-SPACESHIP.b01` | returned 2026-10-31 | #35 | 0 | review behind the barrier (64,841 free min; open: Flag 3 "we destroyed", Flag 2 moved `{br}`) |
 | script NO4_BAR_T.p01 | `tl/script-NO4_BAR_T.p01` | returned 2026-10-31 | #36 | 0 | review behind the barrier (56,220 free; open: Flag 5 0036 reuse vs lone "a", Flag 8 母船, 【老人】 → 【Old Man】) |
-| script NO4_BAR_T.p02 | `tl/script-NO4_BAR_T.p02` | dispatched 2026-10-31 | — | 0 | translator drafts, opens PR |
+| script NO4_BAR_T.p02 | `tl/script-NO4_BAR_T.p02` | returned 2026-10-31 | #37 | 0 | review behind the barrier (56,594 free; open: Flag 3 0081 restructure, Flag 5 0092 two clicks) |
 
 ## Next up
 Wave 9 (QUEUE 2026-10-31), four script units: NO1.b01 (8 rows, 151 chars, ratio 215.03; NO1_CONTROLROOM, NO1_ENGINEROOM,
