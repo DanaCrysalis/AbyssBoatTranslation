@@ -3336,3 +3336,94 @@ Census counts are rows per store (script / scene / system), from the reviewer's 
   - All approved.
 - **Speakers** come from the labels and agree with content (F-009): 0158, 0165, 0167, 0170 Oakland (わし, 社長); 0166 Wolg, where shipped 0132's different source was Collison.
 - Glossary: none beyond §39.1.
+
+## Unit script NO4_T.b01 (PR #39, MERGED, 2026-11-01)
+
+Two small `_T` rooms (NO4_HWR_BACK_T/0001–0016, NO4_HWR_FRONT_DOWN_T/0001–0009; 25 rows, 607 source characters, tier D, ratio 54.01). In them, the salvagers and Miller decide to hide, set off, and plan to hole up in a cabin. Every row is `spk=-`, and the speakers come from the `【Name】` labels. FRONT_DOWN_T/0007–0009 are the developer's stage directions.
+
+Reviewed twice:
+- **Round 0** (375c2cf, merged with main 48ee1ba, clean): CHANGES, one finding (§40.3).
+- **Round 1** (f0256b0, merged with main 715be86, clean): MERGE, squash b76838f. Only `:21` FRONT_DOWN_T/0002 changed, byte-identical to the reviewer's tested fix.
+
+Figures (round 1):
+- **Containers.** MEASURE after MERGE:
+  - NO4_HWR_BACK_T.SCR 1,530 / 65,535 (64,005 free; 64,354 untranslated), tokens 46 / 1,499, 16/16.
+  - NO4_HWR_FRONT_DOWN_T.SCR 1,238 (64,297 free; 64,558 untranslated), tokens 47, 9/9.
+  - `containers negative: 0; under the reserve (2000 bytes): 0`. MERGE: keys that never matched 0.
+- **Pages.** UNITCHECK: 25 rows, 0 violations, max 4 rows/page. Store: 1,643 rows, 0 violations.
+- **Codes.** The authored diff against the source covers 3 rows, all in PR Flag 3:
+  - `:21` 0002 label `{br}`;
+  - `:24` FRONT_DOWN_T/0005 leading `{p}`;
+  - `:28` FRONT_DOWN_T/0009 leading `{p}`.
+  - There is no `{w}`. The only line ended by an authored `{br}` other than the source's own is the 9-column label.
+- **Duplicates.**
+  - CHECK: 237 duplicate and 32 tag-variant pairs (237 / 25 without the unit). The 7 added pairs are BACK_T/0001–0003, 0005–0008 ↔ SCN002OLD.
+  - Reviewer's census: label stripped, `{…}` removed, ！？ → ⁉, final 。？！ dropped; every unit row × every script and scene dump row, whole-row and sentence-level. **47,450 whole-row and 71,185 sentence pairs, 35 matches, 0 divergent.**
+- **Widths.** Wrap scan of 67 lines in `build/script_merged.tsv`: no lone a/A/I/an, no split title, no one-word last row. Glyph counts match: `…` 4 rows, `⁉` 1. （） → `( )`. No word-initial apostrophe.
+
+Census counts are rows per store (script / scene / system), from the reviewer's grep of `dumps/` on 2026-11-01. Line citations are in `tl/script/NO4_T.b01.tsv` (line = row order + 3).
+
+### 40.1 Terms
+- **Promoted from §9 (wave 10 seeds).**
+  - **乗員** 1 / 0 / 0 → `the crew`, as 乗組員 (§2). Used at :23 FRONT_DOWN_T/0004: 船の乗客は乗員も含めかなり殺された → `…many of the ship's passengers, crew included, have been killed.`. 乗客 keeps "passengers" (§2).
+  - **客室** 1 / 0 / 0 → `cabin(s)`, the same word as キャビン; never "stateroom". Used at :24 0005: そこらの客室 → `a cabin nearby`.
+  - **安全地帯** 1 / 0 / 0 → `a safe zone`. Used at :24 0005: 安全地帯にする → `make it a safe zone`.
+  - 安全な場所 4 / 4 / 0 ("a safe place", SCN002/01; :4 BACK_T/0001; :22 FRONT_DOWN_T/0003 `a place that's even slightly safer`) is another word and is not fixed.
+- **New: 立てこもる** 3 / 0 / 0 → `hole up`.
+  - Shipped NO4_BAR/0088 and NO4_BAR_T/0130 (#41) have `holed up in their own rooms`. :24 0005 has `we hole up in a cabin nearby`.
+  - R §38.1 left the row for this PR.
+- **注：** is already in §4 (#40, R §39.1). :26 FRONT_DOWN_T/0007 `Note: This section is written provisionally.{p}` agrees: a note with no 。 takes ".".
+- Glossary: §2 rows 乗員, 客室 and 安全地帯 (the three §9 seeds removed, so §9 is empty); §6 row 立てこもる.
+
+### 40.2 The SCN002OLD twins keep no final period (PR Flag 2, upheld)
+- The dispatch asked for English end punctuation where the source has no 。. But BACK_T/0002, 0003 and 0005–0008 are tag variants of SCN002OLD/02, 03, 05–08, which shipped with no final period (R §4.3). R §4.5 binds them: "Reuse each SCN002OLD target with `{p}` appended".
+- Evidence: the reviewer added `.` to :6 0003, and CHECK failed with `ERROR tl/scene/OP-SCN034.tsv:25: same text with different tags, different target text: scene SCN002OLD/03, script NO4_HWR_BACK_T/0003`.
+- The dispatch line was wrong. Rows with no twin take end punctuation: 0009, 0012–0014, FRONT_DOWN_T/0007–0009.
+- **:7 0004** (⁉ for SCN002OLD/04's ！？) is not paired by CHECK (F-013). A planted divergent target passed CHECK. It ships with SCN002/04's words: `【Miller】Hide? How long are we meant to hide⁉{p}`.
+- Other twins, censused by hand:
+  - :20 FRONT_DOWN_T/0001 = NO4_MACHINER90/0063, `【Oakland】What is it?{p}`.
+  - :22 0003 気持ちはわかる = NO4_BAR/0037, NO4_BAR_T/0056, `I understand how you feel.` (R §37.3).
+  - :5 0002 わからん, `I don't know.`.
+
+### 40.3 だろう kept with a label `{br}` (round-0 finding 1)
+- **:21 FRONT_DOWN_T/0002** 足で探すしかないだろう. Round 0 had `We'll have no choice but to search on foot.`, which drops the conjecture.
+- Rule: だろう is "probably" (R §20.3, §21.3, §31–§33), and a hedge stays unless the page forces it out.
+- Every unlabelled placement leaves `foot.` alone on the last row. Tested with `codec.wrap`: "We'll probably have…", "There's probably no choice…", "We'll likely…". The label `{br}` (R §37.1) fits with no other change.
+- Target: `【Oakland】{br}I have no idea either. We'll probably have no choice but to search on foot.{p}` (9 / 28 / 27 / 18, 4 rows).
+- Binds `:21`.
+
+### 40.4 Clicks, rewordings, stage directions (PR Flags 3–5)
+- **:24 FRONT_DOWN_T/0005** leading `{p}`. This is the unit's one F-012 boundary: 0004 has no ending tag.
+  - The click clears the box, so the words cannot glue. It sits at the sentence boundary, and without it the page has 8 rows (now 4 + 3).
+  - As the NO4_BAR_T.p01 `+` boundaries opened with `{p}` (R §35, figures).
+- **:28 FRONT_DOWN_T/0009** leading `{p}` after 0008's `{br}` (R §2.4). Otherwise 7 rows; now 3 + cursor, then 3.
+- The unit has no exact twin, and its tag variants have no added click (R §38.2).
+- **Rewordings for wraps (Flag 4), each as literal, accepted:**
+  - :14 0011 大変なことになったな… `It's gotten serious…` (28).
+  - :17 0014 素人は銃のハンマーを起こすな `amateurs don't cock the hammer on a gun`: the は-topic rule is kept as a stated rule.
+  - :18 0015 なんてことなの… `How could this be…`.
+  - :22 FRONT_DOWN_T/0003 いまは `Right now`, 少しでも `even slightly`.
+  - :23 0004 かなり `many`: "a good many" strands "a".
+  - :24 0005 `a cabin nearby`.
+  - :25 0006 長くて `at the longest`.
+  - :26 0007 仮作成部分 `written provisionally`.
+- **Stage directions:**
+  - :27 0008 keeps （） as `( )`. というような会話をする → `(a conversation to that effect)`, an accepted stage-direction noun phrase.
+  - :28 0009 `Then they decide to investigate and enter the room above.`
+- Non-blocking: :25 0006 `We just have to hold out.` adds "just" for の辛抱よ ("only two or three hours").
+- Speakers come from the labels (F-009). 0005 continues Wolg's 0004.
+- Glossary: none beyond §40.1.
+
+### 40.5 Recurrences left for NO4_T.b03 (PR Flag 6)
+- BACK_T/0009–0016 recur as NO4_MACHINE_T/s10, s11, s16, s17, s14, s15, s12, s13. These are one-line `text` rows (28 columns, 27 preferred) with the label and a final 。, so CHECK does not pair them (F-013).
+- Reuse as they are:
+  - s10 = :12 0009 `【Oakland】Don't fall behind.` (27).
+  - s12 = :18 0015 `【Miller】How could this be…` (26).
+  - s16 = :14 0011 `【Heming】It's gotten serious…` (28, the hard limit; `…。` absorbs the 。, R §1).
+- Need their own cut within one line, keeping #39's words where they fit (R §4.5, §35.2):
+  - s11 (= :13 0010, 40 cols);
+  - s13 (= :19 0016, 36);
+  - s14 (= :16 0013, 42);
+  - s15 (= :17 0014, 83, two sentences);
+  - s17 (= :15 0012, 88).
+- Recorded under F-008 and in HANDOFF → Remaining.

@@ -1,4 +1,4 @@
-**Last updated: 2026-11-01** — wave 10: #41 NO4_BAR_T.p03 MERGED (a64d635); #40 NO4_BAR_T.p04 MERGED (squash 2edb846, round 1; NO4_BAR_T.SCR complete); #39 in rework, #38 to review.
+**Last updated: 2026-11-01** — wave 10: #41 NO4_BAR_T.p03 MERGED (a64d635); #40 NO4_BAR_T.p04 MERGED (squash 2edb846, round 1; NO4_BAR_T.SCR complete); #39 NO4_T.b01 MERGED (squash b76838f, round 1); #38 to review.
 
 ## Integration branch: `main`. Not configurable.
 Every PR bases on `main`; the reviewer merges into `main`; a wave is closed only when `origin/main` is
@@ -6,24 +6,24 @@ at the close commit (`CLAUDE.md` Rule 3). A fresh container may clone shallow wi
 preflight is `git fetch origin main && git checkout main && git reset --hard origin/main`.
 
 ## NEXT ACTION — always current, always a literal instruction
-> **Wave 10 coordinator:** #41 and #40 merged and integrated. `git pull --ff-only`, then the reviewer for #39 round 1 once its translator pushes;
-> then #38 (round 0). One reviewer at a time. #39 and #38 cite glossary §4 注： `Note: ` (promoted by #40, R §39.1).
+> **Wave 10 coordinator:** #41, #40 and #39 merged and integrated. `git pull --ff-only`, then the reviewer for #38 (round 0), the last
+> unit of wave 10; then close wave 10. #38 cites glossary §4 注： `Note: ` (promoted by #40, R §39.1).
 
 ## Progress
 | Store | Done | Total | |
 |---|---|---|---|
-| script | 35 units · 1,618 rows | 38 units · 1,709 rows | NO4_BAR p01–p08, NO4_HWR_FRONT p01–p03, NO4_MACHINER90 p01–p02, NO4_TOOL_ROOM p01–p02 (rooms complete), NO4.b01, NO4.b02 (deck NO4 complete bar the `_T` scripts); NO5.b01 (deck NO5 complete); NO6.b01, NO6.b02 (deck NO6 complete); NO3_CHAPEL.p01–p03 (room complete, 150/150); NO3_NO4.p01–p02 (room complete, 61/61); NO3.b01, NO3.b02, NO2.b01, NO2.b02 (decks NO3, NO2 complete); SPACESHIP.b01 (deck SPACESHIP complete); NO1.b01 (deck NO1 complete); NO4_BAR_T.p01–p04 (room complete, 181/181); STATUS 2026-11-01 |
+| script | 36 units · 1,643 rows | 38 units · 1,709 rows | NO4_BAR p01–p08, NO4_HWR_FRONT p01–p03, NO4_MACHINER90 p01–p02, NO4_TOOL_ROOM p01–p02 (rooms complete), NO4.b01, NO4.b02 (deck NO4 complete bar the `_T` scripts); NO5.b01 (deck NO5 complete); NO6.b01, NO6.b02 (deck NO6 complete); NO3_CHAPEL.p01–p03 (room complete, 150/150); NO3_NO4.p01–p02 (room complete, 61/61); NO3.b01, NO3.b02, NO2.b01, NO2.b02 (decks NO3, NO2 complete); SPACESHIP.b01 (deck SPACESHIP complete); NO1.b01 (deck NO1 complete); NO4_BAR_T.p01–p04 (room complete, 181/181); NO4_T.b01 (NO4_HWR_BACK_T 16/16, NO4_HWR_FRONT_DOWN_T 9/9); STATUS 2026-11-01 |
 | scene | 4 units · 190 rows | 4 units · 190 rows | OP-SCN034, SCN038, SCN041-SCN046, SCN047-EPILOG (store complete) |
 | system | 0 | 5 units · 188 rows | blocked whole (F-006) |
 
-Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-31; the NO3/NO2 bundle rooms ≥ 62,822 (NO2_MAINSTORAGE); `NO4_BAR.SCR` 37,378 free; `NO4_TOOL_ROOM.SCR` 61,899, 80/80; the NO4.b01/b02 rooms ≥ 63,697; the NO5 rooms ≥ 63,950; NO6_BRIDGE 63,400, the other NO6 rooms ≥ 64,242; NO3_CHAPEL.SCR 55,247, 150/150; NO3_NO4.SCR 60,727, 61/61; SPACESHIP.SCR 64,874, SPACESHIP_HW.SCR 64,841, 8/8; NO4_BAR_T.SCR 55,244, 181/181 (MEASURE 2026-11-01, after #40); NO1_CONTROLROOM 64,880, NO1_ENGINEROOM 64,564, NO1_STORAGE 65,180, 8/8).
+Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-31; the NO3/NO2 bundle rooms ≥ 62,822 (NO2_MAINSTORAGE); `NO4_BAR.SCR` 37,378 free; `NO4_TOOL_ROOM.SCR` 61,899, 80/80; the NO4.b01/b02 rooms ≥ 63,697; the NO5 rooms ≥ 63,950; NO6_BRIDGE 63,400, the other NO6 rooms ≥ 64,242; NO3_CHAPEL.SCR 55,247, 150/150; NO3_NO4.SCR 60,727, 61/61; SPACESHIP.SCR 64,874, SPACESHIP_HW.SCR 64,841, 8/8; NO4_BAR_T.SCR 55,244, 181/181 (MEASURE 2026-11-01, after #40); NO4_HWR_BACK_T.SCR 64,005, 16/16, NO4_HWR_FRONT_DOWN_T.SCR 64,297, 9/9 (after #39); NO1_CONTROLROOM 64,880, NO1_ENGINEROOM 64,564, NO1_STORAGE 65,180, 8/8).
 
 ## In flight
 | Unit | Branch | Round | PR | Who acts next |
 |---|---|---|---|---|
 | script NO4_BAR_T.p03 | `tl/script-NO4_BAR_T.p03` | **MERGED** round 0, squash a64d635 (NO4_BAR_T.SCR 55,039 free, 51/51, max 4 rows/page; CHECK 236 + 25 pairs); integrated (glossary 犯人, 楽観主義者, 神 scope; R §38; PROJECT.md §7 twin-binding blind spot) | #41 | coordinator: next review #40 |
 | script NO4_BAR_T.p04 | `tl/script-NO4_BAR_T.p04` | **MERGED** round 1, squash 2edb846 (round 0 CHANGES: 0166 からな, 0172 subject; NO4_BAR_T.SCR 55,244 free, 181/181, max 4 rows/page; CHECK 237 + 25 pairs); integrated (glossary §4 注：; R §39 incl. 0147 third ground; PROJECT.md §7 + F-012 exact-twin `+` row) | #40 | coordinator: next review #39 round 1, then #38 |
-| script NO4_T.b01 | `tl/script-NO4_T.b01` | round 0 CHANGES (FRONT_DOWN_T/0002 だろう hedge dropped; Flag 2 no-period twins upheld); round 1 sent to same translator | #39 | translator, then reviewer |
+| script NO4_T.b01 | `tl/script-NO4_T.b01` | **MERGED** round 1, squash b76838f (round 0 CHANGES: FRONT_DOWN_T/0002 だろう hedge, fixed with a label `{br}`; Flag 2 no-period SCN002OLD twins upheld; NO4_HWR_BACK_T.SCR 64,005 / NO4_HWR_FRONT_DOWN_T.SCR 64,297 free, 25/25, max 4 rows/page; CHECK 237 + 32 pairs); integrated (glossary 乗員, 客室, 安全地帯, 立てこもる; R §40; F-008 b03 recurrences) | #39 | coordinator: next review #38 |
 | script NO4_T.b02 | `tl/script-NO4_T.b02` | translator 1, PR opened (63,183 free, 39/39) | #38 | reviewer, behind the barrier |
 
 ## Next up
@@ -46,7 +46,11 @@ wrap scan, speakers from content, unique review-wN-prK / integrate-wN-prK branch
 
 ## Remaining
 QUEUE order, generated 2026-11-01 (wave 10 units in Next up) (source characters, tags excluded). Script, the `_T` test
-scripts (F-008): NO4_T.b03 (414; NO4_MACHINE_T, NO4_ROOM01_T — MACHINE_T/s06–s08 ↔ SCN001/01–02, R §4.5).
+scripts (F-008): NO4_T.b03 (414; NO4_MACHINE_T, NO4_ROOM01_T — MACHINE_T/s06–s08 ↔ SCN001/01–02, R §4.5). MACHINE_T/s10–s17 are
+one-line labelled `text` copies (final 。) of shipped NO4_HWR_BACK_T/0009–0016 (#39), which CHECK does not pair: s10 = 0009
+`【Oakland】Don't fall behind.` (27) and s12 = 0015 `【Miller】How could this be…` (26) reuse as they are; s16 = 0011
+`【Heming】It's gotten serious…` is 28 (hard limit, usable); s11, s13, s14, s15, s17 (= 0010, 0016, 0013, 0014, 0012) need their own
+cut within 28 (27 preferred), keeping #39's words where they fit (R §40.5).
 Scene: none — store complete (wave 4). 1 script unit remains after wave 10's four: wave 11 is NO4_T.b03 alone, then the run is complete bar the blocked system store.
 
 ## Blocked — needs a human

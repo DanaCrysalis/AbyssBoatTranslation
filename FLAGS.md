@@ -170,6 +170,12 @@ are tag-variants CHECK pairs (reuse the target with `{p}` appended); 0004 has �
 paired: `【Miller】Hide? How long are we meant to hide⁉{p}`. `NO4_MACHINE_T`/s06–s08 are
 labelled `text` copies of SCN001/01–02: s06 `【Oakland】What are we to do?` (27); s07–s08 need
 their own cut within one line (rulings R §4.5).
+Shipped by PR #39 (NO4_T.b01) as above. Its `NO4_HWR_BACK_T`/0009–0016 recur, labelled and with a
+final 。, as the one-line `text` rows `NO4_MACHINE_T`/s10, s11, s16, s17, s14, s15, s12, s13
+(NO4_T.b03, wave 11), which CHECK does not pair. s10 `【Oakland】Don't fall behind.` (27) and s12
+`【Miller】How could this be…` (26) reuse #39's words as they are; s16 `【Heming】It's gotten serious…`
+is 28 (the hard limit); s11, s13, s14, s15, s17 need their own cut within 28, keeping #39's words
+where they fit (rulings R §40.5).
 `NO4_HWR_FRONT_UP_T`/0016–0037 draft NO4_HWR_FRONT.p03 (PR #14) 0118–0138, all `【Name】`-prefixed,
 so CHECK pairs none of them: reuse p03's wording by hand; 【女】 → `【Woman】` (glossary §1), and
 T/0022, 0024, 0028 `【女】………{p}` take `【Woman】………{p}` (rulings R §14.1, §14.4).
@@ -337,6 +343,9 @@ PR #36 (NO4_BAR_T.p01): CHECK with and without the unit gave the same 214 / 9 pa
 reviewer's census paired it by hand, with the label stripped and final 。 and ！？ normalised (R §35).
 The typo pair 0041 そうも ↔ NO4_BAR/0023 どうも is outside any normalisation, so the census also needs
 the glossary Variants and F-028.
+PR #39 (NO4_T.b01), reviewer's plant: `NO4_HWR_BACK_T`/0004 (the ⁉ twin of SCN002OLD/04's ！？)
+with divergent words (`How long must we hide⁉`) passed CHECK, `All checks passed`. Shipped with
+SCN002/04's words; censused by hand (R §40.2).
 
 ### F-014 · 2026-10-06 · script · OPEN
 Suspected source typo: `NO4_BAR/0218` もう一斑は社長とヘイミングだ has 一斑 ("a fleck"; 1 / 0 / 0,

@@ -63,6 +63,9 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | 生存者 | — | survivor(s) | 8 (9) | — | same word as 生き残り; NO4_HWL_FRONT/0008 "there may be no survivors left"; 1 / 0 / 0 | R §21.1 |
 | 乗客 | — | passenger(s) | 10 (9) | — | as shipped NO4_BAR/0028, 0094, 0191, 0198, 0393; NO4_HWR_FRONT/0122 "a passenger on board this ship"; 15 / 0 / 0 | R §14.1 |
 | 乗組員 | 乗組員の制服 | crew member(s); the crew; 乗組員の制服: crew uniforms | 11 (12); 8; 13 | — | the ship's own crew, never the salvagers; NO4_STORAGE/0004 "Inside are crew uniforms."; 1 / 0 / 0 | R §21.1 |
+| 乗員 | 乗客は乗員も含め | the crew (as 乗組員); 乗客は乗員も含め: the ship's passengers, crew included | 8; 36 | — | the ship's own crew; NO4_HWR_FRONT_DOWN_T/0004 `…many of the ship's passengers, crew included, have been killed.`; promoted from §9; 1 / 0 / 0 | R §40.1 |
+| 客室 | そこらの客室 | cabin(s), as キャビン; そこらの客室: a cabin nearby | 5 (6); 14 | — | lowercase; never "stateroom"; NO4_HWR_FRONT_DOWN_T/0005 "we hole up in a cabin nearby"; promoted from §9; 1 / 0 / 0 | R §40.1 |
+| 安全地帯 | 安全地帯にする | a safe zone ("make it a safe zone") | 11; 19 | — | NO4_HWR_FRONT_DOWN_T/0005; never "safe haven"; 安全な場所 "a safe place" (SCN002/01) is another word, not fixed; promoted from §9; 1 / 0 / 0 | R §40.1 |
 | 客船 | — | passenger ship | 14 | — | this ship; 例の客船 → "that passenger ship" (0279) | R §6.1 |
 | 船体 | — | the hull | 8 | — | lowercase; 船 alone stays "the ship"; a repeat in one sentence may take "it" (NO4_MACHINER90/0098); SCN047C1/05 "the vessel" in context, referent left open (alien ship or the passenger ship); 5 / 1 / 0 | R §15.1, §17.1 |
 | 便所 | — | the toilet | 10 | — | lowercase; Collison's word (0292, NO4_HWR_FRONT/0011) | R §6.1 |
@@ -217,6 +220,7 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | ワイフ | — | my wife | 7 | Wolg's murdered wife, his police story: NO3_NO4/0030 "My wife, who always met me at the door…", 0032; the loanword affectation is not carried; 2 / 0 / 0 | R §27.1, §29.1 |
 | 神 | — | god, lowercase ("a god", "that god of yours"); capitalised as Collison's God: 神は──主は → `God——the Lord` | 3; 13 | lowercase as a common noun (SCN046B2/02–05, the killer's "god"); capitalised as the proper noun (NO4_BAR_T/0144, restated as 主 "the Lord", 1 / 0 / 0); 女神 is the 俺様 row's "goddess"; 1 / 4 / 0 (女神 3 / 0 / 0) | R §13.1, §38.1 |
 | 犯人 | — | the culprit | 11 | as shipped NO4_BAR/0246 `The culprit is human.`; NO4_BAR_T/0118, 0123; 3 / 0 / 0 | R §38.1 |
+| 立てこもる | 立てこもって · 立てこもるようになった | hole up ("holed up") | 7 (8) | NO4_BAR/0088 and NO4_BAR_T/0130 "holed up in their own rooms" (shipped); NO4_HWR_FRONT_DOWN_T/0005 "we hole up in a cabin nearby"; 3 / 0 / 0 | R §38.1, §40.1 |
 | 楽観主義者 | — | an optimist | 11 | NO4_BAR_T/0107 `Next came an optimist who said to wait for rescue.`; promoted from §9; 1 / 0 / 0 | R §38.1 |
 | 生肝 | — | raw liver | 9 | SCN046B2/04 only (アレの生肝 → "that thing's raw liver"); 0 / 1 / 0 | R §13.1 |
 | ゲームオーバー | — | game over ("it's game over") | 9 | in dialogue, SCN046A2/01 only (Heming to Oakland); 0 / 1 / 0 | R §13.1 |
@@ -307,9 +311,6 @@ NOT decisions. The first translator to render one promotes it in the PR's Glossa
 so; the reviewer moves the row up into its section in the integration commit. -->
 | Source | Variants | Proposed | Alternatives | Where seen | Wave |
 |---|---|---|---|---|---|
-| 乗員 | — | the crew (as 乗組員, §2); 乗客は乗員も含め → "the passengers, crew included" | — | NO4_HWR_FRONT_DOWN_T/0004 only (b01) | 10 |
-| 客室 | — | cabin(s) | stateroom(s) | NO4_HWR_FRONT_DOWN_T/0005 only (b01) | 10 |
-| 安全地帯 | — | a safe zone | a safe haven | NO4_HWR_FRONT_DOWN_T/0005 only (b01) | 10 |
 
 ## 10. Open questions
 <!-- one line each, with the FLAGS id. A closed question is deleted here; its answer stays in rulings.md. -->
