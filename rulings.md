@@ -3595,3 +3595,19 @@ Two PRs, each one file, based on `main` after this integration commit, in this o
    - Change exactly one target: `tl/script/NO4_T.b03.tsv:10 NO4_MACHINE_T/s11` → `【Oakland】What, scared?` (22, no `{p}`, no final period beyond the `?`).
    - Expected results: CHECK `All checks passed` with tag-variant pairs 33; UNITCHECK s11 22; MEASURE NO4_MACHINE_T 13/13.
 - After both merge, STATUS shows script 38/38 and 1,709/1,709. F-030 closes.
+
+## Unit script NO4_T.b01 (PR #43, MERGED, 2026-11-01)
+
+F-030 step 1: the one-row correction specified in R §42.4 point 1. Reviewed once:
+- **Round 0** (head c27d822, merged with origin/main 6adfdd7, clean): MERGE, squash 83d5b51. No findings.
+
+### 43.1 NO4_HWR_BACK_T/0010 re-cut (PR Flag 2)
+- Source: `【オークランド】なんだ、怖じ気づいたか？{p}` — 怖じ気 2 / 0 / 0 (0010 and NO4_MACHINE_T/s11); 怖気, おじけ, オジケ, 怖じけ 0 / 0 / 0 each.
+- Target: `tl/script/NO4_T.b01.tsv:13` `【Oakland】What, have you lost your nerve?{p}` (40, 2 rows) → `【Oakland】What, scared?{p}` (22, 1 row), the glossary §6 row of R §42.2. The diff is that one target.
+- Evidence (reviewer re-run):
+  - CHECK 239 duplicate / 32 tag-variant pairs, `All checks passed`. UNITCHECK unit 25 rows and store 1,708 rows, 0 violations. MERGE `keys that never matched the dump: 0`.
+  - MEASURE NO4_HWR_BACK_T.SCR 1,512 / 65,535, 64,023 free (was 64,005), 16/16. `containers negative: 0; under the reserve (2000 bytes): 0`.
+  - F-013 census of 0010 against every dump row: 2,087 whole-row and 13,308 clause pairs. The only whole-row match is s11. The clause なんだ also matches NO3_NO4/0048, NO4_BAR/0431 and NO4_MACHINER90/0069, which are shipped in context; it is not a fixed term.
+  - Step-2 trial: s11 = `【Oakland】What, scared?` → `tag-variant pairs compared 33`, `All checks passed`, UNITCHECK s11 22. The file was restored byte for byte.
+- Binds: `tl/script/NO4_T.b03.tsv:10 NO4_MACHINE_T/s11` (step 2, unchanged from R §42.4 point 2).
+- Glossary: none new. The §6 row's note now says 0010 is shipped and s11 pending; the Ruling column adds §43.1. F-030 stays open until step 2 merges.

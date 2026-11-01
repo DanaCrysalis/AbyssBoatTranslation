@@ -519,7 +519,8 @@ falls through to Japanese. CHECK binds it as a tag variant of shipped `NO4_HWR_B
 (`tl/script/NO4_T.b01.tsv:13`, `【Oakland】What, have you lost your nerve?{p}`, 40 columns). A `text` row
 holds 28. STATUS shows NO4_T.b03 as `part`, 26/27 · resolved by two one-file PRs, in order: (1) re-cut
 b01 0010 to `【Oakland】What, scared?{p}`; (2) fill b03 s11 with `【Oakland】What, scared?`. Both steps
-were tested green by the reviewer. Glossary §6 row; spec in rulings R §42.4. PR #42 review.
+were tested green by the reviewer. Glossary §6 row; spec in rulings R §42.4. PR #42 review. Step 1 done: PR #43
+merged 83d5b51 (2026-11-01, R §43); step 2 (s11) re-tested green against it. Closes when step 2 merges.
 
 ## CHECK positive controls
 <!-- One entry per kind of violation deliberately planted and caught by CHECK (tools/README.md rule 3).
