@@ -304,6 +304,11 @@ NOT decisions. The first translator to render one promotes it in the PR's Glossa
 so; the reviewer moves the row up into its section in the integration commit. -->
 | Source | Variants | Proposed | Alternatives | Where seen | Wave |
 |---|---|---|---|---|---|
+| 注： (developer note, `_T` files) | — | `Note: ` then the note in plain English, a stage direction, never dialogue; フェードアウト "fade-out", キャラ劇 "character animation" | `NB: ` | NO4_BAR_T/0157, 0177, 0181 (p04); NO4_HWR_FRONT_DOWN_T/0007 (b01); NO4_HWR_FRONT_UP_T/0015, 0018 (b02); 0 shipped | 10 |
+| 楽観主義者 | — | an optimist | — | NO4_BAR_T/0107 only (p03; no shipped twin) | 10 |
+| 乗員 | — | the crew (as 乗組員, §2); 乗客は乗員も含め → "the passengers, crew included" | — | NO4_HWR_FRONT_DOWN_T/0004 only (b01) | 10 |
+| 客室 | — | cabin(s) | stateroom(s) | NO4_HWR_FRONT_DOWN_T/0005 only (b01) | 10 |
+| 安全地帯 | — | a safe zone | a safe haven | NO4_HWR_FRONT_DOWN_T/0005 only (b01) | 10 |
 
 ## 10. Open questions
 <!-- one line each, with the FLAGS id. A closed question is deleted here; its answer stays in rulings.md. -->
