@@ -513,15 +513,6 @@ normally.{p}` (`tl/script/NO1.b01.tsv:6`). The shipped row keeps both ようだ 
 may not edit translation_prompt.md, so the fix is a one-line update of the example to the shipped target ·
 rulings R §36.2. PR #34 review.
 
-### F-030 · 2026-11-01 · script · OPEN
-`NO4_MACHINE_T`/s11 `【オークランド】なんだ、怖じ気づいたか？` (`tl/script/NO4_T.b03.tsv:10`) is untranslated and
-falls through to Japanese. CHECK binds it as a tag variant of shipped `NO4_HWR_BACK_T`/0010
-(`tl/script/NO4_T.b01.tsv:13`, `【Oakland】What, have you lost your nerve?{p}`, 40 columns). A `text` row
-holds 28. STATUS shows NO4_T.b03 as `part`, 26/27 · resolved by two one-file PRs, in order: (1) re-cut
-b01 0010 to `【Oakland】What, scared?{p}`; (2) fill b03 s11 with `【Oakland】What, scared?`. Both steps
-were tested green by the reviewer. Glossary §6 row; spec in rulings R §42.4. PR #42 review. Step 1 done: PR #43
-merged 83d5b51 (2026-11-01, R §43); step 2 (s11) re-tested green against it. Closes when step 2 merges.
-
 ## CHECK positive controls
 <!-- One entry per kind of violation deliberately planted and caught by CHECK (tools/README.md rule 3).
 A checker that has never failed has never been tested. -->
@@ -551,3 +542,12 @@ UNITCHECK on a unit with nothing translated → `nothing examined` (exit 1).
 
 ## Closed
 <!-- id · date · how it closed · pointer to rulings.md or the commit -->
+
+### F-030 · 2026-11-01 · script · CLOSED
+`NO4_MACHINE_T`/s11 `【オークランド】なんだ、怖じ気づいたか？` (`tl/script/NO4_T.b03.tsv:10`) is untranslated and
+falls through to Japanese. CHECK binds it as a tag variant of shipped `NO4_HWR_BACK_T`/0010
+(`tl/script/NO4_T.b01.tsv:13`, `【Oakland】What, have you lost your nerve?{p}`, 40 columns). A `text` row
+holds 28. STATUS shows NO4_T.b03 as `part`, 26/27 · resolved by two one-file PRs, in order: (1) re-cut
+b01 0010 to `【Oakland】What, scared?{p}`; (2) fill b03 s11 with `【Oakland】What, scared?`. Both steps
+were tested green by the reviewer. Glossary §6 row; spec in rulings R §42.4. PR #42 review. Step 1 done: PR #43
+merged 83d5b51 (2026-11-01, R §43); step 2 (s11) re-tested green against it. Closes when step 2 merges. Step 2 done: PR #44 merged 1a7061a (2026-11-01): s11 → `【Oakland】What, scared?` (22), CHECK 33 tag-variant pairs, NO4_MACHINE_T 13/13. **Closed 2026-11-01** · rulings R §44.1.

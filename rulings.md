@@ -3611,3 +3611,18 @@ F-030 step 1: the one-row correction specified in R §42.4 point 1. Reviewed onc
   - Step-2 trial: s11 = `【Oakland】What, scared?` → `tag-variant pairs compared 33`, `All checks passed`, UNITCHECK s11 22. The file was restored byte for byte.
 - Binds: `tl/script/NO4_T.b03.tsv:10 NO4_MACHINE_T/s11` (step 2, unchanged from R §42.4 point 2).
 - Glossary: none new. The §6 row's note now says 0010 is shipped and s11 pending; the Ruling column adds §43.1. F-030 stays open until step 2 merges.
+
+## Unit script NO4_T.b03 (PR #44, MERGED, 2026-11-01)
+
+F-030 step 2: the one-row fill specified in R §42.4 point 2. Reviewed once:
+- **Round 0** (head e2e0786, merged with origin/main d976625, clean): MERGE, squash 1a7061a. No findings.
+
+### 44.1 NO4_MACHINE_T/s11 filled (PR Flag 2)
+- Source: `【オークランド】なんだ、怖じ気づいたか？` (`text`, no tag) — 怖じ気 2 / 0 / 0 (s11 and NO4_HWR_BACK_T/0010 `…？{p}`); 怖気, おじけ, 怖じけ, オジケ 0 / 0 / 0 each.
+- Target: `tl/script/NO4_T.b03.tsv:10` empty → `【Oakland】What, scared?` (22, one line, no `{p}`), the glossary §6 row of R §42.2. The diff is that one target.
+- Evidence (reviewer re-run):
+  - CHECK 239 duplicate / 33 tag-variant pairs (was 32; s11 ↔ 0010 now paired), `All checks passed`. UNITCHECK unit 27 rows, s11 `cols/line [[22]]`; store 1,709 rows; 0 violations. MERGE `keys that never matched the dump: 0`.
+  - MEASURE NO4_MACHINE_T.SCR 1,447 / 65,535, 64,088 free (was 64,092), 13/13. NO4_ROOM01_T.SCR 64,898, 14/14. `containers negative: 0; under the reserve (2000 bytes): 0`.
+  - Wrap scan: `NO4_MACHINE_T/s11	text	T	【Oakland】What, scared?`, one line.
+- Binds: `tl/script/NO4_T.b01.tsv:13 NO4_HWR_BACK_T/0010` (shipped #43, tag variant).
+- Glossary: none new. The §6 row's note now says s11 shipped and F-030 closed, and the Ruling column adds §44.1. STATUS: script 38/38 units, 1,709/1,709 rows. F-030 closed.

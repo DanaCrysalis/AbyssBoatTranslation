@@ -286,7 +286,7 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | 天井に通風孔が見える。{br}ここから他の部屋に行けそうだ。 · 壁に… | — | `An air vent in the ceiling.{br}Looks like it could lead to other rooms.` · `An air vent in the wall.{br}Looks like it could lead to other rooms.` | 27 · 24; 27 / 12 | NO2_CABIN_2001/0001 (shipped) · NO2_SUBSTORAGE/0009 (shipped); 天井には…ここをたどって行けば (NO3_CABIN_3003/0002 = 3105/0005) is its own sentence (R §30.1); 1 / 0 / 0 each | R §32.1 |
 | 鍵がかかっている…。{p} | — | `The door is locked…{p}` | 19 | fixed sentence: NO2_HW_1/0002, 0003, NO2_HW_4/0002, NO2_HW_5/0002; "The door" supplied; NO6_BRIDGE/0009 扉には鍵がかかっている。 `The door is locked.` is another source, not paired; 4 / 0 / 0 | R §32.1 |
 | キサマ · きさま | — | you bastard ("Hey, you bastard!") | 11 | the killer, NO2_MAINSTORAGE/0003, 0004; Wolg, shipped SCN046B2/05 `You bastard, how many…`; 2 / 0 / 0 · 0 / 1 / 0 | R §32.1 |
-| 【オークランド】なんだ、怖じ気づいたか？ | — | `【Oakland】What, scared?` (+ `{p}` in the message) | 22 | fixed row pair, CHECK-bound: NO4_HWR_BACK_T/0010 (message) = NO4_MACHINE_T/s11 (`text`, 28 cols max); **corrects** shipped 0010 `What, have you lost your nerve?` (40, cannot fit s11); 0010 re-cut #43, s11 pending (F-030); 2 / 0 / 0 | R §42.2, §43.1 |
+| 【オークランド】なんだ、怖じ気づいたか？ | — | `【Oakland】What, scared?` (+ `{p}` in the message) | 22 | fixed row pair, CHECK-bound: NO4_HWR_BACK_T/0010 (message) = NO4_MACHINE_T/s11 (`text`, 28 cols max); **corrects** shipped 0010 `What, have you lost your nerve?` (40, cannot fit s11); 0010 re-cut #43, s11 shipped #44 (F-030 closed); 2 / 0 / 0 | R §42.2, §43.1, §44.1 |
 
 ## 7. Register per character
 | Character | Register | Contractions? | Markers | Ruling |
