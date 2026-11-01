@@ -6,7 +6,7 @@ at the close commit (`CLAUDE.md` Rule 3). A fresh container may clone shallow wi
 preflight is `git fetch origin main && git checkout main && git reset --hard origin/main`.
 
 ## NEXT ACTION — always current, always a literal instruction
-> **Wave 11 coordinator:** #42 merged (e909403) and integrated. Step 1 dispatched (branch `tl/script-NO4_T.b01-f030`). Then dispatch the F-030 follow-up as rework of this wave's unit, per rulings R §42.4:
+> **Wave 11 coordinator:** #42 merged (e909403) and integrated. Step 1 is PR #43 — run the reviewer on it. Then dispatch the F-030 follow-up as rework of this wave's unit, per rulings R §42.4:
 > 1. A translator re-cuts `tl/script/NO4_T.b01.tsv:13` NO4_HWR_BACK_T/0010 → `【Oakland】What, scared?{p}` (one file). Reviewer, merge.
 > 2. A translator fills `tl/script/NO4_T.b03.tsv:10` NO4_MACHINE_T/s11 → `【Oakland】What, scared?` (one file). Reviewer, merge.
 >
@@ -25,7 +25,7 @@ Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEA
 | Unit | Branch | Round | State | Next |
 |---|---|---|---|---|
 | script NO4_T.b03 | `tl/script-NO4_T.b03` | PR #42, round 0 | **MERGED** e909403 (round 0, no findings). CHECK 239 / 32 pairs; census 51,246 + 72,646 pairs, 11 matches; MEASURE NO4_MACHINE_T 64,092 free, NO4_ROOM01_T 64,898 free. s11 is left empty: CHECK binds it to NO4_HWR_BACK_T/0010 | F-030 follow-up (R §42.4): first re-cut b01 0010, then fill b03 s11, each a one-file PR. The coordinator dispatches it |
-| script NO4_T.b01 (F-030 step 1) | `tl/script-NO4_T.b01-f030` | dispatch 1 | translator re-cutting 0010 → `【Oakland】What, scared?{p}` (R §42.4) | PR → reviewer → then step 2 (b03 s11, branch `tl/script-NO4_T.b03-f030`) |
+| script NO4_T.b01 (F-030 step 1) | `tl/script-NO4_T.b01-f030` | PR #43, round 0 | PR open: 0010 → `【Oakland】What, scared?{p}` (22 cols), CHECK 239 / 32, NO4_HWR_BACK_T.SCR 64,023 free | reviewer → then step 2 (b03 s11, branch `tl/script-NO4_T.b03-f030`) |
 
 ## Next up
 Wave 11 (QUEUE 2026-11-01), one script unit, tier D — the last dispatchable unit of the run: NO4_T.b03 (27 rows, 414 chars,
