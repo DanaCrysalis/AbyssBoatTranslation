@@ -1,4 +1,4 @@
-**Last updated: 2026-11-01** — wave 9 closed: NO1.b01, SPACESHIP.b01, NO4_BAR_T.p01, NO4_BAR_T.p02 merged (PRs #34, #35, #36, #37), two CHANGES rounds (#34, #37), none parked; decks NO1 and SPACESHIP complete; NO4_BAR_T 94/181. Wave 10 next.
+**Last updated: 2026-11-01** — wave 10 dispatched: NO4_BAR_T.p03, NO4_BAR_T.p04, NO4_T.b01, NO4_T.b02 (glossary seeds 33eb5ce). Waiting on the wave barrier.
 
 ## Integration branch: `main`. Not configurable.
 Every PR bases on `main`; the reviewer merges into `main`; a wave is closed only when `origin/main` is
@@ -6,9 +6,8 @@ at the close commit (`CLAUDE.md` Rule 3). A fresh container may clone shallow wi
 preflight is `git fetch origin main && git checkout main && git reset --hard origin/main`.
 
 ## NEXT ACTION — always current, always a literal instruction
-> **Wave 9 coordinator:** wave 9 closed and proven on `origin/main`. Open the wave 10 session: `create_session` titled
-> `Abyss Boat — wave 10`, tags `["abyssboat-translation", "wave-10"]`, `source_revision: "main"`, seed of SKILL.md §6a with
-> UNITS = Next up. If no `Abyss Boat — wave 10` session exists in `list_sessions`, a resumer opens it.
+> **Wave 10 coordinator:** wait for all four translators (In flight) to open PRs — the wave barrier; `ListAgents` before
+> declaring any lost; re-dispatch a returned unit with no PR. Then review in unit order p03, p04, b01, b02, one reviewer at a time.
 
 ## Progress
 | Store | Done | Total | |
@@ -20,7 +19,12 @@ preflight is `git fetch origin main && git checkout main && git reset --hard ori
 Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-31; the NO3/NO2 bundle rooms ≥ 62,822 (NO2_MAINSTORAGE); `NO4_BAR.SCR` 37,378 free; `NO4_TOOL_ROOM.SCR` 61,899, 80/80; the NO4.b01/b02 rooms ≥ 63,697; the NO5 rooms ≥ 63,950; NO6_BRIDGE 63,400, the other NO6 rooms ≥ 64,242; NO3_CHAPEL.SCR 55,247, 150/150; NO3_NO4.SCR 60,727, 61/61; SPACESHIP.SCR 64,874, SPACESHIP_HW.SCR 64,841, 8/8; NO4_BAR_T.SCR 55,261, 94/181 (2026-11-01); NO1_CONTROLROOM 64,880, NO1_ENGINEROOM 64,564, NO1_STORAGE 65,180, 8/8).
 
 ## In flight
-Nothing. Wave 9's four units are merged; see Wave history and rulings R §34–§37.
+| Unit | Branch | Round | PR | Who acts next |
+|---|---|---|---|---|
+| script NO4_BAR_T.p03 | `tl/script-NO4_BAR_T.p03` | translator 1, dispatched 2026-11-01 | — | translator |
+| script NO4_BAR_T.p04 | `tl/script-NO4_BAR_T.p04` | translator 1, dispatched 2026-11-01 | — | translator |
+| script NO4_T.b01 | `tl/script-NO4_T.b01` | translator 1, dispatched 2026-11-01 | — | translator |
+| script NO4_T.b02 | `tl/script-NO4_T.b02` | translator 1, dispatched 2026-11-01 | — | translator |
 
 ## Next up
 Wave 10 (QUEUE 2026-11-01), four script units, all tier D: NO4_BAR_T.p03 (51 rows, 1,270 chars, ratio 22.76; T/0095–0145),
