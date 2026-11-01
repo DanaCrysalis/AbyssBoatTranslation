@@ -162,6 +162,7 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | はい · いいえ (choice) | — | Yes · No | 3 · 2 | 27 | `choice` rows only (8 / 0 / 0 each); はい in dialogue is in context | R §10.1 |
 | 握る · 握らない (choice) | — | Hold the round · Don't hold it | 14 · 13 | 27 | the engine vote after NO3_CHAPEL/0122 (s28 / s29), never a handshake; 0122 右手に握れ takes "hold it in your right hand"; 1 / 0 / 0 each | R §25.1 |
 | 通風孔に入る · 入らない (choice) | — | Enter the vent · Don't enter | 14 · 11 | 27 | `choice` rows: NO3_CABIN_3003/s06–s07, 3105/s07–s08; NO2_CABIN_2001/s05–s06 (shipped), NO2_SUBSTORAGE/s06–s07 (shipped) match; 入らない in dialogue (NO5_HW_R/0006) in context; 4 / 0 / 0 each | R §30.1 |
+| 注： (developer note, `_T` files) | — | `Note: ` then the note in plain English, as a stage direction, never dialogue | 6 (prefix) | — | フェードアウト "fade-out", キャラ劇 "character animation"; a note with no final 。 takes "." (R §36.1); NO4_BAR_T/0157, 0177, 0181; HWR_FRONT_DOWN_T/0007, HWR_FRONT_UP_T/0015, 0018 to follow; promoted from §9; 6 / 0 / 0 | R §39.1 |
 
 ## 5. Verbal tics — decided, never mix
 <!-- What is fixed is the word; punctuation follows the source line. -->
@@ -306,7 +307,6 @@ NOT decisions. The first translator to render one promotes it in the PR's Glossa
 so; the reviewer moves the row up into its section in the integration commit. -->
 | Source | Variants | Proposed | Alternatives | Where seen | Wave |
 |---|---|---|---|---|---|
-| 注： (developer note, `_T` files) | — | `Note: ` then the note in plain English, a stage direction, never dialogue; フェードアウト "fade-out", キャラ劇 "character animation" | `NB: ` | NO4_BAR_T/0157, 0177, 0181 (p04); NO4_HWR_FRONT_DOWN_T/0007 (b01); NO4_HWR_FRONT_UP_T/0015, 0018 (b02); 0 shipped | 10 |
 | 乗員 | — | the crew (as 乗組員, §2); 乗客は乗員も含め → "the passengers, crew included" | — | NO4_HWR_FRONT_DOWN_T/0004 only (b01) | 10 |
 | 客室 | — | cabin(s) | stateroom(s) | NO4_HWR_FRONT_DOWN_T/0005 only (b01) | 10 |
 | 安全地帯 | — | a safe zone | a safe haven | NO4_HWR_FRONT_DOWN_T/0005 only (b01) | 10 |

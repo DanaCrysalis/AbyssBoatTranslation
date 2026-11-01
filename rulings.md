@@ -3271,3 +3271,68 @@ Census counts are rows per store (script / scene / system), from the reviewer's 
 - **Speakers:** all 51 rows are Collison (わし, じゃ, 我々), continuing NO4_BAR_T.p02 0078–0094 (R §37.3); `spk=-` ignored (F-009). Register per glossary §7 ("I daresay", "this foe", "Even had they hit").
 - **Recurrence (PR Flag 8):** しかしだ 3 / 0 / 0: NO4_BAR/0098 = :48 0139 しかしだ。{br} `And yet.` (exact twins), and NO4_BAR/0449 しかしだなっ。, another source (`But see here.`), so there is no divergence to settle.
 - Glossary: none beyond §38.1.
+
+## Unit script NO4_BAR_T.p04 (PR #40, MERGED, 2026-11-01)
+
+The end of the `_T` bar conversation (NO4_BAR_T/0146–0181, 36 rows, 1,189 source characters, tier D, ratio 24.24). T/0146–0168 draft shipped NO4_BAR/0106–0134 with `【Name】` labels (R §2.5, §3.6). 0169–0181 have no shipped draft: the wait for rescue, three developer notes and the ship starting to tilt.
+
+Reviewed twice:
+- **Round 0** (099f57b): CHANGES, two reading findings (§39.3).
+- **Round 1** (b01c94d, merged with main 66aee27, clean): MERGE, squash 2edb846. Only `:24` 0166 and `:30` 0172 changed, byte-identical to the reviewer's tested scratch fix.
+
+Figures (round 1):
+- **Containers.** MEASURE after MERGE: NO4_BAR_T.SCR 10,291 / 65,535 (55,244 free; 55,039 after p03), tokens 200 / 1,499, 181/181, so the room is complete. NO4_BAR.SCR is unchanged at 37,378. `containers negative: 0; under the reserve (2000 bytes): 0`. MERGE: keys that never matched 0.
+- **Pages.** UNITCHECK: 36 rows, 0 violations, max 4 rows/page. Store: 1,618 rows, 0 violations.
+- **Codes.** The authored diff covers 12 rows: 8 label `{br}` (0146, 0150, 0155, 0156, 0160, 0166, 0167, 0172; label lines 6–10 cols) and 6 added `{p}` (0147 leading, 0150, 0153, 0154, 0159, 0160). This equals PR Flag 2. No `{w}`.
+- **Duplicates.** CHECK: 237 duplicate and 25 tag-variant pairs (236 / 25 without the unit). The added pair is 0148 = NO4_BAR/0107, byte-identical. Reviewer's census (label stripped, `{p}{w}{br}` removed, ！？ → ⁉, `…。` → `…`, final 。 dropped; every unit row × every script and scene dump row): **68,328 whole-row and 143,117 sentence pairs, 43 matches** (21 of them 0151 `………`). Every twin keeps the shipped words except 0147 (§39.2). 0158 has 事故 for shipped トラブル, so only `…They're late.` is a twin.
+- **Widths.** Wrap scan of 0146–0181 in `build/script_merged.tsv`: no lone a/A/I/an, no split title, no one-word last row. Glyph counts match on 36 / 36 rows. No word-initial apostrophe.
+
+Census counts are rows per store (script / scene / system), from the reviewer's grep of `dumps/` on 2026-11-01. Line citations are in `tl/script/NO4_BAR_T.p04.tsv` (line = row order + 3).
+
+### 39.1 Terms
+- **注：** 6 / 0 / 0 → `Note: ` and then the note in plain English, as a stage direction. Promoted from §9 (wave 10 seed) into §4.
+  - Rendered at :15 0157 `Note: Use a fade-out or something to switch over after a set time has passed.`, :35 0177 `Note: The ship shakes violently. Planned to be shown with character animation, etc.` and :39 0181 `Note: The shaking continues for a while, and the screen tilts further and further.`
+  - A note with no final 。 takes "." (R §36.1). フェードアウト is "fade-out"; キャラ劇 is "character animation".
+  - Binds NO4_HWR_FRONT_DOWN_T/0007 (#39) and NO4_HWR_FRONT_UP_T/0015, 0018 (#38).
+- **振動** at 0177 → `shakes`, in context as the §3 row allows. **むやみに** at :27 0169 → `heedlessly`, as shipped NO4_BAR/0187.
+- Glossary: §4 row 注： added; the §9 seed removed.
+
+### 39.2 Sentence twins: a third ground for leaving the shipped words; the exact-twin `+` row (PR Flags 3–4)
+- **:5 0147** 他のグループは生きているのか死んでいるのかもわからん is the second sentence of NO4_BAR/0106, shipped `We don't even know whether the other groups are alive or dead.`. Here it is `{p}We don't even know if other groups are alive or dead.` (27 / 25).
+- **Constraints.**
+  - 0147 has no ending tag.
+  - :6 0148 is a `+` row and an exact source twin of NO4_BAR/0107. CHECK binds it byte for byte, so it cannot open with `{br}`/`{p}` (R §38.2).
+  - 0148 is therefore kept off 0147's last row only by the wrap, which breaks before `Going` when that row is ≥ 24 columns.
+- **Tested in scratch.**
+  - The shipped words give a 5-row page from 0147 (VIOLATION) and an 8-column last row, so 0148 glues on (`dead.Going`).
+  - `…whether the other{br}groups are alive or dead.` is still 5 rows.
+  - Only a click inside the noun phrase keeps the words (`…whether{p}the other{br}groups…`).
+  - `if the other groups` and `whether other groups` pass UNITCHECK at 4 rows, but their last rows are 5 columns, so 0148 glues on (UNITCHECK counts 0148's first line as 28). Only the PR's `if other groups` leaves a 25-column last row, so the tools break before `Going`.
+- **Ruling.** Sentence twins inside longer rows keep the shipped words (R §35.2, §37.1). A rewording is now allowed on a third ground, beside a lone "a"/"I" and the label orphan: the shipped words cannot be laid out without a hard defect, meaning a page over 4 rows or F-012 glue, short of a click inside a phrase. The rewording must be as literal as the shipped words, minimal and flagged. Here: "whether" → "if", "the other groups" → "other groups"; も "even" is kept. Accepted.
+- **Blind spot (PR Flag 4, adopted).** Only the wrap separates 0147 and 0148. If a later edit shortens 0147's last row below 24 columns, the glue returns, and CHECK and UNITCHECK pass it. A dump-wide census of the 25 F-012 boundaries finds this the only `+` row that is an exact source twin. Added to PROJECT.md §7 and as an F-012 addendum in FLAGS.md in this commit.
+- Binds `:5 NO4_BAR_T/0147`, `:6 0148`.
+
+### 39.3 Readings: two round-0 findings, the rest accepted
+- **:24 0166** 相手は化け物らしいからな。保証はできん。 (round-0 finding 1).
+  - Round 0 had two juxtaposed sentences and dropped the causal からな. The PR said every placement that keeps it strands a word, but `Since` had not been tried.
+  - Target: `【Wolg】{br}Since it seems we're up against a monster, I can't guarantee anything.{p}` (6 / 23 / 26 / 19). It keeps らしい ("it seems") and shipped NO4_BAR/0132's `I can't guarantee anything.`.
+  - A connective is not dropped for geometry while a label `{br}` fits it (R §37.1).
+- **:30 0172** なにも起こらなければいいがな… (round-0 finding 2).
+  - Round 0 had `Hope nothing happens…`, with the subject dropped to fit one row. PROJECT.md §6 says to supply the pronoun the source leaves out, and `【Wolg】{br}I hope nothing happens…{p}` (6 / 23) fits.
+  - Shipped `Saves me the trouble.` (0168 = NO4_BAR/0134) is a fixed twin and sets no register licence for new lines.
+- **Accepted readings.**
+  - :22 0164 ここには殺人鬼がいるんだ → `The killer is here.`: the glossary's definite "the killer" for the culprit of T/0116–0123, as SCN002/06.
+  - :33 0175 `Rescue's not really coming, is it.`: a flat tag question with the source's 。.
+  - :37 0179 始まりおった！ → `It has begun!`.
+  - :38 0180 `The ship——the hull is tilting.` (── → `——`).
+  - :8 0150 てな → `you see`, as shipped 0109's でな.
+  - :10 0152: ですよ is carried by register in `Wolg has a point.`.
+  - :16 0158 事故 → `accident`, as 0154 and shipped 0118.
+  - :17 0159 安易に → `carelessly`, kept apart from 0123's 迂闊 "rashly"; 二重遭難 takes shipped 0124's `the rescuers could become victims too`.
+  - :28 0170 社長 → `the boss`; 部下 → `men`.
+- **Clicks and label `{br}`.**
+  - Each label `{br}` avoids an orphan or a lone "I", or keeps a connective (0166). Without one, the scratch wraps give `story.`, `I`, `welcome.`, `may.`, `dangers.`, `fuss.`, `happens…`.
+  - The `{p}` at :17 0159 after `situation,` sits at the 以上、 clause boundary inside one 6-row sentence.
+  - All approved.
+- **Speakers** come from the labels and agree with content (F-009): 0158, 0165, 0167, 0170 Oakland (わし, 社長); 0166 Wolg, where shipped 0132's different source was Collison.
+- Glossary: none beyond §39.1.

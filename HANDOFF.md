@@ -1,4 +1,4 @@
-**Last updated: 2026-11-01** — wave 10: #41 NO4_BAR_T.p03 MERGED (squash a64d635, round 0); #40, #39, #38 next in review.
+**Last updated: 2026-11-01** — wave 10: #41 NO4_BAR_T.p03 MERGED (a64d635); #40 NO4_BAR_T.p04 MERGED (squash 2edb846, round 1; NO4_BAR_T.SCR complete); #39 in rework, #38 to review.
 
 ## Integration branch: `main`. Not configurable.
 Every PR bases on `main`; the reviewer merges into `main`; a wave is closed only when `origin/main` is
@@ -6,23 +6,23 @@ at the close commit (`CLAUDE.md` Rule 3). A fresh container may clone shallow wi
 preflight is `git fetch origin main && git checkout main && git reset --hard origin/main`.
 
 ## NEXT ACTION — always current, always a literal instruction
-> **Wave 10 coordinator:** #41 merged. Reviewer for #40 round 1 (head b01c94d) now; then #39 round 1 once its translator pushes;
-> then #38. One reviewer at a time.
+> **Wave 10 coordinator:** #41 and #40 merged and integrated. `git pull --ff-only`, then the reviewer for #39 round 1 once its translator pushes;
+> then #38 (round 0). One reviewer at a time. #39 and #38 cite glossary §4 注： `Note: ` (promoted by #40, R §39.1).
 
 ## Progress
 | Store | Done | Total | |
 |---|---|---|---|
-| script | 34 units · 1,582 rows | 38 units · 1,709 rows | NO4_BAR p01–p08, NO4_HWR_FRONT p01–p03, NO4_MACHINER90 p01–p02, NO4_TOOL_ROOM p01–p02 (rooms complete), NO4.b01, NO4.b02 (deck NO4 complete bar the `_T` scripts); NO5.b01 (deck NO5 complete); NO6.b01, NO6.b02 (deck NO6 complete); NO3_CHAPEL.p01–p03 (room complete, 150/150); NO3_NO4.p01–p02 (room complete, 61/61); NO3.b01, NO3.b02, NO2.b01, NO2.b02 (decks NO3, NO2 complete); SPACESHIP.b01 (deck SPACESHIP complete); NO1.b01 (deck NO1 complete); NO4_BAR_T.p01–p03 (145/181 of NO4_BAR_T); STATUS 2026-11-01 |
+| script | 35 units · 1,618 rows | 38 units · 1,709 rows | NO4_BAR p01–p08, NO4_HWR_FRONT p01–p03, NO4_MACHINER90 p01–p02, NO4_TOOL_ROOM p01–p02 (rooms complete), NO4.b01, NO4.b02 (deck NO4 complete bar the `_T` scripts); NO5.b01 (deck NO5 complete); NO6.b01, NO6.b02 (deck NO6 complete); NO3_CHAPEL.p01–p03 (room complete, 150/150); NO3_NO4.p01–p02 (room complete, 61/61); NO3.b01, NO3.b02, NO2.b01, NO2.b02 (decks NO3, NO2 complete); SPACESHIP.b01 (deck SPACESHIP complete); NO1.b01 (deck NO1 complete); NO4_BAR_T.p01–p04 (room complete, 181/181); STATUS 2026-11-01 |
 | scene | 4 units · 190 rows | 4 units · 190 rows | OP-SCN034, SCN038, SCN041-SCN046, SCN047-EPILOG (store complete) |
 | system | 0 | 5 units · 188 rows | blocked whole (F-006) |
 
-Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-31; the NO3/NO2 bundle rooms ≥ 62,822 (NO2_MAINSTORAGE); `NO4_BAR.SCR` 37,378 free; `NO4_TOOL_ROOM.SCR` 61,899, 80/80; the NO4.b01/b02 rooms ≥ 63,697; the NO5 rooms ≥ 63,950; NO6_BRIDGE 63,400, the other NO6 rooms ≥ 64,242; NO3_CHAPEL.SCR 55,247, 150/150; NO3_NO4.SCR 60,727, 61/61; SPACESHIP.SCR 64,874, SPACESHIP_HW.SCR 64,841, 8/8; NO4_BAR_T.SCR 55,039, 145/181 (MEASURE 2026-11-01, after #41); NO1_CONTROLROOM 64,880, NO1_ENGINEROOM 64,564, NO1_STORAGE 65,180, 8/8).
+Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-31; the NO3/NO2 bundle rooms ≥ 62,822 (NO2_MAINSTORAGE); `NO4_BAR.SCR` 37,378 free; `NO4_TOOL_ROOM.SCR` 61,899, 80/80; the NO4.b01/b02 rooms ≥ 63,697; the NO5 rooms ≥ 63,950; NO6_BRIDGE 63,400, the other NO6 rooms ≥ 64,242; NO3_CHAPEL.SCR 55,247, 150/150; NO3_NO4.SCR 60,727, 61/61; SPACESHIP.SCR 64,874, SPACESHIP_HW.SCR 64,841, 8/8; NO4_BAR_T.SCR 55,244, 181/181 (MEASURE 2026-11-01, after #40); NO1_CONTROLROOM 64,880, NO1_ENGINEROOM 64,564, NO1_STORAGE 65,180, 8/8).
 
 ## In flight
 | Unit | Branch | Round | PR | Who acts next |
 |---|---|---|---|---|
 | script NO4_BAR_T.p03 | `tl/script-NO4_BAR_T.p03` | **MERGED** round 0, squash a64d635 (NO4_BAR_T.SCR 55,039 free, 51/51, max 4 rows/page; CHECK 236 + 25 pairs); integrated (glossary 犯人, 楽観主義者, 神 scope; R §38; PROJECT.md §7 twin-binding blind spot) | #41 | coordinator: next review #40 |
-| script NO4_BAR_T.p04 | `tl/script-NO4_BAR_T.p04` | round 0 CHANGES (0166 からな, 0172 subject; 0147 rewording accepted → R §39 at integration); round 1 pushed b01c94d | #40 | reviewer, round 1 |
+| script NO4_BAR_T.p04 | `tl/script-NO4_BAR_T.p04` | **MERGED** round 1, squash 2edb846 (round 0 CHANGES: 0166 からな, 0172 subject; NO4_BAR_T.SCR 55,244 free, 181/181, max 4 rows/page; CHECK 237 + 25 pairs); integrated (glossary §4 注：; R §39 incl. 0147 third ground; PROJECT.md §7 + F-012 exact-twin `+` row) | #40 | coordinator: next review #39 round 1, then #38 |
 | script NO4_T.b01 | `tl/script-NO4_T.b01` | round 0 CHANGES (FRONT_DOWN_T/0002 だろう hedge dropped; Flag 2 no-period twins upheld); round 1 sent to same translator | #39 | translator, then reviewer |
 | script NO4_T.b02 | `tl/script-NO4_T.b02` | translator 1, PR opened (63,183 free, 39/39) | #38 | reviewer, behind the barrier |
 

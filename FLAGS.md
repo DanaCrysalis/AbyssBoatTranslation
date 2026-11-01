@@ -316,6 +316,12 @@ the box: R §23.2). Translators open the `+` target with `{br}` (flagged);
 listed in PROJECT.md §7 and checked by hand · would close with a tool PR: CHECK errors when a
 translated `+` target starts with text and the previous row's target ends in text, not a tag
 (rulings R §2.3).
+Addendum (PR #40, 2026-11-01): one boundary cannot take the `{br}`. NO4_BAR_T/0148 is an exact
+source twin of NO4_BAR/0107 (`Going to find out would hardly be wise, after all.{p}`), so CHECK
+requires it byte-identical. It is kept off 0147's row only by the wrap: 0147's last row (25 cols)
+must stay ≥ 24 so the tools break before `Going`. Dump-wide census of the 25 boundaries: this is the
+only exact-twin `+` row. Listed in PROJECT.md §7; the tool PR above should treat a wrap-inserted
+break at the boundary as a pass and flag a glued one (rulings R §39.2).
 
 
 ### F-013 · 2026-10-06 · tools · OPEN
