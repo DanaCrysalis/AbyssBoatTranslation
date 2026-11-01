@@ -6,9 +6,8 @@ at the close commit (`CLAUDE.md` Rule 3). A fresh container may clone shallow wi
 preflight is `git fetch origin main && git checkout main && git reset --hard origin/main`.
 
 ## NEXT ACTION — always current, always a literal instruction
-> **Wave 10 coordinator:** wave 10 closed and proven on `origin/main`. Open the wave 11 session: `create_session` titled
-> `Abyss Boat — wave 11`, tags `["abyssboat-translation", "wave-11"]`, `source_revision: "main"`, seed of SKILL.md §6a with
-> UNITS = Next up. If no `Abyss Boat — wave 11` session exists in `list_sessions`, a resumer opens it.
+> **Wave 11 coordinator:** NO4_T.b03 dispatched (translator, branch `tl/script-NO4_T.b03`). Wait for its PR, then run the
+> reviewer on it (foreground). After merge: close wave 11 and write the final handoff (`handoff: run complete`) — no wave 12.
 
 ## Progress
 | Store | Done | Total | |
@@ -20,7 +19,9 @@ preflight is `git fetch origin main && git checkout main && git reset --hard ori
 Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-31; the NO3/NO2 bundle rooms ≥ 62,822 (NO2_MAINSTORAGE); `NO4_BAR.SCR` 37,378 free; `NO4_TOOL_ROOM.SCR` 61,899, 80/80; the NO4.b01/b02 rooms ≥ 63,697; the NO5 rooms ≥ 63,950; NO6_BRIDGE 63,400, the other NO6 rooms ≥ 64,242; NO3_CHAPEL.SCR 55,247, 150/150; NO3_NO4.SCR 60,727, 61/61; SPACESHIP.SCR 64,874, SPACESHIP_HW.SCR 64,841, 8/8; NO4_BAR_T.SCR 55,244, 181/181 (MEASURE 2026-11-01, after #40); NO4_HWR_BACK_T.SCR 64,005, 16/16, NO4_HWR_FRONT_DOWN_T.SCR 64,297, 9/9 (after #39); NO4_HWR_FRONT_UP_T.SCR 63,183, 39/39 (after #38); NO1_CONTROLROOM 64,880, NO1_ENGINEROOM 64,564, NO1_STORAGE 65,180, 8/8).
 
 ## In flight
-Nothing. Wave 10's four units are merged; see Wave history and rulings R §38–§41.
+| Unit | Branch | Round | State | Next |
+|---|---|---|---|---|
+| script NO4_T.b03 | `tl/script-NO4_T.b03` | dispatch 1 | translator working (2026-11-01) | translator opens PR → reviewer |
 
 ## Next up
 Wave 11 (QUEUE 2026-11-01), one script unit, tier D — the last dispatchable unit of the run: NO4_T.b03 (27 rows, 414 chars,
