@@ -1,0 +1,28 @@
+# unit: script/NO4_T.b01
+# rows: 25
+# columns: id <TAB> context <TAB> source <TAB> target (empty target = untranslated)
+NO4_HWR_BACK_T/0001	msg spk=-	【オークランド】しかし、安全な場所なんてあるのか？{p}	【Oakland】But is there any such thing as a safe place?{p}
+NO4_HWR_BACK_T/0002	msg spk=-	【ウォルグ】わからん。だが、こんな通路をウロウロするよりもどこかの部屋に腰を落ち着けた方が安全なはずだ{p}	【Wolg】I don't know. But rather than wandering these corridors, settling in some room should be safer{p}
+NO4_HWR_BACK_T/0003	msg spk=-	【ヘイミング】賛成だな。下手に動かずに隠れていた方が安全だ{p}	【Heming】I agree with that. It's safer to stay hidden than to move rashly{p}
+NO4_HWR_BACK_T/0004	msg spk=-	【ミラー】隠れるって、いつまで隠れるのよ⁉{p}	【Miller】Hide? How long are we meant to hide⁉{p}
+NO4_HWR_BACK_T/0005	msg spk=-	【オークランド】１時間で戻らなければ上も異常に気付く{p}	【Oakland】If we're not back within the hour, the people up top will notice something's wrong{p}
+NO4_HWR_BACK_T/0006	msg spk=-	【ミラー】それまで殺人鬼に見つからなければ、助かるのね{p}	【Miller】So if the killer doesn't find us before then, we'll be saved{p}
+NO4_HWR_BACK_T/0007	msg spk=-	【ウォルグ】見つかってもむざむざやられんよ{p}	【Wolg】Even if found, we're not going down easily{p}
+NO4_HWR_BACK_T/0008	msg spk=-	【オークランド】さあ、移動を始めるぞ{p}	【Oakland】All right, let's get moving{p}
+NO4_HWR_BACK_T/0009	msg spk=-	【オークランド】遅れるなよ{p}	【Oakland】Don't fall behind.{p}
+NO4_HWR_BACK_T/0010	msg spk=-	【オークランド】なんだ、怖じ気づいたか？{p}	【Oakland】What, have you lost your nerve?{p}
+NO4_HWR_BACK_T/0011	msg spk=-	【ヘイミング】大変なことになったな…{p}	【Heming】It's gotten serious…{p}
+NO4_HWR_BACK_T/0012	msg spk=-	【ヘイミング】ウォルグがいる限り、物騒な連中に引けを取るとは思えんな{p}	【Heming】As long as Wolg is here, I can't imagine us being outmatched by dangerous types.{p}
+NO4_HWR_BACK_T/0013	msg spk=-	【ウォルグ】邪魔しないよう、ついてこい{p}	【Wolg】Follow me, and don't get in the way.{p}
+NO4_HWR_BACK_T/0014	msg spk=-	【ウォルグ】いいか、素人は銃のハンマーを起こすな。撃つのは最後の手段だ{p}	【Wolg】Listen, amateurs don't cock the hammer on a gun. Shooting is the last resort.{p}
+NO4_HWR_BACK_T/0015	msg spk=-	【ミラー】なんてことなの…{p}	【Miller】How could this be…{p}
+NO4_HWR_BACK_T/0016	msg spk=-	【ミラー】あなたも大変ね…{p}	【Miller】It must be hard for you too…{p}
+NO4_HWR_FRONT_DOWN_T/0001	msg spk=-	【オークランド】なんだ？{p}	【Oakland】What is it?{p}
+NO4_HWR_FRONT_DOWN_T/0002	msg spk=-	【オークランド】わしにも見当がつかん。足で探すしかないだろう。{p}	【Oakland】I have no idea either. We'll have no choice but to search on foot.{p}
+NO4_HWR_FRONT_DOWN_T/0003	msg spk=-	【ヘイミング】気持ちはわかる。いまは少しでも安全な場所を見つけないとな。{p}	【Heming】I understand how you feel. Right now, we must find a place that's even slightly safer.{p}
+NO4_HWR_FRONT_DOWN_T/0004	msg spk=-	【ウォルグ】船の乗客は乗員も含めかなり殺されたと見るのが妥当だ。	【Wolg】It's reasonable to assume many of the ship's passengers, crew included, have been killed.
+NO4_HWR_FRONT_DOWN_T/0005	msg spk=- +	誰もいないとすれば、そこらの客室に立てこもって安全地帯にする。{p}	{p}If there's no one around, we hole up in a cabin nearby and make it a safe zone.{p}
+NO4_HWR_FRONT_DOWN_T/0006	msg spk=-	【ミラー】２時間…長くて３時間の辛抱よ。{p}	【Miller】Two hours… three at the longest. We just have to hold out.{p}
+NO4_HWR_FRONT_DOWN_T/0007	msg spk=-	注：ここは仮作成部分{p}	Note: This section is written provisionally.{p}
+NO4_HWR_FRONT_DOWN_T/0008	msg spk=-	上の部屋から何か物音がした（というような会話をする）{br}	Some noise came from the room above (a conversation to that effect).{br}
+NO4_HWR_FRONT_DOWN_T/0009	msg spk=- +	そして、調べてみようということになり、上の部屋に入る{p}	{p}Then they decide to investigate and enter the room above.{p}
