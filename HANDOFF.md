@@ -1,4 +1,4 @@
-**Last updated: 2026-11-01** — wave 10: #41 NO4_BAR_T.p03 MERGED (a64d635); #40 NO4_BAR_T.p04 MERGED (squash 2edb846, round 1; NO4_BAR_T.SCR complete); #39 NO4_T.b01 MERGED (squash b76838f, round 1); #38 NO4_T.b02 MERGED (squash a21408b, round 0). All four wave-10 units merged; wave 10 ready to close.
+**Last updated: 2026-11-01** — wave 10 closed: NO4_BAR_T.p03, NO4_BAR_T.p04, NO4_T.b01, NO4_T.b02 merged (PRs #41, #40, #39, #38), two CHANGES rounds (#40, #39), none parked; NO4_BAR_T, NO4_HWR_BACK_T, NO4_HWR_FRONT_DOWN_T, NO4_HWR_FRONT_UP_T complete; script 37/38. Wave 11 (NO4_T.b03, the last dispatchable unit) next.
 
 ## Integration branch: `main`. Not configurable.
 Every PR bases on `main`; the reviewer merges into `main`; a wave is closed only when `origin/main` is
@@ -6,9 +6,9 @@ at the close commit (`CLAUDE.md` Rule 3). A fresh container may clone shallow wi
 preflight is `git fetch origin main && git checkout main && git reset --hard origin/main`.
 
 ## NEXT ACTION — always current, always a literal instruction
-> **Wave 10 coordinator:** all four units merged and integrated (#41, #40, #39, #38). `git pull --ff-only`, then close wave 10
-> (`CLAUDE.md` §4 step 6: CHECK, ODS export, README status, HANDOFF collapse, `handoff: wave 10 closed`, prove origin/main = HEAD),
-> then open the wave 11 session: NO4_T.b03 alone (NO4_MACHINE_T, NO4_ROOM01_T; R §40.5 for MACHINE_T/s10–s17).
+> **Wave 10 coordinator:** wave 10 closed and proven on `origin/main`. Open the wave 11 session: `create_session` titled
+> `Abyss Boat — wave 11`, tags `["abyssboat-translation", "wave-11"]`, `source_revision: "main"`, seed of SKILL.md §6a with
+> UNITS = Next up. If no `Abyss Boat — wave 11` session exists in `list_sessions`, a resumer opens it.
 
 ## Progress
 | Store | Done | Total | |
@@ -20,39 +20,28 @@ preflight is `git fetch origin main && git checkout main && git reset --hard ori
 Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-31; the NO3/NO2 bundle rooms ≥ 62,822 (NO2_MAINSTORAGE); `NO4_BAR.SCR` 37,378 free; `NO4_TOOL_ROOM.SCR` 61,899, 80/80; the NO4.b01/b02 rooms ≥ 63,697; the NO5 rooms ≥ 63,950; NO6_BRIDGE 63,400, the other NO6 rooms ≥ 64,242; NO3_CHAPEL.SCR 55,247, 150/150; NO3_NO4.SCR 60,727, 61/61; SPACESHIP.SCR 64,874, SPACESHIP_HW.SCR 64,841, 8/8; NO4_BAR_T.SCR 55,244, 181/181 (MEASURE 2026-11-01, after #40); NO4_HWR_BACK_T.SCR 64,005, 16/16, NO4_HWR_FRONT_DOWN_T.SCR 64,297, 9/9 (after #39); NO4_HWR_FRONT_UP_T.SCR 63,183, 39/39 (after #38); NO1_CONTROLROOM 64,880, NO1_ENGINEROOM 64,564, NO1_STORAGE 65,180, 8/8).
 
 ## In flight
-| Unit | Branch | Round | PR | Who acts next |
-|---|---|---|---|---|
-| script NO4_BAR_T.p03 | `tl/script-NO4_BAR_T.p03` | **MERGED** round 0, squash a64d635 (NO4_BAR_T.SCR 55,039 free, 51/51, max 4 rows/page; CHECK 236 + 25 pairs); integrated (glossary 犯人, 楽観主義者, 神 scope; R §38; PROJECT.md §7 twin-binding blind spot) | #41 | coordinator: next review #40 |
-| script NO4_BAR_T.p04 | `tl/script-NO4_BAR_T.p04` | **MERGED** round 1, squash 2edb846 (round 0 CHANGES: 0166 からな, 0172 subject; NO4_BAR_T.SCR 55,244 free, 181/181, max 4 rows/page; CHECK 237 + 25 pairs); integrated (glossary §4 注：; R §39 incl. 0147 third ground; PROJECT.md §7 + F-012 exact-twin `+` row) | #40 | coordinator: next review #39 round 1, then #38 |
-| script NO4_T.b01 | `tl/script-NO4_T.b01` | **MERGED** round 1, squash b76838f (round 0 CHANGES: FRONT_DOWN_T/0002 だろう hedge, fixed with a label `{br}`; Flag 2 no-period SCN002OLD twins upheld; NO4_HWR_BACK_T.SCR 64,005 / NO4_HWR_FRONT_DOWN_T.SCR 64,297 free, 25/25, max 4 rows/page; CHECK 237 + 32 pairs); integrated (glossary 乗員, 客室, 安全地帯, 立てこもる; R §40; F-008 b03 recurrences) | #39 | coordinator: next review #38 |
-| script NO4_T.b02 | `tl/script-NO4_T.b02` | **MERGED** round 0, squash a21408b (NO4_HWR_FRONT_UP_T.SCR 63,183 free, 39/39, max 4 rows/page; CHECK 239 + 32 pairs; census 74,022 / 164,019 pairs, 0 divergent); integrated (glossary 注： / 殺人鬼 notes; R §41; F-008, F-010) | #38 | coordinator: close wave 10 |
+Nothing. Wave 10's four units are merged; see Wave history and rulings R §38–§41.
 
 ## Next up
-Wave 10 (QUEUE 2026-11-01), four script units, all tier D: NO4_BAR_T.p03 (51 rows, 1,270 chars, ratio 22.76; T/0095–0145),
-NO4_BAR_T.p04 (36, 1,189, 24.24; T/0146–0181; NO4_BAR_T.SCR 55,261 free, shared), NO4_T.b01 (25, 607, 54.01; NO4_HWR_BACK_T,
-NO4_HWR_FRONT_DOWN_T), NO4_T.b02 (39, 735, 44.47; NO4_HWR_FRONT_UP_T). `_T` drafts (F-008): p03 ↔ NO4_BAR.p02 (T/0095–0148, R §2.5)
-and NO4_BAR.p03 (T/0155–0168 ↔ 0120–0134, R §3.6); p04 past T/0168 has no shipped draft beyond T/0181; b01 HWR_BACK_T/0001–0008 ↔
-SCN002OLD/01–08 (R §4.4; 0004 `【Miller】Hide? How long are we meant to hide⁉{p}`), HWR_FRONT_DOWN_T/0001 ↔ NO4_MACHINER90/0063
-(`【Oakland】What is it?{p}`), HWR_FRONT_DOWN_T/0003 気持ちはわかる → `I understand how you feel.` (R §37.3); b02 HWR_FRONT_UP_T/0016–0037
-↔ NO4_HWR_FRONT.p03 0118–0138 (R §14.1, §14.4; 【女】 → `【Woman】`, `【Woman】………{p}`).
-Labels (glossary §1, R §35.1–§35.2): §1 names in brackets; 【男】 `【Man】`, 【老人】 `【Old Man】`; whole-row twins byte-identical;
-sentence twins inside longer rows keep the shipped words — an equally literal rewording only where the label forces a lone
-"a"/"I" at a line end; a one-word last row stays and is flagged (R §37.1, 0081). CHECK pairs no labelled row: census by hand.
-Label `{br}` (label alone on row 1) is the accepted tag-only fix for an orphan (R §37.1, 0059). Glossary seeds: the wave 10
-coordinator's step 2 (§9 is empty).
-Wave 9 lessons: two CHANGES of four, both reading/wrap findings — a coordinator seed grouped two source verbs under one target
-(知らせる "tell" vs 報告 "report"; keep them apart, R §36.1), and a `_T` restructure departed from shipped words without a lone-a/I
-reason (R §37.1). Compression ladder step 6 is for over-budget units only. Keep: hedges, passives, ≤ 27 before authored `{br}`,
-wrap scan, speakers from content, unique review-wN-prK / integrate-wN-prK branches.
+Wave 11 (QUEUE 2026-11-01), one script unit, tier D — the last dispatchable unit of the run: NO4_T.b03 (27 rows, 414 chars,
+ratio 78.60; NO4_MACHINE_T 0001–0002, s06–s08, s10–s17; NO4_ROOM01_T 0001–0008, s04–s09; 64,254 free). Wave size 1: no other
+script or scene unit remains, system is blocked (F-006). `_T` drafts (F-008): MACHINE_T/s06–s08 ↔ SCN001/01–02 (R §4.5);
+MACHINE_T/s10–s17 are one-line labelled `text` copies (final 。) of shipped NO4_HWR_BACK_T/0009–0016 (R §40.5): s10 = 0009
+`【Oakland】Don't fall behind.` (27) and s12 = 0015 `【Miller】How could this be…` (26) reuse as they are; s16 = 0011
+`【Heming】It's gotten serious…` is 28 (hard limit); s11, s13, s14, s15, s17 (= 0010, 0016, 0013, 0014, 0012) need their own cut
+within 28 (27 preferred), keeping #39's words where they fit. `s` rows are choice/`text` rows: one line, no wrap, ≤ 27 preferred.
+Rules (glossary §1, R §35–§41): §1 names in brackets; whole-row twins byte-identical; sentence twins keep shipped words — reword
+only for a lone "a"/"I", a one-word last row, or a hard defect (R §39); label `{br}` fixes an orphan (R §37.1); exact twins bind
+tags, tag variants bind words only (PROJECT.md §7). CHECK pairs no labelled row: census by hand. 注： → `Note: ` (glossary §4).
+Wave 10 lessons: two CHANGES of four, both dropped meaning a label `{br}` could have kept — a だろう hedge (b01 0002) and a
+causal からな plus a dropped subject (p04 0166, 0172). Before rewording for a wrap, try the label `{br}`. A seed that asks for
+end punctuation on a twin row is wrong if the shipped twin has none (b01 Flag 2). Keep: hedges, connectives, subjects, ≤ 27
+before authored `{br}`, wrap scan, speakers from content, unique review-wN-prK / integrate-wN-prK branches.
 
 ## Remaining
-QUEUE order, generated 2026-11-01 (wave 10 units in Next up) (source characters, tags excluded). Script, the `_T` test
-scripts (F-008): NO4_T.b03 (414; NO4_MACHINE_T, NO4_ROOM01_T — MACHINE_T/s06–s08 ↔ SCN001/01–02, R §4.5). MACHINE_T/s10–s17 are
-one-line labelled `text` copies (final 。) of shipped NO4_HWR_BACK_T/0009–0016 (#39), which CHECK does not pair: s10 = 0009
-`【Oakland】Don't fall behind.` (27) and s12 = 0015 `【Miller】How could this be…` (26) reuse as they are; s16 = 0011
-`【Heming】It's gotten serious…` is 28 (hard limit, usable); s11, s13, s14, s15, s17 (= 0010, 0016, 0013, 0014, 0012) need their own
-cut within 28 (27 preferred), keeping #39's words where they fit (R §40.5).
-Scene: none — store complete (wave 4). 1 script unit remains after wave 10's four: wave 11 is NO4_T.b03 alone, then the run is complete bar the blocked system store.
+QUEUE order, generated 2026-11-01: script NO4_T.b03 only (in Next up, wave 11). Scene: none — store complete (wave 4). After
+wave 11 no dispatchable unit remains: the run is complete bar the blocked system store (F-006); wave 11's coordinator writes
+the final handoff (`handoff: run complete`) instead of opening a wave 12 session.
 
 ## Blocked — needs a human
 1. **System store** (5 units, 188 rows) — exe slots too short for English; you chose to wait for an
@@ -98,6 +87,7 @@ Scene: none — store complete (wave 4). 1 script unit remains after wave 10's f
 | 7 | script NO3_CHAPEL.p02, p03, NO3_NO4.p01, p02 | 4 — #26 56e2531, #29 e6a9aa1, #27 62509c4 (round 0); #28 f45c28a (round 0 CHANGES — 0128 authored-`{br}` line at 28 — round 1 MERGE) | 0 | script 25/38 (1,247 rows), scene 4/4, system blocked; rooms NO3_CHAPEL (55,247 free, 150/150) and NO3_NO4 (60,727, 61/61) complete; F-026 mid-row `{w}` found and fixed. Session-limit stop, resumed |
 | 8 | script NO3.b01, NO3.b02, NO2.b01, NO2.b02 | 4 — #32 4ed66e9 (round 0); #30 0a3bbec (round 0 CHANGES — dropped "looks", body "it", 操作パネル phrase — round 1 MERGE); #31 028dcdf (round 0 CHANGES — locker "looks", body "it" — round 1 MERGE); #33 b7e0ea2 (round 0 CHANGES — passive 〜されたのだろうか — round 1 MERGE) | 0 | script 29/38 (1,421 rows), scene 4/4, system blocked; decks NO3 and NO2 complete (rooms ≥ 62,822 free). Two session-limit stops, resumed. Lineage limit: no successor session |
 | 9 | script NO1.b01, SPACESHIP.b01, NO4_BAR_T.p01, p02 | 4 — #35 e967004, #36 8a1e7ab (round 0); #34 c5f8a29 (round 0 CHANGES — 知らせる "tell" vs 報告 "report" — round 1 MERGE); #37 baa917b (round 0 CHANGES — 0081 shipped words, 0059 label `{br}` — round 1 MERGE) | 0 | script 33/38 (1,531 rows), scene 4/4, system blocked; decks NO1 and SPACESHIP complete; NO4_BAR_T.SCR 55,261 (94/181). Session-limit stop, resumed |
+| 10 | script NO4_BAR_T.p03, p04, NO4_T.b01, b02 | 4 — #41 a64d635, #38 a21408b (round 0); #40 2edb846 (round 0 CHANGES — 0166 からな, 0172 subject — round 1 MERGE); #39 b76838f (round 0 CHANGES — 0002 だろう hedge — round 1 MERGE) | 0 | script 37/38 (1,682 rows), scene 4/4, system blocked; NO4_BAR_T.SCR 55,244 (181/181), NO4_HWR_BACK_T 64,005, NO4_HWR_FRONT_DOWN_T 64,297, NO4_HWR_FRONT_UP_T 63,183. Session-limit stop, resumed |
 
 ## How to resume
 1. Preflight per `CLAUDE.md` §4 step 0. CHECK must pass. A fill marker left in `PROJECT.md` means
