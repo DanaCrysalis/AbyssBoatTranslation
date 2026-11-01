@@ -3082,3 +3082,68 @@ Census counts are rows per store (script / scene / system), from the reviewer's 
 - `:11` ここは危険よ！ → `John, it's dangerous here!` (26) — a different source from NO6_HW_4/0002 ここは…危険よ "This place is… dangerous."; "this place is dangerous!" strands "dangerous!" before the authored `{br}`. 急ぎましょう "Let's hurry." as NO6_HW_4/0002 (R §24.3).
 - `:4`, `:9` なに⁉ "What⁉", as NO3_CHAPEL/0057; the fragments kept.
 - Glossary: none beyond §34.1.
+
+## Unit script NO4_BAR_T.p01 (PR #36, MERGED, 2026-10-31)
+
+Figures (round 0, squash 8a1e7ab):
+- **Containers.** MEASURE after MERGE: NO4_BAR_T.SCR 9,315 / 65,535 (56,220 free; 58,098 before), tokens 524 / 1,499, 46/181 rows; NO4_BAR.SCR unchanged at 37,378. `containers negative: 0; under the reserve (2000 bytes): 0`. MERGE: keys that never matched 0.
+- **Pages.** UNITCHECK: 46 rows, 0 violations, max 4 rows/page. Authored code diff: 14 rows, 9 `{p}` and 10 `{br}` added, none moved or removed (= PR Flag 2). No `{w}`. Six F-012 `+` boundaries (0012→0013, 0013→0014, 0015→0016, 0018→0019, 0023→0024, 0037→0038), each opened with `{br}` or `{p}` at a sentence end.
+- **Duplicates.** CHECK: 214 duplicate pairs and 9 tag-variant pairs, the same with the file removed, so CHECK pairs **0** rows of this unit (every row is labelled, F-013). Reviewer's census (label stripped, `{p}{w}{br}` removed, final 。 dropped, ！？ → ⁉, `…。` → `…`; every unit row × every script and scene dump row, whole-row and sentence-level): **87,308 whole-row pairs, 200,252 sentence pairs, 77 matches**. Every translated twin reuses the shipped words except 0036's first sentence (§35.2).
+- **Widths.** Lines ended by an authored `{br}`: 27 / 15 (0001), 26, 25, 23, 5, 13, 15, 23, all ≤ 27. Glyph counts 46 / 46 match.
+
+Census counts are rows per store (script / scene / system), from the reviewer's grep of `dumps/` on 2026-10-31. Line citations are in `tl/script/NO4_BAR_T.p01.tsv` (line = row order + 3).
+
+### 35.1 Labels and terms
+- **【男】** 6 / 0 / 0 → `【Man】` (5), promoted from §9. **【老人】** 10 / 0 / 0 → `【Old Man】` (9), new. All 16 rows are in this unit.
+  - Reasoning: PROJECT.md §6 says to translate the name in the brackets. These labels are descriptions, not names. The draft withholds the names until the self-introductions (0012, 0038 for Collison; 0018 彼はウィリアム for William), as 【女】 withholds Judy's (R §14.1). So they are translated literally and title-cased, like `【Woman】`, and not resolved to names.
+  - Content confirms the speakers. 【男】 0033 and 0035 are William's shipped NO4_BAR/0014 and 0016, and 0034 addresses him. 【老人】 0012 and 0038 are Collison introducing himself.
+  - `【Old Man】` does not collide with じいさん → lowercase "old man" in dialogue (§6), which William uses at :36 0033.
+- **Name labels**: 【オークランド】 42 / 3 / 0, 【ウォルグ】 29 / 2 / 0, 【ウィリアム】 6 / 0 / 0, 【コリスン】 20 / 0 / 0, 【ヘイミング】 14 / 1 / 0 → `【Oakland】` · `【Wolg】` · `【William】` · `【Collison】` · `【Heming】`.
+  - Rule: any §1 name in a label takes its §1 short form in brackets. This matches shipped SCN002OLD/02, 03, 07 (`【Wolg】`, `【Heming】`) and the existing 【ミラー】 · 【ジュディ】 row (R §18.1).
+  - Binding on NO4_BAR_T.p02 (#37) and every later `_T` unit. 【ヘイミング】 is not in this unit; its row follows the same rule.
+- **母船** 2 / 0 / 0 → `mother ship` (11, two words), at :31 0028 `can no longer return to our mother ship` and :32 0029 `You've friends on your mother ship, surely?`.
+  - Reasoning: the literal maritime term for a diving operation's surface vessel (PR Flag 8). "support ship" would be a gloss.
+  - No alien craft is called 母船 in either dump, so the one-word sci-fi "mothership" is avoided and nothing clashes.
+  - Shipped NO4_BAR/0009 has 海上 "up on the surface" for the same crew. That is another word and is not changed.
+- **宝探し屋** 2 / 0 / 0 → `treasure hunter` (15): :42 0039 `but "treasure hunter" might be clearer` and :43 0040 `Treasure hunter⁉`.
+  - The source has no 「」. The quotes mark the word as mentioned, for と言った方が, as shipped 狩り場 `"hunting ground"` (R §2.1).
+- Glossary: §1 three rows added (【男】 promoted from §9, 【老人】, the name labels). §2 two rows added (母船, 宝探し屋).
+
+### 35.2 Labelled copies of NO4_BAR.p01, and the one not reused (PR Flags 4–5)
+- **Whole-row twins, byte-identical once the label is stripped:**
+  - 0014 = NO4_BAR/0020; 0020 = 0042 = 0024; 0021 = 0043 = 0025; 0022 = 0044 = 0026.
+  - 0031 = 0012; 0032 = 0013; 0033 = 0014; 0046 = 0028.
+  - 0010 `………` = the 17 rows R §15.4 lists.
+- **Sentence twins, shipped words reused:** 0001, 0009 (わからん `I don't know.`), 0013, 0015, 0016, 0018 / 0041 (まあ待て `Now, hold on.`), 0023, 0024, 0026, 0027, 0028 (申し訳ない and :15 もうしわけない `My apologies.`), 0029, 0030, 0036 (the 0018 part), 0037, 0039. 0001's last sentence = 0025 `W-who are you people⁉`.
+- **:39 0036 まったく、なんという言いぐさじゃ → `Really, of all the things to say.`** Shipped NO4_BAR/0017 has `Really, what a thing to say.`.
+  - 0036 joins 0017 and 0018, so it is not a row twin, and the byte-identity rule binds rows, not sentences inside a longer row.
+  - With the label, 0017's words end a line in a lone "a" (`【Old Man】Really, what a`). R §1.12 rule 2 allows no exception for that.
+  - The new wording is as literal. The precedent is R §4.5: labelled copies keep the shipped words "where they fit".
+- **One-word last rows** (R §1.12 rule 1), each judged:
+  - :24 0021 and :46 0043 `either.`: whole-row twins of NO4_BAR/0025, so they must stay byte-identical.
+  - :26 0023 `mind.`: the shipped sentence, too long for one row after `【Collison】`. 0024 must open with `{br}` (F-012).
+  - :28 0025 `people⁉`: "you people" carries お前たち's brusqueness and matches shipped NO4_BAR/0001 `who are you people…⁉`. "you all" would be less faithful and would also change :4 0001.
+  - All four accepted and flagged.
+- **Draft-only differences rendered literally, not forced to the shipped words:**
+  - :37 0034 彼は → `he's` (shipped 彼ら "they").
+  - :22 0019 今日は → `Today he seems to be in a foul mood.`, reordered so the wrap does not give `in a | foul mood`.
+  - :48 0045 この子 without ここを案内した → `And this girl here is Judy Arsela.`
+  - :30 0027 ⁉ per the draft (shipped 0003 ？).
+- Glossary: none.
+
+### 35.3 Readings, speakers, verbs
+- Speakers come from the labels and from content (F-009); every row is `spk=-`. 0001–0011 have no shipped counterpart.
+- **Two source verbs stay two English verbs (R §31.1):** 調べに来て (:7 0004) `investigate` and 調査で (:29 0026) `survey`.
+- **Verbs already merged in shipped NO4_BAR, kept that way:**
+  - 救助 and 助け both take "rescue", as shipped 0003 and 0009 already do.
+  - 乗り込む takes "board" or "come aboard" in context, as shipped 0002, 0011 and 0022 are already mixed.
+- 上で待機している (:10 0007) → `They're standing by up top.`, following the 上 → "up top" family (R §4.2).
+- :11 0008 `How did that come about?` is a touch formal for William. "How'd that happen?" would leave `happen?` alone on the last row. Accepted.
+- :41 0038: `{p}` after `golden years,`, at a clause boundary; otherwise the page is 5 rows. The leading `{p}` matches shipped 0019's grouping.
+- Glossary: none.
+
+### 35.4 Suspected source typo (PR Flag 9)
+- :44 0041 そうも彼は虫の居所が悪いらしい, where the sense, and shipped NO4_BAR/0023, is どうも.
+- Census: そうも 2 / 0 / 0. The other row is NO4_ENTRANCE/0004 降りられそうもない, which is legitimate. That leaves そうも彼は 1 / 0 / 0 and どうも彼は 1 / 0 / 0.
+- Rendered with 0023's words byte for byte: `It seems he's in a foul mood.`
+- FLAGS F-028. Glossary: none.
