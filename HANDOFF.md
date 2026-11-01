@@ -7,7 +7,7 @@ preflight is `git fetch origin main && git checkout main && git reset --hard ori
 
 ## NEXT ACTION — always current, always a literal instruction
 > **Wave 9 coordinator:** barrier met 2026-10-31 23:25 UTC (PRs #34–#37 open). Reviewer, one at a time in unit order:
-> #34 NO1.b01 (round 1 pushed 3e73bb9) → ~~#35~~ MERGED → ~~#36~~ MERGED 8a1e7ab + integrated → **#37 NO4_BAR_T.p02 next** (follow R §35.1 labels) → #34 round 1. Watchdog armed (12 min). A resumer: `ListAgents` first.
+> #34 NO1.b01 (round 1 pushed 3e73bb9) → ~~#35~~ MERGED → ~~#36~~ MERGED 8a1e7ab + integrated → #37 round 0 CHANGES (in rework) → **#34 round 1 reviewing** → #37 round 1. Watchdog armed (12 min). A resumer: `ListAgents` first.
 
 ## Progress
 | Store | Done | Total | |
@@ -24,7 +24,7 @@ Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEA
 | script NO1.b01 | `tl/script-NO1.b01` | returned round 1 | #34 | 1 | round 0 CHANGES (:9 0002 知らせる → "tell them"); round 1 pushed 3e73bb9, only :9 changed, NO1_ENGINEROOM.SCR 64,564 free; re-review after #37 |
 | script SPACESHIP.b01 | `tl/script-SPACESHIP.b01` | done | #35 | 0 | **MERGED** 2026-10-31, squash e967004, no findings; SPACESHIP.SCR 64,874 / SPACESHIP_HW.SCR 64,841 free; Flag 3 "we" and Flag 2 moved `{br}` accepted (R §34.2–§34.3); §9 制御装置, 武器, チャージ, 落下 promoted to §3; integration commit on main (`integrate: SPACESHIP.b01`). Nothing left; branch kept (403 on delete) |
 | script NO4_BAR_T.p01 | `tl/script-NO4_BAR_T.p01` | done | #36 | 0 | **MERGED** 2026-10-31, squash 8a1e7ab, no findings; NO4_BAR_T.SCR 56,220 free, 46/181; CHECK pairs 0 of its rows (F-013), reviewer census 87,308 whole-row + 200,252 sentence pairs, 77 matches, all consistent; Flag 5 0036 `Really, of all the things to say.` accepted (lone "a" with the label), 母船 `mother ship`, labels 【Man】 · 【Old Man】 · §1 names (R §35.1–§35.2); 【男】 promoted from §9; F-028 typo そうも. Integration commit on main (`integrate: NO4_BAR_T.p01`). Nothing left; branch kept (delete refused) |
-| script NO4_BAR_T.p02 | `tl/script-NO4_BAR_T.p02` | returned 2026-10-31 | #37 | 0 | review behind the barrier (56,594 free; open: Flag 3 0081 restructure, Flag 5 0092 two clicks) |
+| script NO4_BAR_T.p02 | `tl/script-NO4_BAR_T.p02` | rework | #37 | 1 | round 0 CHANGES (2 findings: :38 0081 reuse shipped "But I awoke to a strange noise.", flag orphan; :16 0059 label `{br}`); 0092 two clicks accepted (add to F-010 at integration); same translator fixing, then re-review |
 
 ## Next up
 Wave 9 (QUEUE 2026-10-31), four script units: NO1.b01 (8 rows, 151 chars, ratio 215.03; NO1_CONTROLROOM, NO1_ENGINEROOM,
