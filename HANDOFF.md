@@ -7,7 +7,7 @@ preflight is `git fetch origin main && git checkout main && git reset --hard ori
 
 ## NEXT ACTION — always current, always a literal instruction
 > **Wave 9 coordinator:** barrier met 2026-10-31 23:25 UTC (PRs #34–#37 open). Reviewer, one at a time in unit order:
-> #34 NO1.b01 (round 1 pushed 3e73bb9) → ~~#35~~ MERGED → **#36 NO4_BAR_T.p01 reviewing** → #37 → #34 round 1. Watchdog armed (12 min). A resumer: `ListAgents` first.
+> #34 NO1.b01 (round 1 pushed 3e73bb9) → ~~#35~~ MERGED → **#36 NO4_BAR_T.p01 squash-merged 8a1e7ab, integration commit pending (reviewer resumed after the usage-limit stop)** → #37 → #34 round 1. Watchdog armed (12 min). A resumer: `ListAgents` first.
 
 ## Progress
 | Store | Done | Total | |
@@ -72,6 +72,7 @@ Scene: none — store complete (wave 4). Four script units per wave (PROJECT.md 
 - Wave 7 stopped on the 5-hour session limit 2026-10-30 ~12:00 UTC (all four translators, HTTP 429, mid-draft; reset 15:50) and resumed on the human's "continue" 19:57 UTC; translators resumed by `SendMessage`, worktrees intact (drafts uncommitted).
 - Wave 8 stopped on the 5-hour session limit 2026-10-30 ~20:50 UTC (all four translators, HTTP 429, early in drafting; reset 00:50) and resumed on the human's "continue" 2026-10-31 16:44 UTC; translators resumed by `SendMessage` ("continue from the file on disk"), worktrees intact.
 - Wave 8 stopped again on the 5-hour session limit 2026-10-31 ~21:05 UTC (reviewer of #31 round 1 and translator of #33 round 1, HTTP 429; reset 21:10) and resumed on the human's "continue" 21:11 UTC; both resumed by `SendMessage`.
+- Wave 9 stopped on the 5-hour session limit 2026-10-31 ~23:45 UTC (reviewer of #36, HTTP 429, after the squash-merge 8a1e7ab and before its integration commit; reset 02:10) and resumed on the human's "continue" (relayed by the runner) 2026-11-01 02:12 UTC; the reviewer resumed by `SendMessage` to finish #36's integration.
 - Wave 2 stopped by the human ("stop for now", 2026-10-06 ~14:40 UTC) mid-review and resumed on "continue" 2026-10-25 01:05 UTC; translators resumed by `SendMessage` with worktrees intact.
 
 ## Wave history
