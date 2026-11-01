@@ -132,6 +132,10 @@ opens on row 2) and 0140 `…even a few days without food.{p}{br}` (next: "To su
 risk our lives for food."). It also clicks mid-sentence at coordinate-clause boundaries in 0108
 (`…search the whole world{p}and find no tale…`) and 0144 (`…the food storeroom, and{p}God——the
 Lord…`). Check them with 0092 (R §38.2).
+NO4_T.b02 (PR #38) adds a leading `{p}` at NO4_HWR_FRONT_UP_T/0027, a `+` row after the untagged
+0026 (Miller: "…telling her who we are." then "We're a shipwreck salvage firm…"; 8 rows without
+it). The source has no click between the two. Check that the box clears and the second page opens
+on its first row (R §41.2).
 
 
 ## Open
@@ -197,6 +201,11 @@ strange noise.`, orphan flagged; R §37.1). Untranslated recurrence for NO4_T: �
 tag-variant rows (all NO4_BAR.p02, words identical); the reviewer's census (96,798 whole-row,
 153,527 sentence, 237,617 clause pairs) found every sentence twin keeping the shipped words, 0101
 and 0103 differing only where the draft lacks やがて/ただ. No untranslated recurrence (R §38).
+`NO4_HWR_FRONT_UP_T`/0001–0037, s06–s07 shipped in PR #38 (NO4_T.b02, squash a21408b). CHECK paired
+only 0022 = 0024 = 0028. In the reviewer's census (74,022 whole-row and 164,019 sentence pairs, 99
+matches), all 15 whole-row twins of NO4_HWR_FRONT/0118–0138 and every sentence twin keep the
+shipped words. 0033 also carries 0134's `{br}`. No untranslated recurrence; NO4_T.b03 is the last
+`_T` unit (R §41).
 
 ### F-009 · 2026-10-04 · speaker · OPEN
 `spk=N` (first argument of statement 0xA9) is not a character id: `NO4_BAR`/0014–0018 put

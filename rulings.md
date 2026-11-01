@@ -3427,3 +3427,72 @@ Census counts are rows per store (script / scene / system), from the reviewer's 
   - s15 (= :17 0014, 83, two sentences);
   - s17 (= :15 0012, 88).
 - Recorded under F-008 and in HANDOFF → Remaining.
+
+## Unit script NO4_T.b02 (PR #38, MERGED, 2026-11-01)
+
+The `_T` draft of the scene where the party meets Judy (NO4_HWR_FRONT_UP_T/0001–0037, s06, s07; 39 rows, 735 source characters, tier D, ratio 44.47). 0016–0037 are labelled copies of shipped NO4_HWR_FRONT.p03 0118–0138 (R §14.1, §14.4). Every row is `spk=-`; the speakers come from the `【Name】` labels. 0015 and 0018 are stage directions. The last unit of wave 10.
+
+Reviewed once:
+- **Round 0** (head 6a64b17; merged in scratch onto origin/main 4856a37, clean): MERGE, squash a21408b.
+
+Figures:
+- **Containers.** MEASURE after MERGE: NO4_HWR_FRONT_UP_T.SCR 2,352 / 65,535 (63,183 free; 63,908 untranslated), tokens 59 / 1,499, 39/39, so the room is complete. `containers negative: 0; under the reserve (2000 bytes): 0`. MERGE: keys that never matched 0.
+- **Pages.** UNITCHECK: 39 rows, 0 violations, max 4 rows/page (pages from 0025, 0027 and 0033 are at 4). Store: 1,682 rows, 0 violations.
+- **Codes.** The authored diff against the source covers 6 rows, exactly PR Flag 2:
+  - label `{br}` at :9 0006, :19 0016, :35 0032;
+  - label `{br}` plus shipped 0134's `{br}` at :36 0033;
+  - leading `{br}` at :29 0026;
+  - `{p}` → `{p}{br}{p}` at :30 0027.
+  - There is no `{w}`. Every segment ended by an authored `{br}` is ≤ 27: labels 6–9, `Mm… Y-yes, that's right.` 24. The 0027 segment before its `{br}` is wrapped by the tools, with a last line of 15.
+- **Duplicates.**
+  - CHECK: 239 duplicate and 32 tag-variant pairs (237 / 32 without the unit). The +2 are 0022 = 0024 = 0028 `【Woman】………{p}`.
+  - Reviewer's census (F-013): label stripped, `{…}` and full-width spaces removed, ！？ → ⁉, `…。` → `…`, final 。 dropped; every unit row × every script and scene dump row, whole-row and sentence-level. **74,022 whole-row and 164,019 sentence pairs, 99 matches**, 63 of them the `………` family.
+  - 15 whole-row twins, all with the shipped words: 0016, 0017, 0019–0021, 0029, 0031–0037 ↔ NO4_HWR_FRONT/0118–0138.
+  - Sentence twins, all with the shipped words: 0003 ↔ NO4_TOOL_ROOM/0002 = NO3_CABIN_3105/0002 `I see…`; 0006, 0025, 0026 ↔ 0126; 0010, 0013 ↔ NO4_BAR/0435, NO4_HWR_FRONT/0115; 0011 ↔ 0113 / 0114; 0012 ↔ 0116; 0027 ↔ 0127 / 0128 (and NO2_MAINSTORAGE/0023); 0037 ↔ 0138.
+  - No unit sentence recurs in an untranslated row, NO4_MACHINE_T and NO4_ROOM01_T included.
+- **Widths.** Wrap scan of all 39 rows in `build/script_merged.tsv`: no lone a/A/I/an, no split title, no one-word last row, nothing over 28. The function-word line ends (0002 and 0030 `to`, 0021 `on`, the last a whole-row twin) are acceptable under R §1.12 rule 2. Glyph counts match on 39 / 39 rows. No word-initial apostrophe. Choices s06 22, s07 12.
+
+Census counts are rows per store (script / scene / system), from the reviewer's grep of `dumps/` on 2026-11-01. Line citations are in `tl/script/NO4_T.b02.tsv` (line = row order + 3).
+
+### 41.1 Terms
+- **注：** is already in §4 (#40, R §39.1). :18 0015 `Note: At this point, Wolg and Heming, who had gone on ahead, come back.{p}` and :21 0018 `Note: Wolg heads down the corridor to investigate.{p}` agree: a note with no 。 takes ".". Every 注： row is now shipped, so the row's "to follow" becomes "(all shipped)", a note change only.
+- **殺人鬼** (§6, R §4.1) at :7 0004 殺人鬼？…たしかに鬼ね。あれは… → `The killer? …A demon, certainly. That thing…`. This is the row's "in context" for the 鬼 pun. "The killer" echoes the salvagers' word as the row fixes it, and "demon" carries the not-human sense that :8 0005 then states. English loses the shared 鬼; no closer pair keeps both the row's "the killer" and the pun. 鬼 alone 1 / 0 / 0 (0004 only); たしかに is not fixed (shipped NO4_BAR/0342 `——A monster, all right.`). The row's Note now cites the target, a pointer change only.
+- Labels per glossary §1: 【女】 `【Woman】` (R §14.1), 【オークランド】 `【Oakland】`, 【ウォルグ】 `【Wolg】`, 【ミラー】 `【Miller】`, 【ヘイミング】 `【Heming】` (R §35.1). オークランドさん `Mr. Oakland` (§1) is kept on one row by the label `{br}` at 0032.
+- Glossary: §4 注： and §6 殺人鬼 notes and pointers updated, with no target changed. §9 is empty.
+
+### 41.2 Movable codes (PR Flags 2–3)
+- **Label `{br}`** (R §37.1) at :9 0006, :19 0016, :35 0032 and :36 0033. Without one, the wrap gives:
+  - a lone "A" and `monster.` alone on the last row (0006);
+  - `corner.` alone (0016, a whole-row twin of 0118);
+  - a split `Mr. | Oakland?` with `Oakland?` alone (0032), which R §1.12 rule 2 forbids. The label `{br}` now also covers a split title, beside a one-word last row.
+- **:36 0033** also takes shipped 0134's `{br}` after `that's right.`. Its source is 0134 with the label and without the `{br}`, a tag variant CHECK does not pair (F-013). So the target is 0134 byte for byte after the label. Pages 9 / 24 / 28 / 26.
+- **F-012 boundaries** (2 of the dump's 25). Both are opened at a sentence end, and neither `+` row is an exact source twin (R §39.2), so a tag is free to go there:
+  - :29 0026 opens with `{br}` after 0025's `frightened?`, where shipped 0126 has its `{br}`.
+  - :30 0027 opens with `{p}` after `who we are.`. This is also an added click: without it the page from 0025 has 8 rows; with it, 4 + 4. It sits in an unpaired row (R §38.2).
+  - 0027's `{br}` before `What about you?` mirrors shipped 0127/0128. Without it `you?` is alone on the last row.
+  - Shown in `build/script_merged.tsv` as `…frightened? | We should…` and `…who we are.{p}We're…`.
+- **F-010:** the `{p}` at 0027 clears the box between two Miller sentences, with no click in the source (`…telling her who we are.` then `We're a shipwreck salvage firm.`). Added to F-010's in-game list in this commit.
+- All approved.
+
+### 41.3 Readings, punctuation, speakers (PR Flags 4–9)
+- **Hedges and verbs kept:**
+  - らしい at :16 0013 `Apparently there's someone here!` and :19 0016 `Seems they ran past…` (shipped);
+  - と言っている at :17 0014 `John says he saw someone.`;
+  - にもよる at 0032 `Depends on`;
+  - くれないか at :39 0036 `Would you let us meet them?`.
+  - No hedge, connective or subject is dropped (the wave-10 lessons of R §39.3 and §40.3).
+- **Near-twins, aligned by hand (Flag 6):** :5 0002 助けに来てくれたの⁉ `Did you come to rescue us⁉` and :33 0030 …助けに…来てくれたの？ `…Did you come… to rescue us?` follow 0131's words; 0030 keeps the source's second `…`. :10 0007 私以外にも生き残ってるわ is not 0110 私の他にも何人かいるわ; it takes its own words, `No, others besides me have survived too.`. Accepted.
+- **Other readings accepted:**
+  - :13 0010 どうかしたの `What's wrong?`;
+  - :11 0008 案内するわ `I'll lead the way.` (not 0112's みんなのところへ sentence);
+  - :15 0012 人よ！ `A person!`;
+  - :8 0005 人間なんかじゃない `not human at all` (§6 人間);
+  - :26 0023 他の乗客はどうした `What happened to the other passengers?` (the line shipped 0124 rewrites, R §14.2);
+  - :4 0001 あなたは…⁉ `You are…⁉`. `And you are…⁉` would read more naturally; non-blocking.
+- **Punctuation (Flag 5):** 11 rows have no final 。. Rows with no twin take English end punctuation. Twins take the shipped punctuation. The choices s06 `Just now, over there——` (── → `——`) and s07 `It's nothing` take no period, as every shipped choice row (Save, Don't save, Yes, No, Enter the vent, Hold the round…).
+- **Speakers** come from the labels and agree with content (F-009). The woman (Judy, unnamed) is 0001–0008, 0022, 0024, 0028, 0030, 0035, 0037. s06–s07 are John's choices. This agrees with R §14.2's attribution of the shipped 0118–0138.
+- Glossary: none beyond §41.1.
+
+### 41.4 Recurrences
+- None untranslated. The `_T` drafts of NO4_HWR_FRONT.p03 are complete. The 【女】 row (16 / 0 / 0) is now fully shipped (UP_T 14, NO4_HWR_FRONT/0123, 0129).
+- F-008: NO4_T.b03 (NO4_MACHINE_T, NO4_ROOM01_T) is the only `_T` unit left. It has no row in common with this unit (census above).

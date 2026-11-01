@@ -165,7 +165,7 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | はい · いいえ (choice) | — | Yes · No | 3 · 2 | 27 | `choice` rows only (8 / 0 / 0 each); はい in dialogue is in context | R §10.1 |
 | 握る · 握らない (choice) | — | Hold the round · Don't hold it | 14 · 13 | 27 | the engine vote after NO3_CHAPEL/0122 (s28 / s29), never a handshake; 0122 右手に握れ takes "hold it in your right hand"; 1 / 0 / 0 each | R §25.1 |
 | 通風孔に入る · 入らない (choice) | — | Enter the vent · Don't enter | 14 · 11 | 27 | `choice` rows: NO3_CABIN_3003/s06–s07, 3105/s07–s08; NO2_CABIN_2001/s05–s06 (shipped), NO2_SUBSTORAGE/s06–s07 (shipped) match; 入らない in dialogue (NO5_HW_R/0006) in context; 4 / 0 / 0 each | R §30.1 |
-| 注： (developer note, `_T` files) | — | `Note: ` then the note in plain English, as a stage direction, never dialogue | 6 (prefix) | — | フェードアウト "fade-out", キャラ劇 "character animation"; a note with no final 。 takes "." (R §36.1); NO4_BAR_T/0157, 0177, 0181; HWR_FRONT_DOWN_T/0007, HWR_FRONT_UP_T/0015, 0018 to follow; promoted from §9; 6 / 0 / 0 | R §39.1 |
+| 注： (developer note, `_T` files) | — | `Note: ` then the note in plain English, as a stage direction, never dialogue | 6 (prefix) | — | フェードアウト "fade-out", キャラ劇 "character animation"; a note with no final 。 takes "." (R §36.1); NO4_BAR_T/0157, 0177, 0181; NO4_HWR_FRONT_DOWN_T/0007; NO4_HWR_FRONT_UP_T/0015, 0018 (all shipped); promoted from §9; 6 / 0 / 0 | R §39.1, §41.1 |
 
 ## 5. Verbal tics — decided, never mix
 <!-- What is fixed is the word; punctuation follows the source line. -->
@@ -179,7 +179,7 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | 化け物 | 怪物 | monster | 7 | synonyms, one target; NO4_BAR/0083 has both: repeat "monster" | R §1.8 |
 | 人型の化け物 | — | a humanoid monster | 18 | NO3_CHAPEL/0056 only; 化け物 → monster; 1 / 0 / 0 | R §26.1 |
 | 厄介 · やっかい | 厄介事 · やっかいなこと | trouble ("Either way, it's trouble."; echo なにが厄介だ！ → "What trouble!"; "one trouble after another") | 7 | NO3_CHAPEL/0054–0056, 0087; shipped "in trouble" (NO4_4101/0003, NO4_HWR_FRONT/0087), "Trouble is" (NO4_BAR/0422), "tricky" (0142), やっかい払い "Good riddance" (0264) in context; 9 / 0 / 0 | R §26.1 |
-| 殺人鬼 | — | the killer | 10 | "a … killer" with a modifier (いかれた殺人鬼); the 鬼 pun at NO4_HWR_FRONT_UP_T/0004 in context | R §4.1 |
+| 殺人鬼 | — | the killer | 10 | "a … killer" with a modifier (いかれた殺人鬼); the 鬼 pun at NO4_HWR_FRONT_UP_T/0004 in context (`The killer? …A demon, certainly.`) | R §4.1, §41.1 |
 | じいさん | 爺さん · 爺 · じじい | old man | 7 | "Old man," at a sentence start; 爺 and じじい (pejorative) added 2026-10-06 | R §1.9, §3.3 |
 | ふん | — | Hmph | 4 | the interjection only (not 踏んで); punctuation per source: ふん、 → "Hmph," | R §3.2 |
 | くっ | — | Ngh | 3 | grunt of strain or frustration; punctuation per source (くっ、 → "Ngh,"; くっ…！ → "Ngh…!") | R §4.1 |
