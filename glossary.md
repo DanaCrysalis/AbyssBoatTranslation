@@ -156,6 +156,8 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | 武器 | — | weapon(s) (その武器 → "that weapon") | 6 (7) | — | SPACESHIP/0002 "John, that weapon" (shipped); NO4_BAR/0332, NO4_MACHINER90/0001 "weapons"; 武器らしい武器 "real weapons" (NO4_BAR/0097), 武器を携帯 "armed" (0269), NO4_TOOL_ROOM/0037 in context; 7 / 0 / 1 (items/003 blocked) | R §34.1 |
 | チャージ | チャージに時間がかかる | charge: "takes time to charge" | 6; 20 | — | SPACESHIP/0002 only (the alien gun); never "recharge"; 1 / 0 / 0 | R §34.1 |
 | 落下 | 船の落下が始まっている | fall: "the ship's starting to fall⁉" | 4; 28 | — | SPACESHIP_HW/0004 only; ⁉ one glyph; wraps "the ship's" / "starting to fall⁉" (17); 船 alone "the ship" (§2 船体); 1 / 0 / 0 | R §34.1 |
+| 扇風機 | — | the fan | 7 | — | NO4_ROOM01_T/0002 `Switched off the fan.`, 0003 `Switched on the fan.`; never "electric fan"; promoted from §9; 2 / 0 / 0 | R §42.1 |
+| スイッチ | スイッチを押す · スイッチを切る / 入れる | switch; 押す: Press the switch; 切った / 入れた: Switched off / on | 6; 16; 12 / 11 | 27 (choice rows) | NO4_ROOM01_T/0002, 0003, s04; NO3_MACHINE/0003 `Press the switch?` (shipped); promoted from §9; 4 / 0 / 0 | R §42.1 |
 
 ## 4. Classes, units, system terms
 | Source | Variants | Target | Cols | Cap | Note | Ruling |
@@ -166,6 +168,8 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | 握る · 握らない (choice) | — | Hold the round · Don't hold it | 14 · 13 | 27 | the engine vote after NO3_CHAPEL/0122 (s28 / s29), never a handshake; 0122 右手に握れ takes "hold it in your right hand"; 1 / 0 / 0 each | R §25.1 |
 | 通風孔に入る · 入らない (choice) | — | Enter the vent · Don't enter | 14 · 11 | 27 | `choice` rows: NO3_CABIN_3003/s06–s07, 3105/s07–s08; NO2_CABIN_2001/s05–s06 (shipped), NO2_SUBSTORAGE/s06–s07 (shipped) match; 入らない in dialogue (NO5_HW_R/0006) in context; 4 / 0 / 0 each | R §30.1 |
 | 注： (developer note, `_T` files) | — | `Note: ` then the note in plain English, as a stage direction, never dialogue | 6 (prefix) | — | フェードアウト "fade-out", キャラ劇 "character animation"; a note with no final 。 takes "." (R §36.1); NO4_BAR_T/0157, 0177, 0181; NO4_HWR_FRONT_DOWN_T/0007; NO4_HWR_FRONT_UP_T/0015, 0018 (all shipped); promoted from §9; 6 / 0 / 0 | R §39.1, §41.1 |
+| 選択肢 · 選択 | 選択のテスト · 選択テスト · 選択されました | option; 選択のテスト / 選択テスト: choice test; 選択されました: was selected | 6; 11; 12 | 27 (choice rows) | NO4_ROOM01_T/0001 `Running a choice test.`, 0004–0008 `Option N was selected.`, s05 `Must test a long option too`, s06 `Option 3`, s09 `End of choice test`; camp/001 (blocked) in context; promoted from §9; 選択 9 / 0 / 1 (選択肢 2 / 0 / 0) | R §42.1 |
+| テスト | — | test (testing) | 4 (7) | — | NO4_ROOM01_T/0001, s05, s08 `Still testing`, s09; promoted from §9; 4 / 0 / 0 | R §42.1 |
 
 ## 5. Verbal tics — decided, never mix
 <!-- What is fixed is the word; punctuation follows the source line. -->
@@ -282,6 +286,7 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | 天井に通風孔が見える。{br}ここから他の部屋に行けそうだ。 · 壁に… | — | `An air vent in the ceiling.{br}Looks like it could lead to other rooms.` · `An air vent in the wall.{br}Looks like it could lead to other rooms.` | 27 · 24; 27 / 12 | NO2_CABIN_2001/0001 (shipped) · NO2_SUBSTORAGE/0009 (shipped); 天井には…ここをたどって行けば (NO3_CABIN_3003/0002 = 3105/0005) is its own sentence (R §30.1); 1 / 0 / 0 each | R §32.1 |
 | 鍵がかかっている…。{p} | — | `The door is locked…{p}` | 19 | fixed sentence: NO2_HW_1/0002, 0003, NO2_HW_4/0002, NO2_HW_5/0002; "The door" supplied; NO6_BRIDGE/0009 扉には鍵がかかっている。 `The door is locked.` is another source, not paired; 4 / 0 / 0 | R §32.1 |
 | キサマ · きさま | — | you bastard ("Hey, you bastard!") | 11 | the killer, NO2_MAINSTORAGE/0003, 0004; Wolg, shipped SCN046B2/05 `You bastard, how many…`; 2 / 0 / 0 · 0 / 1 / 0 | R §32.1 |
+| 【オークランド】なんだ、怖じ気づいたか？ | — | `【Oakland】What, scared?` (+ `{p}` in the message) | 22 | fixed row pair, CHECK-bound: NO4_HWR_BACK_T/0010 (message) = NO4_MACHINE_T/s11 (`text`, 28 cols max); **corrects** shipped 0010 `What, have you lost your nerve?` (40, cannot fit s11); re-cut pending, F-030; 2 / 0 / 0 | R §42.2 |
 
 ## 7. Register per character
 | Character | Register | Contractions? | Markers | Ruling |
@@ -311,10 +316,6 @@ NOT decisions. The first translator to render one promotes it in the PR's Glossa
 so; the reviewer moves the row up into its section in the integration commit. -->
 | Source | Variants | Proposed | Alternatives | Where seen | Wave |
 |---|---|---|---|---|---|
-| 扇風機 | — | fan | electric fan | NO4_ROOM01_T/0002, 0003 (test script) | 11 |
-| 選択肢 | 選択 | option (選択のテスト → "a choice test") | choice | NO4_ROOM01_T/0001, s05, s06, s09 (test script) | 11 |
-| テスト | — | test | — | NO4_ROOM01_T/0001, s05, s08, s09 (test script) | 11 |
-| 銃のハンマーを起こす · 素人 | — | as shipped in NO4_HWR_BACK_T/0014: "amateurs" · "cock the hammer" (also 素人 → amateur(s), NO4_BAR/0192, NO4_BAR_T/0129) — not new; keep those words in the one-line cut | — | NO4_MACHINE_T/s15 | 11 |
 
 ## 10. Open questions
 <!-- one line each, with the FLAGS id. A closed question is deleted here; its answer stays in rulings.md. -->

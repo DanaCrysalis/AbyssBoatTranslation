@@ -52,6 +52,9 @@ NO2_CABIN_2001/0001, 3 rows (source 2), before `Enter the vent` / `Don't enter`,
 R §32.2). NO2.b02 (PR #33) adds NO2_SUBSTORAGE/0009 `An air vent in the wall.{br}Looks like it could
 lead to other rooms.`, 3 rows (source 2), before `Enter the vent` / `Don't enter`
 (`tl/script/NO2.b02.tsv:18`; R §33.3).
+NO4_T.b03 (PR #42) ships four `text` rows at exactly 28 columns: `NO4_MACHINE_T`/s08, s14, s15, s16
+(`tl/script/NO4_T.b03.tsv:8, :13, :14, :15`). If `text` rows hold fewer than 28, these need a re-cut
+(R §42.3).
 
 ### F-004 · 2026-10-04 · font · HUMAN
 Full-width English is wide (28 characters a line). A font hack could double that: draw two
@@ -206,6 +209,12 @@ only 0022 = 0024 = 0028. In the reviewer's census (74,022 whole-row and 164,019 
 matches), all 15 whole-row twins of NO4_HWR_FRONT/0118–0138 and every sentence twin keep the
 shipped words. 0033 also carries 0134's `{br}`. No untranslated recurrence; NO4_T.b03 is the last
 `_T` unit (R §41).
+`NO4_MACHINE_T`/0001–0002, s06–s08, s10, s12–s17 and `NO4_ROOM01_T`/0001–0008, s04–s09 shipped in
+PR #42 (NO4_T.b03, squash e909403). CHECK paired none of them. In the reviewer's census (51,246
+whole-row and 72,646 sentence pairs, 11 matches), s06, s10, s12, s16 reuse the shipped words, and s07,
+s08, s13–s15, s17 are one-line cuts that keep the shipped words where they fit (R §42.3). Correction to
+the line above: s11 is **not** unpaired. It ends in ？, as 0010 does, so CHECK binds it to 0010's
+40-column words, and it is left empty until 0010 is re-cut (F-030, R §42.2).
 
 ### F-009 · 2026-10-04 · speaker · OPEN
 `spk=N` (first argument of statement 0xA9) is not a character id: `NO4_BAR`/0014–0018 put
@@ -355,6 +364,13 @@ the glossary Variants and F-028.
 PR #39 (NO4_T.b01), reviewer's plant: `NO4_HWR_BACK_T`/0004 (the ⁉ twin of SCN002OLD/04's ！？)
 with divergent words (`How long must we hide⁉`) passed CHECK, `All checks passed`. Shipped with
 SCN002/04's words; censused by hand (R §40.2).
+PR #42 (NO4_T.b03): the label is compared as text, not skipped. Two rows labelled alike, with the same
+final punctuation, are paired. `NO4_MACHINE_T`/s11 (`text`) ↔ `NO4_HWR_BACK_T`/0010 (message), both
+`？`, is a tag variant: CHECK binds the one-line row to the message's words (40 columns, over the
+28-column limit). A row with a final 。 and its twin without one is not paired (s10, s12–s17 ↔
+0009, 0011–0016). Reviewer's trials: `ERROR tl/script/NO4_T.b01.tsv:13: same text with different
+tags, different target text`, then `line is 40 columns, limit 28`. PROJECT.md §7's line is corrected
+in this commit (R §42.2).
 
 ### F-014 · 2026-10-06 · script · OPEN
 Suspected source typo: `NO4_BAR/0218` もう一斑は社長とヘイミングだ has 一斑 ("a fleck"; 1 / 0 / 0,
@@ -496,6 +512,14 @@ normally.{p}` (`tl/script/NO1.b01.tsv:6`). The shipped row keeps both ようだ 
 "it's running" drops the second hedge. Only the illustration is stale, and no row is affected. The reviewer
 may not edit translation_prompt.md, so the fix is a one-line update of the example to the shipped target ·
 rulings R §36.2. PR #34 review.
+
+### F-030 · 2026-11-01 · script · OPEN
+`NO4_MACHINE_T`/s11 `【オークランド】なんだ、怖じ気づいたか？` (`tl/script/NO4_T.b03.tsv:10`) is untranslated and
+falls through to Japanese. CHECK binds it as a tag variant of shipped `NO4_HWR_BACK_T`/0010
+(`tl/script/NO4_T.b01.tsv:13`, `【Oakland】What, have you lost your nerve?{p}`, 40 columns). A `text` row
+holds 28. STATUS shows NO4_T.b03 as `part`, 26/27 · resolved by two one-file PRs, in order: (1) re-cut
+b01 0010 to `【Oakland】What, scared?{p}`; (2) fill b03 s11 with `【Oakland】What, scared?`. Both steps
+were tested green by the reviewer. Glossary §6 row; spec in rulings R §42.4. PR #42 review.
 
 ## CHECK positive controls
 <!-- One entry per kind of violation deliberately planted and caught by CHECK (tools/README.md rule 3).

@@ -3496,3 +3496,102 @@ Census counts are rows per store (script / scene / system), from the reviewer's 
 ### 41.4 Recurrences
 - None untranslated. The `_T` drafts of NO4_HWR_FRONT.p03 are complete. The 【女】 row (16 / 0 / 0) is now fully shipped (UP_T 14, NO4_HWR_FRONT/0123, 0129).
 - F-008: NO4_T.b03 (NO4_MACHINE_T, NO4_ROOM01_T) is the only `_T` unit left. It has no row in common with this unit (census above).
+
+## Unit script NO4_T.b03 (PR #42, MERGED, 2026-11-01)
+
+The last two `_T` rooms (NO4_MACHINE_T/0001–0002, s06–s08, s10–s17; NO4_ROOM01_T/0001–0008, s04–s09; 27 rows, 414 source characters, tier D, ratio 78.60).
+- NO4_MACHINE_T's `s` rows are one-line labelled `text` copies of SCN001/01–02 and of NO4_HWR_BACK_T/0009–0016.
+- NO4_ROOM01_T is the developer's choice test.
+- Every row is `spk=-`, and the speakers come from the labels.
+- The only unit of wave 11.
+
+Reviewed once:
+- **Round 0** (head 0181a18, merged with origin/main 4ef420e, clean): MERGE, squash e909403. 26 of 27 rows; s11 is left empty on purpose (§42.2).
+
+Figures:
+- **Containers.** MEASURE after MERGE: NO4_MACHINE_T.SCR 1,443 / 65,535 (64,092 free; 64,254 untranslated), tokens 24 / 1,499, 12/13. NO4_ROOM01_T.SCR 637 (64,898 free; 65,003 untranslated), tokens 30, 14/14. `containers negative: 0; under the reserve (2000 bytes): 0`. MERGE: keys that never matched 0.
+- **Pages.** UNITCHECK: 26 rows, 0 violations, max 4 rows/page (0001 + `+` 0002: 23 / 26 / 27 / 26). Store: 1,708 rows, 0 violations.
+- **Codes.** The authored `{…}` sequence equals the source on all 26 rows. The `codes:` lines on 0001 and 0002 are wrap breaks only.
+- **Duplicates.** CHECK: 239 duplicate and 32 tag-variant pairs, unchanged by the unit (s11 empty). Reviewer's census (F-013): label stripped, `{…}` and full-width spaces removed, ！？ → ⁉, `…。` → `…`, final 。？！ dropped; every unit row × every script and scene dump row. **51,246 whole-row and 72,646 sentence pairs, 11 matches**, the same 11 as the PR's.
+- **Widths.**
+  - `text` rows: s06 27, s07 27, s08 28, s10 27, s12 26, s13 25, s14 28, s15 28, s16 28, s17 27. Choices: s04 16, s05 27, s06 8, s07 1, s08 13, s09 18.
+  - Wrap scan: `Fragments of broken air{br}tanks are scattered about.{br}`, `It seems there's no need to{br}return to this room again.{p}`. No lone a/I, no one-word last row.
+  - Glyph counts match (`…` on s12, s13, s16). No word-initial apostrophe.
+
+Census counts are rows per store (script / scene / system), from the reviewer's grep of `dumps/` on 2026-11-01. Line citations are in `tl/script/NO4_T.b03.tsv` (line = row order + 3) unless named.
+
+### 42.1 Terms (promoted from §9, wave 11 seeds)
+- **扇風機** 2 / 0 / 0 → `the fan`. Used at :18 ROOM01_T/0002 `Switched off the fan.{p}` and :19 0003 `Switched on the fan.{p}`. The seed alternative "electric fan" adds nothing.
+- **スイッチ** 4 / 0 / 0 → `switch`. Used at :25 s04 スイッチを押す `Press the switch`, as shipped NO3_MACHINE/0003 スイッチを押しますか？ `Press the switch?`. 切った / 入れた become `Switched off` / `Switched on`.
+- **選択肢 · 選択** 選択 9 / 0 / 1, 選択肢 2 / 0 / 0. The renderings:
+  - 選択肢 → `option` (:26 s05, :27 s06 `Option 3`);
+  - 選択のテスト / 選択テスト → `choice test` (:17 0001 `Running a choice test.{p}`, :30 s09 `End of choice test`);
+  - 選択されました → `was selected` (:20–:24 0004–0008 `Option N was selected.{p}`);
+  - camp/001 (blocked) is in context.
+- **テスト** 4 / 0 / 0 → `test` / `testing` (:17, :26, :29 s08 `Still testing`, :30).
+- The §9 row 銃のハンマーを起こす · 素人 is removed. It was not a new term (shipped NO4_HWR_BACK_T/0014; 素人 also NO4_BAR/0192, NO4_BAR_T/0129), and s15 cannot carry those words (§42.3).
+- Glossary: §3 rows 扇風機 and スイッチ; §4 rows 選択肢 · 選択 and テスト; §6 row for the 0010/s11 pair (§42.2). §9 is empty.
+
+### 42.2 NO4_MACHINE_T/s11 ↔ NO4_HWR_BACK_T/0010: CHECK-bound, follow-up re-cut (PR Flag 2; coordinator points 1, 3, 4)
+- **Source.** `【オークランド】なんだ、怖じ気づいたか？` (:10 s11, `text`) and `…？{p}` (shipped `tl/script/NO4_T.b01.tsv:13` 0010, message). 怖じ気 occurs 2 / 0 / 0, in these two rows only.
+- **Why CHECK pairs them.** The other BACK_T/0009–0016 twins end in 。 on the `text` side and in no punctuation on the message side, so CHECK does not pair them. s11 and 0010 both end in ？. Once `{p}` is removed the texts are identical, label included, so CHECK pairs them as tag variants and binds s11 to 0010's words.
+- **Verified by the reviewer** (trials in the review checkout, both files restored byte for byte):
+  - s11 = `【Oakland】What, scared?` → `ERROR tl/script/NO4_T.b01.tsv:13: same text with different tags, different target text: script NO4_HWR_BACK_T/0010, script NO4_MACHINE_T/s11` (tag-variant pairs 33).
+  - s11 = 0010's words → `ERROR tl/script/NO4_T.b03.tsv:10 NO4_MACHINE_T/s11: line is 40 columns, limit 28`.
+  - 0010 = `【Oakland】What, scared?{p}` with s11 = `【Oakland】What, scared?` → `All checks passed` (tag-variant pairs 33). UNITCHECK b01: 0010 is a 1-row page of 22 columns.
+  - 0010 re-cut alone, s11 still empty → `All checks passed`.
+- **Ruling: route (a).** #42 merges with s11 empty. Two one-file follow-up PRs then follow, in order: first a re-cut of 0010 in NO4_T.b01, then s11 filled in NO4_T.b03.
+- **Reasons for the re-cut** rather than leaving s11 to fall through:
+  - Both rows are `_T` test scripts (F-008). The trade does not shorten story text.
+  - `What, scared?` is still literal: なんだ → `What,`, 怖じ気づいたか？ → `scared?`. Only the idiom "lost your nerve" goes, and no fact is lost.
+  - Identical source must get identical target (translation_prompt.md §2.2). One rendering for both rows meets that rule. Leaving s11 empty would leave the store at 1,708 / 1,709 for good, with Japanese in one row.
+- **Forms rejected:**
+  - `What, lost your nerve?` is 31 with the label.
+  - `What, cold feet?` (25) changes the idiom rather than plainly rendering it.
+  - `Lost your nerve?` (25) drops なんだ.
+- **Correction** of shipped `tl/script/NO4_T.b01.tsv:13 NO4_HWR_BACK_T/0010`, `【Oakland】What, have you lost your nerve?{p}` → `【Oakland】What, scared?{p}`. No other shipped line is affected (怖じ気 2 / 0 / 0). The glossary row is §6 `【オークランド】なんだ、怖じ気づいたか？`.
+- **Earlier lines that were wrong:**
+  - R §40.5 and F-008 listed s11 among the rows that "need their own cut within one line" and said CHECK does not pair s10–s17. For s11 both statements were wrong. The cause is the final punctuation, not the label.
+  - The coordinator's wave-11 seed (HANDOFF → Next up) repeated R §40.5 and asked for a separate cut of s11. That seed was also wrong: s11 is a CHECK-bound tag variant of 0010, not an unpaired sentence copy, so no separate cut can pass CHECK.
+- **Lesson.** Before seeding or cutting a labelled `text` copy, fill it and run CHECK. If CHECK binds it, the message twin has to be re-cut first, in its own PR. Added to PROJECT.md §7 in this commit.
+- Recorded as F-030.
+
+### 42.3 Compressions accepted (PR Flags 3–6)
+- **:14 s15** いいか、素人は銃のハンマーを起こすな。撃つのは最後の手段だ。 → `【Wolg】Don't cock. Fire last.` (28).
+  - Both facts are kept, in two sentences as in the source: do not cock the hammer, and shooting comes last.
+  - いいか and 素人は are carried by the imperative addressed to the amateurs (step 5, flagged).
+  - Alternatives measured with `len()` (label included):
+    - `Hammer down. Fire last.` 29;
+    - `Don't cock. Shoot last.` 29;
+    - `Don't cock. Last resort.` 30;
+    - `Don't cock till needed.` 29;
+    - `No cocking. Fire last.` 28, a sidegrade (a noun for the 〜な imperative).
+  - No form fits that is clearly better.
+- **:16 s17** ウォルグがいる限り、物騒な連中に引けを取るとは思えんな。 → `【Heming】No thug beats Wolg.` (27).
+  - Kept: 物騒な連中 → "thug" and 引けを取る → "beats". Wolg is the guarantor; いる限り and "us" are folded in (steps 4–6, flagged).
+  - The 思えん hedge is dropped. Measured: `I doubt thugs beat Wolg.` 32, `Thugs? Not with Wolg.` 29, `With Wolg, we can't lose.` 33. `Thugs? We have Wolg.` (28) keeps "us" but loses 引けを取る and is no more hedged.
+  - A `text` row takes no label `{br}` (one line, not wrapped), so the wave-10 hedge remedy (R §40.3) is not available here.
+- **Accepted, keeping the shipped words where they fit (Flag 5):**
+  - :7 s07 `【Wolg】First, secure safety.` (27). `First, secure shelter.` is 28, the same sense.
+  - :8 s08 `【Wolg】Let's plan from there.` (28).
+  - :12 s13 `【Miller】Hard for you too…` (25). も is kept; the ね supposition is carried by the `…`.
+  - :13 s14 `【Wolg】Follow me, stay clear.` (28). 邪魔しないよう → "stay clear" (out of the way).
+- **Rows at 28** (s08, s14, s15, s16; 27 preferred): flagged; each is at the cap of F-003 (assumed). s16 is a whole twin of shipped 0011 (R §40.5).
+- **Readings accepted:**
+  - :4 0001 破片が散乱 `Fragments … are scattered about` (ボンベ → "air tanks", §3);
+  - :5 0002 keeps the そう hedge (`It seems`), and もう → "again";
+  - :26 s05 drops ね to stay at 27.
+  - Choice rows take no period, as every shipped choice row.
+- Non-blocking: 0001's wrap splits `air | tanks`. This is not a forbidden pattern (R §1.12).
+- Glossary: none beyond §42.1–§42.2.
+
+### 42.4 Follow-up specification (for the coordinator's dispatch)
+Two PRs, each one file, based on `main` after this integration commit, in this order. Both are reviewed by the reviewer as usual.
+1. **`tl/script-NO4_T.b01`** (re-cut; branch name per PROJECT.md §8; PR title `tl: script NO4_T.b01 — 25 rows, re-cut 0010 for NO4_MACHINE_T/s11, NO4_HWR_BACK_T.SCR «free» free`).
+   - Change exactly one target: `tl/script/NO4_T.b01.tsv:13 NO4_HWR_BACK_T/0010` → `【Oakland】What, scared?{p}`. Nothing else changes.
+   - Expected results: CHECK `All checks passed`, with tag-variant pairs still 32 while s11 is empty; UNITCHECK 0010 a 1-row page of 22 columns.
+   - Flags cite this ruling as a glossary §4.3 correction.
+2. **`tl/script-NO4_T.b03`** (fill s11; dispatched after PR 1 merges; PR title `tl: script NO4_T.b03 — 27/27 rows, max 4 rows/page, NO4_MACHINE_T.SCR «free» free`).
+   - Change exactly one target: `tl/script/NO4_T.b03.tsv:10 NO4_MACHINE_T/s11` → `【Oakland】What, scared?` (22, no `{p}`, no final period beyond the `?`).
+   - Expected results: CHECK `All checks passed` with tag-variant pairs 33; UNITCHECK s11 22; MEASURE NO4_MACHINE_T 13/13.
+- After both merge, STATUS shows script 38/38 and 1,709/1,709. F-030 closes.

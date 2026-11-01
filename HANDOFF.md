@@ -1,4 +1,4 @@
-**Last updated: 2026-11-01** — wave 10 closed: NO4_BAR_T.p03, NO4_BAR_T.p04, NO4_T.b01, NO4_T.b02 merged (PRs #41, #40, #39, #38), two CHANGES rounds (#40, #39), none parked; NO4_BAR_T, NO4_HWR_BACK_T, NO4_HWR_FRONT_DOWN_T, NO4_HWR_FRONT_UP_T complete; script 37/38. Wave 11 (NO4_T.b03, the last dispatchable unit) next.
+**Last updated: 2026-11-01** — wave 11: PR #42 (NO4_T.b03) MERGED round 0 (squash e909403), 26/27 rows; NO4_MACHINE_T/s11 left empty because CHECK binds it to shipped NO4_HWR_BACK_T/0010 (40 cols) — two one-file follow-up PRs fill it (F-030, rulings R §42.2, §42.4). NO4_ROOM01_T complete; script 37/38 units, 1,708/1,709 rows.
 
 ## Integration branch: `main`. Not configurable.
 Every PR bases on `main`; the reviewer merges into `main`; a wave is closed only when `origin/main` is
@@ -6,21 +6,25 @@ at the close commit (`CLAUDE.md` Rule 3). A fresh container may clone shallow wi
 preflight is `git fetch origin main && git checkout main && git reset --hard origin/main`.
 
 ## NEXT ACTION — always current, always a literal instruction
-> **Wave 11 coordinator:** PR #42 (NO4_T.b03) open; barrier met. Run the reviewer on #42 (foreground). After merge: close wave 11 and write the final handoff (`handoff: run complete`) — no wave 12.
+> **Wave 11 coordinator:** #42 merged (e909403) and integrated. Next, dispatch the F-030 follow-up as rework of this wave's unit, per rulings R §42.4:
+> 1. A translator re-cuts `tl/script/NO4_T.b01.tsv:13` NO4_HWR_BACK_T/0010 → `【Oakland】What, scared?{p}` (one file). Reviewer, merge.
+> 2. A translator fills `tl/script/NO4_T.b03.tsv:10` NO4_MACHINE_T/s11 → `【Oakland】What, scared?` (one file). Reviewer, merge.
+>
+> Then close wave 11 and write the final handoff (`handoff: run complete`); there is no wave 12. Alternatively, record a decision to leave s11 falling through, and close.
 
 ## Progress
 | Store | Done | Total | |
 |---|---|---|---|
-| script | 37 units · 1,682 rows | 38 units · 1,709 rows | NO4_BAR p01–p08, NO4_HWR_FRONT p01–p03, NO4_MACHINER90 p01–p02, NO4_TOOL_ROOM p01–p02 (rooms complete), NO4.b01, NO4.b02 (deck NO4 complete bar the `_T` scripts); NO5.b01 (deck NO5 complete); NO6.b01, NO6.b02 (deck NO6 complete); NO3_CHAPEL.p01–p03 (room complete, 150/150); NO3_NO4.p01–p02 (room complete, 61/61); NO3.b01, NO3.b02, NO2.b01, NO2.b02 (decks NO3, NO2 complete); SPACESHIP.b01 (deck SPACESHIP complete); NO1.b01 (deck NO1 complete); NO4_BAR_T.p01–p04 (room complete, 181/181); NO4_T.b01 (NO4_HWR_BACK_T 16/16, NO4_HWR_FRONT_DOWN_T 9/9); NO4_T.b02 (NO4_HWR_FRONT_UP_T 39/39); STATUS 2026-11-01 |
+| script | 37 units · 1,708 rows | 38 units · 1,709 rows | NO4_BAR p01–p08, NO4_HWR_FRONT p01–p03, NO4_MACHINER90 p01–p02, NO4_TOOL_ROOM p01–p02 (rooms complete), NO4.b01, NO4.b02 (deck NO4 complete bar the `_T` scripts); NO5.b01 (deck NO5 complete); NO6.b01, NO6.b02 (deck NO6 complete); NO3_CHAPEL.p01–p03 (room complete, 150/150); NO3_NO4.p01–p02 (room complete, 61/61); NO3.b01, NO3.b02, NO2.b01, NO2.b02 (decks NO3, NO2 complete); SPACESHIP.b01 (deck SPACESHIP complete); NO1.b01 (deck NO1 complete); NO4_BAR_T.p01–p04 (room complete, 181/181); NO4_T.b01 (NO4_HWR_BACK_T 16/16, NO4_HWR_FRONT_DOWN_T 9/9); NO4_T.b02 (NO4_HWR_FRONT_UP_T 39/39); NO4_T.b03 part, 26/27 (NO4_ROOM01_T 14/14, NO4_MACHINE_T 12/13: s11 pending F-030); STATUS 2026-11-01 |
 | scene | 4 units · 190 rows | 4 units · 190 rows | OP-SCN034, SCN038, SCN041-SCN046, SCN047-EPILOG (store complete) |
 | system | 0 | 5 units · 188 rows | blocked whole (F-006) |
 
-Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-31; the NO3/NO2 bundle rooms ≥ 62,822 (NO2_MAINSTORAGE); `NO4_BAR.SCR` 37,378 free; `NO4_TOOL_ROOM.SCR` 61,899, 80/80; the NO4.b01/b02 rooms ≥ 63,697; the NO5 rooms ≥ 63,950; NO6_BRIDGE 63,400, the other NO6 rooms ≥ 64,242; NO3_CHAPEL.SCR 55,247, 150/150; NO3_NO4.SCR 60,727, 61/61; SPACESHIP.SCR 64,874, SPACESHIP_HW.SCR 64,841, 8/8; NO4_BAR_T.SCR 55,244, 181/181 (MEASURE 2026-11-01, after #40); NO4_HWR_BACK_T.SCR 64,005, 16/16, NO4_HWR_FRONT_DOWN_T.SCR 64,297, 9/9 (after #39); NO4_HWR_FRONT_UP_T.SCR 63,183, 39/39 (after #38); NO1_CONTROLROOM 64,880, NO1_ENGINEROOM 64,564, NO1_STORAGE 65,180, 8/8).
+Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-31; the NO3/NO2 bundle rooms ≥ 62,822 (NO2_MAINSTORAGE); `NO4_BAR.SCR` 37,378 free; `NO4_TOOL_ROOM.SCR` 61,899, 80/80; the NO4.b01/b02 rooms ≥ 63,697; the NO5 rooms ≥ 63,950; NO6_BRIDGE 63,400, the other NO6 rooms ≥ 64,242; NO3_CHAPEL.SCR 55,247, 150/150; NO3_NO4.SCR 60,727, 61/61; SPACESHIP.SCR 64,874, SPACESHIP_HW.SCR 64,841, 8/8; NO4_BAR_T.SCR 55,244, 181/181 (MEASURE 2026-11-01, after #40); NO4_HWR_BACK_T.SCR 64,005, 16/16, NO4_HWR_FRONT_DOWN_T.SCR 64,297, 9/9 (after #39); NO4_HWR_FRONT_UP_T.SCR 63,183, 39/39 (after #38); NO1_CONTROLROOM 64,880, NO1_ENGINEROOM 64,564, NO1_STORAGE 65,180, 8/8; NO4_MACHINE_T.SCR 64,092, 12/13, NO4_ROOM01_T.SCR 64,898, 14/14 (MEASURE 2026-11-01, after #42)).
 
 ## In flight
 | Unit | Branch | Round | State | Next |
 |---|---|---|---|---|
-| script NO4_T.b03 | `tl/script-NO4_T.b03` | PR #42, round 0 | PR open, 26/27 rows: s11 left empty — CHECK binds it as a tag variant of shipped NO4_HWR_BACK_T/0010 (40 cols > 28); s15, s17 compressed one-liners (PR Flags 2–4) | reviewer (barrier met) |
+| script NO4_T.b03 | `tl/script-NO4_T.b03` | PR #42, round 0 | **MERGED** e909403 (round 0, no findings). CHECK 239 / 32 pairs; census 51,246 + 72,646 pairs, 11 matches; MEASURE NO4_MACHINE_T 64,092 free, NO4_ROOM01_T 64,898 free. s11 is left empty: CHECK binds it to NO4_HWR_BACK_T/0010 | F-030 follow-up (R §42.4): first re-cut b01 0010, then fill b03 s11, each a one-file PR. The coordinator dispatches it |
 
 ## Next up
 Wave 11 (QUEUE 2026-11-01), one script unit, tier D — the last dispatchable unit of the run: NO4_T.b03 (27 rows, 414 chars,
@@ -39,9 +43,7 @@ end punctuation on a twin row is wrong if the shipped twin has none (b01 Flag 2)
 before authored `{br}`, wrap scan, speakers from content, unique review-wN-prK / integrate-wN-prK branches.
 
 ## Remaining
-QUEUE order, generated 2026-11-01: script NO4_T.b03 only (in Next up, wave 11). Scene: none — store complete (wave 4). After
-wave 11 no dispatchable unit remains: the run is complete bar the blocked system store (F-006); wave 11's coordinator writes
-the final handoff (`handoff: run complete`) instead of opening a wave 12 session.
+After #42, only the F-030 follow-up remains: NO4_HWR_BACK_T/0010 re-cut, then NO4_MACHINE_T/s11 (rulings R §42.4). Scene: none, store complete (wave 4). Once it lands, or is declined, no dispatchable unit remains: the run is complete bar the blocked system store (F-006), and wave 11's coordinator writes the final handoff (`handoff: run complete`) instead of opening a wave 12 session.
 
 ## Blocked — needs a human
 1. **System store** (5 units, 188 rows) — exe slots too short for English; you chose to wait for an
