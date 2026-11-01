@@ -77,6 +77,7 @@ Scene: none — store complete (wave 4). 1 script unit remains after wave 10's f
 - Wave 8 stopped on the 5-hour session limit 2026-10-30 ~20:50 UTC (all four translators, HTTP 429, early in drafting; reset 00:50) and resumed on the human's "continue" 2026-10-31 16:44 UTC; translators resumed by `SendMessage` ("continue from the file on disk"), worktrees intact.
 - Wave 8 stopped again on the 5-hour session limit 2026-10-31 ~21:05 UTC (reviewer of #31 round 1 and translator of #33 round 1, HTTP 429; reset 21:10) and resumed on the human's "continue" 21:11 UTC; both resumed by `SendMessage`.
 - Wave 9 stopped on the 5-hour session limit 2026-10-31 ~23:45 UTC (reviewer of #36, HTTP 429, after the squash-merge 8a1e7ab and before its integration commit; reset 02:10) and resumed on the human's "continue" (relayed by the runner) 2026-11-01 02:12 UTC; the reviewer resumed by `SendMessage` to finish #36's integration.
+- Wave 10 stopped on the 5-hour session limit 2026-11-01 ~03:00 UTC (reviewer of #40, HTTP 429, mid-review, before any merge; reset 07:10) and resumed on the human's "continue" (relayed by the runner) 07:12 UTC; the reviewer resumed by `SendMessage`.
 - Wave 2 stopped by the human ("stop for now", 2026-10-06 ~14:40 UTC) mid-review and resumed on "continue" 2026-10-25 01:05 UTC; translators resumed by `SendMessage` with worktrees intact.
 
 ## Wave history
