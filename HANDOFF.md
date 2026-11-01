@@ -6,8 +6,7 @@ at the close commit (`CLAUDE.md` Rule 3). A fresh container may clone shallow wi
 preflight is `git fetch origin main && git checkout main && git reset --hard origin/main`.
 
 ## NEXT ACTION — always current, always a literal instruction
-> **Wave 11 coordinator:** NO4_T.b03 dispatched (translator, branch `tl/script-NO4_T.b03`). Wait for its PR, then run the
-> reviewer on it (foreground). After merge: close wave 11 and write the final handoff (`handoff: run complete`) — no wave 12.
+> **Wave 11 coordinator:** PR #42 (NO4_T.b03) open; barrier met. Run the reviewer on #42 (foreground). After merge: close wave 11 and write the final handoff (`handoff: run complete`) — no wave 12.
 
 ## Progress
 | Store | Done | Total | |
@@ -21,7 +20,7 @@ Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEA
 ## In flight
 | Unit | Branch | Round | State | Next |
 |---|---|---|---|---|
-| script NO4_T.b03 | `tl/script-NO4_T.b03` | dispatch 1 | translator working (2026-11-01) | translator opens PR → reviewer |
+| script NO4_T.b03 | `tl/script-NO4_T.b03` | PR #42, round 0 | PR open, 26/27 rows: s11 left empty — CHECK binds it as a tag variant of shipped NO4_HWR_BACK_T/0010 (40 cols > 28); s15, s17 compressed one-liners (PR Flags 2–4) | reviewer (barrier met) |
 
 ## Next up
 Wave 11 (QUEUE 2026-11-01), one script unit, tier D — the last dispatchable unit of the run: NO4_T.b03 (27 rows, 414 chars,
