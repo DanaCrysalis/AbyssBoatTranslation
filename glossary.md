@@ -214,7 +214,9 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | メス | — | bitch (あのメス → "that bitch") | 5 | the killer on Judy, SCN046B1/10–11; article in context; 0 / 2 / 0 | R §13.1 |
 | 売女 | — | whore (お前の売女 → "your whore") | 5 | the killer on Wolg's murdered wife, SCN046B2/07; 0 / 1 / 0 | R §13.1 |
 | ワイフ | — | my wife | 7 | Wolg's murdered wife, his police story: NO3_NO4/0030 "My wife, who always met me at the door…", 0032; the loanword affectation is not carried; 2 / 0 / 0 | R §27.1, §29.1 |
-| 神 | — | god, lowercase ("a god", "that god of yours") | 3 | SCN046B2/02–05; 女神 is the 俺様 row's "goddess"; NO4_BAR_T/0144 神は──主は in context; 1 / 4 / 0 (女神 3 / 0 / 0) | R §13.1 |
+| 神 | — | god, lowercase ("a god", "that god of yours"); capitalised as Collison's God: 神は──主は → `God——the Lord` | 3; 13 | lowercase as a common noun (SCN046B2/02–05, the killer's "god"); capitalised as the proper noun (NO4_BAR_T/0144, restated as 主 "the Lord", 1 / 0 / 0); 女神 is the 俺様 row's "goddess"; 1 / 4 / 0 (女神 3 / 0 / 0) | R §13.1, §38.1 |
+| 犯人 | — | the culprit | 11 | as shipped NO4_BAR/0246 `The culprit is human.`; NO4_BAR_T/0118, 0123; 3 / 0 / 0 | R §38.1 |
+| 楽観主義者 | — | an optimist | 11 | NO4_BAR_T/0107 `Next came an optimist who said to wait for rescue.`; promoted from §9; 1 / 0 / 0 | R §38.1 |
 | 生肝 | — | raw liver | 9 | SCN046B2/04 only (アレの生肝 → "that thing's raw liver"); 0 / 1 / 0 | R §13.1 |
 | ゲームオーバー | — | game over ("it's game over") | 9 | in dialogue, SCN046A2/01 only (Heming to Oakland); 0 / 1 / 0 | R §13.1 |
 | 船内イベント | 『本日の船内イベント案内』 | shipboard events | 16 | the schedule notice, 5 identical rows (NO4_HWR_FRONT/0101, NO4_HWL_FRONT/0011, NO6_HW_1/0003, NO6_HW_2/0006, 0010) + NO4_SHOP/0006, NO5_BANK/0005; 7 / 0 / 0 | R §14.1 |
@@ -305,7 +307,6 @@ so; the reviewer moves the row up into its section in the integration commit. --
 | Source | Variants | Proposed | Alternatives | Where seen | Wave |
 |---|---|---|---|---|---|
 | 注： (developer note, `_T` files) | — | `Note: ` then the note in plain English, a stage direction, never dialogue; フェードアウト "fade-out", キャラ劇 "character animation" | `NB: ` | NO4_BAR_T/0157, 0177, 0181 (p04); NO4_HWR_FRONT_DOWN_T/0007 (b01); NO4_HWR_FRONT_UP_T/0015, 0018 (b02); 0 shipped | 10 |
-| 楽観主義者 | — | an optimist | — | NO4_BAR_T/0107 only (p03; no shipped twin) | 10 |
 | 乗員 | — | the crew (as 乗組員, §2); 乗客は乗員も含め → "the passengers, crew included" | — | NO4_HWR_FRONT_DOWN_T/0004 only (b01) | 10 |
 | 客室 | — | cabin(s) | stateroom(s) | NO4_HWR_FRONT_DOWN_T/0005 only (b01) | 10 |
 | 安全地帯 | — | a safe zone | a safe haven | NO4_HWR_FRONT_DOWN_T/0005 only (b01) | 10 |

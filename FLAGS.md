@@ -126,6 +126,12 @@ NO4_BAR_T.p02 (PR #37) has the project's first `{p}{br}` (0 in either dump), at 
 text and 0090, 0091, 0093 are exact twins, so the only other click is mid-clause. The page after
 the second `{p}` deliberately opens on a blank row ("Beyond the windows lay the seabed…"; 4 rows as
 the tools model it). If `_T` units ship, check that this blank first row looks acceptable (R §37.2).
+NO4_BAR_T.p03 (PR #41) adds two more, for the same reason (exact twins after tag-variant rows):
+NO4_BAR_T/0112 `…so we had no trouble getting by.{p}{br}` (next page: "Or so it should have been."
+opens on row 2) and 0140 `…even a few days without food.{p}{br}` (next: "To survive, we had to
+risk our lives for food."). It also clicks mid-sentence at coordinate-clause boundaries in 0108
+(`…search the whole world{p}and find no tale…`) and 0144 (`…the food storeroom, and{p}God——the
+Lord…`). Check them with 0092 (R §38.2).
 
 
 ## Open
@@ -181,6 +187,10 @@ and 4 tag-variant rows. In the reviewer's census (91,104 whole-row and 182,060 s
 matches), every twin reuses the shipped words, 0081 だが、 + NO4_BAR/0055 included (`But I awoke to a
 strange noise.`, orphan flagged; R §37.1). Untranslated recurrence for NO4_T: 気持ちはわかる
 (NO4_BAR_T/0056 = NO4_HWR_FRONT_DOWN_T/0003, Heming) → `I understand how you feel.` (R §37.3).
+`NO4_BAR_T`/0095–0145 shipped in PR #41 (squash a64d635). CHECK paired its 13 identical and 12
+tag-variant rows (all NO4_BAR.p02, words identical); the reviewer's census (96,798 whole-row,
+153,527 sentence, 237,617 clause pairs) found every sentence twin keeping the shipped words, 0101
+and 0103 differing only where the draft lacks やがて/ただ. No untranslated recurrence (R §38).
 
 ### F-009 · 2026-10-04 · speaker · OPEN
 `spk=N` (first argument of statement 0xA9) is not a character id: `NO4_BAR`/0014–0018 put
