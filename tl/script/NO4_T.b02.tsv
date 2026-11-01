@@ -1,0 +1,42 @@
+# unit: script/NO4_T.b02
+# rows: 39
+# columns: id <TAB> context <TAB> source <TAB> target (empty target = untranslated)
+NO4_HWR_FRONT_UP_T/0001	msg spk=-	【女】あなたは…⁉{p}	【Woman】You are…⁉{p}
+NO4_HWR_FRONT_UP_T/0002	msg spk=-	【女】助けに来てくれたの⁉{p}	【Woman】Did you come to rescue us⁉{p}
+NO4_HWR_FRONT_UP_T/0003	msg spk=-	【女】そう…{p}	【Woman】I see…{p}
+NO4_HWR_FRONT_UP_T/0004	msg spk=-	【女】殺人鬼？…たしかに鬼ね。あれは…{p}	【Woman】The killer? …A demon, certainly. That thing…{p}
+NO4_HWR_FRONT_UP_T/0005	msg spk=-	【女】化け物よ。人間なんかじゃないわ。{p}	【Woman】It's a monster. It's not human at all.{p}
+NO4_HWR_FRONT_UP_T/0006	msg spk=-	【女】そうよ。化け物。{p}	【Woman】{br}That's right. A monster.{p}
+NO4_HWR_FRONT_UP_T/0007	msg spk=-	【女】いいえ、私以外にも生き残ってるわ。{p}	【Woman】No, others besides me have survived too.{p}
+NO4_HWR_FRONT_UP_T/0008	msg spk=-	【女】案内するわ。あなたの仲間は？ひとりじゃないんでしょ？{p}	【Woman】I'll lead the way. What about your friends? You're not alone, are you?{p}
+NO4_HWR_FRONT_UP_T/0009	msg spk=-	【オークランド】なんだジョン、なにか用か？{p}	【Oakland】What is it, John? Do you need something?{p}
+NO4_HWR_FRONT_UP_T/0010	msg spk=-	【ミラー】なに？　どうかしたの？{p}	【Miller】What? What's wrong?{p}
+NO4_HWR_FRONT_UP_T/0011	msg spk=-	【オークランド】なにっ⁉　本当か⁉　おいっ、人がいたぞ！{p}	【Oakland】What⁉ Really⁉ Hey, there's someone here!{p}
+NO4_HWR_FRONT_UP_T/0012	msg spk=-	【ミラー】なんですって⁉　みんな！　人よ！　人がいたのっ！{p}	【Miller】What did you say⁉ Everyone! A person! There's someone here!{p}
+NO4_HWR_FRONT_UP_T/0013	msg spk=-	【ヘイミング】なに？　人が？　みんな、待ってくれ。人がいたらしいぞ！{p}	【Heming】What? Someone? Everyone, wait. Apparently there's someone here!{p}
+NO4_HWR_FRONT_UP_T/0014	msg spk=-	【ウォルグ】全員ストップだ！　ジョンが人を見たと言っている{p}	【Wolg】Everyone, stop! John says he saw someone.{p}
+NO4_HWR_FRONT_UP_T/0015	msg spk=-	注：ここで、先行していた、ウォルグとヘイミングが戻ってきます。{p}	Note: At this point, Wolg and Heming, who had gone on ahead, come back.{p}
+NO4_HWR_FRONT_UP_T/0016	msg spk=-	【オークランド】あの角の向こうを走り抜けたらしい{p}	【Oakland】{br}Seems they ran past, just around that corner.{p}
+NO4_HWR_FRONT_UP_T/0017	msg spk=-	【ウォルグ】俺が見てくる{p}	【Wolg】I'll go take a look.{p}
+NO4_HWR_FRONT_UP_T/0018	msg spk=-	注：ウォルグが廊下の向こうへ調査に向かいます。{p}	Note: Wolg heads down the corridor to investigate.{p}
+NO4_HWR_FRONT_UP_T/0019	msg spk=-	【ウォルグ】みんなっ！　来いっ！{p}	【Wolg】Everyone! Come here!{p}
+NO4_HWR_FRONT_UP_T/0020	msg spk=-	【オークランド】女じゃないか{p}	【Oakland】Why, it's a woman.{p}
+NO4_HWR_FRONT_UP_T/0021	msg spk=-	【ウォルグ】キミはこの船の乗客か？{p}	【Wolg】Are you a passenger on board this ship?{p}
+NO4_HWR_FRONT_UP_T/0022	msg spk=-	【女】………{p}	【Woman】………{p}
+NO4_HWR_FRONT_UP_T/0023	msg spk=-	【オークランド】他の乗客はどうした{p}	【Oakland】What happened to the other passengers?{p}
+NO4_HWR_FRONT_UP_T/0024	msg spk=-	【女】………{p}	【Woman】………{p}
+NO4_HWR_FRONT_UP_T/0025	msg spk=-	【ミラー】待って二人とも。この子、おびえてるじゃない。	【Miller】Wait, you two. Can't you see she's frightened?
+NO4_HWR_FRONT_UP_T/0026	msg spk=- +	まずは私たちの素性から話すべきよ。	{br}We should start by telling her who we are.
+NO4_HWR_FRONT_UP_T/0027	msg spk=- +	私たちは沈没船を引き上げる業者よ。偶然この船を発見したの。あなたは？{p}	{p}We're a shipwreck salvage firm. We came across this ship by chance.{br}What about you?{p}
+NO4_HWR_FRONT_UP_T/0028	msg spk=-	【女】………{p}	【Woman】………{p}
+NO4_HWR_FRONT_UP_T/0029	msg spk=-	【オークランド】たくさんの死体を見た。いったいこの船で何が起こったんだ？{p}	【Oakland】We've seen a lot of bodies. What on earth happened on this ship?{p}
+NO4_HWR_FRONT_UP_T/0030	msg spk=-	【女】…助けに…来てくれたの？{p}	【Woman】…Did you come… to rescue us?{p}
+NO4_HWR_FRONT_UP_T/0031	msg spk=-	【オークランド】それは──{p}	【Oakland】That's——{p}
+NO4_HWR_FRONT_UP_T/0032	msg spk=-	【ウォルグ】状況にもよるな。そうだろ、オークランドさん{p}	【Wolg】{br}Depends on the situation. Right, Mr. Oakland?{p}
+NO4_HWR_FRONT_UP_T/0033	msg spk=-	【オークランド】うむ…そ、そうだな。とにかく、我々はこの船の現状を知りたい{p}	【Oakland】{br}Mm… Y-yes, that's right.{br}In any case, we want to know how things stand on board.{p}
+NO4_HWR_FRONT_UP_T/0034	msg spk=-	【ウォルグ】キミの他にも生き残りはいるんだな？{p}	【Wolg】There are other survivors besides you, then?{p}
+NO4_HWR_FRONT_UP_T/0035	msg spk=-	【女】…いるわ{p}	【Woman】…There are.{p}
+NO4_HWR_FRONT_UP_T/0036	msg spk=-	【オークランド】会わせてくれないか{p}	【Oakland】Would you let us meet them?{p}
+NO4_HWR_FRONT_UP_T/0037	msg spk=-	【女】ええ。…ついてきて{p}	【Woman】Yes. …Follow me.{p}
+NO4_HWR_FRONT_UP_T/s06	choice	いま、あそこに──	Just now, over there——
+NO4_HWR_FRONT_UP_T/s07	choice	なんでもない	It's nothing
