@@ -1,0 +1,30 @@
+# unit: script/NO4_T.b03
+# rows: 27
+# columns: id <TAB> context <TAB> source <TAB> target (empty target = untranslated)
+NO4_MACHINE_T/0001	msg spk=-	壊れたボンベの破片が散乱している。{br}	Fragments of broken air tanks are scattered about.{br}
+NO4_MACHINE_T/0002	msg spk=- +	もうこの部屋に戻ってくる必要はなさそうだ。{p}	It seems there's no need to return to this room again.{p}
+NO4_MACHINE_T/s06	text	【オークランド】どうすればいいんだ。	【Oakland】What are we to do?
+NO4_MACHINE_T/s07	text	【ウォルグ】まず安全な場所を確保するんだ。	【Wolg】First, secure safety.
+NO4_MACHINE_T/s08	text	【ウォルグ】どうするのかはそこで考えよう。	【Wolg】Let's plan from there.
+NO4_MACHINE_T/s10	text	【オークランド】遅れるなよ。	【Oakland】Don't fall behind.
+NO4_MACHINE_T/s11	text	【オークランド】なんだ、怖じ気づいたか？	
+NO4_MACHINE_T/s12	text	【ミラー】なんてことなの…。	【Miller】How could this be…
+NO4_MACHINE_T/s13	text	【ミラー】あなたも大変ね…。	【Miller】Hard for you too…
+NO4_MACHINE_T/s14	text	【ウォルグ】邪魔しないよう、ついてこい。	【Wolg】Follow me, stay clear.
+NO4_MACHINE_T/s15	text	【ウォルグ】いいか、素人は銃のハンマーを起こすな。撃つのは最後の手段だ。	【Wolg】Don't cock. Fire last.
+NO4_MACHINE_T/s16	text	【ヘイミング】大変なことになったな…。	【Heming】It's gotten serious…
+NO4_MACHINE_T/s17	text	【ヘイミング】ウォルグがいる限り、物騒な連中に引けを取るとは思えんな。	【Heming】No thug beats Wolg.
+NO4_ROOM01_T/0001	msg spk=-	選択のテストをします{p}	Running a choice test.{p}
+NO4_ROOM01_T/0002	msg spk=-	扇風機のスイッチを切った。{p}	Switched off the fan.{p}
+NO4_ROOM01_T/0003	msg spk=-	扇風機のスイッチを入れた。{p}	Switched on the fan.{p}
+NO4_ROOM01_T/0004	msg spk=-	その２が選択されました。{p}	Option 2 was selected.{p}
+NO4_ROOM01_T/0005	msg spk=-	その３が選択されました。{p}	Option 3 was selected.{p}
+NO4_ROOM01_T/0006	msg spk=-	その４が選択されました。{p}	Option 4 was selected.{p}
+NO4_ROOM01_T/0007	msg spk=-	その５が選択されました。{p}	Option 5 was selected.{p}
+NO4_ROOM01_T/0008	msg spk=-	その６が選択されました。{p}	Option 6 was selected.{p}
+NO4_ROOM01_T/s04	choice	スイッチを押す	Press the switch
+NO4_ROOM01_T/s05	choice	長い選択肢も入れてテストしないといけないね	Must test a long option too
+NO4_ROOM01_T/s06	choice	選択肢その３	Option 3
+NO4_ROOM01_T/s07	choice	４	4
+NO4_ROOM01_T/s08	choice	まだテスト	Still testing
+NO4_ROOM01_T/s09	choice	選択テスト終わり	End of choice test
