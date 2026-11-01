@@ -1,4 +1,4 @@
-**Last updated: 2026-11-01** — **run complete.** Wave 11 closed: NO4_T.b03 merged (#42 e909403, 26/27), then F-030 filled NO4_MACHINE_T/s11 by re-cutting shipped NO4_HWR_BACK_T/0010 (#43 83d5b51) and filling s11 (#44 1a7061a), all round 0. Script 38/38 units, 1,709/1,709 rows; scene 4/4, 190/190; system 0/5, blocked (F-006). No dispatchable unit remains.
+**Last updated: 2026-11-01** — **run complete** (close commit 78e2ee3, proven on `origin/main`). Wave 11 closed: NO4_T.b03 merged (#42 e909403, 26/27), then F-030 filled NO4_MACHINE_T/s11 by re-cutting shipped NO4_HWR_BACK_T/0010 (#43 83d5b51) and filling s11 (#44 1a7061a), all round 0. Script 38/38 units, 1,709/1,709 rows; scene 4/4, 190/190; system 0/5, blocked (F-006). No dispatchable unit remains.
 
 ## Integration branch: `main`. Not configurable.
 Every PR bases on `main`; the reviewer merges into `main`; a wave is closed only when `origin/main` is
