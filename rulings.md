@@ -3196,3 +3196,39 @@ Census counts are rows per store (script / scene / system), from the reviewer's 
   - ENGINEROOM/0002 (spk=0) and 0003 (spk=100; ましょう, addresses John) are Judy.
   - Every line is speaker-neutral in English.
 - Glossary: none beyond §36.1.
+
+## Unit script NO4_BAR_T.p02 (PR #37, MERGED, 2026-11-01)
+
+Figures (round 1, head 4b3b4d1, squash baa917b):
+- **Round 0** (6e77413): CHANGES, two one-word last rows (§37.1). **Round 1**: MERGE, only `:16 0059` and `:38 0081` changed, byte-identical to the reviewer's scratch fix.
+- **Containers.** MEASURE after MERGE: NO4_BAR_T.SCR 10,274 / 65,535 (55,261 free; 56,220 after p01), tokens 493 / 1,499, 94/181 rows; NO4_BAR.SCR unchanged at 37,378. `containers negative: 0; under the reserve (2000 bytes): 0`. MERGE: keys that never matched 0.
+- **Pages.** UNITCHECK: 48 rows, 0 violations, max 4 rows/page; store 1,531 rows, 0 violations. Authored code diff: 22 rows, every one in PR Flag 5. No `{w}` changed; none followed directly by text. Six F-012 `+` boundaries (0053→0054, 0061→0062, 0063→0064, 0066→0067, 0068→0069, 0073→0074), each opened with `{br}` or `{p}` at a sentence end.
+- **Duplicates.** CHECK: 223 duplicate and 13 tag-variant pairs across the tree; this unit's 9 identical rows (0078, 0079, 0082, 0084, 0085, 0090, 0091, 0093, 0094) and 4 tag variants (0086, 0087, 0089, 0092) are among them. Reviewer's census (label stripped, `{p}{w}{br}` removed, final 。 dropped, ！？ → ⁉, `…。` → `…`, 眼 = 目; every unit row × every script and scene dump row): **91,104 whole-row pairs, 182,060 sentence pairs, 73 matches, 0 differ**. 0081 censused by hand (奇妙な物音 2 / 0 / 0).
+- **Widths.** Lines ended by an authored `{br}` or `{w}` ≤ 27, except 0078 (28, inherited, R §1.12). Glyph counts 48 / 48 match.
+
+Census counts are rows per store (script / scene / system), from the reviewer's grep of `dumps/` on 2026-11-01. Line citations are in `tl/script/NO4_BAR_T.p02.tsv` (line = row order + 3).
+
+### 37.1 Sentence twins keep the shipped words; the two orphans (round-0 findings 1–2)
+- **:38 0081** だが、わしは奇妙な物音で目を覚ました。{w}{br} = shipped NO4_BAR/0055 with だが、 in front.
+  - Round 0 had `But a strange noise woke me.` (28 before `{w}`), the noise as subject, offered as a §2.1 step-6 restructure to avoid `noise.` alone.
+  - Ruling: R §35.2 binds sentence twins inside longer rows to the shipped words; a rewording is allowed only where a lone "a" or "I" would end a line. Every rendering with "I" as subject strands `noise.`, so R §1.12 rule 1 keeps the literal words with the orphan flagged, as #36's 0023 `mind.`. The §2.1 ladder applies only to units over budget.
+  - Target: `But I awoke to a strange noise.{w}{br}` (24 / 6); the page from 0080's `{p}` holds 28, 24, 24, 6 = 4 rows.
+  - The round-0 review's `Yet a strange noise woke me.` measures 28, not 27 (translator's correction); immaterial.
+- **:16 0059** (whole-row twin of NO4_BAR/0040) wrapped to a last row of `spider-shaped?` alone, unflagged. A label `{br}`, as at 0055, 0058, 0061, avoids it without changing a word: `【Miller】{br}Mr. Collison, what kind of creature is this monster? Might it be spider-shaped?{p}` (8 / 26 / 25 / 26, 4 rows).
+- **Label `{br}`** (label alone on the first row) is accepted wherever the shipped words would otherwise leave a one-word last row: 0055, 0058, 0059, 0061. Precedent: the source's own NO4_TOOL_ROOM `【ミラー】{br}`.
+- **0057** adds そいつらはまだ船内にいるんだろ？ to shipped 0038; the shared part keeps 0038's words (`This information affects our safety. Tell me the truth.`).
+- Glossary: none. The PR's label row (【Collison】 · 【Oakland】 · 【Wolg】 · 【Heming】) is already on main from #36 (R §35.1).
+
+### 37.2 The two clicks at :49 0092 (PR Flag 5)
+- 0090, 0091, 0093 are exact twins of NO4_BAR/0062, 0063, 0065, and 0092's text is fixed by its tag-variant pairing with 0064. The page from 0089's `{w}{br}` is full (4 rows) at 0091, and 0092 + 0093 + the cursor row make 5. So clicks can only go in 0092.
+- The two options: one click mid-clause (`For the ship had already{p}sunk deep…`), or a leading `{p}` plus `{p}` before the ending `{br}`, giving pages 4 / 2 / 4, the third opening on a blank row.
+- Ruling: the two clicks at sentence ends. R §2.4 prefers a leading `{p}` and avoids a blank first row where an alternative exists; none does here. The round-0 PR cited R §26.2, whose 0085 is a leading `{p}` before text; round 1 corrected the citation to R §2.4.
+- First `{p}{br}` in the project (0 / 0 / 0 in the dumps). Joins F-010's in-game checks.
+- Other movable codes: `{p}` at sentence ends 0047, 0056 (5 rows otherwise; 0047 also a lone "a"); `{br}` at sentence ends 0050, 0051, 0070, 0071 (a split "Old | man", lone "a"/"A", a one-word last row); leading `{p}` 0062 (a `+` row, 5 rows otherwise), 0080, 0083 (R §2.4); 0086, 0087 carry shipped 0059/0060's `{p}`; 0094 copies shipped 0066's leading `{p}`. All approved.
+
+### 37.3 Readings, speakers, recurrences
+- Speakers from the labels and content (F-009); every row is `spk=-`. 0078–0094 are Collison's unlabelled narration (わし, じゃ), continuing from 0077.
+- Final 。 missing from 15 draft rows (PR Flag 2): the shipped `.`/`?` is kept so twins match.
+- No shipped counterpart, rendered literally: 0057's added clause, 0072 `【Wolg】Ngh…!` (§6 くっ), 0080 はずじゃろう → "must have slept soundly", 0083 `After a while, I realized the sound was coming from outside the ship.`, 0088 強いなんてものじゃない → `Strong is hardly the word.` None recurs.
+- **Untranslated recurrence:** 気持ちはわかる 3 / 0 / 0 (NO4_BAR/0037, this unit's 0056, NO4_HWR_FRONT_DOWN_T/0003 【ヘイミング】). NO4_T reuses `I understand how you feel.` (F-008).
+- Glossary: none.

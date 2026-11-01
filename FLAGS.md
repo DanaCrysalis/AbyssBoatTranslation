@@ -121,6 +121,11 @@ page fits 4 rows as the tools model it, but between `{p}` clicks the English run
 night-talk session. It also adds a leading `{p}` at NO3_NO4/0046, a `+` row after the `{br}`-ended
 0045 ("…going to search Deck 3." then "Going by what we've heard, that survivor…"; 5 rows without
 it). Check that the box clears and the second page opens on its first row (R §29.2).
+NO4_BAR_T.p02 (PR #37) has the project's first `{p}{br}` (0 in either dump), at NO4_BAR_T/0092
+`{p}For the ship had already sunk deep to the seabed.{p}{br}`. The tag-variant pairing fixes the
+text and 0090, 0091, 0093 are exact twins, so the only other click is mid-clause. The page after
+the second `{p}` deliberately opens on a blank row ("Beyond the windows lay the seabed…"; 4 rows as
+the tools model it). If `_T` units ship, check that this blank first row looks acceptable (R §37.2).
 
 
 ## Open
@@ -171,6 +176,11 @@ shipped NO4_BAR.p01 twin reuses the shipped words. The one exception is 0036's f
 to avoid a lone "a" after the label. Labels fixed for every later `_T` unit: 【男】 `【Man】`,
 【老人】 `【Old Man】`, and any §1 name in its §1 short form (`【Oakland】` `【Wolg】` `【William】`
 `【Collison】` `【Heming】`) (glossary §1; rulings R §35.1–§35.2).
+`NO4_BAR_T`/0047–0094 shipped in PR #37 (squash baa917b), round 1. CHECK paired its 9 identical
+and 4 tag-variant rows. In the reviewer's census (91,104 whole-row and 182,060 sentence pairs, 73
+matches), every twin reuses the shipped words, 0081 だが、 + NO4_BAR/0055 included (`But I awoke to a
+strange noise.`, orphan flagged; R §37.1). Untranslated recurrence for NO4_T: 気持ちはわかる
+(NO4_BAR_T/0056 = NO4_HWR_FRONT_DOWN_T/0003, Heming) → `I understand how you feel.` (R §37.3).
 
 ### F-009 · 2026-10-04 · speaker · OPEN
 `spk=N` (first argument of statement 0xA9) is not a character id: `NO4_BAR`/0014–0018 put
