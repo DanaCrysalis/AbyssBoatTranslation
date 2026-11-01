@@ -6,7 +6,7 @@ at the close commit (`CLAUDE.md` Rule 3). A fresh container may clone shallow wi
 preflight is `git fetch origin main && git checkout main && git reset --hard origin/main`.
 
 ## NEXT ACTION — always current, always a literal instruction
-> **Wave 11 coordinator:** F-030 step 1 is done: PR #43 MERGED (squash 83d5b51) and integrated. Step 2 dispatched (In flight); when its PR opens, run the reviewer. Spec, per rulings R §42.4 point 2:
+> **Wave 11 coordinator:** F-030 step 1 is done: PR #43 MERGED (squash 83d5b51) and integrated. Step 2 is PR #44 — run the reviewer on it. Spec, per rulings R §42.4 point 2:
 > 2. A translator, on branch `tl/script-NO4_T.b03-f030` from fresh `origin/main`, fills `tl/script/NO4_T.b03.tsv:10` NO4_MACHINE_T/s11 → `【Oakland】What, scared?` (22 cols, no `{p}`, one file). PR title `tl: script NO4_T.b03 — 27/27 rows, max 4 rows/page, NO4_MACHINE_T.SCR «free» free`. Expect CHECK `tag-variant pairs compared 33` (reviewer trial at #43: passes), UNITCHECK s11 22, MEASURE NO4_MACHINE_T 13/13. Reviewer, merge; F-030 closes at that integration.
 >
 > Then close wave 11 and write the final handoff (`handoff: run complete`); there is no wave 12. Alternatively, record a decision to leave s11 falling through, and close.
@@ -25,7 +25,7 @@ Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEA
 |---|---|---|---|---|
 | script NO4_T.b03 | `tl/script-NO4_T.b03` | PR #42, round 0 | **MERGED** e909403 (round 0, no findings). CHECK 239 / 32 pairs; census 51,246 + 72,646 pairs, 11 matches; MEASURE NO4_MACHINE_T 64,092 free, NO4_ROOM01_T 64,898 free. s11 is left empty: CHECK binds it to NO4_HWR_BACK_T/0010 | F-030 follow-up (R §42.4): step 1 (b01 0010) merged as #43; step 2 (b03 s11) next. The coordinator dispatches it |
 | script NO4_T.b01 (F-030 step 1) | `tl/script-NO4_T.b01-f030` | PR #43, round 0 | **MERGED** 83d5b51 (round 0, no findings): 0010 → `【Oakland】What, scared?{p}` (22 cols, 1 row). CHECK 239 / 32 pairs; census 2,087 row + 13,308 clause pairs, only match s11; MEASURE NO4_HWR_BACK_T 64,023 free (was 64,005); MERGE 0 unmatched; step-2 trial green (33 tag-variant pairs). Rulings R §43 | coordinator → dispatch step 2 (b03 s11, branch `tl/script-NO4_T.b03-f030`) |
-| script NO4_T.b03 (F-030 step 2) | `tl/script-NO4_T.b03-f030` | dispatch 1 (the #42 translator, by `SendMessage`) | translator filling s11 → `【Oakland】What, scared?` | PR → reviewer → wave close (`handoff: run complete`) |
+| script NO4_T.b03 (F-030 step 2) | `tl/script-NO4_T.b03-f030` | PR #44, round 0 | PR open: s11 → `【Oakland】What, scared?` (22), CHECK 239 / 33, NO4_MACHINE_T 64,088 free, 13/13 | reviewer → wave close (`handoff: run complete`) |
 
 ## Next up
 Wave 11 (QUEUE 2026-11-01), one script unit, tier D — the last dispatchable unit of the run: NO4_T.b03 (27 rows, 414 chars,
