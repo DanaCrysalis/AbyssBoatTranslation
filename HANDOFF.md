@@ -1,4 +1,4 @@
-**Last updated: 2026-11-01** — wave 11: PR #42 (NO4_T.b03) MERGED round 0 (squash e909403), 26/27 rows; NO4_MACHINE_T/s11 left empty because CHECK binds it to shipped NO4_HWR_BACK_T/0010 (40 cols) — two one-file follow-up PRs fill it (F-030, rulings R §42.2, §42.4). F-030 step 1, PR #43 (b01 0010 re-cut to `【Oakland】What, scared?{p}`), MERGED round 0 (squash 83d5b51); step 2, PR #44 (b03 s11 → `【Oakland】What, scared?`), MERGED round 0 (squash 1a7061a); F-030 closed. Script 38/38 units, 1,709/1,709 rows.
+**Last updated: 2026-11-01** — **run complete.** Wave 11 closed: NO4_T.b03 merged (#42 e909403, 26/27), then F-030 filled NO4_MACHINE_T/s11 by re-cutting shipped NO4_HWR_BACK_T/0010 (#43 83d5b51) and filling s11 (#44 1a7061a), all round 0. Script 38/38 units, 1,709/1,709 rows; scene 4/4, 190/190; system 0/5, blocked (F-006). No dispatchable unit remains.
 
 ## Integration branch: `main`. Not configurable.
 Every PR bases on `main`; the reviewer merges into `main`; a wave is closed only when `origin/main` is
@@ -6,7 +6,11 @@ at the close commit (`CLAUDE.md` Rule 3). A fresh container may clone shallow wi
 preflight is `git fetch origin main && git checkout main && git reset --hard origin/main`.
 
 ## NEXT ACTION — always current, always a literal instruction
-> **Coordinator: close wave 11 and write the final handoff (`handoff: run complete`).** F-030 is closed: PR #44 MERGED (squash 1a7061a, round 0, no findings) and integrated (rulings R §44.1). No dispatchable unit remains (script 38/38, scene 4/4; system blocked, F-006). There is no wave 12.
+> **Run complete — stop condition holds (CLAUDE.md §8: no dispatchable unit left).** Script and scene stores are 100% translated;
+> the system store (5 units, 188 rows) is blocked until an exe patch repoints its tables (F-006). No session opens a wave 12.
+> **The human acts next:** (1) build the patch (`python3 tools/assemble.py build`, needs `original/`) and play-test per Blocked
+> item 2 (F-001, F-002, F-003, F-010 — four `text` rows sit at exactly 28 columns, F-003); (2) decide on the exe patch for the
+> system store (F-006); then `/translate` resumes with a survey (QUEUE) if new work is unblocked.
 
 ## Progress
 | Store | Done | Total | |
@@ -18,27 +22,10 @@ preflight is `git fetch origin main && git checkout main && git reset --hard ori
 Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-31; the NO3/NO2 bundle rooms ≥ 62,822 (NO2_MAINSTORAGE); `NO4_BAR.SCR` 37,378 free; `NO4_TOOL_ROOM.SCR` 61,899, 80/80; the NO4.b01/b02 rooms ≥ 63,697; the NO5 rooms ≥ 63,950; NO6_BRIDGE 63,400, the other NO6 rooms ≥ 64,242; NO3_CHAPEL.SCR 55,247, 150/150; NO3_NO4.SCR 60,727, 61/61; SPACESHIP.SCR 64,874, SPACESHIP_HW.SCR 64,841, 8/8; NO4_BAR_T.SCR 55,244, 181/181 (MEASURE 2026-11-01, after #40); NO4_HWR_BACK_T.SCR 64,023, 16/16 (after #43), NO4_HWR_FRONT_DOWN_T.SCR 64,297, 9/9 (after #39); NO4_HWR_FRONT_UP_T.SCR 63,183, 39/39 (after #38); NO1_CONTROLROOM 64,880, NO1_ENGINEROOM 64,564, NO1_STORAGE 65,180, 8/8; NO4_MACHINE_T.SCR 64,088, 13/13 (after #44), NO4_ROOM01_T.SCR 64,898, 14/14 (MEASURE 2026-11-01, after #42)).
 
 ## In flight
-| Unit | Branch | Round | State | Next |
-|---|---|---|---|---|
-| script NO4_T.b03 | `tl/script-NO4_T.b03` | PR #42, round 0 | **MERGED** e909403 (round 0, no findings). CHECK 239 / 32 pairs; census 51,246 + 72,646 pairs, 11 matches; MEASURE NO4_MACHINE_T 64,092 free, NO4_ROOM01_T 64,898 free. s11 is left empty: CHECK binds it to NO4_HWR_BACK_T/0010 | none: F-030 done (#43, #44) |
-| script NO4_T.b01 (F-030 step 1) | `tl/script-NO4_T.b01-f030` | PR #43, round 0 | **MERGED** 83d5b51 (round 0, no findings): 0010 → `【Oakland】What, scared?{p}` (22 cols, 1 row). CHECK 239 / 32 pairs; census 2,087 row + 13,308 clause pairs, only match s11; MEASURE NO4_HWR_BACK_T 64,023 free (was 64,005); MERGE 0 unmatched; step-2 trial green (33 tag-variant pairs). Rulings R §43 | none: step 2 merged as #44 |
-| script NO4_T.b03 (F-030 step 2) | `tl/script-NO4_T.b03-f030` | PR #44, round 0 | **MERGED** 1a7061a (round 0, no findings): s11 → `【Oakland】What, scared?` (22). CHECK 239 / 33 pairs; UNITCHECK unit 27 and store 1,709 rows, 0 violations; MERGE 0 unmatched; MEASURE NO4_MACHINE_T 64,088 free, 13/13. F-030 closed. Rulings R §44 | coordinator → close wave 11 (`handoff: run complete`) |
+Nothing. Wave 11's three PRs are merged: #42 (NO4_T.b03), #43 (NO4_T.b01 0010 re-cut), #44 (NO4_T.b03 s11); rulings R §42–§44.
 
 ## Next up
-Wave 11 (QUEUE 2026-11-01), one script unit, tier D — the last dispatchable unit of the run: NO4_T.b03 (27 rows, 414 chars,
-ratio 78.60; NO4_MACHINE_T 0001–0002, s06–s08, s10–s17; NO4_ROOM01_T 0001–0008, s04–s09; 64,254 free). Wave size 1: no other
-script or scene unit remains, system is blocked (F-006). `_T` drafts (F-008): MACHINE_T/s06–s08 ↔ SCN001/01–02 (R §4.5);
-MACHINE_T/s10–s17 are one-line labelled `text` copies (final 。) of shipped NO4_HWR_BACK_T/0009–0016 (R §40.5): s10 = 0009
-`【Oakland】Don't fall behind.` (27) and s12 = 0015 `【Miller】How could this be…` (26) reuse as they are; s16 = 0011
-`【Heming】It's gotten serious…` is 28 (hard limit); s11, s13, s14, s15, s17 (= 0010, 0016, 0013, 0014, 0012) need their own cut
-within 28 (27 preferred), keeping #39's words where they fit. `s` rows are choice/`text` rows: one line, no wrap, ≤ 27 preferred.
-Rules (glossary §1, R §35–§41): §1 names in brackets; whole-row twins byte-identical; sentence twins keep shipped words — reword
-only for a lone "a"/"I", a one-word last row, or a hard defect (R §39); label `{br}` fixes an orphan (R §37.1); exact twins bind
-tags, tag variants bind words only (PROJECT.md §7). CHECK pairs no labelled row: census by hand. 注： → `Note: ` (glossary §4).
-Wave 10 lessons: two CHANGES of four, both dropped meaning a label `{br}` could have kept — a だろう hedge (b01 0002) and a
-causal からな plus a dropped subject (p04 0166, 0172). Before rewording for a wrap, try the label `{br}`. A seed that asks for
-end punctuation on a twin row is wrong if the shipped twin has none (b01 Flag 2). Keep: hedges, connectives, subjects, ≤ 27
-before authored `{br}`, wrap scan, speakers from content, unique review-wN-prK / integrate-wN-prK branches.
+None. Every script and scene unit is merged; the system store is blocked (F-006). A new wave needs the exe patch first.
 
 ## Remaining
 None. F-030 is done: #43 (0010 re-cut, 83d5b51) and #44 (s11 fill, 1a7061a). Scene: none, store complete (wave 4). No dispatchable unit remains: the run is complete bar the blocked system store (F-006), and wave 11's coordinator writes the final handoff (`handoff: run complete`) instead of opening a wave 12 session.
@@ -88,6 +75,7 @@ None. F-030 is done: #43 (0010 re-cut, 83d5b51) and #44 (s11 fill, 1a7061a). Sce
 | 8 | script NO3.b01, NO3.b02, NO2.b01, NO2.b02 | 4 — #32 4ed66e9 (round 0); #30 0a3bbec (round 0 CHANGES — dropped "looks", body "it", 操作パネル phrase — round 1 MERGE); #31 028dcdf (round 0 CHANGES — locker "looks", body "it" — round 1 MERGE); #33 b7e0ea2 (round 0 CHANGES — passive 〜されたのだろうか — round 1 MERGE) | 0 | script 29/38 (1,421 rows), scene 4/4, system blocked; decks NO3 and NO2 complete (rooms ≥ 62,822 free). Two session-limit stops, resumed. Lineage limit: no successor session |
 | 9 | script NO1.b01, SPACESHIP.b01, NO4_BAR_T.p01, p02 | 4 — #35 e967004, #36 8a1e7ab (round 0); #34 c5f8a29 (round 0 CHANGES — 知らせる "tell" vs 報告 "report" — round 1 MERGE); #37 baa917b (round 0 CHANGES — 0081 shipped words, 0059 label `{br}` — round 1 MERGE) | 0 | script 33/38 (1,531 rows), scene 4/4, system blocked; decks NO1 and SPACESHIP complete; NO4_BAR_T.SCR 55,261 (94/181). Session-limit stop, resumed |
 | 10 | script NO4_BAR_T.p03, p04, NO4_T.b01, b02 | 4 — #41 a64d635, #38 a21408b (round 0); #40 2edb846 (round 0 CHANGES — 0166 からな, 0172 subject — round 1 MERGE); #39 b76838f (round 0 CHANGES — 0002 だろう hedge — round 1 MERGE) | 0 | script 37/38 (1,682 rows), scene 4/4, system blocked; NO4_BAR_T.SCR 55,244 (181/181), NO4_HWR_BACK_T 64,005, NO4_HWR_FRONT_DOWN_T 64,297, NO4_HWR_FRONT_UP_T 63,183. Session-limit stop, resumed |
+| 11 | script NO4_T.b03 (+ F-030 follow-up: NO4_T.b01 0010 re-cut) | 3 PRs — #42 e909403 (26/27, s11 bound to shipped 0010 by CHECK, R §42); #43 83d5b51 (0010 → `【Oakland】What, scared?{p}`); #44 1a7061a (s11 filled; F-030 closed) — all round 0 | 0 | **run complete:** script 38/38 (1,709 rows), scene 4/4 (190), system blocked (F-006); NO4_MACHINE_T 64,088 free (13/13), NO4_ROOM01_T 64,898 (14/14), NO4_HWR_BACK_T 64,023 |
 
 ## How to resume
 1. Preflight per `CLAUDE.md` §4 step 0. CHECK must pass. A fill marker left in `PROJECT.md` means
