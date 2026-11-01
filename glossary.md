@@ -311,6 +311,10 @@ NOT decisions. The first translator to render one promotes it in the PR's Glossa
 so; the reviewer moves the row up into its section in the integration commit. -->
 | Source | Variants | Proposed | Alternatives | Where seen | Wave |
 |---|---|---|---|---|---|
+| 扇風機 | — | fan | electric fan | NO4_ROOM01_T/0002, 0003 (test script) | 11 |
+| 選択肢 | 選択 | option (選択のテスト → "a choice test") | choice | NO4_ROOM01_T/0001, s05, s06, s09 (test script) | 11 |
+| テスト | — | test | — | NO4_ROOM01_T/0001, s05, s08, s09 (test script) | 11 |
+| 銃のハンマーを起こす · 素人 | — | as shipped in NO4_HWR_BACK_T/0014: "amateurs" · "cock the hammer" (also 素人 → amateur(s), NO4_BAR/0192, NO4_BAR_T/0129) — not new; keep those words in the one-line cut | — | NO4_MACHINE_T/s15 | 11 |
 
 ## 10. Open questions
 <!-- one line each, with the FLAGS id. A closed question is deleted here; its answer stays in rulings.md. -->
