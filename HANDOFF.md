@@ -23,7 +23,7 @@ Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEA
 |---|---|---|---|---|
 | script NO4_BAR_T.p03 | `tl/script-NO4_BAR_T.p03` | translator 1, dispatched 2026-11-01 | — | translator |
 | script NO4_BAR_T.p04 | `tl/script-NO4_BAR_T.p04` | translator 1, dispatched 2026-11-01 | — | translator |
-| script NO4_T.b01 | `tl/script-NO4_T.b01` | translator 1, dispatched 2026-11-01 | — | translator |
+| script NO4_T.b01 | `tl/script-NO4_T.b01` | translator 1, PR opened (64,005 / 64,307 free, 25/25) | #39 | reviewer, behind the barrier |
 | script NO4_T.b02 | `tl/script-NO4_T.b02` | translator 1, PR opened (63,183 free, 39/39) | #38 | reviewer, behind the barrier |
 
 ## Next up
