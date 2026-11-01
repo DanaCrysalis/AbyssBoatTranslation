@@ -3232,3 +3232,42 @@ Census counts are rows per store (script / scene / system), from the reviewer's 
 - No shipped counterpart, rendered literally: 0057's added clause, 0072 `【Wolg】Ngh…!` (§6 くっ), 0080 はずじゃろう → "must have slept soundly", 0083 `After a while, I realized the sound was coming from outside the ship.`, 0088 強いなんてものじゃない → `Strong is hardly the word.` None recurs.
 - **Untranslated recurrence:** 気持ちはわかる 3 / 0 / 0 (NO4_BAR/0037, this unit's 0056, NO4_HWR_FRONT_DOWN_T/0003 【ヘイミング】). NO4_T reuses `I understand how you feel.` (F-008).
 - Glossary: none.
+
+## Unit script NO4_BAR_T.p03 (PR #41, MERGED, 2026-11-01)
+
+Collison's unlabelled narration of the siege (NO4_BAR_T/0095–0145, 51 rows, 1,270 source characters, tier D, ratio 22.76), the `_T` draft of shipped NO4_BAR.p02 0067–0105. Reviewed in one round: MERGE, squash a64d635 (head bd5f5c5).
+
+Figures:
+- **Containers.** MEASURE after MERGE: NO4_BAR_T.SCR 10,496 / 65,535 (55,039 free; 55,261 before), tokens 368 / 1,499, 145/181 rows; NO4_BAR.SCR unchanged at 37,378. `containers negative: 0; under the reserve (2000 bytes): 0`. MERGE: keys that never matched 0.
+- **Pages.** UNITCHECK: 51 rows, 0 violations, max 4 rows/page; store 1,582 rows, 0 violations. Authored code diff: 21 rows, **25** `{p}` added (PR Flag 2 says 26; its own list sums to 25), no `{br}` or `{w}` changed. No F-012 boundary (every source row ends in a tag); no `{w}` followed by text; no word-initial apostrophe.
+- **Duplicates.** CHECK: 236 duplicate and 25 tag-variant pairs (223 / 13 without the unit). Reviewer's census (label stripped, `{p}{w}{br}` removed, ！？ → ⁉, `…。` → `…`, 眼 = 目, final 。 dropped; every unit row × every script and scene dump row): **96,798 whole-row, 153,527 sentence and 237,617 clause pairs; 25 whole-row twins, 25 words-same / 0 differ** (13 exact — 0095, 0097, 0098, 0102, 0113, 0132–0135, 0137, 0139, 0141, 0142 — and 12 tag variants; the PR review comment transposed the two counts), sentence or clause twins 0129 ↔ NO4_BAR/0087, 0130 ↔ 0089, 0143 ↔ 0102. A substring pass with あいつ = ヤツ and わしたち = わしら adds 0101 ↔ 0073, 0103 ↔ 0075, 0114 ↔ 0081, 0124 ↔ 0082. No unit sentence recurs in an untranslated row, p04's T/0146–0181 included.
+- **Widths.** 43 segments end at an authored `{br}` or `{w}`; all ≤ 27 except :9 0100 (28, below). Wrap scan of 119 lines in `build/script_merged.tsv`: no lone a/A/I/an, no title split, no one-word last row. Glyph rows 3 / 3 (0114, 0130, 0144).
+
+Census counts are rows per store (script / scene / system), from the reviewer's grep of `dumps/` on 2026-11-01. Line citations are in `tl/script/NO4_BAR_T.p03.tsv` (line = row order + 3).
+
+### 38.1 Terms
+- **楽観主義者** 1 / 0 / 0 → `an optimist` (11), promoted from §9 as seeded: :16 0107 `Next came an optimist who said to wait for rescue.` (25 / 24).
+- **犯人** 3 / 0 / 0 → `the culprit` (11), new row: shipped NO4_BAR/0246 `The culprit is human.`, :27 0118, :32 0123. Binds the remaining row.
+- **神 — scope note added to the §6 row, no shipped line changes.** :53 0144 神は──主は → `God——the Lord` (13). The row (R §13.1) gave lowercase "god" and listed 0144 "in context". The four SCN046B2 rows are the killer's "god" and Wolg's scorn of it, a common noun ("a god", "that god of yours"); 0144 is Collison's own God, restated at once as 主 "the Lord" (主 alone 1 / 0 / 0; 雇い主 is another word), so English capitalises the proper noun. `──` → `——` keeps the self-correction. Affected shipped lines: none; SCN046B2/02–05 stay lowercase. The row now states both scopes so a later gate does not read 0144 as nonconforming.
+- Not given rows: 立てこもる (:39 0130 `holed up`, as shipped NO4_BAR/0088) is proposed by PR #39 as "hole up" for NO4_HWR_FRONT_DOWN_T/0005 and is left for that PR; そいつ (:26 0117) is a demonstrative, in context.
+- Glossary: §6 rows 犯人 and 楽観主義者 added (the §9 seed removed); §6 神 row scope extended.
+
+### 38.2 Clicks: exact twins bind tags, tag variants bind words (PR Flags 2–3, 9)
+- **The `{p}{br}` pages at :21 0112 and :49 0140 are accepted** (the R §37.2 pattern; second and third in the project).
+  - 0112 is a tag variant of NO4_BAR/0079, so its words are fixed (3 rows). :22 0113 is an exact twin of NO4_BAR/0080: the reviewer planted a leading `{p}` there and CHECK failed, `same source, different targets: script NO4_BAR/0080, script NO4_BAR_T/0113`. A `{p}` on :23 0114 still leaves 3 + 1 + the cursor row = 5. The only other click is inside 0112 (`…plenty of food,{p}so we had no trouble getting | by.`, a one-word last row).
+  - 0140 is a tag variant of NO4_BAR/0099 (4 rows); 0139 and 0141 are exact twins. Any other click is mid-clause.
+- **Mid-sentence clicks, both at coordinate-clause boundaries, accepted** (PROJECT.md §5.3):
+  - :17 0108 `…search the whole world{p}and find no tale…`. Tested in scratch: `…sound opinion,{p}but you could search…` leaves a 6-row page (VIOLATION); the sentence needs two clicks' worth of pages, and the PR's split is the only fit.
+  - :53 0144 `…the food storeroom, and{p}God——the Lord…`. Tested in scratch: a leading `{p}` on 0145 instead leaves the page from 0143's `{w}` at 5 rows (VIOLATION), because the tools count `{w}{br}` as a blank first row. A click after the comma leaves `storeroom,` alone on the page.
+- **Leading `{p}` (R §2.4)** at 0096, 0099, 0103, 0106, 0108, 0109, 0112, 0117, 0121, 0122, 0126, 0129, 0140; **at a sentence end** in 0125, 0128, 0129, 0130, 0143; 0132, 0135, 0137 carry shipped NO4_BAR/0091, 0094, 0096's `{p}` byte for byte (R §2.5). All approved.
+- **Ruling (PR Flag 9, adopted):** CHECK binds an exact twin byte for byte, tags included, but a tag variant by its words only. A click a page needs therefore cannot go into an exact twin; it goes into a neighbouring tag-variant or unpaired row. Whether such a click sits at a sentence or clause boundary is not checked by CHECK. Added to PROJECT.md §7 in this commit.
+
+### 38.3 Departures, readings, speakers (PR Flags 4–8)
+- **:12 0103** 時計を見ることで知れた → `We knew it from looking at the clocks.` Shipped NO4_BAR/0075 has ただ ("only"), this source does not, so it is not a sentence twin and R §37.1 does not bind its words. Dropping "only" alone gives `We knew it by looking at the | clocks.` (28 / 7); "from" is as literal (R §1.12 rule 1). Accepted.
+- **:10 0101** `Morning came.` drops shipped 0073's "In time," because this source has no やがて. Accepted.
+- **:9 0100** 28 columns before `{w}` (`what that strange noise was.`): the words are fixed by the tag-variant pairing with NO4_BAR/0072, where the same line ends at `{p}`. Inherited and flagged; R §1.12 rule 3.
+- Sentence twins keep the shipped words: 0114, 0124, 0129 (first and last clauses), 0130, 0143, 0144 (`The men made for the food storeroom`), 0145.
+- Readings accepted: 0105 気圧と水圧 `the air and water pressures` (the 水圧 row's "in context"); 0108 閉じこめられた `trapped` (閉じこめ in context, R §29.1); 0111 腹も減る `And one gets hungry, too.` (present generic; "And" is a connective the source lacks — acceptable); 0116 `unseen by all`; 0117 そいつ `This one` ("That one" or "Whoever it is" would be closer; 0118 resolves the referent); 0117–0118 present tense for the group's reasoning (おる, じゃろう), closed by 0119; 0118 `some human` keeps じゃろう with "probably" and avoids a lone "a"; 0130 三日じゃ…、 `Three days…`.
+- **Speakers:** all 51 rows are Collison (わし, じゃ, 我々), continuing NO4_BAR_T.p02 0078–0094 (R §37.3); `spk=-` ignored (F-009). Register per glossary §7 ("I daresay", "this foe", "Even had they hit").
+- **Recurrence (PR Flag 8):** しかしだ 3 / 0 / 0: NO4_BAR/0098 = :48 0139 しかしだ。{br} `And yet.` (exact twins), and NO4_BAR/0449 しかしだなっ。, another source (`But see here.`), so there is no divergence to settle.
+- Glossary: none beyond §38.1.
