@@ -6,8 +6,8 @@ at the close commit (`CLAUDE.md` Rule 3). A fresh container may clone shallow wi
 preflight is `git fetch origin main && git checkout main && git reset --hard origin/main`.
 
 ## NEXT ACTION — always current, always a literal instruction
-> **Wave 10 coordinator:** wait for all four translators (In flight) to open PRs — the wave barrier; `ListAgents` before
-> declaring any lost; re-dispatch a returned unit with no PR. Then review in unit order p03, p04, b01, b02, one reviewer at a time.
+> **Wave 10 coordinator:** barrier met (PRs #41 p03, #40 p04, #39 b01, #38 b02). Review one at a time in that order; reviewer of
+> #41 running. After each: `git pull --ff-only`, update In flight, next PR.
 
 ## Progress
 | Store | Done | Total | |
@@ -21,7 +21,7 @@ Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEA
 ## In flight
 | Unit | Branch | Round | PR | Who acts next |
 |---|---|---|---|---|
-| script NO4_BAR_T.p03 | `tl/script-NO4_BAR_T.p03` | translator 1, dispatched 2026-11-01 | — | translator |
+| script NO4_BAR_T.p03 | `tl/script-NO4_BAR_T.p03` | translator 1, PR opened (55,039 free, 51/51); reviewer round 0 | #41 | reviewer |
 | script NO4_BAR_T.p04 | `tl/script-NO4_BAR_T.p04` | translator 1, PR opened (54,884 free, 36/36; Flag 3 0147 reworded for F-012 vs exact twin) | #40 | reviewer, behind the barrier |
 | script NO4_T.b01 | `tl/script-NO4_T.b01` | translator 1, PR opened (64,005 / 64,307 free, 25/25) | #39 | reviewer, behind the barrier |
 | script NO4_T.b02 | `tl/script-NO4_T.b02` | translator 1, PR opened (63,183 free, 39/39) | #38 | reviewer, behind the barrier |
