@@ -6,8 +6,8 @@ at the close commit (`CLAUDE.md` Rule 3). A fresh container may clone shallow wi
 preflight is `git fetch origin main && git checkout main && git reset --hard origin/main`.
 
 ## NEXT ACTION — always current, always a literal instruction
-> **Wave 10 coordinator:** #41 merged. #40 round 0 CHANGES → findings sent to its translator; wait for its round-1 push, then
-> review #40 again; then #39, #38 one at a time.
+> **Wave 10 coordinator:** #41 merged. Reviewer for #40 round 1 (head b01c94d) now; then #39 round 1 once its translator pushes;
+> then #38. One reviewer at a time.
 
 ## Progress
 | Store | Done | Total | |
@@ -22,8 +22,8 @@ Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEA
 | Unit | Branch | Round | PR | Who acts next |
 |---|---|---|---|---|
 | script NO4_BAR_T.p03 | `tl/script-NO4_BAR_T.p03` | **MERGED** round 0, squash a64d635 (NO4_BAR_T.SCR 55,039 free, 51/51, max 4 rows/page; CHECK 236 + 25 pairs); integrated (glossary 犯人, 楽観主義者, 神 scope; R §38; PROJECT.md §7 twin-binding blind spot) | #41 | coordinator: next review #40 |
-| script NO4_BAR_T.p04 | `tl/script-NO4_BAR_T.p04` | round 0 CHANGES (0166 からな dropped, 0172 subject dropped; 0147 rewording accepted → R §39 at integration); round 1 sent to same translator | #40 | translator, then reviewer |
-| script NO4_T.b01 | `tl/script-NO4_T.b01` | translator 1, PR opened (64,005 / 64,307 free, 25/25) | #39 | reviewer, behind the barrier |
+| script NO4_BAR_T.p04 | `tl/script-NO4_BAR_T.p04` | round 0 CHANGES (0166 からな, 0172 subject; 0147 rewording accepted → R §39 at integration); round 1 pushed b01c94d | #40 | reviewer, round 1 |
+| script NO4_T.b01 | `tl/script-NO4_T.b01` | round 0 CHANGES (FRONT_DOWN_T/0002 だろう hedge dropped; Flag 2 no-period twins upheld); round 1 sent to same translator | #39 | translator, then reviewer |
 | script NO4_T.b02 | `tl/script-NO4_T.b02` | translator 1, PR opened (63,183 free, 39/39) | #38 | reviewer, behind the barrier |
 
 ## Next up
