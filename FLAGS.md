@@ -265,6 +265,9 @@ SPACESHIP.b01 (PR #35): Judy on spk=100, spk=0 (SPACESHIP/0001 なの) and spk=-
 あなたが持っていて); SPACESHIP_HW/0001 (spk=-) Judy or John's thought; SPACESHIP/0003, SPACESHIP_HW/0003–0004
 Judy or narration. All speaker-neutral. SPACESHIP_HW/0004's unstated subject of 破壊した is rendered
 "we" (rulings R §34.3, R §34.4).
+NO1.b01 (PR #34): narration on spk=- (NO1_CONTROLROOM/0001–0004, NO1_STORAGE/0001); Judy on spk=0
+(NO1_ENGINEROOM/0002) and spk=100 (0003, addresses John; ましょう); NO1_ENGINEROOM/0001 ここは…。 (spk=-)
+John or Judy, unmarked. All speaker-neutral (rulings R §36.2).
 
 ### F-011 · 2026-10-04 · tools · OPEN
 PR #1 (NO4_BAR.p01) found four things CHECK and UNITCHECK do not verify. Each was confirmed by a
@@ -440,6 +443,15 @@ has そうも where the sense, and the shipped room's NO4_BAR/0023, is どうも
 row is NO4_ENTRANCE/0004 降りられそうもない, which is legitimate, so そうも彼は is 1 / 0 / 0. Shipped with
 0023's words, "It seems he's in a foul mood." (`tl/script/NO4_BAR_T.p01.tsv:44`). PR #36 Flag 9.
 Harmless; nothing to change · rulings R §35.4.
+
+### F-029 · 2026-11-01 · docs · OPEN
+`translation_prompt.md` §1's input-format example (line 82) shows NO1_CONTROLROOM/0003 with a target
+("Looks like the engine's control system.{br}For some reason, it's running normally.{p}") that differs from
+the shipped row, `It seems to be the engine's control system.{br}For some reason, it seems to be running
+normally.{p}` (`tl/script/NO1.b01.tsv:6`). The shipped row keeps both ようだ as "seems" (R §31.2, §36.2), and
+"it's running" drops the second hedge. Only the illustration is stale, and no row is affected. The reviewer
+may not edit translation_prompt.md, so the fix is a one-line update of the example to the shipped target ·
+rulings R §36.2. PR #34 review.
 
 ## CHECK positive controls
 <!-- One entry per kind of violation deliberately planted and caught by CHECK (tools/README.md rule 3).

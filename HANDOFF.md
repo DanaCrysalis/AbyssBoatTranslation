@@ -1,4 +1,4 @@
-**Last updated: 2026-11-01** — wave 9 in review: PR #36 NO4_BAR_T.p01 MERGED (squash 8a1e7ab, round 0, no findings; integration commit on main); PR #35 SPACESHIP.b01 MERGED (squash e967004; deck SPACESHIP complete). Wave 8 closed: NO3.b01, NO3.b02, NO2.b01, NO2.b02 merged (PRs #32, #30, #31, #33); decks NO3 and NO2 complete.
+**Last updated: 2026-11-01** — wave 9 in review: PR #34 NO1.b01 MERGED (squash c5f8a29, round 1; deck NO1 complete; integration commit on main); PR #36 NO4_BAR_T.p01 MERGED (squash 8a1e7ab); PR #35 SPACESHIP.b01 MERGED (squash e967004; deck SPACESHIP complete). #37 NO4_BAR_T.p02 in round-1 rework. Wave 8 closed: NO3.b01, NO3.b02, NO2.b01, NO2.b02 merged (PRs #32, #30, #31, #33); decks NO3 and NO2 complete.
 
 ## Integration branch: `main`. Not configurable.
 Every PR bases on `main`; the reviewer merges into `main`; a wave is closed only when `origin/main` is
@@ -7,21 +7,21 @@ preflight is `git fetch origin main && git checkout main && git reset --hard ori
 
 ## NEXT ACTION — always current, always a literal instruction
 > **Wave 9 coordinator:** barrier met 2026-10-31 23:25 UTC (PRs #34–#37 open). Reviewer, one at a time in unit order:
-> #34 NO1.b01 (round 1 pushed 3e73bb9) → ~~#35~~ MERGED → ~~#36~~ MERGED 8a1e7ab + integrated → #37 round 0 CHANGES (in rework) → **#34 round 1 reviewing** → #37 round 1. Watchdog armed (12 min). A resumer: `ListAgents` first.
+> ~~#34~~ MERGED c5f8a29 (round 1) + integrated → ~~#35~~ MERGED → ~~#36~~ MERGED 8a1e7ab + integrated → **#37 NO4_BAR_T.p02 round 1 next** (in rework; review when the translator pushes), then wave close. Watchdog armed (12 min). A resumer: `ListAgents` first.
 
 ## Progress
 | Store | Done | Total | |
 |---|---|---|---|
-| script | 31 units · 1,475 rows | 38 units · 1,709 rows | NO4_BAR p01–p08, NO4_HWR_FRONT p01–p03, NO4_MACHINER90 p01–p02, NO4_TOOL_ROOM p01–p02 (rooms complete), NO4.b01, NO4.b02 (deck NO4 complete bar the `_T` scripts); NO5.b01 (deck NO5 complete); NO6.b01, NO6.b02 (deck NO6 complete); NO3_CHAPEL.p01–p03 (room complete, 150/150); NO3_NO4.p01–p02 (room complete, 61/61); NO3.b01, NO3.b02, NO2.b01, NO2.b02 (decks NO3, NO2 complete); SPACESHIP.b01 (deck SPACESHIP complete); NO4_BAR_T.p01 (46/181 of NO4_BAR_T); STATUS 2026-11-01 |
+| script | 32 units · 1,483 rows | 38 units · 1,709 rows | NO4_BAR p01–p08, NO4_HWR_FRONT p01–p03, NO4_MACHINER90 p01–p02, NO4_TOOL_ROOM p01–p02 (rooms complete), NO4.b01, NO4.b02 (deck NO4 complete bar the `_T` scripts); NO5.b01 (deck NO5 complete); NO6.b01, NO6.b02 (deck NO6 complete); NO3_CHAPEL.p01–p03 (room complete, 150/150); NO3_NO4.p01–p02 (room complete, 61/61); NO3.b01, NO3.b02, NO2.b01, NO2.b02 (decks NO3, NO2 complete); SPACESHIP.b01 (deck SPACESHIP complete); NO1.b01 (deck NO1 complete); NO4_BAR_T.p01 (46/181 of NO4_BAR_T); STATUS 2026-11-01 |
 | scene | 4 units · 190 rows | 4 units · 190 rows | OP-SCN034, SCN038, SCN041-SCN046, SCN047-EPILOG (store complete) |
 | system | 0 | 5 units · 188 rows | blocked whole (F-006) |
 
-Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-31; the NO3/NO2 bundle rooms ≥ 62,822 (NO2_MAINSTORAGE); `NO4_BAR.SCR` 37,378 free; `NO4_TOOL_ROOM.SCR` 61,899, 80/80; the NO4.b01/b02 rooms ≥ 63,697; the NO5 rooms ≥ 63,950; NO6_BRIDGE 63,400, the other NO6 rooms ≥ 64,242; NO3_CHAPEL.SCR 55,247, 150/150; NO3_NO4.SCR 60,727, 61/61; SPACESHIP.SCR 64,874, SPACESHIP_HW.SCR 64,841, 8/8; NO4_BAR_T.SCR 56,220, 46/181).
+Containers under the `PROJECT.md` §7 warning threshold (2,000 bytes): none (MEASURE 2026-10-31; the NO3/NO2 bundle rooms ≥ 62,822 (NO2_MAINSTORAGE); `NO4_BAR.SCR` 37,378 free; `NO4_TOOL_ROOM.SCR` 61,899, 80/80; the NO4.b01/b02 rooms ≥ 63,697; the NO5 rooms ≥ 63,950; NO6_BRIDGE 63,400, the other NO6 rooms ≥ 64,242; NO3_CHAPEL.SCR 55,247, 150/150; NO3_NO4.SCR 60,727, 61/61; SPACESHIP.SCR 64,874, SPACESHIP_HW.SCR 64,841, 8/8; NO4_BAR_T.SCR 56,220, 46/181; NO1_CONTROLROOM 64,880, NO1_ENGINEROOM 64,564, NO1_STORAGE 65,180, 8/8).
 
 ## In flight
 | Unit | Branch | Translator | PR | Round | Next |
 |---|---|---|---|---|---|
-| script NO1.b01 | `tl/script-NO1.b01` | returned round 1 | #34 | 1 | round 0 CHANGES (:9 0002 知らせる → "tell them"); round 1 pushed 3e73bb9, only :9 changed, NO1_ENGINEROOM.SCR 64,564 free; re-review after #37 |
+| script NO1.b01 | `tl/script-NO1.b01` | done | #34 | 1 | **MERGED** 2026-11-01, squash c5f8a29 (round 0 CHANGES: :9 0002 知らせる → "tell them"; round 1 MERGE, no findings); NO1_ENGINEROOM.SCR 64,564 free (min), deck NO1 complete; reviewer census 16,688 pairs, 0 matches; Flag 2 shelves recast accepted; §9 rows promoted (報告に戻る / 戻って知らせる split, ほかには何も入っていない, 奪われた後) + 首が見当たらない, 棚には… rows (R §36.1); §9 now empty; F-029 (stale translation_prompt.md §1 example). Integration commit on main (`integrate: NO1.b01`). Nothing left; branch kept (403 on delete) |
 | script SPACESHIP.b01 | `tl/script-SPACESHIP.b01` | done | #35 | 0 | **MERGED** 2026-10-31, squash e967004, no findings; SPACESHIP.SCR 64,874 / SPACESHIP_HW.SCR 64,841 free; Flag 3 "we" and Flag 2 moved `{br}` accepted (R §34.2–§34.3); §9 制御装置, 武器, チャージ, 落下 promoted to §3; integration commit on main (`integrate: SPACESHIP.b01`). Nothing left; branch kept (403 on delete) |
 | script NO4_BAR_T.p01 | `tl/script-NO4_BAR_T.p01` | done | #36 | 0 | **MERGED** 2026-10-31, squash 8a1e7ab, no findings; NO4_BAR_T.SCR 56,220 free, 46/181; CHECK pairs 0 of its rows (F-013), reviewer census 87,308 whole-row + 200,252 sentence pairs, 77 matches, all consistent; Flag 5 0036 `Really, of all the things to say.` accepted (lone "a" with the label), 母船 `mother ship`, labels 【Man】 · 【Old Man】 · §1 names (R §35.1–§35.2); 【男】 promoted from §9; F-028 typo そうも. Integration commit on main (`integrate: NO4_BAR_T.p01`). Nothing left; branch kept (delete refused) |
 | script NO4_BAR_T.p02 | `tl/script-NO4_BAR_T.p02` | rework | #37 | 1 | round 0 CHANGES (2 findings: :38 0081 reuse shipped "But I awoke to a strange noise.", flag orphan; :16 0059 label `{br}`); 0092 two clicks accepted (add to F-010 at integration); same translator fixing, then re-review |

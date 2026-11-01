@@ -3147,3 +3147,52 @@ Census counts are rows per store (script / scene / system), from the reviewer's 
 - Census: そうも 2 / 0 / 0. The other row is NO4_ENTRANCE/0004 降りられそうもない, which is legitimate. That leaves そうも彼は 1 / 0 / 0 and どうも彼は 1 / 0 / 0.
 - Rendered with 0023's words byte for byte: `It seems he's in a foul mood.`
 - FLAGS F-028. Glossary: none.
+
+## Unit script NO1.b01 (PR #34, MERGED, 2026-11-01)
+
+Three small deck-1 rooms (NO1_CONTROLROOM, NO1_ENGINEROOM, NO1_STORAGE; 8 rows, 151 source characters, tier D, ratio 215.03): John and Judy find the engine control room, a headless body, the engine room and a looted storeroom.
+
+Reviewed twice:
+- **Round 0** (3207a4e, merged with main b01c531): CHANGES, one finding. `:9` NO1_ENGINEROOM/0002 戻って知らせましょう had taken 報告's "report" (§36.1).
+- **Round 1** (3e73bb9, merged with main 3c9a181, no conflict): MERGE, squash c5f8a29. Only `:9` changed. Findings: none.
+
+Figures (round 1):
+- **Containers.** MEASURE after MERGE: NO1_CONTROLROOM.SCR 655 / 65,535 (64,880 free), NO1_ENGINEROOM 971 (64,564), NO1_STORAGE 355 (65,180). All three rooms are complete, so deck NO1 is complete. `containers negative: 0; under the reserve (2000 bytes): 0`.
+- **Pages.** At most 4 rows per page (UNITCHECK: 8 rows, 0 violations; the 4 rows are at `:6` 0003). Whole store: 1,483 rows, 0 violations. MERGE: keys that never matched 0.
+- **Duplicates.** CHECK compared 214 duplicate pairs and 9 tag-variant pairs, the same as without the unit. The reviewer's census compared every unit row with every dump row (exact, `{p}{w}{br}`-stripped, 【】-stripped, ！？ → ⁉, final 。 dropped): 16,688 pairs, 0 matches. The sanity twins NO5_LOCKERROOM/0001 = NO5_SHOP/0001 and NO2_TOFE_ROOM/0005 = NO3_MEDICALROOM/0001 are found.
+- **Codes.** The authored `{p}{w}{br}` sequence equals the source's on 8 of 8 rows. There is no `{w}` and no `+` row. `…` counts match on 3 of 3 rows.
+- **Widths.** Two lines end at an authored `{br}`: `:6` "control system." (15) and `:7` "The head can't be found." (24). No line ends in a lone "a" or "I", and no last row is a single word.
+
+Census counts are rows per store (script / scene / system), from the reviewer's grep of `dumps/` on 2026-10-31. Line citations use PROJECT.md §7's numbering in `tl/script/NO1.b01.tsv` (line = row order + 3).
+
+### 36.1 Terms promoted from §9, the 知らせる split, and rows added
+- **戻って知らせる is "tell", kept apart from 報告に戻る "report"** (PR Flag 7, round-0 finding 1).
+  - Source: 戻って知らせましょう, 1 / 0 / 0 (NO1_ENGINEROOM/0002). 知らせ is 5 / 0 / 0 in all. 報告に戻 is 3 / 0 / 0 (NO1_ENGINEROOM/0003, NO4_HWL_KAIDAN/0004, NO4_BAR/0234).
+  - Evidence: every shipped 知らせる is "tell / let … know / alert" (NO3_NO4/0010 "let us know", NO4_BAR/0157 "let them know", NO4_BAR/0375 "alert everyone", NO5_ENTRANCEM/0002 "We have to tell everyone…"). Every shipped 報告 is "report" (NO4_HWL_KAIDAN/0004, NO4_HWR_FRONT/0049, NO4_BAR/0234).
+  - Reasoning: the literal rendering is good English, so it stands (translation_prompt.md §2). Two source verbs stay two English verbs (R §31.1, §35.3). The wave-9 §9 seed grouped them under "head back and report". It is split here.
+  - Target: `:9` `The engine room… Let's head back and tell them.` (27 / 19). "head back" is 戻る, as `:10` and shipped NO4_HWR_FRONT/0049. "them" is the elided object, the rest of the party. `:10` 0003 keeps `…let's head back and report…`.
+  - Glossary: two §6 rows (報告に戻る; 戻って知らせる), replacing the §9 row.
+- **Promoted as seeded** (§9 → §6), byte for byte:
+  - `:4` ほかには何も入っていない{p} → `There's nothing else inside.{p}` (28, one row). The source has no 。, and the "." is added as a reading. 1 / 0 / 0.
+  - `:11` 使えそうな物はすでに奪われた後のようだ。{p} → `It seems anything that looked usable has already been taken.{p}` (22 / 25 / 11). そう is "looked" (R §31.1), ようだ is "seems", and the passive is kept. 奪われ is "taken"; 強奪 stays "looted" (NO3_MEDICALROOM/0003). 1 / 0 / 0.
+  - 制御装置 was already promoted to §3 by #35 (R §34.1). `:6` `It seems to be the engine's control system.{br}` agrees; its "(#34)" note now says shipped.
+- **Added — 首が見当たらない → `The head can't be found.`** (24), at `:7` before the authored `{br}`. 1 / 0 / 0; 首 is 7 / 0 / 0.
+  - "The head" follows shipped NO3_MEDICALROOM/0007 and NO6_BRIDGE/0019.
+  - The 見当たらない "in sight" phrasing of the 使えそう family, "The head is nowhere in sight." (29), wraps `sight.` alone before the `{br}`.
+  - 首を飛ばされ "torn off", 首が切り離され "cut off" and 首が切断され "severed" stay separate words (R §30.2, §31.2).
+- **Added — 棚には使えそうなものはなさそうだ。{p} → `The shelves seem to hold nothing that looks usable.{p}`** (24 / 26), at `:5` (PR Flag 2). This is a step-6 recast on the frame of shipped NO2_MAINSTORAGE/0030 (R §31.1).
+  - Both straight placements strand a word: `There seems to be nothing on | the shelves that looks | usable.` (28 / 22 / 7) and `…nothing | that looks usable on the | shelves.` (25 / 24 / 8).
+  - なさそう is "seem" and 使えそう is "looks", so both hedges are kept. なさそう 6 / 0 / 0; 1 / 0 / 0 for this sentence.
+- Glossary: §6 rows added (報告に戻る, 戻って知らせる, ほかには何も入っていない, 奪われた後, 棚には…なさそう, 首が見当たらない). The §2 機関室 and §3 制御装置 notes now say shipped. The last three wave-9 §9 rows are removed, so §9 is empty.
+
+### 36.2 Readings and speakers
+- **Carried rulings applied:** `:7` どうやら化け物に襲われたようだ → `It seems it was attacked by a monster.` is byte-identical to shipped NO3_STORAGE/0004 (R §31.2): the body is "it", and どうやら…ようだ is one "seems". 化け物に襲われたよう is 2 / 0 / 0.
+- `:6` なぜか正常に稼動しているようだ → `For some reason, it seems to be running normally.` "running normally" is as shipped NO4_MACHINE/0003; 正常に is 3 / 0 / 0. Both ようだ are kept ("It seems to be … / it seems to be …").
+- `:8` ここは…。 → `This place…`.
+- `:10` 今はここを調査するより → `rather than investigating here now`, literal.
+- **Speakers** (PR Flag 6, F-009):
+  - CONTROLROOM 0001–0004 and STORAGE/0001 are spk=- narration (plain だ/ようだ).
+  - ENGINEROOM/0001 is unmarked: John or Judy.
+  - ENGINEROOM/0002 (spk=0) and 0003 (spk=100; ましょう, addresses John) are Judy.
+  - Every line is speaker-neutral in English.
+- Glossary: none beyond §36.1.
