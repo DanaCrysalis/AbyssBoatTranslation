@@ -165,6 +165,12 @@ T/0022, 0024, 0028 `【女】………{p}` take `【Woman】………{p}` (rulin
 `NO4_HWR_FRONT_DOWN_T`/0001 【オークランド】なんだ？{p} copies NO4_MACHINER90/0063 (PR #15): reuse
 `【Oakland】What is it?{p}` by hand; NO4_BAR_T/0010, 0068, 0151 (labelled `………`) take `………` after
 the label (rulings R §15.4).
+`NO4_BAR_T`/0001–0046 shipped in PR #36 (squash 8a1e7ab), the first `_T` unit. CHECK paired 0 of its
+46 rows. In the reviewer's hand census (87,308 whole-row and 200,252 sentence pairs, 77 matches), every
+shipped NO4_BAR.p01 twin reuses the shipped words. The one exception is 0036's first sentence, reworded
+to avoid a lone "a" after the label. Labels fixed for every later `_T` unit: 【男】 `【Man】`,
+【老人】 `【Old Man】`, and any §1 name in its §1 short form (`【Oakland】` `【Wolg】` `【William】`
+`【Collison】` `【Heming】`) (glossary §1; rulings R §35.1–§35.2).
 
 ### F-009 · 2026-10-04 · speaker · OPEN
 `spk=N` (first argument of statement 0xA9) is not a character id: `NO4_BAR`/0014–0018 put
@@ -255,6 +261,10 @@ NO2.b02 (PR #33): Judy at NO2_NO3/0001–0003, NO2_SUBSTORAGE/0001–0002, NO2_T
 NO2_TOFE_ROOM/0001–0003, on spk=-, 100 and 0; narration on spk=100 and 0 elsewhere. NO2_NO3/0004
 黙って機関室へ急げっ！ (spk=100) is a rough male voice, most likely Wolg, uncertain; rendered
 speaker-neutral (rulings R §33.3).
+SPACESHIP.b01 (PR #35): Judy on spk=100, spk=0 (SPACESHIP/0001 なの) and spk=- (SPACESHIP_HW/0002
+あなたが持っていて); SPACESHIP_HW/0001 (spk=-) Judy or John's thought; SPACESHIP/0003, SPACESHIP_HW/0003–0004
+Judy or narration. All speaker-neutral. SPACESHIP_HW/0004's unstated subject of 破壊した is rendered
+"we" (rulings R §34.3, R §34.4).
 
 ### F-011 · 2026-10-04 · tools · OPEN
 PR #1 (NO4_BAR.p01) found four things CHECK and UNITCHECK do not verify. Each was confirmed by a
@@ -294,7 +304,10 @@ its review by a plant: a divergent target on SCN002OLD/01 passed CHECK (`All che
 Listed in PROJECT.md §7 and censused by hand · would close with a tool PR: a third pairing pass on
 sources with the label stripped and final 。！？⁉ normalised, reported as warnings with a pair count
 (rulings R §4.4).
-
+PR #36 (NO4_BAR_T.p01): CHECK with and without the unit gave the same 214 / 9 pairs. The
+reviewer's census paired it by hand, with the label stripped and final 。 and ！？ normalised (R §35).
+The typo pair 0041 そうも ↔ NO4_BAR/0023 どうも is outside any normalisation, so the census also needs
+the glossary Variants and F-028.
 
 ### F-014 · 2026-10-06 · script · OPEN
 Suspected source typo: `NO4_BAR/0218` もう一斑は社長とヘイミングだ has 一斑 ("a fleck"; 1 / 0 / 0,
@@ -420,6 +433,13 @@ NO4_BAR/0172 has ぐずぐずしてる), and さっさと落ち着けれる場�
 (`tl/script/NO3_NO4.p02.tsv:29`). The first sentence matches shipped NO4_BAR/0172, but CHECK does not
 pair them because the sources differ. PR #27 Flag 10. Harmless; nothing to change unless the in-game
 context shows a different reading · rulings R §29.2.
+
+### F-028 · 2026-10-31 · script · OPEN
+A suspected source typo: `NO4_BAR_T/0041` 【コリスン】まあ待て。大変申し訳ないオークランドさん、そうも彼は虫の居所が悪いらしい。
+has そうも where the sense, and the shipped room's NO4_BAR/0023, is どうも. そうも is 2 / 0 / 0; the other
+row is NO4_ENTRANCE/0004 降りられそうもない, which is legitimate, so そうも彼は is 1 / 0 / 0. Shipped with
+0023's words, "It seems he's in a foul mood." (`tl/script/NO4_BAR_T.p01.tsv:44`). PR #36 Flag 9.
+Harmless; nothing to change · rulings R §35.4.
 
 ## CHECK positive controls
 <!-- One entry per kind of violation deliberately planted and caught by CHECK (tools/README.md rule 3).

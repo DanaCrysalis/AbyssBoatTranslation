@@ -34,6 +34,9 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | ジェイク・ノーマン | — | Jake Norman | 11 | — | the killer's name (Wolg, SCN046B1/03); ジェイク, ノーマン occur only in the full name; 0 / 1 / 0 | R §13.1 |
 | 【女】 (label in a message) | — | 【Woman】 | 7 | — | brackets kept, in shipped rooms too (NO4_HWR_FRONT/0123, 0129) and in the `_T` files; Judy before she is named; 16 / 0 / 0 | R §14.1 |
 | 【ミラー】 · 【ジュディ】 (labels in a message) | — | 【Miller】 · 【Judy】 | 8 · 6 | — | brackets kept, as 【女】 and shipped SCN002OLD/04, 06; NO4_TOOL_ROOM p01–p02 and the `_T` files; 30 / 2 / 0 · 16 / 0 / 0 | R §18.1 |
+| 【男】 (label in a message) | — | 【Man】 | 5 | — | brackets kept, title case; William before he is named, not resolved to the name (content: NO4_BAR_T/0033 = NO4_BAR/0014); promoted from §9; 6 / 0 / 0, all NO4_BAR_T.p01 | R §35.1 |
+| 【老人】 (label in a message) | — | 【Old Man】 | 9 | — | brackets kept, title case as 【Woman】; Collison before he is named (self-introductions NO4_BAR_T/0012, 0038); じいさん in dialogue stays lowercase "old man" (§6); 10 / 0 / 0, all NO4_BAR_T.p01 | R §35.1 |
+| 【オークランド】 · 【ウォルグ】 · 【ウィリアム】 · 【コリスン】 · 【ヘイミング】 (labels in a message) | — | 【Oakland】 · 【Wolg】 · 【William】 · 【Collison】 · 【Heming】 | 9 · 6 · 9 · 10 · 8 | — | any §1 name in a label takes its §1 short form in brackets, as shipped SCN002OLD and 【Miller】 · 【Judy】; 42 / 3 / 0 · 29 / 2 / 0 · 6 / 0 / 0 · 20 / 0 / 0 · 14 / 1 / 0 | R §35.1 |
 
 ## 2. Factions, places, ranks
 | Source | Variants | Target | Cols | Cap | Note | Ruling |
@@ -88,6 +91,8 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | 拠点 | — | base ("our new base"; 新しい拠点 → "a new base") | 4 | — | NO3_CHAPEL/0012 "We'll make this our new base"; NO3_NO4/0001, NO3_HW_1/0001 = NO3_NO4/0011 to come; not "base of operations"; 4 / 0 / 0 | R §25.1 |
 | 機関室 | — | the engine room | 15 | 14 (if a room name; hints/012–014 blocked, F-006) | lowercase in dialogue; NO3_CHAPEL/0093, 0099, 0100 ("The engine room?"), 0106, 0115, 0128; NO3_NO4/0054 ×2 "The engine room! Let's run for the engine room‼"; NO2_NO3/0004, NO1_ENGINEROOM/0002 to come; 9 / 0 / 3 | R §28.1, §29.1 |
 | 例の生き残り | — | that survivor | 13 | — | the one who targeted Judy (NO3_CHAPEL/0051, 0060, 0072); NO3_CHAPEL/0115 "That survivor still worries me"; NO3_NO4/0046 "that survivor seems likely to be on this deck"; 生き残り alone stays "survivor(s)"; 2 / 0 / 0 | R §28.1, §29.1 |
+| 母船 | — | mother ship (two words) | 11 | — | the salvagers' surface vessel: NO4_BAR_T/0028 "our mother ship", 0029; never "mothership" or "support ship"; shipped NO4_BAR/0009 海上 "the surface" for the same crew; 2 / 0 / 0 | R §35.1 |
+| 宝探し屋 | — | treasure hunter | 15 | — | Oakland's self-description, NO4_BAR_T/0039 `"treasure hunter" might be clearer` (mention quotes); William's echo 0040 `Treasure hunter⁉`; 2 / 0 / 0 | R §35.1 |
 
 ## 3. Items, currency, mechanics
 | Source | Variants | Target | Cols | Cap | Note | Ruling |
@@ -144,6 +149,10 @@ lowercase as a common noun" goes here so a gate does not misread the row) · Rul
 | 収容箱 | — | storage box | 11 | — | NO3_HW_1/0009 "a storage box for a hatchet"; 1 / 0 / 0 | R §30.1 |
 | ハッチ | — | hatch | 5 | — | NO2_THIRDSTORAGE/0008 `A hatch…{br}` only (Judy); 1 / 0 / 0 | R §33.1 |
 | スパナ | — | wrench | 6 | — | NO2_MAINSTORAGE/0025 "(There's a wrench caught in the door.)" only; US usage, as 懐中電灯 "flashlight"; 1 / 0 / 0 | R §32.1 |
+| 制御装置 | — | the control system | 18 | — | SPACESHIP_HW/0004 "Because we destroyed the control system earlier…" (shipped); NO1_CONTROLROOM/0003 "the engine's control system" (#34); never "the controls" (コントロール装置); 装置 alone not fixed; 2 / 0 / 0 | R §3.1, §34.1 |
+| 武器 | — | weapon(s) (その武器 → "that weapon") | 6 (7) | — | SPACESHIP/0002 "John, that weapon" (shipped); NO4_BAR/0332, NO4_MACHINER90/0001 "weapons"; 武器らしい武器 "real weapons" (NO4_BAR/0097), 武器を携帯 "armed" (0269), NO4_TOOL_ROOM/0037 in context; 7 / 0 / 1 (items/003 blocked) | R §34.1 |
+| チャージ | チャージに時間がかかる | charge: "takes time to charge" | 6; 20 | — | SPACESHIP/0002 only (the alien gun); never "recharge"; 1 / 0 / 0 | R §34.1 |
+| 落下 | 船の落下が始まっている | fall: "the ship's starting to fall⁉" | 4; 28 | — | SPACESHIP_HW/0004 only; ⁉ one glyph; wraps "the ship's" / "starting to fall⁉" (17); 船 alone "the ship" (§2 船体); 1 / 0 / 0 | R §34.1 |
 
 ## 4. Classes, units, system terms
 | Source | Variants | Target | Cols | Cap | Note | Ruling |
@@ -289,14 +298,9 @@ NOT decisions. The first translator to render one promotes it in the PR's Glossa
 so; the reviewer moves the row up into its section in the integration commit. -->
 | Source | Variants | Proposed | Alternatives | Where seen | Wave |
 |---|---|---|---|---|---|
-| 制御装置 | — | the control system ("It seems to be the engine's control system.") | control unit; never "the controls" (that is コントロール装置, §3) | NO1_CONTROLROOM/0003, SPACESHIP_HW/0004 (2 / 0 / 0); R §2 note at rulings.md:304 | 9 |
 | 報告に戻る · 戻って知らせる | 報告に戻りましょう · 戻って知らせましょう | head back and report (shipped NO4_HWL_KAIDAN/0004, NO4_HWR_FRONT/0049) | go back and tell them (戻って知らせる only) | NO1_ENGINEROOM/0002, 0003 | 9 |
-| 武器 | — | weapon (shipped NO4_BAR/0332, NO4_MACHINER90/0001) | — | SPACESHIP/0002 その武器 → "that weapon" | 9 |
-| チャージ | — | charge: チャージに時間がかかる → "takes time to charge" | recharge | SPACESHIP/0002 only (1 / 0 / 0) | 9 |
-| 落下 | 船の落下が始まっている | fall: "the ship's starting to fall⁉" (⁉ kept, one glyph) | going down | SPACESHIP_HW/0004 only (1 / 0 / 0); 振動 → "tremor" (§6) | 9 |
 | ほかには何も入っていない{p} | — | `There's nothing else inside.{p}` (one line; R §1.12) | — | NO1_CONTROLROOM/0001; cf. NO4_TOOL_ROOM/0080 ロッカーには何も入っていない "The locker is empty." | 9 |
 | 使えそうな物はすでに奪われた後のようだ。{p} | — | `It seems anything that looked usable has already been taken.{p}` (keeps そう "looked", ようだ "seems"; wraps 22/25/11, no one-word last row) | — | NO1_STORAGE/0001; 使えそう family R §21.3–§21.4, §31.1 | 9 |
-| 【男】 (label in a message) | — | 【Man】 | — | NO4_BAR_T and the other `_T` scripts (6 in the dump); brackets kept, as 【女】 → 【Woman】 (§1) | 9 |
 
 ## 10. Open questions
 <!-- one line each, with the FLAGS id. A closed question is deleted here; its answer stays in rulings.md. -->
